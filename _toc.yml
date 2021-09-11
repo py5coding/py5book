@@ -1,0 +1,53 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+
+parts:
+- caption: Original
+  chapters:
+  - file: markdown
+  - file: notebooks
+
+- caption: Reference
+  chapters:
+  - file: reference/sketch
+    sections:
+    - glob: reference/sketch_*
+
+  - file: reference/py5graphics
+    sections:
+    - glob: reference/py5graphics_*
+
+  - file: reference/py5image
+    sections:
+    - glob: reference/py5image_*
+
+  - file: reference/py5shape
+    sections:
+    - glob: reference/py5shape_*
+
+  - file: reference/py5shader
+    sections:
+    - glob: reference/py5shader_*
+
+  - file: reference/py5surface
+    sections:
+    - glob: reference/py5surface_*
+
+  - file: reference/py5font
+    sections:
+    - glob: reference/py5font_*
+
+  - file: reference/py5magics
+    sections:
+    - glob: reference/py5magics_*
+
+  - file: reference/py5tools
+    sections:
+    - glob: reference/py5tools_*
+
+  - file: reference/py5functions
+    sections:
+    - glob: reference/py5functions_*

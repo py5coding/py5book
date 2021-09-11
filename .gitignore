@@ -1,0 +1,9 @@
+*.nogit
+.*.nogit
+.vscode
+*.pyc
+**/.ipynb_checkpoints/
+__pycache__/
+temp/
+_build/
+build/
