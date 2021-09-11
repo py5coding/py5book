@@ -1,0 +1,4 @@
+#!/bin/bash
+
+python -m py5_tools.kernel.install --sys-prefix
+python -m py5_tools.py5bot.install --sys-prefix

@@ -1,0 +1,16 @@
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - cairo
+  - cairosvg
+  - jedi=0.17.2
+  - jupyterlab
+  - line_profiler
+  - matplotlib
+  - noise
+  - pandas
+  - pip
+  - pip:
+    - py5
+
