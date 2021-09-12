@@ -21,17 +21,15 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/hx2A/py5book  # Online location of your book
-  branch: main  # Which branch of the repository should be used when creating links (optional)
+  url: https://github.com/hx2A/py5book
+  branch: main
 
 launch_buttons:
   # notebook_interface: "classic"
   thebe: true
 
 # Add GitHub buttons to your book
-# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   use_edit_page_button: true
   use_repository_button: true
   use_issues_button: true
-  extra_footer: "extra footer"

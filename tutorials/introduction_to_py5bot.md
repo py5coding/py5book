@@ -16,6 +16,8 @@ kernelspec:
 
 This is py5bot. A simple and easy to use programming environment for teaching the very basics of Python programming and creative coding with py5.
 
+If you are viewing this page from the py5 documentation website, see the Binder or Live Code options by hovering your mouse over the rocket ship icon at the top of this page.
+
 Each cell in this notebook can contain a series of py5 drawing commands. The drawing commands will be executed to create a static image that will be embedded in the notebook.
 
 The main design goal is to provide a simple programming environment that is suitable for beginners. Individual programming concepts can be explained in isolation from more complicated Python concepts like functions or modules.
