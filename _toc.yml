@@ -21,7 +21,10 @@ parts:
   - file: tutorials/introduction_to_py5bot
   - file: tutorials/rotating_cube
 
-# - caption: How Tos
+- caption: How To...
+  chapters:
+  - file: how_tos/use_a_webcam_with_opencv
+  - file: how_tos/import_processing_libraries
 
 - caption: Discussion
   chapters:
