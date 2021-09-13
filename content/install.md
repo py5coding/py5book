@@ -211,10 +211,10 @@ this.
 While testing these installation steps and example code, I discovered
 that when I installed matplotlib with `conda install matplotlib` it
 would inexplicably want to downgrade Java 11 to Java 8. Why does it do
-this??? Matplotlib does not require Java. Note that the workaround in
-that case is to install it with `pip install matplotlib`, which doesn't
-have that problem. This was an easy fix but might trip up people who are
-new to Python.
+this??? Matplotlib does not require Java. One might try circumventing
+this issue by installing it with `pip install matplotlib`, but
+[mixing pip and conda installs is not recommended](https://www.anaconda.com/blog/using-pip-in-a-conda-environment).
+It is better to install Java correctly through conda using an explicit version number.
 ```
 
 #### Install Cairo and CairoSVG (optional)
