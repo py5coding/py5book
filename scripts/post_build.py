@@ -19,6 +19,7 @@
 # *****************************************************************************
 import re
 from pathlib import Path
+import shutil
 
 
 BUILD_DIR = Path("_build/html/")
@@ -45,20 +46,25 @@ for refdoc in BUILD_DIR.glob("reference/*.html"):
 
     # fix edit page link to point to actual documentation source file in py5generator
     m = GITHUB_EDIT_LINK_REGEX.search(html)
-    original_link = m.group(0)
-    stem = m.group(1)
+    if m is not None:
+        original_link = m.group(0)
+        stem = m.group(1)
 
-    # repair class or group name
-    for lowercase, py5case in GROUP_CASE_PAIRS:
-        if stem.startswith(lowercase):
-            stem = stem.replace(lowercase, py5case)
-            break
+        # repair class or group name
+        for lowercase, py5case in GROUP_CASE_PAIRS:
+            if stem.startswith(lowercase):
+                stem = stem.replace(lowercase, py5case)
+                break
 
-    new_link = f'https://github.com/hx2A/py5generator/edit/main/py5_docs/Reference/api_en/{stem}.txt'
-    html = html.replace(original_link, new_link)
+        new_link = f'https://github.com/hx2A/py5generator/edit/main/py5_docs/Reference/api_en/{stem}.txt'
+        html = html.replace(original_link, new_link)
 
-    # fix new issue link to point to py5generator repo
-    html = html.replace('https://github.com/hx2A/py5book/issues/new?', 'https://github.com/hx2A/py5generator/issues/new?')
+        # fix new issue link to point to py5generator repo
+        html = html.replace('https://github.com/hx2A/py5book/issues/new?', 'https://github.com/hx2A/py5generator/issues/new?')
 
-    with open(refdoc, "w") as f:
-        f.write(html)
+        with open(refdoc, "w") as f:
+            f.write(html)
+
+
+shutil.rmtree(BUILD_DIR / "files")
+shutil.copytree("files", BUILD_DIR / "files")

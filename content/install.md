@@ -92,9 +92,9 @@ Feel free to replace `py5coding` with your prefered name for the
 Anaconda environment.
 
 If you don't like using the command line you can also download
-[py5_environment.yml](/files/install/py5_environment.yml) and create the
-environment using [Anaconda
-Navigator](https://docs.anaconda.com/anaconda/navigator/).
+<a href="/files/install/py5_environment.yml">py5_environment.yml</a>
+and create the environment using
+[Anaconda Navigator](https://docs.anaconda.com/anaconda/navigator/).
 
 That environment file contains the below information, telling Anaconda
 to create an environment with Java 11 (OpenJDK), Cairo, and Jupyter
