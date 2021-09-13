@@ -66,5 +66,6 @@ for refdoc in BUILD_DIR.glob("reference/*.html"):
             f.write(html)
 
 
-shutil.rmtree(BUILD_DIR / "files")
+if (BUILD_DIR / "files").exists():
+    shutil.rmtree(BUILD_DIR / "files")
 shutil.copytree("files", BUILD_DIR / "files")
