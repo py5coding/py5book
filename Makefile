@@ -7,3 +7,6 @@ build:
 .PHONY: clean
 clean:
 	jb clean .
+
+deploydev:
+	aws s3 sync _build/html s3://py5dev.ixora.io/
