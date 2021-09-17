@@ -275,7 +275,7 @@ kernel](#py5-kernel) and [py5bot](#py5bot).
 
 You can optionally install the py5 Jupyter Notebook Kernel. This is a
 customized Python kernel that will let you write py5 code in Imported
-Mode. See [](py5-modes) to learn about the
+Mode. See [](py5_modes) to learn about the
 different py5 Modes.
 
 ``` bash
