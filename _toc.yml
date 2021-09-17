@@ -71,3 +71,7 @@ parts:
   - file: reference/py5functions
     sections:
     - glob: reference/py5functions_*
+
+- caption: Developer Information
+  chapters:
+  - file: developer/build_process
