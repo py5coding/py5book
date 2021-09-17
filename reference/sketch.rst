@@ -27,9 +27,9 @@ When coding in class mode, all of the above functions should be class methods. W
 
 Underlying Java class: PApplet
 
-This class provides the following methods and fields:
+The following methods and fields are provided:
 
 .. include:: include_sketch.rst
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 16, 2021 14:31:43pm UTC
 

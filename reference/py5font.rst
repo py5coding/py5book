@@ -46,9 +46,9 @@ To create a new font dynamically, use the :doc:`sketch_create_font` function. Do
 
 Underlying Java class: `PFont <https://processing.org/reference/PFont.html>`_
 
-This class provides the following methods and fields:
+The following methods and fields are provided:
 
 .. include:: include_py5font.rst
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 16, 2021 14:31:43pm UTC
 

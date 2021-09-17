@@ -51,9 +51,9 @@ To create a new image, use the :doc:`sketch_create_image` function. Do not use t
 
 Underlying Java class: `PImage <https://processing.org/reference/PImage.html>`_
 
-This class provides the following methods and fields:
+The following methods and fields are provided:
 
 .. include:: include_py5image.rst
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 16, 2021 14:31:43pm UTC
 

@@ -10,9 +10,9 @@ The Py5Surface object is the actual window py5 draws animations to. You can use 
 
 Underlying Java class: PSurface
 
-This class provides the following methods and fields:
+The following methods and fields are provided:
 
 .. include:: include_py5surface.rst
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 16, 2021 14:31:43pm UTC
 

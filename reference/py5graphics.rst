@@ -54,9 +54,9 @@ To create a new graphics context, use the :doc:`sketch_create_graphics` function
 
 Underlying Java class: `PGraphics <https://processing.org/reference/PGraphics.html>`_
 
-This class provides the following methods and fields:
+The following methods and fields are provided:
 
 .. include:: include_py5graphics.rst
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 16, 2021 14:31:43pm UTC
 

@@ -50,9 +50,9 @@ This class encapsulates a GLSL shader program, including a vertex and a fragment
 
 Underlying Java class: `PShader <https://processing.org/reference/PShader.html>`_
 
-This class provides the following methods and fields:
+The following methods and fields are provided:
 
 .. include:: include_py5shader.rst
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 16, 2021 14:31:43pm UTC
 
