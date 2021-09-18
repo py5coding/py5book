@@ -23,6 +23,8 @@ This is a simple demonstration of using py5 in Jupyter notebooks. This will use 
 Import the py5 library. When the library is imported the Java Virtual Machine (JVM) is started.
 
 ```{code-cell} ipython3
+import time
+
 import py5_tools
 import py5
 ```
@@ -92,6 +94,7 @@ Internally the portal uses a hook mechanism that allows you to insert code to be
 To be clear, although you will see a live animation in the Sketch Portal, the Sketch is not actually running in your browser. It's kind of like when you watch a live television program on your TV. The live events are taking place somewhere else, but images of the events are being broadcast to your television.
 
 ```{code-cell} ipython3
+:tags: ["remove-output"]
 portal = py5_tools.sketch_portal(quality=75, scale=1.0)
 
 portal
@@ -106,12 +109,14 @@ You should see a clean and smooth animation. If you are running this through myb
 Check the frame rate. You should be able to get 30 frames per second for this Sketch. I've been able to get 60 frames per second while running on mybinder, but not all the time.
 
 ```{code-cell} ipython3
+time.sleep(10)
+
 py5.get_frame_rate()
 ```
 
 ## Next Steps for Jupyter Lab Users
 
-If you are using Jupyter Lab, after executing the previous cell, try right clicking in the output area and selecting `Create New View for Output`. This will create a new panel just for the Sketch portal. Creating a `New Console for Notebook` and creating a portal there works well also.
+If you are using Jupyter Lab, after executing the Sketch portal cell, try right clicking in the output area and selecting `Create New View for Output`. This will create a new panel just for the Sketch portal. Creating a `New Console for Notebook` and creating a portal there works well also.
 
 ```{code-cell} ipython3
 

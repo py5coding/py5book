@@ -14,6 +14,7 @@ kernelspec:
 # py5 Community
 
 ```{code-cell} ipython3
+:tags: ["raises-exception"]
 from py5 import community
 ```
 
