@@ -25,8 +25,8 @@ parts:
 
 - caption: How To...
   chapters:
-  - file: how_tos/use_a_webcam_with_opencv
-  - file: how_tos/import_processing_libraries
+  - file: how_tos/use_camera3D
+    title: Use Camera3D
 
 - caption: Discussion
   chapters:

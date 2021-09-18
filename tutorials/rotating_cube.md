@@ -85,6 +85,14 @@ Run the sketch, opening a window on the display. If you are running this through
 py5.run_sketch()
 ```
 
+Here's a screenshot, so readers of the static documentation website can understand what is happening:
+
+```{code-cell} ipython3
+time.sleep(3)
+
+py5_tools.screenshot()
+```
+
 ## Open the py5 Sketch Portal
 
 This will create a Sketch portal and embed it in the notebook using [py5_tools.sketch_portal()](/reference/py5tools_sketch_portal).
@@ -100,7 +108,7 @@ portal = py5_tools.sketch_portal(quality=75, scale=1.0)
 portal
 ```
 
-You should see a clean and smooth animation. If you are running this through mybinder, the animation quality will be dependent on your having a good internet connection and a well behaved server. If it seems jumpy, try adjusting the quality or the scale. You can also try using the `throttle_frame_rate` parameter to lower the sketch portal's frame to below the Sketch's frame rate. See the documenation for more information.
+You should see a clean and smooth animation. If you are running this through mybinder, the animation quality will be dependent on your having a good internet connection and a well behaved server. If it seems jumpy, try adjusting the quality or the scale. You can also try using the `throttle_frame_rate` parameter to lower the sketch portal's frame to below the Sketch's frame rate. See the documentation for more information.
 
 +++
 
