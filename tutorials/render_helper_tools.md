@@ -250,7 +250,3 @@ display(cubes[0], cubes[5])
 In both Processing and py5 it is unwise or impossible to run a sketch inside of another sketch.
 
 These Render Helper Tools are creating and running sketches to provide their functionality. Although you might be tempted to do so, I do not recommend you use them in any way that places them inside of another running sketch.
-
-```{code-cell} ipython3
-
-```

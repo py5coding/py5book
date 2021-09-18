@@ -12,7 +12,7 @@ kernelspec:
   name: py5bot
 ---
 
-# py5bot
+# Introduction to py5bot
 
 This is py5bot. A simple and easy to use programming environment for teaching the very basics of Python programming and creative coding with py5.
 
@@ -42,14 +42,14 @@ Internally, py5 executes these commands inside of a `setup()` method to render a
 
 There are a few important rules that you should be aware of.
 
-* The `size()` command should be the first line of Python code. Comments are ignored. If the `size()` command is omitted, the output size will be 100 by 100 pixels.
+* The [size()](/reference/sketch_size) command should be the first line of Python code. Comments are ignored. If the [size()](/reference/sketch_size) command is omitted, the output size will be 100 by 100 pixels.
 * When py5bot is run on Windows and Linux computers, you can use the `P2D` or `P3D` renderers. These OpenGL renderers are currently not supported on OSX.
 * Each cell has its own local namespace. Variables and functions defined in one cell cannot be used in another cell.
 
 There are some less important rules that should be mentioned but aren't that important:
 
-* Calls to `smooth()` or `no_smooth()`, if desired, should be after `size()` and before other Python commands.
-* A call to `pixel_density()` would also need to be after `size()` and before other Python commands, but since it just scales the size of the output, you probably shouldn't bother using it in py5bot.
+* Calls to [smooth()](/reference/sketch_smooth) or [no_smooth()](/reference/sketch_no_smooth), if desired, should be after [size()](/reference/sketch_size) and before other Python commands.
+* A call to [pixel_density()](/reference/sketch_pixel_density) would also need to be after [size()](/reference/sketch_size) and before other Python commands, but since it just scales the size of the output, you probably shouldn't bother using it in py5bot.
 
 That's basically it.
 
@@ -183,12 +183,4 @@ rect(0, 0, width, 30)
 fill(255, 0, 0)
 text_size(22)
 text(message, 10, 20)
-```
-
-```{code-cell} ipython3
-
-```
-
-```{code-cell} ipython3
-
 ```

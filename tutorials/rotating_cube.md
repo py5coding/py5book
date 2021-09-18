@@ -87,7 +87,7 @@ py5.run_sketch()
 
 ## Open the py5 Sketch Portal
 
-This will create a Sketch portal and embed it in the notebook.
+This will create a Sketch portal and embed it in the notebook using [py5_tools.sketch_portal()](/reference/py5tools_sketch_portal).
 
 Internally the portal uses a hook mechanism that allows you to insert code to be run before or after any py5 method. This hook mechanism will one day allow developers to create py5 libraries and extensions.
 
@@ -106,7 +106,7 @@ You should see a clean and smooth animation. If you are running this through myb
 
 ## Check the Sketch `frame_rate`
 
-Check the frame rate. You should be able to get 30 frames per second for this Sketch. I've been able to get 60 frames per second while running on mybinder, but not all the time.
+Check the [frame_rate](/reference/sketch_frame_rate). You should be able to get 30 frames per second for this Sketch. I've been able to get 60 frames per second while running on mybinder, but not all the time.
 
 ```{code-cell} ipython3
 time.sleep(10)
@@ -117,7 +117,3 @@ py5.get_frame_rate()
 ## Next Steps for Jupyter Lab Users
 
 If you are using Jupyter Lab, after executing the Sketch portal cell, try right clicking in the output area and selecting `Create New View for Output`. This will create a new panel just for the Sketch portal. Creating a `New Console for Notebook` and creating a portal there works well also.
-
-```{code-cell} ipython3
-
-```
