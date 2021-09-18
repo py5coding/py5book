@@ -24,6 +24,7 @@ import shutil
 
 BUILD_DIR = Path("_build/html/")
 
+IMG_REGEX = re.compile(r'<img src=\"(images/[^\"]*)\"[^>]*>')
 GITHUB_EDIT_LINK_REGEX = re.compile(
     r"https://github.com/hx2A/py5book/edit/main/reference/([^\.]*)\.rst"
 )
@@ -39,6 +40,11 @@ GROUP_CASE_PAIRS = [
     ("py5functions", "Py5Functions"),
     ("py5magics", "Py5Magics"),
 ]
+
+
+###############################################################################
+# MODIFY REFERENCE GITHUB LINKS
+###############################################################################
 
 for refdoc in BUILD_DIR.glob("reference/*.html"):
     with open(refdoc, "r") as f:
@@ -65,6 +71,10 @@ for refdoc in BUILD_DIR.glob("reference/*.html"):
         with open(refdoc, "w") as f:
             f.write(html)
 
+
+###############################################################################
+# COPY EXTRA FILES
+###############################################################################
 
 if (BUILD_DIR / "files").exists():
     shutil.rmtree(BUILD_DIR / "files")
