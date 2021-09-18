@@ -33,6 +33,6 @@ Here is an animated GIF to give you an idea of what that Sketch looks like:
 
 ![index_example](images/main/index_example.gif)
 
-The documentation website, [http://py5.ixora.io/](http://py5.ixora.io/), is
+The documentation website, [https://py5.ixora.io/](https://py5.ixora.io/), is
 very much a work in progress. The reference documentation is solid but the
 how-to's and tutorials need a lot of work.
