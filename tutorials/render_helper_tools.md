@@ -38,7 +38,7 @@ def draw_square(s: py5.Sketch):
     s.rect(s.width / 2, s.height / 2, 50, 50)
 ```
 
-Pass the newly created `draw_square` function to [render_frame()](link://slug/render_frame). It will render a single frame sketch with a width and height of `200, 200`. The result is returned as a [PIL Image object](https://pillow.readthedocs.io/en/stable/index.html).
+Pass the newly created `draw_square` function to [render_frame()](/reference/py5functions_render_frame). It will render a single frame sketch with a width and height of `200, 200`. The result is returned as a [PIL Image object](https://pillow.readthedocs.io/en/stable/index.html).
 
 ```{code-cell} ipython3
 img = py5.render_frame(draw_square, 200, 200)
@@ -62,7 +62,7 @@ def draw_square(s: py5.Sketch, fill_color, square_size):
     s.rect(s.width / 2, s.height / 2, square_size, square_size)
 ```
 
-Below, use the new `draw_square` function with [render_frame()](link://slug/render_frame). Arguments are passed to `draw_square` via [render_frame()](link://slug/render_frame)'s `draw_kwargs` parameter.
+Below, use the new `draw_square` function with [render_frame()](/reference/py5functions_render_frame). Arguments are passed to `draw_square` via [render_frame()](/reference/py5functions_render_frame)'s `draw_kwargs` parameter.
 
 You can pass positional arguments with `draw_args` but I think using keyword arguments is easier and more readable.
 
@@ -73,7 +73,7 @@ img = py5.render_frame(draw_square, 200, 200,
 img
 ```
 
-[render()](link://slug/render) is the [decorator](https://realpython.com/primer-on-python-decorators/) equivalent for [render_frame()](link://slug/render_frame). I think it achieves cleaner results, particularly when passing function arguments.
+[@render](/reference/py5functions_render) is the [decorator](https://realpython.com/primer-on-python-decorators/) equivalent for [render_frame()](/reference/py5functions_render_frame). I think it achieves cleaner results, particularly when passing function arguments.
 
 When using decorators, don't forget to type that `@` sign at the beginning. If you forget, like I just did while writing this documentation, it won't work correctly. :(
 
@@ -158,7 +158,7 @@ def draw_cubes(s: py5.Sketch, cube_size=50):
     s.box(cube_size)
 ```
 
-Pass the `draw_cubes` function to [render_frame_sequence()](link://slug/render_frame_sequence) to return a list of [PIL Image object](https://pillow.readthedocs.io/en/stable/index.html).
+Pass the `draw_cubes` function to [render_frame_sequence()](/reference/py5functions_render_frame_sequence) to return a list of [PIL Image object](https://pillow.readthedocs.io/en/stable/index.html).
 
 ```{code-cell} ipython3
 cubes = py5.render_frame_sequence(draw_cubes, 200, 200, py5.P3D, limit=10)
@@ -170,7 +170,7 @@ cubes
 display(cubes[0], cubes[5])
 ```
 
-As before, a decorator is available. [render_sequence()](link://slug/render_sequence) is the decorator equivalent of [render_frame_sequence()](link://slug/render_frame_sequence).
+As before, a decorator is available. [@render_sequence](/reference/py5functions_render_sequence) is the decorator equivalent of [render_frame_sequence()](/reference/py5functions_render_frame_sequence).
 
 ```{code-cell} ipython3
 @py5.render_sequence(200, 200, py5.P3D, limit=10)
@@ -219,9 +219,9 @@ Here is the GIF:
 
 +++
 
-In the previous example the [frame_count](link://slug/frame_count) field was used to drive the animation, rotating the cube by a different angle in each frame. It worked well, but it might not always be easy or convenient to link changing animation state to [frame_count](link://slug/frame_count). An alternative approach is to use the Python `global` keyword.
+In the previous example the [frame_count](/reference/sketch_frame_count) field was used to drive the animation, rotating the cube by a different angle in each frame. It worked well, but it might not always be easy or convenient to link changing animation state to [frame_count](/reference/sketch_frame_count). An alternative approach is to use the Python `global` keyword.
 
-Below is the same example as before, but without depending on [frame_count](link://slug/frame_count).
+Below is the same example as before, but without depending on [frame_count](/reference/sketch_frame_count).
 
 ```{code-cell} ipython3
 rot_y = 0
