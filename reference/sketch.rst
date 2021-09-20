@@ -15,7 +15,7 @@ The core functions to be implemented by the py5 coder are ``settings``, ``setup`
     * ``key_released``
     * ``mouse_clicked``
     * ``mouse_dragged``
-    * ``mouse_moved'``
+    * ``mouse_moved``
     * ``mouse_entered``
     * ``mouse_exited``
     * ``mouse_pressed``
@@ -31,5 +31,5 @@ The following methods and fields are provided:
 
 .. include:: include_sketch.rst
 
-Updated on September 16, 2021 14:31:43pm UTC
+Updated on September 20, 2021 11:55:29am UTC
 
