@@ -37,7 +37,7 @@ If you already have Java 11 and Python 3.8+ available on your computer, you
 can install py5 with the below command.
 
 ``` bash
-$ pip install py5
+pip install py5
 ```
 
 You can optionally install [Cairo](https://www.cairographics.org/) and
@@ -85,7 +85,7 @@ You can create a complete Anaconda environment for py5 using one
 command:
 
 ``` bash
-$ conda env create -n py5coding -f http://py5.ixora.io/install/py5_environment.yml
+conda env create -n py5coding -f http://py5.ixora.io/files/install/py5_environment.yml
 ```
 
 Feel free to replace `py5coding` with your prefered name for the
@@ -118,17 +118,17 @@ dependencies:
       - py5
 ```
 
-You can activate the environment using the below command.
+You can activate the environment using the below command. When the environment
+is active, you will see `(py5coding)` in the command prompt.
 
 ``` bash
-$ conda activate py5coding
-(py5coding) $ 
+conda activate py5coding
 ```
 
 Launch jupyter lab to start coding.
 
 ``` bash
-(py5coding) $ jupyter lab
+jupyter lab
 ```
 
 Try testing with the [Quick Example](#quick-example) to verify
@@ -154,7 +154,7 @@ The below command will also install the Jupyter Lab tool, which py5 is
 designed to work well with.
 
 ``` bash
-$ conda create -n py5coding python=3.8 jupyterlab
+conda create -n py5coding python=3.8 jupyterlab
 ```
 
 After creating the `py5coding` environment you must \"activate\" it so
@@ -163,8 +163,7 @@ are inside the environment because your terminal prompt will change to
 include the name of the environment.
 
 ``` bash
-$ conda activate py5coding
-(py5coding) $ 
+conda activate py5coding
 ```
 
 #### Install Java
@@ -176,7 +175,12 @@ have it. You can do this from a terminal or DOS window using the command
 `java -version`.
 
 ``` bash
-(py5coding) $ java -version
+java -version
+```
+
+The results should be similar to this:
+
+``` text
 openjdk version "11.0.9" 2020-10-20
 OpenJDK Runtime Environment 18.9 (build 11.0.9+11)
 OpenJDK 64-Bit Server VM 18.9 (build 11.0.9+11, mixed mode, sharing)
@@ -187,7 +191,7 @@ for older computers), you will need to install Java. To install it into
 your Anaconda environment, use the below command.
 
 ``` bash
-(py5coding) $ conda install -c conda-forge openjdk=11.0.8
+conda install -c conda-forge openjdk=11.0.8
 ```
 
 If you prefer you can download and install Java 11 outside of the
@@ -236,14 +240,14 @@ Python library that py5 interfaces with to convert SVG images to
 [](/reference/py5image) objects.
 
 ``` bash
-(py5coding) $ conda install -c conda-forge cairo
+conda install -c conda-forge cairo
 ```
 
 You may get a message saying that it has already been installed. If so,
 express joy and proceed to the next step.
 
 ``` bash
-(py5coding) $ conda install -c conda-forge cairosvg
+conda install -c conda-forge cairosvg
 ```
 
 #### Install py5
@@ -251,7 +255,7 @@ express joy and proceed to the next step.
 Finally, install the py5 library.
 
 ``` bash
-(py5coding) $ pip install py5
+pip install py5
 ```
 
 If you are on Windows or on a Mac, you may get errors relating to the
@@ -260,8 +264,8 @@ the following commands to resolve the errors, then try `pip install py5`
 again.
 
 ``` bash
-(py5coding) $ conda install -c conda-forge noise
-(py5coding) $ conda install -c conda-forge line_profiler
+conda install -c conda-forge noise
+conda install -c conda-forge line_profiler
 ```
 
 After installing py5, try testing with the [Quick
@@ -279,7 +283,7 @@ Mode. See [](py5_modes) to learn about the
 different py5 Modes.
 
 ``` bash
-$ python -m py5_tools.kernel.install --sys-prefix
+python -m py5_tools.kernel.install --sys-prefix
 ```
 
 The `--sys-prefix` argument is optional but I recommend you use it. It
@@ -294,7 +298,7 @@ Kernel. This is a customized Python kernel that will let you write py5
 code in Static Mode.
 
 ``` bash
-$ python -m py5_tools.py5bot.install --sys-prefix
+python -m py5_tools.py5bot.install --sys-prefix
 ```
 
 ## Thonny
@@ -320,5 +324,5 @@ will want to upgrade your installation, which you can do with this
 command:
 
 ``` bash
-(py5coding) $ pip install --upgrade py5
+pip install --upgrade py5
 ```
