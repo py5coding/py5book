@@ -317,6 +317,42 @@ Examples
 
 .. raw:: html
 
+    <div class="example-row"><div class="example-cell-image">
+
+.. image:: /images/reference/Sketch_begin_shape_11.png
+    :alt: example picture for begin_shape()
+
+.. raw:: html
+
+    </div><div class="example-cell-code">
+
+.. code:: python
+    :number-lines:
+
+    def setup():
+        py5.translate(25, 50)
+        py5.stroke_weight(4)
+        py5.stroke("#F00")
+        with py5.begin_closed_shape():
+            py5.vertex(-20, -40)
+            py5.vertex(20, -40)
+            py5.vertex(20, 40)
+            py5.vertex(-20, 40)
+
+        py5.translate(50, 0)
+        py5.stroke("#00F")
+        with py5.begin_shape():
+            py5.vertex(-20, -40)
+            py5.vertex(20, -40)
+            py5.vertex(20, 40)
+            py5.vertex(-20, 40)
+
+.. raw:: html
+
+    </div></div>
+
+.. raw:: html
+
     </div>
 
 Description
@@ -327,6 +363,8 @@ Using the ``begin_shape()`` and :doc:`sketch_end_shape` functions allow creating
 Transformations such as :doc:`sketch_translate`, :doc:`sketch_rotate`, and :doc:`sketch_scale` do not work within ``begin_shape()``. It is also not possible to use other shapes, such as :doc:`sketch_ellipse` or :doc:`sketch_rect` within ``begin_shape()``. 
 
 The ``P2D`` and ``P3D`` renderers allow :doc:`sketch_stroke` and :doc:`sketch_fill` to be altered on a per-vertex basis, but the default renderer does not. Settings such as :doc:`sketch_stroke_weight`, :doc:`sketch_stroke_cap`, and :doc:`sketch_stroke_join` cannot be changed while inside a ``begin_shape()`` & :doc:`sketch_end_shape` block with any renderer.
+
+This method can be used as a context manager to ensure that :doc:`sketch_end_shape` always gets called, as shown in the last example. Use :doc:`sketch_begin_closed_shape` to create a context manager that will close the shape.
 
 Underlying Java method: `beginShape <https://processing.org/reference/beginShape_.html>`_
 
@@ -344,5 +382,5 @@ Parameters
 * **kind**: `int` - Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 23, 2021 10:51:16am UTC
 

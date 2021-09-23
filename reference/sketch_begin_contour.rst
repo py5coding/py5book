@@ -33,14 +33,48 @@ Examples
         py5.vertex(40, -40)
         py5.vertex(40, 40)
         py5.vertex(-40, 40)
-        # interior part of shape, counter-clockwise winding
         py5.begin_contour()
+        # interior part of shape, counter-clockwise winding
         py5.vertex(-20, -20)
         py5.vertex(-20, 20)
         py5.vertex(20, 20)
         py5.vertex(20, -20)
         py5.end_contour()
         py5.end_shape(py5.CLOSE)
+
+.. raw:: html
+
+    </div></div>
+
+.. raw:: html
+
+    <div class="example-row"><div class="example-cell-image">
+
+.. image:: /images/reference/Sketch_begin_contour_1.png
+    :alt: example picture for begin_contour()
+
+.. raw:: html
+
+    </div><div class="example-cell-code">
+
+.. code:: python
+    :number-lines:
+
+    def setup():
+        py5.translate(50, 50)
+        py5.stroke(255, 0, 0)
+        with py5.begin_closed_shape():
+            # exterior part of shape, clockwise winding
+            py5.vertex(-40, -40)
+            py5.vertex(40, -40)
+            py5.vertex(40, 40)
+            py5.vertex(-40, 40)
+            with py5.begin_contour():
+                # interior part of shape, counter-clockwise winding
+                py5.vertex(-20, -20)
+                py5.vertex(-20, 20)
+                py5.vertex(20, 20)
+                py5.vertex(20, -20)
 
 .. raw:: html
 
@@ -57,6 +91,8 @@ Use the ``begin_contour()`` and :doc:`sketch_end_contour` methods to create nega
 
 These methods can only be used within a :doc:`sketch_begin_shape` & :doc:`sketch_end_shape` pair and transformations such as :doc:`sketch_translate`, :doc:`sketch_rotate`, and :doc:`sketch_scale` do not work within a ``begin_contour()`` & :doc:`sketch_end_contour` pair. It is also not possible to use other shapes, such as :doc:`sketch_ellipse` or :doc:`sketch_rect` within.
 
+This method can be used as a context manager to ensure that :doc:`sketch_end_contour` always gets called, as shown in the second example.
+
 Underlying Java method: `beginContour <https://processing.org/reference/beginContour_.html>`_
 
 Syntax
@@ -66,5 +102,5 @@ Syntax
 
     begin_contour() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 23, 2021 10:58:27am UTC
 
