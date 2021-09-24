@@ -14,6 +14,9 @@ Examples
 
     <div class="example-row"><div class="example-cell-image">
 
+.. image:: /images/reference/Py5Graphics_begin_closed_shape_0.png
+    :alt: example picture for begin_closed_shape()
+
 .. raw:: html
 
     </div><div class="example-cell-code">
@@ -22,23 +25,23 @@ Examples
     :number-lines:
 
     def setup():
-        py5.size(200, 200, py5.P2D)
+        py5.size(100, 100, py5.P2D)
 
-        g = py5.create_graphics(100, 100, py5.P2D)
+        g = py5.create_graphics(60, 60, py5.P2D)
         with g.begin_draw():
             with g.begin_closed_shape():
-                g.vertex(20, 20)
-                g.vertex(80, 20)
-                g.vertex(80, 80)
-                g.vertex(20, 80)
+                g.vertex(10, 10)
+                g.vertex(50, 10)
+                g.vertex(50, 50)
+                g.vertex(10, 50)
                 with g.begin_contour():
+                    g.vertex(20, 20)
+                    g.vertex(20, 40)
                     g.vertex(40, 40)
-                    g.vertex(40, 60)
-                    g.vertex(60, 60)
-                    g.vertex(60, 40)
+                    g.vertex(40, 20)
 
-        py5.image(g, 50, 50)
-        py5.image(g, 80, 80)
+        py5.image(g, 0, 0)
+        py5.image(g, 25, 25)
 
 .. raw:: html
 
@@ -71,5 +74,5 @@ Parameters
 * **kind**: `int` - Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
 
 
-Updated on September 23, 2021 10:56:03am UTC
+Updated on September 24, 2021 10:55:19am UTC
 
