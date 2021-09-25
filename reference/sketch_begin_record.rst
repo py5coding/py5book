@@ -40,6 +40,31 @@ Examples
 
 .. raw:: html
 
+    <div class="example-row"><div class="example-cell-image">
+
+.. raw:: html
+
+    </div><div class="example-cell-code">
+
+.. code:: python
+    :number-lines:
+
+    def setup():
+        py5.size(200, 200)
+
+        with py5.begin_record(py5.SVG, "/tmp/test.svg") as r:
+            py5.rect_mode(py5.CENTER)
+            r.fill("#F00")  # affects the recorded output only
+
+            for _ in range(10):
+                py5.square(py5.random(py5.width), py5.random(py5.height), 10)
+
+.. raw:: html
+
+    </div></div>
+
+.. raw:: html
+
     </div>
 
 Description
@@ -50,6 +75,8 @@ Opens a new file and all subsequent drawing functions are echoed to this file as
 Note that ``begin_record()`` will only pick up any settings that happen after it has been called. For instance, if you call :doc:`sketch_text_font` before ``begin_record()``, then that font will not be set for the file that you're recording to.
 
 ``begin_record()`` works only with the ``PDF`` and ``SVG`` renderers.
+
+This method can be used as a context manager to ensure that :doc:`sketch_end_record` always gets called, as shown in the last example.
 
 Underlying Java method: `beginRecord <https://processing.org/reference/beginRecord_.html>`_
 
@@ -69,5 +96,5 @@ Parameters
 * **renderer**: `str` - PDF or SVG
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 25, 2021 10:36:03am UTC
 

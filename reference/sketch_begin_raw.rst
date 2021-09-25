@@ -41,6 +41,30 @@ Examples
 
 .. raw:: html
 
+    <div class="example-row"><div class="example-cell-image">
+
+.. raw:: html
+
+    </div><div class="example-cell-code">
+
+.. code:: python
+    :number-lines:
+
+    def setup():
+        py5.size(400, 400, py5.P2D)
+
+        with py5.begin_raw(py5.PDF, "/tmp/raw.pdf"):
+            py5.rect_mode(py5.CENTER)
+            py5.fill("#F00")
+            for _ in range(10):
+                py5.square(py5.random(py5.width), py5.random(py5.height), 10)
+
+.. raw:: html
+
+    </div></div>
+
+.. raw:: html
+
     </div>
 
 Description
@@ -50,7 +74,9 @@ To create vectors from 3D data, use the ``begin_raw()`` and :doc:`sketch_end_raw
 
 When using ``begin_raw()`` and :doc:`sketch_end_raw`, it's possible to write to either a 2D or 3D renderer. For instance, ``begin_raw()`` with the ``PDF`` library will write the geometry as flattened triangles and lines, even if recording from the ``P3D`` renderer. 
 
-If you want a background to show up in your files, use ``rect(0, 0, width, height)`` after setting the :doc:`sketch_fill` to the background color. Otherwise the background will not be rendered to the file because the background is not shape.
+If you want a background to show up in your files, use ``rect(0, 0, width, height)`` after setting the :doc:`sketch_fill` to the background color. Otherwise the background will not be rendered to the file because the background is not a shape.
+
+This method can be used as a context manager to ensure that :doc:`sketch_end_raw` always gets called, as shown in the last example.
 
 Using ``hint(ENABLE_DEPTH_SORT)`` can improve the appearance of 3D geometry drawn to 2D file formats.
 
@@ -72,5 +98,5 @@ Parameters
 * **renderer**: `str` - for example, PDF or DXF
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 25, 2021 10:33:52am UTC
 

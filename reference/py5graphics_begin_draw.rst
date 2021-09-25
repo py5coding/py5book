@@ -35,7 +35,7 @@ Examples
         g.vertex(10, -10)
         g.vertex(10, 10)
         g.vertex(-10, 10)
-        g.end_shape()
+        g.end_shape(py5.CLOSE)
         g.end_draw()
 
         py5.image(g, 0, 0)
@@ -98,5 +98,5 @@ Syntax
 
     begin_draw() -> None
 
-Updated on September 24, 2021 11:09:52am UTC
+Updated on September 25, 2021 10:33:52am UTC
 
