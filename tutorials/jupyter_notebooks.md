@@ -255,31 +255,7 @@ This behavior is by design.
 
 Consider that the py5 library is using the Processing library to create these graphics. Builtin Processing objects such as PImage or PGraphics are designed to be associated with one and only one Processing Sketch. Py5 can let users write code to that subverts these assumptions, and as a result use Processing in a way that is completely different from how it was designed to be used. Sometimes this can be beneficial, but other times it will cause unexpected errors.
 
-If you understand the risks, or if you are working with non-Processing objects (as is the case for `random_x` and `random_y` in the above example), you have two options available to you.
-
-First, you can add the `global` keyword to your code:
-
-```{code-cell} ipython3
-%%py5draw 300 200
-
-py5.background(240)
-py5.rect_mode(py5.CENTER)
-
-global random_x
-global random_y
-
-random_x = py5.random(py5.width)
-random_y = py5.random(py5.height)
-py5.rect(random_x, random_y, 50, 50)
-```
-
-Now we can get the position of the square:
-
-```{code-cell} ipython3
-random_x, random_y
-```
-
-Alternatively, you can use the `--unsafe` parameter. This is a blanket statement that mixes the cell magic's namespace with the notebook namespace. As the name implies, you can cause problems for yourself by using this.
+If you understand the risks, or if you are working with non-Processing objects (as is the case for `random_x` and `random_y` in the above example), you can use the `--unsafe` parameter. This lets the cell magic add new variables and functions to the notebook namespace. As the name implies, you can cause problems for yourself by using this.
 
 ```{code-cell} ipython3
 %%py5draw 300 200 --unsafe
