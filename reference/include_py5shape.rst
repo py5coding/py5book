@@ -6,6 +6,7 @@
 Drawing
 ~~~~~~~
 
+* `begin_closed_shape() <py5shape_begin_closed_shape.html>`_
 * `begin_shape() <py5shape_begin_shape.html>`_
 * `disable_style() <py5shape_disable_style.html>`_
 * `enable_style() <py5shape_enable_style.html>`_

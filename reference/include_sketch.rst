@@ -338,6 +338,7 @@ Loading / Displaying
 Vertex
 ^^^^^^
 
+* `begin_closed_shape() <sketch_begin_closed_shape.html>`_
 * `begin_contour() <sketch_begin_contour.html>`_
 * `begin_shape() <sketch_begin_shape.html>`_
 * `bezier_vertex() <sketch_bezier_vertex.html>`_

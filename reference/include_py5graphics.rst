@@ -234,6 +234,7 @@ Loading / Displaying
 Vertex
 ^^^^^^
 
+* `begin_closed_shape() <py5graphics_begin_closed_shape.html>`_
 * `begin_contour() <py5graphics_begin_contour.html>`_
 * `begin_shape() <py5graphics_begin_shape.html>`_
 * `bezier_vertex() <py5graphics_bezier_vertex.html>`_
