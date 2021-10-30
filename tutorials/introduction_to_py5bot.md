@@ -43,7 +43,7 @@ Internally, py5 executes these commands inside of a `setup()` method to render a
 There are a few important rules that you should be aware of.
 
 * The [size()](/reference/sketch_size) command should be the first line of Python code. Comments are ignored. If the [size()](/reference/sketch_size) command is omitted, the output size will be 100 by 100 pixels.
-* When py5bot is run on Windows and Linux computers, you can use the `P2D` or `P3D` renderers. These OpenGL renderers are currently not supported on OSX.
+* When py5bot is run on Windows and Linux computers, you can use the `P2D` or `P3D` renderers. These OpenGL renderers are currently not supported on OSX. The `SVG` and `PDF` renderers supported on all platforms.
 * Each cell has its own local namespace. Variables and functions defined in one cell cannot be used in another cell.
 
 There are some less important rules that should be mentioned but aren't that important:
@@ -136,15 +136,25 @@ rect(50, 50, 100, 100)
 
 ## Other Renderers
 
-As previously stated, the P2D and P3D renderers only work on Linux and Windows. On OSX, py5bot will replace the P2D or P3D renderers with the default renderer after displaying a polite warning.
+As previously stated, the `P2D` and `P3D` renderers only work on Linux and Windows. On OSX, py5bot will replace the `P2D` or `P3D` renderers with the default renderer after displaying a polite warning.
 
-If you are running this through Jupyter Lab, the following cell will work just fine, without a warning. What matter is where the Jupyter server is running, not the Jupyter client.
+If you are an OSX user running this through Binder or with this website's Live Code feature (Thebe), the following cell will work just fine, without a warning, because the Jupyter kernel is running in the cloud on a Linux server. What matters is where the Jupyter server is running, not the Jupyter client.
 
 ```{code-cell} ipython3
 size(200, 200, P2D)
 
 circle(width / 2, height / 2, 150)
 ```
+
+When using the the `SVG` or `PDF` renderers your call to `size()` must provide a filename for the 4th parameter. For example:
+
+```{code-cell} ipython3
+size(200, 200, SVG, '/tmp/drawing.svg')
+
+circle(width / 2, height / 2, 150)
+```
+
+The `PDF` renderer is similar except be aware that Jupyter Notebooks cannot embed a PDF file in the notebook so the output will not be displayed like it does for the other renderers.
 
 ## Code Bypass
 
