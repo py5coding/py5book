@@ -78,7 +78,7 @@ Description
 
 This method is used to start a custom shape created with the :doc:`sketch_create_shape` function. It's always and only used with :doc:`sketch_create_shape`.
 
-Drawing commands to a custom shape must always conclude with a call to the :doc:`py5shape_end_shape` method. This method can be used as a context manager to ensure that :doc:`py5shape_end_shape` always gets called, as shown in the second example. Use :doc:`py5shape_begin_closed_shape` to create a context manager that will close the shape.
+Drawing commands to a custom shape must always conclude with a call to the :doc:`py5shape_end_shape` method. This method can be used as a context manager to ensure that :doc:`py5shape_end_shape` always gets called, as shown in the second example. Use :doc:`py5shape_begin_closed_shape` to create a context manager that will pass the ``CLOSE`` parameter to :doc:`sketch_end_shape`, closing the shape.
 
 Underlying Java method: `PShape.beginShape <https://processing.org/reference/PShape_beginShape_.html>`_
 
@@ -96,5 +96,5 @@ Parameters
 * **kind**: `int` - Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
 
 
-Updated on September 23, 2021 10:38:25am UTC
+Updated on October 29, 2021 22:01:43pm UTC
 

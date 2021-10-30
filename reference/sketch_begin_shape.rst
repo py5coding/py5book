@@ -364,7 +364,7 @@ Transformations such as :doc:`sketch_translate`, :doc:`sketch_rotate`, and :doc:
 
 The ``P2D`` and ``P3D`` renderers allow :doc:`sketch_stroke` and :doc:`sketch_fill` to be altered on a per-vertex basis, but the default renderer does not. Settings such as :doc:`sketch_stroke_weight`, :doc:`sketch_stroke_cap`, and :doc:`sketch_stroke_join` cannot be changed while inside a ``begin_shape()`` & :doc:`sketch_end_shape` block with any renderer.
 
-This method can be used as a context manager to ensure that :doc:`sketch_end_shape` always gets called, as shown in the last example. Use :doc:`sketch_begin_closed_shape` to create a context manager that will close the shape.
+This method can be used as a context manager to ensure that :doc:`sketch_end_shape` always gets called, as shown in the last example. Use :doc:`sketch_begin_closed_shape` to create a context manager that will pass the ``CLOSE`` parameter to :doc:`sketch_end_shape`, closing the shape.
 
 Underlying Java method: `beginShape <https://processing.org/reference/beginShape_.html>`_
 
@@ -382,5 +382,5 @@ Parameters
 * **kind**: `int` - Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
 
 
-Updated on September 23, 2021 10:51:16am UTC
+Updated on October 29, 2021 22:01:43pm UTC
 

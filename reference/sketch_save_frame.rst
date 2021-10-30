@@ -50,17 +50,17 @@ Syntax
 
 .. code:: python
 
-    save_frame(filename: Union[str, Path], *, format: str = None, drop_alpha: bool = True, use_thread: bool = False, **params) -> None
+    save_frame(filename: Union[str, Path, BytesIO], *, format: str = None, drop_alpha: bool = True, use_thread: bool = False, **params) -> None
 
 Parameters
 ----------
 
 * **drop_alpha**: `bool = True` - remove the alpha channel when saving the image
-* **filename**: `Union[str, Path]` - output filename
+* **filename**: `Union[str, Path, BytesIO]` - output filename
 * **format**: `str = None` - image format, if not determined from filename extension
 * **params**: - keyword arguments to pass to the PIL.Image save method
 * **use_thread**: `bool = False` - write file in separate thread
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on October 29, 2021 22:01:43pm UTC
 

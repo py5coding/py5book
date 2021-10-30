@@ -49,7 +49,7 @@ This magic is similar to :doc:`py5magics_py5draw` in that both can be used to cr
 
 This magic supports the default renderer and the ``P2D`` and ``P3D`` renderers. Note that both of the OpenGL renderers will briefly open a window on your screen. This magic is only available when using the py5 kernel and coding in imported mode. The ``P2D`` and ``P3D`` renderers are not available when the py5 kernel is hosted on an OSX computer.
 
-Code used in this cell can reference functions and variables defined in other cells. By default, variables and functions created in this cell will be local to only this cell because to do otherwise would be unsafe. If you understand the risks, you can use the ``global`` keyword to add a single function or variable to the notebook namespace.
+Code used in this cell can reference functions and variables defined in other cells because a copy of the user namespace is provided during execution. Variables and functions created in this cell will be local to only this cell because to do otherwise would be unsafe. Mutable objects in the user namespace, however, can be altered and those changes will persist elsewhere in the notebook. Be aware that using py5 objects in a different notebook cell or reusing them in another Sketch can result in nasty errors and bizzare consequences.
 
 Usage
 -----
@@ -69,5 +69,5 @@ Arguments
       -v VARIABLE, --var VARIABLE
                             assign image to variable
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on October 29, 2021 22:01:43pm UTC
 

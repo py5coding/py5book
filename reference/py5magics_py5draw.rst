@@ -48,7 +48,9 @@ On OSX, only the default renderer is currently supported. Other platforms suppor
 
 Internally this magic command creates a static Sketch using the user provided code. The static Sketch drawing surface does not allow transparency. If you want to quickly create an image that has transparency, consider using :doc:`py5functions_render` or :doc:`py5functions_render_frame` with the ``use_py5graphics`` parameter.
 
-Code used in this cell can reference functions and variables defined in other cells. By default, variables and functions created in this cell will be local to only this cell because to do otherwise would be unsafe. If you understand the risks, you can use the ``global`` keyword to add a single function or variable to the notebook namespace or the ``--unsafe`` argument to add everything to the notebook namespace. Either option may be very useful to you, but be aware that using py5 objects in a different notebook cell or reusing them in another Sketch can result in nasty errors and bizzare consequences.
+Code used in this cell can reference functions and variables defined in other cells because a copy of the user namespace is provided during execution. By default, variables and functions created in this cell will be local to only this cell because to do otherwise would be unsafe. Mutable objects in the user namespace, however, can be altered and those changes will persist elsewhere in the notebook.
+
+If you understand the risks, you can use the ``--unsafe`` argument so that variables and functions created in this cell are stored in the user namespace instead of a copy, making them available in other notebook cells. This may be very useful to you, but be aware that using py5 objects in a different notebook cell or reusing them in another Sketch can result in nasty errors and bizzare consequences.
 
 Usage
 -----
@@ -73,7 +75,7 @@ Arguments
                             assign image to variable
       -r RENDERER, --renderer RENDERER
                             processing renderer to use for Sketch
-      --unsafe              allow new variables to enter the global namespace
+      --unsafe              allow new variables to enter the user namespace
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on October 29, 2021 22:01:43pm UTC
 

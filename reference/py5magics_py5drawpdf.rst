@@ -43,7 +43,9 @@ For users who are familiar with Processing and py5 programming, you can pretend 
 
 As this is creating a PDF, you cannot do operations on the :doc:`sketch_pixels` or :doc:`sketch_np_pixels` arrays. Use :doc:`py5magics_py5draw` instead.
 
-Code used in this cell can reference functions and variables defined in other cells. By default, variables and functions created in this cell will be local to only this cell because to do otherwise would be unsafe. If you understand the risks, you can use the ``global`` keyword to add a single function or variable to the notebook namespace or the ``--unsafe`` argument to add everything to the notebook namespace. Either option may be very useful to you, but be aware that using py5 objects in a different notebook cell or reusing them in another Sketch can result in nasty errors and bizzare consequences.
+Code used in this cell can reference functions and variables defined in other cells because a copy of the user namespace is provided during execution. By default, variables and functions created in this cell will be local to only this cell because to do otherwise would be unsafe. Mutable objects in the user namespace, however, can be altered and those changes will persist elsewhere in the notebook.
+
+If you understand the risks, you can use the ``--unsafe`` argument so that variables and functions created in this cell are stored in the user namespace instead of a copy, making them available in other notebook cells. This may be very useful to you, but be aware that using py5 objects in a different notebook cell or reusing them in another Sketch can result in nasty errors and bizzare consequences.
 
 Usage
 -----
@@ -63,7 +65,7 @@ Arguments
       filename  filename for PDF output
 
     optional arguments:
-      --unsafe  allow new variables to enter the global namespace
+      --unsafe  allow new variables to enter the user namespace
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on October 29, 2021 22:01:43pm UTC
 

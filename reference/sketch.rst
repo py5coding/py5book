@@ -10,18 +10,21 @@ Core py5 class for leveraging py5's functionality. This is analogous to the PApp
 
 The core functions to be implemented by the py5 coder are ``settings``, ``setup``, and ``draw``. The first two will be run once at Sketch initialization and the third will be run in an animation thread, once per frame. The following event functions are also supported: 
 
+    * ``exiting``
     * ``key_pressed``
-    * ``key_typed``
     * ``key_released``
+    * ``key_typed``
     * ``mouse_clicked``
     * ``mouse_dragged``
-    * ``mouse_moved'``
     * ``mouse_entered``
     * ``mouse_exited``
+    * ``mouse_moved``
     * ``mouse_pressed``
     * ``mouse_released``
     * ``mouse_wheel``
-    * ``exiting``
+    * ``movie_event``
+    * ``post_draw``
+    * ``pre_draw``
 
 When coding in class mode, all of the above functions should be class methods. When coding in module mode or imported mode, the above functions should be stand-alone functions available in the local namespace in which :doc:`sketch_run_sketch` was called.
 
@@ -31,5 +34,5 @@ The following methods and fields are provided:
 
 .. include:: include_sketch.rst
 
-Updated on September 23, 2021 09:34:27am UTC
+Updated on October 29, 2021 22:01:43pm UTC
 

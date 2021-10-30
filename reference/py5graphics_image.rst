@@ -36,10 +36,10 @@ Parameters
 * **d**: `float` - height to display the image by default
 * **img**: `Py5Image` - the image to display
 * **u1**: `int` - x-coordinate of the upper left corner of image subset
-* **u2**: `int` - y-coordinate of the upper left corner of image subset
-* **v1**: `int` - x-coordinate of the lower right corner of image subset
+* **u2**: `int` - x-coordinate of the lower right corner of image subset
+* **v1**: `int` - y-coordinate of the upper left corner of image subset
 * **v2**: `int` - y-coordinate of the lower right corner of image subset
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on October 29, 2021 22:01:43pm UTC
 
