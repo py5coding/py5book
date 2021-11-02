@@ -108,11 +108,11 @@ Parameters
 ----------
 
 * **start1**: `float` - lower bound of the value's current range
-* **start2**: `float` - upper bound of the value's current range
-* **stop1**: `float` - lower bound of the value's target range
+* **start2**: `float` - lower bound of the value's target range
+* **stop1**: `float` - upper bound of the value's current range
 * **stop2**: `float` - upper bound of the value's target range
 * **value**: `float` - the incoming value to be converted
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 02, 2021 15:08:42pm UTC
 
