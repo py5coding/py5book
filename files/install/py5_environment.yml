@@ -8,7 +8,6 @@ dependencies:
   - jedi=0.17.2
   - jupyterlab
   - line_profiler
-  - noise
   - openjdk=11.0.8
   - pip
   - pip:

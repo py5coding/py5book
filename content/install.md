@@ -111,7 +111,6 @@ dependencies:
   - jedi=0.17.2
   - jupyterlab
   - line_profiler
-  - noise
   - openjdk=11.0.8
   - pip
   - pip:
@@ -258,13 +257,11 @@ Finally, install the py5 library.
 pip install py5
 ```
 
-If you are on Windows or on a Mac, you may get errors relating to the
-dependent noise and line-profiler packages. If so, use one or both of
-the following commands to resolve the errors, then try `pip install py5`
-again.
+If you are on Windows or on a Mac, you may get an error relating to the
+dependent line-profiler package. If so, use the following command to resolve
+the error, then try `pip install py5` again.
 
 ``` bash
-conda install -c conda-forge noise
 conda install -c conda-forge line_profiler
 ```
 
