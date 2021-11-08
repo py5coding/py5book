@@ -49,8 +49,8 @@ Syntax
 
 .. code:: python
 
-    dist(x1: float, y1: float, x2: float, y2: float) -> float
-    dist(x1: float, y1: float, z1: float, x2: float, y2: float, z2: float) -> float
+    dist(x1: float, y1: float, x2: float, y2: float, /) -> float
+    dist(x1: float, y1: float, z1: float, x2: float, y2: float, z2: float, /) -> float
 
 Parameters
 ----------
@@ -63,5 +63,5 @@ Parameters
 * **z2**: `float` - z-coordinate of the second point
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 08, 2021 12:26:18pm UTC
 

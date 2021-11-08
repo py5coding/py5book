@@ -57,8 +57,8 @@ Syntax
 
 .. code:: python
 
-    mag(a: float, b: float) -> float
-    mag(a: float, b: float, c: float) -> float
+    mag(a: float, b: float, /) -> float
+    mag(a: float, b: float, c: float, /) -> float
 
 Parameters
 ----------
@@ -68,5 +68,5 @@ Parameters
 * **c**: `float` - third value
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 08, 2021 12:26:18pm UTC
 

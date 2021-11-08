@@ -212,8 +212,9 @@ Random
 
 * `noise() <sketch_noise.html>`_
 * `noise_detail() <sketch_noise_detail.html>`_
-* `noise_mode() <sketch_noise_mode.html>`_
 * `noise_seed() <sketch_noise_seed.html>`_
+* `os_noise() <sketch_os_noise.html>`_
+* `os_noise_seed() <sketch_os_noise_seed.html>`_
 * `random() <sketch_random.html>`_
 * `random_choice() <sketch_random_choice.html>`_
 * `random_gaussian() <sketch_random_gaussian.html>`_

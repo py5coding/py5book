@@ -79,8 +79,8 @@ Syntax
 .. code:: python
 
     random() -> float
-    random(high: float) -> float
-    random(low: float, high: float) -> float
+    random(high: float, /) -> float
+    random(low: float, high: float, /) -> float
 
 Parameters
 ----------
@@ -89,5 +89,5 @@ Parameters
 * **low**: `float` - lower limit
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 08, 2021 12:26:18pm UTC
 

@@ -84,8 +84,8 @@ Syntax
 .. code:: python
 
     random_gaussian() -> float
-    random_gaussian(loc: float) -> float
-    random_gaussian(loc: float, scale: float) -> float
+    random_gaussian(loc: float, /) -> float
+    random_gaussian(loc: float, scale: float, /) -> float
 
 Parameters
 ----------
@@ -94,5 +94,5 @@ Parameters
 * **scale**: `float` - standard deviation of randomly selected numbers
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 08, 2021 12:26:18pm UTC
 

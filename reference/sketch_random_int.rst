@@ -55,8 +55,8 @@ Syntax
 .. code:: python
 
     random_int() -> int
-    random_int(high: int) -> int
-    random_int(low: int, high: int) -> int
+    random_int(high: int, /) -> int
+    random_int(low: int, high: int, /) -> int
 
 Parameters
 ----------
@@ -65,5 +65,5 @@ Parameters
 * **low**: `int` - lower limit
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 08, 2021 12:26:18pm UTC
 
