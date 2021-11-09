@@ -63,7 +63,7 @@ Examples
 
     def draw():
         new_pixels = py5.remap(
-            py5.os_noise(x, y + py5.frame_count / 10), -1, 1, 0, 255).astype(np.uint8)
+            py5.os_noise(py5.frame_count / 100, x, py5.frame_count / 100, y), -1, 1, 0, 255).astype(np.uint8)
         py5.set_np_pixels(new_pixels, bands='L')
 
 .. raw:: html
@@ -141,9 +141,9 @@ The nature of the noise values returned can be adjusted with :doc:`sketch_os_noi
 
 Another way to adjust the character of the resulting sequence is the scale of the input coordinates. As the method works within an infinite space, the value of the coordinates doesn't matter as such; only the distance between successive coordinates is important. As a general rule, the smaller the difference between coordinates, the smoother the resulting noise sequence. Steps of 0.005-0.03 work best for most applications, but this will differ depending on the use case and the noise settings.
 
-Py5's ``os_noise()`` method can also accept numpy arrays as parameters. It will use broadcasting when needed and calculate the values efficiently. Using numpy array parameters will be much faster and efficient than calling the ``os_noise()`` method repeatedly in a loop. See the examples to see how this can be done.
+Py5's ``os_noise()`` method can also accept numpy arrays as parameters. It will use broadcasting when needed and calculate the values efficiently. Using numpy array parameters will be much faster and efficient than calling the ``os_noise()`` method repeatedly in a loop. See the examples to see how this can be done. The noise algorithm for this method is implemented in Java.
 
-Noise generation is a rich and complex topic, and there are many other noise algorithm libraries available that are worth learning about. Early versions of py5 used the Python "noise" library, which can generate noise using the "Improved Perlin Noise" algorithm (as described in Ken Perlin's 2002 SIGGRAPH paper) and the Simplex Noise algorithm (also developed by Ken Perlin). That Python library was removed from py5 because it has some bugs and hasn't had a release in years. Nevertheless, it might be useful to you, and can be installed separately. You can also try the Python library "vnoise", which is a pure Python implementation of the Improved Perlin Noise algorithm. Note that py5 can also employ Java libraries, so consider "FastNoise Lite" to experiment with a large selection of noise algorithms with efficient implementations.
+Noise generation is a rich and complex topic, and there are many noise algorithms and libraries available that are worth learning about. Early versions of py5 used the Python "noise" library, which can generate noise using the "Improved Perlin Noise" algorithm (as described in Ken Perlin's 2002 SIGGRAPH paper) and the Simplex Noise algorithm (also developed by Ken Perlin). That Python library was removed from py5 because it has some bugs and hasn't had a release in years. Nevertheless, it might be useful to you, and can be installed separately like any other Python package. You can also try the Python library "vnoise", which is a pure Python implementation of the Improved Perlin Noise algorithm. Note that py5 can also employ Java libraries, so consider "FastNoise Lite" to experiment with a large selection of noise algorithms with efficient implementations.
 
 Syntax
 ------
@@ -163,5 +163,5 @@ Parameters
 * **z**: `float` - z-coordinate in noise space
 
 
-Updated on November 08, 2021 12:35:26pm UTC
+Updated on November 09, 2021 12:23:28pm UTC
 
