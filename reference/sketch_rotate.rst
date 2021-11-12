@@ -46,7 +46,7 @@ The coordinates are always rotated around their relative position to the origin.
  
 Technically, ``rotate()`` multiplies the current transformation matrix by a rotation matrix. This function can be further controlled by :doc:`sketch_push_matrix` and :doc:`sketch_pop_matrix`.
 
-Underlying Java method: `rotate <https://processing.org/reference/rotate_.html>`_
+Underlying Processing method: `rotate <https://processing.org/reference/rotate_.html>`_
 
 Syntax
 ------
@@ -65,5 +65,5 @@ Parameters
 * **z**: `float` - z-coordinate of vector to rotate around
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

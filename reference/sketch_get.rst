@@ -75,7 +75,7 @@ If a width and a height are specified, ``get(x, y, w, h)`` returns a Py5Image co
 
 Getting the color of a single pixel with ``get(x, y)`` is easy, but not as fast as grabbing the data directly from :doc:`sketch_pixels` or :doc:`sketch_np_pixels`. The equivalent statement to ``get(x, y)`` using :doc:`sketch_pixels` is ``pixels[y*width+x]``. Using :doc:`sketch_np_pixels` it is ``np_pixels[y, x]``. See the reference for :doc:`sketch_pixels` and :doc:`sketch_np_pixels` for more information.
 
-Underlying Java method: `get <https://processing.org/reference/get_.html>`_
+Underlying Processing method: `get <https://processing.org/reference/get_.html>`_
 
 Syntax
 ------
@@ -95,5 +95,5 @@ Parameters
 * **y**: `int` - y-coordinate of the pixel
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

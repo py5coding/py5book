@@ -44,7 +44,7 @@ Shears a shape around the y-axis the amount specified by the ``angle`` parameter
  
 Technically, ``shear_y()`` multiplies the current transformation matrix by a rotation matrix. This function can be further controlled by the :doc:`sketch_push_matrix` and :doc:`sketch_pop_matrix` functions.
 
-Underlying Java method: `shearY <https://processing.org/reference/shearY_.html>`_
+Underlying Processing method: `shearY <https://processing.org/reference/shearY_.html>`_
 
 Syntax
 ------
@@ -59,5 +59,5 @@ Parameters
 * **angle**: `float` - angle of shear specified in radians
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

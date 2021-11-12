@@ -51,7 +51,7 @@ Making productive use of this method requires some knowledge of 2D or 3D transfo
 
 Transformations are cummulative and therefore will be applied on top of existing transformations. Use :doc:`py5shape_reset_matrix` to set the transformation matrix to the identity matrix.
 
-Underlying Java method: PShape.applyMatrix
+Underlying Processing method: PShape.applyMatrix
 
 Syntax
 ------
@@ -86,5 +86,5 @@ Parameters
 * **source**: `NDArray[(4, 4), Float]` - 3D transformation matrix
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -33,7 +33,7 @@ Hints for use with ``P3D`` only
 
 This method is the same as :doc:`sketch_hint` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_hint`.
 
-Underlying Java method: PGraphics.hint
+Underlying Processing method: PGraphics.hint
 
 Syntax
 ------
@@ -48,5 +48,5 @@ Parameters
 * **which**: `int` - hint to use when rendering Sketch
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

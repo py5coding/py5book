@@ -10,7 +10,7 @@ Get the current matrix as a numpy array. Use the ``target`` parameter to put the
 
 This method is the same as :doc:`sketch_get_matrix` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_get_matrix`.
 
-Underlying Java method: PGraphics.getMatrix
+Underlying Processing method: PGraphics.getMatrix
 
 Syntax
 ------
@@ -28,5 +28,5 @@ Parameters
 * **target**: `NDArray[(4, 4), Float]` - transformation matrix data
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

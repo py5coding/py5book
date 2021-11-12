@@ -63,7 +63,7 @@ Drawing 2D curves requires using the ``P2D`` renderer and drawing 3D curves requ
 
 This method can only be used within a :doc:`py5shape_begin_shape` and :doc:`py5shape_end_shape` pair.
 
-Underlying Java method: PShape.curveTightness
+Underlying Processing method: PShape.curveTightness
 
 Syntax
 ------
@@ -78,5 +78,5 @@ Parameters
 * **tightness**: `float` - amount of deformation from the original vertices
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

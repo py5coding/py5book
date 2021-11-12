@@ -57,7 +57,7 @@ Description
 
 Get the number of glyphs contained in the font. This will be 0 if the font is a "lazy font" that creates glyphs as they are needed by the Sketch. This will be the case if the font was created with :doc:`sketch_create_font` without using the ``charset`` parameter.
 
-Underlying Java method: PFont.getGlyphCount
+Underlying Processing method: PFont.getGlyphCount
 
 Syntax
 ------
@@ -66,5 +66,5 @@ Syntax
 
     get_glyph_count() -> int
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

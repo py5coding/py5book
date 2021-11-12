@@ -12,7 +12,7 @@ When textures are in use, the fill color is ignored. Instead, use :doc:`py5graph
 
 This method is the same as :doc:`sketch_texture` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_texture`.
 
-Underlying Java method: PGraphics.texture
+Underlying Processing method: PGraphics.texture
 
 Syntax
 ------
@@ -27,5 +27,5 @@ Parameters
 * **image**: `Py5Image` - reference to a Py5Image object
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

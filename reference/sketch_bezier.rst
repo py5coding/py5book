@@ -71,7 +71,7 @@ Description
 
 Draws a Bezier curve on the screen. These curves are defined by a series of anchor and control points. The first two parameters specify the first anchor point and the last two parameters specify the other anchor point. The middle parameters specify the control points which define the shape of the curve. Bezier curves were developed by French engineer Pierre Bezier. Using the 3D version requires rendering with ``P3D``.
 
-Underlying Java method: `bezier <https://processing.org/reference/bezier_.html>`_
+Underlying Processing method: `bezier <https://processing.org/reference/bezier_.html>`_
 
 Syntax
 ------
@@ -98,5 +98,5 @@ Parameters
 * **z4**: `float` - coordinates for the second anchor point
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -51,7 +51,7 @@ Sets a texture to be applied to vertex points. The ``texture()`` method must be 
 
 When textures are in use, the fill color is ignored. Instead, use :doc:`sketch_tint` to specify the color of the texture as it is applied to the shape.
 
-Underlying Java method: `texture <https://processing.org/reference/texture_.html>`_
+Underlying Processing method: `texture <https://processing.org/reference/texture_.html>`_
 
 Syntax
 ------
@@ -66,5 +66,5 @@ Parameters
 * **image**: `Py5Image` - reference to a Py5Image object
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

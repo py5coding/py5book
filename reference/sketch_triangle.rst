@@ -40,7 +40,7 @@ Description
 
 A triangle is a plane created by connecting three points. The first two arguments specify the first point, the middle two arguments specify the second point, and the last two arguments specify the third point.
 
-Underlying Java method: `triangle <https://processing.org/reference/triangle_.html>`_
+Underlying Processing method: `triangle <https://processing.org/reference/triangle_.html>`_
 
 Syntax
 ------
@@ -60,5 +60,5 @@ Parameters
 * **y3**: `float` - y-coordinate of the third point
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

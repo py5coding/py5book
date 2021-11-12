@@ -10,7 +10,7 @@ Adds an ambient light. Ambient light doesn't come from a specific direction, the
 
 This method is the same as :doc:`sketch_ambient_light` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_ambient_light`.
 
-Underlying Java method: PGraphics.ambientLight
+Underlying Processing method: PGraphics.ambientLight
 
 Syntax
 ------
@@ -31,5 +31,5 @@ Parameters
 * **z**: `float` - z-coordinate of the light
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

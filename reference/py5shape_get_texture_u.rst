@@ -56,7 +56,7 @@ Description
 
 Get the horizontal texture mapping coordinate for a particular vertex. Returned values will always range from 0 to 1, regardless of what the Sketch's :doc:`sketch_texture_mode` setting is.
 
-Underlying Java method: PShape.getTextureU
+Underlying Processing method: PShape.getTextureU
 
 Syntax
 ------
@@ -71,5 +71,5 @@ Parameters
 * **index**: `int` - vertex index
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

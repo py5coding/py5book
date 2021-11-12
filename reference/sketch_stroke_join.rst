@@ -103,7 +103,7 @@ Description
 
 Sets the style of the joints which connect line segments. These joints are either mitered, beveled, or rounded and specified with the corresponding parameters ``MITER``, ``BEVEL``, and ``ROUND``. The default joint is ``MITER``.
 
-Underlying Java method: `strokeJoin <https://processing.org/reference/strokeJoin_.html>`_
+Underlying Processing method: `strokeJoin <https://processing.org/reference/strokeJoin_.html>`_
 
 Syntax
 ------
@@ -118,5 +118,5 @@ Parameters
 * **join**: `int` - either MITER, BEVEL, ROUND
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

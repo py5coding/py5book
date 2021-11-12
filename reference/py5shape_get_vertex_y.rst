@@ -74,7 +74,7 @@ Description
 
 Get the value of the y coordinate for the vertex ``index``.
 
-Underlying Java method: PShape.getVertexY
+Underlying Processing method: PShape.getVertexY
 
 Syntax
 ------
@@ -89,5 +89,5 @@ Parameters
 * **index**: `int` - vertex index
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

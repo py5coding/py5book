@@ -80,7 +80,7 @@ This method can be used as a context manager to ensure that :doc:`sketch_end_raw
 
 Using ``hint(ENABLE_DEPTH_SORT)`` can improve the appearance of 3D geometry drawn to 2D file formats.
 
-Underlying Java method: `beginRaw <https://processing.org/reference/beginRaw_.html>`_
+Underlying Processing method: `beginRaw <https://processing.org/reference/beginRaw_.html>`_
 
 Syntax
 ------
@@ -98,5 +98,5 @@ Parameters
 * **renderer**: `str` - for example, PDF or DXF
 
 
-Updated on September 25, 2021 10:33:52am UTC
+Updated on November 12, 2021 11:30:58am UTC
 

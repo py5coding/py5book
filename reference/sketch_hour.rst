@@ -43,7 +43,7 @@ Description
 
 Py5 communicates with the clock on your computer. The ``hour()`` function returns the current hour as a value from 0 - 23.
 
-Underlying Java method: `hour <https://processing.org/reference/hour_.html>`_
+Underlying Processing method: `hour <https://processing.org/reference/hour_.html>`_
 
 Syntax
 ------
@@ -52,5 +52,5 @@ Syntax
 
     hour() -> int
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

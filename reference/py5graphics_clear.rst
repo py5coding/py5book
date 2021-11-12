@@ -56,7 +56,7 @@ Description
 
 Clears the pixels within a buffer. Unlike the main graphics context (the display window), pixels in ``Py5Graphics`` objects created with :doc:`sketch_create_graphics` can be entirely or partially transparent. This function clears everything in a ``Py5Graphics`` object to make all of the pixels 100% transparent.
 
-Underlying Java method: PGraphics.clear
+Underlying Processing method: PGraphics.clear
 
 Syntax
 ------
@@ -65,5 +65,5 @@ Syntax
 
     clear() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

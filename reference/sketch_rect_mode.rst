@@ -83,7 +83,7 @@ The default mode is ``rect_mode(CORNER)``, which interprets the first two parame
 
 The parameter must be written in ALL CAPS because Python is a case-sensitive language.
 
-Underlying Java method: `rectMode <https://processing.org/reference/rectMode_.html>`_
+Underlying Processing method: `rectMode <https://processing.org/reference/rectMode_.html>`_
 
 Syntax
 ------
@@ -98,5 +98,5 @@ Parameters
 * **mode**: `int` - either CORNER, CORNERS, CENTER, or RADIUS
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

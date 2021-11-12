@@ -101,7 +101,7 @@ The value for the gray parameter must be less than or equal to the current maxim
 
 The ``tint()`` function is also used to control the coloring of textures in 3D.
 
-Underlying Java method: `tint <https://processing.org/reference/tint_.html>`_
+Underlying Processing method: `tint <https://processing.org/reference/tint_.html>`_
 
 Syntax
 ------
@@ -126,5 +126,5 @@ Parameters
 * **v3**: `float` - blue or brightness value (depending on current color mode)
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

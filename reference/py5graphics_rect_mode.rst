@@ -20,7 +20,7 @@ The parameter must be written in ALL CAPS because Python is a case-sensitive lan
 
 This method is the same as :doc:`sketch_rect_mode` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_rect_mode`.
 
-Underlying Java method: PGraphics.rectMode
+Underlying Processing method: PGraphics.rectMode
 
 Syntax
 ------
@@ -35,5 +35,5 @@ Parameters
 * **mode**: `int` - either CORNER, CORNERS, CENTER, or RADIUS
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

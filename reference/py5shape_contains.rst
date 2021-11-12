@@ -51,7 +51,7 @@ Boolean value reflecting if the given coordinates are or are not contained withi
 
 This method uses a coordinate system that is unique to the shape and how the paths were created. To get the range of relevant coordinates, start by finding the minimum and maximum values for the vertices using :doc:`py5shape_get_vertex_x` and :doc:`py5shape_get_vertex_y`. Do not use :doc:`py5shape_get_width` or :doc:`py5shape_get_height`.
 
-Underlying Java method: PShape.contains
+Underlying Processing method: PShape.contains
 
 Syntax
 ------
@@ -67,5 +67,5 @@ Parameters
 * **y**: `float` - y-coordinate
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

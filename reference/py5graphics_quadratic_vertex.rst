@@ -10,7 +10,7 @@ Specifies vertex coordinates for quadratic Bezier curves. Each call to ``quadrat
 
 This method is the same as :doc:`sketch_quadratic_vertex` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_quadratic_vertex`.
 
-Underlying Java method: PGraphics.quadraticVertex
+Underlying Processing method: PGraphics.quadraticVertex
 
 Syntax
 ------
@@ -31,5 +31,5 @@ Parameters
 * **z3**: `float` - the z-coordinate of the anchor point
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

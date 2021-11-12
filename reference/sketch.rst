@@ -28,11 +28,11 @@ The core functions to be implemented by the py5 coder are ``settings``, ``setup`
 
 When coding in class mode, all of the above functions should be class methods. When coding in module mode or imported mode, the above functions should be stand-alone functions available in the local namespace in which :doc:`sketch_run_sketch` was called.
 
-Underlying Java class: PApplet
+Underlying Processing class: PApplet
 
 The following methods and fields are provided:
 
 .. include:: include_sketch.rst
 
-Updated on October 29, 2021 22:01:43pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

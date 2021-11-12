@@ -55,7 +55,7 @@ Description
 
 The ``set_vertex()`` method defines the coordinates of the vertex point located at the position defined by the ``index`` parameter. This method works when shapes are created as shown in the example, but won't work properly when a shape is defined explicitly (e.g. ``create_shape(RECT, 20, 20, 80, 80)``.
 
-Underlying Java method: `PShape.setVertex <https://processing.org/reference/PShape_setVertex_.html>`_
+Underlying Processing method: `PShape.setVertex <https://processing.org/reference/PShape_setVertex_.html>`_
 
 Syntax
 ------
@@ -76,5 +76,5 @@ Parameters
 * **z**: `float` - the z value for the vertex
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

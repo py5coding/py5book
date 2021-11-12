@@ -155,7 +155,7 @@ When programming in module mode and imported mode, py5 will allow calls to ``ful
 
 When ``full_screen()`` is used without a parameter on a computer with multiple monitors, it will (probably) draw the Sketch to the primary display. When it is used with a single parameter, this number defines the screen to display to program on (e.g. 1, 2, 3...). When used with two parameters, the first defines the renderer to use (e.g. P2D) and the second defines the screen. The ``SPAN`` parameter can be used in place of a screen number to draw the Sketch as a full-screen window across all of the attached displays if there are more than one.
 
-Underlying Java method: `fullScreen <https://processing.org/reference/fullScreen_.html>`_
+Underlying Processing method: `fullScreen <https://processing.org/reference/fullScreen_.html>`_
 
 Syntax
 ------
@@ -174,5 +174,5 @@ Parameters
 * **renderer**: `str` - the renderer to use, e.g. P2D, P3D, JAVA2D (default)
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

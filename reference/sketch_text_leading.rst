@@ -52,7 +52,7 @@ Description
 
 Sets the spacing between lines of text in units of pixels. This setting will be used in all subsequent calls to the :doc:`sketch_text` function.  Note, however, that the leading is reset by :doc:`sketch_text_size`. For example, if the leading is set to 20 with ``text_leading(20)``, then if ``text_size(48)`` is run at a later point, the leading will be reset to the default for the text size of 48.
 
-Underlying Java method: `textLeading <https://processing.org/reference/textLeading_.html>`_
+Underlying Processing method: `textLeading <https://processing.org/reference/textLeading_.html>`_
 
 Syntax
 ------
@@ -67,5 +67,5 @@ Parameters
 * **leading**: `float` - the size in pixels for spacing between lines
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

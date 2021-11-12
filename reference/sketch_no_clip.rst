@@ -49,7 +49,7 @@ Description
 
 Disables the clipping previously started by the :doc:`sketch_clip` function.
 
-Underlying Java method: `noClip <https://processing.org/reference/noClip_.html>`_
+Underlying Processing method: `noClip <https://processing.org/reference/noClip_.html>`_
 
 Syntax
 ------
@@ -58,5 +58,5 @@ Syntax
 
     no_clip() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

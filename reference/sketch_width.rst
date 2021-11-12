@@ -43,8 +43,8 @@ Description
 
 System variable that stores the width of the display window. This value is set by the first parameter of the :doc:`sketch_size` function. For example, the function call ``size(320, 240)`` sets the ``width`` variable to the value 320. The value of ``width`` defaults to 100 if :doc:`sketch_size` is not used in a program.
 
-Underlying Java field: `width <https://processing.org/reference/width.html>`_
+Underlying Processing field: `width <https://processing.org/reference/width.html>`_
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

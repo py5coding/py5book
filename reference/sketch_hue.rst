@@ -47,7 +47,7 @@ Description
 
 Extracts the hue value from a color.
 
-Underlying Java method: `hue <https://processing.org/reference/hue_.html>`_
+Underlying Processing method: `hue <https://processing.org/reference/hue_.html>`_
 
 Syntax
 ------
@@ -62,5 +62,5 @@ Parameters
 * **rgb**: `int` - any value of the color datatype
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

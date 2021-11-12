@@ -52,7 +52,7 @@ Description
 
 The ``end_shape()`` function is the companion to :doc:`sketch_begin_shape` and may only be called after :doc:`sketch_begin_shape`. When ``end_shape()`` is called, all of image data defined since the previous call to :doc:`sketch_begin_shape` is written into the image buffer. The constant ``CLOSE`` as the value for the ``MODE`` parameter to close the shape (to connect the beginning and the end).
 
-Underlying Java method: `endShape <https://processing.org/reference/endShape_.html>`_
+Underlying Processing method: `endShape <https://processing.org/reference/endShape_.html>`_
 
 Syntax
 ------
@@ -68,5 +68,5 @@ Parameters
 * **mode**: `int` - use CLOSE to close the shape
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

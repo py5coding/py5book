@@ -46,7 +46,7 @@ Description
 
 Get the font's postscript name.
 
-Underlying Java method: PFont.getPostScriptName
+Underlying Processing method: PFont.getPostScriptName
 
 Syntax
 ------
@@ -55,5 +55,5 @@ Syntax
 
     get_post_script_name() -> str
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

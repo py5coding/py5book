@@ -50,7 +50,7 @@ Description
 
 Pops the current transformation matrix off the matrix stack. Understanding pushing and popping requires understanding the concept of a matrix stack. The :doc:`sketch_push_matrix` function saves the current coordinate system to the stack and ``pop_matrix()`` restores the prior coordinate system. :doc:`sketch_push_matrix` and ``pop_matrix()`` are used in conjuction with the other transformation functions and may be embedded to control the scope of the transformations.
 
-Underlying Java method: `popMatrix <https://processing.org/reference/popMatrix_.html>`_
+Underlying Processing method: `popMatrix <https://processing.org/reference/popMatrix_.html>`_
 
 Syntax
 ------
@@ -59,5 +59,5 @@ Syntax
 
     pop_matrix() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

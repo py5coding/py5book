@@ -97,7 +97,7 @@ The ``x2`` and ``y2`` parameters define a rectangular area to display within and
 
 Note that py5 lets you call ``text()`` without first specifying a Py5Font with :doc:`sketch_text_font`. In that case, a generic sans-serif font will be used instead. (See the third example.)
 
-Underlying Java method: `text <https://processing.org/reference/text_.html>`_
+Underlying Processing method: `text <https://processing.org/reference/text_.html>`_
 
 Syntax
 ------
@@ -135,5 +135,5 @@ Parameters
 * **z**: `float` - z-coordinate of text
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

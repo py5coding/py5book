@@ -48,7 +48,7 @@ Description
 
 Restores the default shaders. Code that runs after ``reset_shader()`` will not be affected by previously defined shaders.
 
-Underlying Java method: `resetShader <https://processing.org/reference/resetShader_.html>`_
+Underlying Processing method: `resetShader <https://processing.org/reference/resetShader_.html>`_
 
 Syntax
 ------
@@ -64,5 +64,5 @@ Parameters
 * **kind**: `int` - type of shader, either POINTS, LINES, or TRIANGLES
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

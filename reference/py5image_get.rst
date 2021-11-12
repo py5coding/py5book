@@ -73,7 +73,7 @@ If the pixel requested is outside of the image, black is returned. The numbers r
 
 Getting the color of a single pixel with ``get(x, y)`` is easy, but not as fast as grabbing the data directly from :doc:`py5image_pixels`. The equivalent statement to ``get(x, y)`` using :doc:`py5image_pixels` is ``pixels[y*width+x]``. See the reference for :doc:`py5image_pixels` for more information.
 
-Underlying Java method: `PImage.get <https://processing.org/reference/PImage_get_.html>`_
+Underlying Processing method: `PImage.get <https://processing.org/reference/PImage_get_.html>`_
 
 Syntax
 ------
@@ -93,5 +93,5 @@ Parameters
 * **y**: `int` - y-coordinate of the pixel
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

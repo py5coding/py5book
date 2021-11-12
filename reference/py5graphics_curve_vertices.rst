@@ -12,7 +12,7 @@ The ``coordinates`` parameter should be a numpy array with one row for each curv
 
 This method is the same as :doc:`sketch_curve_vertices` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_curve_vertices`.
 
-Underlying Java method: PGraphics.curveVertices
+Underlying Processing method: PGraphics.curveVertices
 
 Syntax
 ------
@@ -27,5 +27,5 @@ Parameters
 * **coordinates**: `NDArray[(Any, Any), Float]` - array of curve vertex coordinates
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

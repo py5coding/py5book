@@ -58,7 +58,7 @@ Description
 
 Defines if textures repeat or draw once within a texture map. The two parameters are ``CLAMP`` (the default behavior) and ``REPEAT``. This function only works with the ``P2D`` and ``P3D`` renderers.
 
-Underlying Java method: `textureWrap <https://processing.org/reference/textureWrap_.html>`_
+Underlying Processing method: `textureWrap <https://processing.org/reference/textureWrap_.html>`_
 
 Syntax
 ------
@@ -73,5 +73,5 @@ Parameters
 * **wrap**: `int` - Either CLAMP (default) or REPEAT
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

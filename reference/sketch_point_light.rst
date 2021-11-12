@@ -45,7 +45,7 @@ Description
 
 Adds a point light. Lights need to be included in the ``draw()`` to remain persistent in a looping program. Placing them in the ``setup()`` of a looping program will cause them to only have an effect the first time through the loop. The ``v1``, ``v2``, and ``v3`` parameters are interpreted as either RGB or HSB values, depending on the current color mode. The ``x``, ``y``, and ``z`` parameters set the position of the light.
 
-Underlying Java method: `pointLight <https://processing.org/reference/pointLight_.html>`_
+Underlying Processing method: `pointLight <https://processing.org/reference/pointLight_.html>`_
 
 Syntax
 ------
@@ -65,5 +65,5 @@ Parameters
 * **z**: `float` - z-coordinate of the light
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

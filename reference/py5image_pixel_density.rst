@@ -39,8 +39,8 @@ Description
 
 Pixel density of the Py5Image object. This will always be equal to 1, even if the Sketch used :doc:`sketch_pixel_density` to set the pixel density to a value greater than 1.
 
-Underlying Java field: PImage.pixelDensity
+Underlying Processing field: PImage.pixelDensity
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

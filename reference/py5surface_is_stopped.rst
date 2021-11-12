@@ -95,7 +95,7 @@ Determine if the surface is currently running an animation. A Sketch that has ca
 
 The output of this method is independent of :doc:`py5surface_pause_thread` and :doc:`py5surface_resume_thread`.
 
-Underlying Java method: PSurface.isStopped
+Underlying Processing method: PSurface.isStopped
 
 Syntax
 ------
@@ -104,5 +104,5 @@ Syntax
 
     is_stopped() -> bool
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -50,7 +50,7 @@ Description
 
 Pushes the current transformation matrix onto the matrix stack. Understanding ``push_matrix()`` and :doc:`sketch_pop_matrix` requires understanding the concept of a matrix stack. The ``push_matrix()`` function saves the current coordinate system to the stack and :doc:`sketch_pop_matrix` restores the prior coordinate system. ``push_matrix()`` and :doc:`sketch_pop_matrix` are used in conjuction with the other transformation functions and may be embedded to control the scope of the transformations.
 
-Underlying Java method: `pushMatrix <https://processing.org/reference/pushMatrix_.html>`_
+Underlying Processing method: `pushMatrix <https://processing.org/reference/pushMatrix_.html>`_
 
 Syntax
 ------
@@ -59,5 +59,5 @@ Syntax
 
     push_matrix() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

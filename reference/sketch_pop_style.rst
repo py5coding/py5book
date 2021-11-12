@@ -83,7 +83,7 @@ Description
 
 The :doc:`sketch_push_style` function saves the current style settings and ``pop_style()`` restores the prior settings; these functions are always used together. They allow you to change the style settings and later return to what you had. When a new style is started with :doc:`sketch_push_style`, it builds on the current style information. The :doc:`sketch_push_style` and ``pop_style()`` method pairs can be nested to provide more control (see the second example for a demonstration.)
 
-Underlying Java method: `popStyle <https://processing.org/reference/popStyle_.html>`_
+Underlying Processing method: `popStyle <https://processing.org/reference/popStyle_.html>`_
 
 Syntax
 ------
@@ -92,5 +92,5 @@ Syntax
 
     pop_style() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

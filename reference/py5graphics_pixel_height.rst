@@ -10,8 +10,8 @@ Height of the Py5Graphics drawing surface in pixels. When ``pixel_density(2)`` w
 
 This field is the same as :doc:`sketch_pixel_height` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_pixel_height`.
 
-Underlying Java field: PGraphics.pixelHeight
+Underlying Processing field: PGraphics.pixelHeight
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

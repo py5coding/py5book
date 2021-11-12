@@ -61,7 +61,7 @@ Calling :doc:`py5shape_disable_style` on the returned :doc:`py5shape` object see
 
 This method only works on fonts loaded with :doc:`sketch_create_font`.
 
-Underlying Java method: PFont.getShape
+Underlying Processing method: PFont.getShape
 
 Syntax
 ------
@@ -78,5 +78,5 @@ Parameters
 * **detail**: `float` - level of shape detail
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

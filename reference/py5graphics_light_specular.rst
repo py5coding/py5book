@@ -10,7 +10,7 @@ Sets the specular color for lights. Like :doc:`py5graphics_fill`, it affects onl
 
 This method is the same as :doc:`sketch_light_specular` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_light_specular`.
 
-Underlying Java method: PGraphics.lightSpecular
+Underlying Processing method: PGraphics.lightSpecular
 
 Syntax
 ------
@@ -27,5 +27,5 @@ Parameters
 * **v3**: `float` - blue or brightness value (depending on current color mode)
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

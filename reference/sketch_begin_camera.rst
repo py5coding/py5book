@@ -85,7 +85,7 @@ This function sets the matrix mode to the camera matrix so calls such as :doc:`s
 
 This method can be used as a context manager to ensure that :doc:`sketch_end_camera` always gets called, as shown in the last example.
 
-Underlying Java method: `beginCamera <https://processing.org/reference/beginCamera_.html>`_
+Underlying Processing method: `beginCamera <https://processing.org/reference/beginCamera_.html>`_
 
 Syntax
 ------
@@ -94,5 +94,5 @@ Syntax
 
     begin_camera() -> None
 
-Updated on September 25, 2021 10:33:52am UTC
+Updated on November 12, 2021 11:30:58am UTC
 

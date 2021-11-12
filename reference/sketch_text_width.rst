@@ -50,7 +50,7 @@ Description
 
 Calculates and returns the width of any character or text string.
 
-Underlying Java method: `textWidth <https://processing.org/reference/textWidth_.html>`_
+Underlying Processing method: `textWidth <https://processing.org/reference/textWidth_.html>`_
 
 Syntax
 ------
@@ -71,5 +71,5 @@ Parameters
 * **str**: `str` - the String of characters to measure
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

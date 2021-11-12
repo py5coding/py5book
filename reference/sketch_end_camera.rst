@@ -50,7 +50,7 @@ Description
 
 The :doc:`sketch_begin_camera` and ``end_camera()`` methods enable advanced customization of the camera space. Please see the reference for :doc:`sketch_begin_camera` for a description of how the methods are used.
 
-Underlying Java method: `endCamera <https://processing.org/reference/endCamera_.html>`_
+Underlying Processing method: `endCamera <https://processing.org/reference/endCamera_.html>`_
 
 Syntax
 ------
@@ -59,5 +59,5 @@ Syntax
 
     end_camera() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -12,7 +12,7 @@ After changing the range of values for colors with code like ``color_mode(HSB, 3
 
 This method is the same as :doc:`sketch_color_mode` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_color_mode`.
 
-Underlying Java method: PGraphics.colorMode
+Underlying Processing method: PGraphics.colorMode
 
 Syntax
 ------
@@ -35,5 +35,5 @@ Parameters
 * **mode**: `int` - Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

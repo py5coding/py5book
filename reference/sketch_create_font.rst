@@ -49,7 +49,7 @@ The ``size`` parameter states the font size you want to generate. The ``smooth``
 
 This function allows py5 to work with the font natively in the default renderer, so the letters are defined by vector geometry and are rendered quickly. In the ``P2D`` and ``P3D`` renderers, the function sets the project to render the font as a series of small textures. For instance, when using the default renderer, the actual native version of the font will be employed by the Sketch, improving drawing quality and performance. With the ``P2D`` and ``P3D`` renderers, the bitmapped version will be used to improve speed and appearance, but the results are poor when exporting if the Sketch does not include the .otf or .ttf file, and the requested font is not available on the machine running the Sketch.
 
-Underlying Java method: `createFont <https://processing.org/reference/createFont_.html>`_
+Underlying Processing method: `createFont <https://processing.org/reference/createFont_.html>`_
 
 Syntax
 ------
@@ -69,5 +69,5 @@ Parameters
 * **smooth**: `bool` - true for an antialiased font, false for aliased
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

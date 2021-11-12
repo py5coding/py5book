@@ -48,7 +48,7 @@ Description
 
 Get a child ``Py5Shape`` object's index from a parent ``Py5Shape`` object that is defined as a ``GROUP``. Inside Processing, a group ``Py5Shape`` object is an ordered list of child shapes. This method will retrieve the index for a particular child in that ordered list. That index value is useful when using other methods such as :doc:`py5shape_get_child` or :doc:`py5shape_remove_child`.
 
-Underlying Java method: PShape.getChildIndex
+Underlying Processing method: PShape.getChildIndex
 
 Syntax
 ------
@@ -63,5 +63,5 @@ Parameters
 * **who**: `Py5Shape` - Py5Shape object
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

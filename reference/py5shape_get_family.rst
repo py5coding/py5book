@@ -53,7 +53,7 @@ Description
 
 Get the Py5Shape object's "family" number.
 
-Underlying Java method: PShape.getFamily
+Underlying Processing method: PShape.getFamily
 
 Syntax
 ------
@@ -62,5 +62,5 @@ Syntax
 
     get_family() -> int
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -42,7 +42,7 @@ Get the Sketch's Java native window object. Here there be dragons! The returned 
 
 This method may be useful to you if you research the Java libraries Processing uses to display animations. Any errors will result in Java Exceptions.
 
-Underlying Java method: PSurface.getNative
+Underlying Processing method: PSurface.getNative
 
 Syntax
 ------
@@ -51,5 +51,5 @@ Syntax
 
     get_native() -> Any
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

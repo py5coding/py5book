@@ -10,7 +10,7 @@ The Sketch's current path. If the ``where`` parameter is used, the result will b
 
 Result will be relative to Python's current working directory (``os.getcwd()``) unless it was specifically set to something else with the :doc:`sketch_run_sketch` call by including a ``--sketch-path`` argument in the ``py5_options`` parameters.
 
-Underlying Java method: sketchPath
+Underlying Processing method: sketchPath
 
 Syntax
 ------
@@ -26,5 +26,5 @@ Parameters
 * **where**: `str` - subdirectories relative to the sketch path
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

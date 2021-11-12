@@ -54,7 +54,7 @@ Description
 
 Sets the amount of gloss in the surface of shapes. Use in combination with :doc:`sketch_ambient`, :doc:`sketch_specular`, and :doc:`sketch_emissive` to set the material properties of shapes.
 
-Underlying Java method: `shininess <https://processing.org/reference/shininess_.html>`_
+Underlying Processing method: `shininess <https://processing.org/reference/shininess_.html>`_
 
 Syntax
 ------
@@ -69,5 +69,5 @@ Parameters
 * **shine**: `float` - degree of shininess
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

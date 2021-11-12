@@ -41,8 +41,8 @@ Description
 
 Confirms if a py5 program is "focused," meaning that it is active and will accept mouse or keyboard input. This variable is ``True`` if it is focused and ``False`` if not.
 
-Underlying Java field: `focused <https://processing.org/reference/focused.html>`_
+Underlying Processing field: `focused <https://processing.org/reference/focused.html>`_
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

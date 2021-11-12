@@ -48,7 +48,7 @@ Description
 
 Loads the pixel data of the current display window into the :doc:`sketch_pixels` array. This function must always be called before reading from or writing to :doc:`sketch_pixels`. Subsequent changes to the display window will not be reflected in :doc:`sketch_pixels` until ``load_pixels()`` is called again.
 
-Underlying Java method: `loadPixels <https://processing.org/reference/loadPixels_.html>`_
+Underlying Processing method: `loadPixels <https://processing.org/reference/loadPixels_.html>`_
 
 Syntax
 ------
@@ -57,5 +57,5 @@ Syntax
 
     load_pixels() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

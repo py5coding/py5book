@@ -95,7 +95,7 @@ This method differs from :doc:`py5shape_tint` in that it is only to be used outs
 
 Calling this method with the boolean parameter ``False`` will delete the assigned tint. A later call with the boolean parameter ``True`` will not restore it; you must reassign the tint color, as shown in the second example.
 
-Underlying Java method: PShape.setTint
+Underlying Processing method: PShape.setTint
 
 Syntax
 ------
@@ -115,5 +115,5 @@ Parameters
 * **tint**: `int` - color value in hexadecimal notation
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

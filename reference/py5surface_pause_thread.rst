@@ -52,7 +52,7 @@ The :doc:`sketch_frame_count` will not increment while the Sketch is paused.
 
 Pausing a Sketch is not the same as stopping a Sketch, so this method will not change the results of :doc:`py5surface_is_stopped`.
 
-Underlying Java method: PSurface.pauseThread
+Underlying Processing method: PSurface.pauseThread
 
 Syntax
 ------
@@ -61,5 +61,5 @@ Syntax
 
     pause_thread() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

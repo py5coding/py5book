@@ -46,7 +46,7 @@ Description
 
 Get the font's size that will be used when :doc:`sketch_text_font` is called. When drawing with 2x pixel density, bitmap fonts in OpenGL need to be created at double the requested size. This ensures that they're shown at half on displays (so folks don't have to change their sketch code).
 
-Underlying Java method: PFont.getDefaultSize
+Underlying Processing method: PFont.getDefaultSize
 
 Syntax
 ------
@@ -55,5 +55,5 @@ Syntax
 
     get_default_size() -> int
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

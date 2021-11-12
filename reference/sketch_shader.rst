@@ -46,7 +46,7 @@ Description
 
 Applies the shader specified by the parameters. It's compatible with the ``P2D`` and ``P3D`` renderers, but not with the default renderer.
 
-Underlying Java method: `shader <https://processing.org/reference/shader_.html>`_
+Underlying Processing method: `shader <https://processing.org/reference/shader_.html>`_
 
 Syntax
 ------
@@ -63,5 +63,5 @@ Parameters
 * **shader**: `Py5Shader` - name of shader file
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

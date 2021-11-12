@@ -64,7 +64,7 @@ Get the vertex codes for a ``Py5Shape`` object. The vertex codes can be used to 
 
 The vertex codes will not necessarily align with the vertices because number of vertex codes may be larger than the number of vertices. This will be the case for shapes that use contours, and therefore contain ``BREAK`` codes.
 
-Underlying Java method: PShape.getVertexCodes
+Underlying Processing method: PShape.getVertexCodes
 
 Syntax
 ------
@@ -73,5 +73,5 @@ Syntax
 
     get_vertex_codes() -> NDArray[(Any,), Int]
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

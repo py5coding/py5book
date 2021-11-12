@@ -46,7 +46,7 @@ Sets the way text draws to the screen, either as texture maps or as vector geome
 
 The ``text_mode(SHAPE)`` option in ``P3D`` can be combined with :doc:`sketch_begin_raw` to write vector-accurate text to 2D and 3D output files, for instance ``DXF`` or ``PDF``. The ``SHAPE`` mode is not currently optimized for ``P3D``, so if recording shape data, use ``text_mode(MODEL)`` until you're ready to capture the geometry with :doc:`sketch_begin_raw`.
 
-Underlying Java method: `textMode <https://processing.org/reference/textMode_.html>`_
+Underlying Processing method: `textMode <https://processing.org/reference/textMode_.html>`_
 
 Syntax
 ------
@@ -61,5 +61,5 @@ Parameters
 * **mode**: `int` - either MODEL or SHAPE
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

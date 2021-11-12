@@ -53,7 +53,7 @@ Note that the near value must be greater than zero (as the point of the frustum 
 
 Works like glFrustum, except it wipes out the current perspective matrix rather than multiplying itself with it.
 
-Underlying Java method: `frustum <https://processing.org/reference/frustum_.html>`_
+Underlying Processing method: `frustum <https://processing.org/reference/frustum_.html>`_
 
 Syntax
 ------
@@ -73,5 +73,5 @@ Parameters
 * **top**: `float` - top coordinate of the clipping plane
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

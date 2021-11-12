@@ -61,7 +61,7 @@ Description
 
 Takes a three-dimensional X, Y, Z position and returns the X value for where it will appear on a (two-dimensional) screen.
 
-Underlying Java method: `screenX <https://processing.org/reference/screenX_.html>`_
+Underlying Processing method: `screenX <https://processing.org/reference/screenX_.html>`_
 
 Syntax
 ------
@@ -79,5 +79,5 @@ Parameters
 * **z**: `float` - 3D z-coordinate to be mapped
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

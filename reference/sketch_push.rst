@@ -83,7 +83,7 @@ The ``push()`` function saves the current drawing style settings and transformat
 
 The ``push()`` and :doc:`sketch_pop` functions can be used in place of :doc:`sketch_push_matrix`, :doc:`sketch_pop_matrix`, :doc:`sketch_push_style`, and :doc:`sketch_pop_style`. The difference is that ``push()`` and :doc:`sketch_pop` control both the transformations (rotate, scale, translate) and the drawing styles at the same time.
 
-Underlying Java method: `push <https://processing.org/reference/push_.html>`_
+Underlying Processing method: `push <https://processing.org/reference/push_.html>`_
 
 Syntax
 ------
@@ -92,5 +92,5 @@ Syntax
 
     push() -> None
 
-Updated on October 29, 2021 22:01:43pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

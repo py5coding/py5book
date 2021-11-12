@@ -51,7 +51,7 @@ Description
 
 Set the current matrix to the one specified through the parameter ``source``. Inside the Processing code it will call :doc:`sketch_reset_matrix` followed by :doc:`sketch_apply_matrix`. This will be very slow because :doc:`sketch_apply_matrix` will try to calculate the inverse of the transform, so avoid it whenever possible.
 
-Underlying Java method: setMatrix
+Underlying Processing method: setMatrix
 
 Syntax
 ------
@@ -68,5 +68,5 @@ Parameters
 * **source**: `NDArray[(4, 4), Float]` - transformation matrix data
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

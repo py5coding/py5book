@@ -12,7 +12,7 @@ To see an example for how this can be used, see :doc:`sketch_model_x`. In that e
 
 This method is the same as :doc:`sketch_model_x` but linked to a ``Py5Graphics`` object.
 
-Underlying Java method: PGraphics.modelX
+Underlying Processing method: PGraphics.modelX
 
 Syntax
 ------
@@ -29,5 +29,5 @@ Parameters
 * **z**: `float` - 3D z-coordinate to be mapped
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

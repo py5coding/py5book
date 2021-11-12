@@ -58,7 +58,7 @@ Description
 
 Sets the resolution at which curves display. The default value is 20. This function is only useful when using the ``P3D`` renderer as the default ``P2D`` renderer does not use this information.
 
-Underlying Java method: `curveDetail <https://processing.org/reference/curveDetail_.html>`_
+Underlying Processing method: `curveDetail <https://processing.org/reference/curveDetail_.html>`_
 
 Syntax
 ------
@@ -73,5 +73,5 @@ Parameters
 * **detail**: `int` - resolution of the curves
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

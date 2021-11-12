@@ -45,7 +45,7 @@ Set a new width and height for the Sketch window. You do not need to call :doc:`
 
 Changing the window size will clear the drawing canvas. If your Sketch uses this, the :doc:`sketch_width` and :doc:`sketch_height` variables will change.
 
-Underlying Java method: PSurface.setSize
+Underlying Processing method: PSurface.setSize
 
 Syntax
 ------
@@ -61,5 +61,5 @@ Parameters
 * **width**: `int` - new window width
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

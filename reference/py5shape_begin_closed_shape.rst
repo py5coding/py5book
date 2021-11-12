@@ -50,7 +50,7 @@ This method is used to start a custom closed shape created with the :doc:`sketch
 
 This method should only be used as a context manager, as shown in the example. When used as a context manager, this will ensure that :doc:`py5shape_end_shape` always gets called, just like when using :doc:`py5shape_begin_shape` as a context manager. The difference is that when exiting, the parameter ``CLOSE`` will be passed to :doc:`py5shape_end_shape`, connecting the last vertex to the first. This will close the shape. If this method were to be used not as a context manager, it won't be able to close the shape by making the call to :doc:`py5shape_end_shape`.
 
-Underlying Java method: `PShape.beginShape <https://processing.org/reference/PShape_beginShape_.html>`_
+Underlying Processing method: `PShape.beginShape <https://processing.org/reference/PShape_beginShape_.html>`_
 
 Syntax
 ------
@@ -66,5 +66,5 @@ Parameters
 * **kind**: `int` - Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
 
 
-Updated on September 23, 2021 09:34:27am UTC
+Updated on November 12, 2021 11:30:58am UTC
 

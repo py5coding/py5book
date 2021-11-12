@@ -40,7 +40,7 @@ Description
 
 Draws a circle to the screen. By default, the first two parameters set the location of the center, and the third sets the shape's width and height. The origin may be changed with the :doc:`sketch_ellipse_mode` function.
 
-Underlying Java method: `circle <https://processing.org/reference/circle_.html>`_
+Underlying Processing method: `circle <https://processing.org/reference/circle_.html>`_
 
 Syntax
 ------
@@ -57,5 +57,5 @@ Parameters
 * **y**: `float` - y-coordinate of the ellipse
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

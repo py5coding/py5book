@@ -10,7 +10,7 @@ Calculates the tangent of a point on a Bezier curve. There is a good definition 
 
 This method is the same as :doc:`sketch_bezier_tangent` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_bezier_tangent`.
 
-Underlying Java method: PGraphics.bezierTangent
+Underlying Processing method: PGraphics.bezierTangent
 
 Syntax
 ------
@@ -29,5 +29,5 @@ Parameters
 * **t**: `float` - value between 0 and 1
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

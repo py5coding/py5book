@@ -10,7 +10,7 @@ Specifies vertex coordinates for Bezier curves. Each call to ``bezier_vertex()``
 
 This method is the same as :doc:`sketch_bezier_vertex` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_bezier_vertex`.
 
-Underlying Java method: PGraphics.bezierVertex
+Underlying Processing method: PGraphics.bezierVertex
 
 Syntax
 ------
@@ -34,5 +34,5 @@ Parameters
 * **z4**: `float` - the z-coordinate of the anchor point
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

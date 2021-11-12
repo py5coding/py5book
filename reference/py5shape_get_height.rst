@@ -74,7 +74,7 @@ Description
 
 Get the ``Py5Shape`` object's height. When using the ``P2D`` or ``P3D`` renderers, the returned value should be the height of the drawn shape. When using the default renderer, this will be the height of the drawing area, which will not necessarily be the same as the height of the drawn shape. Consider that the shape's vertices might have negative values or the shape may be offset from the shape's origin. To get the shape's actual height, calculate the range of the vertices obtained with :doc:`py5shape_get_vertex_y`.
 
-Underlying Java method: PShape.getHeight
+Underlying Processing method: PShape.getHeight
 
 Syntax
 ------
@@ -83,5 +83,5 @@ Syntax
 
     get_height() -> float
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

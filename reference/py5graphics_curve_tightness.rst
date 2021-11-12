@@ -10,7 +10,7 @@ Modifies the quality of forms created with :doc:`py5graphics_curve` and :doc:`py
 
 This method is the same as :doc:`sketch_curve_tightness` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_curve_tightness`.
 
-Underlying Java method: PGraphics.curveTightness
+Underlying Processing method: PGraphics.curveTightness
 
 Syntax
 ------
@@ -25,5 +25,5 @@ Parameters
 * **tightness**: `float` - amount of deformation from the original vertices
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

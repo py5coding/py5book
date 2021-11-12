@@ -50,7 +50,7 @@ Resume a paused Sketch. The Sketch window will resume operating as it did before
 
 The :doc:`sketch_frame_count` will continue incrementing after the Sketch is resumed.
 
-Underlying Java method: PSurface.resumeThread
+Underlying Processing method: PSurface.resumeThread
 
 Syntax
 ------
@@ -59,5 +59,5 @@ Syntax
 
     resume_thread() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

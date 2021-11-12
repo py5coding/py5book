@@ -47,7 +47,7 @@ Sets the width of the stroke used for lines, points, and the border around shape
 
 Using :doc:`sketch_point` with ``strokeWeight(1)`` or smaller may draw nothing to the screen, depending on the graphics settings of the computer. Workarounds include setting the pixel using the :doc:`sketch_pixels` or :doc:`sketch_np_pixels` arrays or drawing the point using either :doc:`sketch_circle` or :doc:`sketch_square`.
 
-Underlying Java method: `strokeWeight <https://processing.org/reference/strokeWeight_.html>`_
+Underlying Processing method: `strokeWeight <https://processing.org/reference/strokeWeight_.html>`_
 
 Syntax
 ------
@@ -62,5 +62,5 @@ Parameters
 * **weight**: `float` - the weight (in pixels) of the stroke
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -51,7 +51,7 @@ Description
 
 Returns descent of the current font at its current size. This information is useful for determining the height of the font below the baseline.
 
-Underlying Java method: `textDescent <https://processing.org/reference/textDescent_.html>`_
+Underlying Processing method: `textDescent <https://processing.org/reference/textDescent_.html>`_
 
 Syntax
 ------
@@ -60,5 +60,5 @@ Syntax
 
     text_descent() -> float
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

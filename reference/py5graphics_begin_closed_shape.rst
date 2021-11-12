@@ -58,7 +58,7 @@ This method is used to start a custom closed shape. This method should only be u
 
 This method is the same as :doc:`sketch_begin_closed_shape` but linked to a ``Py5Graphics`` object.
 
-Underlying Java method: PGraphics.beginShape
+Underlying Processing method: PGraphics.beginShape
 
 Syntax
 ------
@@ -74,5 +74,5 @@ Parameters
 * **kind**: `int` - Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
 
 
-Updated on September 24, 2021 10:55:19am UTC
+Updated on November 12, 2021 11:30:58am UTC
 

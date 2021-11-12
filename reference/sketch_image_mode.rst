@@ -108,7 +108,7 @@ The default mode is ``image_mode(CORNER)``, which interprets the second and thir
 
 The parameter must be written in ALL CAPS because Python is a case-sensitive language.
 
-Underlying Java method: `imageMode <https://processing.org/reference/imageMode_.html>`_
+Underlying Processing method: `imageMode <https://processing.org/reference/imageMode_.html>`_
 
 Syntax
 ------
@@ -123,5 +123,5 @@ Parameters
 * **mode**: `int` - either CORNER, CORNERS, or CENTER
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

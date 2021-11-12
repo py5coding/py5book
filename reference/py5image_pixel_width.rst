@@ -39,8 +39,8 @@ Description
 
 Width of the Py5Image object in pixels. This will be the same as :doc:`py5image_width`, even if the Sketch used :doc:`sketch_pixel_density` to set the pixel density to a value greater than 1.
 
-Underlying Java field: PImage.pixelWidth
+Underlying Processing field: PImage.pixelWidth
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

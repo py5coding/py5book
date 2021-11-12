@@ -52,7 +52,7 @@ Get the normal vector for one of a ``Py5Shape`` object's vertices. A normal vect
 
 This method can only be used for a complete ``Py5Shape`` object, and never within a :doc:`py5shape_begin_shape` and :doc:`py5shape_end_shape` pair.
 
-Underlying Java method: PShape.getNormal
+Underlying Processing method: PShape.getNormal
 
 Syntax
 ------
@@ -69,5 +69,5 @@ Parameters
 * **vec**: `NDArray[(Any,), Float]` - correctly sized numpy array to store normal vector
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

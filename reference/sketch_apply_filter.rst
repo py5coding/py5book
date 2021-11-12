@@ -221,7 +221,7 @@ The presets options are:
 * ERODE: Reduces the light areas. No parameter is used.
 * DILATE: Increases the light areas. No parameter is used.
 
-Underlying Java method: `filter <https://processing.org/reference/filter_.html>`_
+Underlying Processing method: `filter <https://processing.org/reference/filter_.html>`_
 
 Syntax
 ------
@@ -240,5 +240,5 @@ Parameters
 * **shader**: `Py5Shader` - the fragment shader to apply
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -79,8 +79,8 @@ Description
 
 Height of the display window in pixels. When ``pixel_density(2)`` is used to make use of a high resolution display (called a Retina display on OSX or high-dpi on Windows and Linux), the width and height of the Sketch do not change, but the number of pixels is doubled. As a result, all operations that use pixels (like :doc:`sketch_load_pixels`, :doc:`sketch_get`, etc.) happen in this doubled space. As a convenience, the variables :doc:`sketch_pixel_width` and ``pixel_height`` hold the actual width and height of the Sketch in pixels. This is useful for any Sketch that use the :doc:`sketch_pixels` or :doc:`sketch_np_pixels` arrays, for instance, because the number of elements in each array will be ``pixel_width*pixel_height``, not ``width*height``.
 
-Underlying Java field: `pixelHeight <https://processing.org/reference/pixelHeight.html>`_
+Underlying Processing field: `pixelHeight <https://processing.org/reference/pixelHeight.html>`_
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

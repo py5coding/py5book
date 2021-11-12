@@ -50,7 +50,7 @@ Increases or decreases the size of a shape by expanding and contracting vertices
 
 Using this method with the ``z`` parameter requires using the ``P3D`` parameter in combination with size.
 
-Underlying Java method: `PShape.scale <https://processing.org/reference/PShape_scale_.html>`_
+Underlying Processing method: `PShape.scale <https://processing.org/reference/PShape_scale_.html>`_
 
 Syntax
 ------
@@ -70,5 +70,5 @@ Parameters
 * **z**: `float` - percentage to scale the object in the z-axis
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

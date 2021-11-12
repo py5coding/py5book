@@ -44,7 +44,7 @@ Description
 
 Removes the current fill value for displaying images and reverts to displaying images with their original hues.
 
-Underlying Java method: `noTint <https://processing.org/reference/noTint_.html>`_
+Underlying Processing method: `noTint <https://processing.org/reference/noTint_.html>`_
 
 Syntax
 ------
@@ -53,5 +53,5 @@ Syntax
 
     no_tint() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

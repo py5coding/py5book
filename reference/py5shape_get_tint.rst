@@ -58,7 +58,7 @@ Description
 
 Get the texture tint color assigned to one vertex in a ``Py5Shape`` object. If the vertex has no assigned tint, the returned color value will be white.
 
-Underlying Java method: PShape.getTint
+Underlying Processing method: PShape.getTint
 
 Syntax
 ------
@@ -73,5 +73,5 @@ Parameters
 * **index**: `int` - vertex index
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

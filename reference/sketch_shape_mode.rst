@@ -48,7 +48,7 @@ Description
 
 Modifies the location from which shapes draw. The default mode is ``shape_mode(CORNER)``, which specifies the location to be the upper left corner of the shape and uses the third and fourth parameters of :doc:`sketch_shape` to specify the width and height. The syntax ``shape_mode(CORNERS)`` uses the first and second parameters of :doc:`sketch_shape` to set the location of one corner and uses the third and fourth parameters to set the opposite corner. The syntax ``shape_mode(CENTER)`` draws the shape from its center point and uses the third and forth parameters of :doc:`sketch_shape` to specify the width and height. The parameter must be written in ALL CAPS because Python is a case sensitive language.
 
-Underlying Java method: `shapeMode <https://processing.org/reference/shapeMode_.html>`_
+Underlying Processing method: `shapeMode <https://processing.org/reference/shapeMode_.html>`_
 
 Syntax
 ------
@@ -63,5 +63,5 @@ Parameters
 * **mode**: `int` - either CORNER, CORNERS, CENTER
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

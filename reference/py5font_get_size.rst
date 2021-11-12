@@ -46,7 +46,7 @@ Description
 
 Get the font's size.
 
-Underlying Java method: PFont.getSize
+Underlying Processing method: PFont.getSize
 
 Syntax
 ------
@@ -55,5 +55,5 @@ Syntax
 
     get_size() -> int
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -47,8 +47,8 @@ Description
 
 Boolean variable reflecting if the Sketch has stopped permanently.
 
-Underlying Java field: finished
+Underlying Processing field: finished
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

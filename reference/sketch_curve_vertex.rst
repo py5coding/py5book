@@ -48,7 +48,7 @@ Description
 
 Specifies vertex coordinates for curves. This method may only be used between :doc:`sketch_begin_shape` and :doc:`sketch_end_shape` and only when there is no ``MODE`` parameter specified to :doc:`sketch_begin_shape`. The first and last points in a series of ``curve_vertex()`` lines will be used to guide the beginning and end of the curve. A minimum of four points is required to draw a tiny curve between the second and third points. Adding a fifth point with ``curve_vertex()`` will draw the curve between the second, third, and fourth points. The ``curve_vertex()`` method is an implementation of Catmull-Rom splines. Using the 3D version requires rendering with ``P3D``.
 
-Underlying Java method: `curveVertex <https://processing.org/reference/curveVertex_.html>`_
+Underlying Processing method: `curveVertex <https://processing.org/reference/curveVertex_.html>`_
 
 Syntax
 ------
@@ -66,5 +66,5 @@ Parameters
 * **z**: `float` - the z-coordinate of the vertex
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -12,7 +12,7 @@ Thinking about an ambient light with a falloff can be tricky. If you want a regi
 
 This method is the same as :doc:`sketch_light_falloff` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_light_falloff`.
 
-Underlying Java method: PGraphics.lightFalloff
+Underlying Processing method: PGraphics.lightFalloff
 
 Syntax
 ------
@@ -29,5 +29,5 @@ Parameters
 * **quadratic**: `float` - quadratic value for determining falloff
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

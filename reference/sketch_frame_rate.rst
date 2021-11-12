@@ -49,7 +49,7 @@ Description
 
 Specifies the number of frames to be displayed every second. For example, the function call ``frame_rate(30)`` will attempt to refresh 30 times a second. If the processor is not fast enough to maintain the specified rate, the frame rate will not be achieved. Setting the frame rate within ``setup()`` is recommended. The default rate is 60 frames per second.
 
-Underlying Java method: `frameRate <https://processing.org/reference/frameRate_.html>`_
+Underlying Processing method: `frameRate <https://processing.org/reference/frameRate_.html>`_
 
 Syntax
 ------
@@ -64,5 +64,5 @@ Parameters
 * **fps**: `float` - number of desired frames per second
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

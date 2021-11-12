@@ -82,7 +82,7 @@ Description
 
 Set the Sketch window's visiblity. The animation will continue to run but the window will not be visible.
 
-Underlying Java method: PSurface.setVisible
+Underlying Processing method: PSurface.setVisible
 
 Syntax
 ------
@@ -97,5 +97,5 @@ Parameters
 * **visible**: `bool` - desired surface visiblity
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

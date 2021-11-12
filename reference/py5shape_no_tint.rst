@@ -55,7 +55,7 @@ Stop applying a color tint to a shape's texture map. Use :doc:`py5shape_tint` to
 
 Both :doc:`py5shape_tint` and ``no_tint()`` can be used to control the coloring of textures in 3D.
 
-Underlying Java method: PShape.noTint
+Underlying Processing method: PShape.noTint
 
 Syntax
 ------
@@ -64,5 +64,5 @@ Syntax
 
     no_tint() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

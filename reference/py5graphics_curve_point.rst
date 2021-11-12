@@ -10,7 +10,7 @@ Evaluates the curve at point ``t`` for points ``a``, ``b``, ``c``, ``d``. The pa
 
 This method is the same as :doc:`sketch_curve_point` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_curve_point`.
 
-Underlying Java method: PGraphics.curvePoint
+Underlying Processing method: PGraphics.curvePoint
 
 Syntax
 ------
@@ -29,5 +29,5 @@ Parameters
 * **t**: `float` - value between 0 and 1
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

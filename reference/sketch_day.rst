@@ -43,7 +43,7 @@ Description
 
 Py5 communicates with the clock on your computer. The ``day()`` function returns the current day as a value from 1 - 31.
 
-Underlying Java method: `day <https://processing.org/reference/day_.html>`_
+Underlying Processing method: `day <https://processing.org/reference/day_.html>`_
 
 Syntax
 ------
@@ -52,5 +52,5 @@ Syntax
 
     day() -> int
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

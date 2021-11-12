@@ -40,7 +40,7 @@ Description
 
 Set the Sketch window to always be on top of other windows. By default, the Sketch window can be covered by other windows. Setting this to ``True`` will keep that from happening.
 
-Underlying Java method: PSurface.setAlwaysOnTop
+Underlying Processing method: PSurface.setAlwaysOnTop
 
 Syntax
 ------
@@ -55,5 +55,5 @@ Parameters
 * **always**: `bool` - should the Sketch window always be on top of other windows
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -14,7 +14,7 @@ In some cases, the ``arc()`` function isn't accurate enough for smooth drawing. 
 
 This method is the same as :doc:`sketch_arc` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_arc`.
 
-Underlying Java method: PGraphics.arc
+Underlying Processing method: PGraphics.arc
 
 Syntax
 ------
@@ -36,5 +36,5 @@ Parameters
 * **stop**: `float` - angle to stop the arc, specified in radians
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

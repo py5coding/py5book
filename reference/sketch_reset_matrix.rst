@@ -54,7 +54,7 @@ Description
 
 Replaces the current matrix with the identity matrix. The equivalent function in OpenGL is ``gl_load_identity()``.
 
-Underlying Java method: `resetMatrix <https://processing.org/reference/resetMatrix_.html>`_
+Underlying Processing method: `resetMatrix <https://processing.org/reference/resetMatrix_.html>`_
 
 Syntax
 ------
@@ -63,5 +63,5 @@ Syntax
 
     reset_matrix() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

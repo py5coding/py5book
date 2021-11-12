@@ -10,7 +10,7 @@ Draws a circle to the screen. By default, the first two parameters set the locat
 
 This method is the same as :doc:`sketch_circle` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_circle`.
 
-Underlying Java method: PGraphics.circle
+Underlying Processing method: PGraphics.circle
 
 Syntax
 ------
@@ -27,5 +27,5 @@ Parameters
 * **y**: `float` - y-coordinate of the ellipse
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

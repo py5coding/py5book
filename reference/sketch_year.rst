@@ -43,7 +43,7 @@ Description
 
 Py5 communicates with the clock on your computer. The ``year()`` function returns the current year as an integer (2003, 2004, 2005, etc).
 
-Underlying Java method: `year <https://processing.org/reference/year_.html>`_
+Underlying Processing method: `year <https://processing.org/reference/year_.html>`_
 
 Syntax
 ------
@@ -52,5 +52,5 @@ Syntax
 
     year() -> int
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

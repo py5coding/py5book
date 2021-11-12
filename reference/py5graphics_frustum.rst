@@ -18,7 +18,7 @@ Works like glFrustum, except it wipes out the current perspective matrix rather 
 
 This method is the same as :doc:`sketch_frustum` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_frustum`.
 
-Underlying Java method: PGraphics.frustum
+Underlying Processing method: PGraphics.frustum
 
 Syntax
 ------
@@ -38,5 +38,5 @@ Parameters
 * **top**: `float` - top coordinate of the clipping plane
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

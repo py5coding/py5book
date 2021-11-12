@@ -56,7 +56,7 @@ Use the ``update_pixels(x, y, w, h)`` syntax to update only a subset of the pixe
 
 This method is the same as :doc:`sketch_update_pixels` but linked to a ``Py5Graphics`` object.
 
-Underlying Java method: PGraphics.updatePixels
+Underlying Processing method: PGraphics.updatePixels
 
 Syntax
 ------
@@ -75,5 +75,5 @@ Parameters
 * **y**: `int` - y-coordinate of the upper left hand corner of rectangle to update
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

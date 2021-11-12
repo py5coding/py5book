@@ -89,7 +89,7 @@ Sets the default properties for a ``Py5Graphics`` object. It should be called be
 
 This method can be used as a context manager to ensure that :doc:`py5graphics_end_draw` always gets called, as shown in the second example.
 
-Underlying Java method: `PGraphics.beginDraw <https://processing.org/reference/PGraphics_beginDraw_.html>`_
+Underlying Processing method: `PGraphics.beginDraw <https://processing.org/reference/PGraphics_beginDraw_.html>`_
 
 Syntax
 ------
@@ -98,5 +98,5 @@ Syntax
 
     begin_draw() -> None
 
-Updated on September 25, 2021 10:33:52am UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -47,7 +47,7 @@ Description
 
 Stops the recording process started by :doc:`sketch_begin_record` and closes the file.
 
-Underlying Java method: `endRecord <https://processing.org/reference/endRecord_.html>`_
+Underlying Processing method: `endRecord <https://processing.org/reference/endRecord_.html>`_
 
 Syntax
 ------
@@ -56,5 +56,5 @@ Syntax
 
     end_record() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

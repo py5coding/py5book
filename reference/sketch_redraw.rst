@@ -55,7 +55,7 @@ In structuring a program, it only makes sense to call ``redraw()`` within events
 
 The ``redraw()`` function does not work properly when called inside ``draw()``. To enable/disable animations, use :doc:`sketch_loop` and :doc:`sketch_no_loop`.
 
-Underlying Java method: `redraw <https://processing.org/reference/redraw_.html>`_
+Underlying Processing method: `redraw <https://processing.org/reference/redraw_.html>`_
 
 Syntax
 ------
@@ -64,5 +64,5 @@ Syntax
 
     redraw() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

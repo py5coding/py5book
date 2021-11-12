@@ -93,7 +93,7 @@ These methods can only be used within a :doc:`sketch_begin_shape` & :doc:`sketch
 
 This method can be used as a context manager to ensure that :doc:`sketch_end_contour` always gets called, as shown in the second example.
 
-Underlying Java method: `beginContour <https://processing.org/reference/beginContour_.html>`_
+Underlying Processing method: `beginContour <https://processing.org/reference/beginContour_.html>`_
 
 Syntax
 ------
@@ -102,5 +102,5 @@ Syntax
 
     begin_contour() -> None
 
-Updated on September 23, 2021 10:58:27am UTC
+Updated on November 12, 2021 11:30:58am UTC
 

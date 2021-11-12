@@ -10,7 +10,7 @@ The ``end_shape()`` function is the companion to :doc:`py5graphics_begin_shape` 
 
 This method is the same as :doc:`sketch_end_shape` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_end_shape`.
 
-Underlying Java method: PGraphics.endShape
+Underlying Processing method: PGraphics.endShape
 
 Syntax
 ------
@@ -26,5 +26,5 @@ Parameters
 * **mode**: `int` - use CLOSE to close the shape
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

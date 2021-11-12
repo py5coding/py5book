@@ -10,7 +10,7 @@ A box is an extruded rectangle. A box with equal dimensions on all sides is a cu
 
 This method is the same as :doc:`sketch_box` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_box`.
 
-Underlying Java method: PGraphics.box
+Underlying Processing method: PGraphics.box
 
 Syntax
 ------
@@ -29,5 +29,5 @@ Parameters
 * **w**: `float` - dimension of the box in the x-dimension
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

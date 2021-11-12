@@ -63,8 +63,8 @@ There are issues with how ``key_code`` behaves across different renderers and op
 
 If you are using ``P2D`` or ``P3D`` as your renderer, use the ``NEWT`` KeyEvent constants.
 
-Underlying Java field: `keyCode <https://processing.org/reference/keyCode.html>`_
+Underlying Processing field: `keyCode <https://processing.org/reference/keyCode.html>`_
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

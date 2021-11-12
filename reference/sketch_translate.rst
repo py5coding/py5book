@@ -95,7 +95,7 @@ Specifies an amount to displace objects within the display window. The ``x`` par
 
 Transformations are cumulative and apply to everything that happens after and subsequent calls to the function accumulates the effect. For example, calling ``translate(50, 0)`` and then ``translate(20, 0)`` is the same as ``translate(70, 0)``. If ``translate()`` is called within ``draw()``, the transformation is reset when the loop begins again. This function can be further controlled by using :doc:`sketch_push_matrix` and :doc:`sketch_pop_matrix`.
 
-Underlying Java method: `translate <https://processing.org/reference/translate_.html>`_
+Underlying Processing method: `translate <https://processing.org/reference/translate_.html>`_
 
 Syntax
 ------
@@ -113,5 +113,5 @@ Parameters
 * **z**: `float` - forward/backward translation
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -37,8 +37,8 @@ Description
 
 Version name of Java currently being used by py5. Internally the py5 library is using the Processing Java libraries to provide functionality. Those libraries run in a Java Virtual Machine. This field provides the Java version name for that Virtual Machine.
 
-Underlying Java field: javaVersionName
+Underlying Processing field: javaVersionName
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

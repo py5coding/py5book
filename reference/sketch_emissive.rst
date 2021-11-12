@@ -47,7 +47,7 @@ Description
 
 Sets the emissive color of the material used for drawing shapes drawn to the screen. Use in combination with :doc:`sketch_ambient`, :doc:`sketch_specular`, and :doc:`sketch_shininess` to set the material properties of shapes.
 
-Underlying Java method: `emissive <https://processing.org/reference/emissive_.html>`_
+Underlying Processing method: `emissive <https://processing.org/reference/emissive_.html>`_
 
 Syntax
 ------
@@ -68,5 +68,5 @@ Parameters
 * **v3**: `float` - blue or brightness value (depending on current color mode)
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

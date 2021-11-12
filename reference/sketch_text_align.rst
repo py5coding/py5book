@@ -85,7 +85,7 @@ When using :doc:`sketch_text` with width and height parameters, ``BASELINE`` is 
  
 The vertical alignment is based on the value of :doc:`sketch_text_ascent`, which many fonts do not specify correctly. It may be necessary to use a hack and offset by a few pixels by hand so that the offset looks correct. To do this as less of a hack, use some percentage of :doc:`sketch_text_ascent` or :doc:`sketch_text_descent` so that the hack works even if you change the size of the font.
 
-Underlying Java method: `textAlign <https://processing.org/reference/textAlign_.html>`_
+Underlying Processing method: `textAlign <https://processing.org/reference/textAlign_.html>`_
 
 Syntax
 ------
@@ -102,5 +102,5 @@ Parameters
 * **align_y**: `int` - vertical alignment, either TOP, BOTTOM, CENTER, or BASELINE
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

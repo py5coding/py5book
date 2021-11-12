@@ -43,8 +43,8 @@ The system variable ``pmouse_y`` always contains the vertical position of the mo
 
 For more detail on how ``pmouse_y`` is updated inside of mouse events and ``draw()``, see the reference for :doc:`sketch_pmouse_x`.
 
-Underlying Java field: `pmouseY <https://processing.org/reference/pmouseY.html>`_
+Underlying Processing field: `pmouseY <https://processing.org/reference/pmouseY.html>`_
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

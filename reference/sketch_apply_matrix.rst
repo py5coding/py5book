@@ -55,7 +55,7 @@ Description
 
 Multiplies the current matrix by the one specified through the parameters. This is very slow because it will try to calculate the inverse of the transform, so avoid it whenever possible. The equivalent function in OpenGL is ``gl_mult_matrix()``.
 
-Underlying Java method: `applyMatrix <https://processing.org/reference/applyMatrix_.html>`_
+Underlying Processing method: `applyMatrix <https://processing.org/reference/applyMatrix_.html>`_
 
 Syntax
 ------
@@ -90,5 +90,5 @@ Parameters
 * **source**: `NDArray[(4, 4), Float]` - 3D transformation matrix
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

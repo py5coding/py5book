@@ -50,7 +50,7 @@ Description
 
 Find a target ``Py5Shape`` object from anywhere within a ``Py5Shape`` object that is defined as a ``GROUP``. This is similar to :doc:`py5shape_get_child` in that it locates a child ``Py5Shape`` object, except that it can start the search from another child shape instead of the parent.
 
-Underlying Java method: PShape.findChild
+Underlying Processing method: PShape.findChild
 
 Syntax
 ------
@@ -65,5 +65,5 @@ Parameters
 * **target**: `str` - name of child object
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

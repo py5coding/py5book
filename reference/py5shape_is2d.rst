@@ -82,7 +82,7 @@ Boolean value reflecting if the shape is or is not a 2D shape.
 
 If the shape is created in a Sketch using the ``P3D`` renderer, this will be ``False``, even if it only uses 2D coordinates.
 
-Underlying Java method: PShape.is2D
+Underlying Processing method: PShape.is2D
 
 Syntax
 ------
@@ -91,5 +91,5 @@ Syntax
 
     is2d() -> bool
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

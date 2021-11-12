@@ -47,7 +47,7 @@ Create a collection of vertices. The purpose of this method is to provide an alt
 
 The ``coordinates`` parameter should be a numpy array with one row for each vertex. There should be two or three columns for 2D or 3D points, respectively.
 
-Underlying Java method: vertices
+Underlying Processing method: vertices
 
 Syntax
 ------
@@ -62,5 +62,5 @@ Parameters
 * **coordinates**: `NDArray[(Any, Any), Float]` - array of vertex coordinates
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

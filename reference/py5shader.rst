@@ -48,11 +48,11 @@ Description
 
 This class encapsulates a GLSL shader program, including a vertex and a fragment shader. It's compatible with the ``P2D`` and ``P3D`` renderers, but not with the default renderer. Use the :doc:`sketch_load_shader` function to load your shader code and create ``Py5Shader`` objects.
 
-Underlying Java class: `PShader <https://processing.org/reference/PShader.html>`_
+Underlying Processing class: `PShader <https://processing.org/reference/PShader.html>`_
 
 The following methods and fields are provided:
 
 .. include:: include_py5shader.rst
 
-Updated on September 16, 2021 14:31:43pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

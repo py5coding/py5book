@@ -50,7 +50,7 @@ Disables the ``Py5Shape`` object's stroke (outline). If both ``no_stroke()`` and
 
 This method can only be used within a :doc:`py5shape_begin_shape` and :doc:`py5shape_end_shape` pair.
 
-Underlying Java method: PShape.noStroke
+Underlying Processing method: PShape.noStroke
 
 Syntax
 ------
@@ -59,5 +59,5 @@ Syntax
 
     no_stroke() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

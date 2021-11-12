@@ -73,7 +73,7 @@ Description
 
 Sets the seed value for :doc:`sketch_noise`. By default, :doc:`sketch_noise` produces different results each time the program is run. Set the seed parameter to a constant to return the same pseudo-random numbers each time the Sketch is run.
 
-Underlying Java method: `noiseSeed <https://processing.org/reference/noiseSeed_.html>`_
+Underlying Processing method: `noiseSeed <https://processing.org/reference/noiseSeed_.html>`_
 
 Syntax
 ------
@@ -88,5 +88,5 @@ Parameters
 * **seed**: `int` - seed value
 
 
-Updated on November 08, 2021 12:30:20pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

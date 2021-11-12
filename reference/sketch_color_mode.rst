@@ -102,7 +102,7 @@ Changes the way py5 interprets color data. By default, the parameters for :doc:`
 
 After changing the range of values for colors with code like ``color_mode(HSB, 360, 100, 100)``, those ranges remain in use until they are explicitly changed again. For example, after running ``color_mode(HSB, 360, 100, 100)`` and then changing back to ``color_mode(RGB)``, the range for R will be 0 to 360 and the range for G and B will be 0 to 100. To avoid this, be explicit about the ranges when changing the color mode. For instance, instead of ``color_mode(RGB)``, write ``color_mode(RGB, 255, 255, 255)``.
 
-Underlying Java method: `colorMode <https://processing.org/reference/colorMode_.html>`_
+Underlying Processing method: `colorMode <https://processing.org/reference/colorMode_.html>`_
 
 Syntax
 ------
@@ -125,5 +125,5 @@ Parameters
 * **mode**: `int` - Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

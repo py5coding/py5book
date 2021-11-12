@@ -52,7 +52,7 @@ Alternatively, the file maybe be loaded from anywhere on the local computer usin
 
 If the file is not available or an error occurs, ``None`` will be returned and an error message will be printed to the console. The error message does not halt the program, however the ``None`` value may cause an error if your code does not check whether the value returned is ``None``.
 
-Underlying Java method: `loadShader <https://processing.org/reference/loadShader_.html>`_
+Underlying Processing method: `loadShader <https://processing.org/reference/loadShader_.html>`_
 
 Syntax
 ------
@@ -69,5 +69,5 @@ Parameters
 * **vert_filename**: `str` - name of vertex shader file
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -10,7 +10,7 @@ Sets the resolution at which curves display. The default value is 20. This funct
 
 This method is the same as :doc:`sketch_curve_detail` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_curve_detail`.
 
-Underlying Java method: PGraphics.curveDetail
+Underlying Processing method: PGraphics.curveDetail
 
 Syntax
 ------
@@ -25,5 +25,5 @@ Parameters
 * **detail**: `int` - resolution of the curves
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

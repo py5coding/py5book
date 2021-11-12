@@ -40,7 +40,7 @@ Get the running Sketch's current frame rate. This is measured in frames per seco
 
 This method provides the same information as Processing's ``frameRate`` variable. Python can't have a variable and a method with the same name, so a new method was created to provide access to that variable.
 
-Underlying Java method: getFrameRate
+Underlying Processing method: getFrameRate
 
 Syntax
 ------
@@ -49,5 +49,5 @@ Syntax
 
     get_frame_rate() -> float
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

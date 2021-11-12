@@ -61,7 +61,7 @@ The ``smooth()`` method can only be run once for a ``Py5Graphics`` object and it
 
 This method is the same as :doc:`sketch_smooth` but linked to a ``Py5Graphics`` object.
 
-Underlying Java method: PGraphics.smooth
+Underlying Processing method: PGraphics.smooth
 
 Syntax
 ------
@@ -77,5 +77,5 @@ Parameters
 * **quality**: `int` - either 2, 3, 4, or 8 depending on the renderer
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

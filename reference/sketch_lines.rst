@@ -45,7 +45,7 @@ Draw a collection of lines to the screen. The purpose of this method is to provi
 
 The ``coordinates`` parameter should be a numpy array with one row for each line. The first few columns are for the first point of each line and the next few columns are for the second point of each line. There will be four or six columns for 2D or 3D points, respectively.
 
-Underlying Java method: lines
+Underlying Processing method: lines
 
 Syntax
 ------
@@ -60,5 +60,5 @@ Parameters
 * **coordinates**: `NDArray[(Any, Any), Float]` - array of line coordinates
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

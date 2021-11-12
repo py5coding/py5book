@@ -58,7 +58,7 @@ The value for the "gray" parameter must be less than or equal to the current max
 
 To change the color of a ``Py5Shape`` object's image or a texture, use :doc:`py5shape_tint`.
 
-Underlying Java method: PShape.fill
+Underlying Processing method: PShape.fill
 
 Syntax
 ------
@@ -84,5 +84,5 @@ Parameters
 * **z**: `float` - blue or brightness value (depending on current color mode)
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

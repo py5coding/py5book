@@ -39,7 +39,7 @@ Description
 
 Get the :doc:`py5graphics` object used by the Sketch. Internally, all of Processing's drawing functionality comes from interaction with PGraphics objects, and this will provide direct access to the PGraphics object used by the Sketch.
 
-Underlying Java method: getGraphics
+Underlying Processing method: getGraphics
 
 Syntax
 ------
@@ -48,5 +48,5 @@ Syntax
 
     get_graphics() -> Py5Graphics
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

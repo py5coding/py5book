@@ -241,7 +241,7 @@ Filters the image as defined by one of the following modes:
 * ERODE: Reduces the light areas. No parameter is used.
 * DILATE: Increases the light areas. No parameter is used.
 
-Underlying Java method: `PImage.filter <https://processing.org/reference/PImage_filter_.html>`_
+Underlying Processing method: `PImage.filter <https://processing.org/reference/PImage_filter_.html>`_
 
 Syntax
 ------
@@ -258,5 +258,5 @@ Parameters
 * **param**: `float` - unique for each filter, see description
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

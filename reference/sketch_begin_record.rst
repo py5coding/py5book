@@ -78,7 +78,7 @@ Note that ``begin_record()`` will only pick up any settings that happen after it
 
 This method can be used as a context manager to ensure that :doc:`sketch_end_record` always gets called, as shown in the last example.
 
-Underlying Java method: `beginRecord <https://processing.org/reference/beginRecord_.html>`_
+Underlying Processing method: `beginRecord <https://processing.org/reference/beginRecord_.html>`_
 
 Syntax
 ------
@@ -96,5 +96,5 @@ Parameters
 * **renderer**: `str` - PDF or SVG
 
 
-Updated on September 25, 2021 10:36:03am UTC
+Updated on November 12, 2021 11:30:58am UTC
 

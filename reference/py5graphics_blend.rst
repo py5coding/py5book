@@ -29,7 +29,7 @@ This function ignores :doc:`py5graphics_image_mode`.
 
 This method is the same as :doc:`sketch_blend` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_blend`.
 
-Underlying Java method: PGraphics.blend
+Underlying Processing method: PGraphics.blend
 
 Syntax
 ------
@@ -54,5 +54,5 @@ Parameters
 * **sy**: `int` - y-coordinate of the source's upper left corner
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

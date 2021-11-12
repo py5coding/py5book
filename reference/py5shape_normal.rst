@@ -69,7 +69,7 @@ Sets the current normal vector for a ``Py5Shape`` object's vertices. Used for dr
 
 This method can only be used within a :doc:`py5shape_begin_shape` and :doc:`py5shape_end_shape` pair. The normal setting will be applied to vertices added after the call to this method.
 
-Underlying Java method: PShape.normal
+Underlying Processing method: PShape.normal
 
 Syntax
 ------
@@ -86,5 +86,5 @@ Parameters
 * **nz**: `float` - z direction
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

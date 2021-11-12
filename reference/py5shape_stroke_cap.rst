@@ -55,7 +55,7 @@ Sets the style for rendering line endings in a ``Py5Shape`` object. These ends a
 
 This method can only be used within a :doc:`py5shape_begin_shape` and :doc:`py5shape_end_shape` pair.
 
-Underlying Java method: PShape.strokeCap
+Underlying Processing method: PShape.strokeCap
 
 Syntax
 ------
@@ -70,5 +70,5 @@ Parameters
 * **cap**: `int` - either SQUARE, PROJECT, or ROUND
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -167,7 +167,7 @@ The  ``create_shape()`` function can also be used to make a complex shape made o
 
 After using ``create_shape()``, stroke and fill color can be set by calling methods like :doc:`py5shape_set_fill` and :doc:`py5shape_set_stroke`, as seen in the examples. The complete list of methods and fields for the :doc:`py5shape` class are in the py5 documentation.
 
-Underlying Java method: `createShape <https://processing.org/reference/createShape_.html>`_
+Underlying Processing method: `createShape <https://processing.org/reference/createShape_.html>`_
 
 Syntax
 ------
@@ -186,5 +186,5 @@ Parameters
 * **type**: `int` - either GROUP, PATH, or GEOMETRY
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

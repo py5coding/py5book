@@ -55,7 +55,7 @@ Calculates a color between two colors at a specific increment. The ``amt`` param
 
 An amount below 0 will be treated as 0. Likewise, amounts above 1 will be capped at 1. This is different from the behavior of :doc:`sketch_lerp`, but necessary because otherwise numbers outside the range will produce strange and unexpected colors.
 
-Underlying Java method: `lerpColor <https://processing.org/reference/lerpColor_.html>`_
+Underlying Processing method: `lerpColor <https://processing.org/reference/lerpColor_.html>`_
 
 Syntax
 ------
@@ -74,5 +74,5 @@ Parameters
 * **mode**: `int` - either RGB or HSB
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -76,7 +76,7 @@ The ``pixel_density()`` should only be used with hardcoded numbers (in almost al
 
 When the pixel density is set to more than 1, it changes all of the pixel operations including the way :doc:`sketch_get`, :doc:`sketch_blend`, :doc:`sketch_copy`, :doc:`sketch_update_pixels`, and :doc:`sketch_update_np_pixels` all work. See the reference for :doc:`sketch_pixel_width` and :doc:`sketch_pixel_height` for more information.
 
-Underlying Java method: `pixelDensity <https://processing.org/reference/pixelDensity_.html>`_
+Underlying Processing method: `pixelDensity <https://processing.org/reference/pixelDensity_.html>`_
 
 Syntax
 ------
@@ -91,5 +91,5 @@ Parameters
 * **density**: `int` - 1 or 2
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

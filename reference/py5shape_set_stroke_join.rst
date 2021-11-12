@@ -56,7 +56,7 @@ Sets the style of the joints which connect line segments in a ``Py5Shape`` objec
 
 This method differs from :doc:`py5shape_stroke_join` in that it is only to be used outside the :doc:`py5shape_begin_shape` and :doc:`py5shape_end_shape` methods.
 
-Underlying Java method: PShape.setStrokeJoin
+Underlying Processing method: PShape.setStrokeJoin
 
 Syntax
 ------
@@ -71,5 +71,5 @@ Parameters
 * **join**: `int` - either MITER, BEVEL, ROUND
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

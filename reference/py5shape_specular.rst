@@ -63,7 +63,7 @@ Sets the specular color of a ``Py5Shape`` object's material, which sets the colo
 
 This method can only be used within a :doc:`py5shape_begin_shape` and :doc:`py5shape_end_shape` pair. The specular color setting will be applied to vertices added after the call to this method.
 
-Underlying Java method: PShape.specular
+Underlying Processing method: PShape.specular
 
 Syntax
 ------
@@ -84,5 +84,5 @@ Parameters
 * **z**: `float` - blue or brightness value (depending on current color mode)
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -69,7 +69,7 @@ Hints for use with ``P3D`` only
 * ``DISABLE_OPTIMIZED_STROKE``: Forces the ``P3D`` renderer to draw each shape (including its strokes) separately, instead of batching them into larger groups for better performance. One consequence of this is that 2D items drawn with ``P3D`` are correctly stacked on the screen, depending on the order in which they were drawn. Otherwise, glitches such as the stroke lines being drawn on top of the interior of all the shapes will occur. However, this hint can make rendering substantially slower, so it is recommended to use it only when drawing a small amount of shapes. For drawing two-dimensional scenes, use the ``P2D`` renderer instead, which doesn't need the hint to properly stack shapes and their strokes.
 * ``ENABLE_STROKE_PERSPECTIVE``: Enables stroke geometry (lines and points) to be affected by the perspective, meaning that they will look smaller as they move away from the camera.
 
-Underlying Java method: `hint <https://processing.org/reference/hint_.html>`_
+Underlying Processing method: `hint <https://processing.org/reference/hint_.html>`_
 
 Syntax
 ------
@@ -84,5 +84,5 @@ Parameters
 * **which**: `int` - hint to use when rendering Sketch
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

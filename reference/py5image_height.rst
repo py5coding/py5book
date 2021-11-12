@@ -42,8 +42,8 @@ Description
 
 The height of the image in units of pixels.
 
-Underlying Java field: `PImage.height <https://processing.org/reference/PImage_height.html>`_
+Underlying Processing field: `PImage.height <https://processing.org/reference/PImage_height.html>`_
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

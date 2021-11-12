@@ -10,7 +10,7 @@ Draws a Bezier curve on the ``Py5Graphics`` object. These curves are defined by 
 
 This method is the same as :doc:`sketch_bezier` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_bezier`.
 
-Underlying Java method: PGraphics.bezier
+Underlying Processing method: PGraphics.bezier
 
 Syntax
 ------
@@ -37,5 +37,5 @@ Parameters
 * **z4**: `float` - coordinates for the second anchor point
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

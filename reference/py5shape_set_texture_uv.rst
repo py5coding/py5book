@@ -59,7 +59,7 @@ Set the uv texture mapping coordinates for a given vertex in a ``Py5Shape`` obje
 
 The ``u`` and ``v`` coordinates define the mapping of a ``Py5Shape`` object's texture to the form. By default, the coordinates used for ``u`` and ``v`` are specified in relation to the image's size in pixels, but this relation can be changed with the ``Py5Shape`` object's :doc:`py5shape_set_texture_mode` method.
 
-Underlying Java method: PShape.setTextureUV
+Underlying Processing method: PShape.setTextureUV
 
 Syntax
 ------
@@ -76,5 +76,5 @@ Parameters
 * **v**: `float` - vertical coordinate for the texture mapping
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -51,7 +51,7 @@ Returns a boolean value ``True`` if the image is set to be visible, ``False`` if
 
 The default visibility of a shape is usually controlled by whatever program created the SVG file. For instance, this parameter is controlled by showing or hiding the shape in the layers palette in Adobe Illustrator.
 
-Underlying Java method: `PShape.isVisible <https://processing.org/reference/PShape_isVisible_.html>`_
+Underlying Processing method: `PShape.isVisible <https://processing.org/reference/PShape_isVisible_.html>`_
 
 Syntax
 ------
@@ -60,5 +60,5 @@ Syntax
 
     is_visible() -> bool
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

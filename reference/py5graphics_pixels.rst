@@ -56,8 +56,8 @@ Before accessing this array, the data must loaded with the :doc:`py5graphics_loa
 
 This field is the same as :doc:`sketch_pixels` but linked to a ``Py5Graphics`` object.
 
-Underlying Java field: PGraphics.pixels
+Underlying Processing field: PGraphics.pixels
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

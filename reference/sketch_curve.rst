@@ -46,7 +46,7 @@ Description
 
 Draws a curved line on the screen. The first and second parameters specify the beginning control point and the last two parameters specify the ending control point. The middle parameters specify the start and stop of the curve. Longer curves can be created by putting a series of ``curve()`` functions together or using :doc:`sketch_curve_vertex`. An additional function called :doc:`sketch_curve_tightness` provides control for the visual quality of the curve. The ``curve()`` function is an implementation of Catmull-Rom splines. Using the 3D version requires rendering with ``P3D``.
 
-Underlying Java method: `curve <https://processing.org/reference/curve_.html>`_
+Underlying Processing method: `curve <https://processing.org/reference/curve_.html>`_
 
 Syntax
 ------
@@ -73,5 +73,5 @@ Parameters
 * **z4**: `float` - coordinates for the ending control point
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

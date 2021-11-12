@@ -53,7 +53,7 @@ Sets a texture to be applied to a ``Py5Shape`` object's vertex points. The ``tex
 
 When textures are in use, the fill color is ignored. Instead, use :doc:`py5shape_tint` to specify the color of the texture as it is applied to the shape.
 
-Underlying Java method: PShape.texture
+Underlying Processing method: PShape.texture
 
 Syntax
 ------
@@ -68,5 +68,5 @@ Parameters
 * **tex**: `Py5Image` - reference to a Py5Image object
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -78,7 +78,7 @@ Specifies a ``Py5Shape`` object's vertex coordinates for quadratic Bezier curves
 
 Drawing 2D bezier curves requires using the ``P2D`` renderer and drawing 3D bezier curves requires using the ``P3D`` renderer. When drawing directly with ``Py5Shape`` objects, bezier curves do not work at all using the default renderer.
 
-Underlying Java method: PShape.quadraticVertex
+Underlying Processing method: PShape.quadraticVertex
 
 Syntax
 ------
@@ -99,5 +99,5 @@ Parameters
 * **z3**: `float` - the z-coordinate of the anchor point
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

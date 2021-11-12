@@ -50,7 +50,7 @@ Description
 
 Enables the shape's style data and ignores py5's current styles. Styles include attributes such as colors, stroke weight, and stroke joints.
 
-Underlying Java method: `PShape.enableStyle <https://processing.org/reference/PShape_enableStyle_.html>`_
+Underlying Processing method: `PShape.enableStyle <https://processing.org/reference/PShape_enableStyle_.html>`_
 
 Syntax
 ------
@@ -59,5 +59,5 @@ Syntax
 
     enable_style() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -116,7 +116,7 @@ When ``no_loop()`` is used, it's not possible to manipulate or access the screen
 
 Note that if the Sketch is resized, :doc:`sketch_redraw` will be called to update the Sketch, even after ``no_loop()`` has been specified. Otherwise, the Sketch would enter an odd state until :doc:`sketch_loop` was called.
 
-Underlying Java method: `noLoop <https://processing.org/reference/noLoop_.html>`_
+Underlying Processing method: `noLoop <https://processing.org/reference/noLoop_.html>`_
 
 Syntax
 ------
@@ -125,5 +125,5 @@ Syntax
 
     no_loop() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -53,7 +53,7 @@ Description
 
 Assign a name to a ``Py5Shape`` object. This can be used to later find the shape in a ``GROUP`` shape.
 
-Underlying Java method: PShape.setName
+Underlying Processing method: PShape.setName
 
 Syntax
 ------
@@ -68,5 +68,5 @@ Parameters
 * **name**: `str` - name to be assigned to shape
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

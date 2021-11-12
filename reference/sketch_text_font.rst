@@ -47,7 +47,7 @@ Sets the current font that will be drawn with the :doc:`sketch_text` function. F
 
 When fonts are rendered as an image texture (as is the case with the ``P2D`` and ``P3D`` renderers as well as with :doc:`sketch_load_font` and vlw files), you should create fonts at the sizes that will be used most commonly. Using ``text_font()`` without the size parameter will result in the cleanest type.
 
-Underlying Java method: `textFont <https://processing.org/reference/textFont_.html>`_
+Underlying Processing method: `textFont <https://processing.org/reference/textFont_.html>`_
 
 Syntax
 ------
@@ -64,5 +64,5 @@ Parameters
 * **which**: `Py5Font` - any variable of the type Py5Font
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

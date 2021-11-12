@@ -38,8 +38,8 @@ Description
 
 System variable that stores the height of the entire screen display. This can be used to run a full-screen program on any display size, but calling :doc:`sketch_full_screen` is usually a better choice.
 
-Underlying Java field: `displayHeight <https://processing.org/reference/displayHeight.html>`_
+Underlying Processing field: `displayHeight <https://processing.org/reference/displayHeight.html>`_
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

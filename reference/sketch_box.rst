@@ -69,7 +69,7 @@ Description
 
 A box is an extruded rectangle. A box with equal dimensions on all sides is a cube.
 
-Underlying Java method: `box <https://processing.org/reference/box_.html>`_
+Underlying Processing method: `box <https://processing.org/reference/box_.html>`_
 
 Syntax
 ------
@@ -88,5 +88,5 @@ Parameters
 * **w**: `float` - dimension of the box in the x-dimension
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -10,7 +10,7 @@ Pops the current transformation matrix off the matrix stack. Understanding pushi
 
 This method is the same as :doc:`sketch_pop_matrix` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_pop_matrix`.
 
-Underlying Java method: PGraphics.popMatrix
+Underlying Processing method: PGraphics.popMatrix
 
 Syntax
 ------
@@ -19,5 +19,5 @@ Syntax
 
     pop_matrix() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

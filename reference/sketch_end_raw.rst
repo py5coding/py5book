@@ -48,7 +48,7 @@ Description
 
 Complement to :doc:`sketch_begin_raw`; they must always be used together. See the :doc:`sketch_begin_raw` reference for details.
 
-Underlying Java method: `endRaw <https://processing.org/reference/endRaw_.html>`_
+Underlying Processing method: `endRaw <https://processing.org/reference/endRaw_.html>`_
 
 Syntax
 ------
@@ -57,5 +57,5 @@ Syntax
 
     end_raw() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

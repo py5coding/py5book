@@ -48,7 +48,7 @@ Create a collection of bezier vertices. The purpose of this method is to provide
 
 The ``coordinates`` parameter should be a numpy array with one row for each bezier vertex. The first few columns are for the first control point, the next few columns are for the second control point, and the final few columns are for the anchor point. There should be six or nine columns for 2D or 3D points, respectively.
 
-Underlying Java method: bezierVertices
+Underlying Processing method: bezierVertices
 
 Syntax
 ------
@@ -63,5 +63,5 @@ Parameters
 * **coordinates**: `NDArray[(Any, Any), Float]` - array of bezier vertex coordinates
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

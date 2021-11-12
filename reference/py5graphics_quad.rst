@@ -10,7 +10,7 @@ A quad is a quadrilateral, a four sided polygon. It is similar to a rectangle, b
 
 This method is the same as :doc:`sketch_quad` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_quad`.
 
-Underlying Java method: PGraphics.quad
+Underlying Processing method: PGraphics.quad
 
 Syntax
 ------
@@ -32,5 +32,5 @@ Parameters
 * **y4**: `float` - y-coordinate of the fourth corner
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

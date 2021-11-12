@@ -62,7 +62,7 @@ Sets the emissive color of a ``Py5Shape`` object's material. Use in combination 
 
 This method can only be used within a :doc:`py5shape_begin_shape` and :doc:`py5shape_end_shape` pair. The emissive color setting will be applied to vertices added after the call to this method.
 
-Underlying Java method: PShape.emissive
+Underlying Processing method: PShape.emissive
 
 Syntax
 ------
@@ -83,5 +83,5 @@ Parameters
 * **z**: `float` - blue or brightness value (depending on current color mode)
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

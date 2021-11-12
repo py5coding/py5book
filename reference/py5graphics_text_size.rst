@@ -10,7 +10,7 @@ Sets the current font size. This size will be used in all subsequent calls to th
 
 This method is the same as :doc:`sketch_text_size` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_text_size`.
 
-Underlying Java method: PGraphics.textSize
+Underlying Processing method: PGraphics.textSize
 
 Syntax
 ------
@@ -25,5 +25,5 @@ Parameters
 * **size**: `float` - the size of the letters in units of pixels
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -60,7 +60,7 @@ This method can be used as a context manager to ensure that :doc:`py5graphics_en
 
 This method is the same as :doc:`sketch_begin_camera` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_begin_camera`.
 
-Underlying Java method: PGraphics.beginCamera
+Underlying Processing method: PGraphics.beginCamera
 
 Syntax
 ------
@@ -69,5 +69,5 @@ Syntax
 
     begin_camera() -> None
 
-Updated on September 25, 2021 10:33:52am UTC
+Updated on November 12, 2021 11:30:58am UTC
 

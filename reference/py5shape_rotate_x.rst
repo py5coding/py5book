@@ -54,7 +54,7 @@ Shapes are always rotated around the upper-left corner of their bounding box. Po
 
 This method requires a 3D renderer. You need to use ``P3D`` as a third parameter for the :doc:`sketch_size` function as shown in the example.
 
-Underlying Java method: `PShape.rotateX <https://processing.org/reference/PShape_rotateX_.html>`_
+Underlying Processing method: `PShape.rotateX <https://processing.org/reference/PShape_rotateX_.html>`_
 
 Syntax
 ------
@@ -69,5 +69,5 @@ Parameters
 * **angle**: `float` - angle of rotation specified in radians
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -49,7 +49,7 @@ Description
 
 Sets the uniform variables inside the shader to modify the effect while the program is running.
 
-Underlying Java method: `PShader.set <https://processing.org/reference/PShader_set_.html>`_
+Underlying Processing method: `PShader.set <https://processing.org/reference/PShader_set_.html>`_
 
 Syntax
 ------
@@ -106,5 +106,5 @@ Parameters
 * **z**: `int` - third component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[3], vec3)
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

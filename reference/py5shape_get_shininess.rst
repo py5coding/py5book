@@ -52,7 +52,7 @@ Get the shininess setting for one of a ``Py5Shape`` object's vertices. Use :doc:
 
 This method can only be used for a complete ``Py5Shape`` object, and never within a :doc:`py5shape_begin_shape` and :doc:`py5shape_end_shape` pair.
 
-Underlying Java method: PShape.getShininess
+Underlying Processing method: PShape.getShininess
 
 Syntax
 ------
@@ -67,5 +67,5 @@ Parameters
 * **index**: `int` - vertex index
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

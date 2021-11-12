@@ -39,8 +39,8 @@ Description
 
 List of strings passed to the Sketch through the call to :doc:`sketch_run_sketch`. Only passing strings is allowed, but you can convert string types to something else to make this more useful.
 
-Underlying Java field: args
+Underlying Processing field: args
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

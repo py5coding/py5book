@@ -51,7 +51,7 @@ Description
 
 Get the Py5Shape object's "kind" number.
 
-Underlying Java method: PShape.getKind
+Underlying Processing method: PShape.getKind
 
 Syntax
 ------
@@ -60,5 +60,5 @@ Syntax
 
     get_kind() -> int
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

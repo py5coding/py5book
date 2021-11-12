@@ -71,7 +71,7 @@ Set the Sketch window icon. This will typically appear in the window's title bar
 
 This method will not work for the ``P2D`` or ``P3D`` renderers. Setting the icon for those renderers is a bit tricky; the icon must be a PNG file and it must be done in ``settings()``. See the second example to learn how to do that.
 
-Underlying Java method: PSurface.setIcon
+Underlying Processing method: PSurface.setIcon
 
 Syntax
 ------
@@ -86,5 +86,5 @@ Parameters
 * **icon**: `Py5Image` - image to use as the window icon
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

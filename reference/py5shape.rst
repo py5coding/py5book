@@ -79,11 +79,11 @@ The ``Py5Shape`` object contains a group of methods that can operate on the shap
 
 To create a new shape, use the :doc:`sketch_create_shape` function. Do not use the syntax ``Py5Shape()``.
 
-Underlying Java class: `PShape <https://processing.org/reference/PShape.html>`_
+Underlying Processing class: `PShape <https://processing.org/reference/PShape.html>`_
 
 The following methods and fields are provided:
 
 .. include:: include_py5shape.rst
 
-Updated on September 16, 2021 14:31:43pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

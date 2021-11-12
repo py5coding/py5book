@@ -48,7 +48,7 @@ Sets the style for rendering line endings. These ends are either squared, extend
 
 To make :doc:`sketch_point` appear square, use ``stroke_cap(PROJECT)``. Using ``stroke_cap(SQUARE)`` (no cap) causes points to become invisible.
 
-Underlying Java method: `strokeCap <https://processing.org/reference/strokeCap_.html>`_
+Underlying Processing method: `strokeCap <https://processing.org/reference/strokeCap_.html>`_
 
 Syntax
 ------
@@ -63,5 +63,5 @@ Parameters
 * **cap**: `int` - either SQUARE, PROJECT, or ROUND
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

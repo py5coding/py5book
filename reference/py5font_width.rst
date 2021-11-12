@@ -54,7 +54,7 @@ Get the width of a character in this font. The value is based on a font of size 
 
 This will return 0 if the character is not in the font's character set.
 
-Underlying Java method: PFont.width
+Underlying Processing method: PFont.width
 
 Syntax
 ------
@@ -69,5 +69,5 @@ Parameters
 * **c**: `chr` - single character
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

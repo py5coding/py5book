@@ -10,7 +10,7 @@ Prints the current projection matrix to standard output.
 
 This method is the same as :doc:`sketch_print_projection` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_print_projection`.
 
-Underlying Java method: PGraphics.printProjection
+Underlying Processing method: PGraphics.printProjection
 
 Syntax
 ------
@@ -19,5 +19,5 @@ Syntax
 
     print_projection() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

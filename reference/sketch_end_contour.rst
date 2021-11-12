@@ -57,7 +57,7 @@ Use the :doc:`sketch_begin_contour` and ``end_contour()`` methods to create nega
 
 These methods can only be used within a :doc:`sketch_begin_shape` & :doc:`sketch_end_shape` pair and transformations such as :doc:`sketch_translate`, :doc:`sketch_rotate`, and :doc:`sketch_scale` do not work within a :doc:`sketch_begin_contour` & ``end_contour()`` pair. It is also not possible to use other shapes, such as :doc:`sketch_ellipse` or :doc:`sketch_rect` within.
 
-Underlying Java method: `endContour <https://processing.org/reference/endContour_.html>`_
+Underlying Processing method: `endContour <https://processing.org/reference/endContour_.html>`_
 
 Syntax
 ------
@@ -66,5 +66,5 @@ Syntax
 
     end_contour() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

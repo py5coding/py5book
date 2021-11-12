@@ -40,7 +40,7 @@ Description
 
 Set the Sketch window's title. This will typically appear at the window's title bar. The default window title is "Sketch".
 
-Underlying Java method: PSurface.setTitle
+Underlying Processing method: PSurface.setTitle
 
 Syntax
 ------
@@ -55,5 +55,5 @@ Parameters
 * **title**: `str` - new window title
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

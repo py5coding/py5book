@@ -48,7 +48,7 @@ Description
 
 Evaluates the Bezier at point t for points a, b, c, d. The parameter t varies between 0 and 1, a and d are points on the curve, and b and c are the control points. This can be done once with the x coordinates and a second time with the y coordinates to get the location of a bezier curve at t.
 
-Underlying Java method: `bezierPoint <https://processing.org/reference/bezierPoint_.html>`_
+Underlying Processing method: `bezierPoint <https://processing.org/reference/bezierPoint_.html>`_
 
 Syntax
 ------
@@ -67,5 +67,5 @@ Parameters
 * **t**: `float` - value between 0 and 1
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

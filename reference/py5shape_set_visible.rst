@@ -51,7 +51,7 @@ Sets the shape to be visible or invisible. This is determined by the value of th
 
 The default visibility of a shape is usually controlled by whatever program created the SVG file. For instance, this parameter is controlled by showing or hiding the shape in the layers palette in Adobe Illustrator.
 
-Underlying Java method: `PShape.setVisible <https://processing.org/reference/PShape_setVisible_.html>`_
+Underlying Processing method: `PShape.setVisible <https://processing.org/reference/PShape_setVisible_.html>`_
 
 Syntax
 ------
@@ -66,5 +66,5 @@ Parameters
 * **visible**: `bool` - ``False`` makes the shape invisible and ``True`` makes it visible
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

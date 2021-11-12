@@ -44,7 +44,7 @@ Description
 
 A sphere is a hollow ball made from tessellated triangles.
 
-Underlying Java method: `sphere <https://processing.org/reference/sphere_.html>`_
+Underlying Processing method: `sphere <https://processing.org/reference/sphere_.html>`_
 
 Syntax
 ------
@@ -59,5 +59,5 @@ Parameters
 * **r**: `float` - the radius of the sphere
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

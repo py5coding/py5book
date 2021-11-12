@@ -58,7 +58,7 @@ Use the :doc:`py5shape_begin_contour` and ``end_contour()`` methods to create ne
 
 These methods can only be used within a :doc:`py5shape_begin_shape` & :doc:`py5shape_end_shape` pair and transformations such as :doc:`py5shape_translate`, :doc:`py5shape_rotate`, and :doc:`py5shape_scale` do not work within a :doc:`py5shape_begin_contour` & ``end_contour()`` pair. It is also not possible to use other shapes, such as :doc:`sketch_ellipse` or :doc:`sketch_rect` within.
 
-Underlying Java method: `PShape.endContour <https://processing.org/reference/PShape_endContour_.html>`_
+Underlying Processing method: `PShape.endContour <https://processing.org/reference/PShape_endContour_.html>`_
 
 Syntax
 ------
@@ -67,5 +67,5 @@ Syntax
 
     end_contour() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

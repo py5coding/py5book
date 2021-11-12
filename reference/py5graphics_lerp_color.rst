@@ -12,7 +12,7 @@ An amount below 0 will be treated as 0. Likewise, amounts above 1 will be capped
 
 This method is the same as :doc:`sketch_lerp_color` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_lerp_color`.
 
-Underlying Java method: PGraphics.lerpColor
+Underlying Processing method: PGraphics.lerpColor
 
 Syntax
 ------
@@ -31,5 +31,5 @@ Parameters
 * **mode**: `int` - either RGB or HSB
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

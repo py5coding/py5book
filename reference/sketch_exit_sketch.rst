@@ -45,7 +45,7 @@ Rather than terminating immediately, ``exit_sketch()`` will cause the Sketch to 
 
 For Python programmers, this is *not* the same as ``sys.exit()``. Further, ``sys.exit()`` should not be used because closing out an application while ``draw()`` is running may cause a crash (particularly with ``P3D``).
 
-Underlying Java method: `exit <https://processing.org/reference/exit_.html>`_
+Underlying Processing method: `exit <https://processing.org/reference/exit_.html>`_
 
 Syntax
 ------
@@ -54,5 +54,5 @@ Syntax
 
     exit_sketch() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

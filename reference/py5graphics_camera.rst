@@ -10,7 +10,7 @@ Sets the position of the camera through setting the eye position, the center of 
 
 This method is the same as :doc:`sketch_camera` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_camera`.
 
-Underlying Java method: PGraphics.camera
+Underlying Processing method: PGraphics.camera
 
 Syntax
 ------
@@ -34,5 +34,5 @@ Parameters
 * **up_z**: `float` - usually 0.0, 1.0, or -1.0
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

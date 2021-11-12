@@ -18,7 +18,7 @@ To change the color of an image or a texture, use :doc:`py5graphics_tint`.
 
 This method is the same as :doc:`sketch_fill` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_fill`.
 
-Underlying Java method: PGraphics.fill
+Underlying Processing method: PGraphics.fill
 
 Syntax
 ------
@@ -43,5 +43,5 @@ Parameters
 * **v3**: `float` - blue or brightness value (depending on current color mode)
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

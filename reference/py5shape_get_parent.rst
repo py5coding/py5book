@@ -45,7 +45,7 @@ Description
 
 Locate a child ``Py5Shape`` object's parent ``GROUP`` ``Py5Shape`` object. This will return ``None`` if the shape has no parent, such as when the shape is the parent object or the shape is not a part of a group.
 
-Underlying Java method: PShape.getParent
+Underlying Processing method: PShape.getParent
 
 Syntax
 ------
@@ -54,5 +54,5 @@ Syntax
 
     get_parent() -> Py5Shape
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -45,8 +45,8 @@ You may find that ``pmouse_x`` and :doc:`sketch_pmouse_y` have different values 
 
 If you want values relative to the previous frame, use ``pmouse_x`` and :doc:`sketch_pmouse_y` inside ``draw()``. If you want continuous response, use ``pmouse_x`` and :doc:`sketch_pmouse_y` inside the mouse event functions.
 
-Underlying Java field: `pmouseX <https://processing.org/reference/pmouseX.html>`_
+Underlying Processing field: `pmouseX <https://processing.org/reference/pmouseX.html>`_
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

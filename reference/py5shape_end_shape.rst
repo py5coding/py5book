@@ -49,7 +49,7 @@ Description
 
 This method is used to complete a custom shape created with the :doc:`sketch_create_shape` function. It's always and only used with :doc:`sketch_create_shape`.
 
-Underlying Java method: `PShape.endShape <https://processing.org/reference/PShape_endShape_.html>`_
+Underlying Processing method: `PShape.endShape <https://processing.org/reference/PShape_endShape_.html>`_
 
 Syntax
 ------
@@ -65,5 +65,5 @@ Parameters
 * **mode**: `int` - Either OPEN or CLOSE
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -14,7 +14,7 @@ The :doc:`py5graphics_push` and ``pop()`` functions can be used in place of :doc
 
 This method is the same as :doc:`sketch_pop` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_pop`.
 
-Underlying Java method: PGraphics.pop
+Underlying Processing method: PGraphics.pop
 
 Syntax
 ------
@@ -23,5 +23,5 @@ Syntax
 
     pop() -> None
 
-Updated on October 29, 2021 22:01:43pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

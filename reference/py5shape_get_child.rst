@@ -49,7 +49,7 @@ Description
 
 Extracts a child ``Py5Shape`` object from a parent ``Py5Shape`` object that is defined as a ``GROUP``. Specify the name of the shape with the ``target`` parameter, or use the index with the ``index`` parameter. The shape is returned as a ``Py5Shape`` object, or ``None`` is returned if there is an error.
 
-Underlying Java method: `PShape.getChild <https://processing.org/reference/PShape_getChild_.html>`_
+Underlying Processing method: `PShape.getChild <https://processing.org/reference/PShape_getChild_.html>`_
 
 Syntax
 ------
@@ -66,5 +66,5 @@ Parameters
 * **target**: `str` - the name of the shape to get
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

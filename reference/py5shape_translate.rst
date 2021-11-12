@@ -50,7 +50,7 @@ Specifies an amount to displace the shape. The ``x`` parameter specifies left/ri
 
 Using this method with the ``z`` parameter requires using the ``P3D`` parameter in combination with size.
 
-Underlying Java method: `PShape.translate <https://processing.org/reference/PShape_translate_.html>`_
+Underlying Processing method: `PShape.translate <https://processing.org/reference/PShape_translate_.html>`_
 
 Syntax
 ------
@@ -68,5 +68,5 @@ Parameters
 * **z**: `float` - forward/back translation
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

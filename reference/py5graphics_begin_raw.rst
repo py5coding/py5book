@@ -60,7 +60,7 @@ Using ``hint(ENABLE_DEPTH_SORT)`` can improve the appearance of 3D geometry draw
 
 This method is the same as :doc:`sketch_begin_raw` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_begin_raw`.
 
-Underlying Java method: PGraphics.beginRaw
+Underlying Processing method: PGraphics.beginRaw
 
 Syntax
 ------
@@ -75,5 +75,5 @@ Parameters
 * **raw_graphics**: `Py5Graphics` - Py5Graphics object to apply draw commands to
 
 
-Updated on September 25, 2021 10:33:52am UTC
+Updated on November 12, 2021 11:30:58am UTC
 

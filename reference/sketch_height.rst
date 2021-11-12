@@ -43,8 +43,8 @@ Description
 
 System variable that stores the height of the display window. This value is set by the second parameter of the :doc:`sketch_size` function. For example, the function call ``size(320, 240)`` sets the ``height`` variable to the value 240. The value of ``height`` defaults to 100 if :doc:`sketch_size` is not used in a program.
 
-Underlying Java field: `height <https://processing.org/reference/height.html>`_
+Underlying Processing field: `height <https://processing.org/reference/height.html>`_
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

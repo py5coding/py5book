@@ -10,7 +10,7 @@ Sets the default ambient light, directional light, falloff, and specular values.
 
 This method is the same as :doc:`sketch_lights` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_lights`.
 
-Underlying Java method: PGraphics.lights
+Underlying Processing method: PGraphics.lights
 
 Syntax
 ------
@@ -19,5 +19,5 @@ Syntax
 
     lights() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

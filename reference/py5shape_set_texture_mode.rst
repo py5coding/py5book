@@ -61,7 +61,7 @@ The default mode is ``IMAGE``, which refers to the actual pixel coordinates of t
 
 With ``IMAGE``, if an image is 100 x 200 pixels, mapping the image onto the entire size of a quad would require the points (0,0) (100,0) (100,200) (0,200). The same mapping in ``NORMAL`` is (0,0) (1,0) (1,1) (0,1).
 
-Underlying Java method: PShape.setTextureMode
+Underlying Processing method: PShape.setTextureMode
 
 Syntax
 ------
@@ -76,5 +76,5 @@ Parameters
 * **mode**: `int` - either IMAGE or NORMAL
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

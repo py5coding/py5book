@@ -50,8 +50,8 @@ For non-ASCII keys, use the :doc:`sketch_key_code` variable. The keys included i
 
 There are issues with how :doc:`sketch_key_code` behaves across different renderers and operating systems. Watch out for unexpected behavior as you switch renderers and operating systems.
 
-Underlying Java field: `key <https://processing.org/reference/key.html>`_
+Underlying Processing field: `key <https://processing.org/reference/key.html>`_
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

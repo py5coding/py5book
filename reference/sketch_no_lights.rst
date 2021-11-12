@@ -8,7 +8,7 @@ Description
 
 Disable all lighting. Lighting is turned off by default and enabled with the :doc:`sketch_lights` function. This function can be used to disable lighting so that 2D geometry (which does not require lighting) can be drawn after a set of lighted 3D geometry.
 
-Underlying Java method: `noLights <https://processing.org/reference/noLights_.html>`_
+Underlying Processing method: `noLights <https://processing.org/reference/noLights_.html>`_
 
 Syntax
 ------
@@ -17,5 +17,5 @@ Syntax
 
     no_lights() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

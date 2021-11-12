@@ -65,7 +65,7 @@ Get the vertex code for a particular vertex code index. The vertex codes can be 
 
 The vertex codes will not necessarily align with the vertices because number of vertex codes may be larger than the number of vertices. This will be the case for shapes that use contours, and therefore contain ``BREAK`` codes.
 
-Underlying Java method: PShape.getVertexCode
+Underlying Processing method: PShape.getVertexCode
 
 Syntax
 ------
@@ -80,5 +80,5 @@ Parameters
 * **index**: `int` - vertex code index
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -59,7 +59,7 @@ Description
 
 By default, py5 loops through ``draw()`` continuously, executing the code within it. However, the ``draw()`` loop may be stopped by calling :doc:`sketch_no_loop`. In that case, the ``draw()`` loop can be resumed with ``loop()``.
 
-Underlying Java method: `loop <https://processing.org/reference/loop_.html>`_
+Underlying Processing method: `loop <https://processing.org/reference/loop_.html>`_
 
 Syntax
 ------
@@ -68,5 +68,5 @@ Syntax
 
     loop() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -42,8 +42,8 @@ Description
 
 The width of the image in units of pixels.
 
-Underlying Java field: `PImage.width <https://processing.org/reference/PImage_width.html>`_
+Underlying Processing field: `PImage.width <https://processing.org/reference/PImage_width.html>`_
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

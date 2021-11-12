@@ -78,7 +78,7 @@ Blends the pixels in the display window according to a defined mode. There is a 
 
 We recommend using ``blend_mode()`` and not the previous :doc:`sketch_blend` function. However, unlike :doc:`sketch_blend`, the ``blend_mode()`` function does not support the following: ``HARD_LIGHT``, ``SOFT_LIGHT``, ``OVERLAY``, ``DODGE``, ``BURN``. On older hardware, the ``LIGHTEST``, ``DARKEST``, and ``DIFFERENCE`` modes might not be available as well.
 
-Underlying Java method: `blendMode <https://processing.org/reference/blendMode_.html>`_
+Underlying Processing method: `blendMode <https://processing.org/reference/blendMode_.html>`_
 
 Syntax
 ------
@@ -93,5 +93,5 @@ Parameters
 * **mode**: `int` - the blending mode to use
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

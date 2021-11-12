@@ -95,7 +95,7 @@ Increases or decreases the size of a shape by expanding and contracting vertices
 
 Transformations apply to everything that happens after and subsequent calls to the function multiply the effect. For example, calling ``scale(2.0)`` and then ``scale(1.5)`` is the same as ``scale(3.0)``. If ``scale()`` is called within ``draw()``, the transformation is reset when the loop begins again. Using this function with the ``z`` parameter requires using ``P3D`` as a parameter for :doc:`sketch_size`, as shown in the third example. This function can be further controlled with :doc:`sketch_push_matrix` and :doc:`sketch_pop_matrix`.
 
-Underlying Java method: `scale <https://processing.org/reference/scale_.html>`_
+Underlying Processing method: `scale <https://processing.org/reference/scale_.html>`_
 
 Syntax
 ------
@@ -115,5 +115,5 @@ Parameters
 * **z**: `float` - percentage to scale the object in the z-axis
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

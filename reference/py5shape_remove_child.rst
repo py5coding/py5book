@@ -48,7 +48,7 @@ Description
 
 Removes a child ``Py5Shape`` object from a parent ``Py5Shape`` object that is defined as a ``GROUP``.
 
-Underlying Java method: PShape.removeChild
+Underlying Processing method: PShape.removeChild
 
 Syntax
 ------
@@ -63,5 +63,5 @@ Parameters
 * **idx**: `int` - index value
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

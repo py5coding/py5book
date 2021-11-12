@@ -10,7 +10,7 @@ Disable all lighting. Lighting is turned off by default and enabled with the :do
 
 This method is the same as :doc:`sketch_no_lights` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_no_lights`.
 
-Underlying Java method: PGraphics.noLights
+Underlying Processing method: PGraphics.noLights
 
 Syntax
 ------
@@ -19,5 +19,5 @@ Syntax
 
     no_lights() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

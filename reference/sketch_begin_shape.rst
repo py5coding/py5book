@@ -366,7 +366,7 @@ The ``P2D`` and ``P3D`` renderers allow :doc:`sketch_stroke` and :doc:`sketch_fi
 
 This method can be used as a context manager to ensure that :doc:`sketch_end_shape` always gets called, as shown in the last example. Use :doc:`sketch_begin_closed_shape` to create a context manager that will pass the ``CLOSE`` parameter to :doc:`sketch_end_shape`, closing the shape.
 
-Underlying Java method: `beginShape <https://processing.org/reference/beginShape_.html>`_
+Underlying Processing method: `beginShape <https://processing.org/reference/beginShape_.html>`_
 
 Syntax
 ------
@@ -382,5 +382,5 @@ Parameters
 * **kind**: `int` - Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
 
 
-Updated on October 29, 2021 22:01:43pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

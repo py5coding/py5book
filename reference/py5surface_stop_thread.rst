@@ -48,7 +48,7 @@ Stop the animation thread. The Sketch window will remain open but will be static
 
 This method is different from :doc:`py5surface_pause_thread` in that it will irreversably stop the animation. Use :doc:`py5surface_pause_thread` and :doc:`py5surface_resume_thread` if you want to pause and resume a running Sketch.
 
-Underlying Java method: PSurface.stopThread
+Underlying Processing method: PSurface.stopThread
 
 Syntax
 ------
@@ -57,5 +57,5 @@ Syntax
 
     stop_thread() -> bool
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

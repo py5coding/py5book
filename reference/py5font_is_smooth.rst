@@ -49,7 +49,7 @@ Description
 
 Boolean value reflecting if smoothing (anti-aliasing) was used when the font was created. By default, :doc:`sketch_create_font` will use smoothing.
 
-Underlying Java method: PFont.isSmooth
+Underlying Processing method: PFont.isSmooth
 
 Syntax
 ------
@@ -58,5 +58,5 @@ Syntax
 
     is_smooth() -> bool
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

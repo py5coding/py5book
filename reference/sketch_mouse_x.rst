@@ -40,8 +40,8 @@ The system variable ``mouse_x`` always contains the current horizontal coordinat
 
 Note that py5 can only track the mouse position when the pointer is over the current window. The default value of ``mouse_x`` is ``0``, so ``0`` will be returned until the mouse moves in front of the Sketch window. (This typically happens when a Sketch is first run.)  Once the mouse moves away from the window, ``mouse_x`` will continue to report its most recent position.
 
-Underlying Java field: `mouseX <https://processing.org/reference/mouseX.html>`_
+Underlying Processing field: `mouseX <https://processing.org/reference/mouseX.html>`_
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

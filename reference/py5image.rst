@@ -49,11 +49,11 @@ Before using the :doc:`py5image_pixels` array, be sure to use the :doc:`py5image
 
 To create a new image, use the :doc:`sketch_create_image` function. Do not use the syntax ``Py5Image()``.
 
-Underlying Java class: `PImage <https://processing.org/reference/PImage.html>`_
+Underlying Processing class: `PImage <https://processing.org/reference/PImage.html>`_
 
 The following methods and fields are provided:
 
 .. include:: include_py5image.rst
 
-Updated on September 16, 2021 14:31:43pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

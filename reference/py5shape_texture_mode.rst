@@ -95,7 +95,7 @@ If this method is not used, it will inherit the current texture mode setting fro
 
 With ``IMAGE``, if an image is 100 x 200 pixels, mapping the image onto the entire size of a quad would require the points (0,0) (100,0) (100,200) (0,200). The same mapping in ``NORMAL`` is (0,0) (1,0) (1,1) (0,1).
 
-Underlying Java method: PShape.textureMode
+Underlying Processing method: PShape.textureMode
 
 Syntax
 ------
@@ -110,5 +110,5 @@ Parameters
 * **mode**: `int` - either IMAGE or NORMAL
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

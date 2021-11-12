@@ -12,7 +12,7 @@ The ``text_mode(SHAPE)`` option in ``P3D`` can be combined with :doc:`py5graphic
 
 This method is the same as :doc:`sketch_text_mode` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_text_mode`.
 
-Underlying Java method: PGraphics.textMode
+Underlying Processing method: PGraphics.textMode
 
 Syntax
 ------
@@ -27,5 +27,5 @@ Parameters
 * **mode**: `int` - either MODEL or SHAPE
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

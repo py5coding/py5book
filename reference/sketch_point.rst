@@ -76,7 +76,7 @@ Point appears round with the default ``stroke_cap(ROUND)`` and square with ``str
 
 Using ``point()`` with ``strokeWeight(1)`` or smaller may draw nothing to the screen, depending on the graphics settings of the computer. Workarounds include setting the pixel using the :doc:`sketch_pixels` or :doc:`sketch_np_pixels` arrays or drawing the point using either :doc:`sketch_circle` or :doc:`sketch_square`.
 
-Underlying Java method: `point <https://processing.org/reference/point_.html>`_
+Underlying Processing method: `point <https://processing.org/reference/point_.html>`_
 
 Syntax
 ------
@@ -94,5 +94,5 @@ Parameters
 * **z**: `float` - z-coordinate of the point
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

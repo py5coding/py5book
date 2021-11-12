@@ -49,7 +49,7 @@ Copies a region of pixels from one image into another. If the source and destina
 
 This function ignores :doc:`sketch_image_mode`.
 
-Underlying Java method: `PImage.copy <https://processing.org/reference/PImage_copy_.html>`_
+Underlying Processing method: `PImage.copy <https://processing.org/reference/PImage_copy_.html>`_
 
 Syntax
 ------
@@ -74,5 +74,5 @@ Parameters
 * **sy**: `int` - y-coordinate of the source's upper left corner
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

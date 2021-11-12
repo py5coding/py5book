@@ -134,7 +134,7 @@ All modes use the alpha information (highest byte) of source image pixels as the
 
 This function ignores :doc:`sketch_image_mode`.
 
-Underlying Java method: `blend <https://processing.org/reference/blend_.html>`_
+Underlying Processing method: `blend <https://processing.org/reference/blend_.html>`_
 
 Syntax
 ------
@@ -159,5 +159,5 @@ Parameters
 * **sy**: `int` - y-coordinate of the source's upper left corner
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

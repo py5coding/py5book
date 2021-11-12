@@ -45,7 +45,7 @@ Description
 
 Draws shapes to the display window. Shapes must be in the Sketch's "data" directory to load correctly. Py5 currently works with SVG, OBJ, and custom-created shapes. The ``shape`` parameter specifies the shape to display and the coordinate parameters define the location of the shape from its upper-left corner. The shape is displayed at its original size unless the ``c`` and ``d`` parameters specify a different size. The :doc:`sketch_shape_mode` function can be used to change the way these parameters are interpreted.
 
-Underlying Java method: `shape <https://processing.org/reference/shape_.html>`_
+Underlying Processing method: `shape <https://processing.org/reference/shape_.html>`_
 
 Syntax
 ------
@@ -68,5 +68,5 @@ Parameters
 * **y**: `float` - y-coordinate of the shape
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

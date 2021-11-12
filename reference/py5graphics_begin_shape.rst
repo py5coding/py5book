@@ -61,7 +61,7 @@ This method can be used as a context manager to ensure that :doc:`py5graphics_en
 
 This method is the same as :doc:`sketch_begin_shape` but linked to a ``Py5Graphics`` object. To see more example code for how it can be used, see :doc:`sketch_begin_shape`.
 
-Underlying Java method: PGraphics.beginShape
+Underlying Processing method: PGraphics.beginShape
 
 Syntax
 ------
@@ -77,5 +77,5 @@ Parameters
 * **kind**: `int` - Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
 
 
-Updated on October 29, 2021 22:01:43pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

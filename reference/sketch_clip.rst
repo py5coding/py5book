@@ -49,7 +49,7 @@ Description
 
 Limits the rendering to the boundaries of a rectangle defined by the parameters. The boundaries are drawn based on the state of the :doc:`sketch_image_mode` fuction, either ``CORNER``, ``CORNERS``, or ``CENTER``.
 
-Underlying Java method: `clip <https://processing.org/reference/clip_.html>`_
+Underlying Processing method: `clip <https://processing.org/reference/clip_.html>`_
 
 Syntax
 ------
@@ -67,5 +67,5 @@ Parameters
 * **d**: `float` - height of the rectangle, by default
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

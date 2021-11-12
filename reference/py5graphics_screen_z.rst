@@ -10,7 +10,7 @@ Takes a three-dimensional X, Y, Z position and returns the Z value for where it 
 
 This method is the same as :doc:`sketch_screen_z` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_screen_z`.
 
-Underlying Java method: PGraphics.screenZ
+Underlying Processing method: PGraphics.screenZ
 
 Syntax
 ------
@@ -27,5 +27,5 @@ Parameters
 * **z**: `float` - 3D z-coordinate to be mapped
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

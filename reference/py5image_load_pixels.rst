@@ -52,7 +52,7 @@ Description
 
 Loads the pixel data for the image into its :doc:`py5image_pixels` array. This function must always be called before reading from or writing to :doc:`py5image_pixels`.
 
-Underlying Java method: `PImage.loadPixels <https://processing.org/reference/PImage_loadPixels_.html>`_
+Underlying Processing method: `PImage.loadPixels <https://processing.org/reference/PImage_loadPixels_.html>`_
 
 Syntax
 ------
@@ -61,5 +61,5 @@ Syntax
 
     load_pixels() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

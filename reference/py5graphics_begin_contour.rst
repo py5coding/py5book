@@ -62,7 +62,7 @@ This method can be used as a context manager to ensure that :doc:`py5graphics_en
 
 This method is the same as :doc:`sketch_begin_contour` but linked to a ``Py5Graphics`` object.
 
-Underlying Java method: PGraphics.beginContour
+Underlying Processing method: PGraphics.beginContour
 
 Syntax
 ------
@@ -71,5 +71,5 @@ Syntax
 
     begin_contour() -> None
 
-Updated on September 24, 2021 10:55:19am UTC
+Updated on November 12, 2021 11:30:58am UTC
 

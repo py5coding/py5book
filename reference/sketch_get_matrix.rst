@@ -49,7 +49,7 @@ Description
 
 Get the current matrix as a numpy array. Use the ``target`` parameter to put the matrix data in a properly sized and typed numpy array.
 
-Underlying Java method: getMatrix
+Underlying Processing method: getMatrix
 
 Syntax
 ------
@@ -67,5 +67,5 @@ Parameters
 * **target**: `NDArray[(4, 4), Float]` - transformation matrix data
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

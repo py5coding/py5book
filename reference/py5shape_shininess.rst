@@ -64,7 +64,7 @@ Sets the amount of gloss in the surface of a ``Py5Shape`` object. Use in combina
 
 This method can only be used within a :doc:`py5shape_begin_shape` and :doc:`py5shape_end_shape` pair. The shininess color setting will be applied to vertices added after the call to this method.
 
-Underlying Java method: PShape.shininess
+Underlying Processing method: PShape.shininess
 
 Syntax
 ------
@@ -79,5 +79,5 @@ Parameters
 * **shine**: `float` - degree of shininess
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

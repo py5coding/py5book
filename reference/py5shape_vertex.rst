@@ -117,7 +117,7 @@ Drawing a vertex in 3D using the ``z`` parameter requires the ``P3D`` renderer, 
 
 This method is also used to map a texture onto geometry. The :doc:`py5shape_texture` function declares the texture to apply to the geometry and the ``u`` and ``v`` coordinates define the mapping of this texture to the form. By default, the coordinates used for ``u`` and ``v`` are specified in relation to the image's size in pixels, but this relation can be changed with the ``Py5Shape`` object's :doc:`py5shape_texture_mode` method or by calling the Sketch's :doc:`sketch_texture_mode` method before the shape is created.
 
-Underlying Java method: PShape.vertex
+Underlying Processing method: PShape.vertex
 
 Syntax
 ------
@@ -139,5 +139,5 @@ Parameters
 * **z**: `float` - z-coordinate of the vertex
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

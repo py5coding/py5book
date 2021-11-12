@@ -50,7 +50,7 @@ Set many vertex points at the same time, using a numpy array. This will be faste
 
 The ``vcount`` parameter cannot be larger than the first dimension of the ``verts`` array.
 
-Underlying Java method: PShape.setPath
+Underlying Processing method: PShape.setPath
 
 Syntax
 ------
@@ -66,5 +66,5 @@ Parameters
 * **verts**: `NDArray[(Any, Any), Float]` - array of vertex coordinates
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

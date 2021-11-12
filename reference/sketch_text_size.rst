@@ -45,7 +45,7 @@ Description
 
 Sets the current font size. This size will be used in all subsequent calls to the :doc:`sketch_text` function. Font size is measured in units of pixels.
 
-Underlying Java method: `textSize <https://processing.org/reference/textSize_.html>`_
+Underlying Processing method: `textSize <https://processing.org/reference/textSize_.html>`_
 
 Syntax
 ------
@@ -60,5 +60,5 @@ Parameters
 * **size**: `float` - the size of the letters in units of pixels
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

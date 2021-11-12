@@ -41,7 +41,7 @@ Description
 
 Disables drawing the stroke (outline). If both ``no_stroke()`` and :doc:`sketch_no_fill` are called, nothing will be drawn to the screen.
 
-Underlying Java method: `noStroke <https://processing.org/reference/noStroke_.html>`_
+Underlying Processing method: `noStroke <https://processing.org/reference/noStroke_.html>`_
 
 Syntax
 ------
@@ -50,5 +50,5 @@ Syntax
 
     no_stroke() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

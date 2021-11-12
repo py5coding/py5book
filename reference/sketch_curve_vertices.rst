@@ -48,7 +48,7 @@ Create a collection of curve vertices. The purpose of this method is to provide 
 
 The ``coordinates`` parameter should be a numpy array with one row for each curve vertex.  There should be two or three columns for 2D or 3D points, respectively.
 
-Underlying Java method: curveVertices
+Underlying Processing method: curveVertices
 
 Syntax
 ------
@@ -63,5 +63,5 @@ Parameters
 * **coordinates**: `NDArray[(Any, Any), Float]` - array of curve vertex coordinates
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

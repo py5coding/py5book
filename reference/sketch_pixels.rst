@@ -47,8 +47,8 @@ The ``pixels[]`` array contains the values for all the pixels in the display win
 
 Before accessing this array, the data must loaded with the :doc:`sketch_load_pixels` function. Failure to do so may result in a Java ``NullPointerException``. Subsequent changes to the display window will not be reflected in ``pixels`` until :doc:`sketch_load_pixels` is called again. After ``pixels`` has been modified, the :doc:`sketch_update_pixels` function must be run to update the content of the display window.
 
-Underlying Java field: `pixels <https://processing.org/reference/pixels.html>`_
+Underlying Processing field: `pixels <https://processing.org/reference/pixels.html>`_
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

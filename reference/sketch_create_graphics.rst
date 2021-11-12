@@ -56,7 +56,7 @@ The ``create_graphics()`` function should almost never be used inside ``draw()``
 
 Unlike the main drawing surface which is completely opaque, surfaces created with ``create_graphics()`` can have transparency. This makes it possible to draw into a graphics and maintain the alpha channel. By using :doc:`sketch_save` to write a ``PNG`` or ``TGA`` file, the transparency of the graphics object will be honored.
 
-Underlying Java method: `createGraphics <https://processing.org/reference/createGraphics_.html>`_
+Underlying Processing method: `createGraphics <https://processing.org/reference/createGraphics_.html>`_
 
 Syntax
 ------
@@ -76,5 +76,5 @@ Parameters
 * **w**: `int` - width in pixels
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -48,7 +48,7 @@ Extracts the alpha value from a color, scaled to match current :doc:`sketch_colo
 
 The ``alpha()`` function is easy to use and understand, but it is slower than a technique called bit shifting. When working in ``color_mode(RGB, 255)``, you can achieve the same results as ``alpha()`` but with greater speed by using the right shift operator (``>>``) with a bit mask. For example, ``alpha(c)`` and ``c >> 24 & 0xFF`` both extract the alpha value from a color variable ``c`` but the later is faster.
 
-Underlying Java method: `alpha <https://processing.org/reference/alpha_.html>`_
+Underlying Processing method: `alpha <https://processing.org/reference/alpha_.html>`_
 
 Syntax
 ------
@@ -63,5 +63,5 @@ Parameters
 * **rgb**: `int` - any value of the color datatype
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

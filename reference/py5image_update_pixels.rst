@@ -52,7 +52,7 @@ Description
 
 Updates the image with the data in its :doc:`py5image_pixels` array. Use in conjunction with :doc:`py5image_load_pixels`. If you're only reading pixels from the array, there's no need to call ``update_pixels()``.
 
-Underlying Java method: `PImage.updatePixels <https://processing.org/reference/PImage_updatePixels_.html>`_
+Underlying Processing method: `PImage.updatePixels <https://processing.org/reference/PImage_updatePixels_.html>`_
 
 Syntax
 ------
@@ -71,5 +71,5 @@ Parameters
 * **y**: `int` - y-coordinate of the upper-left corner
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

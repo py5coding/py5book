@@ -45,7 +45,7 @@ Description
 
 Get the ``Py5Shape`` object's depth. This method only makes sense when using the ``P3D`` renderer. It will return 0 when using default renderer.
 
-Underlying Java method: PShape.getDepth
+Underlying Processing method: PShape.getDepth
 
 Syntax
 ------
@@ -54,5 +54,5 @@ Syntax
 
     get_depth() -> float
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

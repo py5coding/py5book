@@ -74,7 +74,7 @@ Description
 
 Get the ``Py5Shape`` object's width. When using the ``P2D`` or ``P3D`` renderers, the returned value should be the width of the drawn shape. When using the default renderer, this will be the width of the drawing area, which will not necessarily be the same as the width of the drawn shape. Consider that the shape's vertices might have negative values or the shape may be offset from the shape's origin. To get the shape's actual width, calculate the range of the vertices obtained with :doc:`py5shape_get_vertex_x`.
 
-Underlying Java method: PShape.getWidth
+Underlying Processing method: PShape.getWidth
 
 Syntax
 ------
@@ -83,5 +83,5 @@ Syntax
 
     get_width() -> float
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

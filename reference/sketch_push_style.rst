@@ -85,7 +85,7 @@ The ``push_style()`` function saves the current style settings and :doc:`sketch_
 
 The style information controlled by the following functions are included in the style: :doc:`sketch_fill`, :doc:`sketch_stroke`, :doc:`sketch_tint`, :doc:`sketch_stroke_weight`, :doc:`sketch_stroke_cap`, :doc:`sketch_stroke_join`, :doc:`sketch_image_mode`, :doc:`sketch_rect_mode`, :doc:`sketch_ellipse_mode`, :doc:`sketch_shape_mode`, :doc:`sketch_color_mode`, :doc:`sketch_text_align`, :doc:`sketch_text_font`, :doc:`sketch_text_mode`, :doc:`sketch_text_size`, :doc:`sketch_text_leading`, :doc:`sketch_emissive`, :doc:`sketch_specular`, :doc:`sketch_shininess`, and :doc:`sketch_ambient`.
 
-Underlying Java method: `pushStyle <https://processing.org/reference/pushStyle_.html>`_
+Underlying Processing method: `pushStyle <https://processing.org/reference/pushStyle_.html>`_
 
 Syntax
 ------
@@ -94,5 +94,5 @@ Syntax
 
     push_style() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

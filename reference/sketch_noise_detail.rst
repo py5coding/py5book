@@ -89,7 +89,7 @@ By default, noise is computed over 4 octaves with each octave contributing exact
 
 By changing these parameters, the signal created by the :doc:`sketch_noise` function can be adapted to fit very specific needs and characteristics.
 
-Underlying Java method: `noiseDetail <https://processing.org/reference/noiseDetail_.html>`_
+Underlying Processing method: `noiseDetail <https://processing.org/reference/noiseDetail_.html>`_
 
 Syntax
 ------
@@ -106,5 +106,5 @@ Parameters
 * **lod**: `int` - number of octaves to be used by the noise
 
 
-Updated on November 08, 2021 12:30:20pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

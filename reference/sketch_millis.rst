@@ -40,7 +40,7 @@ Description
 
 Returns the number of milliseconds (thousandths of a second) since starting the program. This information is often used for timing events and animation sequences.
 
-Underlying Java method: `millis <https://processing.org/reference/millis_.html>`_
+Underlying Processing method: `millis <https://processing.org/reference/millis_.html>`_
 
 Syntax
 ------
@@ -49,5 +49,5 @@ Syntax
 
     millis() -> int
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

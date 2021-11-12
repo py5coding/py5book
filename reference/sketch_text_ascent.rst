@@ -51,7 +51,7 @@ Description
 
 Returns ascent of the current font at its current size. This information is useful for determining the height of the font above the baseline.
 
-Underlying Java method: `textAscent <https://processing.org/reference/textAscent_.html>`_
+Underlying Processing method: `textAscent <https://processing.org/reference/textAscent_.html>`_
 
 Syntax
 ------
@@ -60,5 +60,5 @@ Syntax
 
     text_ascent() -> float
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

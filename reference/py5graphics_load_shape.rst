@@ -14,7 +14,7 @@ If the file is not available or an error occurs, ``None`` will be returned and a
 
 This method is the same as :doc:`sketch_load_shape` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_load_shape`.
 
-Underlying Java method: PGraphics.loadShape
+Underlying Processing method: PGraphics.loadShape
 
 Syntax
 ------
@@ -31,5 +31,5 @@ Parameters
 * **options**: `str` - unused parameter
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

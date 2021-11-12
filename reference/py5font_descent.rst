@@ -51,7 +51,7 @@ Description
 
 Get the descent of this font from the baseline. The value is based on a font of size 1. Multiply it by the font size to get the offset from the baseline.
 
-Underlying Java method: PFont.descent
+Underlying Processing method: PFont.descent
 
 Syntax
 ------
@@ -60,5 +60,5 @@ Syntax
 
     descent() -> float
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

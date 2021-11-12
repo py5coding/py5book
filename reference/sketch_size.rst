@@ -112,7 +112,7 @@ The ``renderer`` parameter selects which rendering engine to use. For example, i
 * ``PDF``: The ``PDF`` renderer draws 2D graphics directly to an Acrobat PDF file. This produces excellent results when you need vector shapes for high-resolution output or printing.
 * ``SVG``: The ``SVG`` renderer draws 2D graphics directly to an SVG file. This is great for importing into other vector programs or using for digital fabrication.
 
-Underlying Java method: `size <https://processing.org/reference/size_.html>`_
+Underlying Processing method: `size <https://processing.org/reference/size_.html>`_
 
 Syntax
 ------
@@ -132,5 +132,5 @@ Parameters
 * **width**: `int` - width of the display window in units of pixels
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

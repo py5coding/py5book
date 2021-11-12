@@ -63,7 +63,7 @@ This method can be used as a context manager to ensure that :doc:`py5graphics_po
 
 This method is the same as :doc:`sketch_push_matrix` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_push_matrix`.
 
-Underlying Java method: PGraphics.pushMatrix
+Underlying Processing method: PGraphics.pushMatrix
 
 Syntax
 ------
@@ -72,5 +72,5 @@ Syntax
 
     push_matrix() -> None
 
-Updated on September 24, 2021 10:56:40am UTC
+Updated on November 12, 2021 11:30:58am UTC
 

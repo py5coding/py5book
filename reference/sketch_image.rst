@@ -80,7 +80,7 @@ Use the ``u1``, ``u2``, ``v1``, and ``v2`` parameters to use only a subset of th
 
 The color of an image may be modified with the :doc:`sketch_tint` function. This function will maintain transparency for GIF and PNG images.
 
-Underlying Java method: `image <https://processing.org/reference/image_.html>`_
+Underlying Processing method: `image <https://processing.org/reference/image_.html>`_
 
 Syntax
 ------
@@ -105,5 +105,5 @@ Parameters
 * **v2**: `int` - y-coordinate of the lower right corner of image subset
 
 
-Updated on October 29, 2021 22:01:43pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

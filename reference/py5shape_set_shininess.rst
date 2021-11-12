@@ -55,7 +55,7 @@ The ``shine`` parameter can be applied to the entire ``Py5Shape`` object or to a
 
 This method can only be used for a complete ``Py5Shape`` object, and never within a :doc:`py5shape_begin_shape` and :doc:`py5shape_end_shape` pair.
 
-Underlying Java method: PShape.setShininess
+Underlying Processing method: PShape.setShininess
 
 Syntax
 ------
@@ -72,5 +72,5 @@ Parameters
 * **shine**: `float` - degree of shininess
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

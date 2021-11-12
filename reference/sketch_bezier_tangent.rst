@@ -94,7 +94,7 @@ Description
 
 Calculates the tangent of a point on a Bezier curve. There is a good definition of *tangent* on Wikipedia.
 
-Underlying Java method: `bezierTangent <https://processing.org/reference/bezierTangent_.html>`_
+Underlying Processing method: `bezierTangent <https://processing.org/reference/bezierTangent_.html>`_
 
 Syntax
 ------
@@ -113,5 +113,5 @@ Parameters
 * **t**: `float` - value between 0 and 1
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

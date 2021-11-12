@@ -48,7 +48,7 @@ Description
 
 Finalizes the rendering of a ``Py5Graphics`` object so that it can be shown on screen.
 
-Underlying Java method: `PGraphics.endDraw <https://processing.org/reference/PGraphics_endDraw_.html>`_
+Underlying Processing method: `PGraphics.endDraw <https://processing.org/reference/PGraphics_endDraw_.html>`_
 
 Syntax
 ------
@@ -57,5 +57,5 @@ Syntax
 
     end_draw() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

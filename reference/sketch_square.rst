@@ -40,7 +40,7 @@ Description
 
 Draws a square to the screen. A square is a four-sided shape with every angle at ninety degrees and each side is the same length. By default, the first two parameters set the location of the upper-left corner, the third sets the width and height. The way these parameters are interpreted, however, may be changed with the :doc:`sketch_rect_mode` function.
 
-Underlying Java method: `square <https://processing.org/reference/square_.html>`_
+Underlying Processing method: `square <https://processing.org/reference/square_.html>`_
 
 Syntax
 ------
@@ -57,5 +57,5 @@ Parameters
 * **y**: `float` - y-coordinate of the rectangle by default
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

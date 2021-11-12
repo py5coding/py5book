@@ -10,7 +10,7 @@ Sets the spacing between lines of text in units of pixels. This setting will be 
 
 This method is the same as :doc:`sketch_text_leading` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_text_leading`.
 
-Underlying Java method: PGraphics.textLeading
+Underlying Processing method: PGraphics.textLeading
 
 Syntax
 ------
@@ -25,5 +25,5 @@ Parameters
 * **leading**: `float` - the size in pixels for spacing between lines
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

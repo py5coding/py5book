@@ -52,7 +52,7 @@ If the file is not available or an error occurs, ``None`` will be returned and a
 
 Use :doc:`sketch_create_font` (instead of ``load_font()``) to enable vector data to be used with the default renderer setting. This can be helpful when many font sizes are needed, or when using any renderer based on the default renderer, such as the ``PDF`` renderer.
 
-Underlying Java method: `loadFont <https://processing.org/reference/loadFont_.html>`_
+Underlying Processing method: `loadFont <https://processing.org/reference/loadFont_.html>`_
 
 Syntax
 ------
@@ -67,5 +67,5 @@ Parameters
 * **filename**: `str` - name of the font to load
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -12,7 +12,7 @@ The ``alpha()`` function is easy to use and understand, but it is slower than a 
 
 This method is the same as :doc:`sketch_alpha` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_alpha`.
 
-Underlying Java method: PGraphics.alpha
+Underlying Processing method: PGraphics.alpha
 
 Syntax
 ------
@@ -27,5 +27,5 @@ Parameters
 * **rgb**: `int` - any value of the color datatype
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

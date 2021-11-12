@@ -44,11 +44,11 @@ Py5Font is the font class for py5. To create a font to use with py5, use :doc:`p
 
 To create a new font dynamically, use the :doc:`sketch_create_font` function. Do not use the syntax ``Py5Font()``.
 
-Underlying Java class: `PFont <https://processing.org/reference/PFont.html>`_
+Underlying Processing class: `PFont <https://processing.org/reference/PFont.html>`_
 
 The following methods and fields are provided:
 
 .. include:: include_py5font.rst
 
-Updated on September 16, 2021 14:31:43pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

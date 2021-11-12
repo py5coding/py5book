@@ -47,7 +47,7 @@ Description
 
 Updates the display window with the data in the :doc:`sketch_pixels` array. Use in conjunction with :doc:`sketch_load_pixels`. If you're only reading pixels from the array, there's no need to call ``update_pixels()`` — updating is only necessary to apply changes.
 
-Underlying Java method: `updatePixels <https://processing.org/reference/updatePixels_.html>`_
+Underlying Processing method: `updatePixels <https://processing.org/reference/updatePixels_.html>`_
 
 Syntax
 ------
@@ -66,5 +66,5 @@ Parameters
 * **y2**: `int` - height of the region
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -86,7 +86,7 @@ To draw a rounded rectangle, add a fifth parameter, which is used as the radius 
 
 To use a different radius value for each corner, include eight parameters. When using eight parameters, the latter four set the radius of the arc at each corner separately, starting with the top-left corner and moving clockwise around the rectangle.
 
-Underlying Java method: `rect <https://processing.org/reference/rect_.html>`_
+Underlying Processing method: `rect <https://processing.org/reference/rect_.html>`_
 
 Syntax
 ------
@@ -111,5 +111,5 @@ Parameters
 * **tr**: `float` - radius for top-right corner
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

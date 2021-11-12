@@ -58,7 +58,7 @@ Description
 
 Adds a child ``Py5Shape`` object to a parent ``Py5Shape`` object that is defined as a ``GROUP``. In the example, the three shapes ``path``, ``rectangle``, and ``circle`` are added to a parent ``Py5Shape`` variable named ``house`` that is a ``GROUP``.
 
-Underlying Java method: `PShape.addChild <https://processing.org/reference/PShape_addChild_.html>`_
+Underlying Processing method: `PShape.addChild <https://processing.org/reference/PShape_addChild_.html>`_
 
 Syntax
 ------
@@ -75,5 +75,5 @@ Parameters
 * **who**: `Py5Shape` - any variable of type Py5Shape
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

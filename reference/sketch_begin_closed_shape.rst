@@ -81,7 +81,7 @@ Description
 
 This method is used to start a custom closed shape. This method should only be used as a context manager, as shown in the examples. When used as a context manager, this will ensure that :doc:`sketch_end_shape` always gets called, just like when using :doc:`sketch_begin_shape` as a context manager. The difference is that when exiting, the parameter ``CLOSE`` will be passed to :doc:`sketch_end_shape`, connecting the last vertex to the first. This will close the shape. If this method were to be used not as a context manager, it won't be able to close the shape by making the call to :doc:`sketch_end_shape`.
 
-Underlying Java method: `beginShape <https://processing.org/reference/beginShape_.html>`_
+Underlying Processing method: `beginShape <https://processing.org/reference/beginShape_.html>`_
 
 Syntax
 ------
@@ -97,5 +97,5 @@ Parameters
 * **kind**: `int` - Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
 
 
-Updated on September 23, 2021 10:53:31am UTC
+Updated on November 12, 2021 11:30:58am UTC
 

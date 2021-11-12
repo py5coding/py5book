@@ -10,7 +10,7 @@ Sets the style of the joints which connect line segments. These joints are eithe
 
 This method is the same as :doc:`sketch_stroke_join` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_stroke_join`.
 
-Underlying Java method: PGraphics.strokeJoin
+Underlying Processing method: PGraphics.strokeJoin
 
 Syntax
 ------
@@ -25,5 +25,5 @@ Parameters
 * **join**: `int` - either MITER, BEVEL, ROUND
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

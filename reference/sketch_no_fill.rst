@@ -42,7 +42,7 @@ Description
 
 Disables filling geometry. If both :doc:`sketch_no_stroke` and ``no_fill()`` are called, nothing will be drawn to the screen.
 
-Underlying Java method: `noFill <https://processing.org/reference/noFill_.html>`_
+Underlying Processing method: `noFill <https://processing.org/reference/noFill_.html>`_
 
 Syntax
 ------
@@ -51,5 +51,5 @@ Syntax
 
     no_fill() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

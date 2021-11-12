@@ -51,7 +51,7 @@ Description
 
 Prints the current matrix to standard output.
 
-Underlying Java method: `printMatrix <https://processing.org/reference/printMatrix_.html>`_
+Underlying Processing method: `printMatrix <https://processing.org/reference/printMatrix_.html>`_
 
 Syntax
 ------
@@ -60,5 +60,5 @@ Syntax
 
     print_matrix() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -78,7 +78,7 @@ Be sure to include all three parameters, specifying only the width and height (b
  
 Advanced users please note that ``create_image()`` should be used instead of the syntax ``Py5Image()``.
 
-Underlying Java method: `createImage <https://processing.org/reference/createImage_.html>`_
+Underlying Processing method: `createImage <https://processing.org/reference/createImage_.html>`_
 
 Syntax
 ------
@@ -95,5 +95,5 @@ Parameters
 * **w**: `int` - width in pixels
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

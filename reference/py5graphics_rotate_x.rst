@@ -10,7 +10,7 @@ Rotates around the x-axis the amount specified by the ``angle`` parameter. Angle
 
 This method is the same as :doc:`sketch_rotate_x` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_rotate_x`.
 
-Underlying Java method: PGraphics.rotateX
+Underlying Processing method: PGraphics.rotateX
 
 Syntax
 ------
@@ -25,5 +25,5 @@ Parameters
 * **angle**: `float` - angle of rotation specified in radians
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

@@ -79,7 +79,7 @@ Description
 
 Adds an ambient light. Ambient light doesn't come from a specific direction, the rays of light have bounced around so much that objects are evenly lit from all sides. Ambient lights are almost always used in combination with other types of lights. Lights need to be included in the ``draw()`` to remain persistent in a looping program. Placing them in the ``setup()`` of a looping program will cause them to only have an effect the first time through the loop. The ``v1``, ``v2``, and ``v3`` parameters are interpreted as either ``RGB`` or ``HSB`` values, depending on the current color mode.
 
-Underlying Java method: `ambientLight <https://processing.org/reference/ambientLight_.html>`_
+Underlying Processing method: `ambientLight <https://processing.org/reference/ambientLight_.html>`_
 
 Syntax
 ------
@@ -100,5 +100,5 @@ Parameters
 * **z**: `float` - z-coordinate of the light
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

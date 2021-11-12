@@ -83,7 +83,7 @@ The ``pop()`` function restores the previous drawing style settings and transfor
 
 The :doc:`sketch_push` and ``pop()`` functions can be used in place of :doc:`sketch_push_matrix`, :doc:`sketch_pop_matrix`, :doc:`sketch_push_style`, and :doc:`sketch_pop_style`. The difference is that :doc:`sketch_push` and ``pop()`` control both the transformations (rotate, scale, translate) and the drawing styles at the same time.
 
-Underlying Java method: `pop <https://processing.org/reference/pop_.html>`_
+Underlying Processing method: `pop <https://processing.org/reference/pop_.html>`_
 
 Syntax
 ------
@@ -92,5 +92,5 @@ Syntax
 
     pop() -> None
 
-Updated on October 29, 2021 22:01:43pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

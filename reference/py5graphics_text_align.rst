@@ -16,7 +16,7 @@ The vertical alignment is based on the value of :doc:`py5graphics_text_ascent`, 
 
 This method is the same as :doc:`sketch_text_align` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_text_align`.
 
-Underlying Java method: PGraphics.textAlign
+Underlying Processing method: PGraphics.textAlign
 
 Syntax
 ------
@@ -33,5 +33,5 @@ Parameters
 * **align_y**: `int` - vertical alignment, either TOP, BOTTOM, CENTER, or BASELINE
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

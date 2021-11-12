@@ -48,7 +48,7 @@ Copies a region of pixels from the display window to another area of the display
 
 This function ignores :doc:`sketch_image_mode`.
 
-Underlying Java method: `copy <https://processing.org/reference/copy_.html>`_
+Underlying Processing method: `copy <https://processing.org/reference/copy_.html>`_
 
 Syntax
 ------
@@ -73,5 +73,5 @@ Parameters
 * **sy**: `int` - y-coordinate of the source's upper left corner
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

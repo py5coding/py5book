@@ -39,7 +39,7 @@ Gets a list of the fonts installed on the system. The data is returned as a list
 
 This works outside of a running Sketch.
 
-Underlying Java method: `PFont.list <https://processing.org/reference/PFont_list_.html>`_
+Underlying Processing method: `PFont.list <https://processing.org/reference/PFont_list_.html>`_
 
 Syntax
 ------
@@ -48,5 +48,5 @@ Syntax
 
     list() -> List[str]
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

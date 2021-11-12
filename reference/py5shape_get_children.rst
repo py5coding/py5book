@@ -47,7 +47,7 @@ Description
 
 Get the children of a ``Py5Shape`` object as a list of ``Py5Shape`` objects. When Processing loads shape objects, it may create a hierarchy of ``Py5Shape`` objects, depending on the organization of the source data file. This method will retrieve the list of Py5Shapes that are the child objects to a given object.
 
-Underlying Java method: PShape.getChildren
+Underlying Processing method: PShape.getChildren
 
 Syntax
 ------
@@ -56,5 +56,5 @@ Syntax
 
     get_children() -> List[Py5Shape]
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

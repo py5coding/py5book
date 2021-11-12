@@ -41,7 +41,7 @@ Description
 
 Hides the cursor from view. Will not work when running the program in full screen (Present) mode.
 
-Underlying Java method: `noCursor <https://processing.org/reference/noCursor_.html>`_
+Underlying Processing method: `noCursor <https://processing.org/reference/noCursor_.html>`_
 
 Syntax
 ------
@@ -50,5 +50,5 @@ Syntax
 
     no_cursor() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

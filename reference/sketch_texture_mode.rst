@@ -83,7 +83,7 @@ Sets the coordinate space for texture mapping. The default mode is ``IMAGE``, wh
 
 With ``IMAGE``, if an image is 100 x 200 pixels, mapping the image onto the entire size of a quad would require the points (0,0) (100,0) (100,200) (0,200). The same mapping in ``NORMAL`` is (0,0) (1,0) (1,1) (0,1).
 
-Underlying Java method: `textureMode <https://processing.org/reference/textureMode_.html>`_
+Underlying Processing method: `textureMode <https://processing.org/reference/textureMode_.html>`_
 
 Syntax
 ------
@@ -98,5 +98,5 @@ Parameters
 * **mode**: `int` - either IMAGE or NORMAL
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

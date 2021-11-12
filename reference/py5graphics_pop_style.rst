@@ -10,7 +10,7 @@ The :doc:`py5graphics_push_style` function saves the current style settings and 
 
 This method is the same as :doc:`sketch_pop_style` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_pop_style`.
 
-Underlying Java method: PGraphics.popStyle
+Underlying Processing method: PGraphics.popStyle
 
 Syntax
 ------
@@ -19,5 +19,5 @@ Syntax
 
     pop_style() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

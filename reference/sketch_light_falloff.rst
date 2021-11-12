@@ -52,7 +52,7 @@ Sets the falloff rates for point lights, spot lights, and ambient lights. Like :
 
 Thinking about an ambient light with a falloff can be tricky. If you want a region of your scene to be lit ambiently with one color and another region to be lit ambiently with another color, you could use an ambient light with location and falloff. You can think of it as a point light that doesn't care which direction a surface is facing.
 
-Underlying Java method: `lightFalloff <https://processing.org/reference/lightFalloff_.html>`_
+Underlying Processing method: `lightFalloff <https://processing.org/reference/lightFalloff_.html>`_
 
 Syntax
 ------
@@ -69,5 +69,5 @@ Parameters
 * **quadratic**: `float` - quadratic value for determining falloff
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

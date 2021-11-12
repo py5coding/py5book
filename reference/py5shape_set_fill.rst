@@ -47,7 +47,7 @@ Description
 
 The ``set_fill()`` method defines the fill color of a ``Py5Shape``. This method is used after shapes are created or when a shape is defined explicitly (e.g. ``create_shape(RECT, 20, 20, 60, 60)``) as shown in the example. When a shape is created with :doc:`py5shape_begin_shape` and :doc:`py5shape_end_shape`, its attributes may be changed with :doc:`py5shape_fill` and :doc:`py5shape_stroke` between the calls to :doc:`py5shape_begin_shape` and :doc:`py5shape_end_shape`. However, after the shape is created, only the ``set_fill()`` method can define a new fill value for the ``Py5Shape``.
 
-Underlying Java method: `PShape.setFill <https://processing.org/reference/PShape_setFill_.html>`_
+Underlying Processing method: `PShape.setFill <https://processing.org/reference/PShape_setFill_.html>`_
 
 Syntax
 ------
@@ -66,5 +66,5 @@ Parameters
 * **index**: `int` - vertex index
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

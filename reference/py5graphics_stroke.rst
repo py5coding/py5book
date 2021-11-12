@@ -18,7 +18,7 @@ When drawing in 2D with the default renderer, you may need ``hint(ENABLE_STROKE_
 
 This method is the same as :doc:`sketch_stroke` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_stroke`.
 
-Underlying Java method: PGraphics.stroke
+Underlying Processing method: PGraphics.stroke
 
 Syntax
 ------
@@ -43,5 +43,5 @@ Parameters
 * **v3**: `float` - blue or brightness value (depending on current color mode)
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

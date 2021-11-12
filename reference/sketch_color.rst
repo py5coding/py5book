@@ -137,7 +137,7 @@ Note that if only one value is provided to ``color()``, it will be interpreted a
 
 Note that you can also use hexadecimal notation and web color notation to specify colors, as in ``c = 0xFFDDCC33`` or ``c = "#DDCC33"`` in place of ``c = color(221, 204, 51)``. Additionally, the ``color()`` method can accept both color notations as a parameter.
 
-Underlying Java method: `color <https://processing.org/reference/color_.html>`_
+Underlying Processing method: `color <https://processing.org/reference/color_.html>`_
 
 Syntax
 ------
@@ -169,5 +169,5 @@ Parameters
 * **v3**: `int` - blue or brightness values relative to the current color range
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

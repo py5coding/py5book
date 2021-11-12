@@ -47,7 +47,7 @@ Description
 
 Sets the resolution at which Beziers display. The default value is 20. This function is only useful when using the ``P3D`` renderer; the default ``P2D`` renderer does not use this information.
 
-Underlying Java method: `bezierDetail <https://processing.org/reference/bezierDetail_.html>`_
+Underlying Processing method: `bezierDetail <https://processing.org/reference/bezierDetail_.html>`_
 
 Syntax
 ------
@@ -62,5 +62,5 @@ Parameters
 * **detail**: `int` - resolution of the curves
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

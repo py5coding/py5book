@@ -52,11 +52,11 @@ It is critically important that calls to this object's drawing methods are only 
 
 To create a new graphics context, use the :doc:`sketch_create_graphics` function. Do not use the syntax ``Py5Graphics()``.
 
-Underlying Java class: `PGraphics <https://processing.org/reference/PGraphics.html>`_
+Underlying Processing class: `PGraphics <https://processing.org/reference/PGraphics.html>`_
 
 The following methods and fields are provided:
 
 .. include:: include_py5graphics.rst
 
-Updated on September 16, 2021 14:31:43pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

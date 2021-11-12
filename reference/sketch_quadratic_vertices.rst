@@ -48,7 +48,7 @@ Create a collection of quadratic vertices. The purpose of this method is to prov
 
 The ``coordinates`` parameter should be a numpy array with one row for each quadratic vertex. The first few columns are for the control point and the next few columns are for the anchor point. There should be four or six columns for 2D or 3D points, respectively.
 
-Underlying Java method: quadraticVertices
+Underlying Processing method: quadraticVertices
 
 Syntax
 ------
@@ -63,5 +63,5 @@ Parameters
 * **coordinates**: `NDArray[(Any, Any), Float]` - array of quadratic vertex coordinates
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

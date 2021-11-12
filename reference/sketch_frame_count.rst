@@ -42,8 +42,8 @@ Description
 
 The system variable ``frame_count`` contains the number of frames that have been displayed since the program started. Inside ``setup()`` the value is 0. Inside the first execution of ``draw()`` it is 1, and it will increase by 1 for every execution of ``draw()`` after that.
 
-Underlying Java field: `frameCount <https://processing.org/reference/frameCount.html>`_
+Underlying Processing field: `frameCount <https://processing.org/reference/frameCount.html>`_
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

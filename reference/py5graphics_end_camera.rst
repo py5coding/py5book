@@ -10,7 +10,7 @@ The :doc:`py5graphics_begin_camera` and ``end_camera()`` methods enable advanced
 
 This method is the same as :doc:`sketch_end_camera` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_end_camera`.
 
-Underlying Java method: PGraphics.endCamera
+Underlying Processing method: PGraphics.endCamera
 
 Syntax
 ------
@@ -19,5 +19,5 @@ Syntax
 
     end_camera() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 

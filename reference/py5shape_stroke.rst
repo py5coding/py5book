@@ -58,7 +58,7 @@ The value for the gray parameter must be less than or equal to the current maxim
 
 When drawing in 2D with the default renderer, you may need ``hint(ENABLE_STROKE_PURE)`` to improve drawing quality (at the expense of performance). See the :doc:`sketch_hint` documentation for more details.
 
-Underlying Java method: PShape.stroke
+Underlying Processing method: PShape.stroke
 
 Syntax
 ------
@@ -83,5 +83,5 @@ Parameters
 * **z**: `float` - blue or brightness value (depending on current color mode)
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on November 12, 2021 11:30:58am UTC
 
