@@ -31,11 +31,11 @@ Parameters
 * **dx**: `int` - x-coordinate of the destination's upper left corner
 * **dy**: `int` - y-coordinate of the destination's upper left corner
 * **sh**: `int` - source image height
-* **src**: `Py5Image` - an image variable referring to the source image
+* **src**: `Py5Image` - a source image to copy pixels from
 * **sw**: `int` - source image width
 * **sx**: `int` - x-coordinate of the source's upper left corner
 * **sy**: `int` - y-coordinate of the source's upper left corner
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on January 16, 2022 16:51:21pm UTC
 

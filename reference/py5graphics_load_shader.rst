@@ -6,7 +6,7 @@ Loads a shader into a ``Py5Shader`` object.
 Description
 -----------
 
-Loads a shader into a ``Py5Shader`` object. The shader file must be loaded in the Sketch's "data" directory to load correctly. Shaders are compatible with the ``P2D`` and ``P3D`` renderers, but not with the default renderer.
+Loads a shader into a ``Py5Shader`` object. The shader file must be located in the Sketch's "data" directory to load correctly. Shaders are compatible with the ``P2D`` and ``P3D`` renderers, but not with the default renderer.
 
 Alternatively, the file maybe be loaded from anywhere on the local computer using an absolute path (something that starts with / on Unix and Linux, or a drive letter on Windows), or the filename parameter can be a URL for a file found on a network.
 
@@ -31,5 +31,5 @@ Parameters
 * **vert_filename**: `str` - name of vertex shader file
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on January 16, 2022 16:51:21pm UTC
 

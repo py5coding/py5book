@@ -66,6 +66,7 @@ Syntax
     set(name: str, vec: NDArray[(Any,), Float], ncoords: int, /) -> None
     set(name: str, vec: NDArray[(Any,), Int], /) -> None
     set(name: str, vec: NDArray[(Any,), Int], ncoords: int, /) -> None
+    set(name: str, vec: Py5Vector, /) -> None
     set(name: str, x: bool, /) -> None
     set(name: str, x: bool, y: bool, /) -> None
     set(name: str, x: bool, y: bool, z: bool, /) -> None
@@ -91,7 +92,8 @@ Parameters
 * **use3x3**: `bool` - enforces the numpy array is 3 x 3
 * **vec**: `JArray(JBoolean)` - modifies all the components of an array/vector uniform variable
 * **vec**: `NDArray[(Any,), Float]` - numpy array of values to modify all the components of an array/vector uniform variable
-* **vec**: `NDArray[(Any,), Int]` - modifies all the components of an array/vector uniform variable
+* **vec**: `NDArray[(Any,), Int]` - numpy array of values to modify all the components of an array/vector uniform variable
+* **vec**: `Py5Vector` - vector of values to modify all the components of an array/vector uniform variable
 * **w**: `bool` - fourth component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[4], vec4)
 * **w**: `float` - fourth component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[4], vec4)
 * **w**: `int` - fourth component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[4], vec4)
@@ -106,5 +108,5 @@ Parameters
 * **z**: `int` - third component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[3], vec3)
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on January 16, 2022 16:51:21pm UTC
 

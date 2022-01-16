@@ -63,6 +63,10 @@ parts:
     sections:
     - glob: reference/py5font_*
 
+  - file: reference/py5vector
+    sections:
+    - glob: reference/py5vector_*
+
   - file: reference/py5magics
     sections:
     - glob: reference/py5magics_*

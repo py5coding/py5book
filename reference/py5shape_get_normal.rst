@@ -59,15 +59,15 @@ Syntax
 
 .. code:: python
 
-    get_normal(index: int, /) -> NDArray[(Any,), Float]
-    get_normal(index: int, vec: NDArray[(Any,), Float], /) -> NDArray[(Any,), Float]
+    get_normal(index: int, /) -> Py5Vector
+    get_normal(index: int, vec: Py5Vector, /) -> Py5Vector
 
 Parameters
 ----------
 
 * **index**: `int` - vertex index
-* **vec**: `NDArray[(Any,), Float]` - correctly sized numpy array to store normal vector
+* **vec**: `Py5Vector` - target object to place vertex normal vector into
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on January 16, 2022 16:51:21pm UTC
 
