@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.10.3
+    jupytext_version: 1.11.5
 kernelspec:
   display_name: Python 3
   language: python
@@ -136,7 +136,8 @@ If you are running this through Binder, or possibly using the documentation webs
 Since Camera3D works by calling the `draw` method multiple times and creating a composite image, the py5 Sketch portal needs to run after the composite image has been created. To do that, we will use the dummy `post_draw` method and the `hook_post_draw` parameter.
 
 ```{code-cell} ipython3
-:tags: ["remove-output"]
+:tags: [remove-output]
+
 py5_tools.sketch_portal(hook_post_draw=True)
 ```
 

@@ -27,6 +27,10 @@ parts:
   chapters:
   - file: how_tos/use_camera3D
     title: Use Camera3D
+  - file: how_tos/generate_noise_values
+    title: Generate Noise Values
+  - file: how_tos/py5vector_class
+    title: Py5Vector Class
 
 - caption: Discussion
   chapters:
