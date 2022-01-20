@@ -7,3 +7,4 @@ __pycache__/
 temp/
 _build/
 build/
+!*.jar
