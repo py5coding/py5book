@@ -7,9 +7,9 @@ jupytext:
     format_version: 0.13
     jupytext_version: 1.11.5
 kernelspec:
-  display_name: Python 3
+  display_name: py5
   language: python
-  name: python3
+  name: py5
 ---
 
 # The Py5Vector Class
@@ -27,9 +27,6 @@ Although the design of Py5Vector values the rigor of its calculations, be aware 
 Let's create our first `Py5Vector`.
 
 ```{code-cell} ipython3
-import numpy as np
-from py5 import Py5Vector
-
 v1 = Py5Vector(1, 2, 3)
 
 v1
@@ -38,8 +35,6 @@ v1
 Observe that we used the `Py5Vector` constructor and got an instance of `Py5Vector3D` back. What's actually happening here is there are 3 vector classes: `Py5Vector2D`, `Py5Vector3D`, and `Py5Vector4D`. All of these inherit from `Py5Vector` and can be constructed with `Py5Vector()`. (This is done by implementing `__new__` instead of `__init__` in the parent class). You'll really only need `Py5Vector`, except perhaps when you want to use `isinstance`.
 
 ```{code-cell} ipython3
-from py5 import Py5Vector2D, Py5Vector3D, Py5Vector4D
-
 print('is Py5Vector?', isinstance(v1, Py5Vector))
 print('is Py5Vector2D?', isinstance(v1, Py5Vector2D))
 print('is Py5Vector3D?', isinstance(v1, Py5Vector3D))
@@ -70,6 +65,8 @@ Py5Vector([2, 4, 6])
 ```
 
 ```{code-cell} ipython3
+import numpy as np
+
 Py5Vector(np.arange(3))
 ```
 
