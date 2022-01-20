@@ -30,9 +30,9 @@ worth your while to modify the below instructions and install Java 17 instead.
 
 Below are the basic requirements for using py5.
 
--   Python 3.8+
--   Java 11
--   Cairo (optional)
+* Python 3.8+
+* Java 11
+* Cairo (optional)
 
 I know that you may not have Java 11 or Python 3.8 on your computer and that
 [Cairo](https://www.cairographics.org/) can be difficult to install on
@@ -257,7 +257,7 @@ express joy and proceed to the next step.
 conda install -c conda-forge cairosvg
 ```
 
-#### Install py5
+#### Install py5 library
 
 Finally, install the py5 library.
 
@@ -314,8 +314,7 @@ Jupyter Notebooks](osx_users).) You will need to set the
 `$JAVA_HOME` environment variable so py5 can find your Java Runtime
 Environment. To do this, open Thonny Options, and go to the General Tab.
 Add the `$JAVA_HOME` environment variable to the Environment Variables
-text box and restart Thonny. See [GitHub issue
-#27](https://github.com/hx2A/py5generator/issues/27#issuecomment-885928213)
+text box and restart Thonny. See [GitHub issue #27](https://github.com/hx2A/py5generator/issues/27#issuecomment-885928213)
 for more information.
 
 Also consider this blog post by \@tabreturn to [learn how to use py5 in
