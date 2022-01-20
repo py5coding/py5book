@@ -8,7 +8,6 @@ dependencies:
   - jupyterlab
   - line_profiler
   - matplotlib
-  - noise
   - pandas
   - pip
   - pip:
