@@ -102,7 +102,7 @@ Also, a `from_heading()` class method, for creating vectors with a specific head
 Py5Vector.from_heading(np.pi / 4)
 ```
 
-The 3D heading calculations are consistent with [Wikipedia's Spherical Coordinate System article](https://en.wikipedia.org/wiki/Spherical_coordinate_system#Cartesian_coordinates), which is also consistent with this [Coding Train video](https://www.youtube.com/watch?v=RkuBWEkBrZA). Note that neither will give the same results as [p5's `fromAngles()`](https://p5js.org/reference/#/p5.Vector/fromAngles) calculations because p5 measures the spherical coordinate system angles relative to different axes.
+The 3D heading calculations are consistent with [Wikipedia's Spherical Coordinate System article](https://en.wikipedia.org/wiki/Spherical_coordinate_system#Cartesian_coordinates), which is also consistent with this [Coding Train video](https://www.youtube.com/watch?v=RkuBWEkBrZA). Note that neither will give the same results as [p5's `fromAngles()`](https://p5js.org/reference/#/p5.Vector/fromAngles) calculations for the same parameters because p5 measures the spherical coordinate system angles relative to different axes.
 
 ```{code-cell} ipython3
 Py5Vector.from_heading(0.1, 0.2)

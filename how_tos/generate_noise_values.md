@@ -180,6 +180,8 @@ If neither of [`Sketch.noise()`](../reference/sketch_noise) nor [`Sketch.os_nois
 * [UniformNoise][5]: If you are willing to setup and work with a Java library, give the Uniform Noise library a try. The generated values will be uniformly distributed between 0 and 1.
 * [FastNoiseLite][6]: Another Java library that is worth considering is FastNoiseLite. If nothing else, you can experiment with the GUI to learn more about the vast ecosystem of noise algorithms that are available.
 
+Each of these noise algorithms have their own strengths, weaknesses, and idiosyncrasies. Explore and experiment to learn more.
+
 [1]: https://pypi.org/project/noise/
 [2]: https://pypi.org/project/vec-noise/
 [3]: https://pypi.org/project/vnoise/

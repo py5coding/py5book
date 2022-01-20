@@ -20,9 +20,9 @@ the [](osx_users) page for more information.
 
 ```{important}
 Currently py5 requires Java 11 and the below instructions are written with that
-requirement in mind. However, be aware that the current version of py5 is the
+requirement in mind. **However, be aware that the current version of py5 is the
 last version that will work with Java 11. All future releases will require
-Java 17. Therefore, if you are installing py5 for the first time, it might be
+Java 17.** Therefore, if you are installing py5 for the first time, it might be
 worth your while to modify the below instructions and install Java 17 instead.
 ```
 
