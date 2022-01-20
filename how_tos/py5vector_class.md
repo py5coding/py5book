@@ -12,7 +12,7 @@ kernelspec:
   name: py5
 ---
 
-# The Py5Vector Class
+# How to Use the Py5Vector Class
 
 The Py5Vector class provides linear algebra functionality for 2D, 3D, and 4D vectors.
 
