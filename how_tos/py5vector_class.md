@@ -304,7 +304,7 @@ v1
 
 ## Swizzling
 
-[Vector Swizzling](https://en.wikipedia.org/wiki/Swizzling_(computer_graphics)) is a useful feature inspired by [OpenGL's vector class](https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)#Vectors). The basic idea is you can compose new vectors by rearranging components of other vectors. For example:
+[Vector Swizzling](https://en.wikipedia.org/wiki/Swizzling_&#40;computer_graphics&#41;) is a useful feature inspired by [OpenGL's vector class](https://www.khronos.org/opengl/wiki/Data_Type_&#40;GLSL&#41;#Vectors). The basic idea is you can compose new vectors by rearranging components of other vectors. For example:
 
 ```{code-cell} ipython3
 v1 = Py5Vector(1, 2, 3)
