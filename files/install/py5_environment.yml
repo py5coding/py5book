@@ -11,4 +11,3 @@ dependencies:
   - pip
   - pip:
       - py5
-      - install-jdk

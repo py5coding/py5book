@@ -113,26 +113,48 @@ dependencies:
   - pip
   - pip:
       - py5
-      - install-jdk
 ```
 
-You can activate the environment using the below command. When the environment
+You must activate the environment using `conda activate`. When the environment
 is active, you will see `(py5coding)` in the command prompt.
 
 ``` bash
 conda activate py5coding
 ```
 
-You will need to install Java 17 if you don't have it already. You can install
-it any way you like. The easiest is to use the
-[Python library install-jdk](https://github.com/jyksnw/install-jdk) that was
-installed into the Anaconda environment. Just enter the following command:
+You will need to install Java 17 if you don't have it already. Before
+attempting an installation, first check to see if you already have it. You can
+do this from a terminal or DOS window using the command `java -version`.
+
+``` bash
+java -version
+```
+
+The results should be similar to this:
+
+``` text
+openjdk version "17.0.2" 2022-01-18
+OpenJDK Runtime Environment 21.9 (build 17.0.2+8)
+OpenJDK 64-Bit Server VM 21.9 (build 17.0.2+8, mixed mode, sharing)
+```
+
+If you get an error or see the version number is something like 1.8 or 11.0.14,
+you will need to install or upgrade Java. You can install
+it any way you like. One simple way is to use the
+[Python library install-jdk](https://github.com/jyksnw/install-jdk). Install it
+into your Anaconda environment using `pip install`:
+
+``` bash
+pip install install-jdk
+```
+
+Then use this next command to install Java 17.
 
 ``` bash
 python -c "import jdk; print('Java installed to', jdk.install('17'))"
 ```
 
-Don't run that command more than once.
+You'll get a weird error if you run that command more than once.
 
 Now you can launch jupyter lab and start coding with py5.
 
@@ -148,9 +170,9 @@ Notebook Kernels: [py5 kernel](#py5-kernel) and [py5bot](#py5bot).
 
 ### Detailed Steps
 
-If the [Simple Steps](#simple-steps) don't work for you or you want
-more detailed information, the below steps will provide you with the
-necessary information to (hopefully) work through any difficulties.
+If the [Simple Steps](#simple-steps) don't work for you or you want more
+detailed information, the below steps will provide you with the necessary
+information to work through any difficulties.
 
 #### Create Anaconda Environment
 
@@ -159,17 +181,17 @@ packages into. Below, we create an environment called `py5coding` with
 Python 3.8. Note that py5 does not support earlier versions of Python.
 Later versions seem to work OK but have not been extensively tested.
 
-The below command will also install the Jupyter Lab tool, which py5 is
-designed to work well with.
+The below command will also install Jupyter Lab, which py5 is designed to work
+well with.
 
 ``` bash
-conda create -n py5coding python=3.8 jupyterlab
+conda create -n py5coding python=3.8 jupyterlab jedi=0.17.2
 ```
 
-After creating the `py5coding` environment you must \"activate\" it so
-that the subsequent commands take place inside of it. You will know you
-are inside the environment because your terminal prompt will change to
-include the name of the environment.
+After creating the `py5coding` environment you must \"activate\" it so that the
+subsequent commands take place inside of it. You will know you are inside the
+environment because your terminal prompt will change to include the name of the
+environment.
 
 ``` bash
 conda activate py5coding
@@ -179,26 +201,8 @@ conda activate py5coding
 
 You will need to have Java 17 (or later) installed on your computer.
 
-Before attempting an installation, first check to see if you already
-have it. You can do this from a terminal or DOS window using the command
-`java -version`.
-
-``` bash
-java -version
-```
-
-The results should be similar to this:
-
-``` text
-openjdk version "17.0.2" 2022-01-18
-OpenJDK Runtime Environment 21.9 (build 17.0.2+8)
-OpenJDK 64-Bit Server VM 21.9 (build 17.0.2+8, mixed mode, sharing)
-```
-
-If you get an error or see the version number is something like 1.8 or 11.0,
-you will need to install or upgrade Java. There are many avenues for doing this,
-starting with the [detailed but not particularly readable instructions on the
-official java.com website](https://java.com/en/download/help/download_options.html).
+There are many avenues for doing this, starting with the [detailed but not
+particularly readable instructions on the official java.com website](https://java.com/en/download/help/download_options.html).
 You can use any method you like so long as it works and the `java -version`
 command gives the correct results.
 
@@ -209,21 +213,15 @@ have the wrong version, you will see an error message stating that code \"has
 been compiled by a more recent version of the Java Runtime.\"
 ```
 
-For your convenience, the following Java installation steps are provided using
-the [Python library install-jdk](https://github.com/jyksnw/install-jdk). This
-library can download and install the correct version of Java and will put it in
-a location that py5 will check when it is imported.
-
-Installing Java using this method requires a few simple steps. First, install
-the [Python library install-jdk](https://github.com/jyksnw/install-jdk).
+For your convenience, py5 is designed to be compatible with the [Python library
+install-jdk](https://github.com/jyksnw/install-jdk). This library can download
+and install the correct version of Java and will put it in a location that py5
+will check when it is imported. Enter these two commands into the command
+prompt to install [install-jdk](https://github.com/jyksnw/install-jdk) and then
+install Java 17.
 
 ``` bash
 pip install install-jdk
-```
-
-Next, execute the following command:
-
-``` bash
 python -c "import jdk; print('Java installed to', jdk.install('17'))"
 ```
 
@@ -234,30 +232,38 @@ already knows to look here.
 
 ##### Extra Information About How py5 Finds Java
 
-When py5 is imported it will start the Java Virtual Machine. Before doing so it
-will go through the following series of steps to determine the version of Java
-that it will use. If you are a Java aficionado you may have multiple versions
-of Java installed on your machine. This information will help you fix problems
-if py5 cannot be imported properly.
+When `import py5` is executed, py5 will start the Java Virtual Machine. Before
+doing so it will go through a series of steps to locate a valid Java
+installation on your computer. If you are a Java aficionado you may have
+multiple versions of Java installed on your machine. The following information
+outlines the logic py5 employs to select the version it will use. This
+information will help you fix problems if py5 cannot be imported properly.
 
-1. Call `jpype.getDefaultJVMPath()` to get the Java installation that jpype
-would use. The [jpype library](https://jpype.readthedocs.io/en/latest/userguide.html#path-to-the-jvm)
-first checks the `$JAVA_HOME` environment variable and then looks in the usual
-installation locations for your computer. If there are multiple versions of
-Java, jpype will stop with the first installation found, which will not
-necessarily be the most recent version on your machine.
+1. If the `$JAVA_HOME` environment variable is properly set on your computer,
+you have communicated to both jpype and py5 that this is the installation of
+Java that you want to use. The JVM startup process will proceed using that
+version of Java, but if it is not Java 17, you will get an error.
 
-2. If the `$JAVA_HOME` environment variable is set on your computer, you have
-communicated to py5 that this is the version of Java that you want to use. If
-it is not Java 17, you will get an error.
+2. The [jpype library](https://jpype.readthedocs.io/en/latest/userguide.html#path-to-the-jvm)
+has a function called `getDefaultJVMPath()` that py5 relies on to search the
+common Java installation directories for your operating system when the
+`$JAVA_HOME` environment variable is not properly set. If you have multiple
+versions of Java installed, jpype will stop at the first installation found.
+This may not be the most current Java version available on your machine.
 
-3. If Java is found and the `$JAVA_HOME` environment variable has not been set,
-py5 will get the Java version number. If it is 17 or more, py5 will proceed with
-this Java installation.
+3. If `getDefaultJVMPath()` finds a Java installation, py5 will evaluate it to
+get the Java version number. If it is 17 or more, py5 will proceed using this
+Java installation.
 
-4. If Java is not found or the Java version is less than 17, py5 will search
-through the `.jdk` and `.jre` directories to find a sufficient Java
-installation to use instead.
+4. If Java is not found or the Java version was less than 17, py5 will look in
+your home (`$HOME`) directory for the `.jdk` and `.jre` subdirectories that
+[Python library install-jdk](https://github.com/jyksnw/install-jdk) installs
+Java into and search through both to find a sufficient Java installation to use.
+
+5. If Java 17 isn't found, you will get an error. You will also get an error if
+the architecture (32 bit vs 64 bit) of your Python installation and your Java
+installation are not the same. If you get an error, you will also see some
+helpful debug information that you can use to address your situation.
 
 #### Install Cairo and CairoSVG (optional)
 
