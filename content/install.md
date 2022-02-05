@@ -18,30 +18,22 @@ There are known issues using py5 on Mac computers. Mac users should read
 the [](osx_users) page for more information.
 ```
 
-```{important}
-Currently py5 requires Java 11 and the below instructions are written with that
-requirement in mind. **However, be aware that the current version of py5 is the
-last version that will work with Java 11. All future releases will require
-Java 17.** Therefore, if you are installing py5 for the first time, it might be
-worth your while to modify the below instructions and install Java 17 instead.
-```
-
 ## Requirements
 
 Below are the basic requirements for using py5.
 
 * Python 3.8+
-* Java 11
+* Java 17
 * Cairo (optional)
 
-I know that you may not have Java 11 or Python 3.8 on your computer and that
+I know that you may not have Java 17 or Python 3.8 on your computer and that
 [Cairo](https://www.cairographics.org/) can be difficult to install on
 non-Linux machines. If this applies to you, I recommend making your life
 easier by trying the [Anaconda Setup](#anaconda-setup).
 
 ## Quick Setup
 
-If you already have Java 11 and Python 3.8+ available on your computer, you
+If you already have Java 17 and Python 3.8+ available on your computer, you
 can install py5 with the below command.
 
 ``` bash
@@ -105,8 +97,7 @@ and create the environment using
 [Anaconda Navigator](https://docs.anaconda.com/anaconda/navigator/).
 
 That environment file contains the below information, telling Anaconda
-to create an environment with Java 11 (OpenJDK), Cairo, and Jupyter
-Notebooks.
+to create an environment with Cairo and Jupyter Notebooks.
 
 ``` yaml
 name: py5coding
@@ -119,10 +110,10 @@ dependencies:
   - jedi=0.17.2
   - jupyterlab
   - line_profiler
-  - openjdk=11.0.8
   - pip
   - pip:
       - py5
+      - install-jdk
 ```
 
 You can activate the environment using the below command. When the environment
@@ -132,7 +123,18 @@ is active, you will see `(py5coding)` in the command prompt.
 conda activate py5coding
 ```
 
-Launch jupyter lab to start coding.
+You will need to install Java 17 if you don't have it already. You can install
+it any way you like. The easiest is to use the
+[Python library install-jdk](https://github.com/jyksnw/install-jdk) that was
+installed into the Anaconda environment. Just enter the following command:
+
+``` bash
+python -c "import jdk; print('Java installed to', jdk.install('17'))"
+```
+
+Don't run that command more than once.
+
+Now you can launch jupyter lab and start coding with py5.
 
 ``` bash
 jupyter lab
@@ -175,9 +177,9 @@ conda activate py5coding
 
 #### Install Java
 
-You will need to have Java 11 (or later) installed on your computer.
+You will need to have Java 17 (or later) installed on your computer.
 
-Before attempting the installation, first check to see if you already
+Before attempting an installation, first check to see if you already
 have it. You can do this from a terminal or DOS window using the command
 `java -version`.
 
@@ -188,45 +190,74 @@ java -version
 The results should be similar to this:
 
 ``` text
-openjdk version "11.0.9" 2020-10-20
-OpenJDK Runtime Environment 18.9 (build 11.0.9+11)
-OpenJDK 64-Bit Server VM 18.9 (build 11.0.9+11, mixed mode, sharing)
+openjdk version "17.0.2" 2022-01-18
+OpenJDK Runtime Environment 21.9 (build 17.0.2+8)
+OpenJDK 64-Bit Server VM 21.9 (build 17.0.2+8, mixed mode, sharing)
 ```
 
-If you get an error or see the version number is 1.8 (which is likely
-for older computers), you will need to install Java. To install it into
-your Anaconda environment, use the below command.
-
-``` bash
-conda install -c conda-forge openjdk=11.0.8
-```
-
-If you prefer you can download and install Java 11 outside of the
-Anaconda environment. There are a lot of tutorials online that will
-explain how to do this for your computer. You don't have to use OpenJDK
-if you prefer an alternative. The only important requirement is that the
-command `java -version` gives the correct result.
+If you get an error or see the version number is something like 1.8 or 11.0,
+you will need to install or upgrade Java. There are many avenues for doing this,
+starting with the [detailed but not particularly readable instructions on the
+official java.com website](https://java.com/en/download/help/download_options.html).
+You can use any method you like so long as it works and the `java -version`
+command gives the correct results.
 
 ```{important}
-It is important that you have Java 11 installed and available in the
-Anaconda environment because Processing 4 and therefore py5 both depend
-on it. If now or in the future you have the wrong version, you will see
-an error message stating that code \"has been compiled by a more recent
-version of the Java Runtime.\"
-
-Be aware that someday Anaconda may want to downgrade your version of
-Java when you install some other package. Including the version number
-when installing (the `=11.0.8` in the previous command) will prevent
-this.
-
-While testing these installation steps and example code, I discovered
-that when I installed matplotlib with `conda install matplotlib` it
-would inexplicably want to downgrade Java 11 to Java 8. Why does it do
-this??? Matplotlib does not require Java. One might try circumventing
-this issue by installing it with `pip install matplotlib`, but
-[mixing pip and conda installs is not recommended](https://www.anaconda.com/blog/using-pip-in-a-conda-environment).
-It is better to install Java correctly through conda using an explicit version number.
+It is important that you have Java 17 installed and available because
+Processing 4 and therefore py5 both depend on it. If now or in the future you
+have the wrong version, you will see an error message stating that code \"has
+been compiled by a more recent version of the Java Runtime.\"
 ```
+
+For your convenience, the following Java installation steps are provided using
+the [Python library install-jdk](https://github.com/jyksnw/install-jdk). This
+library can download and install the correct version of Java and will put it in
+a location that py5 will check when it is imported.
+
+Installing Java using this method requires a few simple steps. First, install
+the [Python library install-jdk](https://github.com/jyksnw/install-jdk).
+
+``` bash
+pip install install-jdk
+```
+
+Next, execute the following command:
+
+``` bash
+python -c "import jdk; print('Java installed to', jdk.install('17'))"
+```
+
+That's it. It will install Java into the hidden directory `.jdk` located in your
+home directory. You may want to set the `$JAVA_HOME` environment variable to
+point to this location, but for this case that isn't necessary because py5
+already knows to look here.
+
+##### Extra Information About How py5 Finds Java
+
+When py5 is imported it will start the Java Virtual Machine. Before doing so it
+will go through the following series of steps to determine the version of Java
+that it will use. If you are a Java aficionado you may have multiple versions
+of Java installed on your machine. This information will help you fix problems
+if py5 cannot be imported properly.
+
+1. Call `jpype.getDefaultJVMPath()` to get the Java installation that jpype
+would use. The [jpype library](https://jpype.readthedocs.io/en/latest/userguide.html#path-to-the-jvm)
+first checks the `$JAVA_HOME` environment variable and then looks in the usual
+installation locations for your computer. If there are multiple versions of
+Java, jpype will stop with the first installation found, which will not
+necessarily be the most recent version on your machine.
+
+2. If the `$JAVA_HOME` environment variable is set on your computer, you have
+communicated to py5 that this is the version of Java that you want to use. If
+it is not Java 17, you will get an error.
+
+3. If Java is found and the `$JAVA_HOME` environment variable has not been set,
+py5 will get the Java version number. If it is 17 or more, py5 will proceed with
+this Java installation.
+
+4. If Java is not found or the Java version is less than 17, py5 will search
+through the `.jdk` and `.jre` directories to find a sufficient Java
+installation to use instead.
 
 #### Install Cairo and CairoSVG (optional)
 
