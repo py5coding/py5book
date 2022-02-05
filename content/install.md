@@ -31,6 +31,13 @@ I know that you may not have Java 17 or Python 3.8 on your computer and that
 non-Linux machines. If this applies to you, I recommend making your life
 easier by trying the [Anaconda Setup](#anaconda-setup).
 
+The easiest and best setup for beginners is to use the
+[Thonny Python Editor](https://thonny.org/) and the
+[py5 Thonny plugin](https://github.com/tabreturn/thonny-py5mode), created by
+[@tabreturn](https://github.com/tabreturn). For this route, follow the
+[plugin's installation instructions](https://github.com/tabreturn/thonny-py5mode#instructions).
+The plugin should work correctly on all computers.
+
 ## Quick Setup
 
 If you already have Java 17 and Python 3.8+ available on your computer, you
@@ -342,21 +349,6 @@ code in Static Mode.
 ``` bash
 python -m py5_tools.py5bot.install --sys-prefix
 ```
-
-## Thonny
-
-Linux and Windows users may want to use the [Thonny
-IDE](https://thonny.org/) to program with py5. ([OSX users need to use
-Jupyter Notebooks](osx_users).) You will need to set the
-`$JAVA_HOME` environment variable so py5 can find your Java Runtime
-Environment. To do this, open Thonny Options, and go to the General Tab.
-Add the `$JAVA_HOME` environment variable to the Environment Variables
-text box and restart Thonny. See [GitHub issue #27](https://github.com/hx2A/py5generator/issues/27#issuecomment-885928213)
-for more information.
-
-Also consider this blog post by \@tabreturn to [learn how to use py5 in
-Imported Mode with
-Thonny](https://tabreturn.github.io/code/python/thonny/2021/06/21/thonny_and_py5.html).
 
 ## Keeping py5 Updated
 
