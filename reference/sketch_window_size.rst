@@ -1,5 +1,5 @@
-Py5Surface.set_size()
-=====================
+window_size()
+=============
 
 Set a new width and height for the Sketch window.
 
@@ -26,9 +26,8 @@ Examples
 
     py5.run_sketch(block=False)
 
-    # while the sketch is running, get the surface and change the size
-    surface = py5.get_surface()
-    surface.set_size(400, 400)
+    # while the sketch is running, change the window size
+    py5.window_size(400, 400)
 
 .. raw:: html
 
@@ -41,25 +40,27 @@ Examples
 Description
 -----------
 
-Set a new width and height for the Sketch window. You do not need to call :doc:`py5surface_set_resizable` before calling this.
+Set a new width and height for the Sketch window. You do not need to call :doc:`sketch_window_resizable` before calling this.
 
 Changing the window size will clear the drawing canvas. If you do this, the :doc:`sketch_width` and :doc:`sketch_height` variables will change.
 
-Underlying Processing method: PSurface.setSize
+This method provides the same funcationality as :doc:`py5surface_set_size` but without the need to interact directly with the :doc:`py5surface` object.
+
+Underlying Processing method: windowSize
 
 Syntax
 ------
 
 .. code:: python
 
-    set_size(width: int, height: int, /) -> None
+    window_size(new_width: int, new_height: int, /) -> None
 
 Parameters
 ----------
 
-* **height**: `int` - new window height
-* **width**: `int` - new window width
+* **new_height**: `int` - new window height
+* **new_width**: `int` - new window width
 
 
-Updated on February 10, 2022 17:53:01pm UTC
+Updated on February 10, 2022 17:53:43pm UTC
 
