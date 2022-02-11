@@ -1,15 +1,45 @@
 window_y
 ========
 
-The documentation for this field or method has not yet been written.
+The y-coordinate of the current window location.
+
+Examples
+--------
+
+.. raw:: html
+
+    <div class="example-table">
+
+.. raw:: html
+
+    <div class="example-row"><div class="example-cell-image">
+
+.. raw:: html
+
+    </div><div class="example-cell-code">
+
+.. code:: python
+    :number-lines:
+
+    def draw():
+        py5.rect(py5.random(py5.width), py5.random(py5.height), 10, 10)
+        py5.println(f'Sketch window location is ({py5.window_x}, {py5.window_y})')
+
+.. raw:: html
+
+    </div></div>
+
+.. raw:: html
+
+    </div>
 
 Description
 -----------
 
-The documentation for this field or method has not yet been written. If you know what it does, please help out with a pull request to the relevant file in https://github.com/hx2A/py5generator/tree/master/py5_docs/Reference/api_en/.
+The y-coordinate of the current window location. The location is measured from the Sketch window's upper left corner.
 
 Underlying Processing field: windowY
 
 
-Updated on February 10, 2022 17:48:20pm UTC
+Updated on February 11, 2022 23:19:53pm UTC
 
