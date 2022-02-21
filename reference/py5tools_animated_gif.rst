@@ -42,6 +42,8 @@ Create an animated GIF using a running Sketch.
 
 By default the Sketch will be the currently running Sketch, as returned by :doc:`py5functions_get_current_sketch`. Use the ``sketch`` parameter to specify a different running Sketch, such as a Sketch created using Class mode.
 
+By default this function will return right away and construct the animated gif in the background while the Sketch is running. The completed gif will be saved to the location specified by the ``filename`` parameter when it is ready. Set the ``block`` parameter to ``True`` to instruct the method to not return until the gif construction is complete. This blocking feature is not available on OSX when the Sketch is executed through an IPython kernel. If the Sketch terminates prematurely, no gif will be created.
+
 If your Sketch has a ``post_draw()`` method, use the ``hook_post_draw`` parameter to make this function run after ``post_draw()`` instead of ``draw()``. This is important when using Processing libraries that support ``post_draw()`` such as Camera3D or ColorBlindness.
 
 Syntax
@@ -49,11 +51,12 @@ Syntax
 
 .. code:: python
 
-    animated_gif(filename: str, count: int, period: float, duration: float, *, loop: int = 0, optimize: bool = True, sketch: Sketch = None, hook_post_draw: bool = False) -> str
+    animated_gif(filename: str, count: int, period: float, duration: float, *, loop: int = 0, optimize: bool = True, sketch: Sketch = None, hook_post_draw: bool = False, block: bool = False) -> None
 
 Parameters
 ----------
 
+* **block**: `bool = False` - method returns immediately (False) or blocks until function returns (True)
 * **count**: `int` - number of Sketch snapshots to create
 * **duration**: `float` - time in seconds between frames in the GIF
 * **filename**: `str` - filename of GIF to create
@@ -64,5 +67,5 @@ Parameters
 * **sketch**: `Sketch = None` - running Sketch
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on February 21, 2022 11:40:40am UTC
 

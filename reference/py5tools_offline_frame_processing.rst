@@ -55,6 +55,8 @@ Use the ``limit`` parameter to stop frame processing after a set number of frame
 
 The ``queue_limit`` parameter specifies a maximum queue size. If frames are added to the queue faster than they can be processed, the queue size will grow unbounded. Setting a queue limit will cause the oldest frames on the queue to be dropped, one batch at a time. You can use the ``period`` parameter to pause between frames that are collected for processing, throttling the workload.
 
+By default this function will return right away and will process frames in the background while the Sketch is running. Set the ``block`` parameter to ``True`` to instruct the method to not return until the processing is complete or the Sketch terminates. This blocking feature is not available on OSX when the Sketch is executed through an IPython kernel.
+
 Use the ``sketch`` parameter to specify a different running Sketch, such as a Sketch created using Class mode. If your Sketch has a ``post_draw()`` method, use the ``hook_post_draw`` parameter to make this function run after ``post_draw()`` instead of ``draw()``. This is important when using Processing libraries that support ``post_draw()`` such as Camera3D or ColorBlindness.
 
 Syntax
@@ -62,12 +64,13 @@ Syntax
 
 .. code:: python
 
-    offline_frame_processing(func: Callable[[NDArray[(Any, Any, Any, 3), UInt8]], None], *, limit: int = 0, period: float = 0.0, batch_size: int = 1, complete_func: Callable[[], None] = None, stop_processing_func: Callable[[], bool] = None, sketch: Sketch = None, hook_post_draw: bool = False, queue_limit: int = None) -> None
+    offline_frame_processing(func: Callable[[NDArray[(Any, Any, Any, 3), UInt8]], None], *, limit: int = 0, period: float = 0.0, batch_size: int = 1, complete_func: Callable[[], None] = None, stop_processing_func: Callable[[], bool] = None, sketch: Sketch = None, hook_post_draw: bool = False, queue_limit: int = None, block: bool = False) -> None
 
 Parameters
 ----------
 
 * **batch_size**: `int = 1` - number of frames to include in each batch passed to the frame processing function
+* **block**: `bool = False` - method returns immediately (False) or blocks until function returns (True)
 * **complete_func**: `Callable[[], None] = None` - function to call when frame processing is complete
 * **func**: `Callable[[NDArray[(Any, Any, Any, 3), UInt8]], None]` - function to process the Sketch's frame(s), one batch at a time
 * **hook_post_draw**: `bool = False` - attach hook to Sketch's post_draw method instead of draw
@@ -78,5 +81,5 @@ Parameters
 * **stop_processing_func**: `Callable[[], bool] = None` - optional predicate function that determines if frame processing should terminate
 
 
-Updated on January 31, 2022 17:36:23pm UTC
+Updated on February 21, 2022 11:40:40am UTC
 

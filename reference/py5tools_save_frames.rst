@@ -40,6 +40,8 @@ Description
 
 Save a running Sketch's frames to a directory.
 
+By default this function will return right away and save frames in the background while the Sketch is running. The frames will be saved in the directory specified by the ``dirname`` parameter. Set the ``block`` parameter to ``True`` to instruct the method to not return until the number of frames saved reaches the number specified by the ``limit`` parameter. This blocking feature is not available on OSX when the Sketch is executed through an IPython kernel.
+
 By default the Sketch will be the currently running Sketch, as returned by :doc:`py5functions_get_current_sketch`. Use the ``sketch`` parameter to specify a different running Sketch, such as a Sketch created using Class mode.
 
 If the ``limit`` parameter is used, this function will wait to return a list of the filenames. If not, it will return right away as the frames are saved in the background. It will keep doing so as long as the Sketch continues to run.
@@ -51,11 +53,12 @@ Syntax
 
 .. code:: python
 
-    save_frames(dirname: str, *, filename: str = 'frame_####.png', period: float = 0.0, start: int = None, limit: int = 0, sketch: Sketch = None, hook_post_draw: bool = False) -> List[str]
+    save_frames(dirname: str, *, filename: str = 'frame_####.png', period: float = 0.0, start: int = None, limit: int = 0, sketch: Sketch = None, hook_post_draw: bool = False, block: bool = False) -> None
 
 Parameters
 ----------
 
+* **block**: `bool = False` - method returns immediately (False) or blocks until function returns (True)
 * **dirname**: `str` - directory to save the frames
 * **filename**: `str = 'frame_####.png'` - filename template to use for saved frames
 * **hook_post_draw**: `bool = False` - attach hook to Sketch's post_draw method instead of draw
@@ -65,5 +68,5 @@ Parameters
 * **start**: `int = None` - frame starting number instead of Sketch frame_count
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on February 21, 2022 11:45:39am UTC
 
