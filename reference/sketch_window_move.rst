@@ -1,5 +1,5 @@
-window_position()
-=================
+window_move()
+=============
 
 Set the Sketch's window location.
 
@@ -23,7 +23,7 @@ Examples
 
     py5.run_sketch(block=False)
     # move the sketch window to the upper left corner of the display
-    py5.window_position(0, 0)
+    py5.window_move(0, 0)
 
 .. raw:: html
 
@@ -54,8 +54,8 @@ Examples
             # this negates the visible variable
             visible = not visible
             if visible:
-                py5.window_position(py5.random_int(py5.display_width),
-                                    py5.random_int(py5.display_height))
+                py5.window_move(py5.random_int(py5.display_width),
+                                py5.random_int(py5.display_height))
             surface.set_visible(visible)
 
 .. raw:: html
@@ -71,14 +71,14 @@ Description
 
 Set the Sketch's window location. Calling this repeatedly from the ``draw()`` function may result in a sluggish Sketch. Negative or invalid coordinates are ignored. To hide a Sketch window, use :doc:`py5surface_set_visible`.
 
-Underlying Processing method: windowPosition
+Underlying Processing method: windowMove
 
 Syntax
 ------
 
 .. code:: python
 
-    window_position(x: int, y: int, /) -> None
+    window_move(x: int, y: int, /) -> None
 
 Parameters
 ----------
@@ -87,5 +87,5 @@ Parameters
 * **y**: `int` - y-coordinate for window location
 
 
-Updated on February 11, 2022 23:16:18pm UTC
+Updated on February 21, 2022 11:40:40am UTC
 
