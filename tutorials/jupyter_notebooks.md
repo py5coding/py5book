@@ -5,9 +5,9 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.10.3
+    jupytext_version: 1.11.5
 kernelspec:
-  display_name: Python 3
+  display_name: Python 3 (ipykernel)
   language: python
   name: python3
 ---
@@ -247,7 +247,8 @@ py5.rect(random_x, random_y, 50, 50)
 The variables `random_x` and `random_y` are not accessible outside of that cell:
 
 ```{code-cell} ipython3
-:tags: ["raises-exception"]
+:tags: [raises-exception]
+
 random_x, random_y
 ```
 
@@ -307,7 +308,8 @@ print('the sketch is running!')
 If you are runnning this notebook locally, you will see a new window open for the running Sketch. If you are running this through Binder, or possibly using the documentation website's Live Code feature (see the rocket ship icon at the top of the page), the Sketch is running on a server somewhere in the cloud. In that case, to see the Sketch you will need to create a Sketch portal using [py5tools.sketch_portal()](/reference/py5tools_sketch_portal). This will create what is effectively a view into what is being displayed on that Sketch window running in the cloud. To be clear, although you will see a live animation in the Sketch Portal, the Sketch is not actually running in your browser. It’s kind of like when you watch a live television program on your TV. The live events are taking place somewhere else, but images of the events are being broadcast to your television.
 
 ```{code-cell} ipython3
-:tags: ["remove-output"]
+:tags: [remove-output]
+
 py5_tools.sketch_portal()
 ```
 
@@ -335,10 +337,11 @@ print(type(sketch_snapshot))
 
 The [`py5_tools.save_frames()`](/reference/py5tools_save_frames) function will save multiple frames to a directory.
 
-Of course you can also call [`save_frame()`](/reference/sketch_save_frame) from the `draw` method, but that would require you to redefine the `draw` method with a few extra lines of code. This is more convenient. 
+Of course you can also call [`save_frame()`](/reference/sketch_save_frame) from the `draw` method, but that would require you to redefine the `draw` method with a few extra lines of code. This is more convenient.
 
 ```{code-cell} ipython3
-:tags: ["remove-output"]
+:tags: [remove-output]
+
 frames = py5_tools.save_frames('/tmp/testframes/', start=0, limit=10)
 ```
 
@@ -351,8 +354,9 @@ Those frames can be assembled into a video file.
 The [`py5_tools.capture_frames()`](/reference/py5tools_capture_frames) function is similar to [`py5_tools.save_frames()`](/reference/py5tools_save_frames) except it returns the frames as a `list` of [PIL Image object](https://pillow.readthedocs.io/en/stable/index.html)s.
 
 ```{code-cell} ipython3
-:tags: ["remove-output"]
-frames = py5_tools.capture_frames(10, period=1)
+:tags: [remove-output]
+
+frames = py5_tools.capture_frames(10, period=1, block=True)
 ```
 
 ```{code-cell} ipython3
@@ -368,7 +372,8 @@ frames[-1]
 The last magic creates animated GIFs from your Sketch. Everybody loves animated GIFs.
 
 ```{code-cell} ipython3
-:tags: ["remove-output"]
+:tags: [remove-output]
+
 py5_tools.animated_gif('images/jupyter_notebooks/simple_example.gif', 10, 1, 0.5)
 ```
 
