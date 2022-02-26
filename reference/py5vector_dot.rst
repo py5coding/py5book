@@ -84,13 +84,13 @@ Syntax
 
 .. code:: python
 
-    dot(other: Union[Py5Vector, NDArray]) -> Union[float, NDArray]
+    dot(other: Union[Py5Vector, np.ndarray]) -> Union[float, np.ndarray[np.floating]]
 
 Parameters
 ----------
 
-* **other**: `Union[Py5Vector, NDArray]` - vector to calculate the dot product with
+* **other**: `Union[Py5Vector, np.ndarray]` - vector to calculate the dot product with
 
 
-Updated on January 16, 2022 16:51:21pm UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

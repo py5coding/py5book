@@ -45,13 +45,13 @@ Syntax
 
 .. code:: python
 
-    exp(value: float) -> float
+    exp(value: Union[float, npt.ArrayLike]) -> Union[float, npt.NDArray]
 
 Parameters
 ----------
 
-* **value**: `float` - exponent to raise
+* **value**: `Union[float, npt.ArrayLike]` - exponent to raise
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

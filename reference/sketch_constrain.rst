@@ -44,15 +44,15 @@ Syntax
 
 .. code:: python
 
-    constrain(amt: float, low: float, high: float) -> float
+    constrain(amt: Union[float, npt.NDArray], low: Union[float, npt.NDArray], high: Union[float, npt.NDArray]) -> Union[float, npt.NDArray]
 
 Parameters
 ----------
 
-* **amt**: `float` - the value to constrain
-* **high**: `float` - minimum limit
-* **low**: `float` - maximum limit
+* **amt**: `Union[float, npt.NDArray]` - the value to constrain
+* **high**: `Union[float, npt.NDArray]` - minimum limit
+* **low**: `Union[float, npt.NDArray]` - maximum limit
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

@@ -63,14 +63,14 @@ Syntax
 
 .. code:: python
 
-    set_np_pixels(array: np.ndarray, bands: str = 'ARGB') -> None
+    set_np_pixels(array: npt.NDArray[np.uint8], bands: str = 'ARGB') -> None
 
 Parameters
 ----------
 
-* **array**: `np.ndarray` - properly sized numpy array to be copied to np_pixels[]
+* **array**: `npt.NDArray[np.uint8]` - properly sized numpy array to be copied to np_pixels[]
 * **bands**: `str = 'ARGB'` - color channels in the array's third dimension
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

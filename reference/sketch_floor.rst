@@ -45,13 +45,13 @@ Syntax
 
 .. code:: python
 
-    floor(value: float) -> int
+    floor(value: Union[float, npt.ArrayLike]) -> Union[int, npt.NDArray]
 
 Parameters
 ----------
 
-* **value**: `float` - number to round down
+* **value**: `Union[float, npt.ArrayLike]` - number to round down
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

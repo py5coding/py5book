@@ -57,14 +57,14 @@ Syntax
 
 .. code:: python
 
-    set_path(vcount: int, verts: NDArray[(Any, Any), Float], /) -> None
+    set_path(vcount: int, verts: npt.NDArray[np.floating], /) -> None
 
 Parameters
 ----------
 
 * **vcount**: `int` - number of vertices
-* **verts**: `NDArray[(Any, Any), Float]` - array of vertex coordinates
+* **verts**: `npt.NDArray[np.floating]` - 2D array of vertex coordinates
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

@@ -102,17 +102,17 @@ Syntax
 
 .. code:: python
 
-    remap(value: float, start1: float, stop1: float, start2: float, stop2: float) -> float
+    remap(value: Union[float, npt.NDArray], start1: Union[float, npt.NDArray], stop1: Union[float, npt.NDArray], start2: Union[float, npt.NDArray], stop2: Union[float, npt.NDArray]) -> Union[float, npt.NDArray]
 
 Parameters
 ----------
 
-* **start1**: `float` - lower bound of the value's current range
-* **start2**: `float` - lower bound of the value's target range
-* **stop1**: `float` - upper bound of the value's current range
-* **stop2**: `float` - upper bound of the value's target range
-* **value**: `float` - the incoming value to be converted
+* **start1**: `Union[float, npt.NDArray]` - lower bound of the value's current range
+* **start2**: `Union[float, npt.NDArray]` - lower bound of the value's target range
+* **stop1**: `Union[float, npt.NDArray]` - upper bound of the value's current range
+* **stop2**: `Union[float, npt.NDArray]` - upper bound of the value's target range
+* **value**: `Union[float, npt.NDArray]` - the incoming value to be converted
 
 
-Updated on November 02, 2021 15:08:42pm UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

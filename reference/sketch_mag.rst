@@ -57,16 +57,16 @@ Syntax
 
 .. code:: python
 
-    mag(a: float, b: float, /) -> float
-    mag(a: float, b: float, c: float, /) -> float
+    mag(a: Union[float, npt.NDArray], b: Union[float, npt.NDArray], /) -> float
+    mag(a: Union[float, npt.NDArray], b: Union[float, npt.NDArray], c: Union[float, npt.NDArray], /) -> float
 
 Parameters
 ----------
 
-* **a**: `float` - first value
-* **b**: `float` - second value
-* **c**: `float` - third value
+* **a**: `Union[float, npt.NDArray]` - first value
+* **b**: `Union[float, npt.NDArray]` - second value
+* **c**: `Union[float, npt.NDArray]` - third value
 
 
-Updated on November 08, 2021 12:26:18pm UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

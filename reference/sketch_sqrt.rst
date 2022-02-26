@@ -90,13 +90,13 @@ Syntax
 
 .. code:: python
 
-    sqrt(value: float) -> Union[float, complex]
+    sqrt(value: Union[float, npt.NDArray]) -> Union[float, complex, npt.NDArray]
 
 Parameters
 ----------
 
-* **value**: `float` - value to calculate the square root of
+* **value**: `Union[float, npt.NDArray]` - value to calculate the square root of
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

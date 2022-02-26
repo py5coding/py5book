@@ -52,13 +52,13 @@ Syntax
 
 .. code:: python
 
-    lines(coordinates: NDArray[(Any, Any), Float], /) -> None
+    lines(coordinates: npt.NDArray[np.floating], /) -> None
 
 Parameters
 ----------
 
-* **coordinates**: `NDArray[(Any, Any), Float]` - array of line coordinates
+* **coordinates**: `npt.NDArray[np.floating]` - 2D array of line coordinates with 4 or 6 columns for 2D or 3D points, respectively
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

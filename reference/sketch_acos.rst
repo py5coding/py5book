@@ -70,13 +70,13 @@ Syntax
 
 .. code:: python
 
-    acos(value: float) -> float
+    acos(value: Union[float, npt.ArrayLike]) -> Union[float, npt.NDArray]
 
 Parameters
 ----------
 
-* **value**: `float` - value in the range of -1 to 1 whose arc cosine is to be returned
+* **value**: `Union[float, npt.ArrayLike]` - value in the range of -1 to 1 whose arc cosine is to be returned
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

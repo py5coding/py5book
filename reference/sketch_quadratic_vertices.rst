@@ -55,13 +55,13 @@ Syntax
 
 .. code:: python
 
-    quadratic_vertices(coordinates: NDArray[(Any, Any), Float], /) -> None
+    quadratic_vertices(coordinates: npt.NDArray[np.floating], /) -> None
 
 Parameters
 ----------
 
-* **coordinates**: `NDArray[(Any, Any), Float]` - array of quadratic vertex coordinates
+* **coordinates**: `npt.NDArray[np.floating]` - 2D array of quadratic vertex coordinates with 4 or 6 columns for 2D or 3D points, respectively
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

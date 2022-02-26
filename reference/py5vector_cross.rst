@@ -56,13 +56,13 @@ Syntax
 
 .. code:: python
 
-    cross(other: Union[Py5Vector, NDArray]) -> Union[float, Py5Vector, NDArray]
+    cross(other: Union[Py5Vector, np.ndarray]) -> Union[float, Py5Vector, np.ndarray[np.floating]]
 
 Parameters
 ----------
 
-* **other**: `Union[Py5Vector, NDArray]` - 2D or 3D vector to calculate the cross product with
+* **other**: `Union[Py5Vector, np.ndarray]` - 2D or 3D vector to calculate the cross product with
 
 
-Updated on January 16, 2022 16:51:21pm UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

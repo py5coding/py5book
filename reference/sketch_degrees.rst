@@ -47,13 +47,13 @@ Syntax
 
 .. code:: python
 
-    degrees(radians: float) -> float
+    degrees(radians: Union[float, npt.ArrayLike]) -> Union[float, npt.NDArray]
 
 Parameters
 ----------
 
-* **radians**: `float` - radian value to convert to degrees
+* **radians**: `Union[float, npt.ArrayLike]` - radian value to convert to degrees
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

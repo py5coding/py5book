@@ -56,15 +56,15 @@ Syntax
 
 .. code:: python
 
-    create_image_from_numpy(array: np.array, bands: str = 'ARGB', *, dst: Py5Image = None) -> Py5Image
+    create_image_from_numpy(array: npt.NDArray[np.uint8], bands: str = 'ARGB', *, dst: Py5Image = None) -> Py5Image
 
 Parameters
 ----------
 
-* **array**: `np.array` - numpy image array
+* **array**: `npt.NDArray[np.uint8]` - numpy image array
 * **bands**: `str = 'ARGB'` - color channels in array
 * **dst**: `Py5Image = None` - existing Py5Image object to put the image data into
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

@@ -156,17 +156,17 @@ Syntax
 
 .. code:: python
 
-    noise(x: float, /) -> float
-    noise(x: float, y: float, /) -> float
-    noise(x: float, y: float, z: float, /) -> float
+    noise(x: Union[float, npt.NDArray], /) -> Union[float, npt.NDArray]
+    noise(x: Union[float, npt.NDArray], y: Union[float, npt.NDArray], /) -> Union[float, npt.NDArray]
+    noise(x: Union[float, npt.NDArray], y: Union[float, npt.NDArray], z: Union[float, npt.NDArray], /) -> Union[float, npt.NDArray]
 
 Parameters
 ----------
 
-* **x**: `float` - x-coordinate in noise space
-* **y**: `float` - y-coordinate in noise space
-* **z**: `float` - z-coordinate in noise space
+* **x**: `Union[float, npt.NDArray]` - x-coordinate in noise space
+* **y**: `Union[float, npt.NDArray]` - y-coordinate in noise space
+* **z**: `Union[float, npt.NDArray]` - z-coordinate in noise space
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

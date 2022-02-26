@@ -60,8 +60,7 @@ Syntax
 
     apply_matrix(n00: float, n01: float, n02: float, n03: float, n10: float, n11: float, n12: float, n13: float, n20: float, n21: float, n22: float, n23: float, n30: float, n31: float, n32: float, n33: float, /) -> None
     apply_matrix(n00: float, n01: float, n02: float, n10: float, n11: float, n12: float, /) -> None
-    apply_matrix(source: NDArray[(2, 3), Float], /) -> None
-    apply_matrix(source: NDArray[(4, 4), Float], /) -> None
+    apply_matrix(source: npt.NDArray[np.floating], /) -> None
 
 Parameters
 ----------
@@ -82,9 +81,8 @@ Parameters
 * **n31**: `float` - numbers which define the 4x4 matrix to be multiplied
 * **n32**: `float` - numbers which define the 4x4 matrix to be multiplied
 * **n33**: `float` - numbers which define the 4x4 matrix to be multiplied
-* **source**: `NDArray[(2, 3), Float]` - 2D transformation matrix
-* **source**: `NDArray[(4, 4), Float]` - 3D transformation matrix
+* **source**: `npt.NDArray[np.floating]` - transformation matrix with a shape of 2x3 for 2D transforms or 4x4 for 3D transforms
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

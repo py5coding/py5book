@@ -64,7 +64,7 @@ Syntax
 
 .. code:: python
 
-    offline_frame_processing(func: Callable[[NDArray[(Any, Any, Any, 3), UInt8]], None], *, limit: int = 0, period: float = 0.0, batch_size: int = 1, complete_func: Callable[[], None] = None, stop_processing_func: Callable[[], bool] = None, sketch: Sketch = None, hook_post_draw: bool = False, queue_limit: int = None, block: bool = False) -> None
+    offline_frame_processing(func: Callable[[npt.NDArray[np.uint8]], None], *, limit: int = 0, period: float = 0.0, batch_size: int = 1, complete_func: Callable[[], None] = None, stop_processing_func: Callable[[], bool] = None, sketch: Sketch = None, hook_post_draw: bool = False, queue_limit: int = None, block: bool = False) -> None
 
 Parameters
 ----------
@@ -72,7 +72,7 @@ Parameters
 * **batch_size**: `int = 1` - number of frames to include in each batch passed to the frame processing function
 * **block**: `bool = False` - method returns immediately (False) or blocks until function returns (True)
 * **complete_func**: `Callable[[], None] = None` - function to call when frame processing is complete
-* **func**: `Callable[[NDArray[(Any, Any, Any, 3), UInt8]], None]` - function to process the Sketch's frame(s), one batch at a time
+* **func**: `Callable[[npt.NDArray[np.uint8]], None]` - function to process the Sketch's pixels, one batch at a time
 * **hook_post_draw**: `bool = False` - attach hook to Sketch's post_draw method instead of draw
 * **limit**: `int = 0` - total number of frames to pass to the frame processing function
 * **period**: `float = 0.0` - time in seconds between frames collected to be passed to the frame processing function (default 0 means no delay)
@@ -81,5 +81,5 @@ Parameters
 * **stop_processing_func**: `Callable[[], bool] = None` - optional predicate function that determines if frame processing should terminate
 
 
-Updated on February 21, 2022 11:40:40am UTC
+Updated on February 26, 2022 13:22:44pm UTC
 
