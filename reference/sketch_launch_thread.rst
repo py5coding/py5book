@@ -66,17 +66,17 @@ Syntax
 
 .. code:: python
 
-    launch_thread(f: Callable, name: str = None, *, daemon: bool = True, args: Tuple = None, kwargs: Dict = None) -> str
+    launch_thread(f: Callable, name: str = None, *, daemon: bool = True, args: tuple = None, kwargs: dict = None) -> str
 
 Parameters
 ----------
 
-* **args**: `Tuple = None` - positional arguments to pass to the given function
+* **args**: `tuple = None` - positional arguments to pass to the given function
 * **daemon**: `bool = True` - if the thread should be a daemon thread
 * **f**: `Callable` - function to call in the launched thread
-* **kwargs**: `Dict = None` - keyword arguments to pass to the given function
+* **kwargs**: `dict = None` - keyword arguments to pass to the given function
 * **name**: `str = None` - name of thread to be created
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on March 01, 2022 12:15:01pm UTC
 

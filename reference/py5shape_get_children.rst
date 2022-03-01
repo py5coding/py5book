@@ -54,7 +54,7 @@ Syntax
 
 .. code:: python
 
-    get_children() -> List[Py5Shape]
+    get_children() -> list[Py5Shape]
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on March 01, 2022 12:15:01pm UTC
 

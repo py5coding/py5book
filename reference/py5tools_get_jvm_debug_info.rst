@@ -45,7 +45,7 @@ Syntax
 
 .. code:: python
 
-    get_jvm_debug_info() -> Dict[str, Any]
+    get_jvm_debug_info() -> dict[str, Any]
 
-Updated on February 10, 2022 17:40:56pm UTC
+Updated on March 01, 2022 12:15:01pm UTC
 

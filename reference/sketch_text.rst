@@ -106,8 +106,8 @@ Syntax
 
     text(c: chr, x: float, y: float, /) -> None
     text(c: chr, x: float, y: float, z: float, /) -> None
-    text(chars: List[chr], start: int, stop: int, x: float, y: float, /) -> None
-    text(chars: List[chr], start: int, stop: int, x: float, y: float, z: float, /) -> None
+    text(chars: list[chr], start: int, stop: int, x: float, y: float, /) -> None
+    text(chars: list[chr], start: int, stop: int, x: float, y: float, z: float, /) -> None
     text(num: float, x: float, y: float, /) -> None
     text(num: float, x: float, y: float, z: float, /) -> None
     text(num: int, x: float, y: float, /) -> None
@@ -120,7 +120,7 @@ Parameters
 ----------
 
 * **c**: `chr` - the alphanumeric character to be displayed
-* **chars**: `List[chr]` - the alphanumberic symbols to be displayed
+* **chars**: `list[chr]` - the alphanumberic symbols to be displayed
 * **num**: `float` - the numeric value to be displayed
 * **num**: `int` - the numeric value to be displayed
 * **start**: `int` - array index at which to start writing characters
@@ -135,5 +135,5 @@ Parameters
 * **z**: `float` - z-coordinate of text
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on March 01, 2022 12:15:01pm UTC
 

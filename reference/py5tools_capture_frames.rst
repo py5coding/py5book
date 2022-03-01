@@ -40,7 +40,7 @@ Description
 
 Capture frames from a running Sketch.
 
-By default this function will return right away and will capture frames in the background while the Sketch is running. The returned list of PIL Image objects (``List[PIL.Image]``) will initially be empty, and will be populated all at once when the complete set of frames has been captured. Set the ``block`` parameter to ``True`` to instruct the method to capture the frames in the foreground and to not return until the complete list of frames is ready to be returned. To get access to the captured frames as they become available, use the :doc:`py5tools_offline_frame_processing` function instead. If the Sketch is terminated prematurely, the returned list will be empty.
+By default this function will return right away and will capture frames in the background while the Sketch is running. The returned list of PIL Image objects (``list[PIL.Image]``) will initially be empty, and will be populated all at once when the complete set of frames has been captured. Set the ``block`` parameter to ``True`` to instruct the method to capture the frames in the foreground and to not return until the complete list of frames is ready to be returned. To get access to the captured frames as they become available, use the :doc:`py5tools_offline_frame_processing` function instead. If the Sketch is terminated prematurely, the returned list will be empty.
 
 By default the Sketch will be the currently running Sketch, as returned by :doc:`py5functions_get_current_sketch`. Use the ``sketch`` parameter to specify a different running Sketch, such as a Sketch created using Class mode.
 
@@ -51,7 +51,7 @@ Syntax
 
 .. code:: python
 
-    capture_frames(count: float, *, period: float = 0.0, sketch: Sketch = None, hook_post_draw: bool = False, block: bool = False) -> List[PIL.Image]
+    capture_frames(count: float, *, period: float = 0.0, sketch: Sketch = None, hook_post_draw: bool = False, block: bool = False) -> list[PIL.Image]
 
 Parameters
 ----------
@@ -63,5 +63,5 @@ Parameters
 * **sketch**: `Sketch = None` - running Sketch
 
 
-Updated on February 21, 2022 11:45:39am UTC
+Updated on March 01, 2022 12:15:01pm UTC
 

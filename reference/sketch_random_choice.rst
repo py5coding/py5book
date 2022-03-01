@@ -46,13 +46,13 @@ Syntax
 
 .. code:: python
 
-    random_choice(objects: List[Any]) -> Any
+    random_choice(objects: list[Any]) -> Any
 
 Parameters
 ----------
 
-* **objects**: `List[Any]` - list of objects to choose from
+* **objects**: `list[Any]` - list of objects to choose from
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on March 01, 2022 12:15:01pm UTC
 

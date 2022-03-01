@@ -105,19 +105,19 @@ Syntax
 
 .. code:: python
 
-    render_frame(draw: Callable, width: int, height: int, renderer: str = Sketch.HIDDEN, *, draw_args: Tuple = None, draw_kwargs: Dict = None, use_py5graphics: bool = False) -> Image
+    render_frame(draw: Callable, width: int, height: int, renderer: str = Sketch.HIDDEN, *, draw_args: tuple = None, draw_kwargs: dict = None, use_py5graphics: bool = False) -> Image
 
 Parameters
 ----------
 
 * **draw**: `Callable` - function that executes py5 draw commands
-* **draw_args**: `Tuple = None` - additional positional arguments to pass to draw function
-* **draw_kwargs**: `Dict = None` - additional keyword arguments to pass to draw function
+* **draw_args**: `tuple = None` - additional positional arguments to pass to draw function
+* **draw_kwargs**: `dict = None` - additional keyword arguments to pass to draw function
 * **height**: `int` - height of the display window in units of pixels
 * **renderer**: `str = Sketch.HIDDEN` - rendering engine to use
 * **use_py5graphics**: `bool = False` - pass a py5graphics object instead of a sketch object
 * **width**: `int` - width of the display window in units of pixels
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on March 01, 2022 12:15:01pm UTC
 
