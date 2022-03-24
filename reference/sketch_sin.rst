@@ -50,13 +50,13 @@ Syntax
 
 .. code:: python
 
-    sin(angle: float) -> float
+    sin(angle: Union[float, npt.ArrayLike]) -> Union[float, npt.NDArray]
 
 Parameters
 ----------
 
-* **angle**: `float` - angle in radians
+* **angle**: `Union[float, npt.ArrayLike]` - angle in radians
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

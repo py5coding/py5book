@@ -22,8 +22,8 @@ Examples
     :number-lines:
 
     def setup():
-        py5.size(100, 100, py5.P3D)
         global s
+        py5.size(100, 100, py5.P3D)
         s = py5.load_shape("bot.svg")
 
 
@@ -69,5 +69,5 @@ Parameters
 * **angle**: `float` - angle of rotation specified in radians
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

@@ -46,16 +46,16 @@ Examples
     :number-lines:
 
     def setup():
+        global xpos, ypos
         py5.rect_mode(py5.CENTER)
         py5.os_noise_seed(42)
-        global xpos, ypos
         xpos = py5.width / 2
         ypos = py5.height / 2
 
 
     def draw():
-        py5.background(128)
         global xpos, ypos
+        py5.background(128)
         xpos = (xpos + py5.os_noise(xpos, py5.frame_count / 250)) % py5.width
         ypos = (ypos + py5.os_noise(ypos, py5.frame_count / 250)) % py5.height
         py5.square(xpos, ypos, 25)
@@ -86,5 +86,5 @@ Parameters
 * **seed**: `int` - seed value
 
 
-Updated on November 08, 2021 12:26:18pm UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

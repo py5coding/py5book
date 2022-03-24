@@ -186,9 +186,9 @@ Examples
     :number-lines:
 
     def setup():
-        py5.size(100, 100, py5.P2D)
         global blur
         global img
+        py5.size(100, 100, py5.P2D)
         blur = py5.load_shader("blur.glsl")
         img = py5.load_image("apples.jpg")
         py5.image(img, 0, 0)
@@ -240,5 +240,5 @@ Parameters
 * **shader**: `Py5Shader` - the fragment shader to apply
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

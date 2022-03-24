@@ -45,13 +45,13 @@ Syntax
 
 .. code:: python
 
-    add_options(*options: List[str]) -> None
+    add_options(*options: list[str]) -> None
 
 Parameters
 ----------
 
-* **options**: `List[str]` - list of desired JVM options
+* **options**: `list[str]` - list of desired JVM options
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on March 01, 2022 12:15:01pm UTC
 

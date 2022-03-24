@@ -27,8 +27,8 @@ Examples
         return np.full((50, 50, 1), value, dtype=np.uint8)
 
     def setup():
-        py5.image_mode(py5.CENTER)
         global img
+        py5.image_mode(py5.CENTER)
         img = py5.create_image(50, 50, py5.RGB)
 
     def draw():
@@ -63,14 +63,14 @@ Syntax
 
 .. code:: python
 
-    set_np_pixels(array: np.ndarray, bands: str = 'ARGB') -> None
+    set_np_pixels(array: npt.NDArray[np.uint8], bands: str = 'ARGB') -> None
 
 Parameters
 ----------
 
-* **array**: `np.ndarray` - properly sized numpy array to be copied to np_pixels[]
+* **array**: `npt.NDArray[np.uint8]` - properly sized numpy array to be copied to np_pixels[]
 * **bands**: `str = 'ARGB'` - color channels in the array's third dimension
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

@@ -119,7 +119,7 @@ Syntax
 
 .. code:: python
 
-    vertex(v: NDArray[(Any,), Float], /) -> None
+    vertex(v: npt.NDArray[np.floating], /) -> None
     vertex(x: float, y: float, /) -> None
     vertex(x: float, y: float, u: float, v: float, /) -> None
     vertex(x: float, y: float, z: float, /) -> None
@@ -129,12 +129,12 @@ Parameters
 ----------
 
 * **u**: `float` - horizontal coordinate for the texture mapping
-* **v**: `NDArray[(Any,), Float]` - vertical coordinate for the texture mapping
 * **v**: `float` - vertical coordinate for the texture mapping
+* **v**: `npt.NDArray[np.floating]` - vertical coordinate data for the texture mapping
 * **x**: `float` - x-coordinate of the vertex
 * **y**: `float` - y-coordinate of the vertex
 * **z**: `float` - z-coordinate of the vertex
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

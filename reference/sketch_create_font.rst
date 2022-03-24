@@ -22,8 +22,8 @@ Examples
     :number-lines:
 
     def setup():
-        py5.size(200, 200)
         global my_font
+        py5.size(200, 200)
         # uncomment the following two lines to see the available fonts
         # string[] font_list = py5.Py5Font.list()
         # print_array(font_list)
@@ -58,16 +58,16 @@ Syntax
 
     create_font(name: str, size: float, /) -> Py5Font
     create_font(name: str, size: float, smooth: bool, /) -> Py5Font
-    create_font(name: str, size: float, smooth: bool, charset: List[chr], /) -> Py5Font
+    create_font(name: str, size: float, smooth: bool, charset: list[chr], /) -> Py5Font
 
 Parameters
 ----------
 
-* **charset**: `List[chr]` - array containing characters to be generated
+* **charset**: `list[chr]` - array containing characters to be generated
 * **name**: `str` - name of the font to load
 * **size**: `float` - point size of the font
 * **smooth**: `bool` - true for an antialiased font, false for aliased
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

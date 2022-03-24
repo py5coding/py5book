@@ -66,15 +66,15 @@ Syntax
 
 .. code:: python
 
-    norm(value: float, start: float, stop: float) -> float
+    norm(value: Union[float, npt.NDArray], start: Union[float, npt.NDArray], stop: Union[float, npt.NDArray]) -> Union[float, npt.NDArray]
 
 Parameters
 ----------
 
-* **start**: `float` - lower bound of the value's current range
-* **stop**: `float` - upper bound of the value's current range
-* **value**: `float` - the incoming value to be converted
+* **start**: `Union[float, npt.NDArray]` - lower bound of the value's current range
+* **stop**: `Union[float, npt.NDArray]` - upper bound of the value's current range
+* **value**: `Union[float, npt.NDArray]` - the incoming value to be converted
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

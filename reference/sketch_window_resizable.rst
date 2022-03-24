@@ -1,5 +1,5 @@
-Py5Surface.set_resizable()
-==========================
+window_resizable()
+==================
 
 Set the Sketch window as resizable by the user.
 
@@ -22,8 +22,7 @@ Examples
     :number-lines:
 
     def setup():
-        surface = py5.get_surface()
-        surface.set_resizable(True)
+        py5.window_resizable(True)
 
 
     def draw():
@@ -44,14 +43,16 @@ Set the Sketch window as resizable by the user. The user will be able to resize 
 
 Changing the window size will clear the drawing canvas. If you do this, the :doc:`sketch_width` and :doc:`sketch_height` variables will change.
 
-Underlying Processing method: PSurface.setResizable
+This method provides the same funcationality as :doc:`py5surface_set_resizable` but without the need to interact directly with the :doc:`py5surface` object.
+
+Underlying Processing method: windowResizable
 
 Syntax
 ------
 
 .. code:: python
 
-    set_resizable(resizable: bool, /) -> None
+    window_resizable(resizable: bool, /) -> None
 
 Parameters
 ----------
@@ -59,5 +60,5 @@ Parameters
 * **resizable**: `bool` - should the Sketch window be resizable
 
 
-Updated on February 10, 2022 17:51:31pm UTC
+Updated on February 10, 2022 17:53:01pm UTC
 

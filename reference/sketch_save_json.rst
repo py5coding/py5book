@@ -52,15 +52,15 @@ Syntax
 
 .. code:: python
 
-    save_json(json_data: Any, filename: Union[str, Path], **kwargs: Dict[str, Any]) -> None
+    save_json(json_data: Any, filename: Union[str, Path], **kwargs: dict[str, Any]) -> None
 
 Parameters
 ----------
 
 * **filename**: `Union[str, Path]` - filename to save JSON data object to
 * **json_data**: `Any` - json data object
-* **kwargs**: `Dict[str, Any]` - keyword arguments
+* **kwargs**: `dict[str, Any]` - keyword arguments
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on March 01, 2022 12:15:01pm UTC
 

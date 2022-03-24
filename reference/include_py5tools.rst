@@ -6,6 +6,7 @@
 * `get_classpath() <py5tools_get_classpath.html>`_: Get the Java classpath.
 * `get_jvm_debug_info() <py5tools_get_jvm_debug_info.html>`_: Get Java Virtual Machine debug information.
 * `is_jvm_running() <py5tools_is_jvm_running.html>`_: Determine if the Java Virtual Machine (JVM) is or is not running.
+* `offline_frame_processing() <py5tools_offline_frame_processing.html>`_: Process Sketch frames in a separate thread that will minimize the performance impact on the Sketch's main animation thread.
 * `save_frames() <py5tools_save_frames.html>`_: Save a running Sketch's frames to a directory.
 * `screenshot() <py5tools_screenshot.html>`_: Take a screenshot of a running Sketch.
 * `sketch_portal() <py5tools_sketch_portal.html>`_: Creates a portal widget to continuously stream frames from a running Sketch into a Jupyter notebook.

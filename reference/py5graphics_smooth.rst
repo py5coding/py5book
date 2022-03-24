@@ -25,8 +25,8 @@ Examples
 
 
     def setup():
-        py5.full_screen(py5.P2D)
         global pg
+        py5.full_screen(py5.P2D)
         pg = py5.create_graphics(py5.width, py5.height, py5.P2D)
         pg.smooth(4)
 
@@ -77,5 +77,5 @@ Parameters
 * **quality**: `int` - either 2, 3, 4, or 8 depending on the renderer
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

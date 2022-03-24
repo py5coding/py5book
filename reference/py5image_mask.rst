@@ -59,14 +59,14 @@ Syntax
 .. code:: python
 
     mask(img: Py5Image, /) -> None
-    mask(mask_array: NDArray[(Any,), Int], /) -> None
+    mask(mask_array: npt.NDArray[np.integer], /) -> None
 
 Parameters
 ----------
 
 * **img**: `Py5Image` - image to use as the mask
-* **mask_array**: `NDArray[(Any,), Int]` - array of integers used as the alpha channel, needs to be the same length as the image's pixel array.
+* **mask_array**: `npt.NDArray[np.integer]` - 1D array of integers used as the alpha channel, needs to be the same length as the image's pixel array
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

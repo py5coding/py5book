@@ -45,8 +45,8 @@ Examples
     :number-lines:
 
     def setup():
-        py5.size(250, 100)
         global promise
+        py5.size(250, 100)
         promise = py5.launch_promise_thread(load_data)
 
 
@@ -79,14 +79,14 @@ Syntax
 
 .. code:: python
 
-    load_json(json_path: Union[str, Path], **kwargs: Dict[str, Any]) -> Any
+    load_json(json_path: Union[str, Path], **kwargs: dict[str, Any]) -> Any
 
 Parameters
 ----------
 
 * **json_path**: `Union[str, Path]` - url or file path for JSON data file
-* **kwargs**: `Dict[str, Any]` - keyword arguments
+* **kwargs**: `dict[str, Any]` - keyword arguments
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

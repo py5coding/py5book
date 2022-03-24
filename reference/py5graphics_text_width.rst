@@ -18,18 +18,18 @@ Syntax
 .. code:: python
 
     text_width(c: chr, /) -> float
-    text_width(chars: List[chr], start: int, length: int, /) -> float
+    text_width(chars: list[chr], start: int, length: int, /) -> float
     text_width(str: str, /) -> float
 
 Parameters
 ----------
 
 * **c**: `chr` - the character to measure
-* **chars**: `List[chr]` - the character to measure
+* **chars**: `list[chr]` - the character to measure
 * **length**: `int` - number of characters to measure
 * **start**: `int` - first character to measure
 * **str**: `str` - the String of characters to measure
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on March 01, 2022 12:15:01pm UTC
 

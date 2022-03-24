@@ -22,8 +22,8 @@ Examples
     :number-lines:
 
     def setup():
-        py5.size(250, 100)
         global promise
+        py5.size(250, 100)
         promise = py5.launch_promise_thread(load_data)
 
 
@@ -64,17 +64,17 @@ Syntax
 
 .. code:: python
 
-    launch_promise_thread(f: Callable, name: str = None, *, daemon: bool = True, args: Tuple = None, kwargs: Dict = None) -> Py5Promise
+    launch_promise_thread(f: Callable, name: str = None, *, daemon: bool = True, args: tuple = None, kwargs: dict = None) -> Py5Promise
 
 Parameters
 ----------
 
-* **args**: `Tuple = None` - positional arguments to pass to the given function
+* **args**: `tuple = None` - positional arguments to pass to the given function
 * **daemon**: `bool = True` - if the thread should be a daemon thread
 * **f**: `Callable` - function to call in the launched thread
-* **kwargs**: `Dict = None` - keyword arguments to pass to the given function
+* **kwargs**: `dict = None` - keyword arguments to pass to the given function
 * **name**: `str = None` - name of thread to be created
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

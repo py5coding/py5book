@@ -22,8 +22,8 @@ Examples
     :number-lines:
 
     def setup():
-        py5.size(300, 300, py5.P2D)
         global img
+        py5.size(300, 300, py5.P2D)
         img = py5.load_image("berlin-1.jpg")
         py5.texture_mode(py5.NORMAL)
 
@@ -73,5 +73,5 @@ Parameters
 * **wrap**: `int` - Either CLAMP (default) or REPEAT
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

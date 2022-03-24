@@ -22,7 +22,7 @@ Examples
     :number-lines:
 
     font_list = py5.Py5Font.list()
-    py5.println(font_list)
+    print(font_list)
 
 .. raw:: html
 
@@ -46,7 +46,7 @@ Syntax
 
 .. code:: python
 
-    list() -> List[str]
+    list() -> list[str]
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

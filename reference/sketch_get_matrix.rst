@@ -25,11 +25,11 @@ Examples
     :number-lines:
 
     def setup():
+        global matrix
         py5.size(100, 100, py5.P3D)
         py5.no_fill()
         py5.translate(50, 50, 0)
         py5.rotate_y(py5.PI/6)
-        global matrix
         matrix = py5.get_matrix()
         py5.println(matrix)
         py5.println(matrix.dtype)
@@ -56,16 +56,14 @@ Syntax
 
 .. code:: python
 
-    get_matrix() -> NDArray[(Any, Any), Float]
-    get_matrix(target: NDArray[(2, 3), Float], /) -> NDArray[(2, 3), Float]
-    get_matrix(target: NDArray[(4, 4), Float], /) -> NDArray[(4, 4), Float]
+    get_matrix() -> npt.NDArray[np.floating]
+    get_matrix(target: npt.NDArray[np.floating], /) -> npt.NDArray[np.floating]
 
 Parameters
 ----------
 
-* **target**: `NDArray[(2, 3), Float]` - transformation matrix data
-* **target**: `NDArray[(4, 4), Float]` - transformation matrix data
+* **target**: `npt.NDArray[np.floating]` - transformation matrix with a shape of 2x3 for 2D transforms or 4x4 for 3D transforms
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

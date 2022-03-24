@@ -62,14 +62,14 @@ Syntax
 
 .. code:: python
 
-    lerp(other: Union[Py5Vector, NDArray], amt: Union[float, NDArray]) -> Union[Py5Vector, NDArray]
+    lerp(other: Union[Py5Vector, np.ndarray], amt: Union[float, np.ndarray]) -> Union[Py5Vector, np.ndarray[np.floating]]
 
 Parameters
 ----------
 
-* **amt**: `Union[float, NDArray]` - float between 0.0 and 1.0
-* **other**: `Union[Py5Vector, NDArray]` - other vector to interpolate between
+* **amt**: `Union[float, np.ndarray]` - float between 0.0 and 1.0
+* **other**: `Union[Py5Vector, np.ndarray]` - other vector to interpolate between
 
 
-Updated on January 16, 2022 16:51:21pm UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

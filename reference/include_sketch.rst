@@ -58,6 +58,12 @@ Environment
 * `sketch_path() <sketch_sketch_path.html>`_
 * `smooth() <sketch_smooth.html>`_
 * `width <sketch_width.html>`_
+* `window_move() <sketch_window_move.html>`_
+* `window_resizable() <sketch_window_resizable.html>`_
+* `window_resize() <sketch_window_resize.html>`_
+* `window_title() <sketch_window_title.html>`_
+* `window_x <sketch_window_x.html>`_
+* `window_y <sketch_window_y.html>`_
 
 Image
 ~~~~~

@@ -36,7 +36,7 @@ Examples
 Description
 -----------
 
-Get Java Virtual Machine debug information. The py5 library requires Java 11 or greater to be installed and the ``$JAVA_HOME`` environment variable to be properly set. If one or both of these conditions are not true, py5 will not work.
+Get Java Virtual Machine debug information. The py5 library requires Java 17 or greater to be installed and the ``$JAVA_HOME`` environment variable to be properly set. If one or both of these conditions are not true, py5 will not work.
 
 If the Java Virtual Machine cannot start, py5 will include this debug information in the error message. If that doesn't help the user figure out the problem, it will help whomever they go to asking for help.
 
@@ -45,7 +45,7 @@ Syntax
 
 .. code:: python
 
-    get_jvm_debug_info() -> Dict[str, Any]
+    get_jvm_debug_info() -> dict[str, Any]
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on March 01, 2022 12:15:01pm UTC
 

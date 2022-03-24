@@ -59,13 +59,13 @@ Syntax
 
 .. code:: python
 
-    profile_functions(function_names: List[str]) -> None
+    profile_functions(function_names: list[str]) -> None
 
 Parameters
 ----------
 
-* **function_names**: `List[str]` - names of py5 functions to be profiled
+* **function_names**: `list[str]` - names of py5 functions to be profiled
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on March 01, 2022 12:15:01pm UTC
 

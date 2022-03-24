@@ -19,13 +19,13 @@ Syntax
 
 .. code:: python
 
-    points(coordinates: NDArray[(Any, Any), Float], /) -> None
+    points(coordinates: npt.NDArray[np.floating], /) -> None
 
 Parameters
 ----------
 
-* **coordinates**: `NDArray[(Any, Any), Float]` - array of point coordinates
+* **coordinates**: `npt.NDArray[np.floating]` - 2D array of point coordinates with 2 or 3 columns for 2D or 3D points, respectively
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

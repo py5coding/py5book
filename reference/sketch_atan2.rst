@@ -48,14 +48,14 @@ Syntax
 
 .. code:: python
 
-    atan2(y: float, x: float) -> float
+    atan2(y: Union[float, npt.ArrayLike], x: Union[float, npt.ArrayLike]) -> Union[float, npt.NDArray]
 
 Parameters
 ----------
 
-* **x**: `float` - x-coordinate of the point
-* **y**: `float` - y-coordinate of the point
+* **x**: `Union[float, npt.ArrayLike]` - x-coordinate of the point
+* **y**: `Union[float, npt.ArrayLike]` - y-coordinate of the point
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

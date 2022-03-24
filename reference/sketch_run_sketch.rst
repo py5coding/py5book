@@ -92,16 +92,16 @@ Syntax
 
 .. code:: python
 
-    run_sketch(block: bool = None, *, py5_options: List[str] = None, sketch_args: List[str] = None, sketch_functions: Dict[str, Callable] = None) -> None
+    run_sketch(block: bool = None, *, py5_options: list[str] = None, sketch_args: list[str] = None, sketch_functions: dict[str, Callable] = None) -> None
 
 Parameters
 ----------
 
 * **block**: `bool = None` - method returns immediately (False) or blocks until Sketch exits (True)
-* **py5_options**: `List[str] = None` - command line arguments to pass to Processing as arguments
-* **sketch_args**: `List[str] = None` - command line arguments that become Sketch arguments
-* **sketch_functions**: `Dict[str, Callable] = None` - sketch methods when using module mode
+* **py5_options**: `list[str] = None` - command line arguments to pass to Processing as arguments
+* **sketch_args**: `list[str] = None` - command line arguments that become Sketch arguments
+* **sketch_functions**: `dict[str, Callable] = None` - sketch methods when using module mode
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on March 01, 2022 12:15:01pm UTC
 

@@ -52,9 +52,9 @@ Examples
 
 
     def setup():
+        global x, y
         py5.size(200, 200)
         py5.os_noise_seed(42)
-        global x, y
         x, y = np.meshgrid(
             np.linspace(
                 0, 5, py5.width), np.linspace(
@@ -106,16 +106,16 @@ Examples
     :number-lines:
 
     def setup():
+        global xpos, ypos
         py5.rect_mode(py5.CENTER)
         py5.os_noise_seed(42)
-        global xpos, ypos
         xpos = py5.width / 2
         ypos = py5.height / 2
 
 
     def draw():
-        py5.background(128)
         global xpos, ypos
+        py5.background(128)
         xpos = (xpos + py5.os_noise(0.2, py5.frame_count / 250)) % py5.width
         ypos = (ypos + py5.os_noise(5.8, py5.frame_count / 250)) % py5.height
         py5.square(xpos, ypos, 25)
@@ -150,18 +150,18 @@ Syntax
 
 .. code:: python
 
-    os_noise(x: float, y: float, /) -> float
-    os_noise(x: float, y: float, z: float, /) -> float
-    os_noise(x: float, y: float, z: float, w: float, /) -> float
+    os_noise(x: Union[float, npt.NDArray], y: Union[float, npt.NDArray], /) -> Union[float, npt.NDArray]
+    os_noise(x: Union[float, npt.NDArray], y: Union[float, npt.NDArray], z: Union[float, npt.NDArray], /) -> Union[float, npt.NDArray]
+    os_noise(x: Union[float, npt.NDArray], y: Union[float, npt.NDArray], z: Union[float, npt.NDArray], w: Union[float, npt.NDArray], /) -> Union[float, npt.NDArray]
 
 Parameters
 ----------
 
-* **w**: `float` - w-coordinate in noise space
-* **x**: `float` - x-coordinate in noise space
-* **y**: `float` - y-coordinate in noise space
-* **z**: `float` - z-coordinate in noise space
+* **w**: `Union[float, npt.NDArray]` - w-coordinate in noise space
+* **x**: `Union[float, npt.NDArray]` - x-coordinate in noise space
+* **y**: `Union[float, npt.NDArray]` - y-coordinate in noise space
+* **z**: `Union[float, npt.NDArray]` - z-coordinate in noise space
 
 
-Updated on November 09, 2021 12:23:28pm UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

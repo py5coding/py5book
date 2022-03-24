@@ -71,7 +71,7 @@ Syntax
 
 .. code:: python
 
-    get_vertex_codes() -> NDArray[(Any,), Int]
+    get_vertex_codes() -> npt.NDArray[np.integer]
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

@@ -85,15 +85,15 @@ Syntax
 
 .. code:: python
 
-    lerp(start: float, stop: float, amt: float) -> float
+    lerp(start: Union[float, npt.NDArray], stop: Union[float, npt.NDArray], amt: Union[float, npt.NDArray]) -> Union[float, npt.NDArray]
 
 Parameters
 ----------
 
-* **amt**: `float` - float between 0.0 and 1.0
-* **start**: `float` - first value
-* **stop**: `float` - second value
+* **amt**: `Union[float, npt.NDArray]` - float between 0.0 and 1.0
+* **start**: `Union[float, npt.NDArray]` - first value
+* **stop**: `Union[float, npt.NDArray]` - second value
 
 
-Updated on January 16, 2022 16:51:21pm UTC
+Updated on February 26, 2022 13:22:44pm UTC
 

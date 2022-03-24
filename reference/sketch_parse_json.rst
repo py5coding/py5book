@@ -51,14 +51,14 @@ Syntax
 
 .. code:: python
 
-    parse_json(serialized_json: Any, **kwargs: Dict[str, Any]) -> Any
+    parse_json(serialized_json: Any, **kwargs: dict[str, Any]) -> Any
 
 Parameters
 ----------
 
-* **kwargs**: `Dict[str, Any]` - keyword arguments
+* **kwargs**: `dict[str, Any]` - keyword arguments
 * **serialized_json**: `Any` - JSON data object that has been serialized as a string
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on March 01, 2022 12:15:01pm UTC
 

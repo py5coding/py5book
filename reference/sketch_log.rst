@@ -54,13 +54,13 @@ Syntax
 
 .. code:: python
 
-    log(value: float) -> float
+    log(value: Union[float, npt.ArrayLike]) -> Union[float, npt.NDArray]
 
 Parameters
 ----------
 
-* **value**: `float` - number greater than 0.0
+* **value**: `Union[float, npt.ArrayLike]` - number greater than 0.0
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on February 26, 2022 13:22:44pm UTC
 
