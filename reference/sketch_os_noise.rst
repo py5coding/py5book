@@ -52,9 +52,9 @@ Examples
 
 
     def setup():
+        global x, y
         py5.size(200, 200)
         py5.os_noise_seed(42)
-        global x, y
         x, y = np.meshgrid(
             np.linspace(
                 0, 5, py5.width), np.linspace(
@@ -106,16 +106,16 @@ Examples
     :number-lines:
 
     def setup():
+        global xpos, ypos
         py5.rect_mode(py5.CENTER)
         py5.os_noise_seed(42)
-        global xpos, ypos
         xpos = py5.width / 2
         ypos = py5.height / 2
 
 
     def draw():
-        py5.background(128)
         global xpos, ypos
+        py5.background(128)
         xpos = (xpos + py5.os_noise(0.2, py5.frame_count / 250)) % py5.width
         ypos = (ypos + py5.os_noise(5.8, py5.frame_count / 250)) % py5.height
         py5.square(xpos, ypos, 25)
@@ -163,5 +163,5 @@ Parameters
 * **z**: `Union[float, npt.NDArray]` - z-coordinate in noise space
 
 
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

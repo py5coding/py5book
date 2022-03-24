@@ -56,8 +56,8 @@ Examples
     :number-lines:
 
     def setup():
-        py5.size(100, 100, py5.P2D)
         global s
+        py5.size(100, 100, py5.P2D)
         img = py5.load_image("tower.jpg")
         s = py5.create_shape()
         s.begin_shape()
@@ -115,5 +115,5 @@ Parameters
 * **tint**: `int` - color value in hexadecimal notation
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

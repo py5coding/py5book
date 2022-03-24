@@ -22,9 +22,9 @@ Examples
     :number-lines:
 
     def setup():
-        py5.size(640, 360, py5.P2D)
         global edges
         global img
+        py5.size(640, 360, py5.P2D)
         img = py5.load_image("leaves.jpg")
         edges = py5.load_shader("edges.glsl")
 
@@ -63,5 +63,5 @@ Parameters
 * **shader**: `Py5Shader` - name of shader file
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

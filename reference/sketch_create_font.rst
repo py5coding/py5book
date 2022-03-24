@@ -22,8 +22,8 @@ Examples
     :number-lines:
 
     def setup():
-        py5.size(200, 200)
         global my_font
+        py5.size(200, 200)
         # uncomment the following two lines to see the available fonts
         # string[] font_list = py5.Py5Font.list()
         # print_array(font_list)
@@ -69,5 +69,5 @@ Parameters
 * **smooth**: `bool` - true for an antialiased font, false for aliased
 
 
-Updated on March 01, 2022 12:15:01pm UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

@@ -22,8 +22,8 @@ Examples
     :number-lines:
 
     def setup():
-        py5.size(640, 360, py5.P2D)
         global blur
+        py5.size(640, 360, py5.P2D)
         # shaders files must be in the "data" folder to load correctly
         blur = py5.load_shader("blur.glsl")
         py5.stroke(0, 102, 153)
@@ -54,5 +54,5 @@ The following methods and fields are provided:
 
 .. include:: include_py5shader.rst
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

@@ -22,8 +22,8 @@ Examples
     :number-lines:
 
     def setup():
-        py5.size(250, 100)
         global promise
+        py5.size(250, 100)
         promise = py5.launch_promise_thread(load_data)
 
 
@@ -76,5 +76,5 @@ Parameters
 * **name**: `str = None` - name of thread to be created
 
 
-Updated on March 01, 2022 12:15:01pm UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

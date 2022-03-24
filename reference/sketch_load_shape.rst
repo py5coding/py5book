@@ -47,8 +47,8 @@ Examples
     :number-lines:
 
     def setup():
-        py5.size(100, 100, py5.P3D)
         global s
+        py5.size(100, 100, py5.P3D)
         # the file "teapot.obj" must be in the data folder
         # of the current sketch to load successfully
         s = py5.load_shape("teapot.obj")
@@ -94,5 +94,5 @@ Parameters
 * **options**: `str` - unused parameter
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

@@ -22,8 +22,8 @@ Examples
     :number-lines:
 
     def setup():
-        py5.size(640, 360, py5.P2D)
         global c
+        py5.size(640, 360, py5.P2D)
         c = py5.create_shape(py5.RECT, -20, -20, 40, 40)
         c.set_stroke("#FFFFFF")
 
@@ -66,5 +66,5 @@ Parameters
 * **index**: `int` - vertex index
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

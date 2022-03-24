@@ -52,8 +52,8 @@ Examples
 
 
     def draw():
-        py5.background(204)
         global x
+        py5.background(204)
         x = x + 0.1
         if x > py5.width:
             x = 0
@@ -125,5 +125,5 @@ Syntax
 
     no_loop() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

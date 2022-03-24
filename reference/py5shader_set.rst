@@ -22,9 +22,9 @@ Examples
     :number-lines:
 
     def setup():
-        py5.size(640, 360, py5.P2D)
         global tex
         global deform
+        py5.size(640, 360, py5.P2D)
         tex = py5.load_image("tex1.jpg")
         deform = py5.load_shader("deform.glsl")
         deform.set("resolution", float(py5.width), float(py5.height))
@@ -106,5 +106,5 @@ Parameters
 * **z**: `int` - third component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[3], vec3)
 
 
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

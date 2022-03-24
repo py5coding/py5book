@@ -29,8 +29,8 @@ Examples
 
 
     def draw():
-        py5.background(204)
         global pos
+        py5.background(204)
         pos += 1
         py5.line(pos, 20, pos, 80)
         if pos > py5.width:
@@ -64,5 +64,5 @@ Parameters
 * **fps**: `float` - number of desired frames per second
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

@@ -77,10 +77,10 @@ Examples
     :number-lines:
 
     def setup():
+        global bg
         py5.color_mode(py5.HSB, 360, 100, 100)
         # use the global keyword so the draw method
         # has access to the bg variable
-        global bg
         bg = py5.color(180, 50, 50)
 
 
@@ -125,5 +125,5 @@ Parameters
 * **mode**: `int` - Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

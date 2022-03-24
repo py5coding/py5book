@@ -22,8 +22,8 @@ Examples
     :number-lines:
 
     def setup():
-        py5.size(640, 360, py5.P2D)
         global blur
+        py5.size(640, 360, py5.P2D)
         # shaders files must be in the "data" folder to load correctly
         blur = py5.load_shader("blur.glsl")
         py5.stroke(0, 102, 153)
@@ -69,5 +69,5 @@ Parameters
 * **vert_filename**: `str` - name of vertex shader file
 
 
-Updated on January 16, 2022 16:51:21pm UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

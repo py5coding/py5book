@@ -91,8 +91,8 @@ Examples
     :number-lines:
 
     def setup():
-        py5.size(100, 100, py5.P2D)
         global s
+        py5.size(100, 100, py5.P2D)
         s = py5.create_shape()
         s.begin_shape(py5.TRIANGLE_STRIP)
         s.vertex(30, 75)
@@ -186,5 +186,5 @@ Parameters
 * **type**: `int` - either GROUP, PATH, or GEOMETRY
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

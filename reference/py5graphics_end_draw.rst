@@ -22,8 +22,8 @@ Examples
     :number-lines:
 
     def setup():
-        py5.size(200, 200, py5.P2D)
         global pg
+        py5.size(200, 200, py5.P2D)
         pg = py5.create_graphics(80, 80, py5.P2D)
         pg.begin_draw()
         pg.background(102)
@@ -57,5 +57,5 @@ Syntax
 
     end_draw() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on March 22, 2022 21:53:01pm UTC
 

@@ -27,8 +27,8 @@ Examples
         return np.full((50, 50, 1), value, dtype=np.uint8)
 
     def setup():
-        py5.image_mode(py5.CENTER)
         global img
+        py5.image_mode(py5.CENTER)
         img = py5.create_image(50, 50, py5.RGB)
 
     def draw():
@@ -72,5 +72,5 @@ Parameters
 * **bands**: `str = 'ARGB'` - color channels in the array's third dimension
 
 
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on March 22, 2022 21:53:01pm UTC
 
