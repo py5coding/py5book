@@ -46,12 +46,12 @@ Examples
 
     def setup():
         global promise
-        py5.size(250, 100)
+        py5.size(200, 100)
         promise = py5.launch_promise_thread(load_data)
 
 
     def load_data():
-        return py5.load_json('http://py5.ixora.io/secret_message.json')
+        return py5.load_json('http://py5.ixora.io/files/secret_message.json')
 
 
     def draw():
@@ -88,5 +88,5 @@ Parameters
 * **kwargs**: `dict[str, Any]` - keyword arguments
 
 
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on March 24, 2022 16:35:56pm UTC
 
