@@ -1,16 +1,19 @@
 # Special Notes for OSX Users
 
-Although much progress has been made getting py5 to work on OSX, there are still
-a few issues limitations. Some of these are
-
+Although much progress has been made getting py5 to work on OSX, there are a few
+remaining issues and limitations. Some of these will be addressed in future py5
+releases.
 
 ```{admonition} TL;DR
 
 -   When using Jupyter Notebooks, start each notebook with the `%gui osx` magic
--   The [](/reference/sketch_run_sketch) method's `block` parameter will be set
-    to `False` when run through Jupyter Notebooks and set to `True` when run
-    through a generic Python interpreter
+-   The [](/reference/sketch_run_sketch) method's `block` parameter is
+    automatically set to `False` when run through Jupyter Notebooks and set to
+    `True` when run through a generic Python interpreter
+-   Apple Silicon is a mystery and will probably remain so until I can get my
+    hands on one to test
 -   The py5bot Jupyter kernel and some py5 magics cannot use the OpenGL renderers
+-   The render helper tools cannot use the OpenGL renderers
 -   When using Jupyter notebooks, Sketches that use the default renderer will not
     appear as an icon on the Dock at the bottom of the screen
 -   Ignore the warnings you see when exiting a Sketch ([Issue
@@ -34,7 +37,7 @@ This changes how Jupyter executes subsequent notebook cells to allow GUI windows
 to open and be useable. Do this *before* importing py5. If you import py5 without
 doing this, py5 will run the magic for you and give you a warning.
 
-That magic command should not be run on non OSX machines. If you need your
+That magic command should not be run on non-OSX machines. If you need your
 notebook code to run on multiple platforms, use the following code instead:
 
 <div class="cell border-box-sizing code_cell rendered">
@@ -45,18 +48,21 @@ notebook code to run on multiple platforms, use the following code instead:
 <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span> <span class="o">==</span> <span class="s1">'darwin'</span><span class="p">:</span>
     <span class="n">    get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">'gui'</span><span class="p">,</span> <span class="s1">'osx'</span><span class="p">)</span></pre></div></div></div></div></div>
 
-In Jupyter, the [](/reference/sketch_run_sketch) command will never "block", which means
-that the method will return right away and let you execute lines of code that appear
-after it or other notebook cells. This shouldn't be a problem and for notebook
-users this is most certainly what you would want to happen anyway.
+In Jupyter, the [](/reference/sketch_run_sketch) command will never "block",
+which means that the method will return right away and let you execute lines of
+code that appear after it or in other notebook cells. This shouldn't be a
+problem and for notebook users as this is most certainly what you would want to
+happen anyway.
 
-You'll also notice that if you execute Python code in a notebook cell
-while the Sketch is running, the Sketch animation will experience a brief pause
-as the notebook executes the code. This happens because on OSX a GUI needs to
-animate on the main thread but the notebook also needs the main thread to execute notebook cells.
+You'll also notice that if you execute Python code in a notebook cell while a
+Sketch is running, the Sketch will experience a brief pause as the notebook
+executes the code. This happens because on OSX a GUI needs to run on the main
+thread but Jypyter also needs the main thread to execute notebook cells. The
+`%gui osx` magic faciliates sharing of the main thread between the Sketch and
+executing notebook cells.
 
-If you need to run multiple Sketches at the same time on a Mac, running them through
-a Jupyter notebook is your only option.
+If you need to run multiple Sketches at the same time on a Mac, running them
+through a Jupyter notebook (using class-mode) is your only option.
 
 ### py5bot and py5 magics
 
@@ -74,10 +80,16 @@ The only limitations are that you can only run one Sketch at at time and that
 exiting the Sketch will terminate the Python process.
 
 The [](/reference/sketch_run_sketch) command will always "block", which means
-that the method will not return and let you execute lines of code that appear
+that the method will not return and allow you execute lines of code that appear
 after it. Since exiting the Sketch will also terminate the Python process, the
-call to [](/reference/sketch_run_sketch) will typically be the last line of code in your
-Python code.
+call to [](/reference/sketch_run_sketch) will typically be the last line in your
+Python script.
+
+## Render Helper Tools
+
+No OpenGL
+
+A future version of py5 will correct these issues.
 
 ## Apple Silicon
 
