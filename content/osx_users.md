@@ -15,7 +15,7 @@ in future py5 releases.
 -   The py5bot Jupyter kernel and some py5 magics cannot use the OpenGL renderers
 -   The render helper tools cannot use the OpenGL renderers
 -   When using Jupyter notebooks, Sketches that use the default renderer will not
-    appear as an icon on the dock at the bottom of the screen **TODO** verify this and explain below
+    appear as an icon on the dock at the bottom of the screen
 -   Ignore the warnings you see when exiting a Sketch ([Issue
     #6](https://github.com/hx2A/py5generator/issues/6))
 ```
@@ -122,12 +122,17 @@ code that appear after it or in other notebook cells. This shouldn't be a
 problem for notebook users as this is most certainly what you would want to
 happen anyway.
 
+When run through Jupyter, Sketches that use the default `JAVA2D` renderer will
+not appear as an icon on the dock at the bottom of the screen. This does not
+apply to Sketches that use the OpenGL renderers or Sketches run through the
+generic Python interpreter.
+
 If you need to simultaneously run multiple Sketches in the same process on OSX,
 running them through a Jupyter notebook (using class-mode) is your only option.
 
 ### py5bot and py5 magics
 
-On OSX, the py5bot kernel and the py5 magic command
+On OSX, the Jupyter py5bot kernel and the py5 magic command
 [](/reference/py5magics_py5bot) cannot use the OpenGL (P2D and P3D) renderers.
 The [](/reference/py5magics_py5draw) magic also cannot use the OpenGL renderers,
 and the [](/reference/py5magics_py5drawdxf) magic is not available.
@@ -136,9 +141,10 @@ A future version of py5 will address these issues.
 
 ## Generic Python Interpreter
 
-Sketches can be run with the generic Python interpreter (outside of Jupyter).
-The only limitations are that you can only run one Sketch at a time and that
-exiting the Sketch will terminate the Python process.
+Starting with py5 version 0.7.2, a Sketch can run through the generic Python
+interpreter (outside of Jupyter). The limitations are that you can only run
+one Sketch at a time and that exiting the Sketch will terminate the Python
+process.
 
 The [](/reference/sketch_run_sketch) command will always "block", which means
 that the method will not return and allow you execute lines of code that appear
@@ -159,17 +165,17 @@ A future version of py5 will address these issues.
 ## Apple Silicon
 
 The Apple Silicon version of Processing (Java) is not yet complete and is only
-available for download through github. Users are advised to download the OSX
+available for download through GitHub. Users are advised to download the OSX
 build for Intel CPUs instead.
 
-Without having an Apple Silicon machine to test on, I can only guess how to get
-py5 to run on those machines. My best idea is for py5 to use the native
-libraries for Intel CPUs. This might work correctly, or it might not.
+Without having an Apple Silicon machine to test on, I can only guess if py5 runs
+on those machines. My best idea is to follow the advice provided for Processing
+and have py5 use the native libraries for Intel CPUs. This might work, or it
+might not.
 
-If for some reason you want py5 to use the Apple Silicon native libraries,
-perhaps for testing purposes, use the following code before importing py5:
-
-**TODO** TEST THIS
+If you have an Apple Silicon machine and for some reason you want py5 to use the
+Apple Silicon native libraries, perhaps for testing purposes, use the following
+code before importing py5:
 
 ```python
 import py5_tools
