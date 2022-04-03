@@ -2,7 +2,8 @@
 
 Although much progress has been made getting py5 to work on OSX, there are a few
 remaining issues and limitations. The issues that are fixable will be addressed
-in future py5 releases.
+in future py5 releases. The remaining issues are minor and in line with typical
+OSX experiences.
 
 ```{admonition} TL;DR
 
@@ -32,7 +33,7 @@ the *start* of each notebook:
 ```
 
 This changes how Jupyter executes later notebook cells to allow GUI windows to
-open and be useable. Do this *before* importing py5. If you import py5 without
+open and be usable. Do this *before* importing py5. If you import py5 without
 doing this, py5 will run the magic for you after giving you a polite warning.
 
 That magic command should not be run on non-OSX machines. If you need your
@@ -45,10 +46,12 @@ if sys.platform == 'darwin':
         get_ipython().run_line_magic('gui', 'osx')
 ```
 
-The `%osx gui` magic instructs Jupyter's Python kernel to share the main thread
-with the Sketch window. On OSX, all GUIs are required to run on the main thread.
-The Python kernel, however, also needs to use the main thread to execute cells.
-Therefore, the main thread must be shared.
+The `%osx gui` magic will enable OSX Cocoa event loop integration. Use of this
+magic is not unique to py5; it is also used for other Python applications that
+open interactive windows. It instructs Jupyter's Python kernel to share the main
+thread with the Sketch window. On OSX, all GUIs are required to run on the main
+thread. The Python kernel, however, also needs to use the main thread to execute
+cells. Therefore, the main thread must be shared.
 
 To see an example demonstrating the consequences of this sharing, try running
 the following Sketch on OSX:
@@ -110,25 +113,31 @@ frames are not being drawn to the screen. For the above Sketch this will be
 apparent at the end of the 3 seconds when many new squares appear at the same
 time. The Sketch really is running normally during this time, but because of
 the shared main thread, the new frames are not being drawn to the screen. This
-behavior only applies to the `JAVA2D` renderer and does not impact the OpenGL
+behavior only applies to the `JAVA2D` renderer and not the OpenGL
 renderers `P2D` and `P3D`.
 
 There are just a few more things OSX users need to know about using py5 in a
 Jupyter notebook.
 
+### Blocking
+
 In Jupyter, the [](/reference/sketch_run_sketch) command will never "block",
 which means that the method will return right away and let you execute lines of
 code that appear after it or in other notebook cells. This shouldn't be a
 problem for notebook users as this is most certainly what you would want to
-happen anyway.
+happen anyway. If you want some code to run right when the Sketch exits,
+implement an `exiting()` function, which will be called by py5 as the Sketch is
+shutting down.
+
+If you need to simultaneously run multiple Sketches in the same process on OSX,
+running them through a Jupyter notebook (using class-mode) is your only option.
+
+### Dock Icon
 
 When run through Jupyter, Sketches that use the default `JAVA2D` renderer will
 not appear as an icon on the dock at the bottom of the screen. This does not
 apply to Sketches that use the OpenGL renderers or Sketches run through the
 generic Python interpreter.
-
-If you need to simultaneously run multiple Sketches in the same process on OSX,
-running them through a Jupyter notebook (using class-mode) is your only option.
 
 ### py5bot and py5 magics
 
@@ -184,6 +193,9 @@ py5_tools.add_options('-Dprocessing.natives.TestAppleSilicon=true')
 
 import py5
 ```
+
+If there is a py5 release that works correctly when the above code is used,
+please let me know.
 
 ## Sketch Exit
 
