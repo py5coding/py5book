@@ -49,9 +49,9 @@ if sys.platform == 'darwin':
 The `%osx gui` magic will enable OSX Cocoa event loop integration. Use of this
 magic is not unique to py5; it is also used for other Python applications that
 open interactive windows. It instructs Jupyter's Python kernel to share the main
-thread with the Sketch window. On OSX, all GUIs are required to run on the main
-thread. The Python kernel, however, also needs to use the main thread to execute
-cells. Therefore, the main thread must be shared.
+thread with the window. On OSX, all GUIs are required to run on the main thread.
+The Python kernel, however, also needs to use the main thread to execute cells.
+Therefore, the main thread must be shared.
 
 To see an example demonstrating the consequences of this sharing, try running
 the following Sketch on OSX:
@@ -121,7 +121,7 @@ Jupyter notebook.
 
 ### Blocking
 
-In Jupyter, the [](/reference/sketch_run_sketch) command will never "block",
+In Jupyter, the [](/reference/sketch_run_sketch) method will never "block",
 which means that the method will return right away and let you execute lines of
 code that appear after it or in other notebook cells. This shouldn't be a
 problem for notebook users as this is most certainly what you would want to
