@@ -70,6 +70,9 @@ where the generated code will go.
 (py5) $ make processing_dir=~/INSTALL/processing-4 py5_build_dir=../py5code skip_autopep8=true
 ```
 
+The Makefile uses `realpath`. You may need to install the "coreutils" package if
+you don't have it on your machine already.
+
 The optional `skip_autopep8` argument will skip autopep8 formatting of
 the output code, accelerating the build process. Use this during
 development.
