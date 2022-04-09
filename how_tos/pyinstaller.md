@@ -13,6 +13,18 @@ that need to be addressed with the PyInstaller utilities.
 
 ## PyInstaller Spec File Explanation
 
+If you want to start by reading a working example, see this gist. For a line
+by line explanation, read the rest of this page. The below example Spec File
+will create an application called `simple` from a py5 Sketch implemented in the
+Python file `simple.py`. Typically you would put this in a Spec File named
+`simple.spec` and packaged at the command line with:
+
+```bash
+pyinstaller simple.spec
+```
+
+Now, on to the contents of the Spec File.
+
 ### Imports
 
 First, import a few utility functions from `PyInstaller`. We will use these to
@@ -77,9 +89,9 @@ libraries, you can do so with code similar to the following:
 binaries += filter(lambda x: x[1].split('/')[2] in ["linux-amd64"], collect_dynamic_libs('py5'))
 ```
 
-The below code will collect the py5 logo images, found in `py5_tools`. A
-warning message will be displayed to the console when the Sketch executes if
-this is omitted.
+The below code will collect the py5 logo images, found in `py5_tools`. If this
+is omitted, a warning message will be displayed to the console when the Sketch
+executes.
 
 ```python
 datas += collect_data_files('py5_tools')
@@ -118,7 +130,9 @@ datas += collect_data_files('debugpy')
 
 Sometimes PyInstaller will package Python libraries your application doesn't
 actually need. Unless your Sketch explicitly uses these, the following libraries
-can be safely excluded. This will reduce the final package size by ~20%.
+can be safely excluded. This will reduce the final package size by ~20%. There
+might be other libraries that can also be excluded. If package size is a
+concern, feel free to experiment.
 
 ```python
 excludes = ['matplotlib', 'scipy', 'jedi', 'lxml']
