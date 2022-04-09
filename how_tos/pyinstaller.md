@@ -17,7 +17,7 @@ If you want to start with a working example, see this gist. For a line by line
 explanation, read the rest of this page. The below example Spec File will
 create an application called `simple` from a py5 Sketch implemented in the
 Python file `simple.py`. Typically you would put this in a Spec File named
-`simple.spec` and packaged at the command line with:
+`simple.spec` and run it at the command line with:
 
 ```bash
 pyinstaller simple.spec
@@ -99,15 +99,15 @@ datas += collect_data_files('py5_tools')
 
 ### Sketch Code
 
-Normally PyInstaller packages Python bytecode files, not the actual source files.
-However, py5 needs the actual source file if your Sketch calls [`size()`](../reference/sketch_size)
-from the `setup()` function.
+Normally PyInstaller packages Python bytecode files, not the actual source
+files. However, py5 needs the actual source file if your Sketch calls
+[`size()`](../reference/sketch_size) from the `setup()` function.
 
-Technically, [`size()`](../reference/sketch_size) should only be called from a `settings()` function,
-but py5 lets you simplify your code and put it in `setup()` instead. This is
-conditional on py5 being able to parse your code and create a `settings()`
-function on your behalf. To accomplish this, py5 needs access to the source code
-for your `setup()` function.
+Technically, [`size()`](../reference/sketch_size) should only be called from a
+`settings()` function, but py5 lets you simplify your code and put it in
+`setup()` instead. This is conditional on py5 being able to parse your code and
+create a `settings()` function on your behalf. To accomplish this, py5 needs
+access to the source code for your `setup()` function.
 
 You can skip this step if your py5 Sketch already has a `settings()` function
 that calls [`size()`](../reference/sketch_size).
