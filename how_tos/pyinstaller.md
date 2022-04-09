@@ -13,9 +13,9 @@ that need to be addressed with the PyInstaller utilities.
 
 ## PyInstaller Spec File Explanation
 
-If you want to start by reading a working example, see this gist. For a line
-by line explanation, read the rest of this page. The below example Spec File
-will create an application called `simple` from a py5 Sketch implemented in the
+If you want to start with a working example, see this gist. For a line by line
+explanation, read the rest of this page. The below example Spec File will
+create an application called `simple` from a py5 Sketch implemented in the
 Python file `simple.py`. Typically you would put this in a Spec File named
 `simple.spec` and packaged at the command line with:
 
