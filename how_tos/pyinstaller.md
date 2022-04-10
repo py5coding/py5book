@@ -13,11 +13,11 @@ that need to be addressed with the PyInstaller utilities.
 
 ## PyInstaller Spec File Explanation
 
-If you want to start with a working example, see this gist. For a line by line
-explanation, read the rest of this page. The below example Spec File will
-create an application called `simple` from a py5 Sketch implemented in the
-Python file `simple.py`. Typically you would put this in a Spec File named
-`simple.spec` and run it at the command line with:
+See this gist if you want to start with a [working PyInstaller example](https://gist.github.com/hx2A/da84f59794196c59d1b67166bc324cd1).
+For a line by line explanation, read the rest of this page. The below example
+Spec File will create an application called `simple` from a py5 Sketch
+implemented in the Python file `simple.py`. Typically you would put this in a
+Spec File named `simple.spec` and run it at the command line with:
 
 ```bash
 pyinstaller simple.spec
@@ -83,7 +83,8 @@ binaries += collect_dynamic_libs('py5')
 The above code will collect the native libraries py5 contains for all supported
 platforms. This is a bit excessive because the package PyInstaller creates will
 not be able to run on all platforms. If you want to limit the collected native
-libraries, you can do so with code similar to the following:
+libraries to only those that are relevant for the package, you can do so with
+code similar to the following:
 
 ```python
 binaries += filter(lambda x: x[1].split('/')[2] in ["linux-amd64"], collect_dynamic_libs('py5'))
@@ -138,7 +139,7 @@ concern, feel free to experiment.
 excludes = ['matplotlib', 'scipy', 'jedi', 'lxml']
 ```
 
-### Boilerplate PyInstaller Code
+### PyInstaller Package Assembly
 
 The below code is a slight modification of the default PyInstaller generated
 Spec File to connect the variables defined above to PyInstaller's `Analysis`
@@ -171,29 +172,6 @@ with this:
 ```python
 exe = EXE(pyz,
           a.scripts,
-          a.binaries,
-          a.zipfiles,
-          a.datas,
-          [],
-          name='simple',
-          debug=False,
-          bootloader_ignore_signals=False,
-          strip=False,
-          upx=True,
-          upx_exclude=[],
-          runtime_tmpdir=None,
-          console=True,
-          disable_windowed_traceback=False,
-          target_arch=None,
-          codesign_identity=None,
-          entitlements_file=None)
-```
-
-To create a single executable, conclude your Spec File with this instead:
-
-```python
-exe = EXE(pyz,
-          a.scripts,
           [],
           exclude_binaries=True,
           name='simple',
@@ -215,4 +193,27 @@ coll = COLLECT(exe,
                upx=True,
                upx_exclude=[],
                name='simple')
+```
+
+To create a single file executable, conclude your Spec File with this instead:
+
+```python
+exe = EXE(pyz,
+          a.scripts,
+          a.binaries,
+          a.zipfiles,
+          a.datas,
+          [],
+          name='simple',
+          debug=False,
+          bootloader_ignore_signals=False,
+          strip=False,
+          upx=True,
+          upx_exclude=[],
+          runtime_tmpdir=None,
+          console=True,
+          disable_windowed_traceback=False,
+          target_arch=None,
+          codesign_identity=None,
+          entitlements_file=None)
 ```
