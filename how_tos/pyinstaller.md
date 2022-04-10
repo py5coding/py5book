@@ -44,6 +44,7 @@ will need to locate Java on your machine and add the path to `datas`, similar
 to the following:
 
 ```python
+# modify the following line to reflect the location of Java 17 on your machine
 datas += [('/usr/lib/jvm/java-17-openjdk', 'JAVA_HOME')]
 ```
 
