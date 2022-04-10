@@ -131,12 +131,12 @@ datas += collect_data_files('debugpy')
 
 Sometimes PyInstaller will package Python libraries your application doesn't
 actually need. Unless your Sketch explicitly uses these, the following libraries
-can be safely excluded. This will reduce the final package size by ~20%. There
+can be safely excluded. This will reduce the final package size by ~30%. There
 might be other libraries that can also be excluded. If package size is a
 concern, feel free to experiment.
 
 ```python
-excludes = ['matplotlib', 'scipy', 'jedi', 'lxml']
+excludes = ['matplotlib', 'scipy', 'jedi', 'lxml', 'PyQt5']
 ```
 
 ### PyInstaller Package Assembly
