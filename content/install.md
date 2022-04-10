@@ -2,7 +2,7 @@
 
 Before proceeding, you should know that this is a new project with
 documentation and setup instructions that are a bit rough around the edges.
-Additionally, there a few [issues with Mac (OSX) computers](osx_users). And
+Additionally, there are a few [issues with Mac (OSX) computers](osx_users). And
 finally, you should also know that this project is currently maintained by
 only one person, and in my free time.
 
@@ -163,7 +163,14 @@ python -c "import jdk; print('Java installed to', jdk.install('17'))"
 
 You'll get a weird error if you run that command more than once.
 
-Now you can launch jupyter lab and start coding with py5.
+It isn't necessary to set the `JAVA_HOME` environment variable, but if it is
+already set, you will need to make sure it is set to a Java 17 installation
+because py5 will always use the version that `JAVA_HOME` points to, even if
+there is a newer version available elsewhere on your machine. If it is set
+incorrectly, py5 will provide you with an error message with some debugging
+information to help you fix it.
+
+Now that Java is installed, you can launch jupyter lab and start coding with py5.
 
 ``` bash
 jupyter lab
