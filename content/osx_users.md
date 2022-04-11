@@ -11,8 +11,7 @@ OSX experiences.
 -   The [](/reference/sketch_run_sketch) method's `block` parameter is
     by necessity set to `False` when run through Jupyter Notebooks and set to
     `True` when run through a generic Python interpreter
--   Apple Silicon is a mystery and will probably remain a mystery until I can
-    get my hands on one to test
+-   OpenGL renderers (P2D and P3D) do not work on Apple Silicon machines
 -   The py5bot Jupyter kernel and some py5 magics cannot use the OpenGL renderers
 -   The render helper tools cannot use the OpenGL renderers
 -   When using Jupyter notebooks, Sketches that use the default renderer will not
@@ -174,28 +173,20 @@ A future version of py5 will address these issues.
 ## Apple Silicon
 
 The Apple Silicon version of Processing (Java) is not yet complete and is only
-available for download through GitHub. Users are advised to download the OSX
-build for Intel CPUs instead.
+available for download through GitHub. Processing users are advised to download
+the OSX build for Intel CPUs instead.
 
-Without having an Apple Silicon machine to test on, I can only guess if py5 runs
-on those machines. My best idea is to follow the advice provided for Processing
-and have py5 use the native libraries for Intel CPUs. This might work, or it
-might not.
+The current version of py5 uses a recent version of Processing's Jars. When py5
+is run on Apple Silicon machines, the default `JAVA2D` renderer works but the
+OpenGL renderers (`P2D` and `P3D`) do not.
 
-If you have an Apple Silicon machine and for some reason you want py5 to use the
-Apple Silicon native libraries, perhaps for testing purposes, use the following
-code before importing py5:
-
-```python
-import py5_tools
-
-py5_tools.add_options('-Dprocessing.natives.TestAppleSilicon=true')
-
-import py5
-```
-
-If there is a py5 release that works correctly when the above code is used,
-please let me know.
+The last known version of py5 that supported OpenGL renderers on Apple Silicon
+is 0.6.0. When the Processing team began the software efforts to use Apple
+Silicon's native libraries, changes were introduced that caused py5 to not work
+as well on that hardware. Eventually py5's code will adapt, but without actually
+having one of these machines to develop and test on, this will take some time.
+I will have an opportunity to get access to an Apple Silicon machine in June. If
+this problem isn't solved before then, I'll do my best to fix it at that time.
 
 ## Sketch Exit
 
