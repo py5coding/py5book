@@ -181,12 +181,13 @@ is run on Apple Silicon machines, the default `JAVA2D` renderer works but the
 OpenGL renderers (`P2D` and `P3D`) do not.
 
 The last known version of py5 that supported OpenGL renderers on Apple Silicon
-is 0.6.0. When the Processing team began the software efforts to use Apple
-Silicon's native libraries, changes were introduced that caused py5 to not work
-as well on that hardware. Eventually py5's code will adapt, but without actually
-having one of these machines to develop and test on, this will take some time.
-I will have an opportunity to get access to an Apple Silicon machine in June. If
-this problem isn't solved before then, I'll do my best to fix it at that time.
+is 0.6.0 and I believe 0.7.0 worked as well. When the Processing team began the
+software efforts to use Apple Silicon's native libraries, changes were
+introduced that caused py5 to not work as well on that hardware. Eventually
+py5's code will adapt, but without actually having one of these machines to
+develop and test on, that will take some time. I will have an opportunity to get
+access to an Apple Silicon machine in June. If this problem isn't solved before
+then, I'll do my best to fix it at that time.
 
 ## Sketch Exit
 
@@ -196,4 +197,5 @@ When the Sketch exits you will see the following warning:
 NewtNSView::dealloc: softLock still hold @ dealloc!
 ```
 
-Ignore that. Windows and Linux users also get odd messages when exiting a Sketch.
+Ignore that. Windows and Linux users also get odd messages when exiting a
+Sketch.
