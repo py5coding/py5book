@@ -69,6 +69,14 @@ parts:
     sections:
     - glob: reference/py5font_*
 
+  - file: reference/py5mouseevent
+    sections:
+    - glob: reference/py5mouseevent_*
+
+  - file: reference/py5keyevent
+    sections:
+    - glob: reference/py5keyevent_*
+
   - file: reference/py5vector
     sections:
     - glob: reference/py5vector_*
