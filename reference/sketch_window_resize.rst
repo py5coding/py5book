@@ -44,7 +44,7 @@ Set a new width and height for the Sketch window. You do not need to call :doc:`
 
 Changing the window size will clear the drawing canvas. If you do this, the :doc:`sketch_width` and :doc:`sketch_height` variables will change.
 
-This method provides the same funcationality as :doc:`py5surface_set_size` but without the need to interact directly with the :doc:`py5surface` object.
+This method provides the same functionality as :doc:`py5surface_set_size` but without the need to interact directly with the :doc:`py5surface` object.
 
 Underlying Processing method: windowResize
 
@@ -62,5 +62,5 @@ Parameters
 * **new_width**: `int` - new window width
 
 
-Updated on February 21, 2022 11:40:40am UTC
+Updated on April 27, 2022 11:19:15am UTC
 
