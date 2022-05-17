@@ -48,7 +48,7 @@ Description
 
 Retrieve native key event object. The returned object will be a Java object and its type can vary based on the renderer used by the Sketch and the operating system the Sketch is run on. Sometimes the native object can be used to access functionality not otherwise available through Processing or py5.
 
-Be aware that there might be situations where the native event object is ``None``.
+Be aware that it is possible for the native event object to be ``None``, such as when interacting with a Sketch through :doc:`py5tools_sketch_portal`.
 
 Underlying Processing method: getNative
 
@@ -59,5 +59,5 @@ Syntax
 
     get_native() -> Any
 
-Updated on April 27, 2022 10:44:51am UTC
+Updated on May 17, 2022 15:08:25pm UTC
 
