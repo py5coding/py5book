@@ -340,7 +340,7 @@ Mode. See [](py5_modes) to learn about the
 different py5 Modes.
 
 ``` bash
-python -m py5jupyter.kernels.py5 install --sys-prefix
+python -m py5jupyter.kernels.py5.install --sys-prefix
 ```
 
 The `--sys-prefix` argument is optional but I recommend you use it. It
@@ -355,7 +355,7 @@ Kernel. This is a customized Python kernel that will let you write py5
 code in Static Mode.
 
 ``` bash
-python -m py5jupyter.kernels.py5bot install --sys-prefix
+python -m py5jupyter.kernels.py5bot.install --sys-prefix
 ```
 
 ## Keeping py5 Updated
