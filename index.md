@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.10.3
+    jupytext_version: 1.11.5
 kernelspec:
   display_name: py5
   language: python
@@ -36,13 +36,18 @@ def draw():
     rect(random(width), random(height), 10, 10)
 
 
+def mouse_clicked():
+    fill(random_int(255), random_int(255), random_int(255))
+
+
 run_sketch()
 ```
 
 Here is an animated GIF to give you an idea of what that Sketch looks like:
 
 ```{code-cell} ipython3
-:tags: ["remove-cell"]
+:tags: [remove-cell]
+
 py5_tools.animated_gif('images/main/index_example.gif', 10, 0.25, 0.25)
 ```
 
@@ -51,11 +56,14 @@ py5_tools.animated_gif('images/main/index_example.gif', 10, 0.25, 0.25)
 But don't settle for an animated GIF! Use the rocket ship icon at the top of
 this page to run the example on Binder, or better yet, use Live Code with Thebe.
 Then you will be able to create a
-[Sketch portal](/reference/py5tools_sketch_portal) and see the running Sketch
-embedded right in this page.
+[Sketch Portal](/reference/py5tools_sketch_portal) and see the running Sketch
+embedded right in this page. You'll even be able click on the Sketch Portal
+to trigger the `mouse_clicked()` event. The Sketch Portal accepts all of py5's
+keyboard and mouse events. It is fully interactive!
 
 ```{code-cell} ipython3
-:tags: ["remove-output"]
+:tags: [remove-output]
+
 py5_tools.sketch_portal()
 ```
 
