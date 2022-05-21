@@ -48,7 +48,7 @@ The Sketch Portal is a custom Jupyter Widget and can handle keyboard or mouse ev
 
 This function is intended to be used when a real display is not available, such as when using py5 through an online Jupyter notebook system like binder (mybinder.org). You are free to execute code elsewhere in the notebook while the Sketch is running and the portal is open. This function can only be used in a Jupyter Notebook. It uses ZMQ to stream JPEG images from the kernel to the client front-end.
 
-If you are using Jupyter Lab, try right clicking in the output area of the cell and selecting "Create New View for Output". This will create a new panel just for the Sketch portal. Creating a "New Console for Notebook" and creating a portal there works well also.
+If you are using Jupyter Lab, try right clicking in the output area of the cell and selecting "Create New View for Output". This will create a new panel just for the Sketch Portal. Creating a "New Console for Notebook" and creating a portal there works well also.
 
 This command can be called before :doc:`sketch_run_sketch` if the current Sketch is in the :doc:`sketch_is_ready` state.
 
@@ -56,7 +56,7 @@ Use the ``time_limit`` parameter to set a time limit (seconds). Use ``throttle_f
 
 If your Sketch has a ``post_draw()`` method, use the ``hook_post_draw`` parameter to make this function run after ``post_draw()`` instead of ``draw()``. This is important when using Processing libraries that support ``post_draw()`` such as Camera3D or ColorBlindness.
 
-To stop a Sketch portal, wait for the time limit to expire, call :doc:`sketch_exit_sketch`, or press the "exit_sketch()" button below the portal. If you delete the cell with the ``Py5SketchPortal`` object, the portal will no longer be visible but the Sketch will still be streaming frames to the notebook client, wasting resources. A Sketch can only have one open portal, so opening a new portal with different options will replace an existing portal.
+To stop a Sketch Portal, wait for the time limit to expire, call :doc:`sketch_exit_sketch`, or press the "exit_sketch()" button below the portal. If you delete the cell with the ``Py5SketchPortal`` object, the portal will no longer be visible but the Sketch will still be streaming frames to the notebook client, wasting resources. A Sketch can only have one open portal, so opening a new portal with different options will replace an existing portal.
 
 Syntax
 ------
@@ -74,8 +74,8 @@ Parameters
 * **scale**: `float = 1.0` - scale factor to adjust the height and width of the portal
 * **sketch**: `Sketch = None` - running Sketch
 * **throttle_frame_rate**: `float = 30` - throttle portal frame rate below Sketch's frame rate
-* **time_limit**: `float = 0.0` - time limit in seconds for Sketch portal; set to 0 (default) for no limit
+* **time_limit**: `float = 0.0` - time limit in seconds for the Sketch Portal; set to 0 (default) for no limit
 
 
-Updated on May 17, 2022 15:08:25pm UTC
+Updated on May 21, 2022 12:41:38pm UTC
 
