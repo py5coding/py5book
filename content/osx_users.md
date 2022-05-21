@@ -173,29 +173,12 @@ A future version of py5 will address these issues.
 
 ## Apple Silicon
 
-The Apple Silicon version of Processing (Java) is not yet complete and is only
-available for download through GitHub. Users are advised to download the OSX
-build for Intel CPUs instead.
-
-Without having an Apple Silicon machine to test on, I can only guess if py5 runs
-on those machines. My best idea is to follow the advice provided for Processing
-and have py5 use the native libraries for Intel CPUs. This might work, or it
-might not.
-
-If you have an Apple Silicon machine and for some reason you want py5 to use the
-Apple Silicon native libraries, perhaps for testing purposes, use the following
-code before importing py5:
-
-```python
-import py5_tools
-
-py5_tools.add_options('-Dprocessing.natives.TestAppleSilicon=true')
-
-import py5
-```
-
-If there is a py5 release that works correctly when the above code is used,
-please let me know.
+The Apple Silicon version of Processing (Java) is complete and py5 contains the
+correct jars and native libraries. However, I don't have an Apple Silicon
+machine to test with, so I don't know if it actually works correctly or not. If
+you have such a machine available, please test and let me know. If it doesn't
+work, know that I have a plan to get access to one in June and will be able to
+test and debug any issues then.
 
 ## Sketch Exit
 
