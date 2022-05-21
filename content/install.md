@@ -44,13 +44,16 @@ If you already have Java 17 and Python 3.8+ available on your computer, you
 can install py5 with the below command.
 
 ``` bash
-pip install py5
+pip install py5[jupyter]
 ```
 
-You can optionally install [Cairo](https://www.cairographics.org/) and
-[CairoSVG](https://cairosvg.org/) to enable py5's extra SVG support. If you
-like using Jupyter Notebooks, consider installing one or both of py5's
+If you like using Jupyter Notebooks, consider installing one or both of py5's
 Jupyter Notebook Kernels: [py5 kernel](#py5-kernel) and [py5bot](#py5bot).
+If you aren't going to use Jupyter, you can remove the ``[jupyter]`` extras
+option.
+
+You can optionally install [Cairo](https://www.cairographics.org/) and
+[CairoSVG](https://cairosvg.org/) to enable py5's extra SVG support.
 
 ## Quick Example
 
@@ -324,6 +327,11 @@ kernel](#py5-kernel) and [py5bot](#py5bot).
 
 ## Jupyter Notebook Kernels
 
+To use py5's Jupyter support you must have the py5jupyter library installed.
+Starting with version 0.8.0, py5's Jupyter functionality requires the second
+optional dependency py5jupyter. Use of py5 and Jupyter without py5jupyter is
+possible but is deprecated.
+
 ### py5 kernel
 
 You can optionally install the py5 Jupyter Notebook Kernel. This is a
@@ -332,7 +340,7 @@ Mode. See [](py5_modes) to learn about the
 different py5 Modes.
 
 ``` bash
-python -m py5_tools.kernel.install --sys-prefix
+python -m py5jupyter.kernels.py5 install --sys-prefix
 ```
 
 The `--sys-prefix` argument is optional but I recommend you use it. It
@@ -347,7 +355,7 @@ Kernel. This is a customized Python kernel that will let you write py5
 code in Static Mode.
 
 ``` bash
-python -m py5_tools.py5bot.install --sys-prefix
+python -m py5jupyter.kernels.py5bot install --sys-prefix
 ```
 
 ## Keeping py5 Updated
@@ -357,5 +365,5 @@ will want to upgrade your installation, which you can do with this
 command:
 
 ``` bash
-pip install --upgrade py5
+pip install --upgrade py5 py5jupyter
 ```
