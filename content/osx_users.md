@@ -18,7 +18,7 @@ OSX experiences.
 -   When using Jupyter notebooks, Sketches that use the default renderer will not
     appear as an icon on the dock at the bottom of the screen
 -   Ignore the warnings you see when exiting a Sketch ([Issue
-    #6](https://github.com/hx2A/py5generator/issues/6))
+    #6](https://github.com/py5coding/py5generator/issues/6))
 ```
 
 None of these will stop you from using py5 productively on OSX.

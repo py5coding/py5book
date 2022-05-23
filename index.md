@@ -81,5 +81,5 @@ is done through [py5generator][py5generator_repo].
 
 [processing]: https://github.com/processing/processing4
 [jpype]: https://github.com/jpype-project/jpype
-[py5_repo]: https://github.com/hx2A/py5
-[py5generator_repo]: https://github.com/hx2A/py5generator
+[py5_repo]: https://github.com/py5coding/py5
+[py5generator_repo]: https://github.com/py5coding/py5generator

@@ -22,7 +22,7 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/hx2A/py5book
+  url: https://github.com/py5coding/py5book
   branch: main
 
 launch_buttons:

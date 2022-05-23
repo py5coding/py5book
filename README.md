@@ -6,7 +6,7 @@
 
 [![Downloads](https://pepy.tech/badge/py5/week)](https://pepy.tech/project/py5)
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/hx2A/py5book/HEAD?urlpath=lab)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/py5coding/py5book/HEAD?urlpath=lab)
 
 py5 is a new version of [**Processing**][processing] for Python 3.8+. It makes the Java [**Processing**][processing] jars available to the CPython interpreter using [**JPype**][jpype]. It can do just about everything [**Processing**][processing] can do, except with Python instead of Java code.
 
@@ -60,11 +60,11 @@ The documentation website, [https://py5.ixora.io/](https://py5.ixora.io/), is a 
 
 Have a comment or question? We'd love to hear from you! The best ways to reach out are:
 
-* github [discussions](https://github.com/hx2A/py5generator/discussions) and [issues](https://github.com/hx2A/py5generator/issues)
+* github [discussions](https://github.com/py5coding/py5generator/discussions) and [issues](https://github.com/py5coding/py5generator/issues)
 * twitter [@py5coding](https://twitter.com/py5coding)
 * [processing foundation discourse](https://discourse.processing.org/)
 
 [processing]: https://github.com/processing/processing4
 [jpype]: https://github.com/jpype-project/jpype
-[py5_repo]: https://github.com/hx2A/py5
-[py5generator_repo]: https://github.com/hx2A/py5generator
+[py5_repo]: https://github.com/py5coding/py5
+[py5generator_repo]: https://github.com/py5coding/py5generator

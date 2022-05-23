@@ -15,7 +15,7 @@ program `git`.
 ## Clone Source Repository from GitHub
 
 You will need to clone the [py5generator
-repo](https://github.com/hx2A/py5generator) from GitHub. If you don\'t
+repo](https://github.com/py5coding/py5generator) from GitHub. If you don\'t
 already have the [Processing 4
 application](https://processing.org/download) on your computer, you\'ll need to
 download that too.
@@ -26,7 +26,7 @@ On my computer I keep all of the py5 repos together in one directory.
 $ mkdir pythonprocessing
 $ cd pythonprocessing
 
-$ git clone https://github.com/hx2A/py5generator
+$ git clone https://github.com/py5coding/py5generator
 ```
 
 ## Create Anaconda Environment
