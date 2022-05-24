@@ -34,7 +34,7 @@ def setup():
 
 
 def draw():
-    rect(random(width), random(height), 10, 10)
+    square(mouse_x, mouse_y, 10)
 
 
 def mouse_clicked():
@@ -45,12 +45,6 @@ run_sketch()
 ```
 
 Here is an animated GIF to give you an idea of what that Sketch looks like:
-
-```{code-cell} ipython3
-:tags: [remove-cell]
-
-py5_tools.animated_gif('images/main/index_example.gif', 10, 0.25, 0.25)
-```
 
 ![index_example](images/main/index_example.gif)
 
