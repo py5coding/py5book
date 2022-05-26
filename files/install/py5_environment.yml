@@ -10,4 +10,4 @@ dependencies:
   - line_profiler
   - pip
   - pip:
-      - py5
+      - py5[jupyter]

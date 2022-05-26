@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.10.3
+    jupytext_version: 1.11.5
 kernelspec:
   display_name: Python 3
   language: python
@@ -95,14 +95,15 @@ py5_tools.screenshot()
 
 ## Open the py5 Sketch Portal
 
-This will create a Sketch portal and embed it in the notebook using [py5_tools.sketch_portal()](/reference/py5tools_sketch_portal).
+This will create a Sketch Portal and embed it in the notebook using [py5_tools.sketch_portal()](/reference/py5tools_sketch_portal).
 
 Internally the portal uses a hook mechanism that allows you to insert code to be run before or after any py5 method. This hook mechanism will one day allow developers to create py5 libraries and extensions.
 
 To be clear, although you will see a live animation in the Sketch Portal, the Sketch is not actually running in your browser. It's kind of like when you watch a live television program on your TV. The live events are taking place somewhere else, but images of the events are being broadcast to your television.
 
 ```{code-cell} ipython3
-:tags: ["remove-output"]
+:tags: [remove-output]
+
 portal = py5_tools.sketch_portal(quality=75, scale=1.0)
 
 portal
@@ -124,4 +125,4 @@ py5.get_frame_rate()
 
 ## Next Steps for Jupyter Lab Users
 
-If you are using Jupyter Lab, after executing the Sketch portal cell, try right clicking in the output area and selecting `Create New View for Output`. This will create a new panel just for the Sketch portal. Creating a `New Console for Notebook` and creating a portal there works well also.
+If you are using Jupyter Lab, after executing the Sketch Portal cell, try right clicking in the output area and selecting `Create New View for Output`. This will create a new panel just for the Sketch Portal. Creating a `New Console for Notebook` and creating a portal there works well also.

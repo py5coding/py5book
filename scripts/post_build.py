@@ -26,7 +26,7 @@ BUILD_DIR = Path("_build/html/")
 
 IMG_REGEX = re.compile(r'<img src=\"(images/[^\"]*)\"[^>]*>')
 GITHUB_EDIT_LINK_REGEX = re.compile(
-    r"https://github.com/hx2A/py5book/edit/main/reference/([^\.]*)\.rst"
+    r"https://github.com/py5coding/py5book/edit/main/reference/([^\.]*)\.rst"
 )
 
 GROUP_CASE_PAIRS = [
@@ -62,11 +62,11 @@ for refdoc in BUILD_DIR.glob("reference/*.html"):
                 stem = stem.replace(lowercase, py5case)
                 break
 
-        new_link = f'https://github.com/hx2A/py5generator/edit/main/py5_docs/Reference/api_en/{stem}.txt'
+        new_link = f'https://github.com/py5coding/py5generator/edit/main/py5_docs/Reference/api_en/{stem}.txt'
         html = html.replace(original_link, new_link)
 
         # fix new issue link to point to py5generator repo
-        html = html.replace('https://github.com/hx2A/py5book/issues/new?', 'https://github.com/hx2A/py5generator/issues/new?')
+        html = html.replace('https://github.com/py5coding/py5book/issues/new?', 'https://github.com/py5coding/py5generator/issues/new?')
 
         with open(refdoc, "w") as f:
             f.write(html)

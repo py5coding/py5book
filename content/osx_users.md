@@ -17,7 +17,7 @@ OSX experiences.
 -   When using Jupyter notebooks, Sketches that use the default renderer will not
     appear as an icon on the dock at the bottom of the screen
 -   Ignore the warnings you see when exiting a Sketch ([Issue
-    #6](https://github.com/hx2A/py5generator/issues/6))
+    #6](https://github.com/py5coding/py5generator/issues/6))
 ```
 
 None of these will stop you from using py5 productively on OSX.
@@ -172,22 +172,12 @@ A future version of py5 will address these issues.
 
 ## Apple Silicon
 
-The Apple Silicon version of Processing (Java) is not yet complete and is only
-available for download through GitHub. Processing users are advised to download
-the OSX build for Intel CPUs instead.
-
-The current version of py5 uses a recent version of Processing's Jars. When py5
-is run on Apple Silicon machines, the default `JAVA2D` renderer works but the
-OpenGL renderers (`P2D` and `P3D`) do not.
-
-The last known version of py5 that supported OpenGL renderers on Apple Silicon
-is 0.6.0 and I believe 0.7.0 worked as well. When the Processing team began the
-software efforts to use Apple Silicon's native libraries, changes were
-introduced that caused py5 to not work as well on that hardware. Eventually
-py5's code will adapt, but without actually having one of these machines to
-develop and test on, that will take some time. I will have an opportunity to get
-access to an Apple Silicon machine in June. If this problem isn't solved before
-then, I'll do my best to fix it at that time.
+The Apple Silicon version of Processing (Java) is complete and py5 contains the
+correct jars and native libraries. However, I don't have an Apple Silicon
+machine to test with, so I don't know if it actually works correctly or not. If
+you have such a machine available, please test and let me know. If it doesn't
+work, know that I have a plan to get access to one in June and will be able to
+test and debug any issues then.
 
 ## Sketch Exit
 

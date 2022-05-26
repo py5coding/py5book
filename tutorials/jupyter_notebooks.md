@@ -25,6 +25,8 @@ import py5_tools
 import py5
 ```
 
+You should never need to import the py5jupyter library directly.
+
 ## Getting Help
 
 Before continuing, it is worth pointing out that you can access the docstrings for any py5 functions by appending a `?` to the end of the function, or with the builtin `help` function.
@@ -288,14 +290,20 @@ def setup():
     py5.rect_mode(py5.CENTER)
 ```
 
-And finally, the `draw` function to draw random squares.
+Next, the `draw` function to draw random squares.
 
 ```{code-cell} ipython3
 def draw():
-    pick_random_fill()
     random_x = py5.random(py5.width)
     random_y = py5.random(py5.height)
     py5.rect(random_x, random_y, 10, 10)
+```
+
+Finally, let's define a `mouse_clicked` function to change the fill color when the Sketch is clicked.
+
+```{code-cell} ipython3
+def mouse_clicked():
+    pick_random_fill()
 ```
 
 To run the Sketch, use the [run_sketch()](/reference/sketch_run_sketch) method. It will pull out the `setup` and `draw` functions from the notebook's namespace and put them together in a Sketch.
@@ -305,13 +313,15 @@ py5.run_sketch()
 print('the sketch is running!')
 ```
 
-If you are runnning this notebook locally, you will see a new window open for the running Sketch. If you are running this through Binder, or possibly using the documentation website's Live Code feature (see the rocket ship icon at the top of the page), the Sketch is running on a server somewhere in the cloud. In that case, to see the Sketch you will need to create a Sketch portal using [py5tools.sketch_portal()](/reference/py5tools_sketch_portal). This will create what is effectively a view into what is being displayed on that Sketch window running in the cloud. To be clear, although you will see a live animation in the Sketch Portal, the Sketch is not actually running in your browser. It’s kind of like when you watch a live television program on your TV. The live events are taking place somewhere else, but images of the events are being broadcast to your television.
+If you are runnning this notebook locally, you will see a new window open for the running Sketch. If you are running this through Binder, or possibly using the documentation website's Live Code feature (see the rocket ship icon at the top of the page), the Sketch is running on a server somewhere in the cloud. In that case, to see the Sketch you will need to create a Sketch Portal using [py5tools.sketch_portal()](/reference/py5tools_sketch_portal). This will create what is effectively a view into what is being displayed on that Sketch window running in the cloud. To be clear, although you will see a live animation in the Sketch Portal, the Sketch is not actually running in your browser. It’s kind of like when you watch a live television program on your TV. The live events are taking place somewhere else, but images of the events are being broadcast to your television.
 
 ```{code-cell} ipython3
 :tags: [remove-output]
 
 py5_tools.sketch_portal()
 ```
+
+Click on the Sketch Portal to make the fill color change. The Sketch Portal will respond to all of py5's keyboard and mouse events. It is fully interactive!
 
 By default, the [run_sketch()](/reference/sketch_run_sketch) method returns right away, as illustrated by the `print` statement. This enables the notebook user to continue coding, including executing code that interacts with the Sketch. The Sketch continues to run in its own window.
 

@@ -23,6 +23,7 @@ Setting
 ^^^^^^^
 
 * `background() <sketch_background.html>`_
+* `clear() <sketch_clear.html>`_
 * `color_mode() <sketch_color_mode.html>`_
 * `fill() <sketch_fill.html>`_
 * `no_fill() <sketch_no_fill.html>`_
@@ -54,11 +55,17 @@ Environment
 * `pixel_density() <sketch_pixel_density.html>`_
 * `pixel_height <sketch_pixel_height.html>`_
 * `pixel_width <sketch_pixel_width.html>`_
+* `ratio_left <sketch_ratio_left.html>`_
+* `ratio_scale <sketch_ratio_scale.html>`_
+* `ratio_top <sketch_ratio_top.html>`_
+* `rheight <sketch_rheight.html>`_
+* `rwidth <sketch_rwidth.html>`_
 * `size() <sketch_size.html>`_
 * `sketch_path() <sketch_sketch_path.html>`_
 * `smooth() <sketch_smooth.html>`_
 * `width <sketch_width.html>`_
 * `window_move() <sketch_window_move.html>`_
+* `window_ratio() <sketch_window_ratio.html>`_
 * `window_resizable() <sketch_window_resizable.html>`_
 * `window_resize() <sketch_window_resize.html>`_
 * `window_title() <sketch_window_title.html>`_
@@ -130,6 +137,8 @@ Mouse
 * `mouse_y <sketch_mouse_y.html>`_
 * `pmouse_x <sketch_pmouse_x.html>`_
 * `pmouse_y <sketch_pmouse_y.html>`_
+* `rmouse_x <sketch_rmouse_x.html>`_
+* `rmouse_y <sketch_rmouse_y.html>`_
 
 Time & Date
 ^^^^^^^^^^^

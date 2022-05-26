@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.10.3
+    jupytext_version: 1.11.5
 kernelspec:
   display_name: py5
   language: python
@@ -16,13 +16,14 @@ kernelspec:
 
 py5 is a new version of [**Processing**][processing] for Python 3.8+. It makes
 the Java [**Processing**][processing] jars available to the CPython interpreter
-using [**JPype**][jpype]. It can do just about everything
+using [**JPype**][jpype]. It can do just about all of the 2D and 3D drawing
 [**Processing**][processing] can do, except with Python instead of Java code.
 
 The goal of py5 is to create a new version of Processing that is integrated
 into the Python ecosystem. Built into the library are thoughtful choices about
-how to best get py5 to work with other popular Python libraries such as
-[numpy](https://www.numpy.org/) or [Pillow](https://python-pillow.org/).
+how to best get py5 to work with other popular Python libraries and tools such
+as [Jupyter](https://jupyter.org/), [numpy](https://www.numpy.org/), and
+[Pillow](https://python-pillow.org/).
 
 Here is the simplest possible example:
 
@@ -33,7 +34,11 @@ def setup():
 
 
 def draw():
-    rect(random(width), random(height), 10, 10)
+    square(mouse_x, mouse_y, 10)
+
+
+def mouse_clicked():
+    fill(random_int(255), random_int(255), random_int(255))
 
 
 run_sketch()
@@ -41,21 +46,19 @@ run_sketch()
 
 Here is an animated GIF to give you an idea of what that Sketch looks like:
 
-```{code-cell} ipython3
-:tags: ["remove-cell"]
-py5_tools.animated_gif('images/main/index_example.gif', 10, 0.25, 0.25)
-```
-
 ![index_example](images/main/index_example.gif)
 
 But don't settle for an animated GIF! Use the rocket ship icon at the top of
 this page to run the example on Binder, or better yet, use Live Code with Thebe.
 Then you will be able to create a
-[Sketch portal](/reference/py5tools_sketch_portal) and see the running Sketch
-embedded right in this page.
+[Sketch Portal](/reference/py5tools_sketch_portal) and see the running Sketch
+embedded right in this page. You'll even be able click on the Sketch Portal
+to trigger the `mouse_clicked()` event. The Sketch Portal accepts all of py5's
+keyboard and mouse events. It is fully interactive!
 
 ```{code-cell} ipython3
-:tags: ["remove-output"]
+:tags: [remove-output]
+
 py5_tools.sketch_portal()
 ```
 
@@ -73,5 +76,5 @@ is done through [py5generator][py5generator_repo].
 
 [processing]: https://github.com/processing/processing4
 [jpype]: https://github.com/jpype-project/jpype
-[py5_repo]: https://github.com/hx2A/py5
-[py5generator_repo]: https://github.com/hx2A/py5generator
+[py5_repo]: https://github.com/py5coding/py5
+[py5generator_repo]: https://github.com/py5coding/py5generator

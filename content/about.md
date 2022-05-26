@@ -17,8 +17,8 @@ involving Python\'s machine learning and data science tools and want to
 make it available and useful for other artists to do the same.
 
 The py5 library itself is created by the meta-programming project
-py5generator. The [source code for py5](https://github.com/hx2A/py5) and
-[the source code for py5generator](https://github.com/hx2A/py5generator)
+py5generator. The [source code for py5](https://github.com/py5coding/py5) and
+[the source code for py5generator](https://github.com/py5coding/py5generator)
 are both available on github.
 
 # Acknowledgments

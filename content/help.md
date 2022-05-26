@@ -8,7 +8,7 @@ and example code. Right now that area of the documentation is seriously
 lacking.
 
 All of the bugs I'd like help with are listed on Github with the [help
-wanted](https://github.com/hx2A/py5generator/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
+wanted](https://github.com/py5coding/py5generator/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
 tag.
 
 In time I'll update this page as this project's needs evolve.
