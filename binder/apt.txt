@@ -1,4 +1,4 @@
-openjdk-11-jre
+openjdk-17-jre
 ca-certificates-java
 libxcursor1
 libxrandr2
