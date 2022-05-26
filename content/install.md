@@ -122,7 +122,7 @@ dependencies:
   - line_profiler
   - pip
   - pip:
-      - py5
+      - py5[jupyter]
 ```
 
 You must activate the environment using `conda activate`. When the environment
