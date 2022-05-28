@@ -70,5 +70,5 @@ Have a comment or question? We'd love to hear from you! The best ways to reach o
 [py5generator_repo]: https://github.com/py5coding/py5generator
 
 [jupyter]: https://jupyter.org/
-[numpy]: https://www.numpy.org/
+[numpy]: https://numpy.org/
 [pillow]: https://python-pillow.org/
