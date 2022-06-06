@@ -44,13 +44,26 @@ If you already have Java 17 and Python 3.8+ available on your computer, you
 can install py5 with the below command.
 
 ``` bash
+pip install py5
+```
+
+If you like using Jupyter Notebooks, consider installing py5jupyter and one or
+both of py5's Jupyter Notebook Kernels: [py5 kernel](#py5-kernel) and
+[py5bot](#py5bot). You can install py5jupyter with this command:
+
+``` bash
+pip install py5jupyter
+```
+
+You can also install py5 and py5jupyter at the same time with this one command:
+
+``` bash
 pip install py5[jupyter]
 ```
 
-If you like using Jupyter Notebooks, consider installing one or both of py5's
-Jupyter Notebook Kernels: [py5 kernel](#py5-kernel) and [py5bot](#py5bot).
-If you aren't going to use Jupyter, you can remove the ``[jupyter]`` extras
-option.
+The ``[jupyter]`` bit at the end of that tells the Python package installer to
+install some of py5's optional library dependencies, which in this case, is the
+py5jupyter library.
 
 You can optionally install [Cairo](https://www.cairographics.org/) and
 [CairoSVG](https://cairosvg.org/) to enable py5's extra SVG support.
@@ -89,7 +102,7 @@ Anaconda's [installation
 instructions](https://docs.anaconda.com/anaconda/install/) are extensive
 and should be able to provide the necessary guidance for your computer.
 
-### Simple Steps
+### Brief Steps
 
 You can create a complete Anaconda environment for py5 using one
 command:
@@ -150,7 +163,7 @@ OpenJDK 64-Bit Server VM 21.9 (build 17.0.2+8, mixed mode, sharing)
 
 If you get an error or see the version number is something like 1.8 or 11.0.14,
 you will need to install or upgrade Java. You can install
-it any way you like. One simple way is to use the
+it any way you like. One straightforward installation approach is to use the
 [Python library install-jdk](https://github.com/jyksnw/install-jdk). Install it
 into your Anaconda environment using `pip install`:
 
@@ -187,7 +200,7 @@ Notebook Kernels: [py5 kernel](#py5-kernel) and [py5bot](#py5bot).
 
 ### Detailed Steps
 
-If the [Simple Steps](#simple-steps) don't work for you or you want more
+If the [Brief Steps](#brief-steps) don't work for you or you want more
 detailed information, the below steps will provide you with the necessary
 information to work through any difficulties.
 
