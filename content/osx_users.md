@@ -11,7 +11,6 @@ OSX experiences.
 -   The [](/reference/sketch_run_sketch) method's `block` parameter is
     by necessity set to `False` when run through Jupyter Notebooks and set to
     `True` when run through a generic Python interpreter
--   OpenGL renderers (P2D and P3D) do not work on Apple Silicon machines
 -   The py5bot Jupyter kernel and some py5 magics cannot use the OpenGL renderers
 -   The render helper tools cannot use the OpenGL renderers
 -   When using Jupyter notebooks, Sketches that use the default renderer will not
@@ -169,15 +168,6 @@ The render helper tools [](/reference/py5functions_render.rst),
 (P2D and P3D) renderers.
 
 A future version of py5 will address these issues.
-
-## Apple Silicon
-
-The Apple Silicon version of Processing (Java) is complete and py5 contains the
-correct jars and native libraries. However, I don't have an Apple Silicon
-machine to test with, so I don't know if it actually works correctly or not. If
-you have such a machine available, please test and let me know. If it doesn't
-work, know that I have a plan to get access to one in June and will be able to
-test and debug any issues then.
 
 ## Sketch Exit
 
