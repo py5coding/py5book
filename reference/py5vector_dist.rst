@@ -49,7 +49,7 @@ Syntax
 
 .. code:: python
 
-    dist(other: Union[Py5Vector, np.ndarray]) -> Union[Py5Vector, np.ndarray[np.floating]]
+    dist(other: Union[Py5Vector, np.ndarray]) -> Union[float, np.ndarray[np.floating]]
 
 Parameters
 ----------
@@ -57,5 +57,5 @@ Parameters
 * **other**: `Union[Py5Vector, np.ndarray]` - vector to calculate the distance from
 
 
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on June 13, 2022 01:23:16am UTC
 

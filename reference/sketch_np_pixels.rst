@@ -67,7 +67,7 @@ Description
 
 The ``np_pixels[]`` array contains the values for all the pixels in the display window. Unlike the one dimensional array :doc:`sketch_pixels`, the ``np_pixels[]`` array organizes the color data in a 3 dimensional numpy array. The size of the array's dimensions are defined by the size of the display window. The first dimension is the height, the second is the width, and the third represents the color channels. The color channels are ordered alpha, red, green, blue (ARGB). Every value in ``np_pixels[]`` is an integer between 0 and 255.
 
-This numpy array is very similar to the image arrays used by other popular Python image libraries, but note that some of them like opencv will by default order the color channels as RGBA.
+This numpy array is very similar to the image arrays used by other popular Python image libraries, but note that many of them will arrange the channels in a different order such as RGBA or BGR.
 
 When the pixel density is set to higher than 1 with the :doc:`sketch_pixel_density` function, the size of ``np_pixels[]``'s height and width dimensions will change. See the reference for :doc:`sketch_pixel_width` or :doc:`sketch_pixel_height` for more information. Nothing about ``np_pixels[]`` will change as a result of calls to :doc:`sketch_color_mode`. 
 
@@ -76,5 +76,5 @@ Much like the :doc:`sketch_pixels` array, there are load and update methods that
 To set the entire contents of ``np_pixels[]`` to the contents of another properly sized numpy array, consider using :doc:`sketch_set_np_pixels`.
 
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on June 13, 2022 01:23:16am UTC
 

@@ -80,7 +80,7 @@ Syntax
 
 .. code:: python
 
-    angle_between(other: Union[Py5Vector, np.ndarray]) -> Union[Py5Vector, np.ndarray[np.floating]]
+    angle_between(other: Union[Py5Vector, np.ndarray]) -> Union[float, np.ndarray[np.floating]]
 
 Parameters
 ----------
@@ -88,5 +88,5 @@ Parameters
 * **other**: `Union[Py5Vector, np.ndarray]` - vector to measure angle between
 
 
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on June 13, 2022 01:23:16am UTC
 
