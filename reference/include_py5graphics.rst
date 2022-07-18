@@ -48,6 +48,7 @@ Environment
 ~~~~~~~~~~~
 
 * `height <py5graphics_height.html>`_
+* `next_page() <py5graphics_next_page.html>`_
 * `no_smooth() <py5graphics_no_smooth.html>`_
 * `pixel_density <py5graphics_pixel_density.html>`_
 * `pixel_height <py5graphics_pixel_height.html>`_

@@ -40,6 +40,8 @@ Description
 
 Set the Sketch window's title. This will typically appear at the window's title bar. The default window title is "Sketch".
 
+This method provides the same functionality as :doc:`sketch_window_title`.
+
 Underlying Processing method: PSurface.setTitle
 
 Syntax
@@ -55,5 +57,5 @@ Parameters
 * **title**: `str` - new window title
 
 
-Updated on May 02, 2022 12:07:22pm UTC
+Updated on July 18, 2022 17:22:20pm UTC
 

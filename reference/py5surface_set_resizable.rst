@@ -44,6 +44,8 @@ Set the Sketch window as resizable by the user. The user will be able to resize 
 
 Changing the window size will clear the drawing canvas. If you do this, the :doc:`sketch_width` and :doc:`sketch_height` variables will change.
 
+This method provides the same functionality as :doc:`sketch_window_resizable`.
+
 Underlying Processing method: PSurface.setResizable
 
 Syntax
@@ -59,5 +61,5 @@ Parameters
 * **resizable**: `bool` - should the Sketch window be resizable
 
 
-Updated on February 10, 2022 17:51:31pm UTC
+Updated on July 18, 2022 17:22:20pm UTC
 

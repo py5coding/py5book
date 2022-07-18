@@ -1,7 +1,7 @@
 random_choice()
 ===============
 
-Select a random item from a list.
+Select random items from a list.
 
 Examples
 --------
@@ -37,22 +37,24 @@ Examples
 Description
 -----------
 
-Select a random item from a list. The list items can be of any type. This function's randomness can be influenced by :doc:`sketch_random_seed`.
+Select random items from a list. The list items can be of any type. If multiple items are selected, this function will by default allow the same item to be selected multiple times. Set the ``replace`` parameter to ``False`` to prevent the same item from being selected multiple times.
 
-This function makes calls to numpy to select the random items.
+This function's randomness can be influenced by :doc:`sketch_random_seed`, and makes calls to numpy to select the random items.
 
 Syntax
 ------
 
 .. code:: python
 
-    random_choice(objects: list[Any]) -> Any
+    random_choice(objects: list[Any], size: int=1, replace: bool=True) -> Any
 
 Parameters
 ----------
 
 * **objects**: `list[Any]` - list of objects to choose from
+* **replace**: `bool=True` - whether to select random items with or without replacement
+* **size**: `int=1` - number of random items to select
 
 
-Updated on March 01, 2022 12:15:01pm UTC
+Updated on July 18, 2022 17:22:20pm UTC
 

@@ -14,6 +14,7 @@ Creating / Reading
 * `brightness() <sketch_brightness.html>`_
 * `color() <sketch_color.html>`_
 * `green() <sketch_green.html>`_
+* `hex_color() <sketch_hex_color.html>`_
 * `hue() <sketch_hue.html>`_
 * `lerp_color() <sketch_lerp_color.html>`_
 * `red() <sketch_red.html>`_
@@ -228,6 +229,7 @@ Random
 * `noise() <sketch_noise.html>`_
 * `noise_detail() <sketch_noise_detail.html>`_
 * `noise_seed() <sketch_noise_seed.html>`_
+* `np_random <sketch_np_random.html>`_
 * `os_noise() <sketch_os_noise.html>`_
 * `os_noise_seed() <sketch_os_noise_seed.html>`_
 * `random() <sketch_random.html>`_
@@ -278,6 +280,7 @@ Rendering
 * `blend_mode() <sketch_blend_mode.html>`_
 * `clip() <sketch_clip.html>`_
 * `create_graphics() <sketch_create_graphics.html>`_
+* `g <sketch_g.html>`_
 * `get_graphics() <sketch_get_graphics.html>`_
 * `hint() <sketch_hint.html>`_
 * `no_clip() <sketch_no_clip.html>`_

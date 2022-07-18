@@ -71,6 +71,8 @@ Description
 
 Set the Sketch's window location. Calling this repeatedly from the ``draw()`` function may result in a sluggish Sketch. Negative or invalid coordinates are ignored. To hide a Sketch window, use :doc:`py5surface_set_visible`.
 
+This method provides the same functionality as :doc:`py5surface_set_location` but without the need to interact directly with the :doc:`py5surface` object.
+
 Underlying Processing method: windowMove
 
 Syntax
@@ -87,5 +89,5 @@ Parameters
 * **y**: `int` - y-coordinate for window location
 
 
-Updated on February 21, 2022 11:40:40am UTC
+Updated on July 18, 2022 17:22:20pm UTC
 
