@@ -22,6 +22,24 @@ parts:
   - file: tutorials/jupyter_notebooks
   - file: tutorials/rotating_cube
   - file: tutorials/render_helper_tools
+  - file: tutorials/installing_and_using_py5
+  - file: tutorials/drawing_2d_primitives
+  - file: tutorials/variables_and_data_types
+  - file: tutorials/drawing_complex_shapes
+  - file: tutorials/working_with_text
+  - file: tutorials/conditional_statements
+  - file: tutorials/iteration_with_loops
+  - file: tutorials/randomness
+  - file: tutorials/animation_and_motion
+  - file: tutorials/mouse_and_keyboard_interaction
+  - file: tutorials/transformations_and_matrixes
+  - file: tutorials/working_with_lists
+  - file: tutorials/reading_external_data
+  - file: tutorials/dictionaries
+  - file: tutorials/custom_functions
+  - file: tutorials/trigonometry_for_animation
+  - file: tutorials/object_oriented_programming
+  - file: tutorials/py5vector_movement
 
 - caption: How To...
   chapters:
