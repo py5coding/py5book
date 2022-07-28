@@ -228,11 +228,20 @@ for i in range(24):
     ellipse(width/2,height/2, circle_size * i, circle_size *i)
 ```
 
-We've used `range()` above with just one argument, which is our "stopping point", equivalent to `while i > 24`. There are some optional arguments you can use, too. For example, providing `range()` with two arguments can define a stopping point and a starting point. For example, running this concentric circle code with `range(8,12)` instead will give this output: 
+We've used `range()` above with just one argument, which is our "stopping point", equivalent to `while i > 24`. There are some optional arguments you can use, too. Providing `range()` with two arguments can define a stopping point and a starting point. For example, running this concentric circle code with `range(8,12)` instead will give this output: 
 
 <img src="images/iteration_with_loops/iteration-for-loop-2-args.png">
 
 You can even iterate through a range, but only take action every *x* steps, where *x* is your third argument. `range(0,12,3)` draws a circle at 0, 3, 6, and 9. 
+
+It's important to mention at this point that your nested for loops can be even more efficient. You may notice a lot of the math above, when we draw our rows of circles, is actually just offsetting the position of each row/column by 100 pixels. This could be rewritten (with some amount of effort) using three arguments in `range()` to define a starting point, ending point and how many steps between running our code, something like:
+
+```
+for column in range(0, width, 100):
+    for row in range(0, height, 100):
+```
+
+Using this approach, grid-based and tile-based placements can be scaled to any size and number of "tiles" and any size of sketch!
 
 ## for loops task
 
