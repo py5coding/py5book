@@ -135,7 +135,11 @@ Creates colors for storing in variables of the ``color`` datatype (a 32 bit inte
 
 Note that if only one value is provided to ``color()``, it will be interpreted as a grayscale value. Add a second value, and it will be used for alpha transparency. When three values are specified, they are interpreted as either ``RGB`` or ``HSB`` values. Adding a fourth value applies alpha transparency.
 
-Note that you can also use hexadecimal notation and web color notation to specify colors, as in ``c = 0xFFDDCC33`` or ``c = "#DDCC33"`` in place of ``c = color(221, 204, 51)``. Additionally, the ``color()`` method can accept both color notations as a parameter.
+Note that you can also use hexadecimal notation and web color notation to specify colors, as in ``c = 0xFFDDCC33`` or ``c = "#DDCC33FF"`` in place of ``c = color(221, 204, 51, 255)``. Additionally, the ``color()`` method can accept both color notations as a parameter.
+
+When using hexadecimal notation to specify a color, use "``0x``" before the values (e.g., ``0xFFCCFFAA``). The hexadecimal value must be specified with eight characters; the first two characters define the alpha component, and the remainder define the red, green, and blue components.
+
+When using web color notation to specify a color, create a string beginning with the "``#``" character followed by three, four, six, or eight characters. The example colors ``"#D93"`` and ``"#DD9933"`` specify red, green, and blue values (in that order) for the color and assume the color has no transparency. The example colors ``"#D93F"`` and ``"#DD9933FF"`` specify red, green, blue, and alpha values (in that order) for the color. Notice that in web color notation the alpha channel is last, which is consistent with CSS colors, and in hexadecimal notation the alpha channel is first, which is consistent with Processing color values.
 
 Underlying Processing method: `color <https://processing.org/reference/color_.html>`_
 
@@ -169,5 +173,5 @@ Parameters
 * **v3**: `int` - blue or brightness values relative to the current color range
 
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on July 31, 2022 13:59:47pm UTC
 
