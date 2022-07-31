@@ -449,7 +449,7 @@ def draw():
 run_sketch()
 ```
 
-What about the left side of the screen? Well, that's as simple as adding another check for an x position of less than zero. We don't even have to do any math with the width of the logo here, since it's anchored on the top-left corner by default. 
+What about the left side of the screen? Well, that's as simple as adding another check for an x position of less than zero. We don't even have to do any math with the width of the logo here, since it's anchored on the top-left corner by default. Since the same thing has to happen on either end of the screen (reversing the xspeed variable), you can use the *or* operator to combine this check with the last one.
 
 ```{code-cell} ipython3
 x = 0
@@ -466,10 +466,8 @@ def draw():
     background('#000000')
     x += xspeed
     image(logo, x,100)
-    if (x >= (width - 100)):
+    if (x >= (width - 100) or x <= 0):
         # print('Bye!')
-        xspeed *= -1 # Multiplying xspeed by negative 1
-    if (x <= 0):
         xspeed *= -1 # Multiplying xspeed by negative 1
 
 run_sketch()
