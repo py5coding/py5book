@@ -121,6 +121,8 @@ Files
 * `load_json() <sketch_load_json.html>`_
 * `parse_json() <sketch_parse_json.html>`_
 * `save_json() <sketch_save_json.html>`_
+* `select_folder() <sketch_select_folder.html>`_
+* `select_input() <sketch_select_input.html>`_
 
 Keyboard
 ^^^^^^^^
@@ -261,6 +263,7 @@ Files
 * `begin_record() <sketch_begin_record.html>`_
 * `end_raw() <sketch_end_raw.html>`_
 * `end_record() <sketch_end_record.html>`_
+* `select_output() <sketch_select_output.html>`_
 
 Image
 ^^^^^
