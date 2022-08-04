@@ -46,7 +46,7 @@ This illusion is known as the *phi phenomenon*. With a slightly better understan
 
 ## animation functions
 
-To use animation in py5 (as well as a handful of other nifty features), you have to take advantage of two built-in functions that define the behavior of whole blocks of code: `setup()` and `draw()`. Other tutorials do not always use these functions - coding in py5 without using these is referred to as *static* mode or *imported* mode, depending on your environment. Py5bot is set up to run these sorts of sketches by default. A static sketch might begin with some code like this, to set up the various unchanging qualities of the sketch:
+To use animation in py5 (as well as a handful of other nifty features), you have to take advantage of two built-in functions that define the behavior of whole blocks of code: `setup()` and `draw()`. Other tutorials do not always use these functions - coding in py5 without using these is referred to as *static* mode, since the sketches it creates will have still (static) visuals. Py5bot is set up to run these sorts of sketches by default. A static sketch might begin with some code like this, to set up the various unchanging qualities of the sketch:
 
 ```
 size(500,500)
@@ -251,7 +251,7 @@ def draw():
 run_sketch()
 ```
 
-Even worse, trying to edit *y* inside of `draw()` still gives an error, since it's overriding the variable with its own special one. 
+Even worse, trying to edit *y* inside of `draw()` still gives an error, since it's overriding the variable with its own special one.
 
 ```{code-cell} ipython3
 y = 1 # Global variable
@@ -315,7 +315,6 @@ By adding these two lines to your code, you can "take a picture" every 100 frame
 if frame_count % 100 == 0:
         save_frame('file.png')
 ```
-
 
 ```{code-cell} ipython3
 y = 1 # Global variable
@@ -425,7 +424,7 @@ def draw():
 run_sketch()
 ```
 
-This bounce isn't perfect... the logo almost completely disappears before it bounces back, because its anchor point is at the top-left corner of the image. We can compensate for this by subtracting the width of the image from our calculations. (As a hint, this logo is 100 pixels wide and 45 pixels tall.) 
+This bounce isn't perfect... the logo almost completely disappears before it bounces back, because its anchor point is at the top-left corner of the image. We can compensate for this by subtracting the width of the image from our calculations. (As a hint, this logo is 100 pixels wide and 45 pixels tall.)
 
 ```{code-cell} ipython3
 x = 0
