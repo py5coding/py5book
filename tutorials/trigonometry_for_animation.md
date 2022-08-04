@@ -25,7 +25,9 @@ TheOtherJesse (Public domain), from [Wikimedia Commons](https://commons.wikimedi
 
 If you know the lengths of any two of these triangular sides, finding the angle of A is easy! Which sides you are already aware of will determine which trigonometric function you have to use.
 
-$sine = opposite \div hypotenuse \\ cosine = adjacent \div hypotenuse \\ tangent = opposite \div adjacent$
+$sine = opposite \div hypotenuse \\ 
+cosine = adjacent \div hypotenuse \\ 
+tangent = opposite \div adjacent$
 
 Why might you need to know this angle? Well, any two points can be represented with this sort of triangular relationship - just draw a right angle between them, and by using trigonometry, you can determine how to point a line from one to the other. This sort of sine or cosine calculation might be useful when programming an enemy in a game to aim a laser at the player character, or when simulating forces like gravity. Let's demonstrate the relationship between these sorts of calculations and rotations, using py5's `sin()` and `cos()` functions. 
 
