@@ -33,7 +33,7 @@ Firstly, to make our calculations easier, we'll use a variable for the scale of 
 
 You'll also notice we start this code (at least, the `draw()` half) with a `translate()` function, which will place the 0,0 point in the exact center of the screen. Not only is this a good way to manage rotations, but this will also make our grid space resemble [Cartesian coordinates](https://en.wikipedia.org/wiki/Cartesian_coordinate_system), which are common for plotting graphs. 
 
-<a href="images/trigonometry_for_animation/unit.svg">
+<img src="images/trigonometry_for_animation/unit.svg">
 
 ```{code-cell} ipython3
 theta = 0
@@ -119,7 +119,7 @@ How do these waves correspond to the values being output now by `print()`? Here'
 
 Here, both these values are at roughly 0.7. The *sine wave* created by `sin()` represents the Y coordinate of the tip of the arrow, where it touches the circumference of the circle, in a range between -1 and 1. The *cos wave* created by `cos()` represents the X value of that arrowhead in the same range.
 
-Let's make a change to theta inside of our `draw()` function, so that we can actually see this movement in our sketch. Just a small increment each frame will do - something like 0.05. 
+Let's make a change to theta inside of our `draw()` function, so that we can actually see this movement in our sketch. Just a small increment each frame will do - something like 0.05.
 
 ```{code-cell} ipython3
 theta = QUARTER_PI
@@ -150,7 +150,7 @@ def draw():
 run_sketch()
 ```
 
-If we add a few ellipses in the right places, it might help us visualize how this is all working. We'll be adding one that follows the horizontal motion of `cos()`, one that captures the vertical motion of `sin()`, and one that connects the two to the point where our line intersects with the circumference of the circle. 
+If we add a few ellipses in the right places, it might help us visualize how this is all working. We'll be adding one that follows the horizontal motion of `cos()`, one that captures the vertical motion of `sin()`, and one that connects the two to the point where our line intersects with the circumference of the circle.
 
 ```{code-cell} ipython3
 theta = QUARTER_PI
