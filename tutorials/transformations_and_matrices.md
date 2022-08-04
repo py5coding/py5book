@@ -7,9 +7,9 @@ jupytext:
     format_version: 0.13
     jupytext_version: 1.14.0
 kernelspec:
-  display_name: py5bot
+  display_name: py5
   language: python
-  name: py5bot
+  name: py5
 ---
 
 You might be familiar with terms in the digital arts space like *scaling* and *rotating*. In software like Adobe Photoshop or GIMP, these are *transformations* you can apply to images to stretch, spin and distort them. 
@@ -17,6 +17,10 @@ You might be familiar with terms in the digital arts space like *scaling* and *r
 <img src="images/transformations_and_matrices/transformations-star.png">
 
 As an example, consider the transformations applied to the star in the image above. You could easily draw the untransformed star, in the top left, using points in py5.
+
+```{code-cell} ipython3
+
+```
 
 ```{code-cell} ipython3
 size(800,800)
@@ -40,13 +44,13 @@ end_shape(CLOSE)
 
 What if you wanted to draw one of the transformed versions, like the one in the lower right, which has been both scaled and rotated? Calculating the differences in these many vertices requires the use of a *matrix* (which is *matrices* in plural... just like *vertex* becomes *vertices*). 
 
-## matrices
+## matrices in mathematics
 
 In mathematics, a *matrix* is just a rectangular array of values - that is, it has both rows and columns. For example, this is a *two-by-three* (two rows, three columns) matrix, storing six values:
 
 $\begin{bmatrix} 2 & 5 & 12 \\ 19 & 9 & 7 \end{bmatrix}$
 
-Digital images are essentially just grids of pixels, with both rows and columns, so matrices are extremely useful when manipulating computer graphics (though they're also used in mathematics and other sciences). We'll be learning how these work from a mathematical perspective first, and then you'll be introduced to the matrix functions in py5 - so things will get much easier.
+Digital images are essentially just grids of pixels, with both rows and columns, so matrices are extremely useful when manipulating computer graphics (though they're also used in mathematics and other sciences). We'll be learning how these work from a mathematical perspective first, and then you'll be introduced to the matrix functions in py5 - so things will get much easier. If all the math seems a little advanced, you can read through without implementing it in your own code, and you'll still understand a little better when we get to the next section, *matrices in py5*. 
 
 To help you out in visualizing the coordinates in your sketch, you'll want to use the following two images, [grid.png]("images/transformations_and_matrices/grid.png") and [grid-overlay.png](images/transformations_and_matrices/grid-overlay.png). You can save them in the same folder as your sketch, or reference them by their full URL. 
 
@@ -54,7 +58,7 @@ To help you out in visualizing the coordinates in your sketch, you'll want to us
 
 <img src="images/transformations_and_matrices/grid-overlay.png">
 
-Let's start with some simple code - setting up our sketch with a grid background and drawing a `rect()` on it. We'll use variables to determine its x and y position, as well as its width and height. 
+Let's start with some simple code - setting up our sketch with a grid background and drawing a `rect()` on it. We'll use variables to determine its x and y position, as well as its width and height.
 
 ```{code-cell} ipython3
 size(800, 800)
@@ -72,7 +76,7 @@ rect(x,y, w,h)
 
 You'll notice we've used semicolons (;) between some of our variables. In py5 (and regular Python), this is the same as moving to a new line, so this can be a way to arrange your variables and make them easier to understand as a set.
 
-We've used a simple `rect()` above to draw our square, but matrices work on individual vertices, which we aren't currently using. Let's quickly rewrite our `rect()` as a `quad()`. 
+We've used a simple `rect()` above to draw our square, but matrices work on individual vertices, which we aren't currently using. Let's quickly rewrite our `rect()` as a `quad()`.
 
 ```{code-cell} ipython3
 size(800, 800)
@@ -251,7 +255,7 @@ quad(
 
 See what happened? The grid has become half its original size, but is still placed at 0,0. In the exact same way, using a matrix to scale the shape will also move it in space, so that its relationship to that 0,0 point is still the same.
 
-Of course, since scaling has both a height and width value, it doesn't have to be proportionate to the original shape. Here's a version with scaling of 0.3, 1.8 instead of 0.5, 0.5. 
+Of course, since scaling has both a height and width value, it doesn't have to be proportionate to the original shape. Here's a version with scaling of 0.3, 1.8 instead of 0.5, 0.5.
 
 ```{code-cell} ipython3
 size(800, 800)
@@ -432,7 +436,7 @@ For a vertical shear, that value goes in *c* instead:
 
 $\begin{bmatrix} x \\ y \end{bmatrix} \times \begin{bmatrix} 1 & 0 \\ c & 1 \end{bmatrix}$
 
-In practice, here's another square, sheared vertically using a value of 0.4. 
+In practice, here's another square, sheared vertically using a value of 0.4.
 
 ```{code-cell} ipython3
 size(800, 800)
@@ -531,7 +535,7 @@ What happened here? The shape itself wasn't moved - rather, the whole coordinate
 
 You may realize that this means that when you've translated that square by 100, -80, if you want the coordinates system to return to "normal", you have to undo it in some way. Of course, you could throw in a `translate(-100,80)` to simply reverse the translation, but that gets messy quickly. Even better, you can isolate this matrix into its own *stack*. When a matrix is isolated, you can simply tell py5 that you're done with it, and return things to normal. 
 
-To do this, we'll use two new functions that wrap everything we want translated - `push_matrix()` and `pop_matrix()`. 
+To do this, we'll use two new functions that wrap everything we want translated - `push_matrix()` and `pop_matrix()`.
 
 ```{code-cell} ipython3
 size(800, 800)
@@ -568,7 +572,7 @@ rect(0,0, 100,100)
 
 Being able to isolate matrices like this is really useful when you begin drawing handfuls of different elements on screen at once. If you were drawing a face, but you needed all the features on the face to shift together, you could wrap the whole thing in a matrix and translate it without worrying about moving other elements of your sketch. In addition to `translate()`, py5 has functions to `rotate()`, `scale()`, `shear_x()` and `shear_y()`, all of which work very similarly to the matrices we used above.
 
-You can even combine them all into one big, exciting mess! 
+You can even combine them all into one big, exciting mess!
 
 ```{code-cell} ipython3
 size(800, 800)
@@ -602,3 +606,156 @@ pop_matrix() # Ending this matrix
 ```
 
 <img src="images/transformations_and_matrices/mess.png">
+
+Some of these transformations can be really powerful when used in the right places. For example, if you want to lay a hundred tiles using loops in py5, a lot of the math involved will be positioning each tile in relation to the last one. Using `translate()` each time the code is executed to move the coordinates system, this becomes a simple task. 
+
+## analog clock task
+
+Using what we've learned about py5's transformation and matrix tools, let's create a working analog clock that displays the current time. Don't worry - we'll be using the py5 functions for this one, not manually calculating our matrices!
+
+In order to animate our clock, we'll have to take advantage of two built-in functions that define the behavior of whole blocks of code: `setup()` and `draw()`. Other tutorials do not always use these functions - coding in py5 without using these is referred to as *static* mode, since the sketches it creates will have still (static) visuals. Py5bot is set up to run these sorts of sketches by default. A static sketch might begin with some code like this, to set up the various unchanging qualities of the sketch:
+
+```
+size(600, 600)
+no_fill()
+stroke('#FFFFFF')
+```
+
+It's no surprise, then, that this is the sort of code you execute in a `setup()` function. Like many other types of code blocks (such as those you would use for *if* statements), indenting is used to keep all this `setup()` code running together. In some development environments (like on this documentation website), you may also need to include a `run_sketch()` line at the bottom of your sketch. This line will be included in all code snippets here, so that they can be run using live code.
+
+```{code-cell} ipython3
+def setup():
+    size(600, 600)
+    frame_rate(1)
+    no_fill()
+    stroke('#FFFFFF')
+    
+def draw():
+    background('#004477')
+    
+run_sketch()
+```
+
+Any code in that block following `def setup():` is run once, when the sketch begins.
+
+This `setup()` function becomes very powerful when you use it with `draw()`. Unlike `setup()`, which is run once, `draw()` is run every frame! By default, sketches run at 60 frames per second, but this number may reduce if a lot of heavy-duty animation is running on screen. Here, by using the `frame_rate()` function, we've reduced this to one frame per second, which will work perfectly for our seconds hand.
+
+You'll notice that we've placed our `background()` function inside of `draw()`, too. This ensures that at the start of each new frame, whatever we have on the screen already will be hidden by this new background. 
+
+To create our clock, we'll definitely need to know the current time. Thankfully, py5 has a series of functions related to this. Add them into your code, and you'll quickly see what they do. We'll be setting three new variables (for our hour, minute and seconds counters) and then turning them into strings of text with `str()` to display them in the console.
+
+```{code-cell} ipython3
+def setup():
+    size(600, 600)
+    frame_rate(1)
+    no_fill()
+    stroke('#FFFFFF')
+    
+def draw():
+    background('#004477')
+    h = hour()
+    m = minute()
+    s = second()
+    print( str(h) + ':' + str(m) + ':' + str(s) )
+    
+run_sketch()
+```
+
+With each new frame (which takes one second to advance), you'll receive a printout of the current time, in hours, minutes and seconds. Of course, if you wanted to make a *digital* clock, it would now be a simple matter of using py5's text functions to draw this printout in the sketch window. For an analog clock, we'll have to go a little farther.
+
+Let's go ahead and add some visuals into our sketch - starting with the clock face itself and the hour hand. To make things a little easier, we'll be starting everything off with a `translate()` function that moves *0 , 0* to the middle of the screen. This means that as we start rotating things around the center of the clock, we'll simply have to worry about them rotating around this starting point. 
+
+```{code-cell} ipython3
+def setup():
+    size(600, 600)
+    frame_rate(1)
+    no_fill()
+    stroke('#FFFFFF')
+    
+def draw():
+    background('#004477')
+    h = hour()
+    m = minute()
+    s = second()
+    # print( str(h) + ':' + str(m) + ':' + str(s) )
+    
+    # Translating to the center of the sketch window...
+    translate(width/2, height/2)
+    
+    # Clock face
+    stroke_weight(3)
+    ellipse(0, 0, 350, 350)
+    
+    # Hour hand
+    stroke_weight(10)
+    line(0, 0, 100, 0)
+    
+run_sketch()
+```
+
+Right now, the hour hand is pointing to the right side of the clock face, at zero *radians* of rotation. This is also where `arc()` functions begin, and where py5, in general, starts calculating its radians. If you remember, when we're discussing rotations around a circle, the entire radius can be represented by $\pi$ multiplied by 2. So, to start our hour hand at the top of the clock (rotating it counter-clockwise by one quarter of the circle's radius), we'll want to use $\pi$ divided by 2. In fact, since we're rotating counter-clockwise, we'll want to make this value negative. Just like its $\pi$ variable, `PI`, py5 actually includes a variable for half of $\pi$, `HALF_PI`.
+
+```{code-cell} ipython3
+def setup():
+    size(600, 600)
+    frame_rate(1)
+    no_fill()
+    stroke('#FFFFFF')
+    
+def draw():
+    background('#004477')
+    h = hour()
+    m = minute()
+    s = second()
+    # print( str(h) + ':' + str(m) + ':' + str(s) )
+    
+    # Translating to the center of the sketch window...
+    translate(width/2, height/2)
+    
+    # Clock face
+    stroke_weight(3)
+    ellipse(0, 0, 350, 350)
+    
+    # Hour hand
+    rotate(-HALF_PI) # Rotated counterclockwise by HALF_PI
+    stroke_weight(10)
+    line(0, 0, 100, 0)
+    
+run_sketch()
+```
+
+In addition to `PI` and `HALF_PI`, there's a built-in variable for $\pi \times 2$ as well. This is `TAU`, a term coined only as recently as 2010 to describe the "full turn" of $\pi \times 2$. So, if there are 12 hours on your clock, a single hour is represented by `TAU` divided by 12. Great news - we have the current hour, so we can incorporate this value into our `rotate()` function to put the hour hand in the right place!
+
+```{code-cell} ipython3
+def setup():
+    size(600, 600)
+    frame_rate(1)
+    no_fill()
+    stroke('#FFFFFF')
+    
+def draw():
+    background('#004477')
+    h = hour()
+    m = minute()
+    s = second()
+    # print( str(h) + ':' + str(m) + ':' + str(s) )
+    
+    # Translating to the center of the sketch window...
+    translate(width/2, height/2)
+    
+    # Clock face
+    stroke_weight(3)
+    ellipse(0, 0, 350, 350)
+    
+    # Hour hand
+    rotate(-HALF_PI) # Rotated counterclockwise by HALF_PI
+    rotate(TAU / 12 * h) # ... and then rotated to the current hour!
+    stroke_weight(10)
+    line(0, 0, 100, 0)
+    
+run_sketch()
+```
+
+It's time to add in the minute and second hands. It could be a good idea to wrap each of your hands between the `push_matrix()` and `pop_matrix()` functions, so that the rotation of one doesn't impact the rotations of the others. You can also uncomment that `print()` function again at any time, so you can compare your clock (and how it advances) with the current time. 
+
+You may even find it helpful to make a new variable representing a single hour's movement - `TAU / 12` - and further divide it to know how far your minute and second hands should move!
