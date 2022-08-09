@@ -133,6 +133,7 @@ dependencies:
   - jedi=0.17.2
   - jupyterlab
   - line_profiler
+  - matplotlib
   - pip
   - pip:
       - py5[jupyter]
