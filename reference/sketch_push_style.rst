@@ -56,17 +56,14 @@ Examples
     def setup():
         py5.ellipse(0, 50, 33, 33)  # left circle
     
-        py5.push_style()  # start a new style
-        py5.stroke_weight(10)
-        py5.fill(204, 153, 0)
-        py5.ellipse(33, 50, 33, 33)  # left-middle circle
-    
-        py5.push_style()  # start another new style
-        py5.stroke(0, 102, 153)
-        py5.ellipse(66, 50, 33, 33)  # right-middle circle
-        py5.pop_style()  # restore previous style
-    
-        py5.pop_style()  # restore original style
+        with py5.push_style():  # start a new style
+            py5.stroke_weight(10)
+            py5.fill(204, 153, 0)
+            py5.ellipse(33, 50, 33, 33)  # left-middle circle
+        
+            with py5.push_style():  # start another new style
+                py5.stroke(0, 102, 153)
+                py5.ellipse(66, 50, 33, 33)  # right-middle circle
     
         py5.ellipse(100, 50, 33, 33)  # right circle
 
@@ -85,6 +82,8 @@ The ``push_style()`` function saves the current style settings and :doc:`sketch_
 
 The style information controlled by the following functions are included in the style: :doc:`sketch_fill`, :doc:`sketch_stroke`, :doc:`sketch_tint`, :doc:`sketch_stroke_weight`, :doc:`sketch_stroke_cap`, :doc:`sketch_stroke_join`, :doc:`sketch_image_mode`, :doc:`sketch_rect_mode`, :doc:`sketch_ellipse_mode`, :doc:`sketch_shape_mode`, :doc:`sketch_color_mode`, :doc:`sketch_text_align`, :doc:`sketch_text_font`, :doc:`sketch_text_mode`, :doc:`sketch_text_size`, :doc:`sketch_text_leading`, :doc:`sketch_emissive`, :doc:`sketch_specular`, :doc:`sketch_shininess`, and :doc:`sketch_ambient`.
 
+This method can be used as a context manager to ensure that :doc:`sketch_pop_style` always gets called, as shown in the last example.
+
 Underlying Processing method: `pushStyle <https://processing.org/reference/pushStyle_.html>`_
 
 Syntax
@@ -94,5 +93,5 @@ Syntax
 
     push_style() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 17, 2022 18:09:19pm UTC
 
