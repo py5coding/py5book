@@ -28,7 +28,7 @@ Examples
 
 
     def load_data():
-        return py5.load_json('http://py5.ixora.io/secret_message.json')
+        return py5.load_json('http://py5.ixora.io/files/secret_message.json')
 
 
     def draw():
@@ -76,5 +76,5 @@ Parameters
 * **name**: `str = None` - name of thread to be created
 
 
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on August 24, 2022 22:21:43pm UTC
 
