@@ -113,25 +113,30 @@ In some cases, the ``arc()`` function isn't accurate enough for smooth drawing. 
 
 Underlying Processing method: `arc <https://processing.org/reference/arc_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    arc(a: float, b: float, c: float, d: float, start: float, stop: float, /) -> None
-    arc(a: float, b: float, c: float, d: float, start: float, stop: float, mode: int, /) -> None
+    arc(
+        a: float,  # x-coordinate of the arc's ellipse
+        b: float,  # y-coordinate of the arc's ellipse
+        c: float,  # width of the arc's ellipse by default
+        d: float,  # height of the arc's ellipse by default
+        start: float,  # angle to start the arc, specified in radians
+        stop: float,  # angle to stop the arc, specified in radians
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **a**: `float` - x-coordinate of the arc's ellipse
-* **b**: `float` - y-coordinate of the arc's ellipse
-* **c**: `float` - width of the arc's ellipse by default
-* **d**: `float` - height of the arc's ellipse by default
-* **mode**: `int` - arc drawing mode
-* **start**: `float` - angle to start the arc, specified in radians
-* **stop**: `float` - angle to stop the arc, specified in radians
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    arc(
+        a: float,  # x-coordinate of the arc's ellipse
+        b: float,  # y-coordinate of the arc's ellipse
+        c: float,  # width of the arc's ellipse by default
+        d: float,  # height of the arc's ellipse by default
+        start: float,  # angle to start the arc, specified in radians
+        stop: float,  # angle to stop the arc, specified in radians
+        mode: int,  # arc drawing mode
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -78,21 +78,22 @@ Using ``point()`` with ``strokeWeight(1)`` or smaller may draw nothing to the sc
 
 Underlying Processing method: `point <https://processing.org/reference/point_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    point(x: float, y: float, /) -> None
-    point(x: float, y: float, z: float, /) -> None
+    point(
+        x: float,  # x-coordinate of the point
+        y: float,  # y-coordinate of the point
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **x**: `float` - x-coordinate of the point
-* **y**: `float` - y-coordinate of the point
-* **z**: `float` - z-coordinate of the point
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    point(
+        x: float,  # x-coordinate of the point
+        y: float,  # y-coordinate of the point
+        z: float,  # z-coordinate of the point
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

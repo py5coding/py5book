@@ -51,20 +51,16 @@ The ``bands`` parameter is used to interpret the ``array``'s color channel dimen
 
 The caller can optionally pass an existing Py5Image object to put the image data into using the ``dst`` parameter. This can have performance benefits in code that would otherwise continuously create new Py5Image objects. The array's width and height must match that of the recycled Py5Image object.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    create_image_from_numpy(array: npt.NDArray[np.uint8], bands: str = 'ARGB', *, dst: Py5Image = None) -> Py5Image
-
-Parameters
-----------
-
-* **array**: `npt.NDArray[np.uint8]` - numpy image array
-* **bands**: `str = 'ARGB'` - color channels in array
-* **dst**: `Py5Image = None` - existing Py5Image object to put the image data into
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+    create_image_from_numpy(
+        array: npt.NDArray[np.uint8],  # numpy image array
+        bands: str = "ARGB",  # color channels in array
+        *,
+        dst: Py5Image = None  # existing Py5Image object to put the image data into
+    ) -> Py5Image
+Updated on August 25, 2022 20:01:47pm UTC
 

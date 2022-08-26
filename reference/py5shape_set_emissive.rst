@@ -55,20 +55,20 @@ This method can only be used for a complete ``Py5Shape`` object, and never withi
 
 Underlying Processing method: PShape.setEmissive
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_emissive(emissive: int, /) -> None
-    set_emissive(index: int, emissive: int, /) -> None
+    set_emissive(
+        emissive: int,  # any color value
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **emissive**: `int` - any color value
-* **index**: `int` - vertex index
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    set_emissive(
+        index: int,  # vertex index
+        emissive: int,  # any color value
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

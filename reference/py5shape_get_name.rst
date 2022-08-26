@@ -49,12 +49,11 @@ Get the name assigned to a Py5Shape object. Will return ``None`` if the object h
 
 Underlying Processing method: PShape.getName
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     get_name() -> str
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -52,12 +52,11 @@ Be aware that it is possible for the native event object to be ``None``, such as
 
 Underlying Processing method: getNative
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     get_native() -> Any
-
-Updated on May 17, 2022 15:08:25pm UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

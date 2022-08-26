@@ -88,28 +88,38 @@ To use a different radius value for each corner, include eight parameters. When 
 
 Underlying Processing method: `rect <https://processing.org/reference/rect_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    rect(a: float, b: float, c: float, d: float, /) -> None
-    rect(a: float, b: float, c: float, d: float, r: float, /) -> None
-    rect(a: float, b: float, c: float, d: float, tl: float, tr: float, br: float, bl: float, /) -> None
+    rect(
+        a: float,  # x-coordinate of the rectangle by default
+        b: float,  # y-coordinate of the rectangle by default
+        c: float,  # width of the rectangle by default
+        d: float,  # height of the rectangle by default
+        /,
+    ) -> None
 
-Parameters
-----------
+    rect(
+        a: float,  # x-coordinate of the rectangle by default
+        b: float,  # y-coordinate of the rectangle by default
+        c: float,  # width of the rectangle by default
+        d: float,  # height of the rectangle by default
+        r: float,  # radii for all four corners
+        /,
+    ) -> None
 
-* **a**: `float` - x-coordinate of the rectangle by default
-* **b**: `float` - y-coordinate of the rectangle by default
-* **bl**: `float` - radius for bottom-left corner
-* **br**: `float` - radius for bottom-right corner
-* **c**: `float` - width of the rectangle by default
-* **d**: `float` - height of the rectangle by default
-* **r**: `float` - radii for all four corners
-* **tl**: `float` - radius for top-left corner
-* **tr**: `float` - radius for top-right corner
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    rect(
+        a: float,  # x-coordinate of the rectangle by default
+        b: float,  # y-coordinate of the rectangle by default
+        c: float,  # width of the rectangle by default
+        d: float,  # height of the rectangle by default
+        tl: float,  # radius for top-left corner
+        tr: float,  # radius for top-right corner
+        br: float,  # radius for bottom-right corner
+        bl: float,  # radius for bottom-left corner
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -16,20 +16,20 @@ This method is the same as :doc:`sketch_load_shader` but linked to a ``Py5Graphi
 
 Underlying Processing method: PGraphics.loadShader
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    load_shader(frag_filename: str, /) -> Py5Shader
-    load_shader(frag_filename: str, vert_filename: str, /) -> Py5Shader
+    load_shader(
+        frag_filename: str,  # name of fragment shader file
+        /,
+    ) -> Py5Shader
 
-Parameters
-----------
-
-* **frag_filename**: `str` - name of fragment shader file
-* **vert_filename**: `str` - name of vertex shader file
-
-
-Updated on January 16, 2022 16:51:21pm UTC
+    load_shader(
+        frag_filename: str,  # name of fragment shader file
+        vert_filename: str,  # name of vertex shader file
+        /,
+    ) -> Py5Shader
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -53,12 +53,11 @@ Get the descent of this font from the baseline. The value is based on a font of 
 
 Underlying Processing method: PFont.descent
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     descent() -> float
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 19:59:03pm UTC
 

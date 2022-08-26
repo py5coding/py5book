@@ -79,18 +79,13 @@ Description
 
 Calculate the dot product between two vectors.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    dot(other: Union[Py5Vector, np.ndarray]) -> Union[float, np.ndarray[np.floating]]
-
-Parameters
-----------
-
-* **other**: `Union[Py5Vector, np.ndarray]` - vector to calculate the dot product with
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+    dot(
+        other: Union[Py5Vector, np.ndarray]  # vector to calculate the dot product with
+    ) -> Union[float, np.ndarray[np.floating]]
+Updated on August 25, 2022 20:01:47pm UTC
 

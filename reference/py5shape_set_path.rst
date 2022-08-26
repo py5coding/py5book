@@ -52,19 +52,15 @@ The ``vcount`` parameter cannot be larger than the first dimension of the ``vert
 
 Underlying Processing method: PShape.setPath
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_path(vcount: int, verts: npt.NDArray[np.floating], /) -> None
-
-Parameters
-----------
-
-* **vcount**: `int` - number of vertices
-* **verts**: `npt.NDArray[np.floating]` - 2D array of vertex coordinates
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+    set_path(
+        vcount: int,  # number of vertices
+        verts: npt.NDArray[np.floating],  # 2D array of vertex coordinates
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

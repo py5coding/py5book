@@ -12,18 +12,14 @@ This method is the same as :doc:`sketch_saturation` but linked to a ``Py5Graphic
 
 Underlying Processing method: PGraphics.saturation
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    saturation(rgb: int, /) -> float
-
-Parameters
-----------
-
-* **rgb**: `int` - any value of the color datatype
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    saturation(
+        rgb: int,  # any value of the color datatype
+        /,
+    ) -> float
+Updated on August 25, 2022 20:01:47pm UTC
 

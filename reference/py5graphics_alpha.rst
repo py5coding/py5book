@@ -14,18 +14,14 @@ This method is the same as :doc:`sketch_alpha` but linked to a ``Py5Graphics`` o
 
 Underlying Processing method: PGraphics.alpha
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    alpha(rgb: int, /) -> float
-
-Parameters
-----------
-
-* **rgb**: `int` - any value of the color datatype
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    alpha(
+        rgb: int,  # any value of the color datatype
+        /,
+    ) -> float
+Updated on August 25, 2022 19:59:03pm UTC
 

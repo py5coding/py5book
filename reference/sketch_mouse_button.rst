@@ -79,6 +79,5 @@ When a mouse button is pressed, the value of the system variable ``mouse_button`
 
 Underlying Processing field: `mouseButton <https://processing.org/reference/mouseButton.html>`_
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

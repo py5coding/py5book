@@ -22,18 +22,14 @@ This method is the same as :doc:`sketch_rect_mode` but linked to a ``Py5Graphics
 
 Underlying Processing method: PGraphics.rectMode
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    rect_mode(mode: int, /) -> None
-
-Parameters
-----------
-
-* **mode**: `int` - either CORNER, CORNERS, CENTER, or RADIUS
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    rect_mode(
+        mode: int,  # either CORNER, CORNERS, CENTER, or RADIUS
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -14,21 +14,22 @@ This method is the same as :doc:`sketch_translate` but linked to a ``Py5Graphics
 
 Underlying Processing method: PGraphics.translate
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    translate(x: float, y: float, /) -> None
-    translate(x: float, y: float, z: float, /) -> None
+    translate(
+        x: float,  # left/right translation
+        y: float,  # up/down translation
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **x**: `float` - left/right translation
-* **y**: `float` - up/down translation
-* **z**: `float` - forward/backward translation
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    translate(
+        x: float,  # left/right translation
+        y: float,  # up/down translation
+        z: float,  # forward/backward translation
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

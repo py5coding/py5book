@@ -44,12 +44,11 @@ Description
 
 Normalize the vector by setting the vector's magnitude to 1.0. This method cannot be used on a vector of zeros, because a vector of zeros cannot be normalized.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     normalize() -> Py5Vector
-
-Updated on January 16, 2022 16:51:21pm UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

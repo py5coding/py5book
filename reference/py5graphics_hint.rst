@@ -35,18 +35,14 @@ This method is the same as :doc:`sketch_hint` but linked to a ``Py5Graphics`` ob
 
 Underlying Processing method: PGraphics.hint
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    hint(which: int, /) -> None
-
-Parameters
-----------
-
-* **which**: `int` - hint to use when rendering Sketch
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    hint(
+        which: int,  # hint to use when rendering Sketch
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

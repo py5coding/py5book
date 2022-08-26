@@ -51,18 +51,14 @@ The ``red()`` function is easy to use and understand, but it is slower than a te
 
 Underlying Processing method: `red <https://processing.org/reference/red_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    red(rgb: int, /) -> float
-
-Parameters
-----------
-
-* **rgb**: `int` - any value of the color datatype
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    red(
+        rgb: int,  # any value of the color datatype
+        /,
+    ) -> float
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -47,18 +47,14 @@ The ``coordinates`` parameter should be a numpy array with one row for each line
 
 Underlying Processing method: lines
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    lines(coordinates: npt.NDArray[np.floating], /) -> None
-
-Parameters
-----------
-
-* **coordinates**: `npt.NDArray[np.floating]` - 2D array of line coordinates with 4 or 6 columns for 2D or 3D points, respectively
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+    lines(
+        coordinates: npt.NDArray[np.floating],  # 2D array of line coordinates with 4 or 6 columns for 2D or 3D points, respectively
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

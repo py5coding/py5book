@@ -71,20 +71,16 @@ This method can only be used within a :doc:`py5shape_begin_shape` and :doc:`py5s
 
 Underlying Processing method: PShape.normal
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    normal(nx: float, ny: float, nz: float, /) -> None
-
-Parameters
-----------
-
-* **nx**: `float` - x direction
-* **ny**: `float` - y direction
-* **nz**: `float` - z direction
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    normal(
+        nx: float,  # x direction
+        ny: float,  # y direction
+        nz: float,  # z direction
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

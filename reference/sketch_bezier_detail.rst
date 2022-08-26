@@ -49,18 +49,14 @@ Sets the resolution at which Beziers display. The default value is 20. This func
 
 Underlying Processing method: `bezierDetail <https://processing.org/reference/bezierDetail_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    bezier_detail(detail: int, /) -> None
-
-Parameters
-----------
-
-* **detail**: `int` - resolution of the curves
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    bezier_detail(
+        detail: int,  # resolution of the curves
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

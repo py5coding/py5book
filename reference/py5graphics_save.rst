@@ -14,22 +14,18 @@ The ``use_thread`` parameter will save the image in a separate Python thread. Th
 
 This method is the same as :doc:`sketch_save` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_save`.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    save(filename: Union[str, Path, BytesIO], *, format: str = None, drop_alpha: bool = True, use_thread: bool = False, **params) -> None
-
-Parameters
-----------
-
-* **drop_alpha**: `bool = True` - remove the alpha channel when saving the image
-* **filename**: `Union[str, Path, BytesIO]` - output filename
-* **format**: `str = None` - image format, if not determined from filename extension
-* **params**: - keyword arguments to pass to the PIL.Image save method
-* **use_thread**: `bool = False` - write file in separate thread
-
-
-Updated on October 29, 2021 22:01:43pm UTC
+    save(
+        filename: Union[str, Path, BytesIO],  # output filename
+        *,
+        format: str = None,  # image format, if not determined from filename extension
+        drop_alpha: bool = True,  # remove the alpha channel when saving the image
+        use_thread: bool = False,  # write file in separate thread
+        **params
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -65,24 +65,26 @@ This method can only be used within a :doc:`py5shape_begin_shape` and :doc:`py5s
 
 Underlying Processing method: PShape.ambient
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    ambient(gray: float, /) -> None
-    ambient(rgb: int, /) -> None
-    ambient(x: float, y: float, z: float, /) -> None
+    ambient(
+        gray: float,  # number specifying value between white and black
+        /,
+    ) -> None
 
-Parameters
-----------
+    ambient(
+        rgb: int,  # any value of the color datatype
+        /,
+    ) -> None
 
-* **gray**: `float` - number specifying value between white and black
-* **rgb**: `int` - any value of the color datatype
-* **x**: `float` - red or hue value (depending on current color mode)
-* **y**: `float` - green or saturation value (depending on current color mode)
-* **z**: `float` - blue or brightness value (depending on current color mode)
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    ambient(
+        x: float,  # red or hue value (depending on current color mode)
+        y: float,  # green or saturation value (depending on current color mode)
+        z: float,  # blue or brightness value (depending on current color mode)
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

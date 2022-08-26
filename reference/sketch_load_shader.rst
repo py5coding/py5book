@@ -54,20 +54,20 @@ If the file is not available or an error occurs, ``None`` will be returned and a
 
 Underlying Processing method: `loadShader <https://processing.org/reference/loadShader_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    load_shader(frag_filename: str, /) -> Py5Shader
-    load_shader(frag_filename: str, vert_filename: str, /) -> Py5Shader
+    load_shader(
+        frag_filename: str,  # name of fragment shader file
+        /,
+    ) -> Py5Shader
 
-Parameters
-----------
-
-* **frag_filename**: `str` - name of fragment shader file
-* **vert_filename**: `str` - name of vertex shader file
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+    load_shader(
+        frag_filename: str,  # name of fragment shader file
+        vert_filename: str,  # name of vertex shader file
+        /,
+    ) -> Py5Shader
+Updated on August 25, 2022 20:01:47pm UTC
 

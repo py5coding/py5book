@@ -12,6 +12,5 @@ When the pixel density has been set to more than 1, it changes all of the pixel 
 
 Underlying Processing field: PGraphics.pixelDensity
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

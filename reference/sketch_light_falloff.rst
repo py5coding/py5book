@@ -54,20 +54,16 @@ Thinking about an ambient light with a falloff can be tricky. If you want a regi
 
 Underlying Processing method: `lightFalloff <https://processing.org/reference/lightFalloff_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    light_falloff(constant: float, linear: float, quadratic: float, /) -> None
-
-Parameters
-----------
-
-* **constant**: `float` - constant value or determining falloff
-* **linear**: `float` - linear value for determining falloff
-* **quadratic**: `float` - quadratic value for determining falloff
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    light_falloff(
+        constant: float,  # constant value or determining falloff
+        linear: float,  # linear value for determining falloff
+        quadratic: float,  # quadratic value for determining falloff
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

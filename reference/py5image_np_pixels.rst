@@ -50,6 +50,5 @@ Much like the :doc:`py5image_pixels` array, there are load and update methods th
 
 To set the entire contents of ``np_pixels[]`` to the contents of another equally sized numpy array, consider using :doc:`py5image_set_np_pixels`.
 
-
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

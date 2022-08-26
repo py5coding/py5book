@@ -47,12 +47,11 @@ Get the ``Py5Shape`` object's depth. This method only makes sense when using the
 
 Underlying Processing method: PShape.getDepth
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     get_depth() -> float
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

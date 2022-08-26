@@ -49,12 +49,11 @@ Move to the next page in a PDF document. This method is only available when usin
 
 Underlying Processing method: PGraphics.nextPage
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     next_page() -> None
-
-Updated on July 18, 2022 17:37:19pm UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

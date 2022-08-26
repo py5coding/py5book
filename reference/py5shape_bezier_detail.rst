@@ -61,18 +61,14 @@ This method can only be used within a :doc:`py5shape_begin_shape` and :doc:`py5s
 
 Underlying Processing method: PShape.bezierDetail
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    bezier_detail(detail: int, /) -> None
-
-Parameters
-----------
-
-* **detail**: `int` - resolution of the curves
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    bezier_detail(
+        detail: int,  # resolution of the curves
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

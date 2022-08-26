@@ -52,6 +52,5 @@ There are issues with how :doc:`sketch_key_code` behaves across different render
 
 Underlying Processing field: `key <https://processing.org/reference/key.html>`_
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -48,19 +48,15 @@ This method provides the same functionality as :doc:`py5surface_set_size` but wi
 
 Underlying Processing method: windowResize
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    window_resize(new_width: int, new_height: int, /) -> None
-
-Parameters
-----------
-
-* **new_height**: `int` - new window height
-* **new_width**: `int` - new window width
-
-
-Updated on April 27, 2022 11:19:15am UTC
+    window_resize(
+        new_width: int,  # new window width
+        new_height: int,  # new window height
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

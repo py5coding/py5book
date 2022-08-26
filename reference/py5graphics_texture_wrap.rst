@@ -12,18 +12,14 @@ This method is the same as :doc:`sketch_texture_wrap` but linked to a ``Py5Graph
 
 Underlying Processing method: PGraphics.textureWrap
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    texture_wrap(wrap: int, /) -> None
-
-Parameters
-----------
-
-* **wrap**: `int` - Either CLAMP (default) or REPEAT
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    texture_wrap(
+        wrap: int,  # Either CLAMP (default) or REPEAT
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -60,20 +60,20 @@ Adds a child ``Py5Shape`` object to a parent ``Py5Shape`` object that is defined
 
 Underlying Processing method: `PShape.addChild <https://processing.org/reference/PShape_addChild_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    add_child(who: Py5Shape, /) -> None
-    add_child(who: Py5Shape, idx: int, /) -> None
+    add_child(
+        who: Py5Shape,  # any variable of type Py5Shape
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **idx**: `int` - the layer position in which to insert the new child
-* **who**: `Py5Shape` - any variable of type Py5Shape
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    add_child(
+        who: Py5Shape,  # any variable of type Py5Shape
+        idx: int,  # the layer position in which to insert the new child
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -53,22 +53,22 @@ Shapes are always rotated around the upper-left corner of their bounding box. Po
 
 Underlying Processing method: `PShape.rotate <https://processing.org/reference/PShape_rotate_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    rotate(angle: float, /) -> None
-    rotate(angle: float, v0: float, v1: float, v2: float, /) -> None
+    rotate(
+        angle: float,  # angle of rotation specified in radians
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **angle**: `float` - angle of rotation specified in radians
-* **v0**: `float` - x-coordinate of vector to rotate around
-* **v1**: `float` - y-coordinate of vector to rotate around
-* **v2**: `float` - z-coordinate of vector to rotate around
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    rotate(
+        angle: float,  # angle of rotation specified in radians
+        v0: float,  # x-coordinate of vector to rotate around
+        v1: float,  # y-coordinate of vector to rotate around
+        v2: float,  # z-coordinate of vector to rotate around
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

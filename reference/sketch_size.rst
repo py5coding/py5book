@@ -137,23 +137,30 @@ When using the ``PDF`` and ``SVG`` renderers with the ``size()`` method, you mus
 
 Underlying Processing method: `size <https://processing.org/reference/size_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    size(width: int, height: int, /) -> None
-    size(width: int, height: int, renderer: str, /) -> None
-    size(width: int, height: int, renderer: str, path: str, /) -> None
+    size(
+        width: int,  # width of the display window in units of pixels
+        height: int,  # height of the display window in units of pixels
+        /,
+    ) -> None
 
-Parameters
-----------
+    size(
+        width: int,  # width of the display window in units of pixels
+        height: int,  # height of the display window in units of pixels
+        renderer: str,  # rendering engine to use
+        /,
+    ) -> None
 
-* **height**: `int` - height of the display window in units of pixels
-* **path**: `str` - filename to save rendering engine output to
-* **renderer**: `str` - rendering engine to use
-* **width**: `int` - width of the display window in units of pixels
-
-
-Updated on August 24, 2022 22:21:43pm UTC
+    size(
+        width: int,  # width of the display window in units of pixels
+        height: int,  # height of the display window in units of pixels
+        renderer: str,  # rendering engine to use
+        path: str,  # filename to save rendering engine output to
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

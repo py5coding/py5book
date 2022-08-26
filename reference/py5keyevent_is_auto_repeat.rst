@@ -51,12 +51,11 @@ Identifies if the pressed key is auto repeating, as faciliated by the computer's
 
 Underlying Processing method: isAutoRepeat
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     is_auto_repeat() -> bool
-
-Updated on April 27, 2022 10:44:51am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

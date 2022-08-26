@@ -55,12 +55,11 @@ Get the Py5Shape object's "family" number.
 
 Underlying Processing method: PShape.getFamily
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     get_family() -> int
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

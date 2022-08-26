@@ -53,18 +53,14 @@ The default visibility of a shape is usually controlled by whatever program crea
 
 Underlying Processing method: `PShape.setVisible <https://processing.org/reference/PShape_setVisible_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_visible(visible: bool, /) -> None
-
-Parameters
-----------
-
-* **visible**: `bool` - ``False`` makes the shape invisible and ``True`` makes it visible
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    set_visible(
+        visible: bool,  # ``False`` makes the shape invisible and ``True`` makes it visible
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

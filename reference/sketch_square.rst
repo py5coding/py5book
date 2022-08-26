@@ -42,20 +42,16 @@ Draws a square to the screen. A square is a four-sided shape with every angle at
 
 Underlying Processing method: `square <https://processing.org/reference/square_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    square(x: float, y: float, extent: float, /) -> None
-
-Parameters
-----------
-
-* **extent**: `float` - width and height of the rectangle by default
-* **x**: `float` - x-coordinate of the rectangle by default
-* **y**: `float` - y-coordinate of the rectangle by default
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    square(
+        x: float,  # x-coordinate of the rectangle by default
+        y: float,  # y-coordinate of the rectangle by default
+        extent: float,  # width and height of the rectangle by default
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

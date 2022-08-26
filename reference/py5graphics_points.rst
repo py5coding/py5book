@@ -14,18 +14,14 @@ This method is the same as :doc:`sketch_points` but linked to a ``Py5Graphics`` 
 
 Underlying Processing method: PGraphics.points
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    points(coordinates: npt.NDArray[np.floating], /) -> None
-
-Parameters
-----------
-
-* **coordinates**: `npt.NDArray[np.floating]` - 2D array of point coordinates with 2 or 3 columns for 2D or 3D points, respectively
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+    points(
+        coordinates: npt.NDArray[np.floating],  # 2D array of point coordinates with 2 or 3 columns for 2D or 3D points, respectively
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

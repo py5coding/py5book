@@ -76,19 +76,15 @@ This method provides the same functionality as :doc:`sketch_window_move`.
 
 Underlying Processing method: PSurface.setLocation
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_location(x: int, y: int, /) -> None
-
-Parameters
-----------
-
-* **x**: `int` - x-coordinate for window location
-* **y**: `int` - y-coordinate for window location
-
-
-Updated on July 18, 2022 17:22:20pm UTC
+    set_location(
+        x: int,  # x-coordinate for window location
+        y: int,  # y-coordinate for window location
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

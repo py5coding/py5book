@@ -60,6 +60,5 @@ Note that py5 can only track the mouse position when the pointer is over the cur
 
 Underlying Processing field: rmouseX
 
-
-Updated on May 02, 2022 12:07:22pm UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

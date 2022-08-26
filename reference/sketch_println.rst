@@ -42,21 +42,16 @@ When running a Sketch asynchronously through Jupyter Notebook, any ``print`` sta
 
 Use :doc:`sketch_set_println_stream` to customize the behavior of ``println()``.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    println(*args, sep: str = ' ', end: str = '\n', stderr: bool = False) -> None
-
-Parameters
-----------
-
-* **args**: - values to be printed
-* **end**: `str = '\\n'` - string appended after the last value, defaults to newline character
-* **sep**: `str = ' '` - string inserted between values, defaults to a space
-* **stderr**: `bool = False` - use stderr instead of stdout
-
-
-Updated on September 11, 2021 16:51:34pm UTC
+    println(
+        *args,
+        sep: str = " ",  # string inserted between values, defaults to a space
+        end: str = "\n",  # string appended after the last value, defaults to newline character
+        stderr: bool = False  # use stderr instead of stdout
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

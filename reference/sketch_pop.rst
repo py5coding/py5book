@@ -85,12 +85,11 @@ The :doc:`sketch_push` and ``pop()`` functions can be used in place of :doc:`ske
 
 Underlying Processing method: `pop <https://processing.org/reference/pop_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     pop() -> None
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

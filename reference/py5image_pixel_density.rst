@@ -41,6 +41,5 @@ Pixel density of the Py5Image object. This will always be equal to 1, even if th
 
 Underlying Processing field: PImage.pixelDensity
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

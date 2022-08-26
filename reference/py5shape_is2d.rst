@@ -84,12 +84,11 @@ If the shape is created in a Sketch using the ``P3D`` renderer, this will be ``F
 
 Underlying Processing method: PShape.is2D
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     is2d() -> bool
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

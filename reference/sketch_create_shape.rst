@@ -169,22 +169,22 @@ After using ``create_shape()``, stroke and fill color can be set by calling meth
 
 Underlying Processing method: `createShape <https://processing.org/reference/createShape_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     create_shape() -> Py5Shape
-    create_shape(kind: int, /, *p: float) -> Py5Shape
-    create_shape(type: int, /) -> Py5Shape
 
-Parameters
-----------
+    create_shape(
+        kind: int,  # either POINT, LINE, TRIANGLE, QUAD, RECT, ELLIPSE, ARC, BOX, SPHERE
+        /,
+        *p: float,
+    ) -> Py5Shape
 
-* **kind**: `int` - either POINT, LINE, TRIANGLE, QUAD, RECT, ELLIPSE, ARC, BOX, SPHERE
-* **p**: `float` - parameters that match the kind of shape
-* **type**: `int` - either GROUP, PATH, or GEOMETRY
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+    create_shape(
+        type: int,  # either GROUP, PATH, or GEOMETRY
+        /,
+    ) -> Py5Shape
+Updated on August 25, 2022 20:01:47pm UTC
 

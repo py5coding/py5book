@@ -78,18 +78,14 @@ When the pixel density is set to more than 1, it changes all of the pixel operat
 
 Underlying Processing method: `pixelDensity <https://processing.org/reference/pixelDensity_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    pixel_density(density: int, /) -> None
-
-Parameters
-----------
-
-* **density**: `int` - 1 or 2
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    pixel_density(
+        density: int,  # 1 or 2
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

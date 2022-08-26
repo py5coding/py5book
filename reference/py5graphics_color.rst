@@ -16,37 +16,67 @@ This method is the same as :doc:`sketch_color` but linked to a ``Py5Graphics`` o
 
 Underlying Processing method: PGraphics.color
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    color(c: int, /) -> int
-    color(c: int, alpha: float, /) -> int
-    color(c: int, alpha: int, /) -> int
-    color(gray: float, /) -> int
-    color(gray: float, alpha: float, /) -> int
-    color(v1: float, v2: float, v3: float, /) -> int
-    color(v1: float, v2: float, v3: float, a: float, /) -> int
-    color(v1: int, v2: int, v3: int, /) -> int
-    color(v1: int, v2: int, v3: int, a: int, /) -> int
+    color(
+        c: int,  # color value
+        /,
+    ) -> int
 
-Parameters
-----------
+    color(
+        c: int,  # color value
+        alpha: float,  # alpha value relative to current color range
+        /,
+    ) -> int
 
-* **a**: `float` - alpha value relative to current color range
-* **a**: `int` - alpha value relative to current color range
-* **alpha**: `float` - alpha value relative to current color range
-* **alpha**: `int` - alpha value relative to current color range
-* **c**: `int` - color value
-* **gray**: `float` - gray value relative to current color range
-* **v1**: `float` - red or hue values relative to the current color range
-* **v1**: `int` - red or hue values relative to the current color range
-* **v2**: `float` - green or saturation values relative to the current color range
-* **v2**: `int` - green or saturation values relative to the current color range
-* **v3**: `float` - blue or brightness values relative to the current color range
-* **v3**: `int` - blue or brightness values relative to the current color range
+    color(
+        c: int,  # color value
+        alpha: int,  # alpha value relative to current color range
+        /,
+    ) -> int
 
+    color(
+        gray: float,  # gray value relative to current color range
+        /,
+    ) -> int
 
-Updated on November 12, 2021 11:30:58am UTC
+    color(
+        gray: float,  # gray value relative to current color range
+        alpha: float,  # alpha value relative to current color range
+        /,
+    ) -> int
+
+    color(
+        v1: float,  # red or hue values relative to the current color range
+        v2: float,  # green or saturation values relative to the current color range
+        v3: float,  # blue or brightness values relative to the current color range
+        /,
+    ) -> int
+
+    color(
+        v1: float,  # red or hue values relative to the current color range
+        v2: float,  # green or saturation values relative to the current color range
+        v3: float,  # blue or brightness values relative to the current color range
+        a: float,  # alpha value relative to current color range
+        /,
+    ) -> int
+
+    color(
+        v1: int,  # red or hue values relative to the current color range
+        v2: int,  # green or saturation values relative to the current color range
+        v3: int,  # blue or brightness values relative to the current color range
+        /,
+    ) -> int
+
+    color(
+        v1: int,  # red or hue values relative to the current color range
+        v2: int,  # green or saturation values relative to the current color range
+        v3: int,  # blue or brightness values relative to the current color range
+        a: int,  # alpha value relative to current color range
+        /,
+    ) -> int
+Updated on August 25, 2022 19:59:03pm UTC
 

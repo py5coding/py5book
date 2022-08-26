@@ -97,21 +97,22 @@ Transformations are cumulative and apply to everything that happens after and su
 
 Underlying Processing method: `translate <https://processing.org/reference/translate_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    translate(x: float, y: float, /) -> None
-    translate(x: float, y: float, z: float, /) -> None
+    translate(
+        x: float,  # left/right translation
+        y: float,  # up/down translation
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **x**: `float` - left/right translation
-* **y**: `float` - up/down translation
-* **z**: `float` - forward/backward translation
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    translate(
+        x: float,  # left/right translation
+        y: float,  # up/down translation
+        z: float,  # forward/backward translation
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

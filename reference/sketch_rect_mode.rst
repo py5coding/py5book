@@ -85,18 +85,14 @@ The parameter must be written in ALL CAPS because Python is a case-sensitive lan
 
 Underlying Processing method: `rectMode <https://processing.org/reference/rectMode_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    rect_mode(mode: int, /) -> None
-
-Parameters
-----------
-
-* **mode**: `int` - either CORNER, CORNERS, CENTER, or RADIUS
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    rect_mode(
+        mode: int,  # either CORNER, CORNERS, CENTER, or RADIUS
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -79,20 +79,20 @@ If the file is not available or an error occurs, ``None`` will be returned and a
 
 Underlying Processing method: `loadShape <https://processing.org/reference/loadShape_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    load_shape(filename: str, /) -> Py5Shape
-    load_shape(filename: str, options: str, /) -> Py5Shape
+    load_shape(
+        filename: str,  # name of file to load, can be .svg or .obj
+        /,
+    ) -> Py5Shape
 
-Parameters
-----------
-
-* **filename**: `str` - name of file to load, can be .svg or .obj
-* **options**: `str` - unused parameter
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+    load_shape(
+        filename: str,  # name of file to load, can be .svg or .obj
+        options: str,  # unused parameter
+        /,
+    ) -> Py5Shape
+Updated on August 25, 2022 20:01:47pm UTC
 

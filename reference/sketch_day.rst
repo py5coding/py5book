@@ -45,12 +45,11 @@ Py5 communicates with the clock on your computer. The ``day()`` function returns
 
 Underlying Processing method: `day <https://processing.org/reference/day_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     day() -> int
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

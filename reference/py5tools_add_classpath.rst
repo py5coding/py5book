@@ -45,18 +45,13 @@ Add a Java jar file to the classpath. The path to the file can be absolute or re
 
 After the JVM has started, the classpath cannot be changed. This function will throw a ``RuntimeError`` if it is called after the JVM has already started. Use :doc:`py5tools_is_jvm_running` to first determine if the JVM is running.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    add_classpath(classpath: Union[Path, str]) -> None
-
-Parameters
-----------
-
-* **classpath**: `Union[Path, str]` - path to Java jar file
-
-
-Updated on September 11, 2021 16:51:34pm UTC
+    add_classpath(
+        classpath: Union[Path, str]  # path to Java jar file
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

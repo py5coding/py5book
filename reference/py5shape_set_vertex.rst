@@ -57,24 +57,30 @@ The ``set_vertex()`` method defines the coordinates of the vertex point located 
 
 Underlying Processing method: `PShape.setVertex <https://processing.org/reference/PShape_setVertex_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_vertex(index: int, vec: Py5Vector, /) -> None
-    set_vertex(index: int, x: float, y: float, /) -> None
-    set_vertex(index: int, x: float, y: float, z: float, /) -> None
+    set_vertex(
+        index: int,  # the location of the vertex
+        vec: Py5Vector,  # the vector to define the x, y, z coordinates
+        /,
+    ) -> None
 
-Parameters
-----------
+    set_vertex(
+        index: int,  # the location of the vertex
+        x: float,  # the x value for the vertex
+        y: float,  # the y value for the vertex
+        /,
+    ) -> None
 
-* **index**: `int` - the location of the vertex
-* **vec**: `Py5Vector` - the vector to define the x, y, z coordinates
-* **x**: `float` - the x value for the vertex
-* **y**: `float` - the y value for the vertex
-* **z**: `float` - the z value for the vertex
-
-
-Updated on January 16, 2022 16:51:21pm UTC
+    set_vertex(
+        index: int,  # the location of the vertex
+        x: float,  # the x value for the vertex
+        y: float,  # the y value for the vertex
+        z: float,  # the z value for the vertex
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

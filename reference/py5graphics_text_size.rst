@@ -12,18 +12,14 @@ This method is the same as :doc:`sketch_text_size` but linked to a ``Py5Graphics
 
 Underlying Processing method: PGraphics.textSize
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    text_size(size: float, /) -> None
-
-Parameters
-----------
-
-* **size**: `float` - the size of the letters in units of pixels
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    text_size(
+        size: float,  # the size of the letters in units of pixels
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

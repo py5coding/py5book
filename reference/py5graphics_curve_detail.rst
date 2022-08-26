@@ -12,18 +12,14 @@ This method is the same as :doc:`sketch_curve_detail` but linked to a ``Py5Graph
 
 Underlying Processing method: PGraphics.curveDetail
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    curve_detail(detail: int, /) -> None
-
-Parameters
-----------
-
-* **detail**: `int` - resolution of the curves
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    curve_detail(
+        detail: int,  # resolution of the curves
+        /,
+    ) -> None
+Updated on August 25, 2022 19:59:03pm UTC
 

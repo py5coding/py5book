@@ -97,23 +97,27 @@ Transformations apply to everything that happens after and subsequent calls to t
 
 Underlying Processing method: `scale <https://processing.org/reference/scale_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    scale(s: float, /) -> None
-    scale(x: float, y: float, /) -> None
-    scale(x: float, y: float, z: float, /) -> None
+    scale(
+        s: float,  # percentage to scale the object
+        /,
+    ) -> None
 
-Parameters
-----------
+    scale(
+        x: float,  # percentage to scale the object in the x-axis
+        y: float,  # percentage to scale the object in the y-axis
+        /,
+    ) -> None
 
-* **s**: `float` - percentage to scale the object
-* **x**: `float` - percentage to scale the object in the x-axis
-* **y**: `float` - percentage to scale the object in the y-axis
-* **z**: `float` - percentage to scale the object in the z-axis
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    scale(
+        x: float,  # percentage to scale the object in the x-axis
+        y: float,  # percentage to scale the object in the y-axis
+        z: float,  # percentage to scale the object in the z-axis
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -51,12 +51,11 @@ When programming in module mode and imported mode, py5 will allow calls to ``no_
 
 Underlying Processing method: `noSmooth <https://processing.org/reference/noSmooth_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     no_smooth() -> None
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

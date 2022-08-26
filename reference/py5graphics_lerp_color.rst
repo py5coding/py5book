@@ -14,22 +14,24 @@ This method is the same as :doc:`sketch_lerp_color` but linked to a ``Py5Graphic
 
 Underlying Processing method: PGraphics.lerpColor
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    lerp_color(c1: int, c2: int, amt: float, /) -> int
-    lerp_color(c1: int, c2: int, amt: float, mode: int, /) -> int
+    lerp_color(
+        c1: int,  # interpolate from this color
+        c2: int,  # interpolate to this color
+        amt: float,  # between 0.0 and 1.0
+        /,
+    ) -> int
 
-Parameters
-----------
-
-* **amt**: `float` - between 0.0 and 1.0
-* **c1**: `int` - interpolate from this color
-* **c2**: `int` - interpolate to this color
-* **mode**: `int` - either RGB or HSB
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    lerp_color(
+        c1: int,  # interpolate from this color
+        c2: int,  # interpolate to this color
+        amt: float,  # between 0.0 and 1.0
+        mode: int,  # either RGB or HSB
+        /,
+    ) -> int
+Updated on August 25, 2022 20:01:47pm UTC
 

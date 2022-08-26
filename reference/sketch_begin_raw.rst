@@ -82,21 +82,20 @@ Using ``hint(ENABLE_DEPTH_SORT)`` can improve the appearance of 3D geometry draw
 
 Underlying Processing method: `beginRaw <https://processing.org/reference/beginRaw_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    begin_raw(raw_graphics: Py5Graphics, /) -> None
-    begin_raw(renderer: str, filename: str, /) -> Py5Graphics
+    begin_raw(
+        raw_graphics: Py5Graphics,  # Py5Graphics object to apply draw commands to
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **filename**: `str` - filename for output
-* **raw_graphics**: `Py5Graphics` - Py5Graphics object to apply draw commands to
-* **renderer**: `str` - for example, PDF or DXF
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    begin_raw(
+        renderer: str,  # for example, PDF or DXF
+        filename: str,  # filename for output
+        /,
+    ) -> Py5Graphics
+Updated on August 25, 2022 20:01:47pm UTC
 

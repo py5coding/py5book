@@ -61,20 +61,15 @@ Normalizes a number from another range into a value between 0 and 1. Identical t
 
 Numbers outside of the range are not clamped to 0 and 1, because out-of-range values are often intentional and useful. (See the second example.) If that isn't what you want, try pairing this function with :doc:`sketch_constrain`.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    norm(value: Union[float, npt.NDArray], start: Union[float, npt.NDArray], stop: Union[float, npt.NDArray]) -> Union[float, npt.NDArray]
-
-Parameters
-----------
-
-* **start**: `Union[float, npt.NDArray]` - lower bound of the value's current range
-* **stop**: `Union[float, npt.NDArray]` - upper bound of the value's current range
-* **value**: `Union[float, npt.NDArray]` - the incoming value to be converted
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+    norm(
+        value: Union[float, npt.NDArray],  # the incoming value to be converted
+        start: Union[float, npt.NDArray],  # lower bound of the value's current range
+        stop: Union[float, npt.NDArray],  # upper bound of the value's current range
+    ) -> Union[float, npt.NDArray]
+Updated on August 25, 2022 20:01:47pm UTC
 

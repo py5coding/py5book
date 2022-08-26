@@ -49,21 +49,22 @@ If you want to pick a random object from a list, recall that Python uses zero-in
 
 This function makes calls to numpy to generate the random integers.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     random_int() -> int
-    random_int(high: int, /) -> int
-    random_int(low: int, high: int, /) -> int
 
-Parameters
-----------
+    random_int(
+        high: int,  # upper limit
+        /,
+    ) -> int
 
-* **high**: `int` - upper limit
-* **low**: `int` - lower limit
-
-
-Updated on November 08, 2021 12:26:18pm UTC
+    random_int(
+        low: int,  # lower limit
+        high: int,  # upper limit
+        /,
+    ) -> int
+Updated on August 25, 2022 20:01:47pm UTC
 

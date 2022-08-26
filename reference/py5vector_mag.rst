@@ -44,6 +44,5 @@ Description
 
 The vector's magnitude. Setting this property to a non-negative number will adjust the vector's magnitude to that value. Negative values will result in an error.
 
-
-Updated on January 16, 2022 16:51:21pm UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

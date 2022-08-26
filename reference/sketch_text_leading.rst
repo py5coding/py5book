@@ -54,18 +54,14 @@ Sets the spacing between lines of text in units of pixels. This setting will be 
 
 Underlying Processing method: `textLeading <https://processing.org/reference/textLeading_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    text_leading(leading: float, /) -> None
-
-Parameters
-----------
-
-* **leading**: `float` - the size in pixels for spacing between lines
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    text_leading(
+        leading: float,  # the size in pixels for spacing between lines
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

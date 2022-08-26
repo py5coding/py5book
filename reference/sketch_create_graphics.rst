@@ -58,23 +58,30 @@ Unlike the main drawing surface which is completely opaque, surfaces created wit
 
 Underlying Processing method: `createGraphics <https://processing.org/reference/createGraphics_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    create_graphics(w: int, h: int, /) -> Py5Graphics
-    create_graphics(w: int, h: int, renderer: str, /) -> Py5Graphics
-    create_graphics(w: int, h: int, renderer: str, path: str, /) -> Py5Graphics
+    create_graphics(
+        w: int,  # width in pixels
+        h: int,  # height in pixels
+        /,
+    ) -> Py5Graphics
 
-Parameters
-----------
+    create_graphics(
+        w: int,  # width in pixels
+        h: int,  # height in pixels
+        renderer: str,  # Either P2D, P3D, or PDF
+        /,
+    ) -> Py5Graphics
 
-* **h**: `int` - height in pixels
-* **path**: `str` - the name of the file (can be an absolute or relative path)
-* **renderer**: `str` - Either P2D, P3D, or PDF
-* **w**: `int` - width in pixels
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+    create_graphics(
+        w: int,  # width in pixels
+        h: int,  # height in pixels
+        renderer: str,  # Either P2D, P3D, or PDF
+        path: str,  # the name of the file (can be an absolute or relative path)
+        /,
+    ) -> Py5Graphics
+Updated on August 25, 2022 20:01:47pm UTC
 

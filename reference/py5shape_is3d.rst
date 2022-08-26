@@ -84,12 +84,11 @@ If the shape is created in a Sketch using the ``P3D`` renderer, this will be ``T
 
 Underlying Processing method: PShape.is3D
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     is3d() -> bool
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

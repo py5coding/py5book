@@ -77,23 +77,25 @@ Getting the color of a single pixel with ``get(x, y)`` is easy, but not as fast 
 
 Underlying Processing method: `get <https://processing.org/reference/get_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     get() -> Py5Image
-    get(x: int, y: int, /) -> int
-    get(x: int, y: int, w: int, h: int, /) -> Py5Image
 
-Parameters
-----------
+    get(
+        x: int,  # x-coordinate of the pixel
+        y: int,  # y-coordinate of the pixel
+        /,
+    ) -> int
 
-* **h**: `int` - height of pixel rectangle to get
-* **w**: `int` - width of pixel rectangle to get
-* **x**: `int` - x-coordinate of the pixel
-* **y**: `int` - y-coordinate of the pixel
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    get(
+        x: int,  # x-coordinate of the pixel
+        y: int,  # y-coordinate of the pixel
+        w: int,  # width of pixel rectangle to get
+        h: int,  # height of pixel rectangle to get
+        /,
+    ) -> Py5Image
+Updated on August 25, 2022 20:01:47pm UTC
 

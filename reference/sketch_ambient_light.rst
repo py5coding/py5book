@@ -81,24 +81,26 @@ Adds an ambient light. Ambient light doesn't come from a specific direction, the
 
 Underlying Processing method: `ambientLight <https://processing.org/reference/ambientLight_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    ambient_light(v1: float, v2: float, v3: float, /) -> None
-    ambient_light(v1: float, v2: float, v3: float, x: float, y: float, z: float, /) -> None
+    ambient_light(
+        v1: float,  # red or hue value (depending on current color mode)
+        v2: float,  # green or saturation value (depending on current color mode)
+        v3: float,  # blue or brightness value (depending on current color mode)
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **v1**: `float` - red or hue value (depending on current color mode)
-* **v2**: `float` - green or saturation value (depending on current color mode)
-* **v3**: `float` - blue or brightness value (depending on current color mode)
-* **x**: `float` - x-coordinate of the light
-* **y**: `float` - y-coordinate of the light
-* **z**: `float` - z-coordinate of the light
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    ambient_light(
+        v1: float,  # red or hue value (depending on current color mode)
+        v2: float,  # green or saturation value (depending on current color mode)
+        v3: float,  # blue or brightness value (depending on current color mode)
+        x: float,  # x-coordinate of the light
+        y: float,  # y-coordinate of the light
+        z: float,  # z-coordinate of the light
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

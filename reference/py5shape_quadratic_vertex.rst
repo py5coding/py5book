@@ -80,24 +80,27 @@ Drawing 2D bezier curves requires using the ``P2D`` renderer and drawing 3D bezi
 
 Underlying Processing method: PShape.quadraticVertex
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    quadratic_vertex(cx: float, cy: float, cz: float, x3: float, y3: float, z3: float, /) -> None
-    quadratic_vertex(cx: float, cy: float, x3: float, y3: float, /) -> None
+    quadratic_vertex(
+        cx: float,  # the x-coordinate of the control point
+        cy: float,  # the y-coordinate of the control point
+        cz: float,  # the z-coordinate of the control point
+        x3: float,  # the x-coordinate of the anchor point
+        y3: float,  # the y-coordinate of the anchor point
+        z3: float,  # the z-coordinate of the anchor point
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **cx**: `float` - the x-coordinate of the control point
-* **cy**: `float` - the y-coordinate of the control point
-* **cz**: `float` - the z-coordinate of the control point
-* **x3**: `float` - the x-coordinate of the anchor point
-* **y3**: `float` - the y-coordinate of the anchor point
-* **z3**: `float` - the z-coordinate of the anchor point
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    quadratic_vertex(
+        cx: float,  # the x-coordinate of the control point
+        cy: float,  # the y-coordinate of the control point
+        x3: float,  # the x-coordinate of the anchor point
+        y3: float,  # the y-coordinate of the anchor point
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

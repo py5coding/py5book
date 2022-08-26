@@ -65,18 +65,14 @@ This method can only be used within a :doc:`py5shape_begin_shape` and :doc:`py5s
 
 Underlying Processing method: PShape.curveTightness
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    curve_tightness(tightness: float, /) -> None
-
-Parameters
-----------
-
-* **tightness**: `float` - amount of deformation from the original vertices
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    curve_tightness(
+        tightness: float,  # amount of deformation from the original vertices
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

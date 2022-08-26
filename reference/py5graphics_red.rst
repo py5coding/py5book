@@ -14,18 +14,14 @@ This method is the same as :doc:`sketch_red` but linked to a ``Py5Graphics`` obj
 
 Underlying Processing method: PGraphics.red
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    red(rgb: int, /) -> float
-
-Parameters
-----------
-
-* **rgb**: `int` - any value of the color datatype
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    red(
+        rgb: int,  # any value of the color datatype
+        /,
+    ) -> float
+Updated on August 25, 2022 20:01:47pm UTC
 

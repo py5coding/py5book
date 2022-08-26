@@ -45,22 +45,18 @@ The ``use_thread`` parameter will save the image in a separate Python thread. Th
 
 This method is the same as :doc:`sketch_save` except it will replace a sequence of ``#`` symbols in the ``filename`` parameter with the frame number. This is useful when saving an image sequence for a running animation. The first frame number will be 1.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    save_frame(filename: Union[str, Path, BytesIO], *, format: str = None, drop_alpha: bool = True, use_thread: bool = False, **params) -> None
-
-Parameters
-----------
-
-* **drop_alpha**: `bool = True` - remove the alpha channel when saving the image
-* **filename**: `Union[str, Path, BytesIO]` - output filename
-* **format**: `str = None` - image format, if not determined from filename extension
-* **params**: - keyword arguments to pass to the PIL.Image save method
-* **use_thread**: `bool = False` - write file in separate thread
-
-
-Updated on October 29, 2021 22:01:43pm UTC
+    save_frame(
+        filename: Union[str, Path, BytesIO],  # output filename
+        *,
+        format: str = None,  # image format, if not determined from filename extension
+        drop_alpha: bool = True,  # remove the alpha channel when saving the image
+        use_thread: bool = False,  # write file in separate thread
+        **params
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

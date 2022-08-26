@@ -56,18 +56,13 @@ Customize where the output of :doc:`sketch_println` goes.
 
 When running a Sketch asynchronously through Jupyter Notebook, any ``print`` statements using Python's builtin function will always appear in the output of the currently active cell. This will rarely be desirable, as the active cell will keep changing as the user executes code elsewhere in the notebook. The :doc:`sketch_println` method was created to provide users with print functionality in a Sketch without having to cope with output moving from one cell to the next. Use ``set_println_stream`` to change how the output is handled. The ``println_stream`` object must provide ``init()`` and ``print()`` methods, as shown in the example. The example demonstrates how to configure py5 to output text to an IPython Widget.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_println_stream(println_stream: Any) -> None
-
-Parameters
-----------
-
-* **println_stream**: `Any` - println stream object to be used by println method
-
-
-Updated on September 11, 2021 16:51:34pm UTC
+    set_println_stream(
+        println_stream: Any,  # println stream object to be used by println method
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

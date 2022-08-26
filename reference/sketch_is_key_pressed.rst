@@ -46,6 +46,5 @@ Description
 
 The ``is_key_pressed`` variable stores whether or not a keyboard button is currently being pressed. The value is true when `any` keyboard button is pressed, and false if no button is pressed. The :doc:`sketch_key` variable and :doc:`sketch_key_code` variables (see the related reference entries) can be used to determine which button has been pressed.
 
-
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -45,6 +45,5 @@ System variable that stores the height of the display window. This value is set 
 
 Underlying Processing field: `height <https://processing.org/reference/height.html>`_
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -157,22 +157,27 @@ When ``full_screen()`` is used without a parameter on a computer with multiple m
 
 Underlying Processing method: `fullScreen <https://processing.org/reference/fullScreen_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     full_screen() -> None
-    full_screen(display: int, /) -> None
-    full_screen(renderer: str, /) -> None
-    full_screen(renderer: str, display: int, /) -> None
 
-Parameters
-----------
+    full_screen(
+        display: int,  # the screen to run the Sketch on (1, 2, 3, etc. or on multiple screens using SPAN)
+        /,
+    ) -> None
 
-* **display**: `int` - the screen to run the Sketch on (1, 2, 3, etc. or on multiple screens using SPAN)
-* **renderer**: `str` - the renderer to use, e.g. P2D, P3D, JAVA2D (default)
+    full_screen(
+        renderer: str,  # the renderer to use, e.g. P2D, P3D, JAVA2D (default)
+        /,
+    ) -> None
 
-
-Updated on November 12, 2021 11:30:58am UTC
+    full_screen(
+        renderer: str,  # the renderer to use, e.g. P2D, P3D, JAVA2D (default)
+        display: int,  # the screen to run the Sketch on (1, 2, 3, etc. or on multiple screens using SPAN)
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

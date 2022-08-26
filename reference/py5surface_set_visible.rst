@@ -84,18 +84,14 @@ Set the Sketch window's visiblity. The animation will continue to run but the wi
 
 Underlying Processing method: PSurface.setVisible
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_visible(visible: bool, /) -> None
-
-Parameters
-----------
-
-* **visible**: `bool` - desired surface visiblity
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    set_visible(
+        visible: bool,  # desired surface visiblity
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

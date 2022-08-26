@@ -44,12 +44,11 @@ Description
 
 Determine if the Java Virtual Machine (JVM) is or is not running. When the py5 library is imported it will start the JVM.  Therefore this will be ``False`` before ``import py5`` is executed and ``True`` afterwards. It should continue to always be ``True`` unless somewhere there is some Java code that calls ``System.exit()``. Calling ``System.exit()`` is not recommended. If for some reason the JVM crashes (perhaps through a segmentation fault), the JVM will no longer be running, but that crash will most likely also terminate the Python interpreter.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     is_jvm_running() -> bool
-
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

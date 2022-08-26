@@ -57,20 +57,20 @@ This method can only be used for a complete ``Py5Shape`` object, and never withi
 
 Underlying Processing method: PShape.setShininess
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_shininess(index: int, shine: float, /) -> None
-    set_shininess(shine: float, /) -> None
+    set_shininess(
+        index: int,  # vertex index
+        shine: float,  # degree of shininess
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **index**: `int` - vertex index
-* **shine**: `float` - degree of shininess
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    set_shininess(
+        shine: float,  # degree of shininess
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

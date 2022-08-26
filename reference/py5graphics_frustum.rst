@@ -20,23 +20,19 @@ This method is the same as :doc:`sketch_frustum` but linked to a ``Py5Graphics``
 
 Underlying Processing method: PGraphics.frustum
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    frustum(left: float, right: float, bottom: float, top: float, near: float, far: float, /) -> None
-
-Parameters
-----------
-
-* **bottom**: `float` - bottom coordinate of the clipping plane
-* **far**: `float` - far component of the clipping plane; must be greater than the near value
-* **left**: `float` - left coordinate of the clipping plane
-* **near**: `float` - near component of the clipping plane; must be greater than zero
-* **right**: `float` - right coordinate of the clipping plane
-* **top**: `float` - top coordinate of the clipping plane
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    frustum(
+        left: float,  # left coordinate of the clipping plane
+        right: float,  # right coordinate of the clipping plane
+        bottom: float,  # bottom coordinate of the clipping plane
+        top: float,  # top coordinate of the clipping plane
+        near: float,  # near component of the clipping plane; must be greater than zero
+        far: float,  # far component of the clipping plane; must be greater than the near value
+        /,
+    ) -> None
+Updated on August 25, 2022 19:59:03pm UTC
 

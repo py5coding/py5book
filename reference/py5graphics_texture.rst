@@ -14,18 +14,14 @@ This method is the same as :doc:`sketch_texture` but linked to a ``Py5Graphics``
 
 Underlying Processing method: PGraphics.texture
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    texture(image: Py5Image, /) -> None
-
-Parameters
-----------
-
-* **image**: `Py5Image` - reference to a Py5Image object
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    texture(
+        image: Py5Image,  # reference to a Py5Image object
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

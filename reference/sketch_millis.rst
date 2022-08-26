@@ -42,12 +42,11 @@ Returns the number of milliseconds (thousandths of a second) since starting the 
 
 Underlying Processing method: `millis <https://processing.org/reference/millis_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     millis() -> int
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

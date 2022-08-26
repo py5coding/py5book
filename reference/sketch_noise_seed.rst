@@ -75,18 +75,14 @@ Sets the seed value for :doc:`sketch_noise`. By default, :doc:`sketch_noise` pro
 
 Underlying Processing method: `noiseSeed <https://processing.org/reference/noiseSeed_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    noise_seed(seed: int, /) -> None
-
-Parameters
-----------
-
-* **seed**: `int` - seed value
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+    noise_seed(
+        seed: int,  # seed value
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

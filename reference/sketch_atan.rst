@@ -65,18 +65,13 @@ The inverse of :doc:`sketch_tan`, returns the arc tangent of a value. This funct
 
 This function makes a call to the numpy ``atan()`` function.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    atan(value: Union[float, npt.ArrayLike]) -> Union[float, npt.NDArray]
-
-Parameters
-----------
-
-* **value**: `Union[float, npt.ArrayLike]` - value whose arc tangent is to be returned
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+    atan(
+        value: Union[float, npt.ArrayLike]  # value whose arc tangent is to be returned
+    ) -> Union[float, npt.NDArray]
+Updated on August 25, 2022 20:01:47pm UTC
 

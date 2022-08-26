@@ -57,12 +57,11 @@ Both :doc:`py5shape_tint` and ``no_tint()`` can be used to control the coloring 
 
 Underlying Processing method: PShape.noTint
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     no_tint() -> None
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

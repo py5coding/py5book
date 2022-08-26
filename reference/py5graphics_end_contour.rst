@@ -14,12 +14,11 @@ This method is the same as :doc:`sketch_end_contour` but linked to a ``Py5Graphi
 
 Underlying Processing method: PGraphics.endContour
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     end_contour() -> None
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 19:59:03pm UTC
 

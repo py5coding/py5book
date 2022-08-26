@@ -114,27 +114,44 @@ This method is also used to map a texture onto geometry. The :doc:`sketch_textur
 
 Underlying Processing method: `vertex <https://processing.org/reference/vertex_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    vertex(v: npt.NDArray[np.floating], /) -> None
-    vertex(x: float, y: float, /) -> None
-    vertex(x: float, y: float, u: float, v: float, /) -> None
-    vertex(x: float, y: float, z: float, /) -> None
-    vertex(x: float, y: float, z: float, u: float, v: float, /) -> None
+    vertex(
+        v: npt.NDArray[np.floating],  # vertical coordinate data for the texture mapping
+        /,
+    ) -> None
 
-Parameters
-----------
+    vertex(
+        x: float,  # x-coordinate of the vertex
+        y: float,  # y-coordinate of the vertex
+        /,
+    ) -> None
 
-* **u**: `float` - horizontal coordinate for the texture mapping
-* **v**: `float` - vertical coordinate for the texture mapping
-* **v**: `npt.NDArray[np.floating]` - vertical coordinate data for the texture mapping
-* **x**: `float` - x-coordinate of the vertex
-* **y**: `float` - y-coordinate of the vertex
-* **z**: `float` - z-coordinate of the vertex
+    vertex(
+        x: float,  # x-coordinate of the vertex
+        y: float,  # y-coordinate of the vertex
+        u: float,  # horizontal coordinate for the texture mapping
+        v: float,  # vertical coordinate for the texture mapping
+        /,
+    ) -> None
 
+    vertex(
+        x: float,  # x-coordinate of the vertex
+        y: float,  # y-coordinate of the vertex
+        z: float,  # z-coordinate of the vertex
+        /,
+    ) -> None
 
-Updated on February 26, 2022 13:22:44pm UTC
+    vertex(
+        x: float,  # x-coordinate of the vertex
+        y: float,  # y-coordinate of the vertex
+        z: float,  # z-coordinate of the vertex
+        u: float,  # horizontal coordinate for the texture mapping
+        v: float,  # vertical coordinate for the texture mapping
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

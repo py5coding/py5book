@@ -47,23 +47,19 @@ Adds a point light. Lights need to be included in the ``draw()`` to remain persi
 
 Underlying Processing method: `pointLight <https://processing.org/reference/pointLight_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    point_light(v1: float, v2: float, v3: float, x: float, y: float, z: float, /) -> None
-
-Parameters
-----------
-
-* **v1**: `float` - red or hue value (depending on current color mode)
-* **v2**: `float` - green or saturation value (depending on current color mode)
-* **v3**: `float` - blue or brightness value (depending on current color mode)
-* **x**: `float` - x-coordinate of the light
-* **y**: `float` - y-coordinate of the light
-* **z**: `float` - z-coordinate of the light
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    point_light(
+        v1: float,  # red or hue value (depending on current color mode)
+        v2: float,  # green or saturation value (depending on current color mode)
+        v3: float,  # blue or brightness value (depending on current color mode)
+        x: float,  # x-coordinate of the light
+        y: float,  # y-coordinate of the light
+        z: float,  # z-coordinate of the light
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

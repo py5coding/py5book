@@ -45,12 +45,11 @@ Py5 communicates with the clock on your computer. The ``minute()`` function retu
 
 Underlying Processing method: `minute <https://processing.org/reference/minute_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     minute() -> int
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

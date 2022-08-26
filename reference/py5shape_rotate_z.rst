@@ -56,18 +56,14 @@ This method requires a 3D renderer. You need to use ``P3D`` as a third parameter
 
 Underlying Processing method: `PShape.rotateZ <https://processing.org/reference/PShape_rotateZ_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    rotate_z(angle: float, /) -> None
-
-Parameters
-----------
-
-* **angle**: `float` - angle of rotation specified in radians
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+    rotate_z(
+        angle: float,  # angle of rotation specified in radians
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

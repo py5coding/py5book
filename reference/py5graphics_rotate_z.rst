@@ -12,18 +12,14 @@ This method is the same as :doc:`sketch_rotate_z` but linked to a ``Py5Graphics`
 
 Underlying Processing method: PGraphics.rotateZ
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    rotate_z(angle: float, /) -> None
-
-Parameters
-----------
-
-* **angle**: `float` - angle of rotation specified in radians
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    rotate_z(
+        angle: float,  # angle of rotation specified in radians
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

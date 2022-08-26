@@ -46,18 +46,13 @@ Convert a color value to a hex color string. Processing and py5 store color valu
 
 Conveniently, the hex color string returned by this method can also be used as parameter for other methods that accept color values. Observe how this is done in the example code.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    hex_color(color: int) -> str
-
-Parameters
-----------
-
-* **color**: `int` - any color value
-
-
-Updated on August 17, 2022 18:09:19pm UTC
+    hex_color(
+        color: int,  # any color value
+    ) -> str
+Updated on August 25, 2022 20:01:47pm UTC
 

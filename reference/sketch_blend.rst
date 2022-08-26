@@ -136,28 +136,36 @@ This function ignores :doc:`sketch_image_mode`.
 
 Underlying Processing method: `blend <https://processing.org/reference/blend_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    blend(src: Py5Image, sx: int, sy: int, sw: int, sh: int, dx: int, dy: int, dw: int, dh: int, mode: int, /) -> None
-    blend(sx: int, sy: int, sw: int, sh: int, dx: int, dy: int, dw: int, dh: int, mode: int, /) -> None
+    blend(
+        src: Py5Image,  # an image variable referring to the source image
+        sx: int,  # x-coordinate of the source's upper left corner
+        sy: int,  # y-coordinate of the source's upper left corner
+        sw: int,  # source image width
+        sh: int,  # source image height
+        dx: int,  # x-coordinate of the destinations's upper left corner
+        dy: int,  # y-coordinate of the destinations's upper left corner
+        dw: int,  # destination image width
+        dh: int,  # destination image height
+        mode: int,  # Either BLEND, ADD, SUBTRACT, LIGHTEST, DARKEST, DIFFERENCE, EXCLUSION, MULTIPLY, SCREEN, OVERLAY, HARD_LIGHT, SOFT_LIGHT, DODGE, BURN
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **dh**: `int` - destination image height
-* **dw**: `int` - destination image width
-* **dx**: `int` - x-coordinate of the destinations's upper left corner
-* **dy**: `int` - y-coordinate of the destinations's upper left corner
-* **mode**: `int` - Either BLEND, ADD, SUBTRACT, LIGHTEST, DARKEST, DIFFERENCE, EXCLUSION, MULTIPLY, SCREEN, OVERLAY, HARD_LIGHT, SOFT_LIGHT, DODGE, BURN
-* **sh**: `int` - source image height
-* **src**: `Py5Image` - an image variable referring to the source image
-* **sw**: `int` - source image width
-* **sx**: `int` - x-coordinate of the source's upper left corner
-* **sy**: `int` - y-coordinate of the source's upper left corner
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    blend(
+        sx: int,  # x-coordinate of the source's upper left corner
+        sy: int,  # y-coordinate of the source's upper left corner
+        sw: int,  # source image width
+        sh: int,  # source image height
+        dx: int,  # x-coordinate of the destinations's upper left corner
+        dy: int,  # y-coordinate of the destinations's upper left corner
+        dw: int,  # destination image width
+        dh: int,  # destination image height
+        mode: int,  # Either BLEND, ADD, SUBTRACT, LIGHTEST, DARKEST, DIFFERENCE, EXCLUSION, MULTIPLY, SCREEN, OVERLAY, HARD_LIGHT, SOFT_LIGHT, DODGE, BURN
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -50,18 +50,14 @@ This method can only be used for a complete ``Py5Shape`` object, and never withi
 
 Underlying Processing method: PShape.getFill
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    get_fill(index: int, /) -> int
-
-Parameters
-----------
-
-* **index**: `int` - vertex index
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    get_fill(
+        index: int,  # vertex index
+        /,
+    ) -> int
+Updated on August 25, 2022 20:01:47pm UTC
 

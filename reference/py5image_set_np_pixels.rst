@@ -58,19 +58,14 @@ This method exists because setting the array contents with the code ``img.np_pix
 
 Note that the :doc:`sketch_convert_image` method can also be used to convert a numpy array into a new Py5Image object.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_np_pixels(array: npt.NDArray[np.uint8], bands: str = 'ARGB') -> None
-
-Parameters
-----------
-
-* **array**: `npt.NDArray[np.uint8]` - properly sized numpy array to be copied to np_pixels[]
-* **bands**: `str = 'ARGB'` - color channels in the array's third dimension
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+    set_np_pixels(
+        array: npt.NDArray[np.uint8],  # properly sized numpy array to be copied to np_pixels[]
+        bands: str = "ARGB",  # color channels in the array's third dimension
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -48,20 +48,15 @@ This method has some platform specific quirks. On OSX, this does not work when t
 
 Underlying Processing method: `selectFolder <https://processing.org/reference/selectFolder_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    select_folder(prompt: str, callback: Callable, default_folder: str = None) -> None
-
-Parameters
-----------
-
-* **callback**: `Callable` - callback function after selection is made
-* **default_folder**: `str = None` - default folder
-* **prompt**: `str` - text prompt for select dialog box
-
-
-Updated on July 31, 2022 19:10:43pm UTC
+    select_folder(
+        prompt: str,  # text prompt for select dialog box
+        callback: Callable,  # callback function after selection is made
+        default_folder: str = None,  # default folder
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

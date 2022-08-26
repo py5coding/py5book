@@ -97,12 +97,11 @@ The output of this method is independent of :doc:`py5surface_pause_thread` and :
 
 Underlying Processing method: PSurface.isStopped
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     is_stopped() -> bool
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

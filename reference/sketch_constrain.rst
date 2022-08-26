@@ -39,20 +39,15 @@ Description
 
 Constrains a value to not exceed a maximum and minimum value.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    constrain(amt: Union[float, npt.NDArray], low: Union[float, npt.NDArray], high: Union[float, npt.NDArray]) -> Union[float, npt.NDArray]
-
-Parameters
-----------
-
-* **amt**: `Union[float, npt.NDArray]` - the value to constrain
-* **high**: `Union[float, npt.NDArray]` - minimum limit
-* **low**: `Union[float, npt.NDArray]` - maximum limit
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+    constrain(
+        amt: Union[float, npt.NDArray],  # the value to constrain
+        low: Union[float, npt.NDArray],  # maximum limit
+        high: Union[float, npt.NDArray],  # minimum limit
+    ) -> Union[float, npt.NDArray]
+Updated on August 25, 2022 20:01:47pm UTC
 

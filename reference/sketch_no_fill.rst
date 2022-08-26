@@ -44,12 +44,11 @@ Disables filling geometry. If both :doc:`sketch_no_stroke` and ``no_fill()`` are
 
 Underlying Processing method: `noFill <https://processing.org/reference/noFill_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     no_fill() -> None
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

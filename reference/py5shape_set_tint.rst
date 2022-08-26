@@ -97,23 +97,25 @@ Calling this method with the boolean parameter ``False`` will delete the assigne
 
 Underlying Processing method: PShape.setTint
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_tint(fill: int, /) -> None
-    set_tint(index: int, tint: int, /) -> None
-    set_tint(tint: bool, /) -> None
+    set_tint(
+        fill: int,  # color value in hexadecimal notation
+        /,
+    ) -> None
 
-Parameters
-----------
+    set_tint(
+        index: int,  # vertex index
+        tint: int,  # color value in hexadecimal notation
+        /,
+    ) -> None
 
-* **fill**: `int` - color value in hexadecimal notation
-* **index**: `int` - vertex index
-* **tint**: `bool` - allow tint
-* **tint**: `int` - color value in hexadecimal notation
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+    set_tint(
+        tint: bool,  # allow tint
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

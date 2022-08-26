@@ -47,18 +47,14 @@ Sets the current font size. This size will be used in all subsequent calls to th
 
 Underlying Processing method: `textSize <https://processing.org/reference/textSize_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    text_size(size: float, /) -> None
-
-Parameters
-----------
-
-* **size**: `float` - the size of the letters in units of pixels
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    text_size(
+        size: float,  # the size of the letters in units of pixels
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -12,18 +12,14 @@ This method is the same as :doc:`sketch_brightness` but linked to a ``Py5Graphic
 
 Underlying Processing method: PGraphics.brightness
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    brightness(rgb: int, /) -> float
-
-Parameters
-----------
-
-* **rgb**: `int` - any value of the color datatype
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    brightness(
+        rgb: int,  # any value of the color datatype
+        /,
+    ) -> float
+Updated on August 25, 2022 19:59:03pm UTC
 

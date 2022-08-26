@@ -14,20 +14,16 @@ This method is the same as :doc:`sketch_light_falloff` but linked to a ``Py5Grap
 
 Underlying Processing method: PGraphics.lightFalloff
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    light_falloff(constant: float, linear: float, quadratic: float, /) -> None
-
-Parameters
-----------
-
-* **constant**: `float` - constant value or determining falloff
-* **linear**: `float` - linear value for determining falloff
-* **quadratic**: `float` - quadratic value for determining falloff
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    light_falloff(
+        constant: float,  # constant value or determining falloff
+        linear: float,  # linear value for determining falloff
+        quadratic: float,  # quadratic value for determining falloff
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

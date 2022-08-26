@@ -44,18 +44,14 @@ This method provides the same functionality as :doc:`sketch_window_title`.
 
 Underlying Processing method: PSurface.setTitle
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_title(title: str, /) -> None
-
-Parameters
-----------
-
-* **title**: `str` - new window title
-
-
-Updated on July 18, 2022 17:22:20pm UTC
+    set_title(
+        title: str,  # new window title
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

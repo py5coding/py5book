@@ -55,6 +55,5 @@ Before accessing this array, the data must loaded with the :doc:`py5image_load_p
 
 Underlying Processing field: `PImage.pixels <https://processing.org/reference/PImage_pixels.html>`_
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

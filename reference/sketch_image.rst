@@ -82,28 +82,38 @@ The color of an image may be modified with the :doc:`sketch_tint` function. This
 
 Underlying Processing method: `image <https://processing.org/reference/image_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    image(img: Py5Image, a: float, b: float, /) -> None
-    image(img: Py5Image, a: float, b: float, c: float, d: float, /) -> None
-    image(img: Py5Image, a: float, b: float, c: float, d: float, u1: int, v1: int, u2: int, v2: int, /) -> None
+    image(
+        img: Py5Image,  # the image to display
+        a: float,  # x-coordinate of the image by default
+        b: float,  # y-coordinate of the image by default
+        /,
+    ) -> None
 
-Parameters
-----------
+    image(
+        img: Py5Image,  # the image to display
+        a: float,  # x-coordinate of the image by default
+        b: float,  # y-coordinate of the image by default
+        c: float,  # width to display the image by default
+        d: float,  # height to display the image by default
+        /,
+    ) -> None
 
-* **a**: `float` - x-coordinate of the image by default
-* **b**: `float` - y-coordinate of the image by default
-* **c**: `float` - width to display the image by default
-* **d**: `float` - height to display the image by default
-* **img**: `Py5Image` - the image to display
-* **u1**: `int` - x-coordinate of the upper left corner of image subset
-* **u2**: `int` - x-coordinate of the lower right corner of image subset
-* **v1**: `int` - y-coordinate of the upper left corner of image subset
-* **v2**: `int` - y-coordinate of the lower right corner of image subset
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    image(
+        img: Py5Image,  # the image to display
+        a: float,  # x-coordinate of the image by default
+        b: float,  # y-coordinate of the image by default
+        c: float,  # width to display the image by default
+        d: float,  # height to display the image by default
+        u1: int,  # x-coordinate of the upper left corner of image subset
+        v1: int,  # y-coordinate of the upper left corner of image subset
+        u2: int,  # x-coordinate of the lower right corner of image subset
+        v2: int,  # y-coordinate of the lower right corner of image subset
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

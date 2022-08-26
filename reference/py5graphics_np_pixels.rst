@@ -60,6 +60,5 @@ To set the entire contents of ``np_pixels[]`` to the contents of another properl
 
 This field is the same as :doc:`sketch_np_pixels` but linked to a ``Py5Graphics`` object.
 
-
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -57,12 +57,11 @@ The ``redraw()`` function does not work properly when called inside ``draw()``. 
 
 Underlying Processing method: `redraw <https://processing.org/reference/redraw_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     redraw() -> None
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

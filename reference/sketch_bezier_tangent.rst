@@ -96,22 +96,18 @@ Calculates the tangent of a point on a Bezier curve. There is a good definition 
 
 Underlying Processing method: `bezierTangent <https://processing.org/reference/bezierTangent_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    bezier_tangent(a: float, b: float, c: float, d: float, t: float, /) -> float
-
-Parameters
-----------
-
-* **a**: `float` - coordinate of first point on the curve
-* **b**: `float` - coordinate of first control point
-* **c**: `float` - coordinate of second control point
-* **d**: `float` - coordinate of second point on the curve
-* **t**: `float` - value between 0 and 1
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    bezier_tangent(
+        a: float,  # coordinate of first point on the curve
+        b: float,  # coordinate of first control point
+        c: float,  # coordinate of second control point
+        d: float,  # coordinate of second point on the curve
+        t: float,  # value between 0 and 1
+        /,
+    ) -> float
+Updated on August 25, 2022 20:01:47pm UTC
 

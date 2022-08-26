@@ -49,19 +49,15 @@ By default the Sketch will be the currently running Sketch, as returned by :doc:
 
 If your Sketch has a ``post_draw()`` method, use the ``hook_post_draw`` parameter to make this function run after ``post_draw()`` instead of ``draw()``. This is important when using Processing libraries that support ``post_draw()`` such as Camera3D or ColorBlindness.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    screenshot(*, sketch: Sketch = None, hook_post_draw: bool = False) -> PIL.Image
-
-Parameters
-----------
-
-* **hook_post_draw**: `bool = False` - attach hook to Sketch's post_draw method instead of draw
-* **sketch**: `Sketch = None` - running Sketch
-
-
-Updated on September 11, 2021 16:51:34pm UTC
+    screenshot(
+        *,
+        sketch: Sketch = None,  # running Sketch
+        hook_post_draw: bool = False  # attach hook to Sketch's post_draw method instead of draw
+    ) -> PIL.Image
+Updated on August 25, 2022 20:01:47pm UTC
 

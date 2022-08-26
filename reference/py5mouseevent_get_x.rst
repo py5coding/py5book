@@ -48,12 +48,11 @@ Return the x position of the mouse at the time of this mouse event. This informa
 
 Underlying Processing method: getX
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     get_x() -> int
-
-Updated on April 27, 2022 10:44:51am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

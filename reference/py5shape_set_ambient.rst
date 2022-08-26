@@ -56,20 +56,20 @@ This method can only be used for a complete ``Py5Shape`` object, and never withi
 
 Underlying Processing method: PShape.setAmbient
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_ambient(ambient: int, /) -> None
-    set_ambient(index: int, ambient: int, /) -> None
+    set_ambient(
+        ambient: int,  # any color value
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **ambient**: `int` - any color value
-* **index**: `int` - vertex index
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    set_ambient(
+        index: int,  # vertex index
+        ambient: int,  # any color value
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

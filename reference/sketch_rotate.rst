@@ -48,22 +48,22 @@ Technically, ``rotate()`` multiplies the current transformation matrix by a rota
 
 Underlying Processing method: `rotate <https://processing.org/reference/rotate_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    rotate(angle: float, /) -> None
-    rotate(angle: float, x: float, y: float, z: float, /) -> None
+    rotate(
+        angle: float,  # angle of rotation specified in radians
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **angle**: `float` - angle of rotation specified in radians
-* **x**: `float` - x-coordinate of vector to rotate around
-* **y**: `float` - y-coordinate of vector to rotate around
-* **z**: `float` - z-coordinate of vector to rotate around
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    rotate(
+        angle: float,  # angle of rotation specified in radians
+        x: float,  # x-coordinate of vector to rotate around
+        y: float,  # y-coordinate of vector to rotate around
+        z: float,  # z-coordinate of vector to rotate around
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

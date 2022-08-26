@@ -43,6 +43,5 @@ Access the numpy random number generator that py5 uses to provide random number 
 
 All of the random numbers generated through this property can be influenced by :doc:`sketch_random_seed`.
 
-
-Updated on July 18, 2022 17:22:20pm UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

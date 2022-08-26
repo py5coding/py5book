@@ -49,12 +49,11 @@ Stops the recording process started by :doc:`sketch_begin_record` and closes the
 
 Underlying Processing method: `endRecord <https://processing.org/reference/endRecord_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     end_record() -> None
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -42,21 +42,17 @@ Draws an ellipse (oval) to the screen. An ellipse with equal width and height is
 
 Underlying Processing method: `ellipse <https://processing.org/reference/ellipse_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    ellipse(a: float, b: float, c: float, d: float, /) -> None
-
-Parameters
-----------
-
-* **a**: `float` - x-coordinate of the ellipse
-* **b**: `float` - y-coordinate of the ellipse
-* **c**: `float` - width of the ellipse by default
-* **d**: `float` - height of the ellipse by default
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    ellipse(
+        a: float,  # x-coordinate of the ellipse
+        b: float,  # y-coordinate of the ellipse
+        c: float,  # width of the ellipse by default
+        d: float,  # height of the ellipse by default
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

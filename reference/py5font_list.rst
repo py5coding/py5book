@@ -41,12 +41,11 @@ This works outside of a running Sketch.
 
 Underlying Processing method: `PFont.list <https://processing.org/reference/PFont_list_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     list() -> list[str]
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on August 25, 2022 19:59:03pm UTC
 

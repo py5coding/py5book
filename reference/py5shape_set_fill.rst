@@ -49,22 +49,25 @@ The ``set_fill()`` method defines the fill color of a ``Py5Shape``. This method 
 
 Underlying Processing method: `PShape.setFill <https://processing.org/reference/PShape_setFill_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_fill(fill: bool, /) -> None
-    set_fill(fill: int, /) -> None
-    set_fill(index: int, fill: int, /) -> None
+    set_fill(
+        fill: bool,  # allow fill
+        /,
+    ) -> None
 
-Parameters
-----------
+    set_fill(
+        fill: int,  # any color value
+        /,
+    ) -> None
 
-* **fill**: `bool` - allow fill
-* **fill**: `int` - any color value
-* **index**: `int` - vertex index
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+    set_fill(
+        index: int,  # vertex index
+        fill: int,  # any color value
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

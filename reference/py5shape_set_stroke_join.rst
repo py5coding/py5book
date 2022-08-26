@@ -58,18 +58,14 @@ This method differs from :doc:`py5shape_stroke_join` in that it is only to be us
 
 Underlying Processing method: PShape.setStrokeJoin
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_stroke_join(join: int, /) -> None
-
-Parameters
-----------
-
-* **join**: `int` - either MITER, BEVEL, ROUND
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    set_stroke_join(
+        join: int,  # either MITER, BEVEL, ROUND
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

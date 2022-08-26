@@ -50,18 +50,13 @@ Consider using ``request_image()`` to load image data from within a Sketch's ``d
 
 The returned Py5Promise object has an ``is_ready`` property that will be ``True`` when the ``result`` property contains the value function ``f`` returned. Before then, the ``result`` property will be ``None``.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    request_image(image_path: Union[str, Path]) -> Py5Promise
-
-Parameters
-----------
-
-* **image_path**: `Union[str, Path]` - url or file path for image file
-
-
-Updated on March 24, 2022 16:35:56pm UTC
+    request_image(
+        image_path: Union[str, Path]  # url or file path for image file
+    ) -> Py5Promise
+Updated on August 25, 2022 20:01:47pm UTC
 

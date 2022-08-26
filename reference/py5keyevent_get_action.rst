@@ -56,12 +56,11 @@ Return the key event's action. This value will always be implied by the triggere
 
 Underlying Processing method: getAction
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     get_action() -> int
-
-Updated on April 27, 2022 10:44:51am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

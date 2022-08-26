@@ -62,18 +62,14 @@ This method is the same as :doc:`sketch_begin_raw` but linked to a ``Py5Graphics
 
 Underlying Processing method: PGraphics.beginRaw
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    begin_raw(raw_graphics: Py5Graphics, /) -> None
-
-Parameters
-----------
-
-* **raw_graphics**: `Py5Graphics` - Py5Graphics object to apply draw commands to
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    begin_raw(
+        raw_graphics: Py5Graphics,  # Py5Graphics object to apply draw commands to
+        /,
+    ) -> None
+Updated on August 25, 2022 19:59:03pm UTC
 

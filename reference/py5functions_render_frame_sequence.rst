@@ -108,28 +108,24 @@ This function facilitates the creation and execution of a py5 Sketch, and as a r
 
 This function is available in decorator form as :doc:`py5functions_render_sequence`.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    render_frame_sequence(draw: Callable, width: int, height: int, renderer: str = Sketch.HIDDEN, *, limit: int = 1, setup: Callable = None, setup_args: tuple = None, setup_kwargs: dict = None, draw_args: tuple = None, draw_kwargs: dict = None, use_py5graphics: bool = False) -> list[PIL.ImageFile.ImageFile]
-
-Parameters
-----------
-
-* **draw**: `Callable` - function that executes py5 draw commands
-* **draw_args**: `tuple = None` - additional positional arguments to pass to draw function
-* **draw_kwargs**: `dict = None` - additional keyword arguments to pass to draw function
-* **height**: `int` - height of the display window in units of pixels
-* **limit**: `int = 1` - number of frames in the output sequence
-* **renderer**: `str = Sketch.HIDDEN` - rendering engine to use
-* **setup**: `Callable = None` - function that executes py5 setup commands
-* **setup_args**: `tuple = None` - additional positional arguments to pass to setup function
-* **setup_kwargs**: `dict = None` - additional keyword arguments to pass to setup function
-* **use_py5graphics**: `bool = False` - pass a py5graphics object instead of a sketch object
-* **width**: `int` - width of the display window in units of pixels
-
-
-Updated on March 01, 2022 12:15:01pm UTC
+    render_frame_sequence(
+        draw: Callable,  # function that executes py5 draw commands
+        width: int,  # width of the display window in units of pixels
+        height: int,  # height of the display window in units of pixels
+        renderer: str = Sketch.HIDDEN,  # rendering engine to use
+        *,
+        limit: int = 1,  # number of frames in the output sequence
+        setup: Callable = None,  # function that executes py5 setup commands
+        setup_args: tuple = None,  # additional positional arguments to pass to setup function
+        setup_kwargs: dict = None,  # additional keyword arguments to pass to setup function
+        draw_args: tuple = None,  # additional positional arguments to pass to draw function
+        draw_kwargs: dict = None,  # additional keyword arguments to pass to draw function
+        use_py5graphics: bool = False  # pass a py5graphics object instead of a sketch object
+    ) -> list[PIL.ImageFile.ImageFile]
+Updated on August 25, 2022 19:59:03pm UTC
 
