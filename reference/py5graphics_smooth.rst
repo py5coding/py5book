@@ -63,19 +63,16 @@ This method is the same as :doc:`sketch_smooth` but linked to a ``Py5Graphics`` 
 
 Underlying Processing method: PGraphics.smooth
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     smooth() -> None
-    smooth(quality: int, /) -> None
 
-Parameters
-----------
-
-* **quality**: `int` - either 2, 3, 4, or 8 depending on the renderer
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+    smooth(
+        quality: int,  # either 2, 3, 4, or 8 depending on the renderer
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

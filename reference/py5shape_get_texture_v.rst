@@ -58,18 +58,14 @@ Get the vertical texture mapping coordinate for a particular vertex. Returned va
 
 Underlying Processing method: PShape.getTextureV
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    get_texture_v(index: int, /) -> float
-
-Parameters
-----------
-
-* **index**: `int` - vertex index
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    get_texture_v(
+        index: int,  # vertex index
+        /,
+    ) -> float
+Updated on August 25, 2022 20:01:47pm UTC
 

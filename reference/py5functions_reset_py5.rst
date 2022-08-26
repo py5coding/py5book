@@ -50,12 +50,11 @@ When coding py5 in module mode, a Sketch instance is created on your behalf that
 
 If ``reset_py5()`` is called when the current Sketch is in the ready or running states, it will do nothing and return ``False``. If ``reset_py5()`` is called when the current Sketch is in the dead state, ``reset_py5()`` will replace it and return ``True``.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     reset_py5() -> bool
-
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on August 25, 2022 19:59:03pm UTC
 

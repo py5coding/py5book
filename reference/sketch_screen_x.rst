@@ -63,21 +63,22 @@ Takes a three-dimensional X, Y, Z position and returns the X value for where it 
 
 Underlying Processing method: `screenX <https://processing.org/reference/screenX_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    screen_x(x: float, y: float, /) -> float
-    screen_x(x: float, y: float, z: float, /) -> float
+    screen_x(
+        x: float,  # 3D x-coordinate to be mapped
+        y: float,  # 3D y-coordinate to be mapped
+        /,
+    ) -> float
 
-Parameters
-----------
-
-* **x**: `float` - 3D x-coordinate to be mapped
-* **y**: `float` - 3D y-coordinate to be mapped
-* **z**: `float` - 3D z-coordinate to be mapped
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    screen_x(
+        x: float,  # 3D x-coordinate to be mapped
+        y: float,  # 3D y-coordinate to be mapped
+        z: float,  # 3D z-coordinate to be mapped
+        /,
+    ) -> float
+Updated on August 25, 2022 20:01:47pm UTC
 

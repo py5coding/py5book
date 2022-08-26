@@ -14,18 +14,14 @@ This method is the same as :doc:`sketch_texture_mode` but linked to a ``Py5Graph
 
 Underlying Processing method: PGraphics.textureMode
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    texture_mode(mode: int, /) -> None
-
-Parameters
-----------
-
-* **mode**: `int` - either IMAGE or NORMAL
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    texture_mode(
+        mode: int,  # either IMAGE or NORMAL
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

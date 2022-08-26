@@ -48,12 +48,11 @@ Return the event's timestamp. This will be measured in milliseconds.
 
 Underlying Processing method: getMillis
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     get_millis() -> int
-
-Updated on April 27, 2022 10:44:51am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

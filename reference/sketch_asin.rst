@@ -65,18 +65,13 @@ The inverse of :doc:`sketch_sin`, returns the arc sine of a value. This function
 
 This function makes a call to the numpy ``asin()`` function.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    asin(value: Union[float, npt.ArrayLike]) -> Union[float, npt.NDArray]
-
-Parameters
-----------
-
-* **value**: `Union[float, npt.ArrayLike]` - value in the range of -1 to 1 whose arc sine is to be returned
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+    asin(
+        value: Union[float, npt.ArrayLike]  # value in the range of -1 to 1 whose arc sine is to be returned
+    ) -> Union[float, npt.NDArray]
+Updated on August 25, 2022 20:01:47pm UTC
 

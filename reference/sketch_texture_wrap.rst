@@ -60,18 +60,14 @@ Defines if textures repeat or draw once within a texture map. The two parameters
 
 Underlying Processing method: `textureWrap <https://processing.org/reference/textureWrap_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    texture_wrap(wrap: int, /) -> None
-
-Parameters
-----------
-
-* **wrap**: `int` - Either CLAMP (default) or REPEAT
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+    texture_wrap(
+        wrap: int,  # Either CLAMP (default) or REPEAT
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

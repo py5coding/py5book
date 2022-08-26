@@ -61,20 +61,16 @@ The ``u`` and ``v`` coordinates define the mapping of a ``Py5Shape`` object's te
 
 Underlying Processing method: PShape.setTextureUV
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_texture_uv(index: int, u: float, v: float, /) -> None
-
-Parameters
-----------
-
-* **index**: `int` - vertex index
-* **u**: `float` - horizontal coordinate for the texture mapping
-* **v**: `float` - vertical coordinate for the texture mapping
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    set_texture_uv(
+        index: int,  # vertex index
+        u: float,  # horizontal coordinate for the texture mapping
+        v: float,  # vertical coordinate for the texture mapping
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

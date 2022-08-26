@@ -14,28 +14,36 @@ This method is the same as :doc:`sketch_copy` but linked to a ``Py5Graphics`` ob
 
 Underlying Processing method: PGraphics.copy
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     copy() -> Py5Image
-    copy(src: Py5Image, sx: int, sy: int, sw: int, sh: int, dx: int, dy: int, dw: int, dh: int, /) -> None
-    copy(sx: int, sy: int, sw: int, sh: int, dx: int, dy: int, dw: int, dh: int, /) -> None
 
-Parameters
-----------
+    copy(
+        src: Py5Image,  # a source image to copy pixels from
+        sx: int,  # x-coordinate of the source's upper left corner
+        sy: int,  # y-coordinate of the source's upper left corner
+        sw: int,  # source image width
+        sh: int,  # source image height
+        dx: int,  # x-coordinate of the destination's upper left corner
+        dy: int,  # y-coordinate of the destination's upper left corner
+        dw: int,  # destination image width
+        dh: int,  # destination image height
+        /,
+    ) -> None
 
-* **dh**: `int` - destination image height
-* **dw**: `int` - destination image width
-* **dx**: `int` - x-coordinate of the destination's upper left corner
-* **dy**: `int` - y-coordinate of the destination's upper left corner
-* **sh**: `int` - source image height
-* **src**: `Py5Image` - a source image to copy pixels from
-* **sw**: `int` - source image width
-* **sx**: `int` - x-coordinate of the source's upper left corner
-* **sy**: `int` - y-coordinate of the source's upper left corner
-
-
-Updated on January 16, 2022 16:51:21pm UTC
+    copy(
+        sx: int,  # x-coordinate of the source's upper left corner
+        sy: int,  # y-coordinate of the source's upper left corner
+        sw: int,  # source image width
+        sh: int,  # source image height
+        dx: int,  # x-coordinate of the destination's upper left corner
+        dy: int,  # y-coordinate of the destination's upper left corner
+        dw: int,  # destination image width
+        dh: int,  # destination image height
+        /,
+    ) -> None
+Updated on August 25, 2022 19:59:03pm UTC
 

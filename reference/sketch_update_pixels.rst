@@ -49,22 +49,19 @@ Updates the display window with the data in the :doc:`sketch_pixels` array. Use 
 
 Underlying Processing method: `updatePixels <https://processing.org/reference/updatePixels_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     update_pixels() -> None
-    update_pixels(x1: int, y1: int, x2: int, y2: int, /) -> None
 
-Parameters
-----------
-
-* **x1**: `int` - x-coordinate of the upper-left corner
-* **x2**: `int` - width of the region
-* **y1**: `int` - y-coordinate of the upper-left corner
-* **y2**: `int` - height of the region
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    update_pixels(
+        x1: int,  # x-coordinate of the upper-left corner
+        y1: int,  # y-coordinate of the upper-left corner
+        x2: int,  # width of the region
+        y2: int,  # height of the region
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -65,28 +65,46 @@ The ``tint()`` function is also used to control the coloring of textures in 3D.
 
 Underlying Processing method: PShape.tint
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    tint(gray: float, /) -> None
-    tint(gray: float, alpha: float, /) -> None
-    tint(rgb: int, /) -> None
-    tint(rgb: int, alpha: float, /) -> None
-    tint(x: float, y: float, z: float, /) -> None
-    tint(x: float, y: float, z: float, alpha: float, /) -> None
+    tint(
+        gray: float,  # specifies a value between white and black
+        /,
+    ) -> None
 
-Parameters
-----------
+    tint(
+        gray: float,  # specifies a value between white and black
+        alpha: float,  # opacity of the image
+        /,
+    ) -> None
 
-* **alpha**: `float` - opacity of the image
-* **gray**: `float` - specifies a value between white and black
-* **rgb**: `int` - color value in hexadecimal notation
-* **x**: `float` - red or hue value (depending on current color mode)
-* **y**: `float` - green or saturation value (depending on current color mode)
-* **z**: `float` - blue or brightness value (depending on current color mode)
+    tint(
+        rgb: int,  # color value in hexadecimal notation
+        /,
+    ) -> None
 
+    tint(
+        rgb: int,  # color value in hexadecimal notation
+        alpha: float,  # opacity of the image
+        /,
+    ) -> None
 
-Updated on July 31, 2022 13:59:47pm UTC
+    tint(
+        x: float,  # red or hue value (depending on current color mode)
+        y: float,  # green or saturation value (depending on current color mode)
+        z: float,  # blue or brightness value (depending on current color mode)
+        /,
+    ) -> None
+
+    tint(
+        x: float,  # red or hue value (depending on current color mode)
+        y: float,  # green or saturation value (depending on current color mode)
+        z: float,  # blue or brightness value (depending on current color mode)
+        alpha: float,  # opacity of the image
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

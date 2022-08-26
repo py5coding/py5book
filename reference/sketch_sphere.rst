@@ -46,18 +46,14 @@ A sphere is a hollow ball made from tessellated triangles.
 
 Underlying Processing method: `sphere <https://processing.org/reference/sphere_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    sphere(r: float, /) -> None
-
-Parameters
-----------
-
-* **r**: `float` - the radius of the sphere
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    sphere(
+        r: float,  # the radius of the sphere
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

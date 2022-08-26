@@ -16,20 +16,20 @@ This method is the same as :doc:`sketch_load_shape` but linked to a ``Py5Graphic
 
 Underlying Processing method: PGraphics.loadShape
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    load_shape(filename: str, /) -> Py5Shape
-    load_shape(filename: str, options: str, /) -> Py5Shape
+    load_shape(
+        filename: str,  # name of file to load, can be .svg or .obj
+        /,
+    ) -> Py5Shape
 
-Parameters
-----------
-
-* **filename**: `str` - name of file to load, can be .svg or .obj
-* **options**: `str` - unused parameter
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    load_shape(
+        filename: str,  # name of file to load, can be .svg or .obj
+        options: str,  # unused parameter
+        /,
+    ) -> Py5Shape
+Updated on August 25, 2022 20:01:47pm UTC
 

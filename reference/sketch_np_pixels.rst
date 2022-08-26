@@ -75,6 +75,5 @@ Much like the :doc:`sketch_pixels` array, there are load and update methods that
 
 To set the entire contents of ``np_pixels[]`` to the contents of another properly sized numpy array, consider using :doc:`sketch_set_np_pixels`.
 
-
-Updated on June 13, 2022 01:23:16am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -47,18 +47,14 @@ This method provides the same functionality as :doc:`py5surface_set_resizable` b
 
 Underlying Processing method: windowResizable
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    window_resizable(resizable: bool, /) -> None
-
-Parameters
-----------
-
-* **resizable**: `bool` - should the Sketch window be resizable
-
-
-Updated on April 27, 2022 11:19:15am UTC
+    window_resizable(
+        resizable: bool,  # should the Sketch window be resizable
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

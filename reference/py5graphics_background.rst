@@ -14,30 +14,51 @@ This method is the same as :doc:`sketch_background` but linked to a ``Py5Graphic
 
 Underlying Processing method: PGraphics.background
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    background(gray: float, /) -> None
-    background(gray: float, alpha: float, /) -> None
-    background(image: Py5Image, /) -> None
-    background(rgb: int, /) -> None
-    background(rgb: int, alpha: float, /) -> None
-    background(v1: float, v2: float, v3: float, /) -> None
-    background(v1: float, v2: float, v3: float, alpha: float, /) -> None
+    background(
+        gray: float,  # specifies a value between white and black
+        /,
+    ) -> None
 
-Parameters
-----------
+    background(
+        gray: float,  # specifies a value between white and black
+        alpha: float,  # opacity of the background
+        /,
+    ) -> None
 
-* **alpha**: `float` - opacity of the background
-* **gray**: `float` - specifies a value between white and black
-* **image**: `Py5Image` - Py5Image to set as background (must be same size as the Sketch window)
-* **rgb**: `int` - any value of the color datatype
-* **v1**: `float` - red or hue value (depending on the current color mode)
-* **v2**: `float` - green or saturation value (depending on the current color mode)
-* **v3**: `float` - blue or brightness value (depending on the current color mode)
+    background(
+        image: Py5Image,  # Py5Image to set as background (must be same size as the Sketch window)
+        /,
+    ) -> None
 
+    background(
+        rgb: int,  # any value of the color datatype
+        /,
+    ) -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+    background(
+        rgb: int,  # any value of the color datatype
+        alpha: float,  # opacity of the background
+        /,
+    ) -> None
+
+    background(
+        v1: float,  # red or hue value (depending on the current color mode)
+        v2: float,  # green or saturation value (depending on the current color mode)
+        v3: float,  # blue or brightness value (depending on the current color mode)
+        /,
+    ) -> None
+
+    background(
+        v1: float,  # red or hue value (depending on the current color mode)
+        v2: float,  # green or saturation value (depending on the current color mode)
+        v3: float,  # blue or brightness value (depending on the current color mode)
+        alpha: float,  # opacity of the background
+        /,
+    ) -> None
+Updated on August 25, 2022 19:59:03pm UTC
 

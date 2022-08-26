@@ -55,18 +55,14 @@ Modifies the quality of forms created with :doc:`sketch_curve` and :doc:`sketch_
 
 Underlying Processing method: `curveTightness <https://processing.org/reference/curveTightness_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    curve_tightness(tightness: float, /) -> None
-
-Parameters
-----------
-
-* **tightness**: `float` - amount of deformation from the original vertices
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    curve_tightness(
+        tightness: float,  # amount of deformation from the original vertices
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

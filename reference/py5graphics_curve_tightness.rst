@@ -12,18 +12,14 @@ This method is the same as :doc:`sketch_curve_tightness` but linked to a ``Py5Gr
 
 Underlying Processing method: PGraphics.curveTightness
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    curve_tightness(tightness: float, /) -> None
-
-Parameters
-----------
-
-* **tightness**: `float` - amount of deformation from the original vertices
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    curve_tightness(
+        tightness: float,  # amount of deformation from the original vertices
+        /,
+    ) -> None
+Updated on August 25, 2022 19:59:03pm UTC
 

@@ -49,12 +49,11 @@ Get the children of a ``Py5Shape`` object as a list of ``Py5Shape`` objects. Whe
 
 Underlying Processing method: PShape.getChildren
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     get_children() -> list[Py5Shape]
-
-Updated on March 01, 2022 12:15:01pm UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

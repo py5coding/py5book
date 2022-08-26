@@ -50,12 +50,11 @@ Finalizes the rendering of a ``Py5Graphics`` object so that it can be shown on s
 
 Underlying Processing method: `PGraphics.endDraw <https://processing.org/reference/PGraphics_endDraw_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     end_draw() -> None
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on August 25, 2022 19:59:03pm UTC
 

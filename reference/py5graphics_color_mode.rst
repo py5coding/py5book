@@ -14,26 +14,37 @@ This method is the same as :doc:`sketch_color_mode` but linked to a ``Py5Graphic
 
 Underlying Processing method: PGraphics.colorMode
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    color_mode(mode: int, /) -> None
-    color_mode(mode: int, max1: float, max2: float, max3: float, /) -> None
-    color_mode(mode: int, max1: float, max2: float, max3: float, max_a: float, /) -> None
-    color_mode(mode: int, max: float, /) -> None
+    color_mode(
+        mode: int,  # Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
+        /,
+    ) -> None
 
-Parameters
-----------
+    color_mode(
+        mode: int,  # Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
+        max1: float,  # range for the red or hue depending on the current color mode
+        max2: float,  # range for the green or saturation depending on the current color mode
+        max3: float,  # range for the blue or brightness depending on the current color mode
+        /,
+    ) -> None
 
-* **max1**: `float` - range for the red or hue depending on the current color mode
-* **max2**: `float` - range for the green or saturation depending on the current color mode
-* **max3**: `float` - range for the blue or brightness depending on the current color mode
-* **max**: `float` - range for all color elements
-* **max_a**: `float` - range for the alpha
-* **mode**: `int` - Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
+    color_mode(
+        mode: int,  # Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
+        max1: float,  # range for the red or hue depending on the current color mode
+        max2: float,  # range for the green or saturation depending on the current color mode
+        max3: float,  # range for the blue or brightness depending on the current color mode
+        max_a: float,  # range for the alpha
+        /,
+    ) -> None
 
-
-Updated on November 12, 2021 11:30:58am UTC
+    color_mode(
+        mode: int,  # Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
+        max: float,  # range for all color elements
+        /,
+    ) -> None
+Updated on August 25, 2022 19:59:03pm UTC
 

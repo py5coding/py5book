@@ -52,21 +52,22 @@ Description
 
 Calculates the magnitude (or length) of a vector. A vector is a direction in space commonly used in computer graphics and linear algebra. Because it has no "start" position, the magnitude of a vector can be thought of as the distance from the coordinate ``(0, 0)`` to its ``(x, y)`` value. Therefore, ``mag()`` is a shortcut for writing ``dist(0, 0, x, y)``.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    mag(a: Union[float, npt.NDArray], b: Union[float, npt.NDArray], /) -> float
-    mag(a: Union[float, npt.NDArray], b: Union[float, npt.NDArray], c: Union[float, npt.NDArray], /) -> float
+    mag(
+        a: Union[float, npt.NDArray],  # first value
+        b: Union[float, npt.NDArray],  # second value
+        /,
+    ) -> float
 
-Parameters
-----------
-
-* **a**: `Union[float, npt.NDArray]` - first value
-* **b**: `Union[float, npt.NDArray]` - second value
-* **c**: `Union[float, npt.NDArray]` - third value
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+    mag(
+        a: Union[float, npt.NDArray],  # first value
+        b: Union[float, npt.NDArray],  # second value
+        c: Union[float, npt.NDArray],  # third value
+        /,
+    ) -> float
+Updated on August 25, 2022 20:01:47pm UTC
 

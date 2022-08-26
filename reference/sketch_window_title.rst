@@ -42,18 +42,14 @@ This method provides the same functionality as :doc:`py5surface_set_title` but w
 
 Underlying Processing method: windowTitle
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    window_title(title: str, /) -> None
-
-Parameters
-----------
-
-* **title**: `str` - new window title
-
-
-Updated on April 27, 2022 11:19:15am UTC
+    window_title(
+        title: str,  # new window title
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

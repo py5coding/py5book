@@ -12,19 +12,16 @@ This method is the same as :doc:`sketch_get_matrix` but linked to a ``Py5Graphic
 
 Underlying Processing method: PGraphics.getMatrix
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     get_matrix() -> npt.NDArray[np.floating]
-    get_matrix(target: npt.NDArray[np.floating], /) -> npt.NDArray[np.floating]
 
-Parameters
-----------
-
-* **target**: `npt.NDArray[np.floating]` - transformation matrix with a shape of 2x3 for 2D transforms or 4x4 for 3D transforms
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+    get_matrix(
+        target: npt.NDArray[np.floating],  # transformation matrix with a shape of 2x3 for 2D transforms or 4x4 for 3D transforms
+        /,
+    ) -> npt.NDArray[np.floating]
+Updated on August 25, 2022 19:59:03pm UTC
 

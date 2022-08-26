@@ -50,18 +50,14 @@ Get a child ``Py5Shape`` object's index from a parent ``Py5Shape`` object that i
 
 Underlying Processing method: PShape.getChildIndex
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    get_child_index(who: Py5Shape, /) -> int
-
-Parameters
-----------
-
-* **who**: `Py5Shape` - Py5Shape object
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    get_child_index(
+        who: Py5Shape,  # Py5Shape object
+        /,
+    ) -> int
+Updated on August 25, 2022 20:01:47pm UTC
 

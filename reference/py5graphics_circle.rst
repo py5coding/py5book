@@ -12,20 +12,16 @@ This method is the same as :doc:`sketch_circle` but linked to a ``Py5Graphics`` 
 
 Underlying Processing method: PGraphics.circle
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    circle(x: float, y: float, extent: float, /) -> None
-
-Parameters
-----------
-
-* **extent**: `float` - width and height of the ellipse by default
-* **x**: `float` - x-coordinate of the ellipse
-* **y**: `float` - y-coordinate of the ellipse
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    circle(
+        x: float,  # x-coordinate of the ellipse
+        y: float,  # y-coordinate of the ellipse
+        extent: float,  # width and height of the ellipse by default
+        /,
+    ) -> None
+Updated on August 25, 2022 19:59:03pm UTC
 

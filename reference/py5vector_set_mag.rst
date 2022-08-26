@@ -44,18 +44,13 @@ Description
 
 Set the vector's magnitude. Setting this to a non-negative number will adjust the vector's magnitude to that value. Negative values will result in an error.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_mag(mag: float) -> Py5Vector
-
-Parameters
-----------
-
-* **mag**: `float` - vector magnitude
-
-
-Updated on January 16, 2022 16:51:21pm UTC
+    set_mag(
+        mag: float,  # vector magnitude
+    ) -> Py5Vector
+Updated on August 25, 2022 20:01:47pm UTC
 

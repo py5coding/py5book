@@ -54,20 +54,20 @@ This method can only be used for a complete ``Py5Shape`` object, and never withi
 
 Underlying Processing method: PShape.getNormal
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    get_normal(index: int, /) -> Py5Vector
-    get_normal(index: int, vec: Py5Vector, /) -> Py5Vector
+    get_normal(
+        index: int,  # vertex index
+        /,
+    ) -> Py5Vector
 
-Parameters
-----------
-
-* **index**: `int` - vertex index
-* **vec**: `Py5Vector` - target object to place vertex normal vector into
-
-
-Updated on January 16, 2022 16:51:21pm UTC
+    get_normal(
+        index: int,  # vertex index
+        vec: Py5Vector,  # target object to place vertex normal vector into
+        /,
+    ) -> Py5Vector
+Updated on August 25, 2022 20:01:47pm UTC
 

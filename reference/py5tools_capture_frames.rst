@@ -46,22 +46,18 @@ By default the Sketch will be the currently running Sketch, as returned by :doc:
 
 If your Sketch has a ``post_draw()`` method, use the ``hook_post_draw`` parameter to make this function run after ``post_draw()`` instead of ``draw()``. This is important when using Processing libraries that support ``post_draw()`` such as Camera3D or ColorBlindness.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    capture_frames(count: float, *, period: float = 0.0, sketch: Sketch = None, hook_post_draw: bool = False, block: bool = False) -> list[PIL.Image]
-
-Parameters
-----------
-
-* **block**: `bool = False` - method returns immediately (False) or blocks until function returns (True)
-* **count**: `float` - number of Sketch snapshots to capture
-* **hook_post_draw**: `bool = False` - attach hook to Sketch's post_draw method instead of draw
-* **period**: `float = 0.0` - time in seconds between Sketch snapshots (default 0 means no delay)
-* **sketch**: `Sketch = None` - running Sketch
-
-
-Updated on March 01, 2022 12:15:01pm UTC
+    capture_frames(
+        count: float,  # number of Sketch snapshots to capture
+        *,
+        period: float = 0.0,  # time in seconds between Sketch snapshots (default 0 means no delay)
+        sketch: Sketch = None,  # running Sketch
+        hook_post_draw: bool = False,  # attach hook to Sketch's post_draw method instead of draw
+        block: bool = False  # method returns immediately (False) or blocks until function returns (True)
+    ) -> list[PIL.Image]
+Updated on August 25, 2022 20:01:47pm UTC
 

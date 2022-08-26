@@ -100,24 +100,20 @@ This function facilitates the creation and execution of a py5 Sketch, and as a r
 
 This function is available in decorator form as :doc:`py5functions_render`.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    render_frame(draw: Callable, width: int, height: int, renderer: str = Sketch.HIDDEN, *, draw_args: tuple = None, draw_kwargs: dict = None, use_py5graphics: bool = False) -> Image
-
-Parameters
-----------
-
-* **draw**: `Callable` - function that executes py5 draw commands
-* **draw_args**: `tuple = None` - additional positional arguments to pass to draw function
-* **draw_kwargs**: `dict = None` - additional keyword arguments to pass to draw function
-* **height**: `int` - height of the display window in units of pixels
-* **renderer**: `str = Sketch.HIDDEN` - rendering engine to use
-* **use_py5graphics**: `bool = False` - pass a py5graphics object instead of a sketch object
-* **width**: `int` - width of the display window in units of pixels
-
-
-Updated on March 01, 2022 12:15:01pm UTC
+    render_frame(
+        draw: Callable,  # function that executes py5 draw commands
+        width: int,  # width of the display window in units of pixels
+        height: int,  # height of the display window in units of pixels
+        renderer: str = Sketch.HIDDEN,  # rendering engine to use
+        *,
+        draw_args: tuple = None,  # additional positional arguments to pass to draw function
+        draw_kwargs: dict = None,  # additional keyword arguments to pass to draw function
+        use_py5graphics: bool = False  # pass a py5graphics object instead of a sketch object
+    ) -> Image
+Updated on August 25, 2022 19:59:03pm UTC
 

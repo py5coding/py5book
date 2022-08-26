@@ -55,20 +55,20 @@ This method differs from :doc:`py5shape_stroke_weight` in that it is only to be 
 
 Underlying Processing method: PShape.setStrokeWeight
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_stroke_weight(index: int, weight: float, /) -> None
-    set_stroke_weight(weight: float, /) -> None
+    set_stroke_weight(
+        index: int,  # vertex index
+        weight: float,  # the weight (in pixels) of the stroke
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **index**: `int` - vertex index
-* **weight**: `float` - the weight (in pixels) of the stroke
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    set_stroke_weight(
+        weight: float,  # the weight (in pixels) of the stroke
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

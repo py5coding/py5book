@@ -59,12 +59,11 @@ These methods can only be used within a :doc:`sketch_begin_shape` & :doc:`sketch
 
 Underlying Processing method: `endContour <https://processing.org/reference/endContour_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     end_contour() -> None
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -45,18 +45,13 @@ Calculates the ratio of the sine and cosine of an angle. This function expects t
 
 This function makes a call to the numpy ``tan()`` function.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    tan(angle: Union[float, npt.ArrayLike]) -> Union[float, npt.NDArray]
-
-Parameters
-----------
-
-* **angle**: `Union[float, npt.ArrayLike]` - angle in radians
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+    tan(
+        angle: Union[float, npt.ArrayLike]  # angle in radians
+    ) -> Union[float, npt.NDArray]
+Updated on August 25, 2022 20:01:47pm UTC
 

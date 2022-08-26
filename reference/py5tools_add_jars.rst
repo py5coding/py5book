@@ -47,18 +47,13 @@ When ``import py5`` is executed, ``add_jars('jars')`` is called for you to autom
 
 After the JVM has started, the classpath cannot be changed. This function will throw a ``RuntimeError`` if it is called after the JVM has already started. Use :doc:`py5tools_is_jvm_running` to first determine if the JVM is running.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    add_jars(path: Union[Path, str]) -> None
-
-Parameters
-----------
-
-* **path**: `Union[Path, str]` - path to directory containing jar files
-
-
-Updated on September 11, 2021 16:51:34pm UTC
+    add_jars(
+        path: Union[Path, str]  # path to directory containing jar files
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

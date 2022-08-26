@@ -50,18 +50,14 @@ The ``coordinates`` parameter should be a numpy array with one row for each bezi
 
 Underlying Processing method: bezierVertices
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    bezier_vertices(coordinates: npt.NDArray[np.floating], /) -> None
-
-Parameters
-----------
-
-* **coordinates**: `npt.NDArray[np.floating]` - 2D array of bezier vertex coordinates with 6 or 9 columns for 2D or 3D points, respectively
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+    bezier_vertices(
+        coordinates: npt.NDArray[np.floating],  # 2D array of bezier vertex coordinates with 6 or 9 columns for 2D or 3D points, respectively
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

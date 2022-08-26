@@ -49,18 +49,14 @@ Extracts the hue value from a color.
 
 Underlying Processing method: `hue <https://processing.org/reference/hue_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    hue(rgb: int, /) -> float
-
-Parameters
-----------
-
-* **rgb**: `int` - any value of the color datatype
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    hue(
+        rgb: int,  # any value of the color datatype
+        /,
+    ) -> float
+Updated on August 25, 2022 20:01:47pm UTC
 

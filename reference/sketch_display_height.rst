@@ -40,6 +40,5 @@ System variable that stores the height of the entire screen display. This can be
 
 Underlying Processing field: `displayHeight <https://processing.org/reference/displayHeight.html>`_
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

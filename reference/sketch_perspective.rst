@@ -52,22 +52,19 @@ Sets a perspective projection applying foreshortening, making distant objects ap
 
 Underlying Processing method: `perspective <https://processing.org/reference/perspective_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     perspective() -> None
-    perspective(fovy: float, aspect: float, z_near: float, z_far: float, /) -> None
 
-Parameters
-----------
-
-* **aspect**: `float` - ratio of width to height
-* **fovy**: `float` - field-of-view angle (in radians) for vertical direction
-* **z_far**: `float` - z-position of farthest clipping plane
-* **z_near**: `float` - z-position of nearest clipping plane
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    perspective(
+        fovy: float,  # field-of-view angle (in radians) for vertical direction
+        aspect: float,  # ratio of width to height
+        z_near: float,  # z-position of nearest clipping plane
+        z_far: float,  # z-position of farthest clipping plane
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

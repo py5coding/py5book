@@ -51,60 +51,163 @@ Sets the uniform variables inside the shader to modify the effect while the prog
 
 Underlying Processing method: `PShader.set <https://processing.org/reference/PShader_set_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set(name: str, boolvec: JArray(JBoolean), ncoords: int, /) -> None
-    set(name: str, mat: npt.NDArray[np.floating], /) -> None
-    set(name: str, mat: npt.NDArray[np.floating], use3x3: bool, /) -> None
-    set(name: str, tex: Py5Image, /) -> None
-    set(name: str, vec: JArray(JBoolean), /) -> None
-    set(name: str, vec: Py5Vector, /) -> None
-    set(name: str, vec: npt.NDArray[np.floating], /) -> None
-    set(name: str, vec: npt.NDArray[np.floating], ncoords: int, /) -> None
-    set(name: str, vec: npt.NDArray[np.integer], /) -> None
-    set(name: str, vec: npt.NDArray[np.integer], ncoords: int, /) -> None
-    set(name: str, x: bool, /) -> None
-    set(name: str, x: bool, y: bool, /) -> None
-    set(name: str, x: bool, y: bool, z: bool, /) -> None
-    set(name: str, x: bool, y: bool, z: bool, w: bool, /) -> None
-    set(name: str, x: float, /) -> None
-    set(name: str, x: float, y: float, /) -> None
-    set(name: str, x: float, y: float, z: float, /) -> None
-    set(name: str, x: float, y: float, z: float, w: float, /) -> None
-    set(name: str, x: int, /) -> None
-    set(name: str, x: int, y: int, /) -> None
-    set(name: str, x: int, y: int, z: int, /) -> None
-    set(name: str, x: int, y: int, z: int, w: int, /) -> None
+    set(
+        name: str,  # the name of the uniform variable to modify
+        boolvec: JArray(JBoolean),  # modifies all the components of an array/vector uniform variable
+        ncoords: int,  # number of coordinates per element, max 4
+        /,
+    ) -> None
 
-Parameters
-----------
+    set(
+        name: str,  # the name of the uniform variable to modify
+        mat: npt.NDArray[np.floating],  # 2D numpy array of values with shape 2x3 for 2D matrices or 4x4 for 3D matrices
+        /,
+    ) -> None
 
-* **boolvec**: `JArray(JBoolean)` - modifies all the components of an array/vector uniform variable
-* **mat**: `npt.NDArray[np.floating]` - 2D numpy array of values with shape 2x3 for 2D matrices or 4x4 for 3D matrices
-* **name**: `str` - the name of the uniform variable to modify
-* **ncoords**: `int` - number of coordinates per element, max 4
-* **tex**: `Py5Image` - sets the sampler uniform variable to read from this image texture
-* **use3x3**: `bool` - enforces the numpy array is 3 x 3
-* **vec**: `JArray(JBoolean)` - modifies all the components of an array/vector uniform variable
-* **vec**: `Py5Vector` - vector of values to modify all the components of an array/vector uniform variable
-* **vec**: `npt.NDArray[np.floating]` - 1D numpy array of values to modify all the components of an array/vector uniform variable
-* **vec**: `npt.NDArray[np.integer]` - 1D numpy array of values to modify all the components of an array/vector uniform variable
-* **w**: `bool` - fourth component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[4], vec4)
-* **w**: `float` - fourth component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[4], vec4)
-* **w**: `int` - fourth component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[4], vec4)
-* **x**: `bool` - first component of the variable to modify
-* **x**: `float` - first component of the variable to modify
-* **x**: `int` - first component of the variable to modify
-* **y**: `bool` - second component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[2], vec2)
-* **y**: `float` - second component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[2], vec2)
-* **y**: `int` - second component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[2], vec2)
-* **z**: `bool` - third component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[3], vec3)
-* **z**: `float` - third component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[3], vec3)
-* **z**: `int` - third component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[3], vec3)
+    set(
+        name: str,  # the name of the uniform variable to modify
+        mat: npt.NDArray[np.floating],  # 2D numpy array of values with shape 2x3 for 2D matrices or 4x4 for 3D matrices
+        use3x3: bool,  # enforces the numpy array is 3 x 3
+        /,
+    ) -> None
 
+    set(
+        name: str,  # the name of the uniform variable to modify
+        tex: Py5Image,  # sets the sampler uniform variable to read from this image texture
+        /,
+    ) -> None
 
-Updated on March 22, 2022 21:53:01pm UTC
+    set(
+        name: str,  # the name of the uniform variable to modify
+        vec: JArray(JBoolean),  # modifies all the components of an array/vector uniform variable
+        /,
+    ) -> None
+
+    set(
+        name: str,  # the name of the uniform variable to modify
+        vec: Py5Vector,  # vector of values to modify all the components of an array/vector uniform variable
+        /,
+    ) -> None
+
+    set(
+        name: str,  # the name of the uniform variable to modify
+        vec: npt.NDArray[np.floating],  # 1D numpy array of values to modify all the components of an array/vector uniform variable
+        /,
+    ) -> None
+
+    set(
+        name: str,  # the name of the uniform variable to modify
+        vec: npt.NDArray[np.floating],  # 1D numpy array of values to modify all the components of an array/vector uniform variable
+        ncoords: int,  # number of coordinates per element, max 4
+        /,
+    ) -> None
+
+    set(
+        name: str,  # the name of the uniform variable to modify
+        vec: npt.NDArray[np.integer],  # 1D numpy array of values to modify all the components of an array/vector uniform variable
+        /,
+    ) -> None
+
+    set(
+        name: str,  # the name of the uniform variable to modify
+        vec: npt.NDArray[np.integer],  # 1D numpy array of values to modify all the components of an array/vector uniform variable
+        ncoords: int,  # number of coordinates per element, max 4
+        /,
+    ) -> None
+
+    set(
+        name: str,  # the name of the uniform variable to modify
+        x: bool,  # first component of the variable to modify
+        /,
+    ) -> None
+
+    set(
+        name: str,  # the name of the uniform variable to modify
+        x: bool,  # first component of the variable to modify
+        y: bool,  # second component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[2], vec2)
+        /,
+    ) -> None
+
+    set(
+        name: str,  # the name of the uniform variable to modify
+        x: bool,  # first component of the variable to modify
+        y: bool,  # second component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[2], vec2)
+        z: bool,  # third component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[3], vec3)
+        /,
+    ) -> None
+
+    set(
+        name: str,  # the name of the uniform variable to modify
+        x: bool,  # first component of the variable to modify
+        y: bool,  # second component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[2], vec2)
+        z: bool,  # third component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[3], vec3)
+        w: bool,  # fourth component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[4], vec4)
+        /,
+    ) -> None
+
+    set(
+        name: str,  # the name of the uniform variable to modify
+        x: float,  # first component of the variable to modify
+        /,
+    ) -> None
+
+    set(
+        name: str,  # the name of the uniform variable to modify
+        x: float,  # first component of the variable to modify
+        y: float,  # second component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[2], vec2)
+        /,
+    ) -> None
+
+    set(
+        name: str,  # the name of the uniform variable to modify
+        x: float,  # first component of the variable to modify
+        y: float,  # second component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[2], vec2)
+        z: float,  # third component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[3], vec3)
+        /,
+    ) -> None
+
+    set(
+        name: str,  # the name of the uniform variable to modify
+        x: float,  # first component of the variable to modify
+        y: float,  # second component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[2], vec2)
+        z: float,  # third component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[3], vec3)
+        w: float,  # fourth component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[4], vec4)
+        /,
+    ) -> None
+
+    set(
+        name: str,  # the name of the uniform variable to modify
+        x: int,  # first component of the variable to modify
+        /,
+    ) -> None
+
+    set(
+        name: str,  # the name of the uniform variable to modify
+        x: int,  # first component of the variable to modify
+        y: int,  # second component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[2], vec2)
+        /,
+    ) -> None
+
+    set(
+        name: str,  # the name of the uniform variable to modify
+        x: int,  # first component of the variable to modify
+        y: int,  # second component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[2], vec2)
+        z: int,  # third component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[3], vec3)
+        /,
+    ) -> None
+
+    set(
+        name: str,  # the name of the uniform variable to modify
+        x: int,  # first component of the variable to modify
+        y: int,  # second component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[2], vec2)
+        z: int,  # third component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[3], vec3)
+        w: int,  # fourth component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[4], vec4)
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

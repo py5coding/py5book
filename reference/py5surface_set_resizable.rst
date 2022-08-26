@@ -48,18 +48,14 @@ This method provides the same functionality as :doc:`sketch_window_resizable`.
 
 Underlying Processing method: PSurface.setResizable
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_resizable(resizable: bool, /) -> None
-
-Parameters
-----------
-
-* **resizable**: `bool` - should the Sketch window be resizable
-
-
-Updated on July 18, 2022 17:22:20pm UTC
+    set_resizable(
+        resizable: bool,  # should the Sketch window be resizable
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -81,6 +81,5 @@ Width of the display window in pixels. When ``pixel_density(2)`` is used to make
 
 Underlying Processing field: `pixelWidth <https://processing.org/reference/pixelWidth.html>`_
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

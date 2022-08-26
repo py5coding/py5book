@@ -12,22 +12,18 @@ This method is the same as :doc:`sketch_curve_point` but linked to a ``Py5Graphi
 
 Underlying Processing method: PGraphics.curvePoint
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    curve_point(a: float, b: float, c: float, d: float, t: float, /) -> float
-
-Parameters
-----------
-
-* **a**: `float` - coordinate of first control point
-* **b**: `float` - coordinate of first point on the curve
-* **c**: `float` - coordinate of second point on the curve
-* **d**: `float` - coordinate of second control point
-* **t**: `float` - value between 0 and 1
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    curve_point(
+        a: float,  # coordinate of first control point
+        b: float,  # coordinate of first point on the curve
+        c: float,  # coordinate of second point on the curve
+        d: float,  # coordinate of second control point
+        t: float,  # value between 0 and 1
+        /,
+    ) -> float
+Updated on August 25, 2022 19:59:03pm UTC
 

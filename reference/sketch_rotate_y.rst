@@ -69,18 +69,14 @@ Rotates around the y-axis the amount specified by the ``angle`` parameter. Angle
 
 Underlying Processing method: `rotateY <https://processing.org/reference/rotateY_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    rotate_y(angle: float, /) -> None
-
-Parameters
-----------
-
-* **angle**: `float` - angle of rotation specified in radians
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    rotate_y(
+        angle: float,  # angle of rotation specified in radians
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -48,12 +48,11 @@ Get the font's name.
 
 Underlying Processing method: PFont.getName
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     get_name() -> str
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 19:59:03pm UTC
 

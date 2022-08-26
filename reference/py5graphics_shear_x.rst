@@ -14,18 +14,14 @@ This method is the same as :doc:`sketch_shear_x` but linked to a ``Py5Graphics``
 
 Underlying Processing method: PGraphics.shearX
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    shear_x(angle: float, /) -> None
-
-Parameters
-----------
-
-* **angle**: `float` - angle of shear specified in radians
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    shear_x(
+        angle: float,  # angle of shear specified in radians
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

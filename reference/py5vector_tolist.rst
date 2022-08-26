@@ -42,12 +42,11 @@ Description
 
 Return the vector's values as a list. The length of the list will be equal to the vector's dimension.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     tolist() -> list[float]
-
-Updated on January 16, 2022 16:51:21pm UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

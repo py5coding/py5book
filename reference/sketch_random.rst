@@ -73,21 +73,22 @@ If two parameters are specified, the function will return a float with a value b
 
 This function makes calls to numpy to generate the random values.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     random() -> float
-    random(high: float, /) -> float
-    random(low: float, high: float, /) -> float
 
-Parameters
-----------
+    random(
+        high: float,  # upper limit
+        /,
+    ) -> float
 
-* **high**: `float` - upper limit
-* **low**: `float` - lower limit
-
-
-Updated on November 08, 2021 12:26:18pm UTC
+    random(
+        low: float,  # lower limit
+        high: float,  # upper limit
+        /,
+    ) -> float
+Updated on August 25, 2022 20:01:47pm UTC
 

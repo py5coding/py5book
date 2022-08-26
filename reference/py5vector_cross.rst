@@ -51,18 +51,13 @@ Description
 
 Calculate the vector cross product of two 3D vectors. If one of the vectors is a 2D vector, its z-value is assumed to be zero and the vector cross product is calculated normally. If both vectors are 2D vectors, the returned value will be the wedge product.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    cross(other: Union[Py5Vector, np.ndarray]) -> Union[float, Py5Vector, np.ndarray[np.floating]]
-
-Parameters
-----------
-
-* **other**: `Union[Py5Vector, np.ndarray]` - 2D or 3D vector to calculate the cross product with
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+    cross(
+        other: Union[Py5Vector, np.ndarray]  # 2D or 3D vector to calculate the cross product with
+    ) -> Union[float, Py5Vector, np.ndarray[np.floating]]
+Updated on August 25, 2022 20:01:47pm UTC
 

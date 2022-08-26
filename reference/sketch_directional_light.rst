@@ -73,23 +73,19 @@ Adds a directional light. Directional light comes from one direction: it is stro
 
 Underlying Processing method: `directionalLight <https://processing.org/reference/directionalLight_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    directional_light(v1: float, v2: float, v3: float, nx: float, ny: float, nz: float, /) -> None
-
-Parameters
-----------
-
-* **nx**: `float` - direction along the x-axis
-* **ny**: `float` - direction along the y-axis
-* **nz**: `float` - direction along the z-axis
-* **v1**: `float` - red or hue value (depending on current color mode)
-* **v2**: `float` - green or saturation value (depending on current color mode)
-* **v3**: `float` - blue or brightness value (depending on current color mode)
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    directional_light(
+        v1: float,  # red or hue value (depending on current color mode)
+        v2: float,  # green or saturation value (depending on current color mode)
+        v3: float,  # blue or brightness value (depending on current color mode)
+        nx: float,  # direction along the x-axis
+        ny: float,  # direction along the y-axis
+        nz: float,  # direction along the z-axis
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

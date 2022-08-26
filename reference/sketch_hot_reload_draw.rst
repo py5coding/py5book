@@ -50,18 +50,13 @@ Description
 
 Perform a hot reload of the Sketch's draw function. This method allows you to replace a running Sketch's draw function with a different one.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    hot_reload_draw(draw: Callable) -> None
-
-Parameters
-----------
-
-* **draw**: `Callable` - function to replace existing draw function
-
-
-Updated on September 11, 2021 16:51:34pm UTC
+    hot_reload_draw(
+        draw: Callable,  # function to replace existing draw function
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

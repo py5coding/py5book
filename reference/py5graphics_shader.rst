@@ -12,20 +12,20 @@ This method is the same as :doc:`sketch_shader` but linked to a ``Py5Graphics`` 
 
 Underlying Processing method: PGraphics.shader
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    shader(shader: Py5Shader, /) -> None
-    shader(shader: Py5Shader, kind: int, /) -> None
+    shader(
+        shader: Py5Shader,  # name of shader file
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **kind**: `int` - type of shader, either POINTS, LINES, or TRIANGLES
-* **shader**: `Py5Shader` - name of shader file
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    shader(
+        shader: Py5Shader,  # name of shader file
+        kind: int,  # type of shader, either POINTS, LINES, or TRIANGLES
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

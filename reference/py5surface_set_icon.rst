@@ -73,18 +73,14 @@ This method will not work for the ``P2D`` or ``P3D`` renderers. Setting the icon
 
 Underlying Processing method: PSurface.setIcon
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_icon(icon: Py5Image, /) -> None
-
-Parameters
-----------
-
-* **icon**: `Py5Image` - image to use as the window icon
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    set_icon(
+        icon: Py5Image,  # image to use as the window icon
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

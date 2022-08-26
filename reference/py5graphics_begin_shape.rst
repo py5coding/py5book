@@ -63,19 +63,16 @@ This method is the same as :doc:`sketch_begin_shape` but linked to a ``Py5Graphi
 
 Underlying Processing method: PGraphics.beginShape
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     begin_shape() -> None
-    begin_shape(kind: int, /) -> None
 
-Parameters
-----------
-
-* **kind**: `int` - Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    begin_shape(
+        kind: int,  # Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
+        /,
+    ) -> None
+Updated on August 25, 2022 19:59:03pm UTC
 

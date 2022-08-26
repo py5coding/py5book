@@ -101,21 +101,16 @@ This function facilitates the creation and execution of a py5 Sketch, and as a r
 
 This function is available in non-decorator form as :doc:`py5functions_render_frame`.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    render(width: int, height: int, renderer: str = Sketch.HIDDEN, use_py5graphics: bool = False) -> Image
-
-Parameters
-----------
-
-* **height**: `int` - height of the display window in units of pixels
-* **renderer**: `str = Sketch.HIDDEN` - rendering engine to use
-* **use_py5graphics**: `bool = False` - pass a py5graphics object instead of a sketch object
-* **width**: `int` - width of the display window in units of pixels
-
-
-Updated on September 11, 2021 16:51:34pm UTC
+    render(
+        width: int,  # width of the display window in units of pixels
+        height: int,  # height of the display window in units of pixels
+        renderer: str = Sketch.HIDDEN,  # rendering engine to use
+        use_py5graphics: bool = False,  # pass a py5graphics object instead of a sketch object
+    ) -> Image
+Updated on August 25, 2022 19:59:03pm UTC
 

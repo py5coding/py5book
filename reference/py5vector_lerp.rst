@@ -57,19 +57,14 @@ Calculates a vector between two vectors at a specific increment. The two vectors
 
 This method is similar to :doc:`sketch_lerp` and :doc:`sketch_lerp_color`, but for vectors instead of numbers or colors.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    lerp(other: Union[Py5Vector, np.ndarray], amt: Union[float, np.ndarray]) -> Union[Py5Vector, np.ndarray[np.floating]]
-
-Parameters
-----------
-
-* **amt**: `Union[float, np.ndarray]` - float between 0.0 and 1.0
-* **other**: `Union[Py5Vector, np.ndarray]` - other vector to interpolate between
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+    lerp(
+        other: Union[Py5Vector, np.ndarray],  # other vector to interpolate between
+        amt: Union[float, np.ndarray],  # float between 0.0 and 1.0
+    ) -> Union[Py5Vector, np.ndarray[np.floating]]
+Updated on August 25, 2022 20:01:47pm UTC
 

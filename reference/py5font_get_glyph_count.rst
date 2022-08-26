@@ -59,12 +59,11 @@ Get the number of glyphs contained in the font. This will be 0 if the font is a 
 
 Underlying Processing method: PFont.getGlyphCount
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     get_glyph_count() -> int
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 19:59:03pm UTC
 

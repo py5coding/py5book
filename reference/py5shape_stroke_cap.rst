@@ -57,18 +57,14 @@ This method can only be used within a :doc:`py5shape_begin_shape` and :doc:`py5s
 
 Underlying Processing method: PShape.strokeCap
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    stroke_cap(cap: int, /) -> None
-
-Parameters
-----------
-
-* **cap**: `int` - either SQUARE, PROJECT, or ROUND
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    stroke_cap(
+        cap: int,  # either SQUARE, PROJECT, or ROUND
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

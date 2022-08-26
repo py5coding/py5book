@@ -54,22 +54,19 @@ Updates the image with the data in its :doc:`py5image_pixels` array. Use in conj
 
 Underlying Processing method: `PImage.updatePixels <https://processing.org/reference/PImage_updatePixels_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     update_pixels() -> None
-    update_pixels(x: int, y: int, w: int, h: int, /) -> None
 
-Parameters
-----------
-
-* **h**: `int` - height
-* **w**: `int` - width
-* **x**: `int` - x-coordinate of the upper-left corner
-* **y**: `int` - y-coordinate of the upper-left corner
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    update_pixels(
+        x: int,  # x-coordinate of the upper-left corner
+        y: int,  # y-coordinate of the upper-left corner
+        w: int,  # width
+        h: int,  # height
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

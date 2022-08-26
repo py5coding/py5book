@@ -66,12 +66,11 @@ The vertex codes will not necessarily align with the vertices because number of 
 
 Underlying Processing method: PShape.getVertexCodes
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     get_vertex_codes() -> npt.NDArray[np.integer]
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

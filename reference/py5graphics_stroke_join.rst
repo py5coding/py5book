@@ -12,18 +12,14 @@ This method is the same as :doc:`sketch_stroke_join` but linked to a ``Py5Graphi
 
 Underlying Processing method: PGraphics.strokeJoin
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    stroke_join(join: int, /) -> None
-
-Parameters
-----------
-
-* **join**: `int` - either MITER, BEVEL, ROUND
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    stroke_join(
+        join: int,  # either MITER, BEVEL, ROUND
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

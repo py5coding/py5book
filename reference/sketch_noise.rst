@@ -151,22 +151,27 @@ Noise generation is a rich and complex topic, and there are many noise algorithm
 
 Underlying Processing method: `noise <https://processing.org/reference/noise_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    noise(x: Union[float, npt.NDArray], /) -> Union[float, npt.NDArray]
-    noise(x: Union[float, npt.NDArray], y: Union[float, npt.NDArray], /) -> Union[float, npt.NDArray]
-    noise(x: Union[float, npt.NDArray], y: Union[float, npt.NDArray], z: Union[float, npt.NDArray], /) -> Union[float, npt.NDArray]
+    noise(
+        x: Union[float, npt.NDArray],  # x-coordinate in noise space
+        /,
+    ) -> Union[float, npt.NDArray]
 
-Parameters
-----------
+    noise(
+        x: Union[float, npt.NDArray],  # x-coordinate in noise space
+        y: Union[float, npt.NDArray],  # y-coordinate in noise space
+        /,
+    ) -> Union[float, npt.NDArray]
 
-* **x**: `Union[float, npt.NDArray]` - x-coordinate in noise space
-* **y**: `Union[float, npt.NDArray]` - y-coordinate in noise space
-* **z**: `Union[float, npt.NDArray]` - z-coordinate in noise space
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+    noise(
+        x: Union[float, npt.NDArray],  # x-coordinate in noise space
+        y: Union[float, npt.NDArray],  # y-coordinate in noise space
+        z: Union[float, npt.NDArray],  # z-coordinate in noise space
+        /,
+    ) -> Union[float, npt.NDArray]
+Updated on August 25, 2022 20:01:47pm UTC
 

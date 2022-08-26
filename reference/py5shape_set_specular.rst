@@ -56,20 +56,20 @@ This method can only be used for a complete ``Py5Shape`` object, and never withi
 
 Underlying Processing method: PShape.setSpecular
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_specular(index: int, specular: int, /) -> None
-    set_specular(specular: int, /) -> None
+    set_specular(
+        index: int,  # vertex index
+        specular: int,  # any color value
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **index**: `int` - vertex index
-* **specular**: `int` - any color value
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    set_specular(
+        specular: int,  # any color value
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -20,28 +20,46 @@ This method is the same as :doc:`sketch_stroke` but linked to a ``Py5Graphics`` 
 
 Underlying Processing method: PGraphics.stroke
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    stroke(gray: float, /) -> None
-    stroke(gray: float, alpha: float, /) -> None
-    stroke(rgb: int, /) -> None
-    stroke(rgb: int, alpha: float, /) -> None
-    stroke(v1: float, v2: float, v3: float, /) -> None
-    stroke(v1: float, v2: float, v3: float, alpha: float, /) -> None
+    stroke(
+        gray: float,  # specifies a value between white and black
+        /,
+    ) -> None
 
-Parameters
-----------
+    stroke(
+        gray: float,  # specifies a value between white and black
+        alpha: float,  # opacity of the stroke
+        /,
+    ) -> None
 
-* **alpha**: `float` - opacity of the stroke
-* **gray**: `float` - specifies a value between white and black
-* **rgb**: `int` - color value in hexadecimal notation
-* **v1**: `float` - red or hue value (depending on current color mode)
-* **v2**: `float` - green or saturation value (depending on current color mode)
-* **v3**: `float` - blue or brightness value (depending on current color mode)
+    stroke(
+        rgb: int,  # color value in hexadecimal notation
+        /,
+    ) -> None
 
+    stroke(
+        rgb: int,  # color value in hexadecimal notation
+        alpha: float,  # opacity of the stroke
+        /,
+    ) -> None
 
-Updated on July 31, 2022 13:59:47pm UTC
+    stroke(
+        v1: float,  # red or hue value (depending on current color mode)
+        v2: float,  # green or saturation value (depending on current color mode)
+        v3: float,  # blue or brightness value (depending on current color mode)
+        /,
+    ) -> None
+
+    stroke(
+        v1: float,  # red or hue value (depending on current color mode)
+        v2: float,  # green or saturation value (depending on current color mode)
+        v3: float,  # blue or brightness value (depending on current color mode)
+        alpha: float,  # opacity of the stroke
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

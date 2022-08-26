@@ -53,12 +53,11 @@ Replaces the current matrix of a shape with the identity matrix. The equivalent 
 
 Underlying Processing method: `PShape.resetMatrix <https://processing.org/reference/PShape_resetMatrix_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     reset_matrix() -> None
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

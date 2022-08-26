@@ -45,6 +45,5 @@ System variable that stores the width of the display window. This value is set b
 
 Underlying Processing field: `width <https://processing.org/reference/width.html>`_
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

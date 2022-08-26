@@ -51,19 +51,16 @@ This method is used to complete a custom shape created with the :doc:`sketch_cre
 
 Underlying Processing method: `PShape.endShape <https://processing.org/reference/PShape_endShape_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     end_shape() -> None
-    end_shape(mode: int, /) -> None
 
-Parameters
-----------
-
-* **mode**: `int` - Either OPEN or CLOSE
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    end_shape(
+        mode: int,  # Either OPEN or CLOSE
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -45,6 +45,5 @@ For more detail on how ``pmouse_y`` is updated inside of mouse events and ``draw
 
 Underlying Processing field: `pmouseY <https://processing.org/reference/pmouseY.html>`_
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

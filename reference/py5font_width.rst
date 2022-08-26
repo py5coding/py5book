@@ -56,18 +56,14 @@ This will return 0 if the character is not in the font's character set.
 
 Underlying Processing method: PFont.width
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    width(c: chr, /) -> float
-
-Parameters
-----------
-
-* **c**: `chr` - single character
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    width(
+        c: chr,  # single character
+        /,
+    ) -> float
+Updated on August 25, 2022 19:59:03pm UTC
 

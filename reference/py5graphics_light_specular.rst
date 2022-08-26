@@ -12,20 +12,16 @@ This method is the same as :doc:`sketch_light_specular` but linked to a ``Py5Gra
 
 Underlying Processing method: PGraphics.lightSpecular
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    light_specular(v1: float, v2: float, v3: float, /) -> None
-
-Parameters
-----------
-
-* **v1**: `float` - red or hue value (depending on current color mode)
-* **v2**: `float` - green or saturation value (depending on current color mode)
-* **v3**: `float` - blue or brightness value (depending on current color mode)
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    light_specular(
+        v1: float,  # red or hue value (depending on current color mode)
+        v2: float,  # green or saturation value (depending on current color mode)
+        v3: float,  # blue or brightness value (depending on current color mode)
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

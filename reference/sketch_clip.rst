@@ -51,21 +51,17 @@ Limits the rendering to the boundaries of a rectangle defined by the parameters.
 
 Underlying Processing method: `clip <https://processing.org/reference/clip_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    clip(a: float, b: float, c: float, d: float, /) -> None
-
-Parameters
-----------
-
-* **a**: `float` - x-coordinate of the rectangle, by default
-* **b**: `float` - y-coordinate of the rectangle, by default
-* **c**: `float` - width of the rectangle, by default
-* **d**: `float` - height of the rectangle, by default
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    clip(
+        a: float,  # x-coordinate of the rectangle, by default
+        b: float,  # y-coordinate of the rectangle, by default
+        c: float,  # width of the rectangle, by default
+        d: float,  # height of the rectangle, by default
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

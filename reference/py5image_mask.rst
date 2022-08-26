@@ -53,20 +53,19 @@ In addition to using a mask image, an integer array containing the alpha channel
 
 Underlying Processing method: `PImage.mask <https://processing.org/reference/PImage_mask_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    mask(img: Py5Image, /) -> None
-    mask(mask_array: npt.NDArray[np.integer], /) -> None
+    mask(
+        img: Py5Image,  # image to use as the mask
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **img**: `Py5Image` - image to use as the mask
-* **mask_array**: `npt.NDArray[np.integer]` - 1D array of integers used as the alpha channel, needs to be the same length as the image's pixel array
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+    mask(
+        mask_array: npt.NDArray[np.integer],  # 1D array of integers used as the alpha channel, needs to be the same length as the image's pixel array
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

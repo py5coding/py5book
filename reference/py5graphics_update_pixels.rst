@@ -58,22 +58,19 @@ This method is the same as :doc:`sketch_update_pixels` but linked to a ``Py5Grap
 
 Underlying Processing method: PGraphics.updatePixels
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     update_pixels() -> None
-    update_pixels(x: int, y: int, w: int, h: int, /) -> None
 
-Parameters
-----------
-
-* **h**: `int` - height of pixel rectangle to update
-* **w**: `int` - width of pixel rectangle to update
-* **x**: `int` - x-coordinate of the upper left hand corner of rectangle to update
-* **y**: `int` - y-coordinate of the upper left hand corner of rectangle to update
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    update_pixels(
+        x: int,  # x-coordinate of the upper left hand corner of rectangle to update
+        y: int,  # y-coordinate of the upper left hand corner of rectangle to update
+        w: int,  # width of pixel rectangle to update
+        h: int,  # height of pixel rectangle to update
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -14,23 +14,27 @@ This method is the same as :doc:`sketch_scale` but linked to a ``Py5Graphics`` o
 
 Underlying Processing method: PGraphics.scale
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    scale(s: float, /) -> None
-    scale(x: float, y: float, /) -> None
-    scale(x: float, y: float, z: float, /) -> None
+    scale(
+        s: float,  # percentage to scale the object
+        /,
+    ) -> None
 
-Parameters
-----------
+    scale(
+        x: float,  # percentage to scale the object in the x-axis
+        y: float,  # percentage to scale the object in the y-axis
+        /,
+    ) -> None
 
-* **s**: `float` - percentage to scale the object
-* **x**: `float` - percentage to scale the object in the x-axis
-* **y**: `float` - percentage to scale the object in the y-axis
-* **z**: `float` - percentage to scale the object in the z-axis
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    scale(
+        x: float,  # percentage to scale the object in the x-axis
+        y: float,  # percentage to scale the object in the y-axis
+        z: float,  # percentage to scale the object in the z-axis
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -85,18 +85,14 @@ The parameter must be written in ALL CAPS because Python is a case-sensitive lan
 
 Underlying Processing method: `ellipseMode <https://processing.org/reference/ellipseMode_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    ellipse_mode(mode: int, /) -> None
-
-Parameters
-----------
-
-* **mode**: `int` - either CENTER, RADIUS, CORNER, or CORNERS
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    ellipse_mode(
+        mode: int,  # either CENTER, RADIUS, CORNER, or CORNERS
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

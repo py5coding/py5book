@@ -46,12 +46,11 @@ Updates the image with the data in the :doc:`py5image_np_pixels` array. Use in c
 
 The ``update_np_pixels()`` method is similar to :doc:`py5image_update_pixels` in that ``update_np_pixels()`` must be called after modifying :doc:`py5image_np_pixels` just as :doc:`py5image_update_pixels` must be called after modifying :doc:`py5image_pixels`.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     update_np_pixels() -> None
-
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

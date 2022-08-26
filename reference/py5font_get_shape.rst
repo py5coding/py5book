@@ -63,20 +63,20 @@ This method only works on fonts loaded with :doc:`sketch_create_font`.
 
 Underlying Processing method: PFont.getShape
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    get_shape(ch: chr, /) -> Py5Shape
-    get_shape(ch: chr, detail: float, /) -> Py5Shape
+    get_shape(
+        ch: chr,  # single character
+        /,
+    ) -> Py5Shape
 
-Parameters
-----------
-
-* **ch**: `chr` - single character
-* **detail**: `float` - level of shape detail
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    get_shape(
+        ch: chr,  # single character
+        detail: float,  # level of shape detail
+        /,
+    ) -> Py5Shape
+Updated on August 25, 2022 19:59:03pm UTC
 

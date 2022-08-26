@@ -62,22 +62,17 @@ This utility function opens a window that displays a short message about the num
 
 Get a list of font names available on your computer with Py5Font's :doc:`py5font_list` method. If you request an unavailable font, it will create the data file anyway but using a default font.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    create_font_file(font_name: str, font_size: int, filename: str = None, characters: str = None, pause: bool = True) -> None
-
-Parameters
-----------
-
-* **characters**: `str = None` - limit glyphs to characters found in string
-* **filename**: `str = None` - vlw data file to save font data to
-* **font_name**: `str` - name of font found on computer
-* **font_size**: `int` - font size in units of pixels
-* **pause**: `bool = True` - pause after creating font file
-
-
-Updated on September 11, 2021 16:51:34pm UTC
+    create_font_file(
+        font_name: str,  # name of font found on computer
+        font_size: int,  # font size in units of pixels
+        filename: str = None,  # vlw data file to save font data to
+        characters: str = None,  # limit glyphs to characters found in string
+        pause: bool = True,  # pause after creating font file
+    ) -> None
+Updated on August 25, 2022 19:59:03pm UTC
 

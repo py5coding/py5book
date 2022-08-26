@@ -60,28 +60,46 @@ When drawing in 2D with the default renderer, you may need ``hint(ENABLE_STROKE_
 
 Underlying Processing method: PShape.stroke
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    stroke(gray: float, /) -> None
-    stroke(gray: float, alpha: float, /) -> None
-    stroke(rgb: int, /) -> None
-    stroke(rgb: int, alpha: float, /) -> None
-    stroke(x: float, y: float, z: float, /) -> None
-    stroke(x: float, y: float, z: float, alpha: float, /) -> None
+    stroke(
+        gray: float,  # specifies a value between white and black
+        /,
+    ) -> None
 
-Parameters
-----------
+    stroke(
+        gray: float,  # specifies a value between white and black
+        alpha: float,  # opacity of the stroke
+        /,
+    ) -> None
 
-* **alpha**: `float` - opacity of the stroke
-* **gray**: `float` - specifies a value between white and black
-* **rgb**: `int` - color value in hexadecimal notation
-* **x**: `float` - red or hue value (depending on current color mode)
-* **y**: `float` - green or saturation value (depending on current color mode)
-* **z**: `float` - blue or brightness value (depending on current color mode)
+    stroke(
+        rgb: int,  # color value in hexadecimal notation
+        /,
+    ) -> None
 
+    stroke(
+        rgb: int,  # color value in hexadecimal notation
+        alpha: float,  # opacity of the stroke
+        /,
+    ) -> None
 
-Updated on July 31, 2022 13:59:47pm UTC
+    stroke(
+        x: float,  # red or hue value (depending on current color mode)
+        y: float,  # green or saturation value (depending on current color mode)
+        z: float,  # blue or brightness value (depending on current color mode)
+        /,
+    ) -> None
+
+    stroke(
+        x: float,  # red or hue value (depending on current color mode)
+        y: float,  # green or saturation value (depending on current color mode)
+        z: float,  # blue or brightness value (depending on current color mode)
+        alpha: float,  # opacity of the stroke
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

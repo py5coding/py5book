@@ -47,6 +47,5 @@ Description
 
 The ``is_mouse_pressed`` variable stores whether or not a mouse button is currently being pressed. The value is ``True`` when `any` mouse button is pressed, and ``False`` if no button is pressed. The :doc:`sketch_mouse_button` variable (see the related reference entry) can be used to determine which button has been pressed.
 
-
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

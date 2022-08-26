@@ -50,18 +50,14 @@ The ``coordinates`` parameter should be a numpy array with one row for each curv
 
 Underlying Processing method: curveVertices
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    curve_vertices(coordinates: npt.NDArray[np.floating], /) -> None
-
-Parameters
-----------
-
-* **coordinates**: `npt.NDArray[np.floating]` - 2D array of curve vertex coordinates with 2 or 3 columns for 2D or 3D points, respectively
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+    curve_vertices(
+        coordinates: npt.NDArray[np.floating],  # 2D array of curve vertex coordinates with 2 or 3 columns for 2D or 3D points, respectively
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

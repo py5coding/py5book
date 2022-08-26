@@ -52,18 +52,14 @@ Find a target ``Py5Shape`` object from anywhere within a ``Py5Shape`` object tha
 
 Underlying Processing method: PShape.findChild
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    find_child(target: str, /) -> Py5Shape
-
-Parameters
-----------
-
-* **target**: `str` - name of child object
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    find_child(
+        target: str,  # name of child object
+        /,
+    ) -> Py5Shape
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -48,18 +48,13 @@ Description
 
 Set the vector's squared magnitude. Setting this to a non-negative number will adjust the vector's squared magnitude to that value. Negative values will result in an error.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_mag_sq(mag_sq: float) -> Py5Vector
-
-Parameters
-----------
-
-* **mag_sq**: `float` - vector magnitude squared
-
-
-Updated on January 16, 2022 16:51:21pm UTC
+    set_mag_sq(
+        mag_sq: float,  # vector magnitude squared
+    ) -> Py5Vector
+Updated on August 25, 2022 20:01:47pm UTC
 

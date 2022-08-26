@@ -56,19 +56,14 @@ This method exists because setting the array contents with the code ``g.np_pixel
 
 This method is the same as :doc:`sketch_set_np_pixels` but linked to a ``Py5Graphics`` object.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_np_pixels(array: npt.NDArray[np.uint8], bands: str = 'ARGB') -> None
-
-Parameters
-----------
-
-* **array**: `npt.NDArray[np.uint8]` - properly sized numpy array to be copied to np_pixels[]
-* **bands**: `str = 'ARGB'` - color channels in the array's third dimension
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+    set_np_pixels(
+        array: npt.NDArray[np.uint8],  # properly sized numpy array to be copied to np_pixels[]
+        bands: str = "ARGB",  # color channels in the array's third dimension
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

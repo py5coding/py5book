@@ -50,21 +50,22 @@ Specifies vertex coordinates for curves. This method may only be used between :d
 
 Underlying Processing method: `curveVertex <https://processing.org/reference/curveVertex_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    curve_vertex(x: float, y: float, /) -> None
-    curve_vertex(x: float, y: float, z: float, /) -> None
+    curve_vertex(
+        x: float,  # the x-coordinate of the vertex
+        y: float,  # the y-coordinate of the vertex
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **x**: `float` - the x-coordinate of the vertex
-* **y**: `float` - the y-coordinate of the vertex
-* **z**: `float` - the z-coordinate of the vertex
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    curve_vertex(
+        x: float,  # the x-coordinate of the vertex
+        y: float,  # the y-coordinate of the vertex
+        z: float,  # the z-coordinate of the vertex
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

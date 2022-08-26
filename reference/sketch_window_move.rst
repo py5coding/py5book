@@ -75,19 +75,15 @@ This method provides the same functionality as :doc:`py5surface_set_location` bu
 
 Underlying Processing method: windowMove
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    window_move(x: int, y: int, /) -> None
-
-Parameters
-----------
-
-* **x**: `int` - x-coordinate for window location
-* **y**: `int` - y-coordinate for window location
-
-
-Updated on July 18, 2022 17:22:20pm UTC
+    window_move(
+        x: int,  # x-coordinate for window location
+        y: int,  # y-coordinate for window location
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

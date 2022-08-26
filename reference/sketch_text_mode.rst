@@ -48,18 +48,14 @@ The ``text_mode(SHAPE)`` option in ``P3D`` can be combined with :doc:`sketch_beg
 
 Underlying Processing method: `textMode <https://processing.org/reference/textMode_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    text_mode(mode: int, /) -> None
-
-Parameters
-----------
-
-* **mode**: `int` - either MODEL or SHAPE
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    text_mode(
+        mode: int,  # either MODEL or SHAPE
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -49,19 +49,15 @@ This method provides the same functionality as :doc:`sketch_window_resize`.
 
 Underlying Processing method: PSurface.setSize
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_size(width: int, height: int, /) -> None
-
-Parameters
-----------
-
-* **height**: `int` - new window height
-* **width**: `int` - new window width
-
-
-Updated on July 18, 2022 17:22:20pm UTC
+    set_size(
+        width: int,  # new window width
+        height: int,  # new window height
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

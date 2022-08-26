@@ -58,12 +58,11 @@ Integer value used to identify which modifier keys (if any) are currently presse
 
 Underlying Processing method: getModifiers
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     get_modifiers() -> int
-
-Updated on April 27, 2022 10:44:51am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

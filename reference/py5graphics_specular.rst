@@ -12,24 +12,26 @@ This method is the same as :doc:`sketch_specular` but linked to a ``Py5Graphics`
 
 Underlying Processing method: PGraphics.specular
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    specular(gray: float, /) -> None
-    specular(rgb: int, /) -> None
-    specular(v1: float, v2: float, v3: float, /) -> None
+    specular(
+        gray: float,  # value between black and white, by default 0 to 255
+        /,
+    ) -> None
 
-Parameters
-----------
+    specular(
+        rgb: int,  # color to set
+        /,
+    ) -> None
 
-* **gray**: `float` - value between black and white, by default 0 to 255
-* **rgb**: `int` - color to set
-* **v1**: `float` - red or hue value (depending on current color mode)
-* **v2**: `float` - green or saturation value (depending on current color mode)
-* **v3**: `float` - blue or brightness value (depending on current color mode)
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    specular(
+        v1: float,  # red or hue value (depending on current color mode)
+        v2: float,  # green or saturation value (depending on current color mode)
+        v3: float,  # blue or brightness value (depending on current color mode)
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -73,18 +73,14 @@ Description
 
 Sets the seed value for :doc:`sketch_os_noise`. By default, :doc:`sketch_os_noise` produces different results each time the program is run. Set the seed parameter to a constant to return the same pseudo-random numbers each time the Sketch is run.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    os_noise_seed(seed: int, /) -> None
-
-Parameters
-----------
-
-* **seed**: `int` - seed value
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+    os_noise_seed(
+        seed: int,  # seed value
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

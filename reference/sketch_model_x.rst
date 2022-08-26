@@ -75,20 +75,16 @@ In the example, the ``model_x()``, :doc:`sketch_model_y`, and :doc:`sketch_model
 
 Underlying Processing method: `modelX <https://processing.org/reference/modelX_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    model_x(x: float, y: float, z: float, /) -> float
-
-Parameters
-----------
-
-* **x**: `float` - 3D x-coordinate to be mapped
-* **y**: `float` - 3D y-coordinate to be mapped
-* **z**: `float` - 3D z-coordinate to be mapped
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    model_x(
+        x: float,  # 3D x-coordinate to be mapped
+        y: float,  # 3D y-coordinate to be mapped
+        z: float,  # 3D z-coordinate to be mapped
+        /,
+    ) -> float
+Updated on August 25, 2022 20:01:47pm UTC
 

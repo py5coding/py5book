@@ -48,12 +48,11 @@ Get the number of mouse clicks. This will be 1 for a single mouse click and 2 fo
 
 Underlying Processing method: getCount
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     get_count() -> int
-
-Updated on April 27, 2022 10:44:51am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

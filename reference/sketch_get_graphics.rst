@@ -41,12 +41,11 @@ Get the :doc:`py5graphics` object used by the Sketch. Internally, all of Process
 
 Underlying Processing method: getGraphics
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     get_graphics() -> Py5Graphics
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

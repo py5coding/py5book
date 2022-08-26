@@ -58,12 +58,11 @@ Return the key code for the key event. This method is important for key events i
 
 Underlying Processing method: getKeyCode
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     get_key_code() -> int
-
-Updated on April 27, 2022 11:05:24am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

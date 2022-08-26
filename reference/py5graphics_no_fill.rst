@@ -12,12 +12,11 @@ This method is the same as :doc:`sketch_no_fill` but linked to a ``Py5Graphics``
 
 Underlying Processing method: PGraphics.noFill
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     no_fill() -> None
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

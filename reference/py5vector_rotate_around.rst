@@ -50,19 +50,14 @@ Rotate around an arbitrary 3D vector. This method is only applicable to 3D vecto
 
 The vector's rotation will follow the right-hand rule. Using your right hand, point your thumb in the direction of the vector to rotate around. Your fingers will curl in the direction of rotation when the ``angle`` parameter is positive.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    rotate_around(angle: float, v: Py5Vector3D) -> Py5Vector3D
-
-Parameters
-----------
-
-* **angle**: `float` - angle of rotation, measured in radians
-* **v**: `Py5Vector3D` - 3D vector to rotate vector around
-
-
-Updated on January 16, 2022 16:51:21pm UTC
+    rotate_around(
+        angle: float,  # angle of rotation, measured in radians
+        v: Py5Vector3D,  # 3D vector to rotate vector around
+    ) -> Py5Vector3D
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -53,19 +53,15 @@ This method uses a coordinate system that is unique to the shape and how the pat
 
 Underlying Processing method: PShape.contains
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    contains(x: float, y: float, /) -> bool
-
-Parameters
-----------
-
-* **x**: `float` - x-coordinate
-* **y**: `float` - y-coordinate
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    contains(
+        x: float,  # x-coordinate
+        y: float,  # y-coordinate
+        /,
+    ) -> bool
+Updated on August 25, 2022 20:01:47pm UTC
 

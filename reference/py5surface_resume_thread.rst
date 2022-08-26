@@ -52,12 +52,11 @@ The :doc:`sketch_frame_count` will continue incrementing after the Sketch is res
 
 Underlying Processing method: PSurface.resumeThread
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     resume_thread() -> None
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

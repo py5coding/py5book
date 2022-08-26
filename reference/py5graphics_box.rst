@@ -12,22 +12,21 @@ This method is the same as :doc:`sketch_box` but linked to a ``Py5Graphics`` obj
 
 Underlying Processing method: PGraphics.box
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    box(size: float, /) -> None
-    box(w: float, h: float, d: float, /) -> None
+    box(
+        size: float,  # dimension of the box in all dimensions (creates a cube)
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **d**: `float` - dimension of the box in the z-dimension
-* **h**: `float` - dimension of the box in the y-dimension
-* **size**: `float` - dimension of the box in all dimensions (creates a cube)
-* **w**: `float` - dimension of the box in the x-dimension
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    box(
+        w: float,  # dimension of the box in the x-dimension
+        h: float,  # dimension of the box in the y-dimension
+        d: float,  # dimension of the box in the z-dimension
+        /,
+    ) -> None
+Updated on August 25, 2022 19:59:03pm UTC
 

@@ -55,18 +55,14 @@ Assign a name to a ``Py5Shape`` object. This can be used to later find the shape
 
 Underlying Processing method: PShape.setName
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_name(name: str, /) -> None
-
-Parameters
-----------
-
-* **name**: `str` - name to be assigned to shape
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    set_name(
+        name: str,  # name to be assigned to shape
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

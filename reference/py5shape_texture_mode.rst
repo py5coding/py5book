@@ -97,18 +97,14 @@ With ``IMAGE``, if an image is 100 x 200 pixels, mapping the image onto the enti
 
 Underlying Processing method: PShape.textureMode
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    texture_mode(mode: int, /) -> None
-
-Parameters
-----------
-
-* **mode**: `int` - either IMAGE or NORMAL
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    texture_mode(
+        mode: int,  # either IMAGE or NORMAL
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

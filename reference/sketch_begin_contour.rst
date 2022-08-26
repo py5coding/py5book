@@ -95,12 +95,11 @@ This method can be used as a context manager to ensure that :doc:`sketch_end_con
 
 Underlying Processing method: `beginContour <https://processing.org/reference/beginContour_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     begin_contour() -> None
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

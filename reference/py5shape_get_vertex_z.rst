@@ -47,18 +47,14 @@ Get the value of the z coordinate for the vertex ``index``.
 
 Underlying Processing method: PShape.getVertexZ
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    get_vertex_z(index: int, /) -> float
-
-Parameters
-----------
-
-* **index**: `int` - vertex index
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    get_vertex_z(
+        index: int,  # vertex index
+        /,
+    ) -> float
+Updated on August 25, 2022 20:01:47pm UTC
 

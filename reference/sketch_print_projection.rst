@@ -46,12 +46,11 @@ Prints the current projection matrix to standard output.
 
 Underlying Processing method: `printProjection <https://processing.org/reference/printProjection_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     print_projection() -> None
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

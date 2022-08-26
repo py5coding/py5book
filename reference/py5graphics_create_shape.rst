@@ -18,22 +18,22 @@ This method is the same as :doc:`sketch_create_shape` but linked to a ``Py5Graph
 
 Underlying Processing method: PGraphics.createShape
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     create_shape() -> Py5Shape
-    create_shape(kind: int, /, *p: float) -> Py5Shape
-    create_shape(type: int, /) -> Py5Shape
 
-Parameters
-----------
+    create_shape(
+        kind: int,  # either POINT, LINE, TRIANGLE, QUAD, RECT, ELLIPSE, ARC, BOX, SPHERE
+        /,
+        *p: float,
+    ) -> Py5Shape
 
-* **kind**: `int` - either POINT, LINE, TRIANGLE, QUAD, RECT, ELLIPSE, ARC, BOX, SPHERE
-* **p**: `float` - parameters that match the kind of shape
-* **type**: `int` - either GROUP, PATH, or GEOMETRY
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    create_shape(
+        type: int,  # either GROUP, PATH, or GEOMETRY
+        /,
+    ) -> Py5Shape
+Updated on August 25, 2022 19:59:03pm UTC
 

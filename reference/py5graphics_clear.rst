@@ -58,12 +58,11 @@ Clears the pixels within a buffer. Unlike the main graphics context (the display
 
 Underlying Processing method: PGraphics.clear
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     clear() -> None
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on August 25, 2022 19:59:03pm UTC
 

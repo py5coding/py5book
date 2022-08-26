@@ -51,12 +51,11 @@ Return boolean value reflecting if the Alt key is down. The Alt key is a modifie
 
 Underlying Processing method: isAltDown
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     is_alt_down() -> bool
-
-Updated on April 27, 2022 10:44:51am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

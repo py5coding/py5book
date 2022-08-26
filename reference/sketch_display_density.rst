@@ -46,19 +46,16 @@ This function returns the number "2" if the screen is a high-density screen (cal
 
 Underlying Processing method: `displayDensity <https://processing.org/reference/displayDensity_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     display_density() -> int
-    display_density(display: int, /) -> int
 
-Parameters
-----------
-
-* **display**: `int` - the display number to check (1-indexed to match the Preferences dialog box)
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    display_density(
+        display: int,  # the display number to check (1-indexed to match the Preferences dialog box)
+        /,
+    ) -> int
+Updated on August 25, 2022 20:01:47pm UTC
 

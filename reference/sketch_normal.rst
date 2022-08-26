@@ -52,20 +52,16 @@ Sets the current normal vector. Used for drawing three dimensional shapes and su
 
 Underlying Processing method: `normal <https://processing.org/reference/normal_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    normal(nx: float, ny: float, nz: float, /) -> None
-
-Parameters
-----------
-
-* **nx**: `float` - x direction
-* **ny**: `float` - y direction
-* **nz**: `float` - z direction
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    normal(
+        nx: float,  # x direction
+        ny: float,  # y direction
+        nz: float,  # z direction
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

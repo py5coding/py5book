@@ -16,25 +16,30 @@ This method is the same as :doc:`sketch_arc` but linked to a ``Py5Graphics`` obj
 
 Underlying Processing method: PGraphics.arc
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    arc(a: float, b: float, c: float, d: float, start: float, stop: float, /) -> None
-    arc(a: float, b: float, c: float, d: float, start: float, stop: float, mode: int, /) -> None
+    arc(
+        a: float,  # x-coordinate of the arc's ellipse
+        b: float,  # y-coordinate of the arc's ellipse
+        c: float,  # width of the arc's ellipse by default
+        d: float,  # height of the arc's ellipse by default
+        start: float,  # angle to start the arc, specified in radians
+        stop: float,  # angle to stop the arc, specified in radians
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **a**: `float` - x-coordinate of the arc's ellipse
-* **b**: `float` - y-coordinate of the arc's ellipse
-* **c**: `float` - width of the arc's ellipse by default
-* **d**: `float` - height of the arc's ellipse by default
-* **mode**: `int` - arc drawing mode
-* **start**: `float` - angle to start the arc, specified in radians
-* **stop**: `float` - angle to stop the arc, specified in radians
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    arc(
+        a: float,  # x-coordinate of the arc's ellipse
+        b: float,  # y-coordinate of the arc's ellipse
+        c: float,  # width of the arc's ellipse by default
+        d: float,  # height of the arc's ellipse by default
+        start: float,  # angle to start the arc, specified in radians
+        stop: float,  # angle to stop the arc, specified in radians
+        mode: int,  # arc drawing mode
+        /,
+    ) -> None
+Updated on August 25, 2022 19:59:03pm UTC
 

@@ -55,18 +55,14 @@ When textures are in use, the fill color is ignored. Instead, use :doc:`py5shape
 
 Underlying Processing method: PShape.texture
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    texture(tex: Py5Image, /) -> None
-
-Parameters
-----------
-
-* **tex**: `Py5Image` - reference to a Py5Image object
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    texture(
+        tex: Py5Image,  # reference to a Py5Image object
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

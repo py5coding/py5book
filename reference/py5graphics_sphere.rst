@@ -12,18 +12,14 @@ This method is the same as :doc:`sketch_sphere` but linked to a ``Py5Graphics`` 
 
 Underlying Processing method: PGraphics.sphere
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    sphere(r: float, /) -> None
-
-Parameters
-----------
-
-* **r**: `float` - the radius of the sphere
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    sphere(
+        r: float,  # the radius of the sphere
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

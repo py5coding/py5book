@@ -49,24 +49,26 @@ Sets the ambient reflectance for shapes drawn to the screen. This is combined wi
 
 Underlying Processing method: `ambient <https://processing.org/reference/ambient_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    ambient(gray: float, /) -> None
-    ambient(rgb: int, /) -> None
-    ambient(v1: float, v2: float, v3: float, /) -> None
+    ambient(
+        gray: float,  # number specifying value between white and black
+        /,
+    ) -> None
 
-Parameters
-----------
+    ambient(
+        rgb: int,  # any value of the color datatype
+        /,
+    ) -> None
 
-* **gray**: `float` - number specifying value between white and black
-* **rgb**: `int` - any value of the color datatype
-* **v1**: `float` - red or hue value (depending on current color mode)
-* **v2**: `float` - green or saturation value (depending on current color mode)
-* **v3**: `float` - blue or brightness value (depending on current color mode)
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    ambient(
+        v1: float,  # red or hue value (depending on current color mode)
+        v2: float,  # green or saturation value (depending on current color mode)
+        v3: float,  # blue or brightness value (depending on current color mode)
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

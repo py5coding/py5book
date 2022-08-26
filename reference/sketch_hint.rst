@@ -71,18 +71,14 @@ Hints for use with ``P3D`` only
 
 Underlying Processing method: `hint <https://processing.org/reference/hint_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    hint(which: int, /) -> None
-
-Parameters
-----------
-
-* **which**: `int` - hint to use when rendering Sketch
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    hint(
+        which: int,  # hint to use when rendering Sketch
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

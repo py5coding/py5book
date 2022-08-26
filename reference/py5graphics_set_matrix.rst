@@ -12,18 +12,14 @@ This method is the same as :doc:`sketch_set_matrix` but linked to a ``Py5Graphic
 
 Underlying Processing method: PGraphics.setMatrix
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    set_matrix(source: npt.NDArray[np.floating], /) -> None
-
-Parameters
-----------
-
-* **source**: `npt.NDArray[np.floating]` - transformation matrix with a shape of 2x3 for 2D transforms or 4x4 for 3D transforms
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+    set_matrix(
+        source: npt.NDArray[np.floating],  # transformation matrix with a shape of 2x3 for 2D transforms or 4x4 for 3D transforms
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

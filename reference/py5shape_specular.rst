@@ -65,24 +65,26 @@ This method can only be used within a :doc:`py5shape_begin_shape` and :doc:`py5s
 
 Underlying Processing method: PShape.specular
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    specular(gray: float, /) -> None
-    specular(rgb: int, /) -> None
-    specular(x: float, y: float, z: float, /) -> None
+    specular(
+        gray: float,  # value between black and white, by default 0 to 255
+        /,
+    ) -> None
 
-Parameters
-----------
+    specular(
+        rgb: int,  # color to set
+        /,
+    ) -> None
 
-* **gray**: `float` - value between black and white, by default 0 to 255
-* **rgb**: `int` - color to set
-* **x**: `float` - red or hue value (depending on current color mode)
-* **y**: `float` - green or saturation value (depending on current color mode)
-* **z**: `float` - blue or brightness value (depending on current color mode)
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    specular(
+        x: float,  # red or hue value (depending on current color mode)
+        y: float,  # green or saturation value (depending on current color mode)
+        z: float,  # blue or brightness value (depending on current color mode)
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

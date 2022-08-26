@@ -60,18 +60,14 @@ Get the texture tint color assigned to one vertex in a ``Py5Shape`` object. If t
 
 Underlying Processing method: PShape.getTint
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    get_tint(index: int, /) -> int
-
-Parameters
-----------
-
-* **index**: `int` - vertex index
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    get_tint(
+        index: int,  # vertex index
+        /,
+    ) -> int
+Updated on August 25, 2022 20:01:47pm UTC
 

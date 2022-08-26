@@ -23,22 +23,25 @@ This method is the same as :doc:`sketch_apply_filter` but linked to a ``Py5Graph
 
 Underlying Processing method: PGraphics.filter
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    apply_filter(kind: int, /) -> None
-    apply_filter(kind: int, param: float, /) -> None
-    apply_filter(shader: Py5Shader, /) -> None
+    apply_filter(
+        kind: int,  # Either THRESHOLD, GRAY, OPAQUE, INVERT, POSTERIZE, BLUR, ERODE, or DILATE
+        /,
+    ) -> None
 
-Parameters
-----------
+    apply_filter(
+        kind: int,  # Either THRESHOLD, GRAY, OPAQUE, INVERT, POSTERIZE, BLUR, ERODE, or DILATE
+        param: float,  # unique for each, see above
+        /,
+    ) -> None
 
-* **kind**: `int` - Either THRESHOLD, GRAY, OPAQUE, INVERT, POSTERIZE, BLUR, ERODE, or DILATE
-* **param**: `float` - unique for each, see above
-* **shader**: `Py5Shader` - the fragment shader to apply
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    apply_filter(
+        shader: Py5Shader,  # the fragment shader to apply
+        /,
+    ) -> None
+Updated on August 25, 2022 19:59:03pm UTC
 

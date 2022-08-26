@@ -40,6 +40,5 @@ The :doc:`py5graphics` object used by the Sketch. Internally, all of Processing'
 
 Underlying Processing field: g
 
-
-Updated on July 18, 2022 17:22:20pm UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

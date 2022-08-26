@@ -18,23 +18,25 @@ This method is the same as :doc:`sketch_get` but linked to a ``Py5Graphics`` obj
 
 Underlying Processing method: PGraphics.get
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     get() -> Py5Image
-    get(x: int, y: int, /) -> int
-    get(x: int, y: int, w: int, h: int, /) -> Py5Image
 
-Parameters
-----------
+    get(
+        x: int,  # x-coordinate of the pixel
+        y: int,  # y-coordinate of the pixel
+        /,
+    ) -> int
 
-* **h**: `int` - height of pixel rectangle to get
-* **w**: `int` - width of pixel rectangle to get
-* **x**: `int` - x-coordinate of the pixel
-* **y**: `int` - y-coordinate of the pixel
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    get(
+        x: int,  # x-coordinate of the pixel
+        y: int,  # y-coordinate of the pixel
+        w: int,  # width of pixel rectangle to get
+        h: int,  # height of pixel rectangle to get
+        /,
+    ) -> Py5Image
+Updated on August 25, 2022 19:59:03pm UTC
 

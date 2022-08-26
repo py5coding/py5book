@@ -50,18 +50,14 @@ Removes a child ``Py5Shape`` object from a parent ``Py5Shape`` object that is de
 
 Underlying Processing method: PShape.removeChild
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    remove_child(idx: int, /) -> None
-
-Parameters
-----------
-
-* **idx**: `int` - index value
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    remove_child(
+        idx: int,  # index value
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

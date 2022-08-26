@@ -87,12 +87,11 @@ This method can be used as a context manager to ensure that :doc:`sketch_pop` al
 
 Underlying Processing method: `push <https://processing.org/reference/push_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     push() -> None
-
-Updated on August 17, 2022 18:09:19pm UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

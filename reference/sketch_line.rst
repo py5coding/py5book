@@ -95,24 +95,27 @@ Draws a line (a direct path between two points) to the screen. The version of ``
 
 Underlying Processing method: `line <https://processing.org/reference/line_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    line(x1: float, y1: float, x2: float, y2: float, /) -> None
-    line(x1: float, y1: float, z1: float, x2: float, y2: float, z2: float, /) -> None
+    line(
+        x1: float,  # x-coordinate of the first point
+        y1: float,  # y-coordinate of the first point
+        x2: float,  # x-coordinate of the second point
+        y2: float,  # y-coordinate of the second point
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **x1**: `float` - x-coordinate of the first point
-* **x2**: `float` - x-coordinate of the second point
-* **y1**: `float` - y-coordinate of the first point
-* **y2**: `float` - y-coordinate of the second point
-* **z1**: `float` - z-coordinate of the first point
-* **z2**: `float` - z-coordinate of the second point
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    line(
+        x1: float,  # x-coordinate of the first point
+        y1: float,  # y-coordinate of the first point
+        z1: float,  # z-coordinate of the first point
+        x2: float,  # x-coordinate of the second point
+        y2: float,  # y-coordinate of the second point
+        z2: float,  # z-coordinate of the second point
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

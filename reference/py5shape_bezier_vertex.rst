@@ -79,27 +79,32 @@ Drawing 2D bezier curves requires using the ``P2D`` renderer and drawing 3D bezi
 
 Underlying Processing method: PShape.bezierVertex
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    bezier_vertex(x2: float, y2: float, x3: float, y3: float, x4: float, y4: float, /) -> None
-    bezier_vertex(x2: float, y2: float, z2: float, x3: float, y3: float, z3: float, x4: float, y4: float, z4: float, /) -> None
+    bezier_vertex(
+        x2: float,  # the x-coordinate of the 1st control point
+        y2: float,  # the y-coordinate of the 1st control point
+        x3: float,  # the x-coordinate of the 2nd control point
+        y3: float,  # the y-coordinate of the 2nd control point
+        x4: float,  # the x-coordinate of the anchor point
+        y4: float,  # the y-coordinate of the anchor point
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **x2**: `float` - the x-coordinate of the 1st control point
-* **x3**: `float` - the x-coordinate of the 2nd control point
-* **x4**: `float` - the x-coordinate of the anchor point
-* **y2**: `float` - the y-coordinate of the 1st control point
-* **y3**: `float` - the y-coordinate of the 2nd control point
-* **y4**: `float` - the y-coordinate of the anchor point
-* **z2**: `float` - the z-coordinate of the 1st control point
-* **z3**: `float` - the z-coordinate of the 2nd control point
-* **z4**: `float` - the z-coordinate of the anchor point
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    bezier_vertex(
+        x2: float,  # the x-coordinate of the 1st control point
+        y2: float,  # the y-coordinate of the 1st control point
+        z2: float,  # the z-coordinate of the 1st control point
+        x3: float,  # the x-coordinate of the 2nd control point
+        y3: float,  # the y-coordinate of the 2nd control point
+        z3: float,  # the z-coordinate of the 2nd control point
+        x4: float,  # the x-coordinate of the anchor point
+        y4: float,  # the y-coordinate of the anchor point
+        z4: float,  # the z-coordinate of the anchor point
+        /,
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

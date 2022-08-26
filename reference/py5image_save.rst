@@ -44,22 +44,18 @@ Use the ``drop_alpha`` parameter to drop the alpha channel from the image. This 
 
 The ``use_thread`` parameter will save the image in a separate Python thread. This improves performance by returning before the image has actually been written to the file.
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
-    save(filename: Union[str, Path, BytesIO], *, format: str = None, drop_alpha: bool = True, use_thread: bool = False, **params) -> None
-
-Parameters
-----------
-
-* **drop_alpha**: `bool = True` - remove the alpha channel when saving the image
-* **filename**: `Union[str, Path, BytesIO]` - output filename
-* **format**: `str = None` - image format, if not determined from filename extension
-* **params**: - keyword arguments to pass to the PIL.Image save method
-* **use_thread**: `bool = False` - write file in separate thread
-
-
-Updated on October 29, 2021 22:01:43pm UTC
+    save(
+        filename: Union[str, Path, BytesIO],  # output filename
+        *,
+        format: str = None,  # image format, if not determined from filename extension
+        drop_alpha: bool = True,  # remove the alpha channel when saving the image
+        use_thread: bool = False,  # write file in separate thread
+        **params
+    ) -> None
+Updated on August 25, 2022 20:01:47pm UTC
 

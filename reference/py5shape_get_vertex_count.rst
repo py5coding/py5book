@@ -57,12 +57,11 @@ The ``get_vertex_count()`` method returns the number of vertices that make up a 
 
 Underlying Processing method: `PShape.getVertexCount <https://processing.org/reference/PShape_getVertexCount_.html>`_
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     get_vertex_count() -> int
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

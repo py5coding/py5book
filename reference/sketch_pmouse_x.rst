@@ -47,6 +47,5 @@ If you want values relative to the previous frame, use ``pmouse_x`` and :doc:`sk
 
 Underlying Processing field: `pmouseX <https://processing.org/reference/pmouseX.html>`_
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

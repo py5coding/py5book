@@ -60,19 +60,16 @@ This method is the same as :doc:`sketch_begin_closed_shape` but linked to a ``Py
 
 Underlying Processing method: PGraphics.beginShape
 
-Syntax
+Signatures
 ------
 
 .. code:: python
 
     begin_closed_shape() -> None
-    begin_closed_shape(kind: int, /) -> None
 
-Parameters
-----------
-
-* **kind**: `int` - Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
-
-
-Updated on November 12, 2021 11:30:58am UTC
+    begin_closed_shape(
+        kind: int,  # Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
+        /,
+    ) -> None
+Updated on August 25, 2022 19:59:03pm UTC
 
