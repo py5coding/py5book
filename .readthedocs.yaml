@@ -18,7 +18,5 @@ build:
       - "python -m py5jupyter.kernels.py5bot.install --sys-prefix"
     pre_build:
       - /usr/bin/Xvfb :0 -screen 0 1024x768x24 &
-      - export DISPLAY=":0"
-      - echo $DISPLAY
 conda:
   environment: rtd_environment.yml
