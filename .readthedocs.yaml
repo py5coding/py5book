@@ -20,4 +20,4 @@ build:
       - /usr/bin/Xvfb :0 -screen 0 1024x768x24 &
       - export DISPLAY=":0"
 conda:
-  environment: binder/environment.yml
+  environment: readthedocs_environment.yml
