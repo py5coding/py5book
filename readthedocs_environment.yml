@@ -10,6 +10,8 @@ dependencies:
   - matplotlib
   - pandas
   - pip
+  - sphinx
   - pip:
     - py5[jupyter]
     - sphinx-togglebutton
+    - sphinx_copybutton
