@@ -5,14 +5,14 @@ dependencies:
   - cairo
   - cairosvg
   - jedi=0.17.2
+  - jupyter-book
   - jupyterlab
   - line_profiler
   - matplotlib
   - pandas
+  - pillow
   - pip
   - sphinx
+  - yarn
   - pip:
     - py5[jupyter]
-    - sphinx-togglebutton
-    - sphinx_copybutton
-    - myst_nb
