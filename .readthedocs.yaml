@@ -19,5 +19,6 @@ build:
     pre_build:
       - /usr/bin/Xvfb :0 -screen 0 1024x768x24 &
       - export DISPLAY=":0"
+      - echo $DISPLAY
 conda:
-  environment: readthedocs_environment.yml
+  environment: rtd_environment.yml
