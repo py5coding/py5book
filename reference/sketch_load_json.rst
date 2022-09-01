@@ -49,7 +49,7 @@ Examples
 
 
     def load_data():
-        return py5.load_json('http://py5.ixora.io/files/secret_message.json')
+        return py5.load_json('http://ixora.io/downloads/secret_message.json')
 
 
     def draw():
