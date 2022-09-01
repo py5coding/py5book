@@ -46,13 +46,6 @@ GROUP_CASE_PAIRS = [
 # MODIFY REFERENCE GITHUB LINKS
 ###############################################################################
 
-print('cwd')
-print(Path('.').absolute())
-print('ls')
-print(list(Path('.').glob('*')))
-print('build dir')
-print(list(BUILD_DIR.glob('*')))
-
 for doc in BUILD_DIR.glob("**/*.html"):
     print(f'examining {str(doc)}')
     with open(doc, "r") as f:
@@ -76,17 +69,8 @@ for doc in BUILD_DIR.glob("**/*.html"):
     # fix new issue link to point to py5generator repo
     html = html.replace('https://github.com/py5coding/py5book/issues/new?', 'https://github.com/py5coding/py5generator/issues/new?')
 
-    if html.find('py5generator') >= 0:
-        print('found py5generator in html')
-
     with open(doc, "w") as f:
         f.write(html)
-
-    with open(doc, "r") as f:
-        html = f.read()
-    if html.find('py5generator') >= 0:
-        print('py5generator correctly written to html')
-
 
 ###############################################################################
 # COPY EXTRA FILES
