@@ -50,7 +50,7 @@ Sets the emissive color of the material used for drawing shapes drawn to the scr
 Underlying Processing method: `emissive <https://processing.org/reference/emissive_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -70,5 +70,5 @@ Signatures
         v3: float,  # blue or brightness value (depending on current color mode)
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

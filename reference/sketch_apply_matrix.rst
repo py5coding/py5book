@@ -58,7 +58,7 @@ Multiplies the current matrix by the one specified through the parameters. This 
 Underlying Processing method: `applyMatrix <https://processing.org/reference/applyMatrix_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -96,5 +96,5 @@ Signatures
         source: npt.NDArray[np.floating],  # transformation matrix with a shape of 2x3 for 2D transforms or 4x4 for 3D transforms
         /,
     ) -> None
-Updated on August 26, 2022 19:48:56pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

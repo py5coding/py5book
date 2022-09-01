@@ -138,7 +138,7 @@ When using the ``PDF`` and ``SVG`` renderers with the ``size()`` method, you mus
 Underlying Processing method: `size <https://processing.org/reference/size_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -162,5 +162,5 @@ Signatures
         path: str,  # filename to save rendering engine output to
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

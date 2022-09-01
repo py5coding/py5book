@@ -106,7 +106,7 @@ Sets the style of the joints which connect line segments. These joints are eithe
 Underlying Processing method: `strokeJoin <https://processing.org/reference/strokeJoin_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -114,5 +114,5 @@ Signatures
         join: int,  # either MITER, BEVEL, ROUND
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

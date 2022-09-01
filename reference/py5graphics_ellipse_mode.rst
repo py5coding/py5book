@@ -23,7 +23,7 @@ This method is the same as :doc:`sketch_ellipse_mode` but linked to a ``Py5Graph
 Underlying Processing method: PGraphics.ellipseMode
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -31,5 +31,5 @@ Signatures
         mode: int,  # either CENTER, RADIUS, CORNER, or CORNERS
         /,
     ) -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

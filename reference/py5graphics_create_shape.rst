@@ -19,7 +19,7 @@ This method is the same as :doc:`sketch_create_shape` but linked to a ``Py5Graph
 Underlying Processing method: PGraphics.createShape
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -35,5 +35,5 @@ Signatures
         type: int,  # either GROUP, PATH, or GEOMETRY
         /,
     ) -> Py5Shape
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

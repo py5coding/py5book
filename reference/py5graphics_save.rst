@@ -15,7 +15,7 @@ The ``use_thread`` parameter will save the image in a separate Python thread. Th
 This method is the same as :doc:`sketch_save` but linked to a ``Py5Graphics`` object. To see example code for how it can be used, see :doc:`sketch_save`.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -27,5 +27,5 @@ Signatures
         use_thread: bool = False,  # write file in separate thread
         **params
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -90,7 +90,7 @@ It is not possible to use the transparency ``alpha`` parameter with background c
 Underlying Processing method: `background <https://processing.org/reference/background_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -135,5 +135,5 @@ Signatures
         alpha: float,  # opacity of the background
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -15,7 +15,7 @@ This method is the same as :doc:`sketch_copy` but linked to a ``Py5Graphics`` ob
 Underlying Processing method: PGraphics.copy
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -45,5 +45,5 @@ Signatures
         dh: int,  # destination image height
         /,
     ) -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

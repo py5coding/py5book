@@ -52,10 +52,10 @@ Boolean value reflecting if smoothing (anti-aliasing) was used when the font was
 Underlying Processing method: PFont.isSmooth
 
 Signatures
-------
+----------
 
 .. code:: python
 
     is_smooth() -> bool
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

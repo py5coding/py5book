@@ -52,7 +52,7 @@ Sets the uniform variables inside the shader to modify the effect while the prog
 Underlying Processing method: `PShader.set <https://processing.org/reference/PShader_set_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -209,5 +209,5 @@ Signatures
         w: int,  # fourth component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[4], vec4)
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -43,12 +43,12 @@ Converts a radian measurement to its corresponding value in degrees. Radians and
 This function makes a call to the numpy ``degrees()`` function.
 
 Signatures
-------
+----------
 
 .. code:: python
 
     degrees(
         radians: Union[float, npt.ArrayLike]  # radian value to convert to degrees
     ) -> Union[float, npt.NDArray]
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

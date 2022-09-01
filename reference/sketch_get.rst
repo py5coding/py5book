@@ -78,7 +78,7 @@ Getting the color of a single pixel with ``get(x, y)`` is easy, but not as fast 
 Underlying Processing method: `get <https://processing.org/reference/get_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -97,5 +97,5 @@ Signatures
         h: int,  # height of pixel rectangle to get
         /,
     ) -> Py5Image
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -146,7 +146,7 @@ Py5's ``os_noise()`` method can also accept numpy arrays as parameters. It will 
 Noise generation is a rich and complex topic, and there are many noise algorithms and libraries available that are worth learning about. Early versions of py5 used the Python "noise" library, which can generate noise using the "Improved Perlin Noise" algorithm (as described in Ken Perlin's 2002 SIGGRAPH paper) and the Simplex Noise algorithm (also developed by Ken Perlin). That Python library was removed from py5 because it has some bugs and hasn't had a release in years. Nevertheless, it might be useful to you, and can be installed separately like any other Python package. You can also try the Python library "vnoise", which is a pure Python implementation of the Improved Perlin Noise algorithm. Note that py5 can also employ Java libraries, so consider "FastNoise Lite" to experiment with a large selection of noise algorithms with efficient implementations.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -170,5 +170,5 @@ Signatures
         w: Union[float, npt.NDArray],  # w-coordinate in noise space
         /,
     ) -> Union[float, npt.NDArray]
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

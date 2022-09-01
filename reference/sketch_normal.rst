@@ -53,7 +53,7 @@ Sets the current normal vector. Used for drawing three dimensional shapes and su
 Underlying Processing method: `normal <https://processing.org/reference/normal_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -63,5 +63,5 @@ Signatures
         nz: float,  # z direction
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

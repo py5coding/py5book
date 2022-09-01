@@ -86,7 +86,7 @@ The parameter must be written in ALL CAPS because Python is a case-sensitive lan
 Underlying Processing method: `ellipseMode <https://processing.org/reference/ellipseMode_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -94,5 +94,5 @@ Signatures
         mode: int,  # either CENTER, RADIUS, CORNER, or CORNERS
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

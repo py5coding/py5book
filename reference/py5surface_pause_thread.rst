@@ -55,10 +55,10 @@ Pausing a Sketch is not the same as stopping a Sketch, so this method will not c
 Underlying Processing method: PSurface.pauseThread
 
 Signatures
-------
+----------
 
 .. code:: python
 
     pause_thread() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

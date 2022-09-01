@@ -54,10 +54,10 @@ Returns ascent of the current font at its current size. This information is usef
 Underlying Processing method: `textAscent <https://processing.org/reference/textAscent_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     text_ascent() -> float
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

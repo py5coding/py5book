@@ -50,7 +50,7 @@ The ``set_fill()`` method defines the fill color of a ``Py5Shape``. This method 
 Underlying Processing method: `PShape.setFill <https://processing.org/reference/PShape_setFill_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -69,5 +69,5 @@ Signatures
         fill: int,  # any color value
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -158,7 +158,7 @@ When ``full_screen()`` is used without a parameter on a computer with multiple m
 Underlying Processing method: `fullScreen <https://processing.org/reference/fullScreen_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -179,5 +179,5 @@ Signatures
         display: int,  # the screen to run the Sketch on (1, 2, 3, etc. or on multiple screens using SPAN)
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -43,7 +43,7 @@ Draws a circle to the screen. By default, the first two parameters set the locat
 Underlying Processing method: `circle <https://processing.org/reference/circle_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -53,5 +53,5 @@ Signatures
         extent: float,  # width and height of the ellipse by default
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

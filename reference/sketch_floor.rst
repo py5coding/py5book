@@ -41,12 +41,12 @@ Calculates the closest int value that is less than or equal to the value of the 
 This function makes a call to the numpy ``floor()`` function.
 
 Signatures
-------
+----------
 
 .. code:: python
 
     floor(
         value: Union[float, npt.ArrayLike]  # number to round down
     ) -> Union[int, npt.NDArray]
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -83,7 +83,7 @@ Using ``hint(ENABLE_DEPTH_SORT)`` can improve the appearance of 3D geometry draw
 Underlying Processing method: `beginRaw <https://processing.org/reference/beginRaw_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -97,5 +97,5 @@ Signatures
         filename: str,  # filename for output
         /,
     ) -> Py5Graphics
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

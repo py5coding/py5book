@@ -13,7 +13,7 @@ This method is the same as :doc:`sketch_text_leading` but linked to a ``Py5Graph
 Underlying Processing method: PGraphics.textLeading
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -21,5 +21,5 @@ Signatures
         leading: float,  # the size in pixels for spacing between lines
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

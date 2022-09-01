@@ -15,7 +15,7 @@ This method is the same as :doc:`sketch_background` but linked to a ``Py5Graphic
 Underlying Processing method: PGraphics.background
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -60,5 +60,5 @@ Signatures
         alpha: float,  # opacity of the background
         /,
     ) -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -59,7 +59,7 @@ This method differs from :doc:`py5shape_stroke_join` in that it is only to be us
 Underlying Processing method: PShape.setStrokeJoin
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -67,5 +67,5 @@ Signatures
         join: int,  # either MITER, BEVEL, ROUND
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

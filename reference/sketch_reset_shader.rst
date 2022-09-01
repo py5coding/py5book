@@ -51,7 +51,7 @@ Restores the default shaders. Code that runs after ``reset_shader()`` will not b
 Underlying Processing method: `resetShader <https://processing.org/reference/resetShader_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -61,5 +61,5 @@ Signatures
         kind: int,  # type of shader, either POINTS, LINES, or TRIANGLES
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

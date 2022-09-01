@@ -49,10 +49,10 @@ Get the font's postscript name.
 Underlying Processing method: PFont.getPostScriptName
 
 Signatures
-------
+----------
 
 .. code:: python
 
     get_post_script_name() -> str
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

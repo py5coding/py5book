@@ -86,7 +86,7 @@ With ``IMAGE``, if an image is 100 x 200 pixels, mapping the image onto the enti
 Underlying Processing method: `textureMode <https://processing.org/reference/textureMode_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -94,5 +94,5 @@ Signatures
         mode: int,  # either IMAGE or NORMAL
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

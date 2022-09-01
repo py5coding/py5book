@@ -54,10 +54,10 @@ The default visibility of a shape is usually controlled by whatever program crea
 Underlying Processing method: `PShape.isVisible <https://processing.org/reference/PShape_isVisible_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     is_visible() -> bool
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

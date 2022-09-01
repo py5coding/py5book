@@ -79,7 +79,7 @@ Using ``point()`` with ``strokeWeight(1)`` or smaller may draw nothing to the sc
 Underlying Processing method: `point <https://processing.org/reference/point_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -95,5 +95,5 @@ Signatures
         z: float,  # z-coordinate of the point
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

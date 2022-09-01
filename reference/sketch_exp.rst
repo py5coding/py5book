@@ -41,12 +41,12 @@ Returns Euler's number e (2.71828...) raised to the power of the ``n`` parameter
 This function makes a call to the numpy ``exp()`` function.
 
 Signatures
-------
+----------
 
 .. code:: python
 
     exp(
         value: Union[float, npt.ArrayLike]  # exponent to raise
     ) -> Union[float, npt.NDArray]
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

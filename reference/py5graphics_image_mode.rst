@@ -21,7 +21,7 @@ This method is the same as :doc:`sketch_image_mode` but linked to a ``Py5Graphic
 Underlying Processing method: PGraphics.imageMode
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -29,5 +29,5 @@ Signatures
         mode: int,  # either CORNER, CORNERS, or CENTER
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -48,10 +48,10 @@ This method behaves differently than :doc:`py5graphics_clear` because ``Py5Graph
 Underlying Processing method: `clear <https://processing.org/reference/clear_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     clear() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

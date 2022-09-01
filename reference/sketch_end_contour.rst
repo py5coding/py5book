@@ -60,10 +60,10 @@ These methods can only be used within a :doc:`sketch_begin_shape` & :doc:`sketch
 Underlying Processing method: `endContour <https://processing.org/reference/endContour_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     end_contour() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

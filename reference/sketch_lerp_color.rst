@@ -58,7 +58,7 @@ An amount below 0 will be treated as 0. Likewise, amounts above 1 will be capped
 Underlying Processing method: `lerpColor <https://processing.org/reference/lerpColor_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -76,5 +76,5 @@ Signatures
         mode: int,  # either RGB or HSB
         /,
     ) -> int
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

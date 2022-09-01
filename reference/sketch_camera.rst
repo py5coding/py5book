@@ -50,7 +50,7 @@ Sets the position of the camera through setting the eye position, the center of 
 Underlying Processing method: `camera <https://processing.org/reference/camera_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -68,5 +68,5 @@ Signatures
         up_z: float,  # usually 0.0, 1.0, or -1.0
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

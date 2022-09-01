@@ -48,7 +48,7 @@ Draws shapes to the display window. Shapes must be in the Sketch's "data" direct
 Underlying Processing method: `shape <https://processing.org/reference/shape_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -72,5 +72,5 @@ Signatures
         y: float,  # y-coordinate of the shape
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -17,7 +17,7 @@ This method is the same as :doc:`sketch_rect` but linked to a ``Py5Graphics`` ob
 Underlying Processing method: PGraphics.rect
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -49,5 +49,5 @@ Signatures
         bl: float,  # radius for bottom-left corner
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

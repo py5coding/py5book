@@ -56,12 +56,12 @@ Stop all running threads. The ``wait`` parameter determines if the method call w
 When the Sketch shuts down, ``stop_all_threads(wait=False)`` is called for you. If you would rather the Sketch waited for threads to exit, create an ``exiting`` method and make a call to ``stop_all_threads(wait=True)``.
 
 Signatures
-------
+----------
 
 .. code:: python
 
     stop_all_threads(
         wait: bool = False,  # wait for thread to exit before returning
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -24,7 +24,7 @@ This method is the same as :doc:`sketch_apply_filter` but linked to a ``Py5Graph
 Underlying Processing method: PGraphics.filter
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -43,5 +43,5 @@ Signatures
         shader: Py5Shader,  # the fragment shader to apply
         /,
     ) -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

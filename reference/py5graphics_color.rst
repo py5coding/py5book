@@ -17,7 +17,7 @@ This method is the same as :doc:`sketch_color` but linked to a ``Py5Graphics`` o
 Underlying Processing method: PGraphics.color
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -78,5 +78,5 @@ Signatures
         a: int,  # alpha value relative to current color range
         /,
     ) -> int
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

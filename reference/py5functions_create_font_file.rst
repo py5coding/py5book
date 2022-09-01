@@ -63,7 +63,7 @@ This utility function opens a window that displays a short message about the num
 Get a list of font names available on your computer with Py5Font's :doc:`py5font_list` method. If you request an unavailable font, it will create the data file anyway but using a default font.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -74,5 +74,5 @@ Signatures
         characters: str = None,  # limit glyphs to characters found in string
         pause: bool = True,  # pause after creating font file
     ) -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

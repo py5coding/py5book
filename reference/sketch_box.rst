@@ -72,7 +72,7 @@ A box is an extruded rectangle. A box with equal dimensions on all sides is a cu
 Underlying Processing method: `box <https://processing.org/reference/box_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -87,5 +87,5 @@ Signatures
         d: float,  # dimension of the box in the z-dimension
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

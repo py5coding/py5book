@@ -65,7 +65,7 @@ When calling this method, it is better to do so with values like ``window_ratio(
 Underlying Processing method: windowRatio
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -74,5 +74,5 @@ Signatures
         high: int,  # height of scale invariant display window
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

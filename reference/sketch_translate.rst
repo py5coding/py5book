@@ -98,7 +98,7 @@ Transformations are cumulative and apply to everything that happens after and su
 Underlying Processing method: `translate <https://processing.org/reference/translate_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -114,5 +114,5 @@ Signatures
         z: float,  # forward/backward translation
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

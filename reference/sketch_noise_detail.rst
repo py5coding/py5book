@@ -92,7 +92,7 @@ By changing these parameters, the signal created by the :doc:`sketch_noise` func
 Underlying Processing method: `noiseDetail <https://processing.org/reference/noiseDetail_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -106,5 +106,5 @@ Signatures
         falloff: float,  # falloff factor for each octave
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

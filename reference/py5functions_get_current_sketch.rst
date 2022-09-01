@@ -44,10 +44,10 @@ Get the py5 module's current ``Sketch`` instance.
 When coding py5 in module mode, a Sketch instance is created on your behalf that is referenced within the py5 module itself. That Sketch is called the "current sketch." Use this method to access that Sketch instance directly.
 
 Signatures
-------
+----------
 
 .. code:: python
 
     get_current_sketch() -> Sketch
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

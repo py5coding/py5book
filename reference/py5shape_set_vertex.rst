@@ -58,7 +58,7 @@ The ``set_vertex()`` method defines the coordinates of the vertex point located 
 Underlying Processing method: `PShape.setVertex <https://processing.org/reference/PShape_setVertex_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -82,5 +82,5 @@ Signatures
         z: float,  # the z value for the vertex
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

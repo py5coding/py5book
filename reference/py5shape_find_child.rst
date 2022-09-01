@@ -53,7 +53,7 @@ Find a target ``Py5Shape`` object from anywhere within a ``Py5Shape`` object tha
 Underlying Processing method: PShape.findChild
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -61,5 +61,5 @@ Signatures
         target: str,  # name of child object
         /,
     ) -> Py5Shape
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

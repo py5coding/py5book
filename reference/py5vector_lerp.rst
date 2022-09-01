@@ -58,7 +58,7 @@ Calculates a vector between two vectors at a specific increment. The two vectors
 This method is similar to :doc:`sketch_lerp` and :doc:`sketch_lerp_color`, but for vectors instead of numbers or colors.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -66,5 +66,5 @@ Signatures
         other: Union[Py5Vector, np.ndarray],  # other vector to interpolate between
         amt: Union[float, np.ndarray],  # float between 0.0 and 1.0
     ) -> Union[Py5Vector, np.ndarray[np.floating]]
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

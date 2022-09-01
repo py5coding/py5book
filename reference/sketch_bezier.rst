@@ -74,7 +74,7 @@ Draws a Bezier curve on the screen. These curves are defined by a series of anch
 Underlying Processing method: `bezier <https://processing.org/reference/bezier_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -105,5 +105,5 @@ Signatures
         z4: float,  # coordinates for the second anchor point
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

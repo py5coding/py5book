@@ -49,7 +49,7 @@ The ``text_mode(SHAPE)`` option in ``P3D`` can be combined with :doc:`sketch_beg
 Underlying Processing method: `textMode <https://processing.org/reference/textMode_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -57,5 +57,5 @@ Signatures
         mode: int,  # either MODEL or SHAPE
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

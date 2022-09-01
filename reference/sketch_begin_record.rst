@@ -81,7 +81,7 @@ This method can be used as a context manager to ensure that :doc:`sketch_end_rec
 Underlying Processing method: `beginRecord <https://processing.org/reference/beginRecord_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -95,5 +95,5 @@ Signatures
         filename: str,  # filename for output
         /,
     ) -> Py5Graphics
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

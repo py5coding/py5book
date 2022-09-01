@@ -65,12 +65,12 @@ Description
 Sets the seed value for py5's random functions. This includes :doc:`sketch_random`, :doc:`sketch_random_int`, :doc:`sketch_random_choice`, and :doc:`sketch_random_gaussian`. By default, all of these functions would produce different results each time a program is run. Set the seed parameter to a constant value to return the same pseudo-random numbers each time the software is run.
 
 Signatures
-------
+----------
 
 .. code:: python
 
     random_seed(
         seed: int,  # seed value
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -79,7 +79,7 @@ If only one parameter is passed to the function, that parameter will be used as 
 This function makes calls to numpy to generate the random values.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -95,5 +95,5 @@ Signatures
         scale: float,  # standard deviation of randomly selected numbers
         /,
     ) -> float
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

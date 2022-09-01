@@ -13,7 +13,7 @@ This method is the same as :doc:`sketch_normal` but linked to a ``Py5Graphics`` 
 Underlying Processing method: PGraphics.normal
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -23,5 +23,5 @@ Signatures
         nz: float,  # z direction
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

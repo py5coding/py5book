@@ -52,7 +52,7 @@ The ``green()`` function is easy to use and understand, but it is slower than a 
 Underlying Processing method: `green <https://processing.org/reference/green_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -60,5 +60,5 @@ Signatures
         rgb: int,  # any value of the color datatype
         /,
     ) -> float
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

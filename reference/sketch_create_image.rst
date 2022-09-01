@@ -81,7 +81,7 @@ Advanced users please note that ``create_image()`` should be used instead of the
 Underlying Processing method: `createImage <https://processing.org/reference/createImage_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -91,5 +91,5 @@ Signatures
         format: int,  # Either RGB, ARGB, ALPHA (grayscale alpha channel)
         /,
     ) -> Py5Image
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

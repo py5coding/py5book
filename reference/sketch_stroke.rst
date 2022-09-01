@@ -74,7 +74,7 @@ When drawing in 2D with the default renderer, you may need ``hint(ENABLE_STROKE_
 Underlying Processing method: `stroke <https://processing.org/reference/stroke_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -114,5 +114,5 @@ Signatures
         alpha: float,  # opacity of the stroke
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

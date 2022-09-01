@@ -84,7 +84,7 @@ A 2D vector will be rotated in the counter-clockwise direction for positive ``an
 A 3D vector's rotation will follow the right-hand rule. Using your right hand, point your thumb in the direction of the axis to rotate around. Your fingers will curl in the direction of rotation when the ``angle`` parameter is positive.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -96,5 +96,5 @@ Signatures
         angle: float,  # angle of rotation, measured in radians
         dim: Union[int, str],  # dimension to rotate around
     ) -> Py5Vector3D
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

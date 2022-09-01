@@ -92,10 +92,10 @@ This method can be used as a context manager to ensure that :doc:`py5graphics_en
 Underlying Processing method: `PGraphics.beginDraw <https://processing.org/reference/PGraphics_beginDraw_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     begin_draw() -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -46,7 +46,7 @@ The ``use_thread`` parameter will save the image in a separate Python thread. Th
 This method is the same as :doc:`sketch_save` except it will replace a sequence of ``#`` symbols in the ``filename`` parameter with the frame number. This is useful when saving an image sequence for a running animation. The first frame number will be 1.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -58,5 +58,5 @@ Signatures
         use_thread: bool = False,  # write file in separate thread
         **params
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

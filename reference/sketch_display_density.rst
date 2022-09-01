@@ -47,7 +47,7 @@ This function returns the number "2" if the screen is a high-density screen (cal
 Underlying Processing method: `displayDensity <https://processing.org/reference/displayDensity_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -57,5 +57,5 @@ Signatures
         display: int,  # the display number to check (1-indexed to match the Preferences dialog box)
         /,
     ) -> int
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

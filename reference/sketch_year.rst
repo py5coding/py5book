@@ -46,10 +46,10 @@ Py5 communicates with the clock on your computer. The ``year()`` function return
 Underlying Processing method: `year <https://processing.org/reference/year_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     year() -> int
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

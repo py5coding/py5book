@@ -55,7 +55,7 @@ Updates the image with the data in its :doc:`py5image_pixels` array. Use in conj
 Underlying Processing method: `PImage.updatePixels <https://processing.org/reference/PImage_updatePixels_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -68,5 +68,5 @@ Signatures
         h: int,  # height
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

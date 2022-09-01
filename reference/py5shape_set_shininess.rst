@@ -58,7 +58,7 @@ This method can only be used for a complete ``Py5Shape`` object, and never withi
 Underlying Processing method: PShape.setShininess
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -72,5 +72,5 @@ Signatures
         shine: float,  # degree of shininess
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

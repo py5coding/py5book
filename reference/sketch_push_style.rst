@@ -87,10 +87,10 @@ This method can be used as a context manager to ensure that :doc:`sketch_pop_sty
 Underlying Processing method: `pushStyle <https://processing.org/reference/pushStyle_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     push_style() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

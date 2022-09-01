@@ -63,10 +63,10 @@ This method is the same as :doc:`sketch_begin_camera` but linked to a ``Py5Graph
 Underlying Processing method: PGraphics.beginCamera
 
 Signatures
-------
+----------
 
 .. code:: python
 
     begin_camera() -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

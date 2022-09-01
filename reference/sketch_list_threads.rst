@@ -54,10 +54,10 @@ Description
 List the names of all of the currently running threads. The names of previously launched threads that have exited will be removed from the list.
 
 Signatures
-------
+----------
 
 .. code:: python
 
     list_threads() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

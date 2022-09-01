@@ -64,7 +64,7 @@ Takes a three-dimensional X, Y, Z position and returns the Y value for where it 
 Underlying Processing method: `screenY <https://processing.org/reference/screenY_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -80,5 +80,5 @@ Signatures
         z: float,  # 3D z-coordinate to be mapped
         /,
     ) -> float
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

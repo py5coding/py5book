@@ -13,7 +13,7 @@ This method is the same as :doc:`sketch_bezier` but linked to a ``Py5Graphics`` 
 Underlying Processing method: PGraphics.bezier
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -44,5 +44,5 @@ Signatures
         z4: float,  # coordinates for the second anchor point
         /,
     ) -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -53,10 +53,10 @@ Enables the shape's style data and ignores py5's current styles. Styles include 
 Underlying Processing method: `PShape.enableStyle <https://processing.org/reference/PShape_enableStyle_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     enable_style() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

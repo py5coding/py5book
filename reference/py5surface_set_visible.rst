@@ -85,7 +85,7 @@ Set the Sketch window's visiblity. The animation will continue to run but the wi
 Underlying Processing method: PSurface.setVisible
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -93,5 +93,5 @@ Signatures
         visible: bool,  # desired surface visiblity
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

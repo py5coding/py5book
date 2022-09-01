@@ -13,7 +13,7 @@ This method is the same as :doc:`sketch_sphere_detail` but linked to a ``Py5Grap
 Underlying Processing method: PGraphics.sphereDetail
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -27,5 +27,5 @@ Signatures
         vres: int,  # number of segments used latitudinally from top to bottom
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

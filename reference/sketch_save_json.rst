@@ -48,7 +48,7 @@ Save JSON data to a file. If ``filename`` is not an absolute path, it will be sa
 The JSON data is saved using the Python json library with the ``dump`` method, and the ``kwargs`` parameter is passed along to that method.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -57,5 +57,5 @@ Signatures
         filename: Union[str, Path],  # filename to save JSON data object to
         **kwargs: dict[str, Any]
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

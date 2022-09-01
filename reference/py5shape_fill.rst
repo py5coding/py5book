@@ -61,7 +61,7 @@ To change the color of a ``Py5Shape`` object's image or a texture, use :doc:`py5
 Underlying Processing method: PShape.fill
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -101,5 +101,5 @@ Signatures
         a: float,  # opacity of the fill
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

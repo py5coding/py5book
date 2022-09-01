@@ -72,7 +72,7 @@ Specifies vertex coordinates for Bezier curves. Each call to ``bezier_vertex()``
 Underlying Processing method: `bezierVertex <https://processing.org/reference/bezierVertex_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -98,5 +98,5 @@ Signatures
         z4: float,  # the z-coordinate of the anchor point
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

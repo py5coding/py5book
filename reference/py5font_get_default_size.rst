@@ -49,10 +49,10 @@ Get the font's size that will be used when :doc:`sketch_text_font` is called. Wh
 Underlying Processing method: PFont.getDefaultSize
 
 Signatures
-------
+----------
 
 .. code:: python
 
     get_default_size() -> int
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

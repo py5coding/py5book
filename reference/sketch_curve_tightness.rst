@@ -56,7 +56,7 @@ Modifies the quality of forms created with :doc:`sketch_curve` and :doc:`sketch_
 Underlying Processing method: `curveTightness <https://processing.org/reference/curveTightness_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -64,5 +64,5 @@ Signatures
         tightness: float,  # amount of deformation from the original vertices
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

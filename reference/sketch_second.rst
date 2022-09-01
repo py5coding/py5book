@@ -46,10 +46,10 @@ Py5 communicates with the clock on your computer. The ``second()`` function retu
 Underlying Processing method: `second <https://processing.org/reference/second_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     second() -> int
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

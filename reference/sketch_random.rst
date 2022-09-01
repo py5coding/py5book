@@ -74,7 +74,7 @@ If two parameters are specified, the function will return a float with a value b
 This function makes calls to numpy to generate the random values.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -90,5 +90,5 @@ Signatures
         high: float,  # upper limit
         /,
     ) -> float
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

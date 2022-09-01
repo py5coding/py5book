@@ -15,7 +15,7 @@ This method is the same as :doc:`sketch_stroke_cap` but linked to a ``Py5Graphic
 Underlying Processing method: PGraphics.strokeCap
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -23,5 +23,5 @@ Signatures
         cap: int,  # either SQUARE, PROJECT, or ROUND
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

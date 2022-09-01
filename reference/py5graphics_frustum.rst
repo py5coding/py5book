@@ -21,7 +21,7 @@ This method is the same as :doc:`sketch_frustum` but linked to a ``Py5Graphics``
 Underlying Processing method: PGraphics.frustum
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -34,5 +34,5 @@ Signatures
         far: float,  # far component of the clipping plane; must be greater than the near value
         /,
     ) -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

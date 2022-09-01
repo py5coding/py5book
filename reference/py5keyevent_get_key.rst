@@ -51,10 +51,10 @@ Return the key for the key event. If the value is ``CODED``, use :doc:`py5keyeve
 Underlying Processing method: getKey
 
 Signatures
-------
+----------
 
 .. code:: python
 
     get_key() -> chr
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

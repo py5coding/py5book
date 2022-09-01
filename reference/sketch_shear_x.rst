@@ -47,7 +47,7 @@ Technically, ``shear_x()`` multiplies the current transformation matrix by a rot
 Underlying Processing method: `shearX <https://processing.org/reference/shearX_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -55,5 +55,5 @@ Signatures
         angle: float,  # angle of shear specified in radians
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

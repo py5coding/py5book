@@ -61,7 +61,7 @@ Defines if textures repeat or draw once within a texture map. The two parameters
 Underlying Processing method: `textureWrap <https://processing.org/reference/textureWrap_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -69,5 +69,5 @@ Signatures
         wrap: int,  # Either CLAMP (default) or REPEAT
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

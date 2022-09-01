@@ -96,7 +96,7 @@ Draws a line (a direct path between two points) to the screen. The version of ``
 Underlying Processing method: `line <https://processing.org/reference/line_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -117,5 +117,5 @@ Signatures
         z2: float,  # z-coordinate of the second point
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

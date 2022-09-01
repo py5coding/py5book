@@ -76,7 +76,7 @@ Specifies vertex coordinates for quadratic Bezier curves. Each call to ``quadrat
 Underlying Processing method: `quadraticVertex <https://processing.org/reference/quadraticVertex_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -97,5 +97,5 @@ Signatures
         y3: float,  # the y-coordinate of the anchor point
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

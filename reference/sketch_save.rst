@@ -44,7 +44,7 @@ Use the ``drop_alpha`` parameter to drop the alpha channel from the image. This 
 The ``use_thread`` parameter will save the image in a separate Python thread. This improves performance by returning before the image has actually been written to the file.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -56,5 +56,5 @@ Signatures
         use_thread: bool = False,  # write file in separate thread
         **params
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

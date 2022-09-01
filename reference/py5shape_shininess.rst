@@ -67,7 +67,7 @@ This method can only be used within a :doc:`py5shape_begin_shape` and :doc:`py5s
 Underlying Processing method: PShape.shininess
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -75,5 +75,5 @@ Signatures
         shine: float,  # degree of shininess
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

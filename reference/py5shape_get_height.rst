@@ -77,10 +77,10 @@ Get the ``Py5Shape`` object's height. When using the ``P2D`` or ``P3D`` renderer
 Underlying Processing method: PShape.getHeight
 
 Signatures
-------
+----------
 
 .. code:: python
 
     get_height() -> float
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

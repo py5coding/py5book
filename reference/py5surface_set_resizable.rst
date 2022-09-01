@@ -49,7 +49,7 @@ This method provides the same functionality as :doc:`sketch_window_resizable`.
 Underlying Processing method: PSurface.setResizable
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -57,5 +57,5 @@ Signatures
         resizable: bool,  # should the Sketch window be resizable
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

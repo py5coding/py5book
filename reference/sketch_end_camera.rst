@@ -53,10 +53,10 @@ The :doc:`sketch_begin_camera` and ``end_camera()`` methods enable advanced cust
 Underlying Processing method: `endCamera <https://processing.org/reference/endCamera_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     end_camera() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

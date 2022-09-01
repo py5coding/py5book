@@ -49,7 +49,7 @@ Technically, ``rotate()`` multiplies the current transformation matrix by a rota
 Underlying Processing method: `rotate <https://processing.org/reference/rotate_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -65,5 +65,5 @@ Signatures
         z: float,  # z-coordinate of vector to rotate around
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

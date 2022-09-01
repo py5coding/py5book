@@ -43,7 +43,7 @@ When running a Sketch asynchronously through Jupyter Notebook, any ``print`` sta
 Use :doc:`sketch_set_println_stream` to customize the behavior of ``println()``.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -53,5 +53,5 @@ Signatures
         end: str = "\n",  # string appended after the last value, defaults to newline character
         stderr: bool = False  # use stderr instead of stdout
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

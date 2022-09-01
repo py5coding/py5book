@@ -64,7 +64,7 @@ This method is the same as :doc:`sketch_smooth` but linked to a ``Py5Graphics`` 
 Underlying Processing method: PGraphics.smooth
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -74,5 +74,5 @@ Signatures
         quality: int,  # either 2, 3, 4, or 8 depending on the renderer
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

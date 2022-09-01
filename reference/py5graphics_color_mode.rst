@@ -15,7 +15,7 @@ This method is the same as :doc:`sketch_color_mode` but linked to a ``Py5Graphic
 Underlying Processing method: PGraphics.colorMode
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -46,5 +46,5 @@ Signatures
         max: float,  # range for all color elements
         /,
     ) -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

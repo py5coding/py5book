@@ -52,7 +52,7 @@ Limits the rendering to the boundaries of a rectangle defined by the parameters.
 Underlying Processing method: `clip <https://processing.org/reference/clip_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -63,5 +63,5 @@ Signatures
         d: float,  # height of the rectangle, by default
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

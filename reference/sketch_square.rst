@@ -43,7 +43,7 @@ Draws a square to the screen. A square is a four-sided shape with every angle at
 Underlying Processing method: `square <https://processing.org/reference/square_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -53,5 +53,5 @@ Signatures
         extent: float,  # width and height of the rectangle by default
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

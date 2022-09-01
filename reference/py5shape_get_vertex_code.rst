@@ -68,7 +68,7 @@ The vertex codes will not necessarily align with the vertices because number of 
 Underlying Processing method: PShape.getVertexCode
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -76,5 +76,5 @@ Signatures
         index: int,  # vertex code index
         /,
     ) -> int
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

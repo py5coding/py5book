@@ -55,7 +55,7 @@ The ``end_shape()`` function is the companion to :doc:`sketch_begin_shape` and m
 Underlying Processing method: `endShape <https://processing.org/reference/endShape_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -65,5 +65,5 @@ Signatures
         mode: int,  # use CLOSE to close the shape
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

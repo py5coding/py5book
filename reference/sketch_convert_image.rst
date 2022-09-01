@@ -54,7 +54,7 @@ The ``convert_image()`` method has builtin support for conversion of ``PIL.Image
 The caller can optionally pass an existing Py5Image object to put the converted image into using the ``dst`` parameter. This can have performance benefits in code that would otherwise continuously create new Py5Image objects. The converted image width and height must match that of the recycled Py5Image object.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -63,5 +63,5 @@ Signatures
         *,
         dst: Py5Image = None  # existing Py5Image object to put the converted image into
     ) -> Py5Image
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

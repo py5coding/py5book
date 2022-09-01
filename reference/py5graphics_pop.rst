@@ -17,10 +17,10 @@ This method is the same as :doc:`sketch_pop` but linked to a ``Py5Graphics`` obj
 Underlying Processing method: PGraphics.pop
 
 Signatures
-------
+----------
 
 .. code:: python
 
     pop() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -66,12 +66,12 @@ The inverse of :doc:`sketch_cos`, returns the arc cosine of a value. This functi
 This function makes a call to the numpy ``acos()`` function.
 
 Signatures
-------
+----------
 
 .. code:: python
 
     acos(
         value: Union[float, npt.ArrayLike]  # value in the range of -1 to 1 whose arc cosine is to be returned
     ) -> Union[float, npt.NDArray]
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -51,10 +51,10 @@ Loads the pixel data of the current display window into the :doc:`sketch_pixels`
 Underlying Processing method: `loadPixels <https://processing.org/reference/loadPixels_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     load_pixels() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

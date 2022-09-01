@@ -97,7 +97,7 @@ Calculates the tangent of a point on a Bezier curve. There is a good definition 
 Underlying Processing method: `bezierTangent <https://processing.org/reference/bezierTangent_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -109,5 +109,5 @@ Signatures
         t: float,  # value between 0 and 1
         /,
     ) -> float
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

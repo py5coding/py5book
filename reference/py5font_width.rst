@@ -57,7 +57,7 @@ This will return 0 if the character is not in the font's character set.
 Underlying Processing method: PFont.width
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -65,5 +65,5 @@ Signatures
         c: chr,  # single character
         /,
     ) -> float
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

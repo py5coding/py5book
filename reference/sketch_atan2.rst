@@ -44,7 +44,7 @@ Calculates the angle (in radians) from a specified point to the coordinate origi
 This function makes a call to the numpy ``atan2()`` function.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -52,5 +52,5 @@ Signatures
         y: Union[float, npt.ArrayLike],  # y-coordinate of the point
         x: Union[float, npt.ArrayLike],  # x-coordinate of the point
     ) -> Union[float, npt.NDArray]
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

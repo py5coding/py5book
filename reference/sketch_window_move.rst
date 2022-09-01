@@ -76,7 +76,7 @@ This method provides the same functionality as :doc:`py5surface_set_location` bu
 Underlying Processing method: windowMove
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -85,5 +85,5 @@ Signatures
         y: int,  # y-coordinate for window location
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

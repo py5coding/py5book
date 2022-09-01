@@ -51,7 +51,7 @@ Specifies vertex coordinates for curves. This method may only be used between :d
 Underlying Processing method: `curveVertex <https://processing.org/reference/curveVertex_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -67,5 +67,5 @@ Signatures
         z: float,  # the z-coordinate of the vertex
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -115,7 +115,7 @@ This method is also used to map a texture onto geometry. The :doc:`sketch_textur
 Underlying Processing method: `vertex <https://processing.org/reference/vertex_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -153,5 +153,5 @@ Signatures
         v: float,  # vertical coordinate for the texture mapping
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

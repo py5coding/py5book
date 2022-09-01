@@ -13,7 +13,7 @@ This method is the same as :doc:`sketch_bezier_point` but linked to a ``Py5Graph
 Underlying Processing method: PGraphics.bezierPoint
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -25,5 +25,5 @@ Signatures
         t: float,  # value between 0 and 1
         /,
     ) -> float
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

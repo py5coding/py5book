@@ -54,10 +54,10 @@ Get the ascent of this font from the baseline. The value is based on a font of s
 Underlying Processing method: PFont.ascent
 
 Signatures
-------
+----------
 
 .. code:: python
 
     ascent() -> float
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

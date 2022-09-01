@@ -86,10 +86,10 @@ The :doc:`sketch_push_style` function saves the current style settings and ``pop
 Underlying Processing method: `popStyle <https://processing.org/reference/popStyle_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     pop_style() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

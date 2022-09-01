@@ -244,7 +244,7 @@ Filters the image as defined by one of the following modes:
 Underlying Processing method: `PImage.filter <https://processing.org/reference/PImage_filter_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -258,5 +258,5 @@ Signatures
         param: float,  # unique for each filter, see description
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

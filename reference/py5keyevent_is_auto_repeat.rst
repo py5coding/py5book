@@ -52,10 +52,10 @@ Identifies if the pressed key is auto repeating, as faciliated by the computer's
 Underlying Processing method: isAutoRepeat
 
 Signatures
-------
+----------
 
 .. code:: python
 
     is_auto_repeat() -> bool
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

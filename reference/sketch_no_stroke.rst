@@ -44,10 +44,10 @@ Disables drawing the stroke (outline). If both ``no_stroke()`` and :doc:`sketch_
 Underlying Processing method: `noStroke <https://processing.org/reference/noStroke_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     no_stroke() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

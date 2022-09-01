@@ -104,7 +104,7 @@ The ``tint()`` function is also used to control the coloring of textures in 3D.
 Underlying Processing method: `tint <https://processing.org/reference/tint_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -144,5 +144,5 @@ Signatures
         alpha: float,  # opacity of the image
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

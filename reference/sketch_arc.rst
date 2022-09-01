@@ -114,7 +114,7 @@ In some cases, the ``arc()`` function isn't accurate enough for smooth drawing. 
 Underlying Processing method: `arc <https://processing.org/reference/arc_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -138,5 +138,5 @@ Signatures
         mode: int,  # arc drawing mode
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

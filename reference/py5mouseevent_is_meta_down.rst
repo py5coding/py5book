@@ -52,10 +52,10 @@ Return boolean value reflecting if the Meta key is down. The Meta key is a modif
 Underlying Processing method: isMetaDown
 
 Signatures
-------
+----------
 
 .. code:: python
 
     is_meta_down() -> bool
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

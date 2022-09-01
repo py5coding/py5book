@@ -43,7 +43,7 @@ Draws an ellipse (oval) to the screen. An ellipse with equal width and height is
 Underlying Processing method: `ellipse <https://processing.org/reference/ellipse_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -54,5 +54,5 @@ Signatures
         d: float,  # height of the ellipse by default
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

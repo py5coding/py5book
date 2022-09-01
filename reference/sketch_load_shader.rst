@@ -55,7 +55,7 @@ If the file is not available or an error occurs, ``None`` will be returned and a
 Underlying Processing method: `loadShader <https://processing.org/reference/loadShader_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -69,5 +69,5 @@ Signatures
         vert_filename: str,  # name of vertex shader file
         /,
     ) -> Py5Shader
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

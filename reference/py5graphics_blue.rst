@@ -15,7 +15,7 @@ This method is the same as :doc:`sketch_blue` but linked to a ``Py5Graphics`` ob
 Underlying Processing method: PGraphics.blue
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -23,5 +23,5 @@ Signatures
         rgb: int,  # any value of the color datatype
         /,
     ) -> float
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

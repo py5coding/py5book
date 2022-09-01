@@ -43,7 +43,7 @@ A triangle is a plane created by connecting three points. The first two argument
 Underlying Processing method: `triangle <https://processing.org/reference/triangle_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -56,5 +56,5 @@ Signatures
         y3: float,  # y-coordinate of the third point
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

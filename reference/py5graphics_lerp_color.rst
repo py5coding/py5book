@@ -15,7 +15,7 @@ This method is the same as :doc:`sketch_lerp_color` but linked to a ``Py5Graphic
 Underlying Processing method: PGraphics.lerpColor
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -33,5 +33,5 @@ Signatures
         mode: int,  # either RGB or HSB
         /,
     ) -> int
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

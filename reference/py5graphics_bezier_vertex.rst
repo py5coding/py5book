@@ -13,7 +13,7 @@ This method is the same as :doc:`sketch_bezier_vertex` but linked to a ``Py5Grap
 Underlying Processing method: PGraphics.bezierVertex
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -39,5 +39,5 @@ Signatures
         z4: float,  # the z-coordinate of the anchor point
         /,
     ) -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -13,7 +13,7 @@ This method is the same as :doc:`sketch_light_specular` but linked to a ``Py5Gra
 Underlying Processing method: PGraphics.lightSpecular
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -23,5 +23,5 @@ Signatures
         v3: float,  # blue or brightness value (depending on current color mode)
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

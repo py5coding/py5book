@@ -49,7 +49,7 @@ This method has some platform specific quirks. On OSX, this does not work when t
 Underlying Processing method: `selectOutput <https://processing.org/reference/selectOutput_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -58,5 +58,5 @@ Signatures
         callback: Callable,  # callback function after selection is made
         default_file: str = None,  # default output file
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -72,7 +72,7 @@ Hints for use with ``P3D`` only
 Underlying Processing method: `hint <https://processing.org/reference/hint_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -80,5 +80,5 @@ Signatures
         which: int,  # hint to use when rendering Sketch
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

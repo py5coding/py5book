@@ -51,7 +51,7 @@ Get a child ``Py5Shape`` object's index from a parent ``Py5Shape`` object that i
 Underlying Processing method: PShape.getChildIndex
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -59,5 +59,5 @@ Signatures
         who: Py5Shape,  # Py5Shape object
         /,
     ) -> int
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

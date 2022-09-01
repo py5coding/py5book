@@ -55,12 +55,12 @@ This method can be called before or after :doc:`sketch_run_sketch`. You are welc
 To profile just the draw function, you can also use :doc:`sketch_profile_draw`. To see the results, use :doc:`sketch_print_line_profiler_stats`.
 
 Signatures
-------
+----------
 
 .. code:: python
 
     profile_functions(
         function_names: list[str],  # names of py5 functions to be profiled
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

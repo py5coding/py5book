@@ -50,7 +50,7 @@ If you want to pick a random object from a list, recall that Python uses zero-in
 This function makes calls to numpy to generate the random integers.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -66,5 +66,5 @@ Signatures
         high: int,  # upper limit
         /,
     ) -> int
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

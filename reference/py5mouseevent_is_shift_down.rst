@@ -52,10 +52,10 @@ Return boolean value reflecting if the Shift key is down. The Shift key is a mod
 Underlying Processing method: isShiftDown
 
 Signatures
-------
+----------
 
 .. code:: python
 
     is_shift_down() -> bool
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

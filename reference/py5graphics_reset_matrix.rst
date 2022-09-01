@@ -13,10 +13,10 @@ This method is the same as :doc:`sketch_reset_matrix` but linked to a ``Py5Graph
 Underlying Processing method: PGraphics.resetMatrix
 
 Signatures
-------
+----------
 
 .. code:: python
 
     reset_matrix() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -85,10 +85,10 @@ Sets the default ambient light, directional light, falloff, and specular values.
 Underlying Processing method: `lights <https://processing.org/reference/lights_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     lights() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

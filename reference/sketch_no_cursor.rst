@@ -44,10 +44,10 @@ Hides the cursor from view. Will not work when running the program in full scree
 Underlying Processing method: `noCursor <https://processing.org/reference/noCursor_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     no_cursor() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 
