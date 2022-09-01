@@ -46,7 +46,7 @@ GROUP_CASE_PAIRS = [
 # MODIFY REFERENCE GITHUB LINKS
 ###############################################################################
 
-print(BUILD_DIR.glob('*'))
+print(list(BUILD_DIR.glob('*')))
 
 for doc in BUILD_DIR.glob("**/*.html"):
     print(f'examining {str(doc)}')
@@ -67,11 +67,12 @@ for doc in BUILD_DIR.glob("**/*.html"):
 
         new_link = f'https://github.com/py5coding/py5generator/edit/main/py5_docs/Reference/api_en/{stem}.txt'
         html = html.replace(original_link, new_link)
-    else:
-        print('github edit link not found')
 
     # fix new issue link to point to py5generator repo
     html = html.replace('https://github.com/py5coding/py5book/issues/new?', 'https://github.com/py5coding/py5generator/issues/new?')
+
+    if html.find('py5generator') >= 0:
+        print('found py5generator in html')
 
     with open(doc, "w") as f:
         f.write(html)
