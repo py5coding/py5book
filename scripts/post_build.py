@@ -46,6 +46,11 @@ GROUP_CASE_PAIRS = [
 # MODIFY REFERENCE GITHUB LINKS
 ###############################################################################
 
+print('cwd')
+print(Path('.').absolute())
+print('ls')
+print(list(Path('.').glob('*')))
+print('build dir')
 print(list(BUILD_DIR.glob('*')))
 
 for doc in BUILD_DIR.glob("**/*.html"):
@@ -76,6 +81,11 @@ for doc in BUILD_DIR.glob("**/*.html"):
 
     with open(doc, "w") as f:
         f.write(html)
+
+    with open(doc, "r") as f:
+        html = f.read()
+    if html.find('py5generator') >= 0:
+        print('py5generator correctly written to html')
 
 
 ###############################################################################
