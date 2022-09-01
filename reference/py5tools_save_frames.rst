@@ -64,5 +64,6 @@ Signatures
         hook_post_draw: bool = False,  # attach hook to Sketch's post_draw method instead of draw
         block: bool = False  # method returns immediately (False) or blocks until function returns (True)
     ) -> None
-Updated on September 01, 2022 12:53:02pm UTC
+
+Updated on September 01, 2022 14:08:27pm UTC
 

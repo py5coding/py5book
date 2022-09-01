@@ -26,5 +26,6 @@ Signatures
         mask_array: npt.NDArray[np.integer],  # 1D array of integers used as the alpha channel, needs to be the same length as the image's pixel array
         /,
     ) -> None
-Updated on September 01, 2022 12:53:02pm UTC
+
+Updated on September 01, 2022 14:08:27pm UTC
 

@@ -83,5 +83,6 @@ Signatures
     angle_between(
         other: Union[Py5Vector, np.ndarray]  # vector to measure angle between
     ) -> Union[float, np.ndarray[np.floating]]
-Updated on September 01, 2022 12:53:02pm UTC
+
+Updated on September 01, 2022 14:08:27pm UTC
 

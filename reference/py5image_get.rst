@@ -95,5 +95,6 @@ Signatures
         h: int,  # height of pixel rectangle to get
         /,
     ) -> Py5Image
-Updated on September 01, 2022 12:53:02pm UTC
+
+Updated on September 01, 2022 14:08:27pm UTC
 

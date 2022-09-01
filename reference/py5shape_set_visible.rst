@@ -62,5 +62,6 @@ Signatures
         visible: bool,  # ``False`` makes the shape invisible and ``True`` makes it visible
         /,
     ) -> None
-Updated on September 01, 2022 12:53:02pm UTC
+
+Updated on September 01, 2022 14:08:27pm UTC
 

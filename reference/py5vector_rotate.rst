@@ -96,5 +96,6 @@ Signatures
         angle: float,  # angle of rotation, measured in radians
         dim: Union[int, str],  # dimension to rotate around
     ) -> Py5Vector3D
-Updated on September 01, 2022 12:53:02pm UTC
+
+Updated on September 01, 2022 14:08:27pm UTC
 

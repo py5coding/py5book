@@ -74,5 +74,6 @@ Signatures
         characters: str = None,  # limit glyphs to characters found in string
         pause: bool = True,  # pause after creating font file
     ) -> None
-Updated on September 01, 2022 12:53:02pm UTC
+
+Updated on September 01, 2022 14:08:27pm UTC
 

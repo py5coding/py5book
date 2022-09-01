@@ -59,5 +59,6 @@ Signatures
         sketch: Sketch = None,  # running Sketch
         hook_post_draw: bool = False  # attach hook to Sketch's post_draw method instead of draw
     ) -> PIL.Image
-Updated on September 01, 2022 12:53:02pm UTC
+
+Updated on September 01, 2022 14:08:27pm UTC
 

@@ -74,5 +74,6 @@ Signatures
         quality: int,  # either 2, 3, 4, or 8 depending on the renderer
         /,
     ) -> None
-Updated on September 01, 2022 12:53:02pm UTC
+
+Updated on September 01, 2022 14:08:27pm UTC
 

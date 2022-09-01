@@ -61,5 +61,6 @@ Signatures
         name: str,  # name of thread
         wait: bool = False,  # wait for thread to exit before returning
     ) -> None
-Updated on September 01, 2022 12:53:02pm UTC
+
+Updated on September 01, 2022 14:08:27pm UTC
 

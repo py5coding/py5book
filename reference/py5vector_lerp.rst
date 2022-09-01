@@ -66,5 +66,6 @@ Signatures
         other: Union[Py5Vector, np.ndarray],  # other vector to interpolate between
         amt: Union[float, np.ndarray],  # float between 0.0 and 1.0
     ) -> Union[Py5Vector, np.ndarray[np.floating]]
-Updated on September 01, 2022 12:53:02pm UTC
+
+Updated on September 01, 2022 14:08:27pm UTC
 
