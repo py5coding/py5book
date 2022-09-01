@@ -70,11 +70,3 @@ for doc in BUILD_DIR.glob("**/*.html"):
 
     with open(doc, "w") as f:
         f.write(html)
-
-###############################################################################
-# COPY EXTRA FILES
-###############################################################################
-
-if (BUILD_DIR / "files").exists():
-    shutil.rmtree(BUILD_DIR / "files")
-shutil.copytree("files", BUILD_DIR / "files")
