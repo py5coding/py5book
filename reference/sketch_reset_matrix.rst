@@ -57,10 +57,10 @@ Replaces the current matrix with the identity matrix. The equivalent function in
 Underlying Processing method: `resetMatrix <https://processing.org/reference/resetMatrix_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     reset_matrix() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

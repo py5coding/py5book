@@ -59,7 +59,7 @@ Unlike the main drawing surface which is completely opaque, surfaces created wit
 Underlying Processing method: `createGraphics <https://processing.org/reference/createGraphics_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -83,5 +83,5 @@ Signatures
         path: str,  # the name of the file (can be an absolute or relative path)
         /,
     ) -> Py5Graphics
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

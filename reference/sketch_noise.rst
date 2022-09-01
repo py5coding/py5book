@@ -152,7 +152,7 @@ Noise generation is a rich and complex topic, and there are many noise algorithm
 Underlying Processing method: `noise <https://processing.org/reference/noise_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -173,5 +173,5 @@ Signatures
         z: Union[float, npt.NDArray],  # z-coordinate in noise space
         /,
     ) -> Union[float, npt.NDArray]
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

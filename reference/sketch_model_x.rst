@@ -76,7 +76,7 @@ In the example, the ``model_x()``, :doc:`sketch_model_y`, and :doc:`sketch_model
 Underlying Processing method: `modelX <https://processing.org/reference/modelX_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -86,5 +86,5 @@ Signatures
         z: float,  # 3D z-coordinate to be mapped
         /,
     ) -> float
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

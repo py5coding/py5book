@@ -45,10 +45,10 @@ This method may be useful to you if you research the Java libraries Processing u
 Underlying Processing method: PSurface.getNative
 
 Signatures
-------
+----------
 
 .. code:: python
 
     get_native() -> Any
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

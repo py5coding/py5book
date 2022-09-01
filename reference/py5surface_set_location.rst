@@ -77,7 +77,7 @@ This method provides the same functionality as :doc:`sketch_window_move`.
 Underlying Processing method: PSurface.setLocation
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -86,5 +86,5 @@ Signatures
         y: int,  # y-coordinate for window location
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

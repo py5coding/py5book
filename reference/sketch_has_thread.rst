@@ -54,12 +54,12 @@ Description
 Determine if a thread of a given name exists and is currently running. You can get the list of all currently running threads with :doc:`sketch_list_threads`.
 
 Signatures
-------
+----------
 
 .. code:: python
 
     has_thread(
         name: str,  # name of thread
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -58,10 +58,10 @@ This method can be called before or after :doc:`sketch_run_sketch`. You are welc
 To profile a other functions besides draw, use :doc:`sketch_profile_functions`. To see the results, use :doc:`sketch_print_line_profiler_stats`.
 
 Signatures
-------
+----------
 
 .. code:: python
 
     profile_draw() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

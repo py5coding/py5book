@@ -56,10 +56,10 @@ Print the line profiler stats initiated with :doc:`sketch_profile_draw` or :doc:
 This method can be called multiple times on a running Sketch.
 
 Signatures
-------
+----------
 
 .. code:: python
 
     print_line_profiler_stats() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

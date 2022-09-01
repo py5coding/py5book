@@ -101,7 +101,7 @@ This function facilitates the creation and execution of a py5 Sketch, and as a r
 This function is available in decorator form as :doc:`py5functions_render`.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -115,5 +115,5 @@ Signatures
         draw_kwargs: dict = None,  # additional keyword arguments to pass to draw function
         use_py5graphics: bool = False  # pass a py5graphics object instead of a sketch object
     ) -> Image
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

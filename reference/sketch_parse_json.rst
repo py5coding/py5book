@@ -47,7 +47,7 @@ Parse serialized JSON data from a string. When reading JSON data from a file, :d
 The JSON data is parsed using the Python json library with the ``loads`` method, and the ``kwargs`` parameter is passed along to that method.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -55,5 +55,5 @@ Signatures
         serialized_json: Any,  # JSON data object that has been serialized as a string
         **kwargs: dict[str, Any]
     ) -> Any
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

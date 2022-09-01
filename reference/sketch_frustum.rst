@@ -56,7 +56,7 @@ Works like glFrustum, except it wipes out the current perspective matrix rather 
 Underlying Processing method: `frustum <https://processing.org/reference/frustum_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -69,5 +69,5 @@ Signatures
         far: float,  # far component of the clipping plane; must be greater than the near value
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -46,12 +46,12 @@ Calculates the sine of an angle. This function expects the values of the angle p
 This function makes a call to the numpy ``sin()`` function.
 
 Signatures
-------
+----------
 
 .. code:: python
 
     sin(
         angle: Union[float, npt.ArrayLike]  # angle in radians
     ) -> Union[float, npt.NDArray]
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -98,7 +98,7 @@ Transformations apply to everything that happens after and subsequent calls to t
 Underlying Processing method: `scale <https://processing.org/reference/scale_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -119,5 +119,5 @@ Signatures
         z: float,  # percentage to scale the object in the z-axis
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

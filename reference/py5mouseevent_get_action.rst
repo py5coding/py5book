@@ -77,10 +77,10 @@ Return the mouse event's action. This value will always be implied by the trigge
 Underlying Processing method: getAction
 
 Signatures
-------
+----------
 
 .. code:: python
 
     get_action() -> int
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

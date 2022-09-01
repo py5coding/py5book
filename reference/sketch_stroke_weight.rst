@@ -50,7 +50,7 @@ Using :doc:`sketch_point` with ``strokeWeight(1)`` or smaller may draw nothing t
 Underlying Processing method: `strokeWeight <https://processing.org/reference/strokeWeight_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -58,5 +58,5 @@ Signatures
         weight: float,  # the weight (in pixels) of the stroke
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

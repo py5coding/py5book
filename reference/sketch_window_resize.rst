@@ -49,7 +49,7 @@ This method provides the same functionality as :doc:`py5surface_set_size` but wi
 Underlying Processing method: windowResize
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -58,5 +58,5 @@ Signatures
         new_height: int,  # new window height
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

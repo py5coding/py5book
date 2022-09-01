@@ -15,7 +15,7 @@ This method is the same as :doc:`sketch_texture_mode` but linked to a ``Py5Graph
 Underlying Processing method: PGraphics.textureMode
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -23,5 +23,5 @@ Signatures
         mode: int,  # either IMAGE or NORMAL
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -57,7 +57,7 @@ This method exists because setting the array contents with the code ``g.np_pixel
 This method is the same as :doc:`sketch_set_np_pixels` but linked to a ``Py5Graphics`` object.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -65,5 +65,5 @@ Signatures
         array: npt.NDArray[np.uint8],  # properly sized numpy array to be copied to np_pixels[]
         bands: str = "ARGB",  # color channels in the array's third dimension
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

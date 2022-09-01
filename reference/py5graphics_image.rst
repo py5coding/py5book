@@ -19,7 +19,7 @@ This method is the same as :doc:`sketch_image` but linked to a ``Py5Graphics`` o
 Underlying Processing method: PGraphics.image
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -51,5 +51,5 @@ Signatures
         v2: int,  # y-coordinate of the lower right corner of image subset
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

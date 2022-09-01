@@ -15,7 +15,7 @@ This method is the same as :doc:`sketch_red` but linked to a ``Py5Graphics`` obj
 Underlying Processing method: PGraphics.red
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -23,5 +23,5 @@ Signatures
         rgb: int,  # any value of the color datatype
         /,
     ) -> float
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -144,7 +144,7 @@ When using web color notation to specify a color, create a string beginning with
 Underlying Processing method: `color <https://processing.org/reference/color_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -199,5 +199,5 @@ Signatures
         alpha: int,  # alpha value relative to current color range
         /,
     ) -> int
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

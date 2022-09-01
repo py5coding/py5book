@@ -64,7 +64,7 @@ This method only works on fonts loaded with :doc:`sketch_create_font`.
 Underlying Processing method: PFont.getShape
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -78,5 +78,5 @@ Signatures
         detail: float,  # level of shape detail
         /,
     ) -> Py5Shape
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

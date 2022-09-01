@@ -44,10 +44,10 @@ Description
 Get the Java classpath. If the JVM has not yet started, this will list the jars that have been added with :doc:`py5tools_add_classpath` and :doc:`py5tools_add_jars`. After the JVM has started, the classpath cannot be changed and the aformentioned functions would throw a ``RuntimeError``. Use :doc:`py5tools_is_jvm_running` to first determine if the JVM is running.
 
 Signatures
-------
+----------
 
 .. code:: python
 
     get_classpath() -> str
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

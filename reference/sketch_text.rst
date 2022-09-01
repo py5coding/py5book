@@ -100,7 +100,7 @@ Note that py5 lets you call ``text()`` without first specifying a Py5Font with :
 Underlying Processing method: `text <https://processing.org/reference/text_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -191,5 +191,5 @@ Signatures
         z: float,  # z-coordinate of text
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -48,10 +48,10 @@ For Python programmers, this is *not* the same as ``sys.exit()``. Further, ``sys
 Underlying Processing method: `exit <https://processing.org/reference/exit_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     exit_sketch() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

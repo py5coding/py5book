@@ -61,7 +61,7 @@ Sets the resolution at which curves display. The default value is 20. This funct
 Underlying Processing method: `curveDetail <https://processing.org/reference/curveDetail_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -69,5 +69,5 @@ Signatures
         detail: int,  # resolution of the curves
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -74,7 +74,7 @@ This method will not work for the ``P2D`` or ``P3D`` renderers. Setting the icon
 Underlying Processing method: PSurface.setIcon
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -82,5 +82,5 @@ Signatures
         icon: Py5Image,  # image to use as the window icon
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

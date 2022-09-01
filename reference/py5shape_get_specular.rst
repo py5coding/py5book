@@ -54,7 +54,7 @@ This method can only be used for a complete ``Py5Shape`` object, and never withi
 Underlying Processing method: PShape.getSpecular
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -62,5 +62,5 @@ Signatures
         index: int,  # vertex index
         /,
     ) -> int
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

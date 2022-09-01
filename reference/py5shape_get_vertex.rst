@@ -58,7 +58,7 @@ The ``get_vertex()`` method returns a Py5Vector with the coordinates of the vert
 Underlying Processing method: `PShape.getVertex <https://processing.org/reference/PShape_getVertex_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -72,5 +72,5 @@ Signatures
         vec: Py5Vector,  # target object to place vertex coordinates into
         /,
     ) -> Py5Vector
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

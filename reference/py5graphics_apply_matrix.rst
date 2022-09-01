@@ -13,7 +13,7 @@ This method is the same as :doc:`sketch_apply_matrix` but linked to a ``Py5Graph
 Underlying Processing method: PGraphics.applyMatrix
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -51,5 +51,5 @@ Signatures
         source: npt.NDArray[np.floating],  # transformation matrix with a shape of 2x3 for 2D transforms or 4x4 for 3D transforms
         /,
     ) -> None
-Updated on August 26, 2022 19:48:56pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

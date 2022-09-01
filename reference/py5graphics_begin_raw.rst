@@ -63,7 +63,7 @@ This method is the same as :doc:`sketch_begin_raw` but linked to a ``Py5Graphics
 Underlying Processing method: PGraphics.beginRaw
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -71,5 +71,5 @@ Signatures
         raw_graphics: Py5Graphics,  # Py5Graphics object to apply draw commands to
         /,
     ) -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -62,10 +62,10 @@ By default, py5 loops through ``draw()`` continuously, executing the code within
 Underlying Processing method: `loop <https://processing.org/reference/loop_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     loop() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -54,10 +54,10 @@ Prints the current matrix to standard output.
 Underlying Processing method: `printMatrix <https://processing.org/reference/printMatrix_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     print_matrix() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

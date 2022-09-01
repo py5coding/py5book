@@ -49,7 +49,7 @@ Draws a curved line on the screen. The first and second parameters specify the b
 Underlying Processing method: `curve <https://processing.org/reference/curve_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -80,5 +80,5 @@ Signatures
         z4: float,  # coordinates for the ending control point
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

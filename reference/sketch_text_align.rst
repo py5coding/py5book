@@ -88,7 +88,7 @@ The vertical alignment is based on the value of :doc:`sketch_text_ascent`, which
 Underlying Processing method: `textAlign <https://processing.org/reference/textAlign_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -102,5 +102,5 @@ Signatures
         align_y: int,  # vertical alignment, either TOP, BOTTOM, CENTER, or BASELINE
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

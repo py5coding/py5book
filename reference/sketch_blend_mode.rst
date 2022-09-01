@@ -81,7 +81,7 @@ We recommend using ``blend_mode()`` and not the previous :doc:`sketch_blend` fun
 Underlying Processing method: `blendMode <https://processing.org/reference/blendMode_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -89,5 +89,5 @@ Signatures
         mode: int,  # the blending mode to use
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

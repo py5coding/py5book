@@ -46,10 +46,10 @@ Py5 communicates with the clock on your computer. The ``month()`` function retur
 Underlying Processing method: `month <https://processing.org/reference/month_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     month() -> int
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

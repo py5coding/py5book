@@ -15,7 +15,7 @@ This method is the same as :doc:`sketch_model_y` but linked to a ``Py5Graphics``
 Underlying Processing method: PGraphics.modelY
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -25,5 +25,5 @@ Signatures
         z: float,  # 3D z-coordinate to be mapped
         /,
     ) -> float
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

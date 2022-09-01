@@ -49,10 +49,10 @@ Get the font's size.
 Underlying Processing method: PFont.getSize
 
 Signatures
-------
+----------
 
 .. code:: python
 
     get_size() -> int
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

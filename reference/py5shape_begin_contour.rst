@@ -99,10 +99,10 @@ This method can be used as a context manager to ensure that :doc:`py5shape_end_c
 Underlying Processing method: `PShape.beginContour <https://processing.org/reference/PShape_beginContour_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     begin_contour() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

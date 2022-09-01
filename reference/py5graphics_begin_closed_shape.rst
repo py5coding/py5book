@@ -61,7 +61,7 @@ This method is the same as :doc:`sketch_begin_closed_shape` but linked to a ``Py
 Underlying Processing method: PGraphics.beginShape
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -71,5 +71,5 @@ Signatures
         kind: int,  # Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
         /,
     ) -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

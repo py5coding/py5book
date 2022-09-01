@@ -50,7 +50,7 @@ With the ``P2D`` and ``P3D`` renderers, a generic set of cursors are used becaus
 Underlying Processing method: `cursor <https://processing.org/reference/cursor_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -72,5 +72,5 @@ Signatures
         kind: int,  # either ARROW, CROSS, HAND, MOVE, TEXT, or WAIT
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

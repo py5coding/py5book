@@ -45,12 +45,12 @@ Description
 Create a new Py5Vector instance with a specified numpy dtype. Only floating types (``np.float16``, ``np.float32``, ``np.float64``, and ``np.float128``) are allowed.
 
 Signatures
-------
+----------
 
 .. code:: python
 
     astype(
         dtype,  # numpy floating dtype
     ) -> Py5Vector
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

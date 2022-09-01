@@ -51,7 +51,7 @@ To make :doc:`sketch_point` appear square, use ``stroke_cap(PROJECT)``. Using ``
 Underlying Processing method: `strokeCap <https://processing.org/reference/strokeCap_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -59,5 +59,5 @@ Signatures
         cap: int,  # either SQUARE, PROJECT, or ROUND
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -48,7 +48,7 @@ This method provides the same functionality as :doc:`py5surface_set_resizable` b
 Underlying Processing method: windowResizable
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -56,5 +56,5 @@ Signatures
         resizable: bool,  # should the Sketch window be resizable
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

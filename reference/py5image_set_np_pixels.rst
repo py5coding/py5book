@@ -59,7 +59,7 @@ This method exists because setting the array contents with the code ``img.np_pix
 Note that the :doc:`sketch_convert_image` method can also be used to convert a numpy array into a new Py5Image object.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -67,5 +67,5 @@ Signatures
         array: npt.NDArray[np.uint8],  # properly sized numpy array to be copied to np_pixels[]
         bands: str = "ARGB",  # color channels in the array's third dimension
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

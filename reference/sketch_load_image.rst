@@ -49,7 +49,7 @@ In most cases, load all images in ``setup()`` to preload them at the start of th
 The ``dst`` parameter allows users to store the loaded image into an existing Py5Image object instead of creating a new object. The size of the existing Py5Image object must match the size of the loaded image. Most users will not find the ``dst`` parameter helpful. This feature is needed internally for performance reasons.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -58,5 +58,5 @@ Signatures
         *,
         dst: Py5Image = None  # existing Py5Image object to load image into
     ) -> Py5Image
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

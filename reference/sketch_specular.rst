@@ -55,7 +55,7 @@ Sets the specular color of the materials used for shapes drawn to the screen, wh
 Underlying Processing method: `specular <https://processing.org/reference/specular_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -75,5 +75,5 @@ Signatures
         v3: float,  # blue or brightness value (depending on current color mode)
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

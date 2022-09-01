@@ -50,12 +50,12 @@ Description
 Constrain the vector's magnitude to a specified value. If the vector's magnitude is already less than or equal to ``max_mag``, this method will have no effect. If the vector's magnitude is larger, it will be set to ``max_mag``. The ``max_mag`` parameter cannot be a negative number.
 
 Signatures
-------
+----------
 
 .. code:: python
 
     set_limit(
         max_mag: float,  # maximum vector magnitude
     ) -> Py5Vector
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -55,7 +55,7 @@ Sets the spacing between lines of text in units of pixels. This setting will be 
 Underlying Processing method: `textLeading <https://processing.org/reference/textLeading_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -63,5 +63,5 @@ Signatures
         leading: float,  # the size in pixels for spacing between lines
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

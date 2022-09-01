@@ -42,10 +42,10 @@ Returns the number of children within the ``Py5Shape`` object.
 Underlying Processing method: `PShape.getChildCount <https://processing.org/reference/PShape_getChildCount_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     get_child_count() -> int
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

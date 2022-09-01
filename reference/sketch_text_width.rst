@@ -53,7 +53,7 @@ Calculates and returns the width of any character or text string.
 Underlying Processing method: `textWidth <https://processing.org/reference/textWidth_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -73,5 +73,5 @@ Signatures
         str: str,  # the String of characters to measure
         /,
     ) -> float
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

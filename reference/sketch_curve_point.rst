@@ -56,7 +56,7 @@ Evaluates the curve at point ``t`` for points ``a``, ``b``, ``c``, ``d``. The pa
 Underlying Processing method: `curvePoint <https://processing.org/reference/curvePoint_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -68,5 +68,5 @@ Signatures
         t: float,  # value between 0 and 1
         /,
     ) -> float
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

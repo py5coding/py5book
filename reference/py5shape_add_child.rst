@@ -61,7 +61,7 @@ Adds a child ``Py5Shape`` object to a parent ``Py5Shape`` object that is defined
 Underlying Processing method: `PShape.addChild <https://processing.org/reference/PShape_addChild_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -75,5 +75,5 @@ Signatures
         idx: int,  # the layer position in which to insert the new child
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

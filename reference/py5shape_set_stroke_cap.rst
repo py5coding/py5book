@@ -56,7 +56,7 @@ This method differs from :doc:`py5shape_stroke_cap` in that it is only to be use
 Underlying Processing method: PShape.setStrokeCap
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -64,5 +64,5 @@ Signatures
         cap: int,  # either SQUARE, PROJECT, or ROUND
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

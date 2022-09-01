@@ -13,7 +13,7 @@ This method is the same as :doc:`sketch_camera` but linked to a ``Py5Graphics`` 
 Underlying Processing method: PGraphics.camera
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -31,5 +31,5 @@ Signatures
         up_z: float,  # usually 0.0, 1.0, or -1.0
         /,
     ) -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

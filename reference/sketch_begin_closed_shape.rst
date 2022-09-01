@@ -84,7 +84,7 @@ This method is used to start a custom closed shape. This method should only be u
 Underlying Processing method: `beginShape <https://processing.org/reference/beginShape_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -94,5 +94,5 @@ Signatures
         kind: int,  # Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -13,7 +13,7 @@ This method is the same as :doc:`sketch_quadratic_vertex` but linked to a ``Py5G
 Underlying Processing method: PGraphics.quadraticVertex
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -34,5 +34,5 @@ Signatures
         y3: float,  # the y-coordinate of the anchor point
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

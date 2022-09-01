@@ -82,7 +82,7 @@ Adds an ambient light. Ambient light doesn't come from a specific direction, the
 Underlying Processing method: `ambientLight <https://processing.org/reference/ambientLight_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -102,5 +102,5 @@ Signatures
         z: float,  # z-coordinate of the light
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

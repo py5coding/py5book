@@ -13,7 +13,7 @@ This method is the same as :doc:`sketch_end_shape` but linked to a ``Py5Graphics
 Underlying Processing method: PGraphics.endShape
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -23,5 +23,5 @@ Signatures
         mode: int,  # use CLOSE to close the shape
         /,
     ) -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -45,7 +45,7 @@ Description
 Calculates the distance between two points.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -66,5 +66,5 @@ Signatures
         z2: Union[float, npt.NDArray],  # z-coordinate of the second point
         /,
     ) -> Union[float, npt.NDArray]
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

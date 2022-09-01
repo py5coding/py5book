@@ -41,12 +41,12 @@ Calculates the closest int value that is greater than or equal to the value of t
 This function makes a call to the numpy ``ceil()`` function.
 
 Signatures
-------
+----------
 
 .. code:: python
 
     ceil(
         value: Union[float, npt.ArrayLike]  # number to round up
     ) -> Union[int, npt.NDArray]
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

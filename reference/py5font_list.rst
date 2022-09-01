@@ -42,10 +42,10 @@ This works outside of a running Sketch.
 Underlying Processing method: `PFont.list <https://processing.org/reference/PFont_list_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     list() -> list[str]
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

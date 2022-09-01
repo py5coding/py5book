@@ -53,7 +53,7 @@ Using this method with the ``z`` parameter requires using the ``P3D`` parameter 
 Underlying Processing method: `PShape.scale <https://processing.org/reference/PShape_scale_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -74,5 +74,5 @@ Signatures
         z: float,  # percentage to scale the object in the z-axis
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -77,10 +77,10 @@ Get the ``Py5Shape`` object's width. When using the ``P2D`` or ``P3D`` renderers
 Underlying Processing method: PShape.getWidth
 
 Signatures
-------
+----------
 
 .. code:: python
 
     get_width() -> float
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

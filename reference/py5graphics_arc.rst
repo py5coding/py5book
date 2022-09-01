@@ -17,7 +17,7 @@ This method is the same as :doc:`sketch_arc` but linked to a ``Py5Graphics`` obj
 Underlying Processing method: PGraphics.arc
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -41,5 +41,5 @@ Signatures
         mode: int,  # arc drawing mode
         /,
     ) -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

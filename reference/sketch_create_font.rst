@@ -52,7 +52,7 @@ This function allows py5 to work with the font natively in the default renderer,
 Underlying Processing method: `createFont <https://processing.org/reference/createFont_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -76,5 +76,5 @@ Signatures
         charset: list[chr],  # array containing characters to be generated
         /,
     ) -> Py5Font
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

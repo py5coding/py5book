@@ -19,7 +19,7 @@ This method is the same as :doc:`sketch_point` but linked to a ``Py5Graphics`` o
 Underlying Processing method: PGraphics.point
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -35,5 +35,5 @@ Signatures
         z: float,  # z-coordinate of the point
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -86,7 +86,7 @@ The parameter must be written in ALL CAPS because Python is a case-sensitive lan
 Underlying Processing method: `rectMode <https://processing.org/reference/rectMode_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -94,5 +94,5 @@ Signatures
         mode: int,  # either CORNER, CORNERS, CENTER, or RADIUS
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

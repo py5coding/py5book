@@ -51,10 +51,10 @@ Complement to :doc:`sketch_begin_raw`; they must always be used together. See th
 Underlying Processing method: `endRaw <https://processing.org/reference/endRaw_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     end_raw() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

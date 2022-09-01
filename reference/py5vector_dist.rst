@@ -45,12 +45,12 @@ Description
 Calculate the distance between two vectors.
 
 Signatures
-------
+----------
 
 .. code:: python
 
     dist(
         other: Union[Py5Vector, np.ndarray]  # vector to calculate the distance from
     ) -> Union[float, np.ndarray[np.floating]]
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

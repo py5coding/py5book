@@ -59,7 +59,7 @@ Use the ``daemon`` parameter to make the launched thread a daemon that will run 
 The new thread is a Python thread, so all the usual caveats about the Global Interpreter Lock (GIL) apply here.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -72,5 +72,5 @@ Signatures
         args: tuple = None,  # positional arguments to pass to the given function
         kwargs: dict = None  # keyword arguments to pass to the given function
     ) -> str
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

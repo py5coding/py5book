@@ -19,7 +19,7 @@ This method is the same as :doc:`sketch_get` but linked to a ``Py5Graphics`` obj
 Underlying Processing method: PGraphics.get
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -38,5 +38,5 @@ Signatures
         h: int,  # height of pixel rectangle to get
         /,
     ) -> Py5Image
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

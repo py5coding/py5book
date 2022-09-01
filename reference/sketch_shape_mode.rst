@@ -51,7 +51,7 @@ Modifies the location from which shapes draw. The default mode is ``shape_mode(C
 Underlying Processing method: `shapeMode <https://processing.org/reference/shapeMode_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -59,5 +59,5 @@ Signatures
         mode: int,  # either CORNER, CORNERS, CENTER
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

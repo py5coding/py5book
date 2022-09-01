@@ -13,7 +13,7 @@ This method is the same as :doc:`sketch_emissive` but linked to a ``Py5Graphics`
 Underlying Processing method: PGraphics.emissive
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -33,5 +33,5 @@ Signatures
         v3: float,  # blue or brightness value (depending on current color mode)
         /,
     ) -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

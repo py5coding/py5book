@@ -55,7 +55,7 @@ Use :doc:`sketch_create_font` (instead of ``load_font()``) to enable vector data
 Underlying Processing method: `loadFont <https://processing.org/reference/loadFont_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -63,5 +63,5 @@ Signatures
         filename: str,  # name of the font to load
         /,
     ) -> Py5Font
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

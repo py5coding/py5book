@@ -141,7 +141,7 @@ This function ignores :doc:`sketch_image_mode`.
 Underlying Processing method: `PImage.blend <https://processing.org/reference/PImage_blend_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -171,5 +171,5 @@ Signatures
         mode: int,  # Either BLEND, ADD, SUBTRACT, LIGHTEST, DARKEST, DIFFERENCE, EXCLUSION, MULTIPLY, SCREEN, OVERLAY, HARD_LIGHT, SOFT_LIGHT, DODGE, BURN
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

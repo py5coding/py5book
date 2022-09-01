@@ -51,10 +51,10 @@ This method is different from :doc:`py5surface_pause_thread` in that it will irr
 Underlying Processing method: PSurface.stopThread
 
 Signatures
-------
+----------
 
 .. code:: python
 
     stop_thread() -> bool
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

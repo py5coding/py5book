@@ -13,7 +13,7 @@ This method is the same as :doc:`sketch_curve_tightness` but linked to a ``Py5Gr
 Underlying Processing method: PGraphics.curveTightness
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -21,5 +21,5 @@ Signatures
         tightness: float,  # amount of deformation from the original vertices
         /,
     ) -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

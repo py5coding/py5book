@@ -50,7 +50,7 @@ Updates the display window with the data in the :doc:`sketch_pixels` array. Use 
 Underlying Processing method: `updatePixels <https://processing.org/reference/updatePixels_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -63,5 +63,5 @@ Signatures
         y2: int,  # height of the region
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -13,7 +13,7 @@ This method is the same as :doc:`sketch_box` but linked to a ``Py5Graphics`` obj
 Underlying Processing method: PGraphics.box
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -28,5 +28,5 @@ Signatures
         d: float,  # dimension of the box in the z-dimension
         /,
     ) -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

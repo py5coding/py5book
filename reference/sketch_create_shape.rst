@@ -170,7 +170,7 @@ After using ``create_shape()``, stroke and fill color can be set by calling meth
 Underlying Processing method: `createShape <https://processing.org/reference/createShape_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -186,5 +186,5 @@ Signatures
         type: int,  # either GROUP, PATH, or GEOMETRY
         /,
     ) -> Py5Shape
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

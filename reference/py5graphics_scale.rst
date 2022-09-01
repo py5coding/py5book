@@ -15,7 +15,7 @@ This method is the same as :doc:`sketch_scale` but linked to a ``Py5Graphics`` o
 Underlying Processing method: PGraphics.scale
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -36,5 +36,5 @@ Signatures
         z: float,  # percentage to scale the object in the z-axis
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

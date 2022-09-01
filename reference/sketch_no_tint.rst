@@ -47,10 +47,10 @@ Removes the current fill value for displaying images and reverts to displaying i
 Underlying Processing method: `noTint <https://processing.org/reference/noTint_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     no_tint() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

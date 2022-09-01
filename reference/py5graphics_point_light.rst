@@ -13,7 +13,7 @@ This method is the same as :doc:`sketch_point_light` but linked to a ``Py5Graphi
 Underlying Processing method: PGraphics.pointLight
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -26,5 +26,5 @@ Signatures
         z: float,  # z-coordinate of the light
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

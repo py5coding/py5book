@@ -55,10 +55,10 @@ Loads the pixel data for the image into its :doc:`py5image_pixels` array. This f
 Underlying Processing method: `PImage.loadPixels <https://processing.org/reference/PImage_loadPixels_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     load_pixels() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

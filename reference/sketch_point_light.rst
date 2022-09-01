@@ -48,7 +48,7 @@ Adds a point light. Lights need to be included in the ``draw()`` to remain persi
 Underlying Processing method: `pointLight <https://processing.org/reference/pointLight_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -61,5 +61,5 @@ Signatures
         z: float,  # z-coordinate of the light
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

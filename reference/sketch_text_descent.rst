@@ -54,10 +54,10 @@ Returns descent of the current font at its current size. This information is use
 Underlying Processing method: `textDescent <https://processing.org/reference/textDescent_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     text_descent() -> float
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

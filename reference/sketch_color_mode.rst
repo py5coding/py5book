@@ -105,7 +105,7 @@ After changing the range of values for colors with code like ``color_mode(HSB, 3
 Underlying Processing method: `colorMode <https://processing.org/reference/colorMode_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -136,5 +136,5 @@ Signatures
         max: float,  # range for all color elements
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

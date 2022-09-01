@@ -48,7 +48,7 @@ Sets the current font size. This size will be used in all subsequent calls to th
 Underlying Processing method: `textSize <https://processing.org/reference/textSize_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -56,5 +56,5 @@ Signatures
         size: float,  # the size of the letters in units of pixels
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

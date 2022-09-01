@@ -51,10 +51,10 @@ Finalizes the rendering of a ``Py5Graphics`` object so that it can be shown on s
 Underlying Processing method: `PGraphics.endDraw <https://processing.org/reference/PGraphics_endDraw_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     end_draw() -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

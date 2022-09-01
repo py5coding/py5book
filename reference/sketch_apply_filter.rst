@@ -224,7 +224,7 @@ The presets options are:
 Underlying Processing method: `filter <https://processing.org/reference/filter_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -243,5 +243,5 @@ Signatures
         shader: Py5Shader,  # the fragment shader to apply
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

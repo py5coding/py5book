@@ -51,7 +51,7 @@ The ``coordinates`` parameter should be a numpy array with one row for each curv
 Underlying Processing method: curveVertices
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -59,5 +59,5 @@ Signatures
         coordinates: npt.NDArray[np.floating],  # 2D array of curve vertex coordinates with 2 or 3 columns for 2D or 3D points, respectively
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

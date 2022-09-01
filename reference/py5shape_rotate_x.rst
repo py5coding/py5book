@@ -57,7 +57,7 @@ This method requires a 3D renderer. You need to use ``P3D`` as a third parameter
 Underlying Processing method: `PShape.rotateX <https://processing.org/reference/PShape_rotateX_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -65,5 +65,5 @@ Signatures
         angle: float,  # angle of rotation specified in radians
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -70,7 +70,7 @@ Rotates around the x-axis the amount specified by the ``angle`` parameter. Angle
 Underlying Processing method: `rotateX <https://processing.org/reference/rotateX_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -78,5 +78,5 @@ Signatures
         angle: float,  # angle of rotation specified in radians
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

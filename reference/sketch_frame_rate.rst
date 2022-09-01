@@ -52,7 +52,7 @@ Specifies the number of frames to be displayed every second. For example, the fu
 Underlying Processing method: `frameRate <https://processing.org/reference/frameRate_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -60,5 +60,5 @@ Signatures
         fps: float,  # number of desired frames per second
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

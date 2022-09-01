@@ -50,12 +50,12 @@ Calculates the natural logarithm (the base-e logarithm) of a number. This functi
 This function makes a call to the numpy ``log()`` function. If the ``n`` parameter is less than or equal to 0.0, you will see a ``RuntimeWarning`` and the returned result will be numpy's Not-a-Number value, ``np.nan``.
 
 Signatures
-------
+----------
 
 .. code:: python
 
     log(
         value: Union[float, npt.ArrayLike]  # number greater than 0.0
     ) -> Union[float, npt.NDArray]
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -75,7 +75,7 @@ Load a JSON data file from a file or URL. When loading a file, the path can be i
 When loading JSON data from a URL, the data is retrieved using the Python requests library with the ``get`` method, and the ``kwargs`` parameter is passed along to that method. When loading JSON data from a file, the data is loaded using the Python json library with the ``load`` method, and again the ``kwargs`` parameter passed along to that method.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -83,5 +83,5 @@ Signatures
         json_path: Union[str, Path],  # url or file path for JSON data file
         **kwargs: dict[str, Any]
     ) -> Any
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -52,7 +52,7 @@ This method is used to complete a custom shape created with the :doc:`sketch_cre
 Underlying Processing method: `PShape.endShape <https://processing.org/reference/PShape_endShape_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -62,5 +62,5 @@ Signatures
         mode: int,  # Either OPEN or CLOSE
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

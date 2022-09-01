@@ -55,10 +55,10 @@ Identify the mouse button used in the event. This can be ``LEFT``, ``CENTER``, o
 Underlying Processing method: getButton
 
 Signatures
-------
+----------
 
 .. code:: python
 
     get_button() -> int
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -13,10 +13,10 @@ This method is the same as :doc:`sketch_no_stroke` but linked to a ``Py5Graphics
 Underlying Processing method: PGraphics.noStroke
 
 Signatures
-------
+----------
 
 .. code:: python
 
     no_stroke() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

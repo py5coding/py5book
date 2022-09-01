@@ -13,7 +13,7 @@ Result will be relative to Python's current working directory (``os.getcwd()``) 
 Underlying Processing method: sketchPath
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -23,5 +23,5 @@ Signatures
         where: str,  # subdirectories relative to the sketch path
         /,
     ) -> Path
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

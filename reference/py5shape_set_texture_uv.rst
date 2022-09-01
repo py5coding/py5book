@@ -62,7 +62,7 @@ The ``u`` and ``v`` coordinates define the mapping of a ``Py5Shape`` object's te
 Underlying Processing method: PShape.setTextureUV
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -72,5 +72,5 @@ Signatures
         v: float,  # vertical coordinate for the texture mapping
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -52,10 +52,10 @@ Disables the clipping previously started by the :doc:`sketch_clip` function.
 Underlying Processing method: `noClip <https://processing.org/reference/noClip_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     no_clip() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

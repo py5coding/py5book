@@ -60,7 +60,7 @@ By default this function will return right away and will process frames in the b
 Use the ``sketch`` parameter to specify a different running Sketch, such as a Sketch created using Class mode. If your Sketch has a ``post_draw()`` method, use the ``hook_post_draw`` parameter to make this function run after ``post_draw()`` instead of ``draw()``. This is important when using Processing libraries that support ``post_draw()`` such as Camera3D or ColorBlindness.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -77,5 +77,5 @@ Signatures
         queue_limit: int = None,  # maximum number of frames that can be on the queue waiting to be processed
         block: bool = False  # method returns immediately (False) or blocks until function returns (True)
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -50,7 +50,7 @@ Sets an orthographic projection and defines a parallel clipping volume. All obje
 Underlying Processing method: `ortho <https://processing.org/reference/ortho_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -73,5 +73,5 @@ Signatures
         far: float,  # maximum distance from the origin away from the viewer
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

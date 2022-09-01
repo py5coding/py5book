@@ -45,7 +45,7 @@ This method provides the same functionality as :doc:`sketch_window_title`.
 Underlying Processing method: PSurface.setTitle
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -53,5 +53,5 @@ Signatures
         title: str,  # new window title
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

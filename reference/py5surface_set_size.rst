@@ -50,7 +50,7 @@ This method provides the same functionality as :doc:`sketch_window_resize`.
 Underlying Processing method: PSurface.setSize
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -59,5 +59,5 @@ Signatures
         height: int,  # new window height
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

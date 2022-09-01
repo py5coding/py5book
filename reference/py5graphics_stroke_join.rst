@@ -13,7 +13,7 @@ This method is the same as :doc:`sketch_stroke_join` but linked to a ``Py5Graphi
 Underlying Processing method: PGraphics.strokeJoin
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -21,5 +21,5 @@ Signatures
         join: int,  # either MITER, BEVEL, ROUND
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

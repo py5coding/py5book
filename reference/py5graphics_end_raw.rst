@@ -13,10 +13,10 @@ This method is the same as :doc:`sketch_end_raw` but linked to a ``Py5Graphics``
 Underlying Processing method: PGraphics.endRaw
 
 Signatures
-------
+----------
 
 .. code:: python
 
     end_raw() -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

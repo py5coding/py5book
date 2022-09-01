@@ -119,10 +119,10 @@ Note that if the Sketch is resized, :doc:`sketch_redraw` will be called to updat
 Underlying Processing method: `noLoop <https://processing.org/reference/noLoop_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
     no_loop() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

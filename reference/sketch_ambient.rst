@@ -50,7 +50,7 @@ Sets the ambient reflectance for shapes drawn to the screen. This is combined wi
 Underlying Processing method: `ambient <https://processing.org/reference/ambient_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -70,5 +70,5 @@ Signatures
         v3: float,  # blue or brightness value (depending on current color mode)
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

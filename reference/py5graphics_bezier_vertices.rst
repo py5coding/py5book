@@ -15,7 +15,7 @@ This method is the same as :doc:`sketch_bezier_vertices` but linked to a ``Py5Gr
 Underlying Processing method: PGraphics.bezierVertices
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -23,5 +23,5 @@ Signatures
         coordinates: npt.NDArray[np.floating],  # 2D array of bezier vertex coordinates with 6 or 9 columns for 2D or 3D points, respectively
         /,
     ) -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -51,7 +51,7 @@ Controls the detail used to render a sphere by adjusting the number of vertices 
 Underlying Processing method: `sphereDetail <https://processing.org/reference/sphereDetail_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -65,5 +65,5 @@ Signatures
         vres: int,  # number of segments used latitudinally from top to bottom
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -43,7 +43,7 @@ Set the Sketch window to always be on top of other windows. By default, the Sket
 Underlying Processing method: PSurface.setAlwaysOnTop
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -51,5 +51,5 @@ Signatures
         always: bool,  # should the Sketch window always be on top of other windows
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

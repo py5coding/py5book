@@ -52,7 +52,7 @@ This function ignores :doc:`sketch_image_mode`.
 Underlying Processing method: `PImage.copy <https://processing.org/reference/PImage_copy_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -82,5 +82,5 @@ Signatures
         dh: int,  # destination image height
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

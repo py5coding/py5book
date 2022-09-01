@@ -74,7 +74,7 @@ Adds a directional light. Directional light comes from one direction: it is stro
 Underlying Processing method: `directionalLight <https://processing.org/reference/directionalLight_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -87,5 +87,5 @@ Signatures
         nz: float,  # direction along the z-axis
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -77,7 +77,7 @@ Get the value of the x coordinate for the vertex ``index``.
 Underlying Processing method: PShape.getVertexX
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -85,5 +85,5 @@ Signatures
         index: int,  # vertex index
         /,
     ) -> float
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

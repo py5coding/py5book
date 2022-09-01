@@ -15,10 +15,10 @@ This method is the same as :doc:`sketch_end_contour` but linked to a ``Py5Graphi
 Underlying Processing method: PGraphics.endContour
 
 Signatures
-------
+----------
 
 .. code:: python
 
     end_contour() -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

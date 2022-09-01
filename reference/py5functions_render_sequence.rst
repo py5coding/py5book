@@ -110,7 +110,7 @@ This function facilitates the creation and execution of a py5 Sketch, and as a r
 This function is available in non-decorator form as :doc:`py5functions_render_frame_sequence`.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -125,5 +125,5 @@ Signatures
         setup_kwargs: dict = None,  # additional keyword arguments to pass to setup function
         use_py5graphics: bool = False  # pass a py5graphics object instead of a sketch object
     ) -> list[PIL.ImageFile.ImageFile]
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

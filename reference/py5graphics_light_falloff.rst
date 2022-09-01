@@ -15,7 +15,7 @@ This method is the same as :doc:`sketch_light_falloff` but linked to a ``Py5Grap
 Underlying Processing method: PGraphics.lightFalloff
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -25,5 +25,5 @@ Signatures
         quadratic: float,  # quadratic value for determining falloff
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

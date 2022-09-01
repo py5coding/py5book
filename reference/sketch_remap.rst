@@ -98,7 +98,7 @@ As shown in the second example, numbers outside of the range are not clamped to 
 In Processing this functionality is provided by ``map()`` but was renamed in py5 because of a name conflict with a builtin Python function.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -109,5 +109,5 @@ Signatures
         start2: Union[float, npt.NDArray],  # lower bound of the value's target range
         stop2: Union[float, npt.NDArray],  # upper bound of the value's target range
     ) -> Union[float, npt.NDArray]
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

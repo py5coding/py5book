@@ -74,7 +74,7 @@ To change the color of an image or a texture, use :doc:`sketch_tint`.
 Underlying Processing method: `fill <https://processing.org/reference/fill_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -114,5 +114,5 @@ Signatures
         alpha: float,  # opacity of the fill
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

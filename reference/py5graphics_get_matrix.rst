@@ -13,7 +13,7 @@ This method is the same as :doc:`sketch_get_matrix` but linked to a ``Py5Graphic
 Underlying Processing method: PGraphics.getMatrix
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -23,5 +23,5 @@ Signatures
         target: npt.NDArray[np.floating],  # transformation matrix with a shape of 2x3 for 2D transforms or 4x4 for 3D transforms
         /,
     ) -> npt.NDArray[np.floating]
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

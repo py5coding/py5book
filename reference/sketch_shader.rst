@@ -49,7 +49,7 @@ Applies the shader specified by the parameters. It's compatible with the ``P2D``
 Underlying Processing method: `shader <https://processing.org/reference/shader_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -63,5 +63,5 @@ Signatures
         kind: int,  # type of shader, either POINTS, LINES, or TRIANGLES
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

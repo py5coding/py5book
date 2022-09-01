@@ -13,7 +13,7 @@ This method is the same as :doc:`sketch_curve_vertex` but linked to a ``Py5Graph
 Underlying Processing method: PGraphics.curveVertex
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -29,5 +29,5 @@ Signatures
         z: float,  # the z-coordinate of the vertex
         /,
     ) -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

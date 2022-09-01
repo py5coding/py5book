@@ -38,12 +38,12 @@ Description
 Set the formatting style for py5's stack traces. Py5 uses the Python library stackprinter to show exception stack traces. The stackprinter library supports various color styles. By default py5 will use ``'plaintext'``, which does not use color. Alternative styles using color are ``'darkbg'``, ``'darkbg2'``, ``'darkbg3'``, ``'lightbg'``, ``'lightbg2'``, and ``'lightbg3'``.
 
 Signatures
-------
+----------
 
 .. code:: python
 
     set_stackprinter_style(
         style: str,  # name of stackprinter style
     ) -> None
-Updated on August 25, 2022 19:59:03pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -40,7 +40,7 @@ Description
 Constrains a value to not exceed a maximum and minimum value.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -49,5 +49,5 @@ Signatures
         low: Union[float, npt.NDArray],  # maximum limit
         high: Union[float, npt.NDArray],  # minimum limit
     ) -> Union[float, npt.NDArray]
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

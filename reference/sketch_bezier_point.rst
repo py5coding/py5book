@@ -51,7 +51,7 @@ Evaluates the Bezier at point t for points a, b, c, d. The parameter t varies be
 Underlying Processing method: `bezierPoint <https://processing.org/reference/bezierPoint_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -63,5 +63,5 @@ Signatures
         t: float,  # value between 0 and 1
         /,
     ) -> float
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

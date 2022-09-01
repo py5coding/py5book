@@ -75,7 +75,7 @@ The new vector will have a magnitude of 1 and a heading that is uniformly distri
 When used as a ``Py5Vector`` class method, the ``dim`` parameter is required to specify what the new vector's dimension should be. When used as a class method for the ``Py5Vector2D``, ``Py5Vector3D``, or ``Py5Vector4D`` child classes, the ``dim`` parameter is optional and will default to the dimension implied by the specific class. When used as a method on a vector instance, the ``dim`` parameter is also optional and will default to the vector instance's dimension. See the example code for examples of all of these use cases.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -84,5 +84,5 @@ Signatures
         *,
         dtype: type = np.float_  # dtype of the random vector to create
     ) -> Py5Vector
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

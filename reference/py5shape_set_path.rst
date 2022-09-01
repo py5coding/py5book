@@ -53,7 +53,7 @@ The ``vcount`` parameter cannot be larger than the first dimension of the ``vert
 Underlying Processing method: PShape.setPath
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -62,5 +62,5 @@ Signatures
         verts: npt.NDArray[np.floating],  # 2D array of vertex coordinates
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

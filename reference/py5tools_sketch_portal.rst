@@ -59,7 +59,7 @@ If your Sketch has a ``post_draw()`` method, use the ``hook_post_draw`` paramete
 To stop a Sketch Portal, wait for the time limit to expire, call :doc:`sketch_exit_sketch`, or press the "exit_sketch()" button below the portal. If you delete the cell with the ``Py5SketchPortal`` object, the portal will no longer be visible but the Sketch will still be streaming frames to the notebook client, wasting resources. A Sketch can only have one open portal, so opening a new portal with different options will replace an existing portal.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -73,5 +73,5 @@ Signatures
         sketch: Sketch = None,  # running Sketch
         hook_post_draw: bool = False  # attach hook to Sketch's post_draw method instead of draw
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

@@ -52,10 +52,10 @@ Return boolean value reflecting if the Control key is down. The Control key is a
 Underlying Processing method: isControlDown
 
 Signatures
-------
+----------
 
 .. code:: python
 
     is_control_down() -> bool
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

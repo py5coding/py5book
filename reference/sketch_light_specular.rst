@@ -55,7 +55,7 @@ Sets the specular color for lights. Like :doc:`sketch_fill`, it affects only the
 Underlying Processing method: `lightSpecular <https://processing.org/reference/lightSpecular_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -65,5 +65,5 @@ Signatures
         v3: float,  # blue or brightness value (depending on current color mode)
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

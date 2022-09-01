@@ -53,10 +53,10 @@ The ``update_np_pixels()`` method is similar to :doc:`py5graphics_update_pixels`
 This method is the same as :doc:`sketch_update_np_pixels` but linked to a ``Py5Graphics`` object.
 
 Signatures
-------
+----------
 
 .. code:: python
 
     update_np_pixels() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

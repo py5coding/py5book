@@ -53,7 +53,7 @@ This won't do anything useful if the thread was launched with either :doc:`sketc
 Use :doc:`sketch_has_thread` to determine if a thread of a given name exists and :doc:`sketch_list_threads` to get a list of all thread names. Use :doc:`sketch_stop_all_threads` to stop all threads.
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -61,5 +61,5 @@ Signatures
         name: str,  # name of thread
         wait: bool = False,  # wait for thread to exit before returning
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

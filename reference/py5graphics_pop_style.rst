@@ -13,10 +13,10 @@ This method is the same as :doc:`sketch_pop_style` but linked to a ``Py5Graphics
 Underlying Processing method: PGraphics.popStyle
 
 Signatures
-------
+----------
 
 .. code:: python
 
     pop_style() -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

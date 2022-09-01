@@ -47,12 +47,12 @@ Description
 Squares a number (multiplies a number by itself). The result is always a positive number, as multiplying two negative numbers always yields a positive result. For example, ``-1 * -1 = 1``.
 
 Signatures
-------
+----------
 
 .. code:: python
 
     sq(
         value: Union[float, npt.NDArray]  # number to square
     ) -> Union[float, npt.NDArray]
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 

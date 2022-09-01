@@ -57,7 +57,7 @@ Sets the amount of gloss in the surface of shapes. Use in combination with :doc:
 Underlying Processing method: `shininess <https://processing.org/reference/shininess_.html>`_
 
 Signatures
-------
+----------
 
 .. code:: python
 
@@ -65,5 +65,5 @@ Signatures
         shine: float,  # degree of shininess
         /,
     ) -> None
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 12:53:02pm UTC
 
