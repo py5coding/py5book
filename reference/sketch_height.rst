@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.no_stroke()
@@ -45,5 +44,5 @@ System variable that stores the height of the display window. This value is set 
 
 Underlying Processing field: `height <https://processing.org/reference/height.html>`_
 
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

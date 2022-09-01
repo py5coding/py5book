@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     v1 = py5.Py5Vector(1, 2, 3)
 
@@ -46,5 +45,5 @@ Description
 
 Create an identical copy of this Py5Vector instance.
 
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import time
 
@@ -59,5 +58,5 @@ Signatures
         draw: Callable,  # function to replace existing draw function
     ) -> None
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(400, 400, py5.P2D)
@@ -57,5 +56,5 @@ Signatures
 
     end_raw() -> None
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

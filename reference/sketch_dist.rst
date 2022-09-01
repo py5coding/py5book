@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # Sets the background gray value based on the distance 
     # of the mouse from the center of the screen
@@ -67,5 +66,5 @@ Signatures
         /,
     ) -> Union[float, npt.NDArray]
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

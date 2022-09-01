@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
       i = 12
@@ -58,5 +57,5 @@ Signatures
         value: Union[float, npt.ArrayLike]  # number greater than 0.0
     ) -> Union[float, npt.NDArray]
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

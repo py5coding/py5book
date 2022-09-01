@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import numpy as np
 
@@ -48,7 +47,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.translate(20, 20)
@@ -84,5 +82,5 @@ Signatures
         other: Union[Py5Vector, np.ndarray]  # vector to measure angle between
     ) -> Union[float, np.ndarray[np.floating]]
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

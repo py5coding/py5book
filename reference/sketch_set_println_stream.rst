@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import ipywidgets as widgets
     from IPython.display import display
@@ -65,5 +64,5 @@ Signatures
         println_stream: Any,  # println stream object to be used by println method
     ) -> None
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

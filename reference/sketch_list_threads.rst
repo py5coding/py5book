@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def thread1():
         py5.println('thread 1')
@@ -60,5 +59,5 @@ Signatures
 
     list_threads() -> None
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

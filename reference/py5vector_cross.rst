@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -60,5 +59,5 @@ Signatures
         other: Union[Py5Vector, np.ndarray]  # 2D or 3D vector to calculate the cross product with
     ) -> Union[float, Py5Vector, np.ndarray[np.floating]]
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

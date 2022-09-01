@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         chr_p = py5.create_font('DejaVu Sans', 32).get_shape('p')
@@ -64,5 +63,5 @@ Signatures
         /,
     ) -> bool
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

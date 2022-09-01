@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import time
 
@@ -54,5 +53,5 @@ Description
 
 Boolean value reflecting if the Sketch is in the running state. This will be ``False`` before :doc:`sketch_run_sketch` is called and ``True`` after. It will be ``False`` again after the Sketch has exited.
 
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

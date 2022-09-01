@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import py5_tools
     py5_tools.add_options('-Xmx4096m')
@@ -49,5 +48,5 @@ Signatures
         *options: list[str],
     ) -> None
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

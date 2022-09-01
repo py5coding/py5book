@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     SHAPE_VERTEX_CODES = {py5.Py5Shape.BREAK: 'BREAK',
                           py5.Py5Shape.VERTEX: 'VERTEX'}
@@ -73,5 +72,5 @@ Signatures
 
     get_vertex_codes() -> npt.NDArray[np.integer]
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

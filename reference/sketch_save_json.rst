@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     data = dict(mouse_x=[], mouse_y=[])
 
@@ -58,5 +57,5 @@ Signatures
         **kwargs: dict[str, Any]
     ) -> None
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

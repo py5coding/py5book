@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         a = py5.PI/3
@@ -41,7 +40,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         a = py5.PI + py5.PI/3
@@ -74,5 +72,5 @@ Signatures
         value: Union[float, npt.ArrayLike]  # value whose arc tangent is to be returned
     ) -> Union[float, npt.NDArray]
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

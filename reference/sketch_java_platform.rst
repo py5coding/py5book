@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.println(py5.java_platform)
@@ -39,5 +38,5 @@ Version of Java currently being used by py5. Internally the py5 library is using
 
 Underlying Processing field: javaPlatform
 
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

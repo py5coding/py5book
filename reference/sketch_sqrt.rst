@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.no_stroke()
@@ -49,7 +48,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.no_stroke()
@@ -94,5 +92,5 @@ Signatures
         value: Union[float, npt.NDArray]  # value to calculate the square root of
     ) -> Union[float, complex, npt.NDArray]
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

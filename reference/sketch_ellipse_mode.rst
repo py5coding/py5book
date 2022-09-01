@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.ellipse_mode(py5.RADIUS)  # set ellipse_mode to RADIUS
@@ -49,7 +48,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.ellipse_mode(py5.CORNER)  # set ellipse_mode is CORNER
@@ -95,5 +93,5 @@ Signatures
         /,
     ) -> None
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

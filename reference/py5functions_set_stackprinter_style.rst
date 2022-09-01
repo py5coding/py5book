@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import py5
     py5.set_stackprinter_style('lightbg')
@@ -46,5 +45,5 @@ Signatures
         style: str,  # name of stackprinter style
     ) -> None
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

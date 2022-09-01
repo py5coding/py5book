@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         words = ["apple", "bear", "cat", "dog"]
@@ -52,5 +51,5 @@ Signatures
         replace: bool = True,  # whether to select random items with or without replacement
     ) -> Any
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

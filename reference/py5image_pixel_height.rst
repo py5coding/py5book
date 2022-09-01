@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.pixel_density(2)
@@ -41,5 +40,5 @@ Height of the Py5Image object in pixels. This will be the same as :doc:`py5image
 
 Underlying Processing field: PImage.pixelHeight
 
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

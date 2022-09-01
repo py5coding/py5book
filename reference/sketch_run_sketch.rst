@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     py5.run_sketch(block=True)
     print("this message will not be printed until after the sketch exits")
@@ -37,7 +36,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     py5.run_sketch(block=False)
     print("this message will be printed immediately, while the sketch is running")
@@ -55,7 +53,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # run the sketch with the window at position 400, 300 on display #1
     py5.run_sketch(block=False, py5_options=['--location=400,300', '--display=1'], sketch_args=['py5 is awesome'])
@@ -100,5 +97,5 @@ Signatures
         sketch_functions: dict[str, Callable] = None  # sketch methods when using module mode
     ) -> None
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

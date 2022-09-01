@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         value = 20
@@ -39,7 +38,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         value = -10
@@ -72,5 +70,5 @@ Signatures
         stop: Union[float, npt.NDArray],  # upper bound of the value's current range
     ) -> Union[float, npt.NDArray]
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

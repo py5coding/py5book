@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.ellipse(0, 50, 33, 33)  # left circle
@@ -51,7 +50,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.ellipse(0, 50, 33, 33)  # left circle
@@ -92,5 +90,5 @@ Signatures
 
     pop_style() -> None
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

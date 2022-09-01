@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def draw_message(s: py5.Sketch):
         s.background(255)
@@ -43,7 +42,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def draw_message(s: py5.Sketch, message='hello world', color=(255, 0, 0)):
         s.background(255)
@@ -69,7 +67,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def random_squares(g: py5.Py5Graphics):
         for _ in range(10):
@@ -116,5 +113,5 @@ Signatures
         use_py5graphics: bool = False  # pass a py5graphics object instead of a sketch object
     ) -> Image
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

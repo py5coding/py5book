@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(py5.display_width, py5.display_height)
@@ -40,5 +39,5 @@ System variable that stores the width of the entire screen display. This can be 
 
 Underlying Processing field: `displayWidth <https://processing.org/reference/displayWidth.html>`_
 
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

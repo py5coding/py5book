@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def pick_color():
         global color
@@ -62,5 +61,5 @@ Signatures
         wait: bool = False,  # wait for thread to exit before returning
     ) -> None
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

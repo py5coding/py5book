@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         x = 2.88
@@ -49,5 +48,5 @@ Signatures
         value: Union[float, npt.ArrayLike]  # number to round down
     ) -> Union[int, npt.NDArray]
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

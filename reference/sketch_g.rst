@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.g.rect(10, 10, 50, 50)
@@ -40,5 +39,5 @@ The :doc:`py5graphics` object used by the Sketch. Internally, all of Processing'
 
 Underlying Processing field: g
 
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

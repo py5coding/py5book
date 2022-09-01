@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.arc(50, 55, 50, 50, 0, py5.HALF_PI)
@@ -47,7 +46,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.arc(50, 50, 80, 80, 0, py5.PI+py5.QUARTER_PI, py5.OPEN)
@@ -68,7 +66,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.arc(50, 50, 80, 80, 0, py5.PI+py5.QUARTER_PI, py5.CHORD)
@@ -89,7 +86,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.arc(50, 50, 80, 80, 0, py5.PI+py5.QUARTER_PI, py5.PIE)
@@ -139,5 +135,5 @@ Signatures
         /,
     ) -> None
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         img = py5.create_image(66, 66, py5.RGB)
@@ -49,7 +48,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         img = py5.create_image(66, 66, py5.ARGB)
@@ -92,5 +90,5 @@ Signatures
         /,
     ) -> Py5Image
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

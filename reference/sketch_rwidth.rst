@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
       py5.window_resizable(True)
@@ -58,5 +57,5 @@ The width of the scale invariant display window. This will be the value of the `
 
 Underlying Processing field: rwidth
 
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         tower = py5.load_image("tower.jpg")
@@ -50,5 +49,5 @@ Much like the :doc:`py5image_pixels` array, there are load and update methods th
 
 To set the entire contents of ``np_pixels[]`` to the contents of another equally sized numpy array, consider using :doc:`py5image_set_np_pixels`.
 
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

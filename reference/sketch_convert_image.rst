@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     from PIL import Image
 
@@ -64,5 +63,5 @@ Signatures
         dst: Py5Image = None  # existing Py5Image object to put the converted image into
     ) -> Py5Image
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

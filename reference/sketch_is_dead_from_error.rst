@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import time
 
@@ -54,5 +53,5 @@ Description
 
 Boolean value reflecting if the Sketch has been run and has now stopped because of an error. This will be ``True`` only when :doc:`sketch_is_dead` is ``True`` and the Sketch stopped because an exception was thrown.
 
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

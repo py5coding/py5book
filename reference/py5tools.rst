@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import py5_tools
 
@@ -38,7 +37,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import py5_tools
 
@@ -66,5 +64,5 @@ The following functions are provided:
 
 .. include:: include_py5tools.rst
 
-Updated on September 16, 2021 14:31:43pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 
