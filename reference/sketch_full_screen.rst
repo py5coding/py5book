@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # run the code at the full dimensions of the screen currently
     # selected inside the preferences window
@@ -52,7 +51,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # if more than one screen is attached to the computer, run the
     # code at the full dimensions on the screen defined by the
@@ -86,7 +84,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # run full screen using the P2D renderer on screen 2
 
@@ -118,7 +115,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # if more than one screen is attached to the computer, run the
     # code at the full dimensions across all of the attached screens
@@ -180,5 +176,5 @@ Signatures
         /,
     ) -> None
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

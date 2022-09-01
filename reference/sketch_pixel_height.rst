@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(600, 400)
@@ -40,7 +39,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(600, 400)
@@ -81,5 +79,5 @@ Height of the display window in pixels. When ``pixel_density(2)`` is used to mak
 
 Underlying Processing field: `pixelHeight <https://processing.org/reference/pixelHeight.html>`_
 
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

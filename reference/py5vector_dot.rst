@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import numpy as np
 
@@ -45,7 +44,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global v1
@@ -88,5 +86,5 @@ Signatures
         other: Union[Py5Vector, np.ndarray]  # vector to calculate the dot product with
     ) -> Union[float, np.ndarray[np.floating]]
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

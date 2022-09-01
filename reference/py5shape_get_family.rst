@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # family will be one of these values
     SHAPE_FAMILY_VALS = {py5.Py5Shape.GROUP: 'GROUP',
@@ -62,5 +61,5 @@ Signatures
 
     get_family() -> int
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

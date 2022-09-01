@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import time
     import py5_tools
@@ -60,5 +59,5 @@ Signatures
         hook_post_draw: bool = False  # attach hook to Sketch's post_draw method instead of draw
     ) -> PIL.Image
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

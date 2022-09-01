@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     font_list = py5.Py5Font.list()
     print(font_list)
@@ -48,5 +47,5 @@ Signatures
 
     list() -> list[str]
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

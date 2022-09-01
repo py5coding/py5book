@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         a = 20
@@ -54,7 +53,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         x1 = 15
@@ -91,5 +89,5 @@ Signatures
         amt: Union[float, npt.NDArray],  # float between 0.0 and 1.0
     ) -> Union[float, npt.NDArray]
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

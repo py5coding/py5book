@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         c = py5.color(255, 204, 0)  # define color 'c'
@@ -46,7 +45,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         c = py5.color(255, 204, 0)  # define color 'c'
@@ -76,7 +74,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.no_stroke()  # don't draw a stroke around shapes
@@ -108,7 +105,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         c = 0xFFFFCC00  # define color 'c' using hex notation
@@ -200,5 +196,5 @@ Signatures
         /,
     ) -> int
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

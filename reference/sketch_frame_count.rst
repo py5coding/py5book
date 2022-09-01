@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.frame_rate(30)
@@ -44,5 +43,5 @@ The system variable ``frame_count`` contains the number of frames that have been
 
 Underlying Processing field: `frameCount <https://processing.org/reference/frameCount.html>`_
 
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

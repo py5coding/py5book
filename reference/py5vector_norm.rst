@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     v1 = py5.Py5Vector(40, 0)
     v2 = py5.Py5Vector(50, 50)
@@ -46,7 +45,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global v1
@@ -80,5 +78,5 @@ Description
 
 Normalized copy of the vector. The normalized copy will have a magnitude of 1.0. This property cannot be used on a vector of zeros, because a vector of zeros cannot be normalized.
 
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

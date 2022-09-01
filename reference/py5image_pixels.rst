@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global tower
@@ -55,5 +54,5 @@ Before accessing this array, the data must loaded with the :doc:`py5image_load_p
 
 Underlying Processing field: `PImage.pixels <https://processing.org/reference/PImage_pixels.html>`_
 
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

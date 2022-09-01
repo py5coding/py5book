@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     %%py5drawdxf 200 200 /tmp/test.dxf
     py5.translate(py5.width//2, py5.height//2)
@@ -70,5 +69,5 @@ Arguments
     optional arguments:
       --unsafe  allow new variables to enter the user namespace
 
-Updated on October 29, 2021 22:01:43pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

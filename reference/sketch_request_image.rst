@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def draw():
         global img_promise
@@ -59,5 +58,5 @@ Signatures
         image_path: Union[str, Path]  # url or file path for image file
     ) -> Py5Promise
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

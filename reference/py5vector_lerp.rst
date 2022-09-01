@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         v1 = py5.Py5Vector(40, -80)
@@ -67,5 +66,5 @@ Signatures
         amt: Union[float, np.ndarray],  # float between 0.0 and 1.0
     ) -> Union[Py5Vector, np.ndarray[np.floating]]
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

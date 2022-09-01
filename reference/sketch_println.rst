@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def draw():
         py5.square(py5.random_int(py5.width), py5.random_int(py5.height), 10)
@@ -54,5 +53,5 @@ Signatures
         stderr: bool = False  # use stderr instead of stdout
     ) -> None
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

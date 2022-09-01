@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     fill_val = 128
 
@@ -65,5 +64,5 @@ If you are using ``P2D`` or ``P3D`` as your renderer, use the ``NEWT`` KeyEvent 
 
 Underlying Processing field: `keyCode <https://processing.org/reference/keyCode.html>`_
 
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

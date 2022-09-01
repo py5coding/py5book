@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import py5_tools
 
@@ -60,5 +59,5 @@ Signatures
         block: bool = False  # method returns immediately (False) or blocks until function returns (True)
     ) -> list[PIL.Image]
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

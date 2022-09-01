@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import numpy as np
 
@@ -63,5 +62,5 @@ For 3D vectors, the heading values follow the ISO convention for spherical coord
 
 For 4D vectors, the heading values follow the spherical coordinate system defined in Wikipedia's N-sphere article. The first heading value is the rotation around the zw plane relative to the positive x axis. The second heading value is the rotation around the xw plane relative to the positive y axis. The third heading value is the rotation around the xy plane relative to the positive z axis.
 
-Updated on August 25, 2022 20:01:47pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

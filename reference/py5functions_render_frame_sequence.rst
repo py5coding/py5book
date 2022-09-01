@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def draw_counter(s: py5.Sketch):
         s.background(255)
@@ -43,7 +42,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup_counter(s: py5.Sketch, color=(0,)):
         s.fill(*color)
@@ -75,7 +73,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def random_squares(g: py5.Py5Graphics):
         for _ in range(10):
@@ -128,5 +125,5 @@ Signatures
         use_py5graphics: bool = False  # pass a py5graphics object instead of a sketch object
     ) -> list[PIL.ImageFile.ImageFile]
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

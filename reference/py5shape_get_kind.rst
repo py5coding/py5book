@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # this is just a subset of the possible values
     PY5SHAPE_KIND_VALS = {py5.Py5Shape.GROUP: 'GROUP',
@@ -60,5 +59,5 @@ Signatures
 
     get_kind() -> int
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

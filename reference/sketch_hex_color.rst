@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         c = py5.color(15, 63, 240)
@@ -55,5 +54,5 @@ Signatures
         color: int,  # any color value
     ) -> str
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

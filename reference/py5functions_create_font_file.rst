@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     py5.create_font_file('Comic Sans', 20)
 
@@ -36,7 +35,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     for size in [10, 12, 15, 20]:
         py5.create_font_file('Comic Sans', 20, f'comic_sans_{size}.vlw', characters='abcde', pause=False)
@@ -75,5 +73,5 @@ Signatures
         pause: bool = True,  # pause after creating font file
     ) -> None
 
-Updated on September 01, 2022 14:08:27pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 
