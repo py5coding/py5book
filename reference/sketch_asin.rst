@@ -73,5 +73,6 @@ Signatures
     asin(
         value: Union[float, npt.ArrayLike]  # value in the range of -1 to 1 whose arc sine is to be returned
     ) -> Union[float, npt.NDArray]
-Updated on September 01, 2022 12:53:02pm UTC
+
+Updated on September 01, 2022 14:08:27pm UTC
 

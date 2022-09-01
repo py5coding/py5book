@@ -59,5 +59,6 @@ Signatures
     cross(
         other: Union[Py5Vector, np.ndarray]  # 2D or 3D vector to calculate the cross product with
     ) -> Union[float, Py5Vector, np.ndarray[np.floating]]
-Updated on September 01, 2022 12:53:02pm UTC
+
+Updated on September 01, 2022 14:08:27pm UTC
 

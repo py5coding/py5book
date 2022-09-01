@@ -93,5 +93,6 @@ Signatures
     sqrt(
         value: Union[float, npt.NDArray]  # value to calculate the square root of
     ) -> Union[float, complex, npt.NDArray]
-Updated on September 01, 2022 12:53:02pm UTC
+
+Updated on September 01, 2022 14:08:27pm UTC
 

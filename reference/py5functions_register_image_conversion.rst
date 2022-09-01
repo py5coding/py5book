@@ -72,5 +72,6 @@ Signatures
         precondition: Callable,  # predicate determining if an object can be converted
         convert_function: Callable,  # function to convert object to relevant image data
     ) -> None
-Updated on September 01, 2022 12:53:02pm UTC
+
+Updated on September 01, 2022 14:08:27pm UTC
 

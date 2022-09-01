@@ -59,5 +59,6 @@ Signatures
         angle: float,  # angle of rotation, measured in radians
         v: Py5Vector3D,  # 3D vector to rotate vector around
     ) -> Py5Vector3D
-Updated on September 01, 2022 12:53:02pm UTC
+
+Updated on September 01, 2022 14:08:27pm UTC
 

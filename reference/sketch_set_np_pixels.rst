@@ -61,5 +61,6 @@ Signatures
         array: npt.NDArray[np.uint8],  # properly sized numpy array to be copied to np_pixels[]
         bands: str = "ARGB",  # color channels in the array's third dimension
     ) -> None
-Updated on September 01, 2022 12:53:02pm UTC
+
+Updated on September 01, 2022 14:08:27pm UTC
 

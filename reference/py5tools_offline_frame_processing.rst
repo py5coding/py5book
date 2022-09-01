@@ -77,5 +77,6 @@ Signatures
         queue_limit: int = None,  # maximum number of frames that can be on the queue waiting to be processed
         block: bool = False  # method returns immediately (False) or blocks until function returns (True)
     ) -> None
-Updated on September 01, 2022 12:53:02pm UTC
+
+Updated on September 01, 2022 14:08:27pm UTC
 

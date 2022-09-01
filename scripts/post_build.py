@@ -47,7 +47,6 @@ GROUP_CASE_PAIRS = [
 ###############################################################################
 
 for doc in BUILD_DIR.glob("**/*.html"):
-    print(f'examining {str(doc)}')
     with open(doc, "r") as f:
         html = f.read()
 

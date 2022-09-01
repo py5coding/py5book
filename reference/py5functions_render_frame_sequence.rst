@@ -127,5 +127,6 @@ Signatures
         draw_kwargs: dict = None,  # additional keyword arguments to pass to draw function
         use_py5graphics: bool = False  # pass a py5graphics object instead of a sketch object
     ) -> list[PIL.ImageFile.ImageFile]
-Updated on September 01, 2022 12:53:02pm UTC
+
+Updated on September 01, 2022 14:08:27pm UTC
 
