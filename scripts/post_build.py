@@ -46,7 +46,7 @@ GROUP_CASE_PAIRS = [
 # MODIFY REFERENCE GITHUB LINKS
 ###############################################################################
 
-for refdoc in BUILD_DIR.glob("reference/*.html"):
+for refdoc in BUILD_DIR.glob("**/reference/*.html"):
     with open(refdoc, "r") as f:
         html = f.read()
 
@@ -65,6 +65,7 @@ for refdoc in BUILD_DIR.glob("reference/*.html"):
         new_link = f'https://github.com/py5coding/py5generator/edit/main/py5_docs/Reference/api_en/{stem}.txt'
         html = html.replace(original_link, new_link)
 
+        # TODO: this should be for all issue links, not just the reference ones
         # fix new issue link to point to py5generator repo
         html = html.replace('https://github.com/py5coding/py5book/issues/new?', 'https://github.com/py5coding/py5generator/issues/new?')
 
