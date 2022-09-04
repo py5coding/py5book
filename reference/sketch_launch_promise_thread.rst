@@ -27,7 +27,7 @@ Examples
 
 
     def load_data():
-        return py5.load_json('http://ixora.io/downloads/secret_message.json')
+        return py5.load_json('http://py5coding.org/files/secret_message.json')
 
 
     def draw():
@@ -72,5 +72,5 @@ Signatures
         kwargs: dict = None  # keyword arguments to pass to the given function
     ) -> Py5Promise
 
-Updated on September 01, 2022 17:43:42pm UTC
+Updated on September 04, 2022 12:55:11pm UTC
 

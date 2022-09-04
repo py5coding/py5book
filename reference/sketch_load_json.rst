@@ -49,7 +49,7 @@ Examples
 
 
     def load_data():
-        return py5.load_json('http://ixora.io/downloads/secret_message.json')
+        return py5.load_json('http://py5coding.org/files/secret_message.json')
 
 
     def draw():
@@ -82,5 +82,5 @@ Signatures
         **kwargs: dict[str, Any]
     ) -> Any
 
-Updated on September 01, 2022 16:36:02pm UTC
+Updated on September 04, 2022 12:55:11pm UTC
 
