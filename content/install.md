@@ -108,7 +108,7 @@ You can create a complete Anaconda environment for py5 using one
 command:
 
 ``` bash
-conda env create -n py5coding -f http://py5.ixora.io/files/install/py5_environment.yml
+conda env create -n py5coding -f http://py5coding.org/files/install/py5_environment.yml
 ```
 
 Feel free to replace `py5coding` with your prefered name for the

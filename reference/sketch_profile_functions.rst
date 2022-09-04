@@ -25,7 +25,7 @@ Examples
 
     def setup():
         # to load images from the web, use `request_image` instead
-        img = py5.load_image('http://py5.ixora.io/images/examples/apples.jpg')
+        img = py5.load_image('http://py5coding.org/files/apples.jpg')
         py5.image_mode(py5.CORNERS)
         py5.image(img, 10, 10, py5.width - 10, py5.height - 10)
 
@@ -62,5 +62,5 @@ Signatures
         function_names: list[str],  # names of py5 functions to be profiled
     ) -> None
 
-Updated on September 01, 2022 16:36:02pm UTC
+Updated on September 04, 2022 12:55:11pm UTC
 

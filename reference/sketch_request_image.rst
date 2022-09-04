@@ -24,7 +24,7 @@ Examples
         global img_promise
         if py5.frame_count == 1:
             # the request should only be made once
-            img_promise = py5.request_image('http://ixora.io/downloads/apples.jpg')
+            img_promise = py5.request_image('http://py5coding.org/files/apples.jpg')
 
         py5.background(0)
         if img_promise.is_ready:
@@ -58,5 +58,5 @@ Signatures
         image_path: Union[str, Path]  # url or file path for image file
     ) -> Py5Promise
 
-Updated on September 01, 2022 16:36:02pm UTC
+Updated on September 04, 2022 12:55:11pm UTC
 
