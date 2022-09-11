@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(200, 200)
@@ -42,18 +41,15 @@ This method provides the same functionality as :doc:`py5surface_set_title` but w
 
 Underlying Processing method: windowTitle
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    window_title(title: str, /) -> None
+    window_title(
+        title: str,  # new window title
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **title**: `str` - new window title
-
-
-Updated on April 27, 2022 11:19:15am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

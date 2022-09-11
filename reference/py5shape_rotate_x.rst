@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global s
@@ -56,18 +55,15 @@ This method requires a 3D renderer. You need to use ``P3D`` as a third parameter
 
 Underlying Processing method: `PShape.rotateX <https://processing.org/reference/PShape_rotateX_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    rotate_x(angle: float, /) -> None
+    rotate_x(
+        angle: float,  # angle of rotation specified in radians
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **angle**: `float` - angle of rotation specified in radians
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

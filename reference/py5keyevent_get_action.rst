@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(200, 200, py5.P2D)
@@ -56,12 +55,12 @@ Return the key event's action. This value will always be implied by the triggere
 
 Underlying Processing method: getAction
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     get_action() -> int
 
-Updated on April 27, 2022 10:44:51am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

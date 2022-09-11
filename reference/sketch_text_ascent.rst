@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         base = py5.height * 0.75
@@ -53,12 +52,12 @@ Returns ascent of the current font at its current size. This information is usef
 
 Underlying Processing method: `textAscent <https://processing.org/reference/textAscent_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     text_ascent() -> float
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

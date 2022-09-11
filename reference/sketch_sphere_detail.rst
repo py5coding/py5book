@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -50,21 +49,21 @@ Controls the detail used to render a sphere by adjusting the number of vertices 
 
 Underlying Processing method: `sphereDetail <https://processing.org/reference/sphereDetail_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    sphere_detail(res: int, /) -> None
-    sphere_detail(ures: int, vres: int, /) -> None
+    sphere_detail(
+        res: int,  # number of segments (minimum 3) used per full circle revolution
+        /,
+    ) -> None
 
-Parameters
-----------
+    sphere_detail(
+        ures: int,  # number of segments used longitudinally per full circle revolutoin
+        vres: int,  # number of segments used latitudinally from top to bottom
+        /,
+    ) -> None
 
-* **res**: `int` - number of segments (minimum 3) used per full circle revolution
-* **ures**: `int` - number of segments used longitudinally per full circle revolutoin
-* **vres**: `int` - number of segments used latitudinally from top to bottom
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

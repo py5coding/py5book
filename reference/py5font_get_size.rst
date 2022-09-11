@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         font = py5.create_font('DejaVu Sans', 15)
@@ -48,12 +47,12 @@ Get the font's size.
 
 Underlying Processing method: PFont.getSize
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     get_size() -> int
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

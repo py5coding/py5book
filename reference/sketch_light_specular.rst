@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -54,20 +53,17 @@ Sets the specular color for lights. Like :doc:`sketch_fill`, it affects only the
 
 Underlying Processing method: `lightSpecular <https://processing.org/reference/lightSpecular_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    light_specular(v1: float, v2: float, v3: float, /) -> None
+    light_specular(
+        v1: float,  # red or hue value (depending on current color mode)
+        v2: float,  # green or saturation value (depending on current color mode)
+        v3: float,  # blue or brightness value (depending on current color mode)
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **v1**: `float` - red or hue value (depending on current color mode)
-* **v2**: `float` - green or saturation value (depending on current color mode)
-* **v3**: `float` - blue or brightness value (depending on current color mode)
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

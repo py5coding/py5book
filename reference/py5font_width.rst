@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         font_size = 45
@@ -56,18 +55,15 @@ This will return 0 if the character is not in the font's character set.
 
 Underlying Processing method: PFont.width
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    width(c: chr, /) -> float
+    width(
+        c: chr,  # single character
+        /,
+    ) -> float
 
-Parameters
-----------
-
-* **c**: `chr` - single character
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

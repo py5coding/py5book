@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         us_map = py5.load_shape("us_map.svg")
@@ -50,18 +49,15 @@ Removes a child ``Py5Shape`` object from a parent ``Py5Shape`` object that is de
 
 Underlying Processing method: PShape.removeChild
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    remove_child(idx: int, /) -> None
+    remove_child(
+        idx: int,  # index value
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **idx**: `int` - index value
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     data = dict(mouse_x=[], mouse_y=[])
 
@@ -47,20 +46,16 @@ Save JSON data to a file. If ``filename`` is not an absolute path, it will be sa
 
 The JSON data is saved using the Python json library with the ``dump`` method, and the ``kwargs`` parameter is passed along to that method.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    save_json(json_data: Any, filename: Union[str, Path], **kwargs: dict[str, Any]) -> None
+    save_json(
+        json_data: Any,  # json data object
+        filename: Union[str, Path],  # filename to save JSON data object to
+        **kwargs: dict[str, Any]
+    ) -> None
 
-Parameters
-----------
-
-* **filename**: `Union[str, Path]` - filename to save JSON data object to
-* **json_data**: `Any` - json data object
-* **kwargs**: `dict[str, Any]` - keyword arguments
-
-
-Updated on March 01, 2022 12:15:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

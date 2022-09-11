@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -47,18 +46,15 @@ Get the value of the z coordinate for the vertex ``index``.
 
 Underlying Processing method: PShape.getVertexZ
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    get_vertex_z(index: int, /) -> float
+    get_vertex_z(
+        index: int,  # vertex index
+        /,
+    ) -> float
 
-Parameters
-----------
-
-* **index**: `int` - vertex index
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

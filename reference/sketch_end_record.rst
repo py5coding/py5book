@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(400, 400)
@@ -49,12 +48,12 @@ Stops the recording process started by :doc:`sketch_begin_record` and closes the
 
 Underlying Processing method: `endRecord <https://processing.org/reference/endRecord_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     end_record() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

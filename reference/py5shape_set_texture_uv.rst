@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P2D)
@@ -61,20 +60,17 @@ The ``u`` and ``v`` coordinates define the mapping of a ``Py5Shape`` object's te
 
 Underlying Processing method: PShape.setTextureUV
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    set_texture_uv(index: int, u: float, v: float, /) -> None
+    set_texture_uv(
+        index: int,  # vertex index
+        u: float,  # horizontal coordinate for the texture mapping
+        v: float,  # vertical coordinate for the texture mapping
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **index**: `int` - vertex index
-* **u**: `float` - horizontal coordinate for the texture mapping
-* **v**: `float` - vertical coordinate for the texture mapping
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

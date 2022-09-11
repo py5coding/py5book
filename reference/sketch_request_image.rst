@@ -19,13 +19,12 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def draw():
         global img_promise
         if py5.frame_count == 1:
             # the request should only be made once
-            img_promise = py5.request_image('http://py5.ixora.io/files/apples.jpg')
+            img_promise = py5.request_image('http://py5coding.org/files/apples.jpg')
 
         py5.background(0)
         if img_promise.is_ready:
@@ -50,18 +49,14 @@ Consider using ``request_image()`` to load image data from within a Sketch's ``d
 
 The returned Py5Promise object has an ``is_ready`` property that will be ``True`` when the ``result`` property contains the value function ``f`` returned. Before then, the ``result`` property will be ``None``.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    request_image(image_path: Union[str, Path]) -> Py5Promise
+    request_image(
+        image_path: Union[str, Path]  # url or file path for image file
+    ) -> Py5Promise
 
-Parameters
-----------
-
-* **image_path**: `Union[str, Path]` - url or file path for image file
-
-
-Updated on March 24, 2022 16:35:56pm UTC
+Updated on September 04, 2022 12:55:11pm UTC
 

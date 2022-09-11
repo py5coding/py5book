@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         words = ["apple", "bear", "cat", "dog"]
@@ -41,20 +40,16 @@ Select random items from a list. The list items can be of any type. If multiple 
 
 This function's randomness can be influenced by :doc:`sketch_random_seed`, and makes calls to numpy to select the random items.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    random_choice(objects: list[Any], size: int=1, replace: bool=True) -> Any
+    random_choice(
+        objects: list[Any],  # list of objects to choose from
+        size: int = 1,  # number of random items to select
+        replace: bool = True,  # whether to select random items with or without replacement
+    ) -> Any
 
-Parameters
-----------
-
-* **objects**: `list[Any]` - list of objects to choose from
-* **replace**: `bool=True` - whether to select random items with or without replacement
-* **size**: `int=1` - number of random items to select
-
-
-Updated on July 18, 2022 17:22:20pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

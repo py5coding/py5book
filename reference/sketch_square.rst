@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.square(30, 20, 55)
@@ -42,20 +41,17 @@ Draws a square to the screen. A square is a four-sided shape with every angle at
 
 Underlying Processing method: `square <https://processing.org/reference/square_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    square(x: float, y: float, extent: float, /) -> None
+    square(
+        x: float,  # x-coordinate of the rectangle by default
+        y: float,  # y-coordinate of the rectangle by default
+        extent: float,  # width and height of the rectangle by default
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **extent**: `float` - width and height of the rectangle by default
-* **x**: `float` - x-coordinate of the rectangle by default
-* **y**: `float` - y-coordinate of the rectangle by default
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

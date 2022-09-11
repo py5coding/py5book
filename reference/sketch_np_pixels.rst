@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         pink = [255, 255, 102, 204]
@@ -46,7 +45,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.load_np_pixels()
@@ -75,6 +73,5 @@ Much like the :doc:`sketch_pixels` array, there are load and update methods that
 
 To set the entire contents of ``np_pixels[]`` to the contents of another properly sized numpy array, consider using :doc:`sketch_set_np_pixels`.
 
-
-Updated on June 13, 2022 01:23:16am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.fill(153)
@@ -44,7 +43,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.fill(204, 102, 0)
@@ -73,28 +71,47 @@ To change the color of an image or a texture, use :doc:`sketch_tint`.
 
 Underlying Processing method: `fill <https://processing.org/reference/fill_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    fill(gray: float, /) -> None
-    fill(gray: float, alpha: float, /) -> None
-    fill(rgb: int, /) -> None
-    fill(rgb: int, alpha: float, /) -> None
-    fill(v1: float, v2: float, v3: float, /) -> None
-    fill(v1: float, v2: float, v3: float, alpha: float, /) -> None
+    fill(
+        gray: float,  # number specifying value between white and black
+        /,
+    ) -> None
 
-Parameters
-----------
+    fill(
+        gray: float,  # number specifying value between white and black
+        alpha: float,  # opacity of the fill
+        /,
+    ) -> None
 
-* **alpha**: `float` - opacity of the fill
-* **gray**: `float` - number specifying value between white and black
-* **rgb**: `int` - color variable or hex value
-* **v1**: `float` - red or hue value (depending on current color mode)
-* **v2**: `float` - green or saturation value (depending on current color mode)
-* **v3**: `float` - blue or brightness value (depending on current color mode)
+    fill(
+        rgb: int,  # color variable or hex value
+        /,
+    ) -> None
 
+    fill(
+        rgb: int,  # color variable or hex value
+        alpha: float,  # opacity of the fill
+        /,
+    ) -> None
 
-Updated on July 31, 2022 13:59:47pm UTC
+    fill(
+        v1: float,  # red or hue value (depending on current color mode)
+        v2: float,  # green or saturation value (depending on current color mode)
+        v3: float,  # blue or brightness value (depending on current color mode)
+        /,
+    ) -> None
+
+    fill(
+        v1: float,  # red or hue value (depending on current color mode)
+        v2: float,  # green or saturation value (depending on current color mode)
+        v3: float,  # blue or brightness value (depending on current color mode)
+        alpha: float,  # opacity of the fill
+        /,
+    ) -> None
+
+Updated on September 01, 2022 16:36:02pm UTC
 

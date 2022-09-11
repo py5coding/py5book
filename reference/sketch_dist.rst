@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # Sets the background gray value based on the distance 
     # of the mouse from the center of the screen
@@ -44,24 +43,28 @@ Description
 
 Calculates the distance between two points.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    dist(x1: Union[float, npt.NDArray], y1: Union[float, npt.NDArray], x2: Union[float, npt.NDArray], y2: Union[float, npt.NDArray], /) -> Union[float, npt.NDArray]
-    dist(x1: Union[float, npt.NDArray], y1: Union[float, npt.NDArray], z1: Union[float, npt.NDArray], x2: Union[float, npt.NDArray], y2: Union[float, npt.NDArray], z2: Union[float, npt.NDArray], /) -> Union[float, npt.NDArray]
+    dist(
+        x1: Union[float, npt.NDArray],  # x-coordinate of the first point
+        y1: Union[float, npt.NDArray],  # y-coordinate of the first point
+        x2: Union[float, npt.NDArray],  # x-coordinate of the second point
+        y2: Union[float, npt.NDArray],  # y-coordinate of the second point
+        /,
+    ) -> Union[float, npt.NDArray]
 
-Parameters
-----------
+    dist(
+        x1: Union[float, npt.NDArray],  # x-coordinate of the first point
+        y1: Union[float, npt.NDArray],  # y-coordinate of the first point
+        z1: Union[float, npt.NDArray],  # z-coordinate of the first point
+        x2: Union[float, npt.NDArray],  # x-coordinate of the second point
+        y2: Union[float, npt.NDArray],  # y-coordinate of the second point
+        z2: Union[float, npt.NDArray],  # z-coordinate of the second point
+        /,
+    ) -> Union[float, npt.NDArray]
 
-* **x1**: `Union[float, npt.NDArray]` - x-coordinate of the first point
-* **x2**: `Union[float, npt.NDArray]` - x-coordinate of the second point
-* **y1**: `Union[float, npt.NDArray]` - y-coordinate of the first point
-* **y2**: `Union[float, npt.NDArray]` - y-coordinate of the second point
-* **z1**: `Union[float, npt.NDArray]` - z-coordinate of the first point
-* **z2**: `Union[float, npt.NDArray]` - z-coordinate of the second point
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

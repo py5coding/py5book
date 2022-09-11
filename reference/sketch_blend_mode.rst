@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.background(0)
@@ -42,7 +41,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P2D)
@@ -80,18 +78,15 @@ We recommend using ``blend_mode()`` and not the previous :doc:`sketch_blend` fun
 
 Underlying Processing method: `blendMode <https://processing.org/reference/blendMode_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    blend_mode(mode: int, /) -> None
+    blend_mode(
+        mode: int,  # the blending mode to use
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **mode**: `int` - the blending mode to use
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

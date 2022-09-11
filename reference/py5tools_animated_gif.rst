@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import py5_tools
 
@@ -46,26 +45,23 @@ By default this function will return right away and construct the animated gif i
 
 If your Sketch has a ``post_draw()`` method, use the ``hook_post_draw`` parameter to make this function run after ``post_draw()`` instead of ``draw()``. This is important when using Processing libraries that support ``post_draw()`` such as Camera3D or ColorBlindness.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    animated_gif(filename: str, count: int, period: float, duration: float, *, loop: int = 0, optimize: bool = True, sketch: Sketch = None, hook_post_draw: bool = False, block: bool = False) -> None
+    animated_gif(
+        filename: str,  # filename of GIF to create
+        count: int,  # number of Sketch snapshots to create
+        period: float,  # time in seconds between Sketch snapshots
+        duration: float,  # time in seconds between frames in the GIF
+        *,
+        loop: int = 0,  # number of times for the GIF to loop (default of 0 loops indefinitely)
+        optimize: bool = True,  # optimize GIF palette
+        sketch: Sketch = None,  # running Sketch
+        hook_post_draw: bool = False,  # attach hook to Sketch's post_draw method instead of draw
+        block: bool = False  # method returns immediately (False) or blocks until function returns (True)
+    ) -> None
 
-Parameters
-----------
-
-* **block**: `bool = False` - method returns immediately (False) or blocks until function returns (True)
-* **count**: `int` - number of Sketch snapshots to create
-* **duration**: `float` - time in seconds between frames in the GIF
-* **filename**: `str` - filename of GIF to create
-* **hook_post_draw**: `bool = False` - attach hook to Sketch's post_draw method instead of draw
-* **loop**: `int = 0` - number of times for the GIF to loop (default of 0 loops indefinitely)
-* **optimize**: `bool = True` - optimize GIF palette
-* **period**: `float` - time in seconds between Sketch snapshots
-* **sketch**: `Sketch = None` - running Sketch
-
-
-Updated on February 21, 2022 11:40:40am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

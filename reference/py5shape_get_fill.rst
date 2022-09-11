@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.no_stroke()
@@ -50,18 +49,15 @@ This method can only be used for a complete ``Py5Shape`` object, and never withi
 
 Underlying Processing method: PShape.getFill
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    get_fill(index: int, /) -> int
+    get_fill(
+        index: int,  # vertex index
+        /,
+    ) -> int
 
-Parameters
-----------
-
-* **index**: `int` - vertex index
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.noise_seed(42)
@@ -43,7 +42,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global xpos, ypos
@@ -75,18 +73,15 @@ Sets the seed value for :doc:`sketch_noise`. By default, :doc:`sketch_noise` pro
 
 Underlying Processing method: `noiseSeed <https://processing.org/reference/noiseSeed_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    noise_seed(seed: int, /) -> None
+    noise_seed(
+        seed: int,  # seed value
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **seed**: `int` - seed value
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

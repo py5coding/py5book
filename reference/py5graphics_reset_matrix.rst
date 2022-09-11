@@ -12,12 +12,12 @@ This method is the same as :doc:`sketch_reset_matrix` but linked to a ``Py5Graph
 
 Underlying Processing method: PGraphics.resetMatrix
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     reset_matrix() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

@@ -12,21 +12,21 @@ This method is the same as :doc:`sketch_sphere_detail` but linked to a ``Py5Grap
 
 Underlying Processing method: PGraphics.sphereDetail
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    sphere_detail(res: int, /) -> None
-    sphere_detail(ures: int, vres: int, /) -> None
+    sphere_detail(
+        res: int,  # number of segments (minimum 3) used per full circle revolution
+        /,
+    ) -> None
 
-Parameters
-----------
+    sphere_detail(
+        ures: int,  # number of segments used longitudinally per full circle revolutoin
+        vres: int,  # number of segments used latitudinally from top to bottom
+        /,
+    ) -> None
 
-* **res**: `int` - number of segments (minimum 3) used per full circle revolution
-* **ures**: `int` - number of segments used longitudinally per full circle revolutoin
-* **vres**: `int` - number of segments used latitudinally from top to bottom
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

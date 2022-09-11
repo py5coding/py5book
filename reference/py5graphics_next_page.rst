@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(600, 600, py5.PDF, "/tmp/test.pdf")
@@ -49,12 +48,12 @@ Move to the next page in a PDF document. This method is only available when usin
 
 Underlying Processing method: PGraphics.nextPage
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     next_page() -> None
 
-Updated on July 18, 2022 17:37:19pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

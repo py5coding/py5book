@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # move the mouse left and right to see the curve change
 
@@ -55,18 +54,15 @@ Modifies the quality of forms created with :doc:`sketch_curve` and :doc:`sketch_
 
 Underlying Processing method: `curveTightness <https://processing.org/reference/curveTightness_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    curve_tightness(tightness: float, /) -> None
+    curve_tightness(
+        tightness: float,  # amount of deformation from the original vertices
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **tightness**: `float` - amount of deformation from the original vertices
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

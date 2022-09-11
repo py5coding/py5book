@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.no_stroke()
@@ -48,7 +47,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.no_stroke()
@@ -74,7 +72,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global bg
@@ -104,26 +101,38 @@ After changing the range of values for colors with code like ``color_mode(HSB, 3
 
 Underlying Processing method: `colorMode <https://processing.org/reference/colorMode_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    color_mode(mode: int, /) -> None
-    color_mode(mode: int, max1: float, max2: float, max3: float, /) -> None
-    color_mode(mode: int, max1: float, max2: float, max3: float, max_a: float, /) -> None
-    color_mode(mode: int, max: float, /) -> None
+    color_mode(
+        mode: int,  # Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
+        /,
+    ) -> None
 
-Parameters
-----------
+    color_mode(
+        mode: int,  # Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
+        max1: float,  # range for the red or hue depending on the current color mode
+        max2: float,  # range for the green or saturation depending on the current color mode
+        max3: float,  # range for the blue or brightness depending on the current color mode
+        /,
+    ) -> None
 
-* **max1**: `float` - range for the red or hue depending on the current color mode
-* **max2**: `float` - range for the green or saturation depending on the current color mode
-* **max3**: `float` - range for the blue or brightness depending on the current color mode
-* **max**: `float` - range for all color elements
-* **max_a**: `float` - range for the alpha
-* **mode**: `int` - Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
+    color_mode(
+        mode: int,  # Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
+        max1: float,  # range for the red or hue depending on the current color mode
+        max2: float,  # range for the green or saturation depending on the current color mode
+        max3: float,  # range for the blue or brightness depending on the current color mode
+        max_a: float,  # range for the alpha
+        /,
+    ) -> None
 
+    color_mode(
+        mode: int,  # Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
+        max: float,  # range for all color elements
+        /,
+    ) -> None
 
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

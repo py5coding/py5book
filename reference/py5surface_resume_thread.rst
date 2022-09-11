@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def draw():
         py5.rect(py5.random(py5.width), py5.random(py5.height), 10, 10)
@@ -52,12 +51,12 @@ The :doc:`sketch_frame_count` will continue incrementing after the Sketch is res
 
 Underlying Processing method: PSurface.resumeThread
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     resume_thread() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

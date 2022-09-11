@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -54,20 +53,21 @@ This method can only be used for a complete ``Py5Shape`` object, and never withi
 
 Underlying Processing method: PShape.getNormal
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    get_normal(index: int, /) -> Py5Vector
-    get_normal(index: int, vec: Py5Vector, /) -> Py5Vector
+    get_normal(
+        index: int,  # vertex index
+        /,
+    ) -> Py5Vector
 
-Parameters
-----------
+    get_normal(
+        index: int,  # vertex index
+        vec: Py5Vector,  # target object to place vertex normal vector into
+        /,
+    ) -> Py5Vector
 
-* **index**: `int` - vertex index
-* **vec**: `Py5Vector` - target object to place vertex normal vector into
-
-
-Updated on January 16, 2022 16:51:21pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

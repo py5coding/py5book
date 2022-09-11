@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -60,18 +59,15 @@ Sets the resolution at which curves display. The default value is 20. This funct
 
 Underlying Processing method: `curveDetail <https://processing.org/reference/curveDetail_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    curve_detail(detail: int, /) -> None
+    curve_detail(
+        detail: int,  # resolution of the curves
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **detail**: `int` - resolution of the curves
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

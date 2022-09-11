@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     from PIL import Image
 
@@ -53,19 +52,16 @@ The ``convert_image()`` method has builtin support for conversion of ``PIL.Image
 
 The caller can optionally pass an existing Py5Image object to put the converted image into using the ``dst`` parameter. This can have performance benefits in code that would otherwise continuously create new Py5Image objects. The converted image width and height must match that of the recycled Py5Image object.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    convert_image(obj: Any, *, dst: Py5Image = None) -> Py5Image
+    convert_image(
+        obj: Any,  # object to convert into a Py5Image object
+        *,
+        dst: Py5Image = None  # existing Py5Image object to put the converted image into
+    ) -> Py5Image
 
-Parameters
-----------
-
-* **dst**: `Py5Image = None` - existing Py5Image object to put the converted image into
-* **obj**: `Any` - object to convert into a Py5Image object
-
-
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

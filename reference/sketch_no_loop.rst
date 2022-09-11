@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(200, 200)
@@ -42,7 +41,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     x = 0.0
 
@@ -80,7 +78,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     some_mode = False
 
@@ -118,12 +115,12 @@ Note that if the Sketch is resized, :doc:`sketch_redraw` will be called to updat
 
 Underlying Processing method: `noLoop <https://processing.org/reference/noLoop_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     no_loop() -> None
 
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

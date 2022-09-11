@@ -22,18 +22,15 @@ This method is the same as :doc:`sketch_ellipse_mode` but linked to a ``Py5Graph
 
 Underlying Processing method: PGraphics.ellipseMode
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    ellipse_mode(mode: int, /) -> None
+    ellipse_mode(
+        mode: int,  # either CENTER, RADIUS, CORNER, or CORNERS
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **mode**: `int` - either CENTER, RADIUS, CORNER, or CORNERS
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

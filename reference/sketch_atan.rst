@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         a = py5.PI/3
@@ -41,7 +40,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         a = py5.PI + py5.PI/3
@@ -65,18 +63,14 @@ The inverse of :doc:`sketch_tan`, returns the arc tangent of a value. This funct
 
 This function makes a call to the numpy ``atan()`` function.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    atan(value: Union[float, npt.ArrayLike]) -> Union[float, npt.NDArray]
+    atan(
+        value: Union[float, npt.ArrayLike]  # value whose arc tangent is to be returned
+    ) -> Union[float, npt.NDArray]
 
-Parameters
-----------
-
-* **value**: `Union[float, npt.ArrayLike]` - value whose arc tangent is to be returned
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

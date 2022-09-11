@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global my_font
@@ -51,23 +50,31 @@ This function allows py5 to work with the font natively in the default renderer,
 
 Underlying Processing method: `createFont <https://processing.org/reference/createFont_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    create_font(name: str, size: float, /) -> Py5Font
-    create_font(name: str, size: float, smooth: bool, /) -> Py5Font
-    create_font(name: str, size: float, smooth: bool, charset: list[chr], /) -> Py5Font
+    create_font(
+        name: str,  # name of the font to load
+        size: float,  # point size of the font
+        /,
+    ) -> Py5Font
 
-Parameters
-----------
+    create_font(
+        name: str,  # name of the font to load
+        size: float,  # point size of the font
+        smooth: bool,  # true for an antialiased font, false for aliased
+        /,
+    ) -> Py5Font
 
-* **charset**: `list[chr]` - array containing characters to be generated
-* **name**: `str` - name of the font to load
-* **size**: `float` - point size of the font
-* **smooth**: `bool` - true for an antialiased font, false for aliased
+    create_font(
+        name: str,  # name of the font to load
+        size: float,  # point size of the font
+        smooth: bool,  # true for an antialiased font, false for aliased
+        charset: list[chr],  # array containing characters to be generated
+        /,
+    ) -> Py5Font
 
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

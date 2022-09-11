@@ -12,19 +12,17 @@ This method is the same as :doc:`sketch_end_shape` but linked to a ``Py5Graphics
 
 Underlying Processing method: PGraphics.endShape
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     end_shape() -> None
-    end_shape(mode: int, /) -> None
 
-Parameters
-----------
+    end_shape(
+        mode: int,  # use CLOSE to close the shape
+        /,
+    ) -> None
 
-* **mode**: `int` - use CLOSE to close the shape
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

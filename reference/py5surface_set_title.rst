@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         surface = py5.get_surface()
@@ -44,18 +43,15 @@ This method provides the same functionality as :doc:`sketch_window_title`.
 
 Underlying Processing method: PSurface.setTitle
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    set_title(title: str, /) -> None
+    set_title(
+        title: str,  # new window title
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **title**: `str` - new window title
-
-
-Updated on July 18, 2022 17:22:20pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

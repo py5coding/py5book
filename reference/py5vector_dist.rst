@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.background(128)
@@ -44,18 +43,14 @@ Description
 
 Calculate the distance between two vectors.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    dist(other: Union[Py5Vector, np.ndarray]) -> Union[float, np.ndarray[np.floating]]
+    dist(
+        other: Union[Py5Vector, np.ndarray]  # vector to calculate the distance from
+    ) -> Union[float, np.ndarray[np.floating]]
 
-Parameters
-----------
-
-* **other**: `Union[Py5Vector, np.ndarray]` - vector to calculate the distance from
-
-
-Updated on June 13, 2022 01:23:16am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

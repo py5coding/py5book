@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         x = 2.88
@@ -40,18 +39,14 @@ Calculates the closest int value that is greater than or equal to the value of t
 
 This function makes a call to the numpy ``ceil()`` function.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    ceil(value: Union[float, npt.ArrayLike]) -> Union[int, npt.NDArray]
+    ceil(
+        value: Union[float, npt.ArrayLike]  # number to round up
+    ) -> Union[int, npt.NDArray]
 
-Parameters
-----------
-
-* **value**: `Union[float, npt.ArrayLike]` - number to round up
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

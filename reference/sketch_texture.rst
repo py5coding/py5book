@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -53,18 +52,15 @@ When textures are in use, the fill color is ignored. Instead, use :doc:`sketch_t
 
 Underlying Processing method: `texture <https://processing.org/reference/texture_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    texture(image: Py5Image, /) -> None
+    texture(
+        image: Py5Image,  # reference to a Py5Image object
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **image**: `Py5Image` - reference to a Py5Image object
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

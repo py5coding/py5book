@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import numpy as np
 
@@ -52,19 +51,15 @@ This method makes its own calls to :doc:`sketch_load_np_pixels` and :doc:`sketch
 
 This method exists because setting the array contents with the code ``py5.np_pixels = array`` will cause an error, while the correct syntax, ``py5.np_pixels[:] = array``, might also be unintuitive for beginners.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    set_np_pixels(array: npt.NDArray[np.uint8], bands: str = 'ARGB') -> None
+    set_np_pixels(
+        array: npt.NDArray[np.uint8],  # properly sized numpy array to be copied to np_pixels[]
+        bands: str = "ARGB",  # color channels in the array's third dimension
+    ) -> None
 
-Parameters
-----------
-
-* **array**: `npt.NDArray[np.uint8]` - properly sized numpy array to be copied to np_pixels[]
-* **bands**: `str = 'ARGB'` - color channels in the array's third dimension
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

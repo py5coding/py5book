@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def pick_color():
         global color
@@ -58,23 +57,20 @@ Use the ``daemon`` parameter to make the launched thread a daemon that will run 
 
 The new thread is a Python thread, so all the usual caveats about the Global Interpreter Lock (GIL) apply here.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    launch_repeating_thread(f: Callable, name: str = None, *, time_delay: float = 0, daemon: bool = True, args: tuple = None, kwargs: dict = None) -> str
+    launch_repeating_thread(
+        f: Callable,  # function to call in the launched thread
+        name: str = None,  # name of thread to be created
+        *,
+        time_delay: float = 0,  # time delay in seconds between calls to the given function
+        daemon: bool = True,  # if the thread should be a daemon thread
+        args: tuple = None,  # positional arguments to pass to the given function
+        kwargs: dict = None  # keyword arguments to pass to the given function
+    ) -> str
 
-Parameters
-----------
-
-* **args**: `tuple = None` - positional arguments to pass to the given function
-* **daemon**: `bool = True` - if the thread should be a daemon thread
-* **f**: `Callable` - function to call in the launched thread
-* **kwargs**: `dict = None` - keyword arguments to pass to the given function
-* **name**: `str = None` - name of thread to be created
-* **time_delay**: `float = 0` - time delay in seconds between calls to the given function
-
-
-Updated on March 01, 2022 12:15:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.pixel_density(2)
@@ -41,6 +40,5 @@ Pixel density of the Py5Image object. This will always be equal to 1, even if th
 
 Underlying Processing field: PImage.pixelDensity
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

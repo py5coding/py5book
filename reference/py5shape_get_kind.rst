@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # this is just a subset of the possible values
     PY5SHAPE_KIND_VALS = {py5.Py5Shape.GROUP: 'GROUP',
@@ -53,12 +52,12 @@ Get the Py5Shape object's "kind" number.
 
 Underlying Processing method: PShape.getKind
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     get_kind() -> int
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def thread1():
         py5.println('thread 1')
@@ -53,12 +52,12 @@ Description
 
 List the names of all of the currently running threads. The names of previously launched threads that have exited will be removed from the list.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     list_threads() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

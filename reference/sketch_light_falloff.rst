@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -54,20 +53,17 @@ Thinking about an ambient light with a falloff can be tricky. If you want a regi
 
 Underlying Processing method: `lightFalloff <https://processing.org/reference/lightFalloff_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    light_falloff(constant: float, linear: float, quadratic: float, /) -> None
+    light_falloff(
+        constant: float,  # constant value or determining falloff
+        linear: float,  # linear value for determining falloff
+        quadratic: float,  # quadratic value for determining falloff
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **constant**: `float` - constant value or determining falloff
-* **linear**: `float` - linear value for determining falloff
-* **quadratic**: `float` - quadratic value for determining falloff
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

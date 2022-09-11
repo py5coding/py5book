@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.no_fill()
@@ -54,19 +53,17 @@ The ``end_shape()`` function is the companion to :doc:`sketch_begin_shape` and m
 
 Underlying Processing method: `endShape <https://processing.org/reference/endShape_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     end_shape() -> None
-    end_shape(mode: int, /) -> None
 
-Parameters
-----------
+    end_shape(
+        mode: int,  # use CLOSE to close the shape
+        /,
+    ) -> None
 
-* **mode**: `int` - use CLOSE to close the shape
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

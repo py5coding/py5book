@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # click within the image and press
     # the left and right mouse buttons to
@@ -47,7 +46,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # click within the image and press
     # the left and right mouse buttons to
@@ -79,6 +77,5 @@ When a mouse button is pressed, the value of the system variable ``mouse_button`
 
 Underlying Processing field: `mouseButton <https://processing.org/reference/mouseButton.html>`_
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

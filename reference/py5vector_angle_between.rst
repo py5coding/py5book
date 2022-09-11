@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import numpy as np
 
@@ -48,7 +47,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.translate(20, 20)
@@ -75,18 +73,14 @@ Description
 
 Measure the angle between two vectors.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    angle_between(other: Union[Py5Vector, np.ndarray]) -> Union[float, np.ndarray[np.floating]]
+    angle_between(
+        other: Union[Py5Vector, np.ndarray]  # vector to measure angle between
+    ) -> Union[float, np.ndarray[np.floating]]
 
-Parameters
-----------
-
-* **other**: `Union[Py5Vector, np.ndarray]` - vector to measure angle between
-
-
-Updated on June 13, 2022 01:23:16am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

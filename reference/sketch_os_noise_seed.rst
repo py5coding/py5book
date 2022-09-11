@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.os_noise_seed(42)
@@ -43,7 +42,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global xpos, ypos
@@ -73,18 +71,15 @@ Description
 
 Sets the seed value for :doc:`sketch_os_noise`. By default, :doc:`sketch_os_noise` produces different results each time the program is run. Set the seed parameter to a constant to return the same pseudo-random numbers each time the Sketch is run.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    os_noise_seed(seed: int, /) -> None
+    os_noise_seed(
+        seed: int,  # seed value
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **seed**: `int` - seed value
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

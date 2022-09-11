@@ -12,25 +12,22 @@ This method is the same as :doc:`sketch_quad` but linked to a ``Py5Graphics`` ob
 
 Underlying Processing method: PGraphics.quad
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    quad(x1: float, y1: float, x2: float, y2: float, x3: float, y3: float, x4: float, y4: float, /) -> None
+    quad(
+        x1: float,  # x-coordinate of the first corner
+        y1: float,  # y-coordinate of the first corner
+        x2: float,  # x-coordinate of the second corner
+        y2: float,  # y-coordinate of the second corner
+        x3: float,  # x-coordinate of the third corner
+        y3: float,  # y-coordinate of the third corner
+        x4: float,  # x-coordinate of the fourth corner
+        y4: float,  # y-coordinate of the fourth corner
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **x1**: `float` - x-coordinate of the first corner
-* **x2**: `float` - x-coordinate of the second corner
-* **x3**: `float` - x-coordinate of the third corner
-* **x4**: `float` - x-coordinate of the fourth corner
-* **y1**: `float` - y-coordinate of the first corner
-* **y2**: `float` - y-coordinate of the second corner
-* **y3**: `float` - y-coordinate of the third corner
-* **y4**: `float` - y-coordinate of the fourth corner
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

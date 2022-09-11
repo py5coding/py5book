@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def folder_selected(selection):
         if selection is None:
@@ -48,20 +47,16 @@ This method has some platform specific quirks. On OSX, this does not work when t
 
 Underlying Processing method: `selectFolder <https://processing.org/reference/selectFolder_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    select_folder(prompt: str, callback: Callable, default_folder: str = None) -> None
+    select_folder(
+        prompt: str,  # text prompt for select dialog box
+        callback: Callable,  # callback function after selection is made
+        default_folder: str = None,  # default folder
+    ) -> None
 
-Parameters
-----------
-
-* **callback**: `Callable` - callback function after selection is made
-* **default_folder**: `str = None` - default folder
-* **prompt**: `str` - text prompt for select dialog box
-
-
-Updated on July 31, 2022 19:10:43pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

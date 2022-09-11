@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global s
@@ -57,12 +56,12 @@ The ``get_vertex_count()`` method returns the number of vertices that make up a 
 
 Underlying Processing method: `PShape.getVertexCount <https://processing.org/reference/PShape_getVertexCount_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     get_vertex_count() -> int
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

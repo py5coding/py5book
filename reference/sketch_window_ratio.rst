@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
       py5.window_resizable(True)
@@ -64,19 +63,16 @@ When calling this method, it is better to do so with values like ``window_ratio(
 
 Underlying Processing method: windowRatio
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    window_ratio(wide: int, high: int, /) -> None
+    window_ratio(
+        wide: int,  # width of scale invariant display window
+        high: int,  # height of scale invariant display window
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **high**: `int` - height of scale invariant display window
-* **wide**: `int` - width of scale invariant display window
-
-
-Updated on May 02, 2022 12:07:22pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

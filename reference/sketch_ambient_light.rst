@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -52,7 +51,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -81,24 +79,27 @@ Adds an ambient light. Ambient light doesn't come from a specific direction, the
 
 Underlying Processing method: `ambientLight <https://processing.org/reference/ambientLight_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    ambient_light(v1: float, v2: float, v3: float, /) -> None
-    ambient_light(v1: float, v2: float, v3: float, x: float, y: float, z: float, /) -> None
+    ambient_light(
+        v1: float,  # red or hue value (depending on current color mode)
+        v2: float,  # green or saturation value (depending on current color mode)
+        v3: float,  # blue or brightness value (depending on current color mode)
+        /,
+    ) -> None
 
-Parameters
-----------
+    ambient_light(
+        v1: float,  # red or hue value (depending on current color mode)
+        v2: float,  # green or saturation value (depending on current color mode)
+        v3: float,  # blue or brightness value (depending on current color mode)
+        x: float,  # x-coordinate of the light
+        y: float,  # y-coordinate of the light
+        z: float,  # z-coordinate of the light
+        /,
+    ) -> None
 
-* **v1**: `float` - red or hue value (depending on current color mode)
-* **v2**: `float` - green or saturation value (depending on current color mode)
-* **v3**: `float` - blue or brightness value (depending on current color mode)
-* **x**: `float` - x-coordinate of the light
-* **y**: `float` - y-coordinate of the light
-* **z**: `float` - z-coordinate of the light
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

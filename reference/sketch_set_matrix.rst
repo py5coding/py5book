@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import numpy as np
 
@@ -53,18 +52,15 @@ Set the current matrix to the one specified through the parameter ``source``. In
 
 Underlying Processing method: setMatrix
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    set_matrix(source: npt.NDArray[np.floating], /) -> None
+    set_matrix(
+        source: npt.NDArray[np.floating],  # transformation matrix with a shape of 2x3 for 2D transforms or 4x4 for 3D transforms
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **source**: `npt.NDArray[np.floating]` - transformation matrix with a shape of 2x3 for 2D transforms or 4x4 for 3D transforms
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

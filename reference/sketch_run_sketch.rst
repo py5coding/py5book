@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     py5.run_sketch(block=True)
     print("this message will not be printed until after the sketch exits")
@@ -37,7 +36,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     py5.run_sketch(block=False)
     print("this message will be printed immediately, while the sketch is running")
@@ -55,7 +53,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # run the sketch with the window at position 400, 300 on display #1
     py5.run_sketch(block=False, py5_options=['--location=400,300', '--display=1'], sketch_args=['py5 is awesome'])
@@ -87,21 +84,18 @@ When programming in module mode and imported mode, py5 will inspect the ``setup(
 
 When running a Sketch asynchronously through Jupyter Notebook, any ``print`` statements using Python's builtin function will always appear in the output of the currently active cell. This will rarely be desirable, as the active cell will keep changing as the user executes code elsewhere in the notebook. As an alternative, use py5's :doc:`sketch_println` method, which will place all text in the output of the cell that made the ``run_sketch()`` call. This will continue to be true if the user moves on to execute code in other Notebook cells. Use :doc:`sketch_set_println_stream` to customize this behavior. All py5 error messages and stack traces are routed through the :doc:`sketch_println` method. Be aware that some error messages and warnings generated inside the Processing Jars cannot be controlled in the same way, and may appear in the output of the active cell or mixed in with the Jupyter Kernel logs.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    run_sketch(block: bool = None, *, py5_options: list[str] = None, sketch_args: list[str] = None, sketch_functions: dict[str, Callable] = None) -> None
+    run_sketch(
+        block: bool = None,  # method returns immediately (False) or blocks until Sketch exits (True)
+        *,
+        py5_options: list[str] = None,  # command line arguments to pass to Processing as arguments
+        sketch_args: list[str] = None,  # command line arguments that become Sketch arguments
+        sketch_functions: dict[str, Callable] = None  # sketch methods when using module mode
+    ) -> None
 
-Parameters
-----------
-
-* **block**: `bool = None` - method returns immediately (False) or blocks until Sketch exits (True)
-* **py5_options**: `list[str] = None` - command line arguments to pass to Processing as arguments
-* **sketch_args**: `list[str] = None` - command line arguments that become Sketch arguments
-* **sketch_functions**: `dict[str, Callable] = None` - sketch methods when using module mode
-
-
-Updated on March 01, 2022 12:15:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

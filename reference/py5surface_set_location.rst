@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     py5.run_sketch(block=False)
     surface = py5.get_surface()
@@ -39,7 +38,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # this sketch will hide itself and reappear elsewhere on your display.
     def setup():
@@ -76,19 +74,16 @@ This method provides the same functionality as :doc:`sketch_window_move`.
 
 Underlying Processing method: PSurface.setLocation
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    set_location(x: int, y: int, /) -> None
+    set_location(
+        x: int,  # x-coordinate for window location
+        y: int,  # y-coordinate for window location
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **x**: `int` - x-coordinate for window location
-* **y**: `int` - y-coordinate for window location
-
-
-Updated on July 18, 2022 17:22:20pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

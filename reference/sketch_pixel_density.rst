@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.pixel_density(2)
@@ -44,7 +43,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.pixel_density(py5.display_density())
@@ -78,18 +76,15 @@ When the pixel density is set to more than 1, it changes all of the pixel operat
 
 Underlying Processing method: `pixelDensity <https://processing.org/reference/pixelDensity_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    pixel_density(density: int, /) -> None
+    pixel_density(
+        density: int,  # 1 or 2
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **density**: `int` - 1 or 2
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

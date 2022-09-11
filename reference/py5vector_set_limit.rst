@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def draw():
         py5.background(128)
@@ -49,18 +48,14 @@ Description
 
 Constrain the vector's magnitude to a specified value. If the vector's magnitude is already less than or equal to ``max_mag``, this method will have no effect. If the vector's magnitude is larger, it will be set to ``max_mag``. The ``max_mag`` parameter cannot be a negative number.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    set_limit(max_mag: float) -> Py5Vector
+    set_limit(
+        max_mag: float,  # maximum vector magnitude
+    ) -> Py5Vector
 
-Parameters
-----------
-
-* **max_mag**: `float` - maximum vector magnitude
-
-
-Updated on January 16, 2022 16:51:21pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

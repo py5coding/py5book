@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(600, 400)
@@ -40,7 +39,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(600, 400)
@@ -81,6 +79,5 @@ Width of the display window in pixels. When ``pixel_density(2)`` is used to make
 
 Underlying Processing field: `pixelWidth <https://processing.org/reference/pixelWidth.html>`_
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

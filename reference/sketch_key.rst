@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # click on the window to give it focus,
     # and press the 'b' key.
@@ -52,6 +51,5 @@ There are issues with how :doc:`sketch_key_code` behaves across different render
 
 Underlying Processing field: `key <https://processing.org/reference/key.html>`_
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.ellipse(0, 50, 33, 33)  # left circle
@@ -51,7 +50,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.ellipse(0, 50, 33, 33)  # left circle
@@ -85,12 +83,12 @@ The :doc:`sketch_push_style` function saves the current style settings and ``pop
 
 Underlying Processing method: `popStyle <https://processing.org/reference/popStyle_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     pop_style() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -56,18 +55,15 @@ Sets the amount of gloss in the surface of shapes. Use in combination with :doc:
 
 Underlying Processing method: `shininess <https://processing.org/reference/shininess_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    shininess(shine: float, /) -> None
+    shininess(
+        shine: float,  # degree of shininess
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **shine**: `float` - degree of shininess
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

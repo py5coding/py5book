@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(200, 200, py5.P2D)
@@ -48,12 +47,12 @@ Return the x position of the mouse at the time of this mouse event. This informa
 
 Underlying Processing method: getX
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     get_x() -> int
 
-Updated on April 27, 2022 10:44:51am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -12,20 +12,17 @@ This method is the same as :doc:`sketch_square` but linked to a ``Py5Graphics`` 
 
 Underlying Processing method: PGraphics.square
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    square(x: float, y: float, extent: float, /) -> None
+    square(
+        x: float,  # x-coordinate of the rectangle by default
+        y: float,  # y-coordinate of the rectangle by default
+        extent: float,  # width and height of the rectangle by default
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **extent**: `float` - width and height of the rectangle by default
-* **x**: `float` - x-coordinate of the rectangle by default
-* **y**: `float` - y-coordinate of the rectangle by default
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def draw():
         py5.square(py5.random(py5.width), py5.random(py5.height), 10)
@@ -49,19 +48,16 @@ This method provides the same functionality as :doc:`sketch_window_resize`.
 
 Underlying Processing method: PSurface.setSize
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    set_size(width: int, height: int, /) -> None
+    set_size(
+        width: int,  # new window width
+        height: int,  # new window height
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **height**: `int` - new window height
-* **width**: `int` - new window width
-
-
-Updated on July 18, 2022 17:22:20pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

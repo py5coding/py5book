@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global s
@@ -53,36 +52,45 @@ Transformations are cummulative and therefore will be applied on top of existing
 
 Underlying Processing method: PShape.applyMatrix
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    apply_matrix(n00: float, n01: float, n02: float, n03: float, n10: float, n11: float, n12: float, n13: float, n20: float, n21: float, n22: float, n23: float, n30: float, n31: float, n32: float, n33: float, /) -> None
-    apply_matrix(n00: float, n01: float, n02: float, n10: float, n11: float, n12: float, /) -> None
-    apply_matrix(source: npt.NDArray[np.floating], /) -> None
+    apply_matrix(
+        n00: float,  # numeric value in row 0 and column 0 of the matrix
+        n01: float,  # numeric value in row 0 and column 1 of the matrix
+        n02: float,  # numeric value in row 0 and column 2 of the matrix
+        n03: float,  # numeric value in row 0 and column 3 of the matrix
+        n10: float,  # numeric value in row 1 and column 0 of the matrix
+        n11: float,  # numeric value in row 1 and column 1 of the matrix
+        n12: float,  # numeric value in row 1 and column 2 of the matrix
+        n13: float,  # numeric value in row 1 and column 3 of the matrix
+        n20: float,  # numeric value in row 2 and column 0 of the matrix
+        n21: float,  # numeric value in row 2 and column 1 of the matrix
+        n22: float,  # numeric value in row 2 and column 2 of the matrix
+        n23: float,  # numeric value in row 2 and column 3 of the matrix
+        n30: float,  # numeric value in row 3 and column 0 of the matrix
+        n31: float,  # numeric value in row 3 and column 1 of the matrix
+        n32: float,  # numeric value in row 3 and column 2 of the matrix
+        n33: float,  # numeric value in row 3 and column 3 of the matrix
+        /,
+    ) -> None
 
-Parameters
-----------
+    apply_matrix(
+        n00: float,  # numeric value in row 0 and column 0 of the matrix
+        n01: float,  # numeric value in row 0 and column 1 of the matrix
+        n02: float,  # numeric value in row 0 and column 2 of the matrix
+        n10: float,  # numeric value in row 1 and column 0 of the matrix
+        n11: float,  # numeric value in row 1 and column 1 of the matrix
+        n12: float,  # numeric value in row 1 and column 2 of the matrix
+        /,
+    ) -> None
 
-* **n00**: `float` - numbers which define the 4x4 matrix to be multiplied
-* **n01**: `float` - numbers which define the 4x4 matrix to be multiplied
-* **n02**: `float` - numbers which define the 4x4 matrix to be multiplied
-* **n03**: `float` - numbers which define the 4x4 matrix to be multiplied
-* **n10**: `float` - numbers which define the 4x4 matrix to be multiplied
-* **n11**: `float` - numbers which define the 4x4 matrix to be multiplied
-* **n12**: `float` - numbers which define the 4x4 matrix to be multiplied
-* **n13**: `float` - numbers which define the 4x4 matrix to be multiplied
-* **n20**: `float` - numbers which define the 4x4 matrix to be multiplied
-* **n21**: `float` - numbers which define the 4x4 matrix to be multiplied
-* **n22**: `float` - numbers which define the 4x4 matrix to be multiplied
-* **n23**: `float` - numbers which define the 4x4 matrix to be multiplied
-* **n30**: `float` - numbers which define the 4x4 matrix to be multiplied
-* **n31**: `float` - numbers which define the 4x4 matrix to be multiplied
-* **n32**: `float` - numbers which define the 4x4 matrix to be multiplied
-* **n33**: `float` - numbers which define the 4x4 matrix to be multiplied
-* **source**: `npt.NDArray[np.floating]` - transformation matrix with a shape of 2x3 for 2D transforms or 4x4 for 3D transforms
+    apply_matrix(
+        source: npt.NDArray[np.floating],  # transformation matrix with a shape of 2x3 for 2D transforms or 4x4 for 3D transforms
+        /,
+    ) -> None
 
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

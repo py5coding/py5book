@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(200, 200)
@@ -51,12 +50,12 @@ Return boolean value reflecting if the Alt key is down. The Alt key is a modifie
 
 Underlying Processing method: isAltDown
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     is_alt_down() -> bool
 
-Updated on April 27, 2022 10:44:51am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

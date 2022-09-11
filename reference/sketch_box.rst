@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -47,7 +46,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -71,22 +69,22 @@ A box is an extruded rectangle. A box with equal dimensions on all sides is a cu
 
 Underlying Processing method: `box <https://processing.org/reference/box_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    box(size: float, /) -> None
-    box(w: float, h: float, d: float, /) -> None
+    box(
+        size: float,  # dimension of the box in all dimensions (creates a cube)
+        /,
+    ) -> None
 
-Parameters
-----------
+    box(
+        w: float,  # dimension of the box in the x-dimension
+        h: float,  # dimension of the box in the y-dimension
+        d: float,  # dimension of the box in the z-dimension
+        /,
+    ) -> None
 
-* **d**: `float` - dimension of the box in the z-dimension
-* **h**: `float` - dimension of the box in the y-dimension
-* **size**: `float` - dimension of the box in all dimensions (creates a cube)
-* **w**: `float` - dimension of the box in the x-dimension
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

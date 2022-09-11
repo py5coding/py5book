@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(200, 200, py5.P2D)
@@ -51,12 +50,12 @@ Identifies if the pressed key is auto repeating, as faciliated by the computer's
 
 Underlying Processing method: isAutoRepeat
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     is_auto_repeat() -> bool
 
-Updated on April 27, 2022 10:44:51am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

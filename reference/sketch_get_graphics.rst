@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.rect(10, 10, 50, 50)
@@ -41,12 +40,12 @@ Get the :doc:`py5graphics` object used by the Sketch. Internally, all of Process
 
 Underlying Processing method: getGraphics
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     get_graphics() -> Py5Graphics
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

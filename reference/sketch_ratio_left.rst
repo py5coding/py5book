@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
       py5.window_resizable(True)
@@ -58,6 +57,5 @@ Width of the left section of the window that does not fit the desired aspect rat
 
 Underlying Processing field: ratioLeft
 
-
-Updated on May 02, 2022 12:07:22pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

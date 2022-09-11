@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P2D)
@@ -53,7 +52,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global s
@@ -97,23 +95,26 @@ Calling this method with the boolean parameter ``False`` will delete the assigne
 
 Underlying Processing method: PShape.setTint
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    set_tint(fill: int, /) -> None
-    set_tint(index: int, tint: int, /) -> None
-    set_tint(tint: bool, /) -> None
+    set_tint(
+        fill: int,  # color value in hexadecimal notation
+        /,
+    ) -> None
 
-Parameters
-----------
+    set_tint(
+        index: int,  # vertex index
+        tint: int,  # color value in hexadecimal notation
+        /,
+    ) -> None
 
-* **fill**: `int` - color value in hexadecimal notation
-* **index**: `int` - vertex index
-* **tint**: `bool` - allow tint
-* **tint**: `int` - color value in hexadecimal notation
+    set_tint(
+        tint: bool,  # allow tint
+        /,
+    ) -> None
 
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

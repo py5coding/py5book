@@ -3,7 +3,7 @@
 
 title: py5 documentation
 author: the py5 community
-copyright: "2020-2021"
+copyright: "2020-2022"
 logo: images/main/logo.png
 
 # Force re-execution of notebooks on each build.
@@ -31,6 +31,8 @@ launch_buttons:
 
 # Add GitHub buttons to your book
 html:
+  favicon: images/favicon-16x16.png
   use_edit_page_button: true
   use_repository_button: true
   use_issues_button: true
+  baseurl: http://py5coding.org

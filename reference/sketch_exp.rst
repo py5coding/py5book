@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         v1 = py5.exp(1.0)
@@ -40,18 +39,14 @@ Returns Euler's number e (2.71828...) raised to the power of the ``n`` parameter
 
 This function makes a call to the numpy ``exp()`` function.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    exp(value: Union[float, npt.ArrayLike]) -> Union[float, npt.NDArray]
+    exp(
+        value: Union[float, npt.ArrayLike]  # exponent to raise
+    ) -> Union[float, npt.NDArray]
 
-Parameters
-----------
-
-* **value**: `Union[float, npt.ArrayLike]` - exponent to raise
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

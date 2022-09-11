@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # move the mouse left and right to see the detail change
 
@@ -49,18 +48,15 @@ Sets the resolution at which Beziers display. The default value is 20. This func
 
 Underlying Processing method: `bezierDetail <https://processing.org/reference/bezierDetail_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    bezier_detail(detail: int, /) -> None
+    bezier_detail(
+        detail: int,  # resolution of the curves
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **detail**: `int` - resolution of the curves
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

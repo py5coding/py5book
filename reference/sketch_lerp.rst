@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         a = 20
@@ -54,7 +53,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         x1 = 15
@@ -80,20 +78,16 @@ Description
 
 Calculates a number between two numbers at a specific increment. The ``amt`` parameter is the amount to interpolate between the two values where 0.0 equal to the first point, 0.1 is very near the first point, 0.5 is half-way in between, etc. The lerp function is convenient for creating motion along a straight path and for drawing dotted lines. If the ``amt`` parameter is greater than 1.0 or less than 0.0, the interpolated value will be outside of the range specified by the ``start`` and ``stop`` parameter values.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    lerp(start: Union[float, npt.NDArray], stop: Union[float, npt.NDArray], amt: Union[float, npt.NDArray]) -> Union[float, npt.NDArray]
+    lerp(
+        start: Union[float, npt.NDArray],  # first value
+        stop: Union[float, npt.NDArray],  # second value
+        amt: Union[float, npt.NDArray],  # float between 0.0 and 1.0
+    ) -> Union[float, npt.NDArray]
 
-Parameters
-----------
-
-* **amt**: `Union[float, npt.NDArray]` - float between 0.0 and 1.0
-* **start**: `Union[float, npt.NDArray]` - first value
-* **stop**: `Union[float, npt.NDArray]` - second value
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def file_selected(selection):
         if selection is None:
@@ -48,20 +47,16 @@ This method has some platform specific quirks. On OSX, this does not work when t
 
 Underlying Processing method: `selectInput <https://processing.org/reference/selectInput_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    select_input(prompt: str, callback: Callable, default_file: str = None) -> None
+    select_input(
+        prompt: str,  # text prompt for select dialog box
+        callback: Callable,  # callback function after selection is made
+        default_file: str = None,  # default output file
+    ) -> None
 
-Parameters
-----------
-
-* **callback**: `Callable` - callback function after selection is made
-* **default_file**: `str = None` - default output file
-* **prompt**: `str` - text prompt for select dialog box
-
-
-Updated on July 31, 2022 19:10:43pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global bot
@@ -50,18 +49,15 @@ Modifies the location from which shapes draw. The default mode is ``shape_mode(C
 
 Underlying Processing method: `shapeMode <https://processing.org/reference/shapeMode_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    shape_mode(mode: int, /) -> None
+    shape_mode(
+        mode: int,  # either CORNER, CORNERS, CENTER
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **mode**: `int` - either CORNER, CORNERS, CENTER
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

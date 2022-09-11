@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         surface = py5.get_surface()
@@ -42,18 +41,15 @@ Set the Sketch window to always be on top of other windows. By default, the Sket
 
 Underlying Processing method: PSurface.setAlwaysOnTop
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    set_always_on_top(always: bool, /) -> None
+    set_always_on_top(
+        always: bool,  # should the Sketch window always be on top of other windows
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **always**: `bool` - should the Sketch window always be on top of other windows
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

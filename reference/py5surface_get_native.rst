@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     py5.run_sketch(block=False)
     surface = py5.get_surface()
@@ -44,12 +43,12 @@ This method may be useful to you if you research the Java libraries Processing u
 
 Underlying Processing method: PSurface.getNative
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     get_native() -> Any
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

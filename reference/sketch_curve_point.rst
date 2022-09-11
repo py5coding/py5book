@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.no_fill()
@@ -55,22 +54,19 @@ Evaluates the curve at point ``t`` for points ``a``, ``b``, ``c``, ``d``. The pa
 
 Underlying Processing method: `curvePoint <https://processing.org/reference/curvePoint_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    curve_point(a: float, b: float, c: float, d: float, t: float, /) -> float
+    curve_point(
+        a: float,  # coordinate of first control point
+        b: float,  # coordinate of first point on the curve
+        c: float,  # coordinate of second point on the curve
+        d: float,  # coordinate of second control point
+        t: float,  # value between 0 and 1
+        /,
+    ) -> float
 
-Parameters
-----------
-
-* **a**: `float` - coordinate of first control point
-* **b**: `float` - coordinate of first point on the curve
-* **c**: `float` - coordinate of second point on the curve
-* **d**: `float` - coordinate of second control point
-* **t**: `float` - value between 0 and 1
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

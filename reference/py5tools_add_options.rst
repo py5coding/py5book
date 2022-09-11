@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import py5_tools
     py5_tools.add_options('-Xmx4096m')
@@ -40,18 +39,14 @@ Provide JVM options to use when the JVM starts. This is useful to set the JVM me
 
 After the JVM has started, new options cannot be added. This function will throw a ``RuntimeError`` if it is called after the JVM has already started. Use :doc:`py5tools_is_jvm_running` to first determine if the JVM is running.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    add_options(*options: list[str]) -> None
+    add_options(
+        *options: list[str],
+    ) -> None
 
-Parameters
-----------
-
-* **options**: `list[str]` - list of desired JVM options
-
-
-Updated on March 01, 2022 12:15:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         s = py5.create_shape()
@@ -60,29 +59,47 @@ To change the color of a ``Py5Shape`` object's image or a texture, use :doc:`py5
 
 Underlying Processing method: PShape.fill
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    fill(gray: float, /) -> None
-    fill(gray: float, alpha: float, /) -> None
-    fill(rgb: int, /) -> None
-    fill(rgb: int, alpha: float, /) -> None
-    fill(x: float, y: float, z: float, /) -> None
-    fill(x: float, y: float, z: float, a: float, /) -> None
+    fill(
+        gray: float,  # number specifying value between white and black
+        /,
+    ) -> None
 
-Parameters
-----------
+    fill(
+        gray: float,  # number specifying value between white and black
+        alpha: float,  # opacity of the fill
+        /,
+    ) -> None
 
-* **a**: `float` - opacity of the fill
-* **alpha**: `float` - opacity of the fill
-* **gray**: `float` - number specifying value between white and black
-* **rgb**: `int` - color variable or hex value
-* **x**: `float` - red or hue value (depending on current color mode)
-* **y**: `float` - green or saturation value (depending on current color mode)
-* **z**: `float` - blue or brightness value (depending on current color mode)
+    fill(
+        rgb: int,  # color variable or hex value
+        /,
+    ) -> None
 
+    fill(
+        rgb: int,  # color variable or hex value
+        alpha: float,  # opacity of the fill
+        /,
+    ) -> None
 
-Updated on July 31, 2022 13:59:47pm UTC
+    fill(
+        x: float,  # red or hue value (depending on current color mode)
+        y: float,  # green or saturation value (depending on current color mode)
+        z: float,  # blue or brightness value (depending on current color mode)
+        /,
+    ) -> None
+
+    fill(
+        x: float,  # red or hue value (depending on current color mode)
+        y: float,  # green or saturation value (depending on current color mode)
+        z: float,  # blue or brightness value (depending on current color mode)
+        a: float,  # opacity of the fill
+        /,
+    ) -> None
+
+Updated on September 01, 2022 16:36:02pm UTC
 

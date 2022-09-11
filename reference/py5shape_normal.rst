@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -71,20 +70,17 @@ This method can only be used within a :doc:`py5shape_begin_shape` and :doc:`py5s
 
 Underlying Processing method: PShape.normal
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    normal(nx: float, ny: float, nz: float, /) -> None
+    normal(
+        nx: float,  # x direction
+        ny: float,  # y direction
+        nz: float,  # z direction
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **nx**: `float` - x direction
-* **ny**: `float` - y direction
-* **nz**: `float` - z direction
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

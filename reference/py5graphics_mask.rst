@@ -12,20 +12,20 @@ In addition to using a mask image, an integer array containing the alpha channel
 
 Underlying Processing method: PGraphics.mask
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    mask(img: Py5Image, /) -> None
-    mask(mask_array: npt.NDArray[np.integer], /) -> None
+    mask(
+        img: Py5Image,  # image to use as the mask
+        /,
+    ) -> None
 
-Parameters
-----------
+    mask(
+        mask_array: npt.NDArray[np.integer],  # 1D array of integers used as the alpha channel, needs to be the same length as the image's pixel array
+        /,
+    ) -> None
 
-* **img**: `Py5Image` - image to use as the mask
-* **mask_array**: `npt.NDArray[np.integer]` - 1D array of integers used as the alpha channel, needs to be the same length as the image's pixel array
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

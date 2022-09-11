@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.fill(255)
@@ -52,12 +51,12 @@ Pops the current transformation matrix off the matrix stack. Understanding pushi
 
 Underlying Processing method: `popMatrix <https://processing.org/reference/popMatrix_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     pop_matrix() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

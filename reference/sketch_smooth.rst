@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.smooth(2)
@@ -44,7 +43,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     x = 0
 
@@ -82,19 +80,17 @@ When programming in module mode and imported mode, py5 will allow calls to ``smo
 
 Underlying Processing method: `smooth <https://processing.org/reference/smooth_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     smooth() -> None
-    smooth(level: int, /) -> None
 
-Parameters
-----------
+    smooth(
+        level: int,  # either 2, 3, 4, or 8 depending on the renderer
+        /,
+    ) -> None
 
-* **level**: `int` - either 2, 3, 4, or 8 depending on the renderer
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P2D)
@@ -51,12 +50,12 @@ When programming in module mode and imported mode, py5 will allow calls to ``no_
 
 Underlying Processing method: `noSmooth <https://processing.org/reference/noSmooth_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     no_smooth() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

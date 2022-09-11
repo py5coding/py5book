@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.no_fill()
@@ -47,7 +46,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.begin_shape()
@@ -71,27 +69,33 @@ Specifies vertex coordinates for Bezier curves. Each call to ``bezier_vertex()``
 
 Underlying Processing method: `bezierVertex <https://processing.org/reference/bezierVertex_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    bezier_vertex(x2: float, y2: float, x3: float, y3: float, x4: float, y4: float, /) -> None
-    bezier_vertex(x2: float, y2: float, z2: float, x3: float, y3: float, z3: float, x4: float, y4: float, z4: float, /) -> None
+    bezier_vertex(
+        x2: float,  # the x-coordinate of the 1st control point
+        y2: float,  # the y-coordinate of the 1st control point
+        x3: float,  # the x-coordinate of the 2nd control point
+        y3: float,  # the y-coordinate of the 2nd control point
+        x4: float,  # the x-coordinate of the anchor point
+        y4: float,  # the y-coordinate of the anchor point
+        /,
+    ) -> None
 
-Parameters
-----------
+    bezier_vertex(
+        x2: float,  # the x-coordinate of the 1st control point
+        y2: float,  # the y-coordinate of the 1st control point
+        z2: float,  # the z-coordinate of the 1st control point
+        x3: float,  # the x-coordinate of the 2nd control point
+        y3: float,  # the y-coordinate of the 2nd control point
+        z3: float,  # the z-coordinate of the 2nd control point
+        x4: float,  # the x-coordinate of the anchor point
+        y4: float,  # the y-coordinate of the anchor point
+        z4: float,  # the z-coordinate of the anchor point
+        /,
+    ) -> None
 
-* **x2**: `float` - the x-coordinate of the 1st control point
-* **x3**: `float` - the x-coordinate of the 2nd control point
-* **x4**: `float` - the x-coordinate of the anchor point
-* **y2**: `float` - the y-coordinate of the 1st control point
-* **y3**: `float` - the y-coordinate of the 2nd control point
-* **y4**: `float` - the y-coordinate of the anchor point
-* **z2**: `float` - the z-coordinate of the 1st control point
-* **z3**: `float` - the z-coordinate of the 2nd control point
-* **z4**: `float` - the z-coordinate of the anchor point
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

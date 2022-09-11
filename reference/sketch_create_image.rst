@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         img = py5.create_image(66, 66, py5.RGB)
@@ -49,7 +48,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         img = py5.create_image(66, 66, py5.ARGB)
@@ -80,20 +78,17 @@ Advanced users please note that ``create_image()`` should be used instead of the
 
 Underlying Processing method: `createImage <https://processing.org/reference/createImage_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    create_image(w: int, h: int, format: int, /) -> Py5Image
+    create_image(
+        w: int,  # width in pixels
+        h: int,  # height in pixels
+        format: int,  # Either RGB, ARGB, ALPHA (grayscale alpha channel)
+        /,
+    ) -> Py5Image
 
-Parameters
-----------
-
-* **format**: `int` - Either RGB, ARGB, ALPHA (grayscale alpha channel)
-* **h**: `int` - height in pixels
-* **w**: `int` - width in pixels
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

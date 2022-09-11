@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def draw():
         py5.rect(py5.mouse_x, py5.mouse_y, 10, 10)
@@ -50,12 +49,12 @@ This method is different from :doc:`py5surface_pause_thread` in that it will irr
 
 Underlying Processing method: PSurface.stopThread
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     stop_thread() -> bool
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

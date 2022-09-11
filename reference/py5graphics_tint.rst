@@ -22,28 +22,47 @@ This method is the same as :doc:`sketch_tint` but linked to a ``Py5Graphics`` ob
 
 Underlying Processing method: PGraphics.tint
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    tint(gray: float, /) -> None
-    tint(gray: float, alpha: float, /) -> None
-    tint(rgb: int, /) -> None
-    tint(rgb: int, alpha: float, /) -> None
-    tint(v1: float, v2: float, v3: float, /) -> None
-    tint(v1: float, v2: float, v3: float, alpha: float, /) -> None
+    tint(
+        gray: float,  # specifies a value between white and black
+        /,
+    ) -> None
 
-Parameters
-----------
+    tint(
+        gray: float,  # specifies a value between white and black
+        alpha: float,  # opacity of the image
+        /,
+    ) -> None
 
-* **alpha**: `float` - opacity of the image
-* **gray**: `float` - specifies a value between white and black
-* **rgb**: `int` - color value in hexadecimal notation
-* **v1**: `float` - red or hue value (depending on current color mode)
-* **v2**: `float` - green or saturation value (depending on current color mode)
-* **v3**: `float` - blue or brightness value (depending on current color mode)
+    tint(
+        rgb: int,  # color value in hexadecimal notation
+        /,
+    ) -> None
 
+    tint(
+        rgb: int,  # color value in hexadecimal notation
+        alpha: float,  # opacity of the image
+        /,
+    ) -> None
 
-Updated on July 31, 2022 13:59:47pm UTC
+    tint(
+        v1: float,  # red or hue value (depending on current color mode)
+        v2: float,  # green or saturation value (depending on current color mode)
+        v3: float,  # blue or brightness value (depending on current color mode)
+        /,
+    ) -> None
+
+    tint(
+        v1: float,  # red or hue value (depending on current color mode)
+        v2: float,  # green or saturation value (depending on current color mode)
+        v3: float,  # blue or brightness value (depending on current color mode)
+        alpha: float,  # opacity of the image
+        /,
+    ) -> None
+
+Updated on September 01, 2022 14:08:27pm UTC
 

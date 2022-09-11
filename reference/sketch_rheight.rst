@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
       py5.window_resizable(True)
@@ -58,6 +57,5 @@ The height of the scale invariant display window. This will be the value of the 
 
 Underlying Processing field: rheight
 
-
-Updated on May 02, 2022 12:07:22pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

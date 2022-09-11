@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.line(30, 20, 85, 75)
@@ -43,7 +42,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.line(30, 20, 85, 20)
@@ -68,7 +66,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -95,24 +92,28 @@ Draws a line (a direct path between two points) to the screen. The version of ``
 
 Underlying Processing method: `line <https://processing.org/reference/line_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    line(x1: float, y1: float, x2: float, y2: float, /) -> None
-    line(x1: float, y1: float, z1: float, x2: float, y2: float, z2: float, /) -> None
+    line(
+        x1: float,  # x-coordinate of the first point
+        y1: float,  # y-coordinate of the first point
+        x2: float,  # x-coordinate of the second point
+        y2: float,  # y-coordinate of the second point
+        /,
+    ) -> None
 
-Parameters
-----------
+    line(
+        x1: float,  # x-coordinate of the first point
+        y1: float,  # y-coordinate of the first point
+        z1: float,  # z-coordinate of the first point
+        x2: float,  # x-coordinate of the second point
+        y2: float,  # y-coordinate of the second point
+        z2: float,  # z-coordinate of the second point
+        /,
+    ) -> None
 
-* **x1**: `float` - x-coordinate of the first point
-* **x2**: `float` - x-coordinate of the second point
-* **y1**: `float` - y-coordinate of the first point
-* **y2**: `float` - y-coordinate of the second point
-* **z1**: `float` - z-coordinate of the first point
-* **z2**: `float` - z-coordinate of the second point
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

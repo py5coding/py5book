@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # move the mouse quickly to see the difference
     # between the current and previous position
@@ -47,6 +46,5 @@ If you want values relative to the previous frame, use ``pmouse_x`` and :doc:`sk
 
 Underlying Processing field: `pmouseX <https://processing.org/reference/pmouseX.html>`_
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

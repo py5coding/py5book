@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.background(py5.pargs[0])
@@ -41,6 +40,5 @@ List of strings passed to the Sketch through the call to :doc:`sketch_run_sketch
 
 Underlying Processing field: args
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

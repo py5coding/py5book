@@ -1,0 +1,24 @@
+version: 2
+build:
+  os: "ubuntu-22.04"
+  tools:
+    python: "mambaforge-4.10"
+  apt_packages:
+    - "openjdk-17-jre"
+    - "ca-certificates-java"
+    - "libxcursor1"
+    - "libxrandr2"
+    - "libxrender1"
+    - "libxtst6"
+    - "libxi6"
+    - "xvfb"
+  jobs:
+    post_install:
+      - "python -m py5jupyter.kernels.py5.install --sys-prefix"
+      - "python -m py5jupyter.kernels.py5bot.install --sys-prefix"
+    pre_build:
+      - /usr/bin/Xvfb :0 -screen 0 1024x768x24 &
+    post_build:
+      - "python scripts/post_build.py"
+conda:
+  environment: rtd_environment.yml

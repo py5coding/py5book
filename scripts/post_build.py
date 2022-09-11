@@ -46,8 +46,8 @@ GROUP_CASE_PAIRS = [
 # MODIFY REFERENCE GITHUB LINKS
 ###############################################################################
 
-for refdoc in BUILD_DIR.glob("reference/*.html"):
-    with open(refdoc, "r") as f:
+for doc in BUILD_DIR.glob("**/*.html"):
+    with open(doc, "r") as f:
         html = f.read()
 
     # fix edit page link to point to actual documentation source file in py5generator
@@ -65,12 +65,11 @@ for refdoc in BUILD_DIR.glob("reference/*.html"):
         new_link = f'https://github.com/py5coding/py5generator/edit/main/py5_docs/Reference/api_en/{stem}.txt'
         html = html.replace(original_link, new_link)
 
-        # fix new issue link to point to py5generator repo
-        html = html.replace('https://github.com/py5coding/py5book/issues/new?', 'https://github.com/py5coding/py5generator/issues/new?')
+    # fix new issue link to point to py5generator repo
+    html = html.replace('https://github.com/py5coding/py5book/issues/new?', 'https://github.com/py5coding/py5generator/issues/new?')
 
-        with open(refdoc, "w") as f:
-            f.write(html)
-
+    with open(doc, "w") as f:
+        f.write(html)
 
 ###############################################################################
 # COPY EXTRA FILES

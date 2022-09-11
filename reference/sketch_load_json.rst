@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         data = py5.load_json('colors.json')
@@ -42,7 +41,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global promise
@@ -51,7 +49,7 @@ Examples
 
 
     def load_data():
-        return py5.load_json('http://py5.ixora.io/files/secret_message.json')
+        return py5.load_json('http://py5coding.org/files/secret_message.json')
 
 
     def draw():
@@ -74,19 +72,15 @@ Load a JSON data file from a file or URL. When loading a file, the path can be i
 
 When loading JSON data from a URL, the data is retrieved using the Python requests library with the ``get`` method, and the ``kwargs`` parameter is passed along to that method. When loading JSON data from a file, the data is loaded using the Python json library with the ``load`` method, and again the ``kwargs`` parameter passed along to that method.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    load_json(json_path: Union[str, Path], **kwargs: dict[str, Any]) -> Any
+    load_json(
+        json_path: Union[str, Path],  # url or file path for JSON data file
+        **kwargs: dict[str, Any]
+    ) -> Any
 
-Parameters
-----------
-
-* **json_path**: `Union[str, Path]` - url or file path for JSON data file
-* **kwargs**: `dict[str, Any]` - keyword arguments
-
-
-Updated on March 24, 2022 16:35:56pm UTC
+Updated on September 04, 2022 12:55:11pm UTC
 

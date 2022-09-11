@@ -14,20 +14,21 @@ This method is the same as :doc:`sketch_text_font` but linked to a ``Py5Graphics
 
 Underlying Processing method: PGraphics.textFont
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    text_font(which: Py5Font, /) -> None
-    text_font(which: Py5Font, size: float, /) -> None
+    text_font(
+        which: Py5Font,  # any variable of the type Py5Font
+        /,
+    ) -> None
 
-Parameters
-----------
+    text_font(
+        which: Py5Font,  # any variable of the type Py5Font
+        size: float,  # the size of the letters in units of pixels
+        /,
+    ) -> None
 
-* **size**: `float` - the size of the letters in units of pixels
-* **which**: `Py5Font` - any variable of the type Py5Font
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

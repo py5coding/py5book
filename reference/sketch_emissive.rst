@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -49,24 +48,27 @@ Sets the emissive color of the material used for drawing shapes drawn to the scr
 
 Underlying Processing method: `emissive <https://processing.org/reference/emissive_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    emissive(gray: float, /) -> None
-    emissive(rgb: int, /) -> None
-    emissive(v1: float, v2: float, v3: float, /) -> None
+    emissive(
+        gray: float,  # value between black and white, by default 0 to 255
+        /,
+    ) -> None
 
-Parameters
-----------
+    emissive(
+        rgb: int,  # color to set
+        /,
+    ) -> None
 
-* **gray**: `float` - value between black and white, by default 0 to 255
-* **rgb**: `int` - color to set
-* **v1**: `float` - red or hue value (depending on current color mode)
-* **v2**: `float` - green or saturation value (depending on current color mode)
-* **v3**: `float` - blue or brightness value (depending on current color mode)
+    emissive(
+        v1: float,  # red or hue value (depending on current color mode)
+        v2: float,  # green or saturation value (depending on current color mode)
+        v3: float,  # blue or brightness value (depending on current color mode)
+        /,
+    ) -> None
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

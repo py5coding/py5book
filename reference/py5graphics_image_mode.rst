@@ -20,18 +20,15 @@ This method is the same as :doc:`sketch_image_mode` but linked to a ``Py5Graphic
 
 Underlying Processing method: PGraphics.imageMode
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    image_mode(mode: int, /) -> None
+    image_mode(
+        mode: int,  # either CORNER, CORNERS, or CENTER
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **mode**: `int` - either CORNER, CORNERS, or CENTER
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

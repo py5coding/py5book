@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import py5_tools
 
@@ -48,25 +47,22 @@ If the ``limit`` parameter is used, this function will wait to return a list of 
 
 If your Sketch has a ``post_draw()`` method, use the ``hook_post_draw`` parameter to make this function run after ``post_draw()`` instead of ``draw()``. This is important when using Processing libraries that support ``post_draw()`` such as Camera3D or ColorBlindness.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    save_frames(dirname: str, *, filename: str = 'frame_####.png', period: float = 0.0, start: int = None, limit: int = 0, sketch: Sketch = None, hook_post_draw: bool = False, block: bool = False) -> None
+    save_frames(
+        dirname: str,  # directory to save the frames
+        *,
+        filename: str = "frame_####.png",  # filename template to use for saved frames
+        period: float = 0.0,  # time in seconds between Sketch snapshots (default 0 means no delay)
+        start: int = None,  # frame starting number instead of Sketch frame_count
+        limit: int = 0,  # limit the number of frames to save (default 0 means no limit)
+        sketch: Sketch = None,  # running Sketch
+        hook_post_draw: bool = False,  # attach hook to Sketch's post_draw method instead of draw
+        block: bool = False  # method returns immediately (False) or blocks until function returns (True)
+    ) -> None
 
-Parameters
-----------
-
-* **block**: `bool = False` - method returns immediately (False) or blocks until function returns (True)
-* **dirname**: `str` - directory to save the frames
-* **filename**: `str = 'frame_####.png'` - filename template to use for saved frames
-* **hook_post_draw**: `bool = False` - attach hook to Sketch's post_draw method instead of draw
-* **limit**: `int = 0` - limit the number of frames to save (default 0 means no limit)
-* **period**: `float = 0.0` - time in seconds between Sketch snapshots (default 0 means no delay)
-* **sketch**: `Sketch = None` - running Sketch
-* **start**: `int = None` - frame starting number instead of Sketch frame_count
-
-
-Updated on February 21, 2022 11:45:39am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

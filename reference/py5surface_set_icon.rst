@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         surface = py5.get_surface()
@@ -40,7 +39,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def settings():
         py5.size(200, 200, py5.P2D)
@@ -73,18 +71,15 @@ This method will not work for the ``P2D`` or ``P3D`` renderers. Setting the icon
 
 Underlying Processing method: PSurface.setIcon
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    set_icon(icon: Py5Image, /) -> None
+    set_icon(
+        icon: Py5Image,  # image to use as the window icon
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **icon**: `Py5Image` - image to use as the window icon
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

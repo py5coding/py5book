@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.no_fill()
@@ -50,22 +49,19 @@ Evaluates the Bezier at point t for points a, b, c, d. The parameter t varies be
 
 Underlying Processing method: `bezierPoint <https://processing.org/reference/bezierPoint_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    bezier_point(a: float, b: float, c: float, d: float, t: float, /) -> float
+    bezier_point(
+        a: float,  # coordinate of first point on the curve
+        b: float,  # coordinate of first control point
+        c: float,  # coordinate of second control point
+        d: float,  # coordinate of second point on the curve
+        t: float,  # value between 0 and 1
+        /,
+    ) -> float
 
-Parameters
-----------
-
-* **a**: `float` - coordinate of first point on the curve
-* **b**: `float` - coordinate of first control point
-* **c**: `float` - coordinate of second control point
-* **d**: `float` - coordinate of second point on the curve
-* **t**: `float` - value between 0 and 1
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

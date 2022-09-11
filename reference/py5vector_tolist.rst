@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     v1 = py5.Py5Vector(1, 2, 3)
 
@@ -42,12 +41,12 @@ Description
 
 Return the vector's values as a list. The length of the list will be equal to the vector's dimension.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     tolist() -> list[float]
 
-Updated on January 16, 2022 16:51:21pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

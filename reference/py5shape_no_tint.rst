@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P2D)
@@ -57,12 +56,12 @@ Both :doc:`py5shape_tint` and ``no_tint()`` can be used to control the coloring 
 
 Underlying Processing method: PShape.noTint
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     no_tint() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 
