@@ -12,9 +12,9 @@ Do you enjoy using py5? What are you using py5 for? Don't keep it to yourself! I
 
 Finding and reporting bugs in py5 is very important because it helps us identify problems and improve the library. You will occasionally find a bug while using py5. If this happens, let us know in [GitHub Issues](https://github.com/py5coding/py5generator/issues). If you're interested in helping fix the bug you've found, let us know that too.
 
-In addition, many new features and improvements to py5 have come from ordinary conversations with users. If you have an idea for a new feature, open a thread in [GitHub Discussions](https://github.com/py5coding/py5generator/discussions).
+In addition, many new features and improvements to py5 have come from ordinary conversations with users. If you think of an idea for a new feature while using py5, open a thread in [GitHub Discussions](https://github.com/py5coding/py5generator/discussions).
 
-If you get stuck somewhere while using py5, we'd like to know that too. Our goal is for py5's documentation to be clear and accessible to users. If you get tripped up by something, that's useful information for us about where the documentation needs improvement.
+If you get stuck somewhere, we'd like to know that too. Our goal is for py5's documentation to be clear and accessible to users. If you get tripped up by something, that's useful information for us about where the documentation needs improvement.
 
 ## Contribute to Processing
 
