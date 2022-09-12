@@ -4,9 +4,9 @@
 
 Below is a current list of suggested ways to contribute. This list will grow as the project grows.
 
-## Say Thank You
+## Share Your Creations and Say Thanks
 
-Do you enjoy using py5? What are you using py5 for? Don't keep it to yourself! It's a thrill to hear from our users. Seriously, it provides an enormous amount of encouragement to hear from someone who is excited about py5. On Twitter, find us at [@py5coding](https://twitter.com/py5coding) or use the hashtag [#py5](https://twitter.com/search?q=%23py5&f=live). You can also use [GitHub Discussions](https://github.com/py5coding/py5generator/discussions) for more involved conversations.
+Do you enjoy using py5? What are you using py5 for? Don't keep it to yourself! It's a thrill to hear from our users. Seriously, it provides an enormous amount of encouragement to hear from someone who is excited about py5 and to see what they are doing with it. On Twitter, find us at [@py5coding](https://twitter.com/py5coding) or use the hashtag [#py5](https://twitter.com/search?q=%23py5&f=live). You can also use [GitHub Discussions](https://github.com/py5coding/py5generator/discussions) for more involved conversations.
 
 ## Use py5 and Report Bugs
 
