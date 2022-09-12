@@ -6,7 +6,7 @@ parts:
   chapters:
   - file: content/about
   - file: content/community
-  - file: content/help
+  - file: content/contribute
   - url: https://ixora.io/tags/py5/
     title: py5 maintainer's blog
 
