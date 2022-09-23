@@ -24,7 +24,7 @@ Interactivity in py5 requires the use of both `setup()` and `draw()` blocks, so 
 
 You can use the mouse to perform simple interactions like pointing and clicking, or more complex ones like dragging-and-dropping different elements or panning around a 3D view. Many standard computer mice have three buttons, for left-clicking, right-clicking, and center-clicking (which often doubles as a scroll wheel). 
 
-py5 includes a handful of useful system variables (meaning you don't have to define them yourself, they're already understood) relating to the state of the mouse. The `mouse_x` and `mouse_y` variables refer to the current position of the pointer inside the sketch. In the example sketch below, we create a 600 by 600 pixel sketch window and use `mouse_x` and `mouse_y` to draw ellipses beneath the mouse pointer. 
+py5 includes a handful of useful system variables (meaning you don't have to define them yourself, they're already understood) relating to the state of the mouse. The `mouse_x` and `mouse_y` variables refer to the current position of the pointer inside the sketch. In the example sketch below, we create a 600 by 600 pixel sketch window and use `mouse_x` and `mouse_y` to draw ellipses beneath the mouse pointer.
 
 ```{code-cell} ipython3
 def setup():
@@ -67,7 +67,7 @@ def draw():
 run_sketch()
 ```
 
-This works, but leaves a lot to be desired. Our framerate is pretty low (20 frames per second) and moving the mouse around quickly will inevitably leave gaps in our ellipses. Using `pmouse_x` and `pmouse_y` to know the previous location of the mouse, we can easily swap this ellipse function out for a line. This makes things look a lot smoother, and it's more like you might expect a digital drawing program to behave. 
+This works, but leaves a lot to be desired. Our framerate is pretty low (20 frames per second) and moving the mouse around quickly will inevitably leave gaps in our ellipses. Using `pmouse_x` and `pmouse_y` to know the previous location of the mouse, we can easily swap this ellipse function out for a line. This makes things look a lot smoother, and it's more like you might expect a digital drawing program to behave.
 
 ```{code-cell} ipython3
 def setup():
@@ -91,7 +91,7 @@ run_sketch()
 
 *(It's a python, of course.)*
 
-In addition to `is_mouse_pressed` we have access to one last mouse variable, `mouse_button`, to tell us which button on the mouse is being pressed. This will set the variable to LEFT, RIGHT or CENTER, depending on the button used. You shouldn't rely on `mouse_button` by itself to tell you *if* a button is being pressed, since it might not always reset correctly or behave in ways you'd expect, but you can use it alongside `is_mouse_pressed` to get more specific. If we might want to use the right or center mouse button for other drawing functions, we can check to make sure only the *left* button is being used before we draw our lines. 
+In addition to `is_mouse_pressed` we have access to one last mouse variable, `mouse_button`, to tell us which button on the mouse is being pressed. This will set the variable to LEFT, RIGHT or CENTER, depending on the button used. You shouldn't rely on `mouse_button` by itself to tell you *if* a button is being pressed, since it might not always reset correctly or behave in ways you'd expect, but you can use it alongside `is_mouse_pressed` to get more specific. If we might want to use the right or center mouse button for other drawing functions, we can check to make sure only the *left* button is being used before we draw our lines.
 
 ```{code-cell} ipython3
 def setup():
@@ -149,7 +149,6 @@ run_sketch()
 Of course, you can use mouse input in ways that are less direct to produce digital art that requires and responds to user interaction. As an example, here's some code that creates a background color reliant on the current position of the mouse. The *x* position will change the hue of the background, and the *y* position will change the saturation. If you want to make the relationship between the user's mouse position and the color of the background a bit more mysterious, you can also use the function `no_cursor()` to hide the cursor entirely.
 
 ```{code-cell} ipython3
-
 def setup():
     size(600,600)
     frame_rate(20)
@@ -193,7 +192,7 @@ run_sketch()
 
 Why would you want to do this? Well, by using `loop()`, we can now manually control when everything inside of `draw()` runs, which can be a neat way to only use our code when we need it. 
 
-Exactly as the `setup()` and `draw()` functions are written, we'll be adding `mouse_pressed()` to our code with the *def* keyword. Inside this new function, we've checked if the mouse button being pressed is the left mouse button, and if it is, we use `loop()` to run our code as normal. Try it out -- once you press the right mouse button, the `mouse_pressed()` event will trigger our code, and you'll start getting the current frame number in the console! 
+Exactly as the `setup()` and `draw()` functions are written, we'll be adding `mouse_pressed()` to our code with the *def* keyword. Inside this new function, we've checked if the mouse button being pressed is the left mouse button, and if it is, we use `loop()` to run our code as normal. Try it out -- once you press the right mouse button, the `mouse_pressed()` event will trigger our code, and you'll start getting the current frame number in the console!
 
 ```{code-cell} ipython3
 def setup():
@@ -211,7 +210,7 @@ def mouse_pressed():
 run_sketch()
 ```
 
-As we build our digital painting app, you can optionally download the font [*Ernest* (created by Marc André 'mieps' Misman)](https://www.dafont.com/ernest.font) to make the words on your user interface look a little nicer. If you're running this sketch on your computer, make sure to place the .ttf file in an appropriate place, either in the same folder as your sketch or a folder alongside it that you reference in your code. We'll be creating a whole lot of global variables to control various attributes in our app, which must be placed somewhere outside of our `setup()`, `draw()` and mouse-event-related functions. Finally, in order to make sure that our `loop()` only runs while the mouse button is being held down, we'll add a `mouse_released()` function that runs `no_loop()` again. 
+As we build our digital painting app, you can optionally download the font [*Ernest* (created by Marc André 'mieps' Misman)](https://www.dafont.com/ernest.font) to make the words on your user interface look a little nicer. If you're running this sketch on your computer, make sure to place the .ttf file in an appropriate place, either in the same folder as your sketch or a folder alongside it that you reference in your code. We'll be creating a whole lot of global variables to control various attributes in our app, which must be placed somewhere outside of our `setup()`, `draw()` and mouse-event-related functions. Finally, in order to make sure that our `loop()` only runs while the mouse button is being held down, we'll add a `mouse_released()` function that runs `no_loop()` again.
 
 ```{code-cell} ipython3
 # Global variables live outside of our various functions.
@@ -246,7 +245,7 @@ def mouse_released():
 run_sketch()
 ```
 
-Now, pressing and releasing the left mouse button will lead to a short burst of drawn frames, with the current framecount being printed in the console. Let's add those drawing features back in, using our new global variables. 
+Now, pressing and releasing the left mouse button will lead to a short burst of drawn frames, with the current framecount being printed in the console. Let's add those drawing features back in, using our new global variables.
 
 ```{code-cell} ipython3
 # Global variables live outside of our various functions.
@@ -406,7 +405,7 @@ def mouse_released():
 run_sketch()
 ```
 
-Getting the color when someone clicks one of those swatches is actually very easy. We can use the function `get()`, which reads the color of specific pixels. Let's add a section of code inside of `draw()` that checks the mouse position. We'll be able to tell if we're in the right area of the screen just by checking the mouse's X position against that *palette* variable from earlier... and because we'll be adding other buttons to the left-hand panel, it's a good idea to check that we're at a certain Y position as well. 
+Getting the color when someone clicks one of those swatches is actually very easy. We can use the function `get()`, which reads the color of specific pixels. Let's add a section of code inside of `draw()` that checks the mouse position. We'll be able to tell if we're in the right area of the screen just by checking the mouse's X position against that *palette* variable from earlier... and because we'll be adding other buttons to the left-hand panel, it's a good idea to check that we're at a certain Y position as well.
 
 ```{code-cell} ipython3
 # Global variables live outside of our various functions.
@@ -549,7 +548,7 @@ Scrolling the mouse wheel at this point will print either a -1 or a 1 in the con
 
 We'll also be bringing in a different mode here. While we're adjusting our brush size, our painting mode will be on *select*. When we've adjusted our brush size, the `redraw()` line will run `draw()` again -- just once -- to set the painting mode back to *free*. To prevent blobs of paint appearing around the edges of the palette when you select colors with a large brush size, we've also added in a line to set our painting mode to *select* while we're selecting from our swatches.
 
-Finally, it's a good idea to provide some feedback to the user. The new section for *brush preview* adds an appropriately sized blob to the side panel to show what size the brush is. 
+Finally, it's a good idea to provide some feedback to the user. The new section for *brush preview* adds an appropriately sized blob to the side panel to show what size the brush is.
 
 ```{code-cell} ipython3
 # Global variables live outside of our various functions.
@@ -644,7 +643,7 @@ We've done a lot with mouse input here. Let's move on to the keyboard.
 
 ## keyboard input
 
-Keyboard interaction in py5 is similar to what we've already experienced, with system variables like `key` and `is_key_pressed` and events like `key_pressed()`, `key_released()` and `key_typed()`. We'll be adding an event to detect keyboard presses, and using it to select from our swatches with the keyboard. Our code is getting pretty long now... don't get lost! First, we'll be adding the `key_pressed()` function itself, and printing the value of `key`. This function will be triggered every time you press a key on your keyboard, and `key` stores the last button on the keyboard that was pressed. 
+Keyboard interaction in py5 is similar to what we've already experienced, with system variables like `key` and `is_key_pressed` and events like `key_pressed()`, `key_released()` and `key_typed()`. We'll be adding an event to detect keyboard presses, and using it to select from our swatches with the keyboard. Our code is getting pretty long now... don't get lost! First, we'll be adding the `key_pressed()` function itself, and printing the value of `key`. This function will be triggered every time you press a key on your keyboard, and `key` stores the last button on the keyboard that was pressed.
 
 ```{code-cell} ipython3
 # Global variables live outside of our various functions.
@@ -952,7 +951,7 @@ run_sketch()
 
 <img src="images/mouse_and_keyboard_interaction/paint-app-clear.png">
 
-Let's add a new function to correspond to this, using an event we haven't seen yet, `mouse_clicked()`. This listens for a mouse event just like `mouse_pressed()` and `mouse_released()`, but it listens for the entire click, both pressing and releasing, and only executes its code after the button is released. 
+Let's add a new function to correspond to this, using an event we haven't seen yet, `mouse_clicked()`. This listens for a mouse event just like `mouse_pressed()` and `mouse_released()`, but it listens for the entire click, both pressing and releasing, and only executes its code after the button is released.
 
 ```{code-cell} ipython3
 # Global variables live outside of our various functions.

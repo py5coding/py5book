@@ -530,7 +530,7 @@ run_sketch()
 
 The height of our `rect()` relies on our *h* variable, which you can think of as the scale of our visualization (50 pixels per list item), multiplied by the number of bands in our list. Let's turn *bands* into a real *one-dimensional* list of colors. 
 
-We can also replace our single `rect()` with a loop, to draw each band in sequence. You'll notice we use the *enumerate* function here, so that we can multiply our current band number by *h* to position the band of color. 
+We can also replace our single `rect()` with a loop, to draw each band in sequence. You'll notice we use the *enumerate* function here, so that we can multiply our current band number by *h* to position the band of color.
 
 ```{code-cell} ipython3
 def setup():
@@ -569,7 +569,7 @@ To determine how bright each of these colored bands are, we can take their RGB v
 
 What would it look like to transform this into a two-dimensional list? We'll be turning our list of bands into a list of lists, where each individual band contains the RGB values for that band. Remember that in a hex code, each pair of letters or numbers represents red, green and blue in order, with FF being the highest possible value (100%). You don't have to convert these hex codes to RGB values manually - we'll do that for you.
 
-In addition, simply using `fill(band)` isn't going to cut it. We'll have to first use the `color_mode()` function to indicate that we're using RGB with a scale of 0 to 100, and then access the elements inside of the sub-lists inside of our list. Sound complex? It's not - our loop was already accessing each element as one `band`, so now that this element is also a list, you can use `band[0]` (and so on) to get the actual values. 
+In addition, simply using `fill(band)` isn't going to cut it. We'll have to first use the `color_mode()` function to indicate that we're using RGB with a scale of 0 to 100, and then access the elements inside of the sub-lists inside of our list. Sound complex? It's not - our loop was already accessing each element as one `band`, so now that this element is also a list, you can use `band[0]` (and so on) to get the actual values.
 
 ```{code-cell} ipython3
 def setup():
@@ -609,7 +609,7 @@ run_sketch()
 
 This output will look exactly the same as the previous one, but now that it's using a two-dimensional list, we can do more with those values. 
 
-Firstly, let's lengthen the bars in our chart according to their brightness. We can do this just by adding together the R, G and B values, and then using that to determine the width of each band. 
+Firstly, let's lengthen the bars in our chart according to their brightness. We can do this just by adding together the R, G and B values, and then using that to determine the width of each band.
 
 ```{code-cell} ipython3
 def setup():
@@ -653,7 +653,7 @@ run_sketch()
 
 Do these brightness values "feel" correct to your eye? Human visualization is not an exact science, and of course it's slightly unique to every person. You'll probably agree that the yellow is very bright, but you might disagree that the red feels just as bright as the green. In fact, even with the same brightness values, green will often look more prominent, due to the number of receptors for each color in the eye (you have more green receptors than red ones). 
 
-There's another way to visualize this - if we take our summed value for each color and divide it by 3, we come up with the average brightness of that color. You might remember that if the value is the same for a color's red, green and blue values, that will always be a shade of grey. By using this new average value for our fill color instead, we can very easily tell the difference in the brightness of these disparate colors. Let's comment out our old `fill()` and replace it. 
+There's another way to visualize this - if we take our summed value for each color and divide it by 3, we come up with the average brightness of that color. You might remember that if the value is the same for a color's red, green and blue values, that will always be a shade of grey. By using this new average value for our fill color instead, we can very easily tell the difference in the brightness of these disparate colors. Let's comment out our old `fill()` and replace it.
 
 ```{code-cell} ipython3
 def setup():
@@ -698,7 +698,7 @@ run_sketch()
 
 <img src="images/working_with_lists/lists-of-lists-2-dimensional-grey.png">
 
-For another way to visualize the components in this sub-list, we can turn each band into three different `rect()` functions - one for its red value, one for green, and one for blue. We'll have to modify our loop a bit for this. Of course, each band will need its own `fill()` now, and its own `rect()`. By adding the values of one color to the positioning of subsequent colors, we make sure they all appear side-by-side. 
+For another way to visualize the components in this sub-list, we can turn each band into three different `rect()` functions - one for its red value, one for green, and one for blue. We'll have to modify our loop a bit for this. Of course, each band will need its own `fill()` now, and its own `rect()`. By adding the values of one color to the positioning of subsequent colors, we make sure they all appear side-by-side.
 
 ```{code-cell} ipython3
 def setup():
@@ -754,7 +754,7 @@ bands = [
   # and so on, and so forth...
 ```
 
-...but this is an inelegant solution at best, and really, it's totally overkill. We can just add another value, a label, to each of these colored bands. Then we can use py5's text display functions to print that text off to the side. 
+...but this is an inelegant solution at best, and really, it's totally overkill. We can just add another value, a label, to each of these colored bands. Then we can use py5's text display functions to print that text off to the side.
 
 ```{code-cell} ipython3
 def setup():
