@@ -20,17 +20,11 @@ parts:
   chapters:
   - file: tutorials/intro_to_py5_and_python
     sections:
-    - file: tutorials/intro_to_py5_and_python_variables_and_datatypes
-    - file: tutorials/intro_to_py5_and_python_randomness
-    - file: tutorials/intro_to_py5_and_python_mouse_and_keyboard_interaction
-    - file: tutorials/intro_to_py5_and_python_working_with_lists
+    - glob: tutorials/intro_to_py5_and_python_*
 
   - file: tutorials/misc
     sections:
-    - file: tutorials/misc_introduction_to_py5bot
-    - file: tutorials/misc_jupyter_notebooks
-    - file: tutorials/misc_rotating_cube
-    - file: tutorials/misc_render_helper_tools
+    - glob: tutorials/misc_*
 
 - caption: How To...
   chapters:
