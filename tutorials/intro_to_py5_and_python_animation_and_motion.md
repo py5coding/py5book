@@ -48,10 +48,7 @@ This illusion is known as the *phi phenomenon*. With a slightly better understan
 
 To use animation in py5 (as well as a handful of other nifty features), you have to take advantage of two built-in functions that define the behavior of whole blocks of code: `setup()` and `draw()`. Other tutorials do not always use these functions - coding in py5 without using these is referred to as *static* mode, since the sketches it creates will have still (static) visuals. Py5bot is set up to run these sorts of sketches by default. A static sketch might begin with some code like this, to set up the various unchanging qualities of the sketch:
 
-```{code-cell} ipython3
-:tags: [hide-cell]
-import time
-```
++++
 
 ```python
 size(500,500)
@@ -72,11 +69,6 @@ def setup():
     stroke_weight(3)
 
 run_sketch()
-
-# give the Sketch some time to run and then exit
-time.sleep(5)
-exit_sketch()
-time.sleep(0.25)
 ```
 
 Any code in that block following `def setup():` is run once, when the sketch begins. 
@@ -84,8 +76,6 @@ Any code in that block following `def setup():` is run once, when the sketch beg
 This `setup()` function becomes very powerful when you use it with `draw()`. Unlike `setup()`, which is run once, `draw()` is run every frame! By default, sketches run at 60 frames per second, but this number may reduce if a lot of heavy-duty animation is running on screen. You can use a built-in variable, `frame_rate`, to see how many frames have advanced since the start of the sketch. Let's use this inside of another block, for `draw()`, to see how it works.
 
 ```{code-cell} ipython3
-:tags: ["output_scroll"]
-
 def setup():
     size(500,500)
     background('#004477')
@@ -97,11 +87,6 @@ def draw():
     print(frame_count)
 
 run_sketch()
-
-# give the Sketch some time to run and then exit
-time.sleep(5)
-exit_sketch()
-time.sleep(0.25)
 ```
 
 As long as the above sketch is running, a higher number will be printed to the console for each new frame. You can use `frame_rate()` (with one argument, a number) inside of your setup code to change the FPS at which your sketch runs. 
@@ -109,8 +94,6 @@ As long as the above sketch is running, a higher number will be printed to the c
 Using an extra *if* statement and the *modulo* operator (which you may recall gives us the remainder of a division operation), you can easily create a sketch where something only happens every two frames:
 
 ```{code-cell} ipython3
-:tags: ["output_scroll"]
-
 def setup():
     size(500,500)
     background('#004477')
@@ -124,11 +107,6 @@ def draw():
         print(frame_count)
 
 run_sketch()
-
-# give the Sketch some time to run and then exit
-time.sleep(5)
-exit_sketch()
-time.sleep(0.25)
 ```
 
 Let's replace this `print()` function with an ellipse, to draw a circle on even-numbered frames. Actually, the code below may not run as you initially expect.
@@ -148,11 +126,6 @@ def draw():
         ellipse(250,140, 47,47)
         
 run_sketch()
-
-# give the Sketch some time to run and then exit
-time.sleep(5)
-exit_sketch()
-time.sleep(0.25)
 ```
 
 <img src="images/animation_and_motion/animation-functions-ellipse-even.png">
@@ -176,11 +149,6 @@ def draw():
         ellipse(250,140, 47,47)
         
 run_sketch()
-
-# give the Sketch some time to run and then exit
-time.sleep(5)
-exit_sketch()
-time.sleep(0.25)
 ```
 
 Now your ellipse will blink on and off every frame. 
@@ -204,11 +172,6 @@ def draw():
         ellipse(250,height-140, 47,47)
         
 run_sketch()
-
-# give the Sketch some time to run and then exit
-time.sleep(5)
-exit_sketch()
-time.sleep(0.25)
 ```
 
 Just like with the animated examples at the top of the page, you can adjust the `frame_rate()` function here to experiment with the results!
@@ -224,7 +187,7 @@ You could always draw extra ellipses, but this is unnecessarily time-consuming, 
 When using static sketches, variables can be defined anywhere, and used on any subsequent lines of code. However, our `setup()` and `draw()` blocks have different *scopes*, which means that variables cannot be shared between them. You can see an example of this by trying to run the following code, which defines a variable named *y* inside of `setup()`, then tries to access it in `draw()`.
 
 ```{code-cell} ipython3
-:tags: ["raises-exception", "output_scroll"]
+:tags: [raises-exception, output_scroll]
 
 def setup():
     size(500,500)
@@ -238,11 +201,6 @@ def draw():
     print(y)
     
 run_sketch()
-
-# give the Sketch some time to run and then exit
-time.sleep(5)
-exit_sketch()
-time.sleep(0.25)
 ```
 
 This will give some sort of error, for example:
@@ -259,8 +217,6 @@ NameError: name 'y' is not defined
 When a variable only exists in some limited scope, we call it a *local* variable. To use the same variable throughout your sketch, you will have to define it as a *global* variable instead. The easiest way to do this is simply to move the initial variable declaration - that line like `y = 1` - outside of either the `setup()` or `draw()` blocks. As the following code shows, both blocks can access this global variable.
 
 ```{code-cell} ipython3
-:tags: ["output_scroll"]
-
 y = 1 # Global variable
 
 def setup():
@@ -276,18 +232,11 @@ def draw():
     print( "Draw code: " + str(y) ) # prints "Draw code: 1" once per frame
     
 run_sketch()
-
-# give the Sketch some time to run and then exit
-time.sleep(5)
-exit_sketch()
-time.sleep(0.25)
 ```
 
 However, trying to reassign this variable in either block will do something funny. You won't actually be editing *y* itself - you'll be overriding it with a *local* version of y.
 
 ```{code-cell} ipython3
-:tags: ["output_scroll"]
-
 y = 1 # Global variable
 
 def setup():
@@ -304,18 +253,11 @@ def draw():
     print( "Draw code: " + str(y) ) # prints "Draw code: 0" once per frame
     
 run_sketch()
-
-# give the Sketch some time to run and then exit
-time.sleep(5)
-exit_sketch()
-time.sleep(0.25)
 ```
 
 Even worse, trying to edit *y* inside of `draw()` still gives an error, since it's overriding the variable with its own special one.
 
 ```{code-cell} ipython3
-:tags: ["output_scroll"]
-
 y = 1 # Global variable
 
 def setup():
@@ -332,11 +274,6 @@ def draw():
     print( "Draw code: " + str(y) ) # prints "Draw code: 0" once per frame
     
 run_sketch()
-
-# give the Sketch some time to run and then exit
-time.sleep(5)
-exit_sketch()
-time.sleep(0.25)
 ```
 
 That one gives a new error:
@@ -350,8 +287,6 @@ So, what's the actual solution? To get things working again, keep that global va
 While we're here, let's do something useful for animating... and add our `ellipse()` back in, but use *y* to increment its position on the y axis!
 
 ```{code-cell} ipython3
-:tags: ["output_scroll"]
-
 y = 1 # Global variable
 
 def setup():
@@ -370,11 +305,6 @@ def draw():
     ellipse(height/2,y, 47,47) # Draws our ellipse at y each frame!
     
 run_sketch()
-
-# give the Sketch some time to run and then exit
-time.sleep(5)
-exit_sketch()
-time.sleep(0.25)
 ```
 
 Run this code. You'll be able to watch the ellipse slide down the screen. 
@@ -391,8 +321,6 @@ if frame_count % 100 == 0:
 ```
 
 ```{code-cell} ipython3
-:tags: ["output_scroll"]
-
 y = 1 # Global variable
 
 def setup():
@@ -414,11 +342,6 @@ def draw():
         save_frame('file.png')
     
 run_sketch()
-
-# give the Sketch some time to run and then exit
-time.sleep(5)
-exit_sketch()
-time.sleep(0.25)
 ```
 
 If you're running this code online, the resulting file may be quite hard to find. However, in any development environment hosted on your computer, `file.png` will be placed in the same folder as the sketch, and updated every 100 frames. 
@@ -452,11 +375,6 @@ def draw():
     image(logo, x,100)
 
 run_sketch()
-
-# give the Sketch some time to run and then exit
-time.sleep(5)
-exit_sketch()
-time.sleep(0.25)
 ```
 
 You can see we're following the same general format as before: global variables are declared at the top of the sketch, and the *global* keyword is used whenever they must be changed. Notice that loading an image with `load_image()` is done inside of our `setup()` block, overwriting the placeholder "None". Since `load_image()` is a function, we run it just once on startup by doing this. 
@@ -484,11 +402,6 @@ def draw():
         print('Bye!')
 
 run_sketch()
-
-# give the Sketch some time to run and then exit
-time.sleep(5)
-exit_sketch()
-time.sleep(0.25)
 ```
 
 Since the movement of the logo is controlled by xspeed, we can reverse its motion by changing xspeed into a negative number. Try this to bounce the logo off the right side of the screen:
@@ -513,11 +426,6 @@ def draw():
         xspeed *= -1 # Multiplying xspeed by negative 1
 
 run_sketch()
-
-# give the Sketch some time to run and then exit
-time.sleep(5)
-exit_sketch()
-time.sleep(0.25)
 ```
 
 This bounce isn't perfect... the logo almost completely disappears before it bounces back, because its anchor point is at the top-left corner of the image. We can compensate for this by subtracting the width of the image from our calculations. (As a hint, this logo is 100 pixels wide and 45 pixels tall.)
@@ -542,11 +450,6 @@ def draw():
         xspeed *= -1 # Multiplying xspeed by negative 1
 
 run_sketch()
-
-# give the Sketch some time to run and then exit
-time.sleep(5)
-exit_sketch()
-time.sleep(0.25)
 ```
 
 What about the left side of the screen? Well, that's as simple as adding another check for an x position of less than zero. We don't even have to do any math with the width of the logo here, since it's anchored on the top-left corner by default. Since the same thing has to happen on either end of the screen (reversing the xspeed variable), you can use the *or* operator to combine this check with the last one.
@@ -571,11 +474,6 @@ def draw():
         xspeed *= -1 # Multiplying xspeed by negative 1
 
 run_sketch()
-
-# give the Sketch some time to run and then exit
-time.sleep(5)
-exit_sketch()
-time.sleep(0.25)
 ```
 
 <img src="images/animation_and_motion/dvd_bounce.gif">
