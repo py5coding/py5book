@@ -302,7 +302,7 @@ def setup():
 def draw():
     rect(mouse_x, mouse_y, 10, 10)
 
-run_sketch()
+run_sketch()  # this is only needed in Jupyter Notebooks
 ```
 
 Observe that any "`py5.`" and "`self.`" prefixes are removed. There
