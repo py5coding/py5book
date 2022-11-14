@@ -9,7 +9,7 @@ logo: images/main/logo.png
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: force
+  execute_notebooks: cache
 
 # Define the name of the latex output file for PDF builds
 latex:
