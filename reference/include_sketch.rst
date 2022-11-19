@@ -118,7 +118,10 @@ Input
 Files
 ^^^^^
 
+* `load_bytes() <sketch_load_bytes.html>`_
 * `load_json() <sketch_load_json.html>`_
+* `load_pickle() <sketch_load_pickle.html>`_
+* `load_strings() <sketch_load_strings.html>`_
 * `parse_json() <sketch_parse_json.html>`_
 * `save_json() <sketch_save_json.html>`_
 * `select_folder() <sketch_select_folder.html>`_
@@ -263,6 +266,9 @@ Files
 * `begin_record() <sketch_begin_record.html>`_
 * `end_raw() <sketch_end_raw.html>`_
 * `end_record() <sketch_end_record.html>`_
+* `save_bytes() <sketch_save_bytes.html>`_
+* `save_pickle() <sketch_save_pickle.html>`_
+* `save_strings() <sketch_save_strings.html>`_
 * `select_output() <sketch_select_output.html>`_
 
 Image
@@ -283,6 +289,7 @@ Rendering
 * `blend_mode() <sketch_blend_mode.html>`_
 * `clip() <sketch_clip.html>`_
 * `create_graphics() <sketch_create_graphics.html>`_
+* `flush() <sketch_flush.html>`_
 * `g <sketch_g.html>`_
 * `get_graphics() <sketch_get_graphics.html>`_
 * `hint() <sketch_hint.html>`_
@@ -401,6 +408,7 @@ Threading
 ^^^^^^^^^
 
 * `has_thread() <sketch_has_thread.html>`_
+* `join_thread() <sketch_join_thread.html>`_
 * `launch_promise_thread() <sketch_launch_promise_thread.html>`_
 * `launch_repeating_thread() <sketch_launch_repeating_thread.html>`_
 * `launch_thread() <sketch_launch_thread.html>`_

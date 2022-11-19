@@ -160,6 +160,7 @@ Rendering
 
 * `blend_mode() <py5graphics_blend_mode.html>`_
 * `clip() <py5graphics_clip.html>`_
+* `flush() <py5graphics_flush.html>`_
 * `hint() <py5graphics_hint.html>`_
 * `no_clip() <py5graphics_no_clip.html>`_
 
