@@ -90,7 +90,7 @@ rect(250,100, 150,150)
 
 There's a few more ways to fine-tune those outlines... `stroke_cap()` can change these outlines to be sharper or to stick out, and `stroke_join()` changes how they connect at corners. 
 
-*Reference pages: [stroke_cap()](http://py5.ixora.io/reference/sketch_stroke_cap.html) and [stroke_join()](http://py5.ixora.io/reference/sketch_stroke_join.html)*
+*Reference pages: [stroke_cap()](/reference/sketch_stroke_cap.html) and [stroke_join()](/reference/sketch_stroke_join.html)*
 
 ## background colors
 
@@ -164,7 +164,7 @@ If you wanted to use HSB (hue, saturation, brightness) instead, you can use a fu
 
 In HSB mode, that bright red color we represented as `fill(255, 0, 0)` would instead be `fill(0, 100, 100)` or `fill(360, 100, 100)` - since the hue range is "circular" and loops back in on itself, either will work. That's a color at the red point of the hue range, with maximum brightness and saturation. Why would you want to use HSB? Think again about a program that might have to change its colors while it runs. If you could simply add to the number representing hue and cycle through the rainbow that way, it would be a lot easier than manually working out how to do that with RGB values!
 
-*Reference pages: [color_mode()](http://py5.ixora.io/reference/sketch_color_mode.html)*
+*Reference pages: [color_mode()](/reference/sketch_color_mode.html)*
 
 # other primitives
 
@@ -260,7 +260,7 @@ ellipse(100,100, 100,50)
 
 Note that the x, y position here is the center of the ellipse, not one of the edges. When we were drawing with the `rect()` function, earlier, that position was the top-left corner of the rectangle. You can change this behavior if you want - by default, py5 uses `ellipse_mode(CENTER)` and `rect_mode(CORNER)`. 
  
-*Reference pages: [rect_mode()](http://py5.ixora.io/reference/sketch_rect_mode.html) and [ellipse_mode()](http://py5.ixora.io/reference/sketch_ellipse_mode.html)*
+*Reference pages: [rect_mode()](/reference/sketch_rect_mode.html) and [ellipse_mode()](/reference/sketch_ellipse_mode.html)*
 
 `quad(x,y, x,y, x,y, x,y)` is a four-cornered or quadrilaterial shape, with each of those corners defined by a pair of x,y coordinates. It gives you more control over its shape than a `rect()` does.
 
