@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def draw():
         py5.square(py5.random(py5.width), py5.random(py5.height), 10)
@@ -48,19 +47,16 @@ This method provides the same functionality as :doc:`py5surface_set_size` but wi
 
 Underlying Processing method: windowResize
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    window_resize(new_width: int, new_height: int, /) -> None
+    window_resize(
+        new_width: int,  # new window width
+        new_height: int,  # new window height
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **new_height**: `int` - new window height
-* **new_width**: `int` - new window width
-
-
-Updated on April 27, 2022 11:19:15am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

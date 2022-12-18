@@ -12,18 +12,15 @@ This method is the same as :doc:`sketch_shininess` but linked to a ``Py5Graphics
 
 Underlying Processing method: PGraphics.shininess
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    shininess(shine: float, /) -> None
+    shininess(
+        shine: float,  # degree of shininess
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **shine**: `float` - degree of shininess
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

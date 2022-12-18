@@ -14,18 +14,15 @@ This method is the same as :doc:`sketch_bezier_vertices` but linked to a ``Py5Gr
 
 Underlying Processing method: PGraphics.bezierVertices
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    bezier_vertices(coordinates: npt.NDArray[np.floating], /) -> None
+    bezier_vertices(
+        coordinates: npt.NDArray[np.floating],  # 2D array of bezier vertex coordinates with 6 or 9 columns for 2D or 3D points, respectively
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **coordinates**: `npt.NDArray[np.floating]` - 2D array of bezier vertex coordinates with 6 or 9 columns for 2D or 3D points, respectively
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

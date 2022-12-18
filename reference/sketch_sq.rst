@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.no_stroke()
@@ -46,18 +45,14 @@ Description
 
 Squares a number (multiplies a number by itself). The result is always a positive number, as multiplying two negative numbers always yields a positive result. For example, ``-1 * -1 = 1``.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    sq(value: Union[float, npt.NDArray]) -> Union[float, npt.NDArray]
+    sq(
+        value: Union[float, npt.NDArray]  # number to square
+    ) -> Union[float, npt.NDArray]
 
-Parameters
-----------
-
-* **value**: `Union[float, npt.NDArray]` - number to square
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

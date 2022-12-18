@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         img = py5.load_image("laDefense.jpg")
@@ -46,12 +45,12 @@ Removes the current fill value for displaying images and reverts to displaying i
 
 Underlying Processing method: `noTint <https://processing.org/reference/noTint_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     no_tint() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

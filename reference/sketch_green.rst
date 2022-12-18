@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         c = "#144BC8"  # define color 'c'
@@ -51,18 +50,15 @@ The ``green()`` function is easy to use and understand, but it is slower than a 
 
 Underlying Processing method: `green <https://processing.org/reference/green_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    green(rgb: int, /) -> float
+    green(
+        rgb: int,  # any value of the color datatype
+        /,
+    ) -> float
 
-Parameters
-----------
-
-* **rgb**: `int` - any value of the color datatype
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

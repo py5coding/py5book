@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     py5.create_font_file('Comic Sans', 20)
 
@@ -36,7 +35,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     sketch = py5.get_current_sketch()
     assert sketch.is_ready
@@ -58,7 +56,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     @py5.render(400, 200)
     def draw_message(s: py5.Sketch):
@@ -87,5 +84,5 @@ The following functions are provided:
 
 .. include:: include_py5functions.rst
 
-Updated on September 16, 2021 14:31:43pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -48,6 +48,7 @@ Environment
 ~~~~~~~~~~~
 
 * `height <py5graphics_height.html>`_
+* `next_page() <py5graphics_next_page.html>`_
 * `no_smooth() <py5graphics_no_smooth.html>`_
 * `pixel_density <py5graphics_pixel_density.html>`_
 * `pixel_height <py5graphics_pixel_height.html>`_
@@ -159,6 +160,7 @@ Rendering
 
 * `blend_mode() <py5graphics_blend_mode.html>`_
 * `clip() <py5graphics_clip.html>`_
+* `flush() <py5graphics_flush.html>`_
 * `hint() <py5graphics_hint.html>`_
 * `no_clip() <py5graphics_no_clip.html>`_
 

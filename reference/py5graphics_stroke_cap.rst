@@ -14,18 +14,15 @@ This method is the same as :doc:`sketch_stroke_cap` but linked to a ``Py5Graphic
 
 Underlying Processing method: PGraphics.strokeCap
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    stroke_cap(cap: int, /) -> None
+    stroke_cap(
+        cap: int,  # either SQUARE, PROJECT, or ROUND
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **cap**: `int` - either SQUARE, PROJECT, or ROUND
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

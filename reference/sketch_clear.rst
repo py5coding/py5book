@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.fill(255)
@@ -47,12 +46,12 @@ This method behaves differently than :doc:`py5graphics_clear` because ``Py5Graph
 
 Underlying Processing method: `clear <https://processing.org/reference/clear_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     clear() -> None
 
-Updated on May 02, 2022 12:07:22pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

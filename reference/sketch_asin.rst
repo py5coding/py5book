@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         a = py5.PI/3
@@ -41,7 +40,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         a = py5.PI + py5.PI/3
@@ -65,18 +63,14 @@ The inverse of :doc:`sketch_sin`, returns the arc sine of a value. This function
 
 This function makes a call to the numpy ``asin()`` function.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    asin(value: Union[float, npt.ArrayLike]) -> Union[float, npt.NDArray]
+    asin(
+        value: Union[float, npt.ArrayLike]  # value in the range of -1 to 1 whose arc sine is to be returned
+    ) -> Union[float, npt.NDArray]
 
-Parameters
-----------
-
-* **value**: `Union[float, npt.ArrayLike]` - value in the range of -1 to 1 whose arc sine is to be returned
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

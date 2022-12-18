@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     pos = 0
 
@@ -51,18 +50,15 @@ Specifies the number of frames to be displayed every second. For example, the fu
 
 Underlying Processing method: `frameRate <https://processing.org/reference/frameRate_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    frame_rate(fps: float, /) -> None
+    frame_rate(
+        fps: float,  # number of desired frames per second
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **fps**: `float` - number of desired frames per second
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

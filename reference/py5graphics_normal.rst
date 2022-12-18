@@ -12,20 +12,17 @@ This method is the same as :doc:`sketch_normal` but linked to a ``Py5Graphics`` 
 
 Underlying Processing method: PGraphics.normal
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    normal(nx: float, ny: float, nz: float, /) -> None
+    normal(
+        nx: float,  # x direction
+        ny: float,  # y direction
+        nz: float,  # z direction
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **nx**: `float` - x direction
-* **ny**: `float` - y direction
-* **nz**: `float` - z direction
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

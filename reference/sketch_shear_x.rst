@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.translate(py5.width/4, py5.height/4)
@@ -46,18 +45,15 @@ Technically, ``shear_x()`` multiplies the current transformation matrix by a rot
 
 Underlying Processing method: `shearX <https://processing.org/reference/shearX_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    shear_x(angle: float, /) -> None
+    shear_x(
+        angle: float,  # angle of shear specified in radians
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **angle**: `float` - angle of shear specified in radians
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

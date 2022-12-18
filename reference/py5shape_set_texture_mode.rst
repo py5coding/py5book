@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P2D)
@@ -63,18 +62,15 @@ With ``IMAGE``, if an image is 100 x 200 pixels, mapping the image onto the enti
 
 Underlying Processing method: PShape.setTextureMode
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    set_texture_mode(mode: int, /) -> None
+    set_texture_mode(
+        mode: int,  # either IMAGE or NORMAL
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **mode**: `int` - either IMAGE or NORMAL
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

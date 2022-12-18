@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def draw():
         py5.rect(py5.mouse_x, py5.mouse_y, 10, 10)
@@ -42,12 +41,12 @@ This method provides the same information as Processing's ``frameRate`` variable
 
 Underlying Processing method: getFrameRate
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     get_frame_rate() -> float
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

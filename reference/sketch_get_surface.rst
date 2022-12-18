@@ -1,7 +1,7 @@
 get_surface()
 =============
 
-Get the Py5Surface object used for the Sketch.
+Get the :doc:`py5surface` object used for the Sketch.
 
 Examples
 --------
@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     py5.run_sketch(block=False)
     surface = py5.get_surface()
@@ -35,16 +34,16 @@ Examples
 Description
 -----------
 
-Get the Py5Surface object used for the Sketch.
+Get the :doc:`py5surface` object used for the Sketch.
 
 Underlying Processing method: getSurface
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     get_surface() -> Py5Surface
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.no_stroke()
@@ -43,12 +42,12 @@ Disables drawing the stroke (outline). If both ``no_stroke()`` and :doc:`sketch_
 
 Underlying Processing method: `noStroke <https://processing.org/reference/noStroke_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     no_stroke() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.translate(py5.width//2, py5.height//2)
@@ -48,22 +47,23 @@ Technically, ``rotate()`` multiplies the current transformation matrix by a rota
 
 Underlying Processing method: `rotate <https://processing.org/reference/rotate_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    rotate(angle: float, /) -> None
-    rotate(angle: float, x: float, y: float, z: float, /) -> None
+    rotate(
+        angle: float,  # angle of rotation specified in radians
+        /,
+    ) -> None
 
-Parameters
-----------
+    rotate(
+        angle: float,  # angle of rotation specified in radians
+        x: float,  # x-coordinate of vector to rotate around
+        y: float,  # y-coordinate of vector to rotate around
+        z: float,  # z-coordinate of vector to rotate around
+        /,
+    ) -> None
 
-* **angle**: `float` - angle of rotation specified in radians
-* **x**: `float` - x-coordinate of vector to rotate around
-* **y**: `float` - y-coordinate of vector to rotate around
-* **z**: `float` - z-coordinate of vector to rotate around
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

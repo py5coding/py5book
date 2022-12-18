@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global s
@@ -52,12 +51,12 @@ Enables the shape's style data and ignores py5's current styles. Styles include 
 
 Underlying Processing method: `PShape.enableStyle <https://processing.org/reference/PShape_enableStyle_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     enable_style() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

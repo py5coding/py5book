@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(200, 100)
@@ -39,7 +38,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(320, 240)
@@ -62,7 +60,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(150, 200, py5.P3D)  # specify P3D renderer
@@ -78,6 +75,26 @@ Examples
         py5.rotate_x(py5.PI/6)
         py5.rotate_y(py5.PI/6)
         py5.box(35)
+
+.. raw:: html
+
+    </div></div>
+
+.. raw:: html
+
+    <div class="example-row"><div class="example-cell-image">
+
+.. raw:: html
+
+    </div><div class="example-cell-code">
+
+.. code:: python
+
+    def setup():
+        py5.size(200, 400, py5.PDF, 'output.pdf')
+        py5.background(153)
+        py5.line(0, 0, py5.width, py5.height)
+        py5.exit_sketch()  # needed to save and close the output properly
 
 .. raw:: html
 
@@ -112,25 +129,35 @@ The ``renderer`` parameter selects which rendering engine to use. For example, i
 * ``PDF``: The ``PDF`` renderer draws 2D graphics directly to an Acrobat PDF file. This produces excellent results when you need vector shapes for high-resolution output or printing.
 * ``SVG``: The ``SVG`` renderer draws 2D graphics directly to an SVG file. This is great for importing into other vector programs or using for digital fabrication.
 
+When using the ``PDF`` and ``SVG`` renderers with the ``size()`` method, you must use the ``path`` parameter to specify the file to write the output to. No window will open while the Sketch is running. You must also call :doc:`sketch_exit_sketch` to exit the Sketch and write the completed output to the file. Without this call, the Sketch will not exit and the output file will be empty. If you would like to draw 3D objects to a PDF or SVG file, use the ``P3D`` renderer and the strategy described in :doc:`sketch_begin_raw`.
+
 Underlying Processing method: `size <https://processing.org/reference/size_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    size(width: int, height: int, /) -> None
-    size(width: int, height: int, renderer: str, /) -> None
-    size(width: int, height: int, renderer: str, path: str, /) -> None
+    size(
+        width: int,  # width of the display window in units of pixels
+        height: int,  # height of the display window in units of pixels
+        /,
+    ) -> None
 
-Parameters
-----------
+    size(
+        width: int,  # width of the display window in units of pixels
+        height: int,  # height of the display window in units of pixels
+        renderer: str,  # rendering engine to use
+        /,
+    ) -> None
 
-* **height**: `int` - height of the display window in units of pixels
-* **path**: `str` - filename to save rendering engine output to
-* **renderer**: `str` - rendering engine to use
-* **width**: `int` - width of the display window in units of pixels
+    size(
+        width: int,  # width of the display window in units of pixels
+        height: int,  # height of the display window in units of pixels
+        renderer: str,  # rendering engine to use
+        path: str,  # filename to save rendering engine output to
+        /,
+    ) -> None
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

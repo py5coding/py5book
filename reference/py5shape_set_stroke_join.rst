@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         s = py5.create_shape()
@@ -58,18 +57,15 @@ This method differs from :doc:`py5shape_stroke_join` in that it is only to be us
 
 Underlying Processing method: PShape.setStrokeJoin
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    set_stroke_join(join: int, /) -> None
+    set_stroke_join(
+        join: int,  # either MITER, BEVEL, ROUND
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **join**: `int` - either MITER, BEVEL, ROUND
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

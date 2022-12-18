@@ -10,12 +10,12 @@ Disable all lighting. Lighting is turned off by default and enabled with the :do
 
 Underlying Processing method: `noLights <https://processing.org/reference/noLights_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     no_lights() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

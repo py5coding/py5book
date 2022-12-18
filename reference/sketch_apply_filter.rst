@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         img = py5.load_image("apples.jpg")
@@ -45,7 +44,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         img = py5.load_image("apples.jpg")
@@ -68,7 +66,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         img = py5.load_image("apples.jpg")
@@ -91,7 +88,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         img = py5.load_image("apples.jpg")
@@ -114,7 +110,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         img = py5.load_image("apples.jpg")
@@ -137,7 +132,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         img = py5.load_image("apples.jpg")
@@ -160,7 +154,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         img = py5.load_image("apples.jpg")
@@ -183,7 +176,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global blur
@@ -223,22 +215,26 @@ The presets options are:
 
 Underlying Processing method: `filter <https://processing.org/reference/filter_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    apply_filter(kind: int, /) -> None
-    apply_filter(kind: int, param: float, /) -> None
-    apply_filter(shader: Py5Shader, /) -> None
+    apply_filter(
+        kind: int,  # Either THRESHOLD, GRAY, OPAQUE, INVERT, POSTERIZE, BLUR, ERODE, or DILATE
+        /,
+    ) -> None
 
-Parameters
-----------
+    apply_filter(
+        kind: int,  # Either THRESHOLD, GRAY, OPAQUE, INVERT, POSTERIZE, BLUR, ERODE, or DILATE
+        param: float,  # unique for each, see above
+        /,
+    ) -> None
 
-* **kind**: `int` - Either THRESHOLD, GRAY, OPAQUE, INVERT, POSTERIZE, BLUR, ERODE, or DILATE
-* **param**: `float` - unique for each, see above
-* **shader**: `Py5Shader` - the fragment shader to apply
+    apply_filter(
+        shader: Py5Shader,  # the fragment shader to apply
+        /,
+    ) -> None
 
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

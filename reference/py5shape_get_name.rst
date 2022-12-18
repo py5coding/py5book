@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         us_map = py5.load_shape("us_map.svg")
@@ -49,12 +48,12 @@ Get the name assigned to a Py5Shape object. Will return ``None`` if the object h
 
 Underlying Processing method: PShape.getName
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     get_name() -> str
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -25,18 +25,15 @@ This method is the same as :doc:`sketch_blend_mode` but linked to a ``Py5Graphic
 
 Underlying Processing method: PGraphics.blendMode
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    blend_mode(mode: int, /) -> None
+    blend_mode(
+        mode: int,  # the blending mode to use
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **mode**: `int` - the blending mode to use
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

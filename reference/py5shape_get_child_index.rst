@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         us_map = py5.load_shape("us_map.svg")
@@ -50,18 +49,15 @@ Get a child ``Py5Shape`` object's index from a parent ``Py5Shape`` object that i
 
 Underlying Processing method: PShape.getChildIndex
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    get_child_index(who: Py5Shape, /) -> int
+    get_child_index(
+        who: Py5Shape,  # Py5Shape object
+        /,
+    ) -> int
 
-Parameters
-----------
-
-* **who**: `Py5Shape` - Py5Shape object
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

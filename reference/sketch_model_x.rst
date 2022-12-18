@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(500, 500, py5.P3D)
@@ -75,20 +74,17 @@ In the example, the ``model_x()``, :doc:`sketch_model_y`, and :doc:`sketch_model
 
 Underlying Processing method: `modelX <https://processing.org/reference/modelX_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    model_x(x: float, y: float, z: float, /) -> float
+    model_x(
+        x: float,  # 3D x-coordinate to be mapped
+        y: float,  # 3D y-coordinate to be mapped
+        z: float,  # 3D z-coordinate to be mapped
+        /,
+    ) -> float
 
-Parameters
-----------
-
-* **x**: `float` - 3D x-coordinate to be mapped
-* **y**: `float` - 3D y-coordinate to be mapped
-* **z**: `float` - 3D z-coordinate to be mapped
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

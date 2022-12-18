@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         g = py5.create_graphics(60, 60)
@@ -56,12 +55,12 @@ This method is the same as :doc:`sketch_load_pixels` but linked to a ``Py5Graphi
 
 Underlying Processing method: PGraphics.loadPixels
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     load_pixels() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

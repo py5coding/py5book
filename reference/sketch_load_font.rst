@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         # the font must be located in the sketch's
@@ -54,18 +53,15 @@ Use :doc:`sketch_create_font` (instead of ``load_font()``) to enable vector data
 
 Underlying Processing method: `loadFont <https://processing.org/reference/loadFont_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    load_font(filename: str, /) -> Py5Font
+    load_font(
+        filename: str,  # name of the font to load
+        /,
+    ) -> Py5Font
 
-Parameters
-----------
-
-* **filename**: `str` - name of the font to load
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

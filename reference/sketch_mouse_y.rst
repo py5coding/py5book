@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def draw():
         py5.background(204)
@@ -42,6 +41,5 @@ Note that py5 can only track the mouse position when the pointer is over the cur
 
 Underlying Processing field: `mouseY <https://processing.org/reference/mouseY.html>`_
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

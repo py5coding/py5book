@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def make_line(weight):
         s = py5.create_shape()
@@ -56,18 +55,15 @@ This method can only be used within a :doc:`py5shape_begin_shape` and :doc:`py5s
 
 Underlying Processing method: PShape.strokeWeight
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    stroke_weight(weight: float, /) -> None
+    stroke_weight(
+        weight: float,  # the weight (in pixels) of the stroke
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **weight**: `float` - the weight (in pixels) of the stroke
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

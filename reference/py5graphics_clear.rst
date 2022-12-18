@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global pg
@@ -58,12 +57,12 @@ Clears the pixels within a buffer. Unlike the main graphics context (the display
 
 Underlying Processing method: PGraphics.clear
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     clear() -> None
 
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

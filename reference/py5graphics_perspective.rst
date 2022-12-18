@@ -12,22 +12,20 @@ This method is the same as :doc:`sketch_perspective` but linked to a ``Py5Graphi
 
 Underlying Processing method: PGraphics.perspective
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     perspective() -> None
-    perspective(fovy: float, aspect: float, z_near: float, z_far: float, /) -> None
 
-Parameters
-----------
+    perspective(
+        fovy: float,  # field-of-view angle (in radians) for vertical direction
+        aspect: float,  # ratio of width to height
+        z_near: float,  # z-position of nearest clipping plane
+        z_far: float,  # z-position of farthest clipping plane
+        /,
+    ) -> None
 
-* **aspect**: `float` - ratio of width to height
-* **fovy**: `float` - field-of-view angle (in radians) for vertical direction
-* **z_far**: `float` - z-position of farthest clipping plane
-* **z_near**: `float` - z-position of nearest clipping plane
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

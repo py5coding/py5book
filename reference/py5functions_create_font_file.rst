@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     py5.create_font_file('Comic Sans', 20)
 
@@ -36,7 +35,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     for size in [10, 12, 15, 20]:
         py5.create_font_file('Comic Sans', 20, f'comic_sans_{size}.vlw', characters='abcde', pause=False)
@@ -62,22 +60,18 @@ This utility function opens a window that displays a short message about the num
 
 Get a list of font names available on your computer with Py5Font's :doc:`py5font_list` method. If you request an unavailable font, it will create the data file anyway but using a default font.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    create_font_file(font_name: str, font_size: int, filename: str = None, characters: str = None, pause: bool = True) -> None
+    create_font_file(
+        font_name: str,  # name of font found on computer
+        font_size: int,  # font size in units of pixels
+        filename: str = None,  # vlw data file to save font data to
+        characters: str = None,  # limit glyphs to characters found in string
+        pause: bool = True,  # pause after creating font file
+    ) -> None
 
-Parameters
-----------
-
-* **characters**: `str = None` - limit glyphs to characters found in string
-* **filename**: `str = None` - vlw data file to save font data to
-* **font_name**: `str` - name of font found on computer
-* **font_size**: `int` - font size in units of pixels
-* **pause**: `bool = True` - pause after creating font file
-
-
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     sketch = py5.get_current_sketch()
     assert sketch.is_ready
@@ -43,12 +42,12 @@ Get the py5 module's current ``Sketch`` instance.
 
 When coding py5 in module mode, a Sketch instance is created on your behalf that is referenced within the py5 module itself. That Sketch is called the "current sketch." Use this method to access that Sketch instance directly.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     get_current_sketch() -> Sketch
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

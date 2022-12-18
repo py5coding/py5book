@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         chr_p = py5.create_font('DejaVu Sans', 32).get_shape('p')
@@ -53,19 +52,16 @@ This method uses a coordinate system that is unique to the shape and how the pat
 
 Underlying Processing method: PShape.contains
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    contains(x: float, y: float, /) -> bool
+    contains(
+        x: float,  # x-coordinate
+        y: float,  # y-coordinate
+        /,
+    ) -> bool
 
-Parameters
-----------
-
-* **x**: `float` - x-coordinate
-* **y**: `float` - y-coordinate
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

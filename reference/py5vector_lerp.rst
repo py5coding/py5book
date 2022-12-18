@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         v1 = py5.Py5Vector(40, -80)
@@ -57,19 +56,15 @@ Calculates a vector between two vectors at a specific increment. The two vectors
 
 This method is similar to :doc:`sketch_lerp` and :doc:`sketch_lerp_color`, but for vectors instead of numbers or colors.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    lerp(other: Union[Py5Vector, np.ndarray], amt: Union[float, np.ndarray]) -> Union[Py5Vector, np.ndarray[np.floating]]
+    lerp(
+        other: Union[Py5Vector, np.ndarray],  # other vector to interpolate between
+        amt: Union[float, np.ndarray],  # float between 0.0 and 1.0
+    ) -> Union[Py5Vector, np.ndarray[np.floating]]
 
-Parameters
-----------
-
-* **amt**: `Union[float, np.ndarray]` - float between 0.0 and 1.0
-* **other**: `Union[Py5Vector, np.ndarray]` - other vector to interpolate between
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

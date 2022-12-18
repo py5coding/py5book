@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         surface = py5.get_surface()
@@ -40,20 +39,19 @@ Description
 
 Set the Sketch window's title. This will typically appear at the window's title bar. The default window title is "Sketch".
 
+This method provides the same functionality as :doc:`sketch_window_title`.
+
 Underlying Processing method: PSurface.setTitle
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    set_title(title: str, /) -> None
+    set_title(
+        title: str,  # new window title
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **title**: `str` - new window title
-
-
-Updated on May 02, 2022 12:07:22pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

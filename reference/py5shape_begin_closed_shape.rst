@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global s  # the Py5Shape object
@@ -52,19 +51,17 @@ This method should only be used as a context manager, as shown in the example. W
 
 Underlying Processing method: `PShape.beginShape <https://processing.org/reference/PShape_beginShape_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     begin_closed_shape() -> None
-    begin_closed_shape(kind: int, /) -> None
 
-Parameters
-----------
+    begin_closed_shape(
+        kind: int,  # Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
+        /,
+    ) -> None
 
-* **kind**: `int` - Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import numpy as np
 
@@ -58,19 +57,15 @@ This method exists because setting the array contents with the code ``img.np_pix
 
 Note that the :doc:`sketch_convert_image` method can also be used to convert a numpy array into a new Py5Image object.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    set_np_pixels(array: npt.NDArray[np.uint8], bands: str = 'ARGB') -> None
+    set_np_pixels(
+        array: npt.NDArray[np.uint8],  # properly sized numpy array to be copied to np_pixels[]
+        bands: str = "ARGB",  # color channels in the array's third dimension
+    ) -> None
 
-Parameters
-----------
-
-* **array**: `npt.NDArray[np.uint8]` - properly sized numpy array to be copied to np_pixels[]
-* **bands**: `str = 'ARGB'` - color channels in the array's third dimension
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

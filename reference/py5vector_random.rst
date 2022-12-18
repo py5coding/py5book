@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     v_2d = py5.Py5Vector2D.random()
     print(v_2d)
@@ -47,7 +46,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.background(128)
@@ -74,19 +72,16 @@ The new vector will have a magnitude of 1 and a heading that is uniformly distri
 
 When used as a ``Py5Vector`` class method, the ``dim`` parameter is required to specify what the new vector's dimension should be. When used as a class method for the ``Py5Vector2D``, ``Py5Vector3D``, or ``Py5Vector4D`` child classes, the ``dim`` parameter is optional and will default to the dimension implied by the specific class. When used as a method on a vector instance, the ``dim`` parameter is also optional and will default to the vector instance's dimension. See the example code for examples of all of these use cases.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    random(dim: int, *, dtype: type = np.float_) -> Py5Vector
+    random(
+        dim: int,  # dimension of the random vector to create
+        *,
+        dtype: type = np.float_  # dtype of the random vector to create
+    ) -> Py5Vector
 
-Parameters
-----------
-
-* **dim**: `int` - dimension of the random vector to create
-* **dtype**: `type = np.float_` - dtype of the random vector to create
-
-
-Updated on January 16, 2022 16:51:21pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

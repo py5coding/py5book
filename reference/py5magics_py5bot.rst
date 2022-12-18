@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     %%py5bot
     size(100, 100)
@@ -69,5 +68,5 @@ Arguments
       -v VARIABLE, --var VARIABLE
                             assign image to variable
 
-Updated on October 29, 2021 22:01:43pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

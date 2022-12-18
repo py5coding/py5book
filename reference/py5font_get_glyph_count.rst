@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P2D)
@@ -59,12 +58,12 @@ Get the number of glyphs contained in the font. This will be 0 if the font is a 
 
 Underlying Processing method: PFont.getGlyphCount
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     get_glyph_count() -> int
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -47,12 +46,12 @@ Get the ``Py5Shape`` object's depth. This method only makes sense when using the
 
 Underlying Processing method: PShape.getDepth
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     get_depth() -> float
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

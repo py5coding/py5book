@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def draw():
         py5.rect(py5.random(py5.width), py5.random(py5.height), 10, 10)
@@ -48,7 +47,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # this sketch will hide itself and reappear elsewhere on your display.
 
@@ -84,18 +82,15 @@ Set the Sketch window's visiblity. The animation will continue to run but the wi
 
 Underlying Processing method: PSurface.setVisible
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    set_visible(visible: bool, /) -> None
+    set_visible(
+        visible: bool,  # desired surface visiblity
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **visible**: `bool` - desired surface visiblity
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

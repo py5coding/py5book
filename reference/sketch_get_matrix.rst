@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global matrix
@@ -51,19 +50,17 @@ Get the current matrix as a numpy array. Use the ``target`` parameter to put the
 
 Underlying Processing method: getMatrix
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     get_matrix() -> npt.NDArray[np.floating]
-    get_matrix(target: npt.NDArray[np.floating], /) -> npt.NDArray[np.floating]
 
-Parameters
-----------
+    get_matrix(
+        target: npt.NDArray[np.floating],  # transformation matrix with a shape of 2x3 for 2D transforms or 4x4 for 3D transforms
+        /,
+    ) -> npt.NDArray[np.floating]
 
-* **target**: `npt.NDArray[np.floating]` - transformation matrix with a shape of 2x3 for 2D transforms or 4x4 for 3D transforms
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

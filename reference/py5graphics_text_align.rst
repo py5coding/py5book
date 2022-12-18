@@ -18,20 +18,21 @@ This method is the same as :doc:`sketch_text_align` but linked to a ``Py5Graphic
 
 Underlying Processing method: PGraphics.textAlign
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    text_align(align_x: int, /) -> None
-    text_align(align_x: int, align_y: int, /) -> None
+    text_align(
+        align_x: int,  # horizontal alignment, either LEFT, CENTER, or RIGHT
+        /,
+    ) -> None
 
-Parameters
-----------
+    text_align(
+        align_x: int,  # horizontal alignment, either LEFT, CENTER, or RIGHT
+        align_y: int,  # vertical alignment, either TOP, BOTTOM, CENTER, or BASELINE
+        /,
+    ) -> None
 
-* **align_x**: `int` - horizontal alignment, either LEFT, CENTER, or RIGHT
-* **align_y**: `int` - vertical alignment, either TOP, BOTTOM, CENTER, or BASELINE
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

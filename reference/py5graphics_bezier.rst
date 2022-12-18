@@ -12,30 +12,38 @@ This method is the same as :doc:`sketch_bezier` but linked to a ``Py5Graphics`` 
 
 Underlying Processing method: PGraphics.bezier
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    bezier(x1: float, y1: float, x2: float, y2: float, x3: float, y3: float, x4: float, y4: float, /) -> None
-    bezier(x1: float, y1: float, z1: float, x2: float, y2: float, z2: float, x3: float, y3: float, z3: float, x4: float, y4: float, z4: float, /) -> None
+    bezier(
+        x1: float,  # coordinates for the first anchor point
+        y1: float,  # coordinates for the first anchor point
+        x2: float,  # coordinates for the first control point
+        y2: float,  # coordinates for the first control point
+        x3: float,  # coordinates for the second control point
+        y3: float,  # coordinates for the second control point
+        x4: float,  # coordinates for the second anchor point
+        y4: float,  # coordinates for the second anchor point
+        /,
+    ) -> None
 
-Parameters
-----------
+    bezier(
+        x1: float,  # coordinates for the first anchor point
+        y1: float,  # coordinates for the first anchor point
+        z1: float,  # coordinates for the first anchor point
+        x2: float,  # coordinates for the first control point
+        y2: float,  # coordinates for the first control point
+        z2: float,  # coordinates for the first control point
+        x3: float,  # coordinates for the second control point
+        y3: float,  # coordinates for the second control point
+        z3: float,  # coordinates for the second control point
+        x4: float,  # coordinates for the second anchor point
+        y4: float,  # coordinates for the second anchor point
+        z4: float,  # coordinates for the second anchor point
+        /,
+    ) -> None
 
-* **x1**: `float` - coordinates for the first anchor point
-* **x2**: `float` - coordinates for the first control point
-* **x3**: `float` - coordinates for the second control point
-* **x4**: `float` - coordinates for the second anchor point
-* **y1**: `float` - coordinates for the first anchor point
-* **y2**: `float` - coordinates for the first control point
-* **y3**: `float` - coordinates for the second control point
-* **y4**: `float` - coordinates for the second anchor point
-* **z1**: `float` - coordinates for the first anchor point
-* **z2**: `float` - coordinates for the first control point
-* **z3**: `float` - coordinates for the second control point
-* **z4**: `float` - coordinates for the second anchor point
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

@@ -12,30 +12,38 @@ This method is the same as :doc:`sketch_curve` but linked to a ``Py5Graphics`` o
 
 Underlying Processing method: PGraphics.curve
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    curve(x1: float, y1: float, x2: float, y2: float, x3: float, y3: float, x4: float, y4: float, /) -> None
-    curve(x1: float, y1: float, z1: float, x2: float, y2: float, z2: float, x3: float, y3: float, z3: float, x4: float, y4: float, z4: float, /) -> None
+    curve(
+        x1: float,  # coordinates for the beginning control point
+        y1: float,  # coordinates for the beginning control point
+        x2: float,  # coordinates for the first point
+        y2: float,  # coordinates for the first point
+        x3: float,  # coordinates for the second point
+        y3: float,  # coordinates for the second point
+        x4: float,  # coordinates for the ending control point
+        y4: float,  # coordinates for the ending control point
+        /,
+    ) -> None
 
-Parameters
-----------
+    curve(
+        x1: float,  # coordinates for the beginning control point
+        y1: float,  # coordinates for the beginning control point
+        z1: float,  # coordinates for the beginning control point
+        x2: float,  # coordinates for the first point
+        y2: float,  # coordinates for the first point
+        z2: float,  # coordinates for the first point
+        x3: float,  # coordinates for the second point
+        y3: float,  # coordinates for the second point
+        z3: float,  # coordinates for the second point
+        x4: float,  # coordinates for the ending control point
+        y4: float,  # coordinates for the ending control point
+        z4: float,  # coordinates for the ending control point
+        /,
+    ) -> None
 
-* **x1**: `float` - coordinates for the beginning control point
-* **x2**: `float` - coordinates for the first point
-* **x3**: `float` - coordinates for the second point
-* **x4**: `float` - coordinates for the ending control point
-* **y1**: `float` - coordinates for the beginning control point
-* **y2**: `float` - coordinates for the first point
-* **y3**: `float` - coordinates for the second point
-* **y4**: `float` - coordinates for the ending control point
-* **z1**: `float` - coordinates for the beginning control point
-* **z2**: `float` - coordinates for the first point
-* **z3**: `float` - coordinates for the second point
-* **z4**: `float` - coordinates for the ending control point
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

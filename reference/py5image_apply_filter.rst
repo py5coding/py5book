@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global img1
@@ -53,7 +52,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global img1
@@ -83,7 +81,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global img1
@@ -113,7 +110,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global img1
@@ -143,7 +139,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global img1
@@ -173,7 +168,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global img1
@@ -203,7 +197,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global img1
@@ -243,20 +236,21 @@ Filters the image as defined by one of the following modes:
 
 Underlying Processing method: `PImage.filter <https://processing.org/reference/PImage_filter_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    apply_filter(kind: int, /) -> None
-    apply_filter(kind: int, param: float, /) -> None
+    apply_filter(
+        kind: int,  # Either THRESHOLD, GRAY, OPAQUE, INVERT, POSTERIZE, BLUR, ERODE, or DILATE
+        /,
+    ) -> None
 
-Parameters
-----------
+    apply_filter(
+        kind: int,  # Either THRESHOLD, GRAY, OPAQUE, INVERT, POSTERIZE, BLUR, ERODE, or DILATE
+        param: float,  # unique for each filter, see description
+        /,
+    ) -> None
 
-* **kind**: `int` - Either THRESHOLD, GRAY, OPAQUE, INVERT, POSTERIZE, BLUR, ERODE, or DILATE
-* **param**: `float` - unique for each filter, see description
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

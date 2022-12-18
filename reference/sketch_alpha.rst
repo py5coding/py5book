@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.no_stroke()
@@ -50,18 +49,15 @@ The ``alpha()`` function is easy to use and understand, but it is slower than a 
 
 Underlying Processing method: `alpha <https://processing.org/reference/alpha_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    alpha(rgb: int, /) -> float
+    alpha(
+        rgb: int,  # any value of the color datatype
+        /,
+    ) -> float
 
-Parameters
-----------
-
-* **rgb**: `int` - any value of the color datatype
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

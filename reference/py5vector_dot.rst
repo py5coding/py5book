@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import numpy as np
 
@@ -45,7 +44,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global v1
@@ -79,18 +77,14 @@ Description
 
 Calculate the dot product between two vectors.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    dot(other: Union[Py5Vector, np.ndarray]) -> Union[float, np.ndarray[np.floating]]
+    dot(
+        other: Union[Py5Vector, np.ndarray]  # vector to calculate the dot product with
+    ) -> Union[float, np.ndarray[np.floating]]
 
-Parameters
-----------
-
-* **other**: `Union[Py5Vector, np.ndarray]` - vector to calculate the dot product with
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(200, 200)
@@ -44,7 +43,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         value = 110
@@ -64,7 +62,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(200, 200)
@@ -97,22 +94,18 @@ As shown in the second example, numbers outside of the range are not clamped to 
 
 In Processing this functionality is provided by ``map()`` but was renamed in py5 because of a name conflict with a builtin Python function.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    remap(value: Union[float, npt.NDArray], start1: Union[float, npt.NDArray], stop1: Union[float, npt.NDArray], start2: Union[float, npt.NDArray], stop2: Union[float, npt.NDArray]) -> Union[float, npt.NDArray]
+    remap(
+        value: Union[float, npt.NDArray],  # the incoming value to be converted
+        start1: Union[float, npt.NDArray],  # lower bound of the value's current range
+        stop1: Union[float, npt.NDArray],  # upper bound of the value's current range
+        start2: Union[float, npt.NDArray],  # lower bound of the value's target range
+        stop2: Union[float, npt.NDArray],  # upper bound of the value's target range
+    ) -> Union[float, npt.NDArray]
 
-Parameters
-----------
-
-* **start1**: `Union[float, npt.NDArray]` - lower bound of the value's current range
-* **start2**: `Union[float, npt.NDArray]` - lower bound of the value's target range
-* **stop1**: `Union[float, npt.NDArray]` - upper bound of the value's current range
-* **stop2**: `Union[float, npt.NDArray]` - upper bound of the value's target range
-* **value**: `Union[float, npt.NDArray]` - the incoming value to be converted
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

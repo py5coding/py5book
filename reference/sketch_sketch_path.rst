@@ -12,19 +12,17 @@ Result will be relative to Python's current working directory (``os.getcwd()``) 
 
 Underlying Processing method: sketchPath
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     sketch_path() -> Path
-    sketch_path(where: str, /) -> Path
 
-Parameters
-----------
+    sketch_path(
+        where: str,  # subdirectories relative to the sketch path
+        /,
+    ) -> Path
 
-* **where**: `str` - subdirectories relative to the sketch path
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

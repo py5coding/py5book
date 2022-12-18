@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global img
@@ -60,18 +59,15 @@ Defines if textures repeat or draw once within a texture map. The two parameters
 
 Underlying Processing method: `textureWrap <https://processing.org/reference/textureWrap_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    texture_wrap(wrap: int, /) -> None
+    texture_wrap(
+        wrap: int,  # Either CLAMP (default) or REPEAT
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **wrap**: `int` - Either CLAMP (default) or REPEAT
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

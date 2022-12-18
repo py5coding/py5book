@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import numpy as np
 
@@ -52,19 +51,16 @@ The ``vcount`` parameter cannot be larger than the first dimension of the ``vert
 
 Underlying Processing method: PShape.setPath
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    set_path(vcount: int, verts: npt.NDArray[np.floating], /) -> None
+    set_path(
+        vcount: int,  # number of vertices
+        verts: npt.NDArray[np.floating],  # 2D array of vertex coordinates
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **vcount**: `int` - number of vertices
-* **verts**: `npt.NDArray[np.floating]` - 2D array of vertex coordinates
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

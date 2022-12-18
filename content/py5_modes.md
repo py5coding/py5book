@@ -302,6 +302,7 @@ def setup():
 def draw():
     rect(mouse_x, mouse_y, 10, 10)
 
+# this is only needed to run the Sketch in Jupyter Notebooks; see note below
 run_sketch()
 ```
 
@@ -326,9 +327,14 @@ and
 py5](https://tabreturn.github.io/code/python/thonny/2021/06/21/thonny_and_py5.html)
 for more information.
 
-Imported Mode might be a good fit for the Jupyter Client
-[nteract](https://nteract.io/) or the Python editor
-[Mu](https://codewith.mu/).
+```{admonition} Running the Sketch
+
+The `run_sketch()` method launches the Sketch and must be called when using
+Jupyter Notebooks. However, when using the `run_sketch` command line tool or
+the Python editor Thonny that has been configured to use py5 in Imported Mode,
+`run_sketch()` should be omitted, as it will be executed on behalf of the user.
+
+```
 
 The operation of Imported Mode should work just as well as analogous
 code written in the other py5 modes.

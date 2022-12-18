@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global pg
@@ -50,12 +49,12 @@ Finalizes the rendering of a ``Py5Graphics`` object so that it can be shown on s
 
 Underlying Processing method: `PGraphics.endDraw <https://processing.org/reference/PGraphics_endDraw_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     end_draw() -> None
 
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

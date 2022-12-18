@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def draw():
         m = py5.millis()
@@ -42,12 +41,12 @@ Returns the number of milliseconds (thousandths of a second) since starting the 
 
 Underlying Processing method: `millis <https://processing.org/reference/millis_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     millis() -> int
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

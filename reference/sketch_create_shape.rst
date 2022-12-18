@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global s  # the Py5Shape object
@@ -52,7 +51,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global s  # the Py5Shape object
@@ -88,7 +86,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global s
@@ -124,7 +121,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         # create the shape group
@@ -169,22 +165,23 @@ After using ``create_shape()``, stroke and fill color can be set by calling meth
 
 Underlying Processing method: `createShape <https://processing.org/reference/createShape_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     create_shape() -> Py5Shape
-    create_shape(kind: int, /, *p: float) -> Py5Shape
-    create_shape(type: int, /) -> Py5Shape
 
-Parameters
-----------
+    create_shape(
+        kind: int,  # either POINT, LINE, TRIANGLE, QUAD, RECT, ELLIPSE, ARC, BOX, SPHERE
+        /,
+        *p: float,
+    ) -> Py5Shape
 
-* **kind**: `int` - either POINT, LINE, TRIANGLE, QUAD, RECT, ELLIPSE, ARC, BOX, SPHERE
-* **p**: `float` - parameters that match the kind of shape
-* **type**: `int` - either GROUP, PATH, or GEOMETRY
+    create_shape(
+        type: int,  # either GROUP, PATH, or GEOMETRY
+        /,
+    ) -> Py5Shape
 
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

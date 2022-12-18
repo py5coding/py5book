@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     v1 = py5.Py5Vector(3, 4)
 
@@ -44,12 +43,12 @@ Description
 
 Normalize the vector by setting the vector's magnitude to 1.0. This method cannot be used on a vector of zeros, because a vector of zeros cannot be normalized.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     normalize() -> Py5Vector
 
-Updated on January 16, 2022 16:51:21pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

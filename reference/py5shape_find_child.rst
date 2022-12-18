@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         states = py5.load_shape("us_map.svg")
@@ -52,18 +51,15 @@ Find a target ``Py5Shape`` object from anywhere within a ``Py5Shape`` object tha
 
 Underlying Processing method: PShape.findChild
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    find_child(target: str, /) -> Py5Shape
+    find_child(
+        target: str,  # name of child object
+        /,
+    ) -> Py5Shape
 
-Parameters
-----------
-
-* **target**: `str` - name of child object
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

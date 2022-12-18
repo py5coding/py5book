@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -49,25 +48,30 @@ Sets an orthographic projection and defines a parallel clipping volume. All obje
 
 Underlying Processing method: `ortho <https://processing.org/reference/ortho_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     ortho() -> None
-    ortho(left: float, right: float, bottom: float, top: float, /) -> None
-    ortho(left: float, right: float, bottom: float, top: float, near: float, far: float, /) -> None
 
-Parameters
-----------
+    ortho(
+        left: float,  # left plane of the clipping volume
+        right: float,  # right plane of the clipping volume
+        bottom: float,  # bottom plane of the clipping volume
+        top: float,  # top plane of the clipping volume
+        /,
+    ) -> None
 
-* **bottom**: `float` - bottom plane of the clipping volume
-* **far**: `float` - maximum distance from the origin away from the viewer
-* **left**: `float` - left plane of the clipping volume
-* **near**: `float` - maximum distance from the origin to the viewer
-* **right**: `float` - right plane of the clipping volume
-* **top**: `float` - top plane of the clipping volume
+    ortho(
+        left: float,  # left plane of the clipping volume
+        right: float,  # right plane of the clipping volume
+        bottom: float,  # bottom plane of the clipping volume
+        top: float,  # top plane of the clipping volume
+        near: float,  # maximum distance from the origin to the viewer
+        far: float,  # maximum distance from the origin away from the viewer
+        /,
+    ) -> None
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

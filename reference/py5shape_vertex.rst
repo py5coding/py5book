@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         s = py5.create_shape()
@@ -50,7 +49,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -81,7 +79,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P2D)
@@ -119,25 +116,40 @@ This method is also used to map a texture onto geometry. The :doc:`py5shape_text
 
 Underlying Processing method: PShape.vertex
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    vertex(x: float, y: float, /) -> None
-    vertex(x: float, y: float, u: float, v: float, /) -> None
-    vertex(x: float, y: float, z: float, /) -> None
-    vertex(x: float, y: float, z: float, u: float, v: float, /) -> None
+    vertex(
+        x: float,  # x-coordinate of the vertex
+        y: float,  # y-coordinate of the vertex
+        /,
+    ) -> None
 
-Parameters
-----------
+    vertex(
+        x: float,  # x-coordinate of the vertex
+        y: float,  # y-coordinate of the vertex
+        u: float,  # horizontal coordinate for the texture mapping
+        v: float,  # vertical coordinate for the texture mapping
+        /,
+    ) -> None
 
-* **u**: `float` - horizontal coordinate for the texture mapping
-* **v**: `float` - vertical coordinate for the texture mapping
-* **x**: `float` - x-coordinate of the vertex
-* **y**: `float` - y-coordinate of the vertex
-* **z**: `float` - z-coordinate of the vertex
+    vertex(
+        x: float,  # x-coordinate of the vertex
+        y: float,  # y-coordinate of the vertex
+        z: float,  # z-coordinate of the vertex
+        /,
+    ) -> None
 
+    vertex(
+        x: float,  # x-coordinate of the vertex
+        y: float,  # y-coordinate of the vertex
+        z: float,  # z-coordinate of the vertex
+        u: float,  # horizontal coordinate for the texture mapping
+        v: float,  # vertical coordinate for the texture mapping
+        /,
+    ) -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

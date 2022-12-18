@@ -1,0 +1,17 @@
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - cairo=1.16.0
+  - cairosvg=2.5.2
+  - jedi=0.17.2
+  - jupyter-book=0.12.2
+  - jupyterlab=3.4.0
+  - line_profiler=3.4.0
+  - matplotlib=3.5.2
+  - pandas=1.4.2
+  - pillow=9.2.0
+  - pip
+  - sphinx=4.4.0
+  - pip:
+    - py5[jupyter]

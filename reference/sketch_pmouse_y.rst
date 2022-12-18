@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # move the mouse quickly to see the difference
     # between the current and previous position
@@ -45,6 +44,5 @@ For more detail on how ``pmouse_y`` is updated inside of mouse events and ``draw
 
 Underlying Processing field: `pmouseY <https://processing.org/reference/pmouseY.html>`_
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

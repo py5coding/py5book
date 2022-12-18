@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         a = 0
@@ -45,18 +44,14 @@ Calculates the cosine of an angle. This function expects the values of the angle
 
 This function makes a call to the numpy ``cos()`` function.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    cos(angle: Union[float, npt.ArrayLike]) -> Union[float, npt.NDArray]
+    cos(
+        angle: Union[float, npt.ArrayLike]  # angle in radians
+    ) -> Union[float, npt.NDArray]
 
-Parameters
-----------
-
-* **angle**: `Union[float, npt.ArrayLike]` - angle in radians
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

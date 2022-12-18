@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -46,18 +45,15 @@ A sphere is a hollow ball made from tessellated triangles.
 
 Underlying Processing method: `sphere <https://processing.org/reference/sphere_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    sphere(r: float, /) -> None
+    sphere(
+        r: float,  # the radius of the sphere
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **r**: `float` - the radius of the sphere
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

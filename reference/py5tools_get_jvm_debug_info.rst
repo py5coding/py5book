@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import py5_tools
 
@@ -40,12 +39,12 @@ Get Java Virtual Machine debug information. The py5 library requires Java 17 or 
 
 If the Java Virtual Machine cannot start, py5 will include this debug information in the error message. If that doesn't help the user figure out the problem, it will help whomever they go to asking for help.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     get_jvm_debug_info() -> dict[str, Any]
 
-Updated on March 01, 2022 12:15:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import py5_tools
 
@@ -58,24 +57,21 @@ If your Sketch has a ``post_draw()`` method, use the ``hook_post_draw`` paramete
 
 To stop a Sketch Portal, wait for the time limit to expire, call :doc:`sketch_exit_sketch`, or press the "exit_sketch()" button below the portal. If you delete the cell with the ``Py5SketchPortal`` object, the portal will no longer be visible but the Sketch will still be streaming frames to the notebook client, wasting resources. A Sketch can only have one open portal, so opening a new portal with different options will replace an existing portal.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    sketch_portal(*, time_limit: float = 0.0, throttle_frame_rate: float = 30, scale: float = 1.0, quality: int = 75, portal_widget: Py5SketchPortal = None, sketch: Sketch = None, hook_post_draw: bool = False) -> None
+    sketch_portal(
+        *,
+        time_limit: float = 0.0,  # time limit in seconds for the Sketch Portal; set to 0 (default) for no limit
+        throttle_frame_rate: float = 30,  # throttle portal frame rate below Sketch's frame rate
+        scale: float = 1.0,  # scale factor to adjust the height and width of the portal
+        quality: int = 75,  # JPEG stream quality between 1 (worst) and 100 (best)
+        portal_widget: Py5SketchPortal = None,  # Py5SketchPortal object to send stream to
+        sketch: Sketch = None,  # running Sketch
+        hook_post_draw: bool = False  # attach hook to Sketch's post_draw method instead of draw
+    ) -> None
 
-Parameters
-----------
-
-* **hook_post_draw**: `bool = False` - attach hook to Sketch's post_draw method instead of draw
-* **portal_widget**: `Py5SketchPortal = None` - Py5SketchPortal object to send stream to
-* **quality**: `int = 75` - JPEG stream quality between 1 (worst) and 100 (best)
-* **scale**: `float = 1.0` - scale factor to adjust the height and width of the portal
-* **sketch**: `Sketch = None` - running Sketch
-* **throttle_frame_rate**: `float = 30` - throttle portal frame rate below Sketch's frame rate
-* **time_limit**: `float = 0.0` - time limit in seconds for the Sketch Portal; set to 0 (default) for no limit
-
-
-Updated on May 21, 2022 12:41:38pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

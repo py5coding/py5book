@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         s = py5.create_shape()
@@ -52,7 +51,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -84,12 +82,12 @@ If the shape is created in a Sketch using the ``P3D`` renderer, this will be ``T
 
 Underlying Processing method: PShape.is3D
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     is3d() -> bool
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

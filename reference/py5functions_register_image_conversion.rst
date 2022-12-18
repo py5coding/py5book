@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import numpy as np
 
@@ -63,19 +62,15 @@ The ``precondition`` parameter must be function that accepts an object as a para
 
 The ``convert_function`` parameter must be a function that accepts an object as a parameter and returns either a filename that can be read by :doc:`sketch_load_image`, a ``py5.NumpyImageArray`` object, or a :doc:`py5image` object. View py5's source code for detailed information about ``py5.NumpyImageArray`` objects.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    register_image_conversion(precondition: Callable, convert_function: Callable) -> None
+    register_image_conversion(
+        precondition: Callable,  # predicate determining if an object can be converted
+        convert_function: Callable,  # function to convert object to relevant image data
+    ) -> None
 
-Parameters
-----------
-
-* **convert_function**: `Callable` - function to convert object to relevant image data
-* **precondition**: `Callable` - predicate determining if an object can be converted
-
-
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

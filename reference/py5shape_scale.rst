@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global s
@@ -52,23 +51,28 @@ Using this method with the ``z`` parameter requires using the ``P3D`` parameter 
 
 Underlying Processing method: `PShape.scale <https://processing.org/reference/PShape_scale_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    scale(s: float, /) -> None
-    scale(x: float, y: float, /) -> None
-    scale(x: float, y: float, z: float, /) -> None
+    scale(
+        s: float,  # percentate to scale the object
+        /,
+    ) -> None
 
-Parameters
-----------
+    scale(
+        x: float,  # percentage to scale the object in the x-axis
+        y: float,  # percentage to scale the object in the y-axis
+        /,
+    ) -> None
 
-* **s**: `float` - percentate to scale the object
-* **x**: `float` - percentage to scale the object in the x-axis
-* **y**: `float` - percentage to scale the object in the y-axis
-* **z**: `float` - percentage to scale the object in the z-axis
+    scale(
+        x: float,  # percentage to scale the object in the x-axis
+        y: float,  # percentage to scale the object in the y-axis
+        z: float,  # percentage to scale the object in the z-axis
+        /,
+    ) -> None
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

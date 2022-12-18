@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     SHAPE_VERTEX_CODES = {py5.Py5Shape.BREAK: 'BREAK',
                           py5.Py5Shape.VERTEX: 'VERTEX'}
@@ -67,18 +66,15 @@ The vertex codes will not necessarily align with the vertices because number of 
 
 Underlying Processing method: PShape.getVertexCode
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    get_vertex_code(index: int, /) -> int
+    get_vertex_code(
+        index: int,  # vertex code index
+        /,
+    ) -> int
 
-Parameters
-----------
-
-* **index**: `int` - vertex code index
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

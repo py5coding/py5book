@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         x = 2.88
@@ -40,18 +39,14 @@ Calculates the closest int value that is less than or equal to the value of the 
 
 This function makes a call to the numpy ``floor()`` function.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    floor(value: Union[float, npt.ArrayLike]) -> Union[int, npt.NDArray]
+    floor(
+        value: Union[float, npt.ArrayLike]  # number to round down
+    ) -> Union[int, npt.NDArray]
 
-Parameters
-----------
-
-* **value**: `Union[float, npt.ArrayLike]` - number to round down
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

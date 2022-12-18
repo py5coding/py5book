@@ -12,27 +12,25 @@ This method is the same as :doc:`sketch_camera` but linked to a ``Py5Graphics`` 
 
 Underlying Processing method: PGraphics.camera
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     camera() -> None
-    camera(eye_x: float, eye_y: float, eye_z: float, center_x: float, center_y: float, center_z: float, up_x: float, up_y: float, up_z: float, /) -> None
 
-Parameters
-----------
+    camera(
+        eye_x: float,  # x-coordinate for the eye
+        eye_y: float,  # y-coordinate for the eye
+        eye_z: float,  # z-coordinate for the eye
+        center_x: float,  # x-coordinate for the center of the scene
+        center_y: float,  # y-coordinate for the center of the scene
+        center_z: float,  # z-coordinate for the center of the scene
+        up_x: float,  # usually 0.0, 1.0, or -1.0
+        up_y: float,  # usually 0.0, 1.0, or -1.0
+        up_z: float,  # usually 0.0, 1.0, or -1.0
+        /,
+    ) -> None
 
-* **center_x**: `float` - x-coordinate for the center of the scene
-* **center_y**: `float` - y-coordinate for the center of the scene
-* **center_z**: `float` - z-coordinate for the center of the scene
-* **eye_x**: `float` - x-coordinate for the eye
-* **eye_y**: `float` - y-coordinate for the eye
-* **eye_z**: `float` - z-coordinate for the eye
-* **up_x**: `float` - usually 0.0, 1.0, or -1.0
-* **up_y**: `float` - usually 0.0, 1.0, or -1.0
-* **up_z**: `float` - usually 0.0, 1.0, or -1.0
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

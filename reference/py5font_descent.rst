@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         font_size = 45
@@ -53,12 +52,12 @@ Get the descent of this font from the baseline. The value is based on a font of 
 
 Underlying Processing method: PFont.descent
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     descent() -> float
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

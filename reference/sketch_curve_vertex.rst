@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.no_fill()
@@ -50,21 +49,23 @@ Specifies vertex coordinates for curves. This method may only be used between :d
 
 Underlying Processing method: `curveVertex <https://processing.org/reference/curveVertex_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    curve_vertex(x: float, y: float, /) -> None
-    curve_vertex(x: float, y: float, z: float, /) -> None
+    curve_vertex(
+        x: float,  # the x-coordinate of the vertex
+        y: float,  # the y-coordinate of the vertex
+        /,
+    ) -> None
 
-Parameters
-----------
+    curve_vertex(
+        x: float,  # the x-coordinate of the vertex
+        y: float,  # the y-coordinate of the vertex
+        z: float,  # the z-coordinate of the vertex
+        /,
+    ) -> None
 
-* **x**: `float` - the x-coordinate of the vertex
-* **y**: `float` - the y-coordinate of the vertex
-* **z**: `float` - the z-coordinate of the vertex
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

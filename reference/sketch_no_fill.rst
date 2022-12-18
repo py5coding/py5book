@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.rect(15, 10, 55, 55)
@@ -44,12 +43,12 @@ Disables filling geometry. If both :doc:`sketch_no_stroke` and ``no_fill()`` are
 
 Underlying Processing method: `noFill <https://processing.org/reference/noFill_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     no_fill() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -53,12 +52,12 @@ Prints the current matrix to standard output.
 
 Underlying Processing method: `printMatrix <https://processing.org/reference/printMatrix_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     print_matrix() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

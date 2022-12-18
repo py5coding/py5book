@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     x = 0
 
@@ -63,19 +62,17 @@ This method is the same as :doc:`sketch_smooth` but linked to a ``Py5Graphics`` 
 
 Underlying Processing method: PGraphics.smooth
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     smooth() -> None
-    smooth(quality: int, /) -> None
 
-Parameters
-----------
+    smooth(
+        quality: int,  # either 2, 3, 4, or 8 depending on the renderer
+        /,
+    ) -> None
 
-* **quality**: `int` - either 2, 3, 4, or 8 depending on the renderer
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

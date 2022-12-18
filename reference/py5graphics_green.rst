@@ -14,18 +14,15 @@ This method is the same as :doc:`sketch_green` but linked to a ``Py5Graphics`` o
 
 Underlying Processing method: PGraphics.green
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    green(rgb: int, /) -> float
+    green(
+        rgb: int,  # any value of the color datatype
+        /,
+    ) -> float
 
-Parameters
-----------
-
-* **rgb**: `int` - any value of the color datatype
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

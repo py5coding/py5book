@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.ellipse_mode(py5.RADIUS)  # set ellipse_mode to RADIUS
@@ -49,7 +48,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.ellipse_mode(py5.CORNER)  # set ellipse_mode is CORNER
@@ -85,18 +83,15 @@ The parameter must be written in ALL CAPS because Python is a case-sensitive lan
 
 Underlying Processing method: `ellipseMode <https://processing.org/reference/ellipseMode_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    ellipse_mode(mode: int, /) -> None
+    ellipse_mode(
+        mode: int,  # either CENTER, RADIUS, CORNER, or CORNERS
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **mode**: `int` - either CENTER, RADIUS, CORNER, or CORNERS
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

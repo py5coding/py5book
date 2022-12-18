@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.text_size(32)
@@ -48,7 +47,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -73,7 +71,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         s = "The quick brown fox jumps over the lazy dog."
@@ -99,41 +96,98 @@ Note that py5 lets you call ``text()`` without first specifying a Py5Font with :
 
 Underlying Processing method: `text <https://processing.org/reference/text_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    text(c: chr, x: float, y: float, /) -> None
-    text(c: chr, x: float, y: float, z: float, /) -> None
-    text(chars: list[chr], start: int, stop: int, x: float, y: float, /) -> None
-    text(chars: list[chr], start: int, stop: int, x: float, y: float, z: float, /) -> None
-    text(num: float, x: float, y: float, /) -> None
-    text(num: float, x: float, y: float, z: float, /) -> None
-    text(num: int, x: float, y: float, /) -> None
-    text(num: int, x: float, y: float, z: float, /) -> None
-    text(str: str, x1: float, y1: float, x2: float, y2: float, /) -> None
-    text(str: str, x: float, y: float, /) -> None
-    text(str: str, x: float, y: float, z: float, /) -> None
+    text(
+        c: chr,  # the alphanumeric character to be displayed
+        x: float,  # x-coordinate of text
+        y: float,  # y-coordinate of text
+        /,
+    ) -> None
 
-Parameters
-----------
+    text(
+        c: chr,  # the alphanumeric character to be displayed
+        x: float,  # x-coordinate of text
+        y: float,  # y-coordinate of text
+        z: float,  # z-coordinate of text
+        /,
+    ) -> None
 
-* **c**: `chr` - the alphanumeric character to be displayed
-* **chars**: `list[chr]` - the alphanumberic symbols to be displayed
-* **num**: `float` - the numeric value to be displayed
-* **num**: `int` - the numeric value to be displayed
-* **start**: `int` - array index at which to start writing characters
-* **stop**: `int` - array index at which to stop writing characters
-* **str**: `str` - string to be displayed
-* **x1**: `float` - by default, the x-coordinate of text, see rectMode() for more info
-* **x2**: `float` - by default, the width of the text box, see rectMode() for more info
-* **x**: `float` - x-coordinate of text
-* **y1**: `float` - by default, the y-coordinate of text, see rectMode() for more info
-* **y2**: `float` - by default, the height of the text box, see rectMode() for more info
-* **y**: `float` - y-coordinate of text
-* **z**: `float` - z-coordinate of text
+    text(
+        chars: list[chr],  # the alphanumberic symbols to be displayed
+        start: int,  # array index at which to start writing characters
+        stop: int,  # array index at which to stop writing characters
+        x: float,  # x-coordinate of text
+        y: float,  # y-coordinate of text
+        /,
+    ) -> None
 
+    text(
+        chars: list[chr],  # the alphanumberic symbols to be displayed
+        start: int,  # array index at which to start writing characters
+        stop: int,  # array index at which to stop writing characters
+        x: float,  # x-coordinate of text
+        y: float,  # y-coordinate of text
+        z: float,  # z-coordinate of text
+        /,
+    ) -> None
 
-Updated on March 01, 2022 12:15:01pm UTC
+    text(
+        num: float,  # the numeric value to be displayed
+        x: float,  # x-coordinate of text
+        y: float,  # y-coordinate of text
+        /,
+    ) -> None
+
+    text(
+        num: float,  # the numeric value to be displayed
+        x: float,  # x-coordinate of text
+        y: float,  # y-coordinate of text
+        z: float,  # z-coordinate of text
+        /,
+    ) -> None
+
+    text(
+        num: int,  # the numeric value to be displayed
+        x: float,  # x-coordinate of text
+        y: float,  # y-coordinate of text
+        /,
+    ) -> None
+
+    text(
+        num: int,  # the numeric value to be displayed
+        x: float,  # x-coordinate of text
+        y: float,  # y-coordinate of text
+        z: float,  # z-coordinate of text
+        /,
+    ) -> None
+
+    text(
+        str: str,  # string to be displayed
+        x1: float,  # by default, the x-coordinate of text, see rectMode() for more info
+        y1: float,  # by default, the y-coordinate of text, see rectMode() for more info
+        x2: float,  # by default, the width of the text box, see rectMode() for more info
+        y2: float,  # by default, the height of the text box, see rectMode() for more info
+        /,
+    ) -> None
+
+    text(
+        str: str,  # string to be displayed
+        x: float,  # x-coordinate of text
+        y: float,  # y-coordinate of text
+        /,
+    ) -> None
+
+    text(
+        str: str,  # string to be displayed
+        x: float,  # x-coordinate of text
+        y: float,  # y-coordinate of text
+        z: float,  # z-coordinate of text
+        /,
+    ) -> None
+
+Updated on September 01, 2022 16:36:02pm UTC
 

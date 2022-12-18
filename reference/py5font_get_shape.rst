@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         font = py5.create_font('DejaVu Sans', 32)
@@ -63,20 +62,21 @@ This method only works on fonts loaded with :doc:`sketch_create_font`.
 
 Underlying Processing method: PFont.getShape
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    get_shape(ch: chr, /) -> Py5Shape
-    get_shape(ch: chr, detail: float, /) -> Py5Shape
+    get_shape(
+        ch: chr,  # single character
+        /,
+    ) -> Py5Shape
 
-Parameters
-----------
+    get_shape(
+        ch: chr,  # single character
+        detail: float,  # level of shape detail
+        /,
+    ) -> Py5Shape
 
-* **ch**: `chr` - single character
-* **detail**: `float` - level of shape detail
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

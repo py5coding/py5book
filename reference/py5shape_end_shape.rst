@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global s  # the Py5Shape object
@@ -51,19 +50,17 @@ This method is used to complete a custom shape created with the :doc:`sketch_cre
 
 Underlying Processing method: `PShape.endShape <https://processing.org/reference/PShape_endShape_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     end_shape() -> None
-    end_shape(mode: int, /) -> None
 
-Parameters
-----------
+    end_shape(
+        mode: int,  # Either OPEN or CLOSE
+        /,
+    ) -> None
 
-* **mode**: `int` - Either OPEN or CLOSE
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

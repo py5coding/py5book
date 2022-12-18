@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P2D)
@@ -60,18 +59,15 @@ Get the texture tint color assigned to one vertex in a ``Py5Shape`` object. If t
 
 Underlying Processing method: PShape.getTint
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    get_tint(index: int, /) -> int
+    get_tint(
+        index: int,  # vertex index
+        /,
+    ) -> int
 
-Parameters
-----------
-
-* **index**: `int` - vertex index
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

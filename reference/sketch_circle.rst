@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.circle(56, 46, 55)
@@ -42,20 +41,17 @@ Draws a circle to the screen. By default, the first two parameters set the locat
 
 Underlying Processing method: `circle <https://processing.org/reference/circle_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    circle(x: float, y: float, extent: float, /) -> None
+    circle(
+        x: float,  # x-coordinate of the ellipse
+        y: float,  # y-coordinate of the ellipse
+        extent: float,  # width and height of the ellipse by default
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **extent**: `float` - width and height of the ellipse by default
-* **x**: `float` - x-coordinate of the ellipse
-* **y**: `float` - y-coordinate of the ellipse
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

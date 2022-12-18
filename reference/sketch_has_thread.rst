@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import time
 
@@ -53,18 +52,14 @@ Description
 
 Determine if a thread of a given name exists and is currently running. You can get the list of all currently running threads with :doc:`sketch_list_threads`.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    has_thread(name: str) -> None
+    has_thread(
+        name: str,  # name of thread
+    ) -> None
 
-Parameters
-----------
-
-* **name**: `str` - name of thread
-
-
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

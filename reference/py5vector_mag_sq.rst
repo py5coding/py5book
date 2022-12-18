@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     v1 = py5.Py5Vector(3, 4)
 
@@ -48,6 +47,5 @@ Description
 
 The square of the vector's magnitude. Setting this property to a non-negative number will adjust the vector's squared magnitude to that value. Negative values will result in an error.
 
-
-Updated on January 16, 2022 16:51:21pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

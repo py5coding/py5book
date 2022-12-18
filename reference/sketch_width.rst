@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.no_stroke()
@@ -45,6 +44,5 @@ System variable that stores the width of the display window. This value is set b
 
 Underlying Processing field: `width <https://processing.org/reference/width.html>`_
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

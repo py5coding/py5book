@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         us_map = py5.load_shape("us_map.svg")
@@ -49,12 +48,12 @@ Get the children of a ``Py5Shape`` object as a list of ``Py5Shape`` objects. Whe
 
 Underlying Processing method: PShape.getChildren
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     get_children() -> list[Py5Shape]
 
-Updated on March 01, 2022 12:15:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -14,6 +14,7 @@ Creating / Reading
 * `brightness() <sketch_brightness.html>`_
 * `color() <sketch_color.html>`_
 * `green() <sketch_green.html>`_
+* `hex_color() <sketch_hex_color.html>`_
 * `hue() <sketch_hue.html>`_
 * `lerp_color() <sketch_lerp_color.html>`_
 * `red() <sketch_red.html>`_
@@ -117,9 +118,14 @@ Input
 Files
 ^^^^^
 
+* `load_bytes() <sketch_load_bytes.html>`_
 * `load_json() <sketch_load_json.html>`_
+* `load_pickle() <sketch_load_pickle.html>`_
+* `load_strings() <sketch_load_strings.html>`_
 * `parse_json() <sketch_parse_json.html>`_
 * `save_json() <sketch_save_json.html>`_
+* `select_folder() <sketch_select_folder.html>`_
+* `select_input() <sketch_select_input.html>`_
 
 Keyboard
 ^^^^^^^^
@@ -228,6 +234,7 @@ Random
 * `noise() <sketch_noise.html>`_
 * `noise_detail() <sketch_noise_detail.html>`_
 * `noise_seed() <sketch_noise_seed.html>`_
+* `np_random <sketch_np_random.html>`_
 * `os_noise() <sketch_os_noise.html>`_
 * `os_noise_seed() <sketch_os_noise_seed.html>`_
 * `random() <sketch_random.html>`_
@@ -259,6 +266,10 @@ Files
 * `begin_record() <sketch_begin_record.html>`_
 * `end_raw() <sketch_end_raw.html>`_
 * `end_record() <sketch_end_record.html>`_
+* `save_bytes() <sketch_save_bytes.html>`_
+* `save_pickle() <sketch_save_pickle.html>`_
+* `save_strings() <sketch_save_strings.html>`_
+* `select_output() <sketch_select_output.html>`_
 
 Image
 ^^^^^
@@ -278,6 +289,8 @@ Rendering
 * `blend_mode() <sketch_blend_mode.html>`_
 * `clip() <sketch_clip.html>`_
 * `create_graphics() <sketch_create_graphics.html>`_
+* `flush() <sketch_flush.html>`_
+* `g <sketch_g.html>`_
 * `get_graphics() <sketch_get_graphics.html>`_
 * `hint() <sketch_hint.html>`_
 * `no_clip() <sketch_no_clip.html>`_
@@ -395,6 +408,7 @@ Threading
 ^^^^^^^^^
 
 * `has_thread() <sketch_has_thread.html>`_
+* `join_thread() <sketch_join_thread.html>`_
 * `launch_promise_thread() <sketch_launch_promise_thread.html>`_
 * `launch_repeating_thread() <sketch_launch_repeating_thread.html>`_
 * `launch_thread() <sketch_launch_thread.html>`_

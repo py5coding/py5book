@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.translate(50, 50)
@@ -59,12 +58,12 @@ These methods can only be used within a :doc:`sketch_begin_shape` & :doc:`sketch
 
 Underlying Processing method: `endContour <https://processing.org/reference/endContour_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     end_contour() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

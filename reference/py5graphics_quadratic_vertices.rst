@@ -14,18 +14,15 @@ This method is the same as :doc:`sketch_quadratic_vertices` but linked to a ``Py
 
 Underlying Processing method: PGraphics.quadraticVertices
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    quadratic_vertices(coordinates: npt.NDArray[np.floating], /) -> None
+    quadratic_vertices(
+        coordinates: npt.NDArray[np.floating],  # 2D array of quadratic vertex coordinates with 4 or 6 columns for 2D or 3D points, respectively
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **coordinates**: `npt.NDArray[np.floating]` - 2D array of quadratic vertex coordinates with 4 or 6 columns for 2D or 3D points, respectively
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

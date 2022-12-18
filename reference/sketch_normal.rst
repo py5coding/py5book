@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -52,20 +51,17 @@ Sets the current normal vector. Used for drawing three dimensional shapes and su
 
 Underlying Processing method: `normal <https://processing.org/reference/normal_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    normal(nx: float, ny: float, nz: float, /) -> None
+    normal(
+        nx: float,  # x direction
+        ny: float,  # y direction
+        nz: float,  # z direction
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **nx**: `float` - x direction
-* **ny**: `float` - y direction
-* **nz**: `float` - z direction
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

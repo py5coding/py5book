@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global s
@@ -52,21 +51,23 @@ Using this method with the ``z`` parameter requires using the ``P3D`` parameter 
 
 Underlying Processing method: `PShape.translate <https://processing.org/reference/PShape_translate_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    translate(x: float, y: float, /) -> None
-    translate(x: float, y: float, z: float, /) -> None
+    translate(
+        x: float,  # left/right translation
+        y: float,  # up/down translation
+        /,
+    ) -> None
 
-Parameters
-----------
+    translate(
+        x: float,  # left/right translation
+        y: float,  # up/down translation
+        z: float,  # forward/back translation
+        /,
+    ) -> None
 
-* **x**: `float` - left/right translation
-* **y**: `float` - up/down translation
-* **z**: `float` - forward/back translation
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         g = py5.create_graphics(80, 80)
@@ -54,12 +53,12 @@ Note that ``load_np_pixels()`` will as a side effect call :doc:`py5graphics_load
 
 This method is the same as :doc:`sketch_load_np_pixels` but linked to a ``Py5Graphics`` object.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     load_np_pixels() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     v = py5.Py5Vector(1, 2, 3, 4)
 
@@ -47,6 +46,5 @@ Description
 
 The vector's w dimension value. This is the vector's 4th dimension, and is only applicable to 4D vectors.
 
-
-Updated on January 16, 2022 16:51:21pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

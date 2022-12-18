@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import numpy as np
 
@@ -49,18 +48,15 @@ The ``coordinates`` parameter should be a numpy array with one row for each vert
 
 Underlying Processing method: vertices
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    vertices(coordinates: npt.NDArray[np.floating], /) -> None
+    vertices(
+        coordinates: npt.NDArray[np.floating],  # 2D array of vertex coordinates with 2 or 3 columns for 2D or 3D points, respectively
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **coordinates**: `npt.NDArray[np.floating]` - 2D array of vertex coordinates with 2 or 3 columns for 2D or 3D points, respectively
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

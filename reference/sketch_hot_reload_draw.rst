@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import time
 
@@ -50,18 +49,14 @@ Description
 
 Perform a hot reload of the Sketch's draw function. This method allows you to replace a running Sketch's draw function with a different one.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    hot_reload_draw(draw: Callable) -> None
+    hot_reload_draw(
+        draw: Callable,  # function to replace existing draw function
+    ) -> None
 
-Parameters
-----------
-
-* **draw**: `Callable` - function to replace existing draw function
-
-
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

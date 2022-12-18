@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         s = py5.create_shape()
@@ -55,18 +54,15 @@ This method differs from :doc:`py5shape_stroke_cap` in that it is only to be use
 
 Underlying Processing method: PShape.setStrokeCap
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    set_stroke_cap(cap: int, /) -> None
+    set_stroke_cap(
+        cap: int,  # either SQUARE, PROJECT, or ROUND
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **cap**: `int` - either SQUARE, PROJECT, or ROUND
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

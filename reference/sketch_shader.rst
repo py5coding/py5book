@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global edges
@@ -48,20 +47,21 @@ Applies the shader specified by the parameters. It's compatible with the ``P2D``
 
 Underlying Processing method: `shader <https://processing.org/reference/shader_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    shader(shader: Py5Shader, /) -> None
-    shader(shader: Py5Shader, kind: int, /) -> None
+    shader(
+        shader: Py5Shader,  # name of shader file
+        /,
+    ) -> None
 
-Parameters
-----------
+    shader(
+        shader: Py5Shader,  # name of shader file
+        kind: int,  # type of shader, either POINTS, LINES, or TRIANGLES
+        /,
+    ) -> None
 
-* **kind**: `int` - type of shader, either POINTS, LINES, or TRIANGLES
-* **shader**: `Py5Shader` - name of shader file
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

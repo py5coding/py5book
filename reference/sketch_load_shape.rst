@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global s
@@ -44,7 +43,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global s
@@ -79,20 +77,21 @@ If the file is not available or an error occurs, ``None`` will be returned and a
 
 Underlying Processing method: `loadShape <https://processing.org/reference/loadShape_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    load_shape(filename: str, /) -> Py5Shape
-    load_shape(filename: str, options: str, /) -> Py5Shape
+    load_shape(
+        filename: str,  # name of file to load, can be .svg or .obj
+        /,
+    ) -> Py5Shape
 
-Parameters
-----------
+    load_shape(
+        filename: str,  # name of file to load, can be .svg or .obj
+        options: str,  # unused parameter
+        /,
+    ) -> Py5Shape
 
-* **filename**: `str` - name of file to load, can be .svg or .obj
-* **options**: `str` - unused parameter
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

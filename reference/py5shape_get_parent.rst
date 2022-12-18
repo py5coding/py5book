@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         p = py5.create_shape(py5.GROUP)
@@ -47,12 +46,12 @@ Locate a child ``Py5Shape`` object's parent ``GROUP`` ``Py5Shape`` object. This 
 
 Underlying Processing method: PShape.getParent
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     get_parent() -> Py5Shape
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

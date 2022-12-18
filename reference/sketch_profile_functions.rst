@@ -19,14 +19,13 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import time
 
 
     def setup():
         # to load images from the web, use `request_image` instead
-        img = py5.load_image('http://py5.ixora.io/images/examples/apples.jpg')
+        img = py5.load_image('http://py5coding.org/files/apples.jpg')
         py5.image_mode(py5.CORNERS)
         py5.image(img, 10, 10, py5.width - 10, py5.height - 10)
 
@@ -54,18 +53,14 @@ This method can be called before or after :doc:`sketch_run_sketch`. You are welc
 
 To profile just the draw function, you can also use :doc:`sketch_profile_draw`. To see the results, use :doc:`sketch_print_line_profiler_stats`.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    profile_functions(function_names: list[str]) -> None
+    profile_functions(
+        function_names: list[str],  # names of py5 functions to be profiled
+    ) -> None
 
-Parameters
-----------
-
-* **function_names**: `list[str]` - names of py5 functions to be profiled
-
-
-Updated on March 01, 2022 12:15:01pm UTC
+Updated on September 04, 2022 12:55:11pm UTC
 

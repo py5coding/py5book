@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     serialized_json = '{"red":255, "green":255, "blue":128}'
 
@@ -46,19 +45,15 @@ Parse serialized JSON data from a string. When reading JSON data from a file, :d
 
 The JSON data is parsed using the Python json library with the ``loads`` method, and the ``kwargs`` parameter is passed along to that method.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    parse_json(serialized_json: Any, **kwargs: dict[str, Any]) -> Any
+    parse_json(
+        serialized_json: Any,  # JSON data object that has been serialized as a string
+        **kwargs: dict[str, Any]
+    ) -> Any
 
-Parameters
-----------
-
-* **kwargs**: `dict[str, Any]` - keyword arguments
-* **serialized_json**: `Any` - JSON data object that has been serialized as a string
-
-
-Updated on March 01, 2022 12:15:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

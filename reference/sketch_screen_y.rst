@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -63,21 +62,23 @@ Takes a three-dimensional X, Y, Z position and returns the Y value for where it 
 
 Underlying Processing method: `screenY <https://processing.org/reference/screenY_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    screen_y(x: float, y: float, /) -> float
-    screen_y(x: float, y: float, z: float, /) -> float
+    screen_y(
+        x: float,  # 3D x-coordinate to be mapped
+        y: float,  # 3D y-coordinate to be mapped
+        /,
+    ) -> float
 
-Parameters
-----------
+    screen_y(
+        x: float,  # 3D x-coordinate to be mapped
+        y: float,  # 3D y-coordinate to be mapped
+        z: float,  # 3D z-coordinate to be mapped
+        /,
+    ) -> float
 
-* **x**: `float` - 3D x-coordinate to be mapped
-* **y**: `float` - 3D y-coordinate to be mapped
-* **z**: `float` - 3D z-coordinate to be mapped
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

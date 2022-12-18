@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(400, 400)
@@ -47,7 +46,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(200, 200)
@@ -80,21 +78,21 @@ This method can be used as a context manager to ensure that :doc:`sketch_end_rec
 
 Underlying Processing method: `beginRecord <https://processing.org/reference/beginRecord_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    begin_record(recorder: Py5Graphics, /) -> None
-    begin_record(renderer: str, filename: str, /) -> Py5Graphics
+    begin_record(
+        recorder: Py5Graphics,  # Py5Graphics object to record drawing commands to
+        /,
+    ) -> None
 
-Parameters
-----------
+    begin_record(
+        renderer: str,  # PDF or SVG
+        filename: str,  # filename for output
+        /,
+    ) -> Py5Graphics
 
-* **filename**: `str` - filename for output
-* **recorder**: `Py5Graphics` - Py5Graphics object to record drawing commands to
-* **renderer**: `str` - PDF or SVG
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

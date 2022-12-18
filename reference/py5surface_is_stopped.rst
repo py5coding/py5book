@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def draw():
         py5.rect(py5.mouse_x, py5.mouse_y, 10, 10)
@@ -42,7 +41,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.fill(255, 0, 0)
@@ -66,7 +64,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def draw():
         py5.rect(py5.mouse_x, py5.mouse_y, 10, 10)
@@ -97,12 +94,12 @@ The output of this method is independent of :doc:`py5surface_pause_thread` and :
 
 Underlying Processing method: PSurface.isStopped
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     is_stopped() -> bool
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

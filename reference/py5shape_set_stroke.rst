@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global c
@@ -49,22 +48,26 @@ The ``set_stroke()`` method defines the outline color of a ``Py5Shape``. This me
 
 Underlying Processing method: `PShape.setStroke <https://processing.org/reference/PShape_setStroke_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    set_stroke(index: int, stroke: int, /) -> None
-    set_stroke(stroke: bool, /) -> None
-    set_stroke(stroke: int, /) -> None
+    set_stroke(
+        index: int,  # vertex index
+        stroke: int,  # any color value
+        /,
+    ) -> None
 
-Parameters
-----------
+    set_stroke(
+        stroke: bool,  # allow stroke
+        /,
+    ) -> None
 
-* **index**: `int` - vertex index
-* **stroke**: `bool` - allow stroke
-* **stroke**: `int` - any color value
+    set_stroke(
+        stroke: int,  # any color value
+        /,
+    ) -> None
 
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

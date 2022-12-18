@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # press the mouse to hide the cursor
     def draw():
@@ -43,12 +42,12 @@ Hides the cursor from view. Will not work when running the program in full scree
 
 Underlying Processing method: `noCursor <https://processing.org/reference/noCursor_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     no_cursor() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

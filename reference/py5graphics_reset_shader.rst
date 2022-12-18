@@ -12,19 +12,17 @@ This method is the same as :doc:`sketch_reset_shader` but linked to a ``Py5Graph
 
 Underlying Processing method: PGraphics.resetShader
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     reset_shader() -> None
-    reset_shader(kind: int, /) -> None
 
-Parameters
-----------
+    reset_shader(
+        kind: int,  # type of shader, either POINTS, LINES, or TRIANGLES
+        /,
+    ) -> None
 
-* **kind**: `int` - type of shader, either POINTS, LINES, or TRIANGLES
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

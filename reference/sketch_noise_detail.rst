@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import numpy as np
 
@@ -60,7 +59,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import numpy as np
 
@@ -91,20 +89,21 @@ By changing these parameters, the signal created by the :doc:`sketch_noise` func
 
 Underlying Processing method: `noiseDetail <https://processing.org/reference/noiseDetail_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    noise_detail(lod: int, /) -> None
-    noise_detail(lod: int, falloff: float, /) -> None
+    noise_detail(
+        lod: int,  # number of octaves to be used by the noise
+        /,
+    ) -> None
 
-Parameters
-----------
+    noise_detail(
+        lod: int,  # number of octaves to be used by the noise
+        falloff: float,  # falloff factor for each octave
+        /,
+    ) -> None
 
-* **falloff**: `float` - falloff factor for each octave
-* **lod**: `int` - number of octaves to be used by the noise
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 
