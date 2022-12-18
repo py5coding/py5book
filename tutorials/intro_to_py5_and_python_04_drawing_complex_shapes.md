@@ -42,7 +42,7 @@ However you choose to load it into the sketch, if your grid image is in the righ
 
 In the `image()` function, the first argument is the name of the image (that we defined just one line earlier), and the next two arguments are the x and y coordinates where you will place the image. `image()` also takes a variety of optional arguments - for example, a width and height at which to display the image. 
 
-*Reference: [image()](http://py5.ixora.io/reference/sketch_image.html), [load_image()](http://py5.ixora.io/reference/sketch_load_image.html)*
+*Reference: [image()](/reference/sketch_image.html), [load_image()](/reference/sketch_load_image.html)*
 
 ## using Catmull-Rom splines
 
@@ -350,7 +350,7 @@ There are optional arguments for `begin_shape()` too, which you can provide to c
 
 <img src="images/complex_shapes/vertices-beginshape.png">
 
-*Reference: [begin_shape()](http://py5.ixora.io/reference/sketch_begin_shape.html)*
+*Reference: [begin_shape()](/reference/sketch_begin_shape.html)*
 
 ## Bézier vertices
 
