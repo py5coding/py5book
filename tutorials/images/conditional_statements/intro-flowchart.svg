@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" height="354.17999" width="385" id="svg1592" version="1.1" viewBox="0 0 385 354.18">
+  <metadata id="metadata1598">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title>intro-flowchart</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs id="defs1596"/>
+  <title id="title1546">intro-flowchart</title>
+  <line id="line1548" style="fill:none;stroke:#004477;stroke-width:1.5px;stroke-miterlimit:10" y2="294.01999" x2="37.25" y1="51.519993" x1="37.25"/>
+  <polyline transform="translate(42.39795,-5.3515625e-6)" id="polyline1550" style="fill:none;stroke:#004477;stroke-width:1.5px;stroke-miterlimit:10" points="262.25 147.03 340.75 147.03 340.75 289.52 257.25 289.52 257.25 333.02"/>
+  <polyline transform="translate(42.39795,-5.3515625e-6)" id="polyline1552" style="fill:none;stroke:#004477;stroke-width:1.5px;stroke-miterlimit:10" points="257.25 19.52 257.25 259.02 173.25 259.02 173.25 147.03 246.75 147.03"/>
+  <rect id="rect1554" style="fill:#ffffff;stroke:#004477;stroke-width:1.5px;stroke-miterlimit:10" transform="rotate(45)" height="26.73" width="26.73" y="-121.26787" x="302.48224"/>
+  <rect id="rect1556" style="fill:#ffffff;stroke:#004477;stroke-width:1.5px;stroke-miterlimit:10" height="33.830002" width="73.330002" y="194.69" x="263.14795"/>
+  <rect id="rect1558" style="fill:#ffffff;stroke:#004477;stroke-width:1.5px;stroke-miterlimit:10" ry="16.84" rx="16.84" height="33.68" width="73.360001" y="0.74999464" x="263.14795"/>
+  <rect id="rect1560" style="fill:#ffffff;stroke:#004477;stroke-width:1.5px;stroke-miterlimit:10" ry="16.84" rx="16.84" height="33.68" width="73.360001" y="319.75" x="263.14795"/>
+  <rect id="rect1562" style="fill:#ffffff;stroke:#004477;stroke-width:1.5px;stroke-miterlimit:10" height="33.830002" width="73.330002" y="64.690002" x="263.14795"/>
+  <rect id="rect1564" style="fill:#ffffff;stroke:#004477;stroke-width:1.5px;stroke-miterlimit:10" height="33.830002" width="73.330002" y="160.69" x="0.75"/>
+  <rect id="rect1566" style="fill:#ffffff;stroke:#004477;stroke-width:1.5px;stroke-miterlimit:10" ry="16.84" rx="16.84" height="33.68" width="73.360001" y="32.749992" x="0.75"/>
+  <rect id="rect1568" style="fill:#ffffff;stroke:#004477;stroke-width:1.5px;stroke-miterlimit:10" ry="16.84" rx="16.84" height="33.68" width="73.360001" y="288.75" x="0.75"/>
+  <rect id="rect1570" style="fill:#ffffff;stroke:#004477;stroke-width:1.5px;stroke-miterlimit:10" height="33.830002" width="73.330002" y="96.690002" x="0.75"/>
+  <polygon transform="translate(42.39795,-5.3515625e-6)" id="polygon1572" style="fill:#004477" points="251.77,56.86 262.76,56.86 257.26,65.34 "/>
+  <polygon transform="translate(42.39795,-5.3515625e-6)" id="polygon1574" style="fill:#004477" points="251.77,120.48 262.76,120.48 257.26,128.97 "/>
+  <polygon transform="translate(42.39795,-5.3515625e-6)" id="polygon1576" style="fill:#004477" points="251.77,186.88 262.76,186.88 257.26,195.36 "/>
+  <polygon transform="translate(42.39795,-5.3515625e-6)" id="polygon1578" style="fill:#004477" points="251.77,311.98 262.76,311.98 257.26,320.47 "/>
+  <polygon transform="translate(42.39795,-5.3515625e-6)" id="polygon1580" style="fill:#004477" points="230.88,152.5 230.88,141.51 239.37,147 "/>
+  <rect id="rect1582" style="fill:#ffffff;stroke:#004477;stroke-width:1.5px;stroke-miterlimit:10" height="33.830002" width="73.330002" y="224.69" x="0.75"/>
+  <polygon transform="translate(0,-5.3515625e-6)" id="polygon1584" style="fill:#004477" points="42.76,88.86 37.26,97.34 31.77,88.86 "/>
+  <polygon transform="translate(0,-5.3515625e-6)" id="polygon1586" style="fill:#004477" points="42.76,152.86 37.26,161.34 31.77,152.86 "/>
+  <polygon transform="translate(0,-5.3515625e-6)" id="polygon1588" style="fill:#004477" points="42.76,216.86 37.26,225.34 31.77,216.86 "/>
+  <polygon transform="translate(0,-5.3515625e-6)" id="polygon1590" style="fill:#004477" points="42.76,280.86 37.26,289.34 31.77,280.86 "/>
+  <path id="path192" d="M 145.9665,-0.02999774 V 354.22656" style="fill:none;stroke:#888888;stroke-width:1.53100002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+</svg>

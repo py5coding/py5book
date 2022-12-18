@@ -10,6 +10,8 @@ logo: images/main/logo.png
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: cache
+  exclude_patterns:
+    - 'intro_to_py5_and_python*'
 
 # Define the name of the latex output file for PDF builds
 latex:

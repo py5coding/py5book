@@ -18,10 +18,13 @@ parts:
 
 - caption: Tutorials
   chapters:
-  - file: tutorials/introduction_to_py5bot
-  - file: tutorials/jupyter_notebooks
-  - file: tutorials/rotating_cube
-  - file: tutorials/render_helper_tools
+  - file: tutorials/intro_to_py5_and_python
+    sections:
+    - glob: tutorials/intro_to_py5_and_python_*
+
+  - file: tutorials/misc
+    sections:
+    - glob: tutorials/misc_*
 
 - caption: How To...
   chapters:
