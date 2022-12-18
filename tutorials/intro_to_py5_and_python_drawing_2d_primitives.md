@@ -12,6 +12,8 @@ kernelspec:
   name: py5bot
 ---
 
+# drawing basic elements
+
 Although it's based on Python, which is a general-use or multi-purpose coding language, py5 is made for producing visual output, so you won't be surprised to learn that there are a variety of built-in functions to draw and color 2D shapes. The most basic shapes you can produce will be familiar to pretty much everyone - rectangles (and squares), uneven quadrilateral shapes, ellipses (ovals or circles), triangles, points, and lines. We call these basic shapes *primitives*. In addition to drawing primitives, this page will go into detail on color and controlling outlines in py5.
 
 ## color

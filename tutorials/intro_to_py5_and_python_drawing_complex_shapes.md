@@ -12,7 +12,7 @@ kernelspec:
   name: py5bot
 ---
 
-## complex custom shapes in py5
+# complex custom shapes in py5
 
 Out of the box, py5 includes a handful of basic functions to draw shapes, like `ellipse()`, `quad()`, and `triangle()`. However, you'll often find yourself wanting to draw something that does not fit simply into any pre-defined category. If you want to draw a heart, star, octagon or Pokémon, you *could* try to build it out of existing shapes... but in most situations, it's better to make a custom shape yourself. In this tutorial, we'll explore using points and curves to draw all sorts of complex glyphs. 
 
@@ -61,7 +61,7 @@ line(100,100, 400,400)
 
 <img src="images/complex_shapes/diagonal.png">
 
-Using our grid background, it's easy to see that the first set of arguments *(100, 100)* correspond to the end of the line at the top left, and the second set of arguments *(400, 400)* correspond to the end of the line at the bottom right. When we gave these two points as arguments, a line was drawn between them. Disable this line by "commenting it out" and replace it with a curve... 
+Using our grid background, it's easy to see that the first set of arguments *(100, 100)* correspond to the end of the line at the top left, and the second set of arguments *(400, 400)* correspond to the end of the line at the bottom right. When we gave these two points as arguments, a line was drawn between them. Disable this line by "commenting it out" and replace it with a curve...
 
 ```{code-cell} ipython3
 size(800, 800)
@@ -191,7 +191,7 @@ bezier(400,100, cp1x,cp1y, cp2x,cp2y, 100,400)
 
 <img src="images/complex_shapes/bezier.png">
 
-Since we're using variables here, if you'd like to be able to visualize your control points while we start to adjust them, it's very easy to do that with a few more lines. In fact, let's go a step farther and also connect the first point of our Bézier curve to the first control point.  
+Since we're using variables here, if you'd like to be able to visualize your control points while we start to adjust them, it's very easy to do that with a few more lines. In fact, let's go a step farther and also connect the first point of our Bézier curve to the first control point.
 
 ```{code-cell} ipython3
 size(800, 800)
@@ -305,7 +305,7 @@ We've been calling these *points* throughout the rest of the tutorial, but it's 
 
 We'll be using the same [grid image](images/complex_shapes/grid.png) as our background while we experiment with vertices, so either keep it in the same folder or go ahead and call it by its entire URL.
 
-There are two shape functions we'll be introducing here that are a bit unfamiliar, `begin_shape()` and `end_shape()`. You can think of using `begin_shape()` as being like hitting play on a recorder, and `end_shape()` is when you hit stop. Between those functions, we use the `vertex()` function to draw our individual points. `end_shape()` can also take optional arguments - for example, by using CLOSE, we can make sure it automatically closes the shape off once we're done. 
+There are two shape functions we'll be introducing here that are a bit unfamiliar, `begin_shape()` and `end_shape()`. You can think of using `begin_shape()` as being like hitting play on a recorder, and `end_shape()` is when you hit stop. Between those functions, we use the `vertex()` function to draw our individual points. `end_shape()` can also take optional arguments - for example, by using CLOSE, we can make sure it automatically closes the shape off once we're done.
 
 ```{code-cell} ipython3
 size(800,800)
@@ -325,7 +325,7 @@ end_shape(CLOSE)
 
 <img src="images/complex_shapes/shape.png">
 
-Of course, you don't have to close off the shape. You can combine an open shape with a `fill()` for an interesting look: 
+Of course, you don't have to close off the shape. You can combine an open shape with a `fill()` for an interesting look:
 
 ```{code-cell} ipython3
 size(800,800)
@@ -383,7 +383,7 @@ vertex(400,200) # starting (upper) vertex
 end_shape()
 ```
 
-Next, we'll be adding our second vertex - and this one will be a `bezier_vertex()`, so in addition to its actual location, we'll be defining those control points. Note that the first set of arguments in `bezier_vertex()` is actually positioning the control point for the regular `vertex()` right before it! 
+Next, we'll be adding our second vertex - and this one will be a `bezier_vertex()`, so in addition to its actual location, we'll be defining those control points. Note that the first set of arguments in `bezier_vertex()` is actually positioning the control point for the regular `vertex()` right before it!
 
 ```{code-cell} ipython3
 size(800,800)
@@ -427,7 +427,7 @@ end_shape()
 
 <img src="images/complex_shapes/heart.png">
 
-Making the second half of the heart will be simple: you know that to close the shape, it will have to end where it began. Thus, the final `bezier_vertex()` will have to share its coordinates with the opening `vertex()`. To figure out what goes in the gaps, consult the [reference image](images/complex_shapes/vertices.png) again, and take a look at the position of the light blue handles and control points. 
+Making the second half of the heart will be simple: you know that to close the shape, it will have to end where it began. Thus, the final `bezier_vertex()` will have to share its coordinates with the opening `vertex()`. To figure out what goes in the gaps, consult the [reference image](images/complex_shapes/vertices.png) again, and take a look at the position of the light blue handles and control points.
 
 ```{code-cell} ipython3
 size(800,800)
@@ -469,7 +469,7 @@ end_shape()
 
 <img src="images/complex_shapes/coin.png">
 
-Now, it's just a matter of converting all of those vertices (aside from the first one - shapes always begin with a regular `vertex()` function) into Bézier vertices. 
+Now, it's just a matter of converting all of those vertices (aside from the first one - shapes always begin with a regular `vertex()` function) into Bézier vertices.
 
 ```{code-cell} ipython3
 size(800,800)
@@ -549,7 +549,7 @@ Time for another challenge!
 
 In addition to the [grid.png](images/complex_shapes/grid.png) image we're using to assist with drawing coordinates, you'll need this [beziers.png](images/complex_shapes/beziers.png) image to layer over it as a reference. Either make sure that both images are in the right place on your local computer (in the same folder as the sketch, or in a folder called DATA beside the sketch) or reference them using their complete URLs. 
 
-Here is the code you'll be using to set things up. 
+Here is the code you'll be using to set things up.
 
 ```{code-cell} ipython3
 size(800,800)

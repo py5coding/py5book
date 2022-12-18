@@ -12,7 +12,7 @@ kernelspec:
   name: py5
 ---
 
-## vector movement and Py5vector
+# vector movement and Py5vector
 
 This tutorial is best paired with the tutorial on Object-Oriented Programming, and will use the code created within that tutorial. If you aren't yet familiar with this concept, it's worth going back and reading through the OOP tutorial. 
 
@@ -187,7 +187,7 @@ Whatever method you use, the above code will display a single amoeba, Bob, on th
 
 First, we'll be adding two new parameters, `xspeed` and `yspeed`, to our `Amoeba` class's initialization method. We'll then use these to form a new attribute, *propulsion*, that determines our amoeba's movement. 
 
-We'll also need to pass those new arguments in when Bob is created. Next, in our `draw()` function in the main sketch, we'll actually adjust Bob's X and Y position based on that propulsion stat. 
+We'll also need to pass those new arguments in when Bob is created. Next, in our `draw()` function in the main sketch, we'll actually adjust Bob's X and Y position based on that propulsion stat.
 
 ```{code-cell} ipython3
 # all-in-one file
@@ -440,7 +440,7 @@ Currently, the magnitude of this movement is a little too high. Bob will instant
 
 <img src="images/py5vector/sticky.gif">
 
-Luckily, there's a method for this. We can use the `.set_limit()` method on any vector to limit its magnitude. By setting the limit of our *difference* vector to a small number, we can make this a bit more sensible. 
+Luckily, there's a method for this. We can use the `.set_limit()` method on any vector to limit its magnitude. By setting the limit of our *difference* vector to a small number, we can make this a bit more sensible.
 
 ```{code-cell} ipython3
 # all-in-one file
@@ -522,7 +522,7 @@ Now, the movement added to the amoeba's location each frame is clamped at a sens
 
 <img src="images/py5vector/limit.gif">
 
-We have one amoeba on the screen, but there's no reason we can't have a dozen. You *could* manually go through naming each amoeba, creating it, updating its position... and so on, and so forth. However, we can automate this process using a *for loop*. We'll replace our current line to create Bob with a loop creating many amoebas (and storing them in a list), and then replace our lines in `draw()` to move Bob with a loop accessing this list of amoebas and calling the correct methods on all of them. 
+We have one amoeba on the screen, but there's no reason we can't have a dozen. You *could* manually go through naming each amoeba, creating it, updating its position... and so on, and so forth. However, we can automate this process using a *for loop*. We'll replace our current line to create Bob with a loop creating many amoebas (and storing them in a list), and then replace our lines in `draw()` to move Bob with a loop accessing this list of amoebas and calling the correct methods on all of them.
 
 ```{code-cell} ipython3
 # all-in-one file
@@ -701,7 +701,7 @@ def draw():
 
 <img src="images/py5vector/direction.gif">
 
-Of course, now the amoebas are liable to drift off the screen entirely, and it can take a while for them to move back to your mouse cursor. To fix this, we can add some code so that if an amoeba exits the screen, it reappears on the opposite side of the window, preserving its original momentum. 
+Of course, now the amoebas are liable to drift off the screen entirely, and it can take a while for them to move back to your mouse cursor. To fix this, we can add some code so that if an amoeba exits the screen, it reappears on the opposite side of the window, preserving its original momentum.
 
 ```{code-cell} ipython3
 # all-in-one file

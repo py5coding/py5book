@@ -12,6 +12,8 @@ kernelspec:
   name: py5
 ---
 
+# trigonometry for animation
+
 Trigonometry (often shortened just to *trig*) is a branch of mathematics that studies triangles and uses various mathematical functions, such as *sine*, *cosine* and *tangent*, to calculate angles and distances. You may have taken classes covering trigonometry concepts before, but you won't be expected to know it by heart to use it in py5.
 
 In digital spaces, like games or py5 sketches, trigonometry can be great for simulating physics, such as *periodic motion*. This refers to any motion that repeats itself at regular intervals, like the swinging of a pendulum or the orbit of the moon around the Earth. When we discuss periodic motion, each *cycle* is one complete repetition of this motion, and each *period* is the time it takes for that cycle to complete.

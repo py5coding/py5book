@@ -42,7 +42,7 @@ whatsup = 'what's up!'
 whatsup = "what's up!"
 ```
 
-Or, you can put a backslash directly before that apostrophe. This is called *escaping* the character, and will force it to be read as regular text. Either works, but you might find escaping preferable if you're dealing with large strings that could contain both kinds of quotation marks. 
+Or, you can put a backslash directly before that apostrophe. This is called *escaping* the character, and will force it to be read as regular text. Either works, but you might find escaping preferable if you're dealing with large strings that could contain both kinds of quotation marks.
 
 ```{code-cell} ipython3
 size(500, 500)
@@ -59,7 +59,7 @@ print(question)
 
 ## concatenation and formatting of strings
 
-When we're dealing with numbers (whether whole - *integers* - or decimal - *floats*), you can just perform addition on them using the + operator. However, when you're dealing with strings, the + operate instead will *concatenate* the strings, or connect them together. 
+When we're dealing with numbers (whether whole - *integers* - or decimal - *floats*), you can just perform addition on them using the + operator. However, when you're dealing with strings, the + operate instead will *concatenate* the strings, or connect them together.
 
 ```{code-cell} ipython3
 size(500, 500)
@@ -81,7 +81,7 @@ You'll notice this code prints a bit of a mess:
 
 `hello worldwhat's up!is your name really "world"?`
 
-Concatenating just joins your strings together exactly as-is, with nothing separating them. When you're concatenating strings, you'll often want to add in spaces, punctuation or other separators yourself. 
+Concatenating just joins your strings together exactly as-is, with nothing separating them. When you're concatenating strings, you'll often want to add in spaces, punctuation or other separators yourself.
 
 ```{code-cell} ipython3
 size(500, 500)
@@ -242,7 +242,7 @@ You can't see it yet, but py5 knows about it now. Let's go over some functions t
 
 ## text(string, x, y)
 
-`text()` draws text in the sketch window, coloring it with your current `fill()` color. The second and third arguments position it. 
+`text()` draws text in the sketch window, coloring it with your current `fill()` color. The second and third arguments position it.
 
 ```{code-cell} ipython3
 size(500, 500)
@@ -257,7 +257,7 @@ text(razor, 0,50)
 
 <img src="images/text/razor.png">
 
-You can also add a fourth and fifth argument to define its width and height. 
+You can also add a fourth and fifth argument to define its width and height.
 
 ```{code-cell} ipython3
 size(500, 500)
@@ -278,7 +278,7 @@ text(razor, 0,50, 100, 1000)
 
 ## text_size(size)
 
-`text_size()` sets a size, in pixels, for all subsequent text. 
+`text_size()` sets a size, in pixels, for all subsequent text.
 
 ```{code-cell} ipython3
 size(500, 500)
@@ -333,7 +333,7 @@ text(razor, 0,150)
 
 ## text_leading(spacing)
 
-`text_leading` sets the spacing (in pixels) between lines of subsequent `text()` function. 
+`text_leading` sets the spacing (in pixels) between lines of subsequent `text()` function.
 
 ```{code-cell} ipython3
 size(500, 500)
@@ -357,7 +357,7 @@ text(razor, 0,200, 250,100)
 
 ## text_align(alignment)
 
-`text_align()` sets the text alignment for an subsequent text - you can use LEFT, CENTER or RIGHT. 
+`text_align()` sets the text alignment for an subsequent text - you can use LEFT, CENTER or RIGHT.
 
 ```{code-cell} ipython3
 size(500, 500)

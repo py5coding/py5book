@@ -12,6 +12,8 @@ kernelspec:
   name: py5
 ---
 
+# transformations and matrices
+
 You might be familiar with terms in the digital arts space like *scaling* and *rotating*. In software like Adobe Photoshop or GIMP, these are *transformations* you can apply to images to stretch, spin and distort them. 
 
 <img src="images/transformations_and_matrices/transformations-star.png">
@@ -663,7 +665,7 @@ run_sketch()
 
 With each new frame (which takes one second to advance), you'll receive a printout of the current time, in hours, minutes and seconds. Of course, if you wanted to make a *digital* clock, it would now be a simple matter of using py5's text functions to draw this printout in the sketch window. For an analog clock, we'll have to go a little farther.
 
-Let's go ahead and add some visuals into our sketch - starting with the clock face itself and the hour hand. To make things a little easier, we'll be starting everything off with a `translate()` function that moves *0 , 0* to the middle of the screen. This means that as we start rotating things around the center of the clock, we'll simply have to worry about them rotating around this starting point. 
+Let's go ahead and add some visuals into our sketch - starting with the clock face itself and the hour hand. To make things a little easier, we'll be starting everything off with a `translate()` function that moves *0 , 0* to the middle of the screen. This means that as we start rotating things around the center of the clock, we'll simply have to worry about them rotating around this starting point.
 
 ```{code-cell} ipython3
 def setup():

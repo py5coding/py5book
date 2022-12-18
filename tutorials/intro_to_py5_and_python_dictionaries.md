@@ -12,7 +12,7 @@ kernelspec:
   name: py5
 ---
 
-## dictionaries
+# dictionaries
 
 You can think of a dictionary as an extension or a variation on the concept of a Python list. In a list, each *value* (whether that's an integer, a string of text, or a second nested list) corresponds to a n index number that represents its position in the list. Dictionaries, instead, associate values with keywords. You'll often see this relationship referred to as *key-value pairs*. 
 

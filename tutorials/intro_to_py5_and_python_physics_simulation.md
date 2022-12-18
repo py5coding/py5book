@@ -12,7 +12,7 @@ kernelspec:
   name: py5
 ---
 
-## physics simulations
+# physics simulations
 
 In this tutorial, we'll be exploring some features outside of py5's usual toolbox; namely, a library we can import in order to simulate two-dimensional physics. More specifically, we'll be simulating *rigid bodies* which have a variety of forces applied to them, such as gravity. You can think of a rigid body as any object that doesn't deform at all when it hits things or moves around. Although a *perfectly* rigid body may not exist in the real world (everything will deform if it's moving fast enough, or is hit with enough force), a metal spoon is much closer to being a rigid body than a gummy bear. For the purposes of simplified simulations that don't need to be perfectly accurate, such as those in video games, simulating these kinds of stiff objects is done with rigid bodies to save on computational power.
 
@@ -44,7 +44,7 @@ We'll start by creating a "floor" in this new space with its own rigid bodies. C
 
 First, we'll be creating two `Segment` shapes. These are very similar to the py5 `line()` function, only with Pymunk physics features. When you use `pymunk.Segment()` you pass some arguments for the Pymunk body to connect to, the X and Y positions of the first point in the line, the X and Y positions of the second point in the line, and a radius for its thickness. Here, we'll be using a special case, `space.static_body`, for the body that the line is connected to. Remember when we refer to some sketches as *static* sketches, where nothing moves? In this case, a static body is a rigid body that doesn't move. 
 
-After we define the two segments, we add them both to the space. Finally, in `draw()`, we render two lines using their attributes. 
+After we define the two segments, we add them both to the space. Finally, in `draw()`, we render two lines using their attributes.
 
 ```{code-cell} ipython3
 import pymunk
@@ -74,7 +74,6 @@ def draw():
 <img src="images/physics/valley.png">
 
 This won't be exciting until we add something that moves. Let's add a ball to roll down that slope. First, we'll be defining the body for the ball, with mass and momentum. Then we'll attach a Pymunk circle to that body, add it to the space, and render a py5 circle to visually represent it.
-
 
 ```{code-cell} ipython3
 import pymunk
@@ -163,7 +162,7 @@ Currently, there's only one force being applied to this ball; gravity. Because i
 
 How do you use `.apply_impulse_at_world_point()`? It's a method, so it's applied directly to a body (in this case, the one on our ball). You can pass it two arguments -- the force to apply (in the form of a *vector*, with an X and Y direction) and the point at which to apply it. 
 
-If we add just a few lines, we can hold the mouse button to launch the ball up in the air. 
+If we add just a few lines, we can hold the mouse button to launch the ball up in the air.
 
 ```{code-cell} ipython3
 import pymunk
@@ -209,7 +208,7 @@ def draw():
 
 <img src="images/physics/bounce.gif">
 
-This is a force of (0, -50), which means the ball is pushed in a strong upwards direction, and not to the left or right. However, we can use the position of the mouse compared to the ball to "push" it away from the cursor, if we choose. You can store this value as two variables if you want, but I've chosen to use a Py5Vector I called `ball_force`. 
+This is a force of (0, -50), which means the ball is pushed in a strong upwards direction, and not to the left or right. However, we can use the position of the mouse compared to the ball to "push" it away from the cursor, if we choose. You can store this value as two variables if you want, but I've chosen to use a Py5Vector I called `ball_force`.
 
 ```{code-cell} ipython3
 import pymunk
@@ -527,7 +526,7 @@ def draw():
     space.step(1/get_frame_rate())
 ```
 
-This works, but the ball never changes back, even when it stops touching the ground. We can add another function, `ball_no_hit()`, that changes the fill color back to white. We'll also need to add another possible event to our collision handler, `separate`, which is triggered whenever the collision stops. 
+This works, but the ball never changes back, even when it stops touching the ground. We can add another function, `ball_no_hit()`, that changes the fill color back to white. We'll also need to add another possible event to our collision handler, `separate`, which is triggered whenever the collision stops.
 
 ```{code-cell} ipython3
 import pymunk

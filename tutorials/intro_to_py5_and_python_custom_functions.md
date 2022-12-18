@@ -12,7 +12,7 @@ kernelspec:
   name: py5
 ---
 
-## functions in py5
+# functions in py5
 
 When you're writing large programs, you'll often find that chunks of code start running together, even with the help of comments. If you need to use the same code (or very similar code) over and over, the structure of your program can also become very inefficient. With functions, you can pare things down and keep them organized, leading to more readable and elegant code.
 
@@ -80,7 +80,7 @@ When you run this code, you'll see the question appear immediately in the consol
 |/
 ```
 
-Let's modify our code so that this answer is wrapped inside of its own *function* that we can use whenever we like. As you'll see, the syntax for defining a new function is just like inserting code into `setup()` and `draw()`! 
+Let's modify our code so that this answer is wrapped inside of its own *function* that we can use whenever we like. As you'll see, the syntax for defining a new function is just like inserting code into `setup()` and `draw()`!
 
 ```{code-cell} ipython3
 def setup():
@@ -109,7 +109,7 @@ As with variable names, function names are up to you, but there are certain conv
 
 Functions should be defined *before* they're called in the code, and many programs (and indeed entire programming languages) will struggle to execute them if you do it the other way around. 
 
-Is this function particularly useful? Not really. You can always add a second question, and a second answer, but it's only meaningful if the answer is also 42. 
+Is this function particularly useful? Not really. You can always add a second question, and a second answer, but it's only meaningful if the answer is also 42.
 
 ```{code-cell} ipython3
 def setup():
@@ -259,7 +259,7 @@ run_sketch()
 
 You'll notice that we've given these parameters a specific order (x, y, txt) when defining our function, and we've respected that order (190, 150, 'Check out my hat!') when passing in our arguments. These arguments which depend on their order to correspond to the correct parameters are called *positional arguments*. You can also use *keyword arguments*, which explicitly link each argument to their parameter, but can be placed in any order. 
 
-Let's add a second speech bubble using keyword arguments instead. This example will set `txt` to 'Woof' and the `x` and `y` positions to 315, 650. 
+Let's add a second speech bubble using keyword arguments instead. This example will set `txt` to 'Woof' and the `x` and `y` positions to 315, 650.
 
 ```{code-cell} ipython3
 def setup():

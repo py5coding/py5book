@@ -12,7 +12,7 @@ kernelspec:
   name: py5bot
 ---
 
-## storing data in py5
+# storing data in py5 with variables
 
 When you begin using py5 for more advanced programs and visual output, including sketches that have their own internal "logic", you start working with a surprising amount of data. Even when you're only drawing basic shapes, you have to decide where they're positioned, what colors to apply to them, and how they're sized. For the sake of not having to repeat yourself, and for making your code easier to read and understand, you can store these kinds of data in *variables* that can be used repeatedly.
 
@@ -104,7 +104,7 @@ print(3 / 2)   # prints 1.5
 print(3 // 2)  # prints 1
 ```
 
-And, of course, don't try to divide by zero... you'll get a special error for that. 
+And, of course, don't try to divide by zero... you'll get a special error for that.
 
 +++
 
@@ -246,7 +246,7 @@ arc(width/2,height/2, 400,400, 0,TAU) # full-circle
 
 Of course, this means that, instead of worrying about calculating radians, you could just know `TAU / 4` will always be a fourth of a circle, and so on. This is a case where being able to do arithmetic with variables is really useful!
 
-Many functions have optional arguments. In the case of `arc()`, there is a final MODE variable that can change the way the arc appears. If you want to close off the arc, so it looks like a slice of pie, you add one last argument called... PIE. We'll also take a look at another built-in variable here, HALF_PI. HALF_PI is, of course, the same as PI/2. 
+Many functions have optional arguments. In the case of `arc()`, there is a final MODE variable that can change the way the arc appears. If you want to close off the arc, so it looks like a slice of pie, you add one last argument called... PIE. We'll also take a look at another built-in variable here, HALF_PI. HALF_PI is, of course, the same as PI/2.
 
 ```{code-cell} ipython3
 size(600,700)

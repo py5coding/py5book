@@ -12,11 +12,11 @@ kernelspec:
   name: py5bot
 ---
 
+# conditional statements
+
 By default, code written in py5 is just executed line by line, starting with the very top of the sketch and ending at the bottom. This linear arrangement of code is perfectly acceptable for simple programs, but as your sketches begin to get more complex, you'll often find that laying out divergent paths and loops of behaviors is necessary. Laying out the rules and conditions for the computer to follow these different paths is called *control flow*. 
 
 <img src="images/conditional_statements/intro-flowchart.svg">
-
-## conditional statements
 
 A *conditional statement* is really just a fancy way of saying that if a condition is true, the program will do something. If you were communicating with a human, it would be helpful to think of this as a question-and-answer approach, where the answer will lead to some sort of action. If you had blocks of several different colors and several different boxes to put them in, the conditional statement might look like this: 
 
