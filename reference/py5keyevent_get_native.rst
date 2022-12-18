@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(200, 200, py5.P2D)
@@ -52,12 +51,12 @@ Be aware that it is possible for the native event object to be ``None``, such as
 
 Underlying Processing method: getNative
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     get_native() -> Any
 
-Updated on May 17, 2022 15:08:25pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

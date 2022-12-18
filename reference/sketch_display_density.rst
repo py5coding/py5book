@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.pixel_density(py5.display_density())
@@ -46,19 +45,17 @@ This function returns the number "2" if the screen is a high-density screen (cal
 
 Underlying Processing method: `displayDensity <https://processing.org/reference/displayDensity_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     display_density() -> int
-    display_density(display: int, /) -> int
 
-Parameters
-----------
+    display_density(
+        display: int,  # the display number to check (1-indexed to match the Preferences dialog box)
+        /,
+    ) -> int
 
-* **display**: `int` - the display number to check (1-indexed to match the Preferences dialog box)
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

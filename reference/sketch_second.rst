@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def draw():
         py5.background(204)
@@ -45,12 +44,12 @@ Py5 communicates with the clock on your computer. The ``second()`` function retu
 
 Underlying Processing method: `second <https://processing.org/reference/second_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     second() -> int
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

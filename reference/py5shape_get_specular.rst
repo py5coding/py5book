@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -53,18 +52,15 @@ This method can only be used for a complete ``Py5Shape`` object, and never withi
 
 Underlying Processing method: PShape.getSpecular
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    get_specular(index: int, /) -> int
+    get_specular(
+        index: int,  # vertex index
+        /,
+    ) -> int
 
-Parameters
-----------
-
-* **index**: `int` - vertex index
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

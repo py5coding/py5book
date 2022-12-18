@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         d = py5.day()    # values from_ 1 - 31
@@ -45,12 +44,12 @@ Py5 communicates with the clock on your computer. The ``month()`` function retur
 
 Underlying Processing method: `month <https://processing.org/reference/month_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     month() -> int
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

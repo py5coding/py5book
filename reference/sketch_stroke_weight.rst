@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.stroke_weight(1)  # default
@@ -49,18 +48,15 @@ Using :doc:`sketch_point` with ``strokeWeight(1)`` or smaller may draw nothing t
 
 Underlying Processing method: `strokeWeight <https://processing.org/reference/strokeWeight_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    stroke_weight(weight: float, /) -> None
+    stroke_weight(
+        weight: float,  # the weight (in pixels) of the stroke
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **weight**: `float` - the weight (in pixels) of the stroke
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

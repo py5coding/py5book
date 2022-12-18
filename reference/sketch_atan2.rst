@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def draw():
         py5.background(204)
@@ -43,19 +42,15 @@ Calculates the angle (in radians) from a specified point to the coordinate origi
 
 This function makes a call to the numpy ``atan2()`` function.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    atan2(y: Union[float, npt.ArrayLike], x: Union[float, npt.ArrayLike]) -> Union[float, npt.NDArray]
+    atan2(
+        y: Union[float, npt.ArrayLike],  # y-coordinate of the point
+        x: Union[float, npt.ArrayLike],  # x-coordinate of the point
+    ) -> Union[float, npt.NDArray]
 
-Parameters
-----------
-
-* **x**: `Union[float, npt.ArrayLike]` - x-coordinate of the point
-* **y**: `Union[float, npt.ArrayLike]` - y-coordinate of the point
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

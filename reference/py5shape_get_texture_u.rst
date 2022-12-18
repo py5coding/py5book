@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P2D)
@@ -58,18 +57,15 @@ Get the horizontal texture mapping coordinate for a particular vertex. Returned 
 
 Underlying Processing method: PShape.getTextureU
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    get_texture_u(index: int, /) -> float
+    get_texture_u(
+        index: int,  # vertex index
+        /,
+    ) -> float
 
-Parameters
-----------
-
-* **index**: `int` - vertex index
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

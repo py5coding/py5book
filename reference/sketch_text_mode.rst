@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(500, 500, py5.PDF, "TypeDemo.pdf")
@@ -48,18 +47,15 @@ The ``text_mode(SHAPE)`` option in ``P3D`` can be combined with :doc:`sketch_beg
 
 Underlying Processing method: `textMode <https://processing.org/reference/textMode_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    text_mode(mode: int, /) -> None
+    text_mode(
+        mode: int,  # either MODEL or SHAPE
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **mode**: `int` - either MODEL or SHAPE
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -12,28 +12,25 @@ This method is the same as :doc:`sketch_spot_light` but linked to a ``Py5Graphic
 
 Underlying Processing method: PGraphics.spotLight
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    spot_light(v1: float, v2: float, v3: float, x: float, y: float, z: float, nx: float, ny: float, nz: float, angle: float, concentration: float, /) -> None
+    spot_light(
+        v1: float,  # red or hue value (depending on current color mode)
+        v2: float,  # green or saturation value (depending on current color mode)
+        v3: float,  # blue or brightness value (depending on current color mode)
+        x: float,  # x-coordinate of the light
+        y: float,  # y-coordinate of the light
+        z: float,  # z-coordinate of the light
+        nx: float,  # direction along the x axis
+        ny: float,  # direction along the y axis
+        nz: float,  # direction along the z axis
+        angle: float,  # angle of the spotlight cone
+        concentration: float,  # exponent determining the center bias of the cone
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **angle**: `float` - angle of the spotlight cone
-* **concentration**: `float` - exponent determining the center bias of the cone
-* **nx**: `float` - direction along the x axis
-* **ny**: `float` - direction along the y axis
-* **nz**: `float` - direction along the z axis
-* **v1**: `float` - red or hue value (depending on current color mode)
-* **v2**: `float` - green or saturation value (depending on current color mode)
-* **v3**: `float` - blue or brightness value (depending on current color mode)
-* **x**: `float` - x-coordinate of the light
-* **y**: `float` - y-coordinate of the light
-* **z**: `float` - z-coordinate of the light
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(200, 200, py5.P2D)
@@ -50,12 +49,12 @@ Return the key for the key event. If the value is ``CODED``, use :doc:`py5keyeve
 
 Underlying Processing method: getKey
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     get_key() -> chr
 
-Updated on April 27, 2022 11:05:24am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

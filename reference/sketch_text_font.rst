@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         # the font "andalemo.ttf" must be located in the
@@ -49,20 +48,21 @@ When fonts are rendered as an image texture (as is the case with the ``P2D`` and
 
 Underlying Processing method: `textFont <https://processing.org/reference/textFont_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    text_font(which: Py5Font, /) -> None
-    text_font(which: Py5Font, size: float, /) -> None
+    text_font(
+        which: Py5Font,  # any variable of the type Py5Font
+        /,
+    ) -> None
 
-Parameters
-----------
+    text_font(
+        which: Py5Font,  # any variable of the type Py5Font
+        size: float,  # the size of the letters in units of pixels
+        /,
+    ) -> None
 
-* **size**: `float` - the size of the letters in units of pixels
-* **which**: `Py5Font` - any variable of the type Py5Font
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

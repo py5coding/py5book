@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.rect_mode(py5.CORNER)  # default rect_mode is CORNER
@@ -49,7 +48,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.rect_mode(py5.RADIUS)  # set rect_mode to RADIUS
@@ -85,18 +83,15 @@ The parameter must be written in ALL CAPS because Python is a case-sensitive lan
 
 Underlying Processing method: `rectMode <https://processing.org/reference/rectMode_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    rect_mode(mode: int, /) -> None
+    rect_mode(
+        mode: int,  # either CORNER, CORNERS, CENTER, or RADIUS
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **mode**: `int` - either CORNER, CORNERS, CENTER, or RADIUS
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     py5.run_sketch(block=False)
     # move the sketch window to the upper left corner of the display
@@ -38,7 +37,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # this sketch will hide itself and reappear elsewhere on your display.
     def setup():
@@ -71,21 +69,20 @@ Description
 
 Set the Sketch's window location. Calling this repeatedly from the ``draw()`` function may result in a sluggish Sketch. Negative or invalid coordinates are ignored. To hide a Sketch window, use :doc:`py5surface_set_visible`.
 
+This method provides the same functionality as :doc:`py5surface_set_location` but without the need to interact directly with the :doc:`py5surface` object.
+
 Underlying Processing method: windowMove
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    window_move(x: int, y: int, /) -> None
+    window_move(
+        x: int,  # x-coordinate for window location
+        y: int,  # y-coordinate for window location
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **x**: `int` - x-coordinate for window location
-* **y**: `int` - y-coordinate for window location
-
-
-Updated on February 21, 2022 11:40:40am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

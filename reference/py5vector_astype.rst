@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import numpy as np
 
@@ -44,18 +43,14 @@ Description
 
 Create a new Py5Vector instance with a specified numpy dtype. Only floating types (``np.float16``, ``np.float32``, ``np.float64``, and ``np.float128``) are allowed.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    astype(dtype) -> Py5Vector
+    astype(
+        dtype,  # numpy floating dtype
+    ) -> Py5Vector
 
-Parameters
-----------
-
-* **dtype**: - numpy floating dtype
-
-
-Updated on January 16, 2022 16:51:21pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

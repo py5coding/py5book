@@ -14,18 +14,15 @@ This method is the same as :doc:`sketch_vertices` but linked to a ``Py5Graphics`
 
 Underlying Processing method: PGraphics.vertices
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    vertices(coordinates: npt.NDArray[np.floating], /) -> None
+    vertices(
+        coordinates: npt.NDArray[np.floating],  # 2D array of vertex coordinates with 2 or 3 columns for 2D or 3D points, respectively
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **coordinates**: `npt.NDArray[np.floating]` - 2D array of vertex coordinates with 2 or 3 columns for 2D or 3D points, respectively
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

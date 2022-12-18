@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         font1 = py5.create_font('DejaVu Sans', 45)
@@ -51,12 +50,12 @@ Boolean value reflecting if smoothing (anti-aliasing) was used when the font was
 
 Underlying Processing method: PFont.isSmooth
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     is_smooth() -> bool
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P2D)
@@ -65,18 +64,15 @@ This method can only be used within a :doc:`py5shape_begin_shape` and :doc:`py5s
 
 Underlying Processing method: PShape.curveDetail
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    curve_detail(detail: int, /) -> None
+    curve_detail(
+        detail: int,  # resolution of the curves
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **detail**: `int` - resolution of the curves
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(200, 200)
@@ -51,12 +50,12 @@ Disables the clipping previously started by the :doc:`sketch_clip` function.
 
 Underlying Processing method: `noClip <https://processing.org/reference/noClip_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     no_clip() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

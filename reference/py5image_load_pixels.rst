@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global my_image
@@ -54,12 +53,12 @@ Loads the pixel data for the image into its :doc:`py5image_pixels` array. This f
 
 Underlying Processing method: `PImage.loadPixels <https://processing.org/reference/PImage_loadPixels_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     load_pixels() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

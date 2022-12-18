@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(200, 200)
@@ -60,20 +59,21 @@ Adds a child ``Py5Shape`` object to a parent ``Py5Shape`` object that is defined
 
 Underlying Processing method: `PShape.addChild <https://processing.org/reference/PShape_addChild_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    add_child(who: Py5Shape, /) -> None
-    add_child(who: Py5Shape, idx: int, /) -> None
+    add_child(
+        who: Py5Shape,  # any variable of type Py5Shape
+        /,
+    ) -> None
 
-Parameters
-----------
+    add_child(
+        who: Py5Shape,  # any variable of type Py5Shape
+        idx: int,  # the layer position in which to insert the new child
+        /,
+    ) -> None
 
-* **idx**: `int` - the layer position in which to insert the new child
-* **who**: `Py5Shape` - any variable of type Py5Shape
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

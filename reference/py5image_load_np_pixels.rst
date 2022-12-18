@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         my_image = py5.load_image("apples.jpg")
@@ -48,12 +47,12 @@ The ``load_np_pixels()`` method is similar to :doc:`py5image_load_pixels` in tha
 
 Note that ``load_np_pixels()`` will as a side effect call :doc:`py5image_load_pixels`, so if your code needs to read :doc:`py5image_np_pixels` and :doc:`py5image_pixels` simultaneously, there is no need for a separate call to :doc:`py5image_load_pixels`. However, be aware that modifying both :doc:`py5image_np_pixels` and :doc:`py5image_pixels` simultaneously will likely result in the updates to :doc:`py5image_pixels` being discarded.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     load_np_pixels() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

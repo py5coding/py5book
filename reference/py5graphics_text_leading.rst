@@ -12,18 +12,15 @@ This method is the same as :doc:`sketch_text_leading` but linked to a ``Py5Graph
 
 Underlying Processing method: PGraphics.textLeading
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    text_leading(leading: float, /) -> None
+    text_leading(
+        leading: float,  # the size in pixels for spacing between lines
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **leading**: `float` - the size in pixels for spacing between lines
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

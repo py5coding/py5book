@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         pink = "#F6C"
@@ -49,6 +48,5 @@ Before accessing this array, the data must loaded with the :doc:`sketch_load_pix
 
 Underlying Processing field: `pixels <https://processing.org/reference/pixels.html>`_
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

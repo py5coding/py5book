@@ -12,18 +12,15 @@ This method is the same as :doc:`sketch_shape_mode` but linked to a ``Py5Graphic
 
 Underlying Processing method: PGraphics.shapeMode
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    shape_mode(mode: int, /) -> None
+    shape_mode(
+        mode: int,  # either CORNER, CORNERS, CENTER
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **mode**: `int` - either CORNER, CORNERS, CENTER
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

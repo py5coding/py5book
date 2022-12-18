@@ -12,12 +12,12 @@ This method is the same as :doc:`sketch_print_matrix` but linked to a ``Py5Graph
 
 Underlying Processing method: PGraphics.printMatrix
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     print_matrix() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(200, 200, py5.P2D)
@@ -58,12 +57,12 @@ Integer value used to identify which modifier keys (if any) are currently presse
 
 Underlying Processing method: getModifiers
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     get_modifiers() -> int
 
-Updated on April 27, 2022 10:44:51am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

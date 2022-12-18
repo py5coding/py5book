@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         states = py5.load_shape("us_map.svg")
@@ -51,20 +50,20 @@ Extracts a child ``Py5Shape`` object from a parent ``Py5Shape`` object that is d
 
 Underlying Processing method: `PShape.getChild <https://processing.org/reference/PShape_getChild_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    get_child(index: int, /) -> Py5Shape
-    get_child(target: str, /) -> Py5Shape
+    get_child(
+        index: int,  # the layer position of the shape to get
+        /,
+    ) -> Py5Shape
 
-Parameters
-----------
+    get_child(
+        target: str,  # the name of the shape to get
+        /,
+    ) -> Py5Shape
 
-* **index**: `int` - the layer position of the shape to get
-* **target**: `str` - the name of the shape to get
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

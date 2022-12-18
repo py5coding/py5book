@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import time
     import py5_tools
@@ -49,19 +48,16 @@ By default the Sketch will be the currently running Sketch, as returned by :doc:
 
 If your Sketch has a ``post_draw()`` method, use the ``hook_post_draw`` parameter to make this function run after ``post_draw()`` instead of ``draw()``. This is important when using Processing libraries that support ``post_draw()`` such as Camera3D or ColorBlindness.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    screenshot(*, sketch: Sketch = None, hook_post_draw: bool = False) -> PIL.Image
+    screenshot(
+        *,
+        sketch: Sketch = None,  # running Sketch
+        hook_post_draw: bool = False  # attach hook to Sketch's post_draw method instead of draw
+    ) -> PIL.Image
 
-Parameters
-----------
-
-* **hook_post_draw**: `bool = False` - attach hook to Sketch's post_draw method instead of draw
-* **sketch**: `Sketch = None` - running Sketch
-
-
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

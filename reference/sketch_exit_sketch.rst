@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def draw():
         py5.line(py5.mouse_x, py5.mouse_y, 50, 50)
@@ -47,12 +46,12 @@ For Python programmers, this is *not* the same as ``sys.exit()``. Further, ``sys
 
 Underlying Processing method: `exit <https://processing.org/reference/exit_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     exit_sketch() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

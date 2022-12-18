@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.no_stroke()
@@ -49,7 +48,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.no_stroke()
@@ -85,18 +83,14 @@ Calculates the square root of a number. The square root of a positive number is 
 
 Python supports complex numbers, but such values cannot be passed to py5 drawing functions. When using the ``sqrt()`` function, you should check if the result is complex before using the value. You can also extract the real and imaginary components of the complex value with ``.real`` and ``.imag``. See the second example to learn how to do both of these things.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    sqrt(value: Union[float, npt.NDArray]) -> Union[float, complex, npt.NDArray]
+    sqrt(
+        value: Union[float, npt.NDArray]  # value to calculate the square root of
+    ) -> Union[float, complex, npt.NDArray]
 
-Parameters
-----------
-
-* **value**: `Union[float, npt.NDArray]` - value to calculate the square root of
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

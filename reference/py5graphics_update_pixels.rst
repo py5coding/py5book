@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         g = py5.create_graphics(60, 60)
@@ -58,22 +57,20 @@ This method is the same as :doc:`sketch_update_pixels` but linked to a ``Py5Grap
 
 Underlying Processing method: PGraphics.updatePixels
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     update_pixels() -> None
-    update_pixels(x: int, y: int, w: int, h: int, /) -> None
 
-Parameters
-----------
+    update_pixels(
+        x: int,  # x-coordinate of the upper left hand corner of rectangle to update
+        y: int,  # y-coordinate of the upper left hand corner of rectangle to update
+        w: int,  # width of pixel rectangle to update
+        h: int,  # height of pixel rectangle to update
+        /,
+    ) -> None
 
-* **h**: `int` - height of pixel rectangle to update
-* **w**: `int` - width of pixel rectangle to update
-* **x**: `int` - x-coordinate of the upper left hand corner of rectangle to update
-* **y**: `int` - y-coordinate of the upper left hand corner of rectangle to update
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.random_seed(42)
@@ -46,7 +45,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.random_seed(42)
@@ -78,21 +76,23 @@ If only one parameter is passed to the function, that parameter will be used as 
 
 This function makes calls to numpy to generate the random values.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     random_gaussian() -> float
-    random_gaussian(loc: float, /) -> float
-    random_gaussian(loc: float, scale: float, /) -> float
 
-Parameters
-----------
+    random_gaussian(
+        loc: float,  # average of randomly selected numbers
+        /,
+    ) -> float
 
-* **loc**: `float` - average of randomly selected numbers
-* **scale**: `float` - standard deviation of randomly selected numbers
+    random_gaussian(
+        loc: float,  # average of randomly selected numbers
+        scale: float,  # standard deviation of randomly selected numbers
+        /,
+    ) -> float
 
-
-Updated on November 08, 2021 12:26:18pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

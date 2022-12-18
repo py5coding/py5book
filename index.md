@@ -25,7 +25,7 @@ how to best get py5 to work with other popular Python libraries and tools such
 as [Jupyter](https://jupyter.org/), [numpy](https://numpy.org/), and
 [Pillow](https://python-pillow.org/).
 
-Here is the simplest possible example:
+Here is the simplest possible example of a py5 Sketch:
 
 ```{code-cell} ipython3
 def setup():
@@ -65,6 +65,14 @@ py5_tools.sketch_portal()
 The ability to embed a py5 Sketch in a html page like this is one of the many
 ways py5 leverages the power of Jupyter Notebooks and is well integrated into
 the Python ecosystem.
+
+Have a comment or question about py5? We'd love to hear from you! The best ways
+to reach out are:
+
+* github [discussions](https://github.com/py5coding/py5generator/discussions) and [issues](https://github.com/py5coding/py5generator/issues)
+* Mastodon <a rel="me" href="https://fosstodon.org/@py5coding">@py5coding@fosstodon.org</a>
+* twitter [@py5coding](https://twitter.com/py5coding)
+* [processing foundation discourse](https://discourse.processing.org/)
 
 The py5 library has many features but is alpha software. The library and this
 website are both a work in progress.

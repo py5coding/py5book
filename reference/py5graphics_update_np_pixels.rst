@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         g = py5.create_graphics(80, 80)
@@ -52,12 +51,12 @@ The ``update_np_pixels()`` method is similar to :doc:`py5graphics_update_pixels`
 
 This method is the same as :doc:`sketch_update_np_pixels` but linked to a ``Py5Graphics`` object.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     update_np_pixels() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

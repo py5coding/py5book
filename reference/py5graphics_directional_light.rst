@@ -12,23 +12,20 @@ This method is the same as :doc:`sketch_directional_light` but linked to a ``Py5
 
 Underlying Processing method: PGraphics.directionalLight
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    directional_light(v1: float, v2: float, v3: float, nx: float, ny: float, nz: float, /) -> None
+    directional_light(
+        v1: float,  # red or hue value (depending on current color mode)
+        v2: float,  # green or saturation value (depending on current color mode)
+        v3: float,  # blue or brightness value (depending on current color mode)
+        nx: float,  # direction along the x-axis
+        ny: float,  # direction along the y-axis
+        nz: float,  # direction along the z-axis
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **nx**: `float` - direction along the x-axis
-* **ny**: `float` - direction along the y-axis
-* **nz**: `float` - direction along the z-axis
-* **v1**: `float` - red or hue value (depending on current color mode)
-* **v2**: `float` - green or saturation value (depending on current color mode)
-* **v3**: `float` - blue or brightness value (depending on current color mode)
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

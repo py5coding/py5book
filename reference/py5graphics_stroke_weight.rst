@@ -14,18 +14,15 @@ This method is the same as :doc:`sketch_stroke_weight` but linked to a ``Py5Grap
 
 Underlying Processing method: PGraphics.strokeWeight
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    stroke_weight(weight: float, /) -> None
+    stroke_weight(
+        weight: float,  # the weight (in pixels) of the stroke
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **weight**: `float` - the weight (in pixels) of the stroke
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

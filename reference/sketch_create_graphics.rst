@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global pg
@@ -58,23 +57,31 @@ Unlike the main drawing surface which is completely opaque, surfaces created wit
 
 Underlying Processing method: `createGraphics <https://processing.org/reference/createGraphics_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    create_graphics(w: int, h: int, /) -> Py5Graphics
-    create_graphics(w: int, h: int, renderer: str, /) -> Py5Graphics
-    create_graphics(w: int, h: int, renderer: str, path: str, /) -> Py5Graphics
+    create_graphics(
+        w: int,  # width in pixels
+        h: int,  # height in pixels
+        /,
+    ) -> Py5Graphics
 
-Parameters
-----------
+    create_graphics(
+        w: int,  # width in pixels
+        h: int,  # height in pixels
+        renderer: str,  # Either P2D, P3D, or PDF
+        /,
+    ) -> Py5Graphics
 
-* **h**: `int` - height in pixels
-* **path**: `str` - the name of the file (can be an absolute or relative path)
-* **renderer**: `str` - Either P2D, P3D, or PDF
-* **w**: `int` - width in pixels
+    create_graphics(
+        w: int,  # width in pixels
+        h: int,  # height in pixels
+        renderer: str,  # Either P2D, P3D, or PDF
+        path: str,  # the name of the file (can be an absolute or relative path)
+        /,
+    ) -> Py5Graphics
 
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

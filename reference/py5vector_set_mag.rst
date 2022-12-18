@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     v1 = py5.Py5Vector(3, 4)
 
@@ -44,18 +43,14 @@ Description
 
 Set the vector's magnitude. Setting this to a non-negative number will adjust the vector's magnitude to that value. Negative values will result in an error.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    set_mag(mag: float) -> Py5Vector
+    set_mag(
+        mag: float,  # vector magnitude
+    ) -> Py5Vector
 
-Parameters
-----------
-
-* **mag**: `float` - vector magnitude
-
-
-Updated on January 16, 2022 16:51:21pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

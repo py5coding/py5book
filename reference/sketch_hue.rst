@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.no_stroke()
@@ -49,18 +48,15 @@ Extracts the hue value from a color.
 
 Underlying Processing method: `hue <https://processing.org/reference/hue_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    hue(rgb: int, /) -> float
+    hue(
+        rgb: int,  # any value of the color datatype
+        /,
+    ) -> float
 
-Parameters
-----------
-
-* **rgb**: `int` - any value of the color datatype
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -56,12 +55,12 @@ Replaces the current matrix with the identity matrix. The equivalent function in
 
 Underlying Processing method: `resetMatrix <https://processing.org/reference/resetMatrix_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     reset_matrix() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

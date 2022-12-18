@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     font_list = py5.Py5Font.list()
     print(font_list)
@@ -41,12 +40,12 @@ This works outside of a running Sketch.
 
 Underlying Processing method: `PFont.list <https://processing.org/reference/PFont_list_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     list() -> list[str]
 
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

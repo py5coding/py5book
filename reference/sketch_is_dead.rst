@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import time
 
@@ -56,6 +55,5 @@ Boolean value reflecting if the Sketch has been run and has now stopped. This wi
 
 After an error or a call to :doc:`py5surface_stop_thread`, the Sketch window will still be open. Call :doc:`sketch_exit_sketch` to close the window.
 
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

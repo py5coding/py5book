@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         us_map = py5.load_shape("us_map.svg")
@@ -41,12 +40,12 @@ Returns the number of children within the ``Py5Shape`` object.
 
 Underlying Processing method: `PShape.getChildCount <https://processing.org/reference/PShape_getChildCount_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     get_child_count() -> int
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

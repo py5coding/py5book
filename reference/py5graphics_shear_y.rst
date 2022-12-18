@@ -14,18 +14,15 @@ This method is the same as :doc:`sketch_shear_y` but linked to a ``Py5Graphics``
 
 Underlying Processing method: PGraphics.shearY
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    shear_y(angle: float, /) -> None
+    shear_y(
+        angle: float,  # angle of shear specified in radians
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **angle**: `float` - angle of shear specified in radians
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

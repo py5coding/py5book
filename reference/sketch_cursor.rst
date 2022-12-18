@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # move the mouse left and right across the image
     # to see the cursor change from_ a cross to a hand
@@ -49,24 +48,29 @@ With the ``P2D`` and ``P3D`` renderers, a generic set of cursors are used becaus
 
 Underlying Processing method: `cursor <https://processing.org/reference/cursor_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     cursor() -> None
-    cursor(img: Py5Image, /) -> None
-    cursor(img: Py5Image, x: int, y: int, /) -> None
-    cursor(kind: int, /) -> None
 
-Parameters
-----------
+    cursor(
+        img: Py5Image,  # any variable of type Py5Image
+        /,
+    ) -> None
 
-* **img**: `Py5Image` - any variable of type Py5Image
-* **kind**: `int` - either ARROW, CROSS, HAND, MOVE, TEXT, or WAIT
-* **x**: `int` - the horizontal active spot of the cursor
-* **y**: `int` - the vertical active spot of the cursor
+    cursor(
+        img: Py5Image,  # any variable of type Py5Image
+        x: int,  # the horizontal active spot of the cursor
+        y: int,  # the vertical active spot of the cursor
+        /,
+    ) -> None
 
+    cursor(
+        kind: int,  # either ARROW, CROSS, HAND, MOVE, TEXT, or WAIT
+        /,
+    ) -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

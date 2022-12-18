@@ -12,24 +12,27 @@ This method is the same as :doc:`sketch_emissive` but linked to a ``Py5Graphics`
 
 Underlying Processing method: PGraphics.emissive
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    emissive(gray: float, /) -> None
-    emissive(rgb: int, /) -> None
-    emissive(v1: float, v2: float, v3: float, /) -> None
+    emissive(
+        gray: float,  # value between black and white, by default 0 to 255
+        /,
+    ) -> None
 
-Parameters
-----------
+    emissive(
+        rgb: int,  # color to set
+        /,
+    ) -> None
 
-* **gray**: `float` - value between black and white, by default 0 to 255
-* **rgb**: `int` - color to set
-* **v1**: `float` - red or hue value (depending on current color mode)
-* **v2**: `float` - green or saturation value (depending on current color mode)
-* **v3**: `float` - blue or brightness value (depending on current color mode)
+    emissive(
+        v1: float,  # red or hue value (depending on current color mode)
+        v2: float,  # green or saturation value (depending on current color mode)
+        v3: float,  # blue or brightness value (depending on current color mode)
+        /,
+    ) -> None
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

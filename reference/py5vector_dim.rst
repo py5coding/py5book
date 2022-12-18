@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     v_2d = py5.Py5Vector(1, 2)
     v_3d = py5.Py5Vector(1, 2, 3)
@@ -45,6 +44,5 @@ Description
 
 The vector's dimension. This will be either 2, 3, or 4.
 
-
-Updated on January 16, 2022 16:51:21pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

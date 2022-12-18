@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P2D)
@@ -62,12 +61,12 @@ This method is the same as :doc:`sketch_begin_camera` but linked to a ``Py5Graph
 
 Underlying Processing method: PGraphics.beginCamera
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     begin_camera() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

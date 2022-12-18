@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.translate(50, 50)
@@ -48,7 +47,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.translate(25, 50)
@@ -83,19 +81,17 @@ This method is used to start a custom closed shape. This method should only be u
 
 Underlying Processing method: `beginShape <https://processing.org/reference/beginShape_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     begin_closed_shape() -> None
-    begin_closed_shape(kind: int, /) -> None
 
-Parameters
-----------
+    begin_closed_shape(
+        kind: int,  # Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
+        /,
+    ) -> None
 
-* **kind**: `int` - Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

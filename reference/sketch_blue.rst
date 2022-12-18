@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         c = "#AF64DC"  # define color 'c'
@@ -51,18 +50,15 @@ The ``blue()`` function is easy to use and understand, but it is slower than a t
 
 Underlying Processing method: `blue <https://processing.org/reference/blue_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    blue(rgb: int, /) -> float
+    blue(
+        rgb: int,  # any value of the color datatype
+        /,
+    ) -> float
 
-Parameters
-----------
-
-* **rgb**: `int` - any value of the color datatype
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

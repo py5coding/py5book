@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def draw():
         py5.background(204)
@@ -39,20 +38,16 @@ Description
 
 Constrains a value to not exceed a maximum and minimum value.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    constrain(amt: Union[float, npt.NDArray], low: Union[float, npt.NDArray], high: Union[float, npt.NDArray]) -> Union[float, npt.NDArray]
+    constrain(
+        amt: Union[float, npt.NDArray],  # the value to constrain
+        low: Union[float, npt.NDArray],  # maximum limit
+        high: Union[float, npt.NDArray],  # minimum limit
+    ) -> Union[float, npt.NDArray]
 
-Parameters
-----------
-
-* **amt**: `Union[float, npt.NDArray]` - the value to constrain
-* **high**: `Union[float, npt.NDArray]` - minimum limit
-* **low**: `Union[float, npt.NDArray]` - maximum limit
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

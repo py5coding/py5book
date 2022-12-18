@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global blur
@@ -54,20 +53,21 @@ If the file is not available or an error occurs, ``None`` will be returned and a
 
 Underlying Processing method: `loadShader <https://processing.org/reference/loadShader_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    load_shader(frag_filename: str, /) -> Py5Shader
-    load_shader(frag_filename: str, vert_filename: str, /) -> Py5Shader
+    load_shader(
+        frag_filename: str,  # name of fragment shader file
+        /,
+    ) -> Py5Shader
 
-Parameters
-----------
+    load_shader(
+        frag_filename: str,  # name of fragment shader file
+        vert_filename: str,  # name of vertex shader file
+        /,
+    ) -> Py5Shader
 
-* **frag_filename**: `str` - name of fragment shader file
-* **vert_filename**: `str` - name of vertex shader file
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

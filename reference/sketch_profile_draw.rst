@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import time
 
@@ -57,12 +56,12 @@ This method can be called before or after :doc:`sketch_run_sketch`. You are welc
 
 To profile a other functions besides draw, use :doc:`sketch_profile_functions`. To see the results, use :doc:`sketch_print_line_profiler_stats`.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     profile_draw() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

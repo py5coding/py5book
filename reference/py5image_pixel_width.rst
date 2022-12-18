@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.pixel_density(2)
@@ -41,6 +40,5 @@ Width of the Py5Image object in pixels. This will be the same as :doc:`py5image_
 
 Underlying Processing field: PImage.pixelWidth
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

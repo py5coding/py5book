@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.text_size(28)
@@ -52,24 +51,27 @@ Calculates and returns the width of any character or text string.
 
 Underlying Processing method: `textWidth <https://processing.org/reference/textWidth_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    text_width(c: chr, /) -> float
-    text_width(chars: list[chr], start: int, length: int, /) -> float
-    text_width(str: str, /) -> float
+    text_width(
+        c: chr,  # the character to measure
+        /,
+    ) -> float
 
-Parameters
-----------
+    text_width(
+        chars: list[chr],  # the character to measure
+        start: int,  # first character to measure
+        length: int,  # number of characters to measure
+        /,
+    ) -> float
 
-* **c**: `chr` - the character to measure
-* **chars**: `list[chr]` - the character to measure
-* **length**: `int` - number of characters to measure
-* **start**: `int` - first character to measure
-* **str**: `str` - the String of characters to measure
+    text_width(
+        str: str,  # the String of characters to measure
+        /,
+    ) -> float
 
-
-Updated on March 01, 2022 12:15:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -12,18 +12,15 @@ This method is the same as :doc:`sketch_bezier_detail` but linked to a ``Py5Grap
 
 Underlying Processing method: PGraphics.bezierDetail
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    bezier_detail(detail: int, /) -> None
+    bezier_detail(
+        detail: int,  # resolution of the curves
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **detail**: `int` - resolution of the curves
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

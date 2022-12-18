@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import numpy as np
 
@@ -46,7 +45,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import numpy as np
 
@@ -79,7 +77,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.os_noise_seed(42)
@@ -103,7 +100,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global xpos, ypos
@@ -145,23 +141,31 @@ Py5's ``os_noise()`` method can also accept numpy arrays as parameters. It will 
 
 Noise generation is a rich and complex topic, and there are many noise algorithms and libraries available that are worth learning about. Early versions of py5 used the Python "noise" library, which can generate noise using the "Improved Perlin Noise" algorithm (as described in Ken Perlin's 2002 SIGGRAPH paper) and the Simplex Noise algorithm (also developed by Ken Perlin). That Python library was removed from py5 because it has some bugs and hasn't had a release in years. Nevertheless, it might be useful to you, and can be installed separately like any other Python package. You can also try the Python library "vnoise", which is a pure Python implementation of the Improved Perlin Noise algorithm. Note that py5 can also employ Java libraries, so consider "FastNoise Lite" to experiment with a large selection of noise algorithms with efficient implementations.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    os_noise(x: Union[float, npt.NDArray], y: Union[float, npt.NDArray], /) -> Union[float, npt.NDArray]
-    os_noise(x: Union[float, npt.NDArray], y: Union[float, npt.NDArray], z: Union[float, npt.NDArray], /) -> Union[float, npt.NDArray]
-    os_noise(x: Union[float, npt.NDArray], y: Union[float, npt.NDArray], z: Union[float, npt.NDArray], w: Union[float, npt.NDArray], /) -> Union[float, npt.NDArray]
+    os_noise(
+        x: Union[float, npt.NDArray],  # x-coordinate in noise space
+        y: Union[float, npt.NDArray],  # y-coordinate in noise space
+        /,
+    ) -> Union[float, npt.NDArray]
 
-Parameters
-----------
+    os_noise(
+        x: Union[float, npt.NDArray],  # x-coordinate in noise space
+        y: Union[float, npt.NDArray],  # y-coordinate in noise space
+        z: Union[float, npt.NDArray],  # z-coordinate in noise space
+        /,
+    ) -> Union[float, npt.NDArray]
 
-* **w**: `Union[float, npt.NDArray]` - w-coordinate in noise space
-* **x**: `Union[float, npt.NDArray]` - x-coordinate in noise space
-* **y**: `Union[float, npt.NDArray]` - y-coordinate in noise space
-* **z**: `Union[float, npt.NDArray]` - z-coordinate in noise space
+    os_noise(
+        x: Union[float, npt.NDArray],  # x-coordinate in noise space
+        y: Union[float, npt.NDArray],  # y-coordinate in noise space
+        z: Union[float, npt.NDArray],  # z-coordinate in noise space
+        w: Union[float, npt.NDArray],  # w-coordinate in noise space
+        /,
+    ) -> Union[float, npt.NDArray]
 
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     @py5.render(400, 200)
     def draw_message(s: py5.Sketch):
@@ -44,7 +43,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     @py5.render(400, 200, py5.P2D)
     def draw_message(s: py5.Sketch, message='hello world', color=(255, 0, 0)):
@@ -69,7 +67,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     @py5.render(100, 100, use_py5graphics=True)
     def random_squares(g: py5.Py5Graphics):
@@ -101,21 +98,17 @@ This function facilitates the creation and execution of a py5 Sketch, and as a r
 
 This function is available in non-decorator form as :doc:`py5functions_render_frame`.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    render(width: int, height: int, renderer: str = Sketch.HIDDEN, use_py5graphics: bool = False) -> Image
+    render(
+        width: int,  # width of the display window in units of pixels
+        height: int,  # height of the display window in units of pixels
+        renderer: str = Sketch.HIDDEN,  # rendering engine to use
+        use_py5graphics: bool = False,  # pass a py5graphics object instead of a sketch object
+    ) -> Image
 
-Parameters
-----------
-
-* **height**: `int` - height of the display window in units of pixels
-* **renderer**: `str = Sketch.HIDDEN` - rendering engine to use
-* **use_py5graphics**: `bool = False` - pass a py5graphics object instead of a sketch object
-* **width**: `int` - width of the display window in units of pixels
-
-
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

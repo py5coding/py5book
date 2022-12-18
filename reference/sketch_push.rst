@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.fill(255)
@@ -53,16 +52,15 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.ellipse(0, 50, 33, 33)  # left circle
     
-        py5.push()
-        py5.stroke_weight(10)
-        py5.fill(204, 153, 0)
-        py5.ellipse(50, 50, 33, 33)  # middle circle
-        py5.pop()  # restore original settings
+        with py5.push():
+            py5.translate(50, 0)
+            py5.stroke_weight(10)
+            py5.fill(204, 153, 0)
+            py5.ellipse(0, 50, 33, 33)  # middle circle
     
         py5.ellipse(100, 50, 33, 33)  # right circle
 
@@ -83,14 +81,16 @@ The ``push()`` function saves the current drawing style settings and transformat
 
 The ``push()`` and :doc:`sketch_pop` functions can be used in place of :doc:`sketch_push_matrix`, :doc:`sketch_pop_matrix`, :doc:`sketch_push_style`, and :doc:`sketch_pop_style`. The difference is that ``push()`` and :doc:`sketch_pop` control both the transformations (rotate, scale, translate) and the drawing styles at the same time.
 
+This method can be used as a context manager to ensure that :doc:`sketch_pop` always gets called, as shown in the last example.
+
 Underlying Processing method: `push <https://processing.org/reference/push_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     push() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

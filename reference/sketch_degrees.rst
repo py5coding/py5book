@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         rad = py5.PI/4
@@ -42,18 +41,14 @@ Converts a radian measurement to its corresponding value in degrees. Radians and
 
 This function makes a call to the numpy ``degrees()`` function.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    degrees(radians: Union[float, npt.ArrayLike]) -> Union[float, npt.NDArray]
+    degrees(
+        radians: Union[float, npt.ArrayLike]  # radian value to convert to degrees
+    ) -> Union[float, npt.NDArray]
 
-Parameters
-----------
-
-* **radians**: `Union[float, npt.ArrayLike]` - radian value to convert to degrees
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

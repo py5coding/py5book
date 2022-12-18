@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.background(0)
@@ -47,18 +46,15 @@ Sets the current font size. This size will be used in all subsequent calls to th
 
 Underlying Processing method: `textSize <https://processing.org/reference/textSize_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    text_size(size: float, /) -> None
+    text_size(
+        size: float,  # the size of the letters in units of pixels
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **size**: `float` - the size of the letters in units of pixels
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

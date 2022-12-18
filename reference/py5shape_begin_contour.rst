@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P2D)
@@ -59,7 +58,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P2D)
@@ -98,12 +96,12 @@ This method can be used as a context manager to ensure that :doc:`py5shape_end_c
 
 Underlying Processing method: `PShape.beginContour <https://processing.org/reference/PShape_beginContour_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     begin_contour() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

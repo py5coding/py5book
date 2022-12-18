@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         s1 = py5.create_shape()
@@ -51,7 +50,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -76,12 +74,12 @@ Get the ``Py5Shape`` object's height. When using the ``P2D`` or ``P3D`` renderer
 
 Underlying Processing method: PShape.getHeight
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     get_height() -> float
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

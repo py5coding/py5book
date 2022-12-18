@@ -15,6 +15,9 @@ OSX experiences.
 -   The render helper tools cannot use the OpenGL renderers
 -   When using Jupyter notebooks, Sketches that use the default renderer will not
     appear as an icon on the dock at the bottom of the screen
+-   When using Jupyter notebooks, the select methods
+    [](/reference/sketch_select_folder), [](/reference/sketch_select_input), and
+    [](/reference/sketch_select_output) will not work.
 -   Ignore the warnings you see when exiting a Sketch ([Issue
     #6](https://github.com/py5coding/py5generator/issues/6))
 ```
@@ -129,6 +132,13 @@ shutting down.
 
 If you need to simultaneously run multiple Sketches in the same process on OSX,
 running them through a Jupyter notebook (using class-mode) is your only option.
+
+### Select Methods
+
+When run through Jupyter, the select methods 
+[](/reference/sketch_select_folder), [](/reference/sketch_select_input), and
+[](/reference/sketch_select_output) will not work. Consider using IPython
+widgets instead.
 
 ### Dock Icon
 

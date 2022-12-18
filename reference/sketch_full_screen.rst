@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # run the code at the full dimensions of the screen currently
     # selected inside the preferences window
@@ -52,7 +51,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # if more than one screen is attached to the computer, run the
     # code at the full dimensions on the screen defined by the
@@ -86,7 +84,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # run full screen using the P2D renderer on screen 2
 
@@ -118,7 +115,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # if more than one screen is attached to the computer, run the
     # code at the full dimensions across all of the attached screens
@@ -157,22 +153,28 @@ When ``full_screen()`` is used without a parameter on a computer with multiple m
 
 Underlying Processing method: `fullScreen <https://processing.org/reference/fullScreen_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     full_screen() -> None
-    full_screen(display: int, /) -> None
-    full_screen(renderer: str, /) -> None
-    full_screen(renderer: str, display: int, /) -> None
 
-Parameters
-----------
+    full_screen(
+        display: int,  # the screen to run the Sketch on (1, 2, 3, etc. or on multiple screens using SPAN)
+        /,
+    ) -> None
 
-* **display**: `int` - the screen to run the Sketch on (1, 2, 3, etc. or on multiple screens using SPAN)
-* **renderer**: `str` - the renderer to use, e.g. P2D, P3D, JAVA2D (default)
+    full_screen(
+        renderer: str,  # the renderer to use, e.g. P2D, P3D, JAVA2D (default)
+        /,
+    ) -> None
 
+    full_screen(
+        renderer: str,  # the renderer to use, e.g. P2D, P3D, JAVA2D (default)
+        display: int,  # the screen to run the Sketch on (1, 2, 3, etc. or on multiple screens using SPAN)
+        /,
+    ) -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

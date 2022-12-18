@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
       i = 12
@@ -49,18 +48,14 @@ Calculates the natural logarithm (the base-e logarithm) of a number. This functi
 
 This function makes a call to the numpy ``log()`` function. If the ``n`` parameter is less than or equal to 0.0, you will see a ``RuntimeWarning`` and the returned result will be numpy's Not-a-Number value, ``np.nan``.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    log(value: Union[float, npt.ArrayLike]) -> Union[float, npt.NDArray]
+    log(
+        value: Union[float, npt.ArrayLike]  # number greater than 0.0
+    ) -> Union[float, npt.NDArray]
 
-Parameters
-----------
-
-* **value**: `Union[float, npt.ArrayLike]` - number greater than 0.0
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

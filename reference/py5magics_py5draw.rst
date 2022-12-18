@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     %%py5draw 100 100
     py5.background(128)
@@ -77,5 +76,5 @@ Arguments
                             processing renderer to use for Sketch
       --unsafe              allow new variables to enter the user namespace
 
-Updated on October 29, 2021 22:01:43pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

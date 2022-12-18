@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         # text to display. the "\n" is a "new line" character
@@ -54,18 +53,15 @@ Sets the spacing between lines of text in units of pixels. This setting will be 
 
 Underlying Processing method: `textLeading <https://processing.org/reference/textLeading_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    text_leading(leading: float, /) -> None
+    text_leading(
+        leading: float,  # the size in pixels for spacing between lines
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **leading**: `float` - the size in pixels for spacing between lines
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

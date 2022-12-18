@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.random_seed(42)
@@ -42,7 +41,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.random_seed(0)
@@ -64,18 +62,14 @@ Description
 
 Sets the seed value for py5's random functions. This includes :doc:`sketch_random`, :doc:`sketch_random_int`, :doc:`sketch_random_choice`, and :doc:`sketch_random_gaussian`. By default, all of these functions would produce different results each time a program is run. Set the seed parameter to a constant value to return the same pseudo-random numbers each time the software is run.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    random_seed(seed: int) -> None
+    random_seed(
+        seed: int,  # seed value
+    ) -> None
 
-Parameters
-----------
-
-* **seed**: `int` - seed value
-
-
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.begin_shape()
@@ -48,7 +47,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.begin_shape(py5.POINTS)
@@ -74,7 +72,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.begin_shape(py5.LINES)
@@ -100,7 +97,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.no_fill()
@@ -127,7 +123,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.no_fill()
@@ -154,7 +149,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.begin_shape(py5.TRIANGLES)
@@ -182,7 +176,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.begin_shape(py5.TRIANGLE_STRIP)
@@ -211,7 +204,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.begin_shape(py5.TRIANGLE_FAN)
@@ -239,7 +231,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.begin_shape(py5.QUADS)
@@ -269,7 +260,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.begin_shape(py5.QUAD_STRIP)
@@ -299,7 +289,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.begin_shape()
@@ -327,7 +316,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.translate(25, 50)
@@ -368,19 +356,17 @@ This method can be used as a context manager to ensure that :doc:`sketch_end_sha
 
 Underlying Processing method: `beginShape <https://processing.org/reference/beginShape_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     begin_shape() -> None
-    begin_shape(kind: int, /) -> None
 
-Parameters
-----------
+    begin_shape(
+        kind: int,  # Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
+        /,
+    ) -> None
 
-* **kind**: `int` - Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

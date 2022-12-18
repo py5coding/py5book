@@ -12,12 +12,12 @@ This method is the same as :doc:`sketch_no_clip` but linked to a ``Py5Graphics``
 
 Underlying Processing method: PGraphics.noClip
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     no_clip() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 14:08:27pm UTC
 

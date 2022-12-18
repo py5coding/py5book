@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.translate(py5.width / 2, py5.height / 2)
@@ -51,7 +50,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -83,20 +81,19 @@ A 2D vector will be rotated in the counter-clockwise direction for positive ``an
 
 A 3D vector's rotation will follow the right-hand rule. Using your right hand, point your thumb in the direction of the axis to rotate around. Your fingers will curl in the direction of rotation when the ``angle`` parameter is positive.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    rotate(angle: float) -> Py5Vector2D
-    rotate(angle: float, dim: Union[int, str]) -> Py5Vector3D
+    rotate(
+        angle: float,  # angle of rotation, measured in radians
+    ) -> Py5Vector2D
 
-Parameters
-----------
+    rotate(
+        angle: float,  # angle of rotation, measured in radians
+        dim: Union[int, str],  # dimension to rotate around
+    ) -> Py5Vector3D
 
-* **angle**: `float` - angle of rotation, measured in radians
-* **dim**: `Union[int, str]` - dimension to rotate around
-
-
-Updated on January 16, 2022 16:51:21pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

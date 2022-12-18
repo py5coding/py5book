@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import time
 
@@ -55,12 +54,12 @@ Print the line profiler stats initiated with :doc:`sketch_profile_draw` or :doc:
 
 This method can be called multiple times on a running Sketch.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     print_line_profiler_stats() -> None
 
-Updated on September 11, 2021 16:51:34pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         half_image = py5.width*py5.height//2
@@ -50,12 +49,12 @@ Loads the pixel data of the current display window into the :doc:`sketch_pixels`
 
 Underlying Processing method: `loadPixels <https://processing.org/reference/loadPixels_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     load_pixels() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

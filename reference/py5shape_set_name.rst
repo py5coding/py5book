@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         s = py5.create_shape(py5.GROUP)
@@ -55,18 +54,15 @@ Assign a name to a ``Py5Shape`` object. This can be used to later find the shape
 
 Underlying Processing method: PShape.setName
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    set_name(name: str, /) -> None
+    set_name(
+        name: str,  # name to be assigned to shape
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **name**: `str` - name to be assigned to shape
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

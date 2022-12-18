@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     # family will be one of these values
     SHAPE_FAMILY_VALS = {py5.Py5Shape.GROUP: 'GROUP',
@@ -55,12 +54,12 @@ Get the Py5Shape object's "family" number.
 
 Underlying Processing method: PShape.getFamily
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     get_family() -> int
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

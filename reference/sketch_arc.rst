@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.arc(50, 55, 50, 50, 0, py5.HALF_PI)
@@ -47,7 +46,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.arc(50, 50, 80, 80, 0, py5.PI+py5.QUARTER_PI, py5.OPEN)
@@ -68,7 +66,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.arc(50, 50, 80, 80, 0, py5.PI+py5.QUARTER_PI, py5.CHORD)
@@ -89,7 +86,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.arc(50, 50, 80, 80, 0, py5.PI+py5.QUARTER_PI, py5.PIE)
@@ -113,25 +109,31 @@ In some cases, the ``arc()`` function isn't accurate enough for smooth drawing. 
 
 Underlying Processing method: `arc <https://processing.org/reference/arc_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    arc(a: float, b: float, c: float, d: float, start: float, stop: float, /) -> None
-    arc(a: float, b: float, c: float, d: float, start: float, stop: float, mode: int, /) -> None
+    arc(
+        a: float,  # x-coordinate of the arc's ellipse
+        b: float,  # y-coordinate of the arc's ellipse
+        c: float,  # width of the arc's ellipse by default
+        d: float,  # height of the arc's ellipse by default
+        start: float,  # angle to start the arc, specified in radians
+        stop: float,  # angle to stop the arc, specified in radians
+        /,
+    ) -> None
 
-Parameters
-----------
+    arc(
+        a: float,  # x-coordinate of the arc's ellipse
+        b: float,  # y-coordinate of the arc's ellipse
+        c: float,  # width of the arc's ellipse by default
+        d: float,  # height of the arc's ellipse by default
+        start: float,  # angle to start the arc, specified in radians
+        stop: float,  # angle to stop the arc, specified in radians
+        mode: int,  # arc drawing mode
+        /,
+    ) -> None
 
-* **a**: `float` - x-coordinate of the arc's ellipse
-* **b**: `float` - y-coordinate of the arc's ellipse
-* **c**: `float` - width of the arc's ellipse by default
-* **d**: `float` - height of the arc's ellipse by default
-* **mode**: `int` - arc drawing mode
-* **start**: `float` - angle to start the arc, specified in radians
-* **stop**: `float` - angle to stop the arc, specified in radians
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

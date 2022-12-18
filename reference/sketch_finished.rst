@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import time
 
@@ -49,6 +48,5 @@ Boolean variable reflecting if the Sketch has stopped permanently.
 
 Underlying Processing field: finished
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

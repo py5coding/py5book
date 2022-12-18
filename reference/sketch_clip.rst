@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(200, 200)
@@ -51,21 +50,18 @@ Limits the rendering to the boundaries of a rectangle defined by the parameters.
 
 Underlying Processing method: `clip <https://processing.org/reference/clip_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    clip(a: float, b: float, c: float, d: float, /) -> None
+    clip(
+        a: float,  # x-coordinate of the rectangle, by default
+        b: float,  # y-coordinate of the rectangle, by default
+        c: float,  # width of the rectangle, by default
+        d: float,  # height of the rectangle, by default
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **a**: `float` - x-coordinate of the rectangle, by default
-* **b**: `float` - y-coordinate of the rectangle, by default
-* **c**: `float` - width of the rectangle, by default
-* **d**: `float` - height of the rectangle, by default
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         deg = 45
@@ -42,18 +41,14 @@ Converts a degree measurement to its corresponding value in radians. Radians and
 
 This function makes a call to the numpy ``radians()`` function.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    radians(degrees: Union[float, npt.ArrayLike]) -> Union[float, npt.NDArray]
+    radians(
+        degrees: Union[float, npt.ArrayLike]  # degree value to convert to radians
+    ) -> Union[float, npt.NDArray]
 
-Parameters
-----------
-
-* **degrees**: `Union[float, npt.ArrayLike]` - degree value to convert to radians
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global c
@@ -49,22 +48,26 @@ The ``set_fill()`` method defines the fill color of a ``Py5Shape``. This method 
 
 Underlying Processing method: `PShape.setFill <https://processing.org/reference/PShape_setFill_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    set_fill(fill: bool, /) -> None
-    set_fill(fill: int, /) -> None
-    set_fill(index: int, fill: int, /) -> None
+    set_fill(
+        fill: bool,  # allow fill
+        /,
+    ) -> None
 
-Parameters
-----------
+    set_fill(
+        fill: int,  # any color value
+        /,
+    ) -> None
 
-* **fill**: `bool` - allow fill
-* **fill**: `int` - any color value
-* **index**: `int` - vertex index
+    set_fill(
+        index: int,  # vertex index
+        fill: int,  # any color value
+        /,
+    ) -> None
 
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

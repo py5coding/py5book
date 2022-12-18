@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.stroke(255)
@@ -57,22 +56,25 @@ An amount below 0 will be treated as 0. Likewise, amounts above 1 will be capped
 
 Underlying Processing method: `lerpColor <https://processing.org/reference/lerpColor_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    lerp_color(c1: int, c2: int, amt: float, /) -> int
-    lerp_color(c1: int, c2: int, amt: float, mode: int, /) -> int
+    lerp_color(
+        c1: int,  # interpolate from this color
+        c2: int,  # interpolate to this color
+        amt: float,  # between 0.0 and 1.0
+        /,
+    ) -> int
 
-Parameters
-----------
+    lerp_color(
+        c1: int,  # interpolate from this color
+        c2: int,  # interpolate to this color
+        amt: float,  # between 0.0 and 1.0
+        mode: int,  # either RGB or HSB
+        /,
+    ) -> int
 
-* **amt**: `float` - between 0.0 and 1.0
-* **c1**: `int` - interpolate from this color
-* **c2**: `int` - interpolate to this color
-* **mode**: `int` - either RGB or HSB
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

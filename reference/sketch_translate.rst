@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.translate(30, 20)
@@ -44,7 +43,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -71,7 +69,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.rect(0, 0, 55, 55)  # draw rect at original 0,0
@@ -97,21 +94,23 @@ Transformations are cumulative and apply to everything that happens after and su
 
 Underlying Processing method: `translate <https://processing.org/reference/translate_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    translate(x: float, y: float, /) -> None
-    translate(x: float, y: float, z: float, /) -> None
+    translate(
+        x: float,  # left/right translation
+        y: float,  # up/down translation
+        /,
+    ) -> None
 
-Parameters
-----------
+    translate(
+        x: float,  # left/right translation
+        y: float,  # up/down translation
+        z: float,  # forward/backward translation
+        /,
+    ) -> None
 
-* **x**: `float` - left/right translation
-* **y**: `float` - up/down translation
-* **z**: `float` - forward/backward translation
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

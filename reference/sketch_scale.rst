@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.rect(30, 20, 50, 50)
@@ -45,7 +44,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.rect(30, 20, 50, 50)
@@ -68,7 +66,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(100, 100, py5.P3D)
@@ -97,23 +94,28 @@ Transformations apply to everything that happens after and subsequent calls to t
 
 Underlying Processing method: `scale <https://processing.org/reference/scale_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    scale(s: float, /) -> None
-    scale(x: float, y: float, /) -> None
-    scale(x: float, y: float, z: float, /) -> None
+    scale(
+        s: float,  # percentage to scale the object
+        /,
+    ) -> None
 
-Parameters
-----------
+    scale(
+        x: float,  # percentage to scale the object in the x-axis
+        y: float,  # percentage to scale the object in the y-axis
+        /,
+    ) -> None
 
-* **s**: `float` - percentage to scale the object
-* **x**: `float` - percentage to scale the object in the x-axis
-* **y**: `float` - percentage to scale the object in the y-axis
-* **z**: `float` - percentage to scale the object in the z-axis
+    scale(
+        x: float,  # percentage to scale the object in the x-axis
+        y: float,  # percentage to scale the object in the y-axis
+        z: float,  # percentage to scale the object in the z-axis
+        /,
+    ) -> None
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

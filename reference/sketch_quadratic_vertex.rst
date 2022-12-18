@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.no_fill()
@@ -48,7 +47,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.no_fill()
@@ -75,24 +73,28 @@ Specifies vertex coordinates for quadratic Bezier curves. Each call to ``quadrat
 
 Underlying Processing method: `quadraticVertex <https://processing.org/reference/quadraticVertex_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    quadratic_vertex(cx: float, cy: float, cz: float, x3: float, y3: float, z3: float, /) -> None
-    quadratic_vertex(cx: float, cy: float, x3: float, y3: float, /) -> None
+    quadratic_vertex(
+        cx: float,  # the x-coordinate of the control point
+        cy: float,  # the y-coordinate of the control point
+        cz: float,  # the z-coordinate of the control point
+        x3: float,  # the x-coordinate of the anchor point
+        y3: float,  # the y-coordinate of the anchor point
+        z3: float,  # the z-coordinate of the anchor point
+        /,
+    ) -> None
 
-Parameters
-----------
+    quadratic_vertex(
+        cx: float,  # the x-coordinate of the control point
+        cy: float,  # the y-coordinate of the control point
+        x3: float,  # the x-coordinate of the anchor point
+        y3: float,  # the y-coordinate of the anchor point
+        /,
+    ) -> None
 
-* **cx**: `float` - the x-coordinate of the control point
-* **cy**: `float` - the y-coordinate of the control point
-* **cz**: `float` - the z-coordinate of the control point
-* **x3**: `float` - the x-coordinate of the anchor point
-* **y3**: `float` - the y-coordinate of the anchor point
-* **z3**: `float` - the z-coordinate of the anchor point
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

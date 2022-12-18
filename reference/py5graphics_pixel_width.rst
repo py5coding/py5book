@@ -12,6 +12,5 @@ This field is the same as :doc:`sketch_pixel_width` but linked to a ``Py5Graphic
 
 Underlying Processing field: PGraphics.pixelWidth
 
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on August 25, 2022 20:01:47pm UTC
 

@@ -10,7 +10,7 @@ Sets the color used to fill shapes. For example, if you run ``fill(204, 102, 0)`
 
 When using hexadecimal notation to specify a color, use "``0x``" before the values (e.g., ``0xFFCCFFAA``). The hexadecimal value must be specified with eight characters; the first two characters define the alpha component, and the remainder define the red, green, and blue components.
 
-When using web color notation to specify a color, create a four or seven character string beginning with the "``#``" character (e.g., ``"#FC3"`` or ``"#FFCC33"``). After the "``#``" character, the remainder of the string is similar to hexadecimal notation, but without an alpha component.
+When using web color notation to specify a color, create a string beginning with the "``#``" character followed by three, four, six, or eight characters. The example colors ``"#D93"`` and ``"#DD9933"`` specify red, green, and blue values (in that order) for the color and assume the color has no transparency. The example colors ``"#D93F"`` and ``"#DD9933FF"`` specify red, green, blue, and alpha values (in that order) for the color. Notice that in web color notation the alpha channel is last, which is consistent with CSS colors, and in hexadecimal notation the alpha channel is first, which is consistent with Processing color values.
 
 The value for the "gray" parameter must be less than or equal to the current maximum value as specified by :doc:`py5graphics_color_mode`. The default maximum value is 255.
 
@@ -20,28 +20,47 @@ This method is the same as :doc:`sketch_fill` but linked to a ``Py5Graphics`` ob
 
 Underlying Processing method: PGraphics.fill
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    fill(gray: float, /) -> None
-    fill(gray: float, alpha: float, /) -> None
-    fill(rgb: int, /) -> None
-    fill(rgb: int, alpha: float, /) -> None
-    fill(v1: float, v2: float, v3: float, /) -> None
-    fill(v1: float, v2: float, v3: float, alpha: float, /) -> None
+    fill(
+        gray: float,  # number specifying value between white and black
+        /,
+    ) -> None
 
-Parameters
-----------
+    fill(
+        gray: float,  # number specifying value between white and black
+        alpha: float,  # opacity of the fill
+        /,
+    ) -> None
 
-* **alpha**: `float` - opacity of the fill
-* **gray**: `float` - number specifying value between white and black
-* **rgb**: `int` - color variable or hex value
-* **v1**: `float` - red or hue value (depending on current color mode)
-* **v2**: `float` - green or saturation value (depending on current color mode)
-* **v3**: `float` - blue or brightness value (depending on current color mode)
+    fill(
+        rgb: int,  # color variable or hex value
+        /,
+    ) -> None
 
+    fill(
+        rgb: int,  # color variable or hex value
+        alpha: float,  # opacity of the fill
+        /,
+    ) -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+    fill(
+        v1: float,  # red or hue value (depending on current color mode)
+        v2: float,  # green or saturation value (depending on current color mode)
+        v3: float,  # blue or brightness value (depending on current color mode)
+        /,
+    ) -> None
+
+    fill(
+        v1: float,  # red or hue value (depending on current color mode)
+        v2: float,  # green or saturation value (depending on current color mode)
+        v3: float,  # blue or brightness value (depending on current color mode)
+        alpha: float,  # opacity of the fill
+        /,
+    ) -> None
+
+Updated on September 01, 2022 14:08:27pm UTC
 

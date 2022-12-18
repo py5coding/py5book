@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global my_image
@@ -54,22 +53,20 @@ Updates the image with the data in its :doc:`py5image_pixels` array. Use in conj
 
 Underlying Processing method: `PImage.updatePixels <https://processing.org/reference/PImage_updatePixels_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     update_pixels() -> None
-    update_pixels(x: int, y: int, w: int, h: int, /) -> None
 
-Parameters
-----------
+    update_pixels(
+        x: int,  # x-coordinate of the upper-left corner
+        y: int,  # y-coordinate of the upper-left corner
+        w: int,  # width
+        h: int,  # height
+        /,
+    ) -> None
 
-* **h**: `int` - height
-* **w**: `int` - width
-* **x**: `int` - x-coordinate of the upper-left corner
-* **y**: `int` - y-coordinate of the upper-left corner
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

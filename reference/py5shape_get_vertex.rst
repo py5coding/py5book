@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global s
@@ -57,20 +56,21 @@ The ``get_vertex()`` method returns a Py5Vector with the coordinates of the vert
 
 Underlying Processing method: `PShape.getVertex <https://processing.org/reference/PShape_getVertex_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    get_vertex(index: int, /) -> Py5Vector
-    get_vertex(index: int, vec: Py5Vector, /) -> Py5Vector
+    get_vertex(
+        index: int,  # vertex index
+        /,
+    ) -> Py5Vector
 
-Parameters
-----------
+    get_vertex(
+        index: int,  # vertex index
+        vec: Py5Vector,  # target object to place vertex coordinates into
+        /,
+    ) -> Py5Vector
 
-* **index**: `int` - vertex index
-* **vec**: `Py5Vector` - target object to place vertex coordinates into
-
-
-Updated on January 16, 2022 16:51:21pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

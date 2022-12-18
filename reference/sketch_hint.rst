@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.size(200, 200, py5.P3D)
@@ -71,18 +70,15 @@ Hints for use with ``P3D`` only
 
 Underlying Processing method: `hint <https://processing.org/reference/hint_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    hint(which: int, /) -> None
+    hint(
+        which: int,  # hint to use when rendering Sketch
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **which**: `int` - hint to use when rendering Sketch
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import numpy as np
 
@@ -50,18 +49,15 @@ The ``coordinates`` parameter should be a numpy array with one row for each bezi
 
 Underlying Processing method: bezierVertices
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    bezier_vertices(coordinates: npt.NDArray[np.floating], /) -> None
+    bezier_vertices(
+        coordinates: npt.NDArray[np.floating],  # 2D array of bezier vertex coordinates with 6 or 9 columns for 2D or 3D points, respectively
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **coordinates**: `npt.NDArray[np.floating]` - 2D array of bezier vertex coordinates with 6 or 9 columns for 2D or 3D points, respectively
-
-
-Updated on February 26, 2022 13:22:44pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

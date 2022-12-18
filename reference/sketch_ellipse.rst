@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.ellipse(56, 46, 55, 55)
@@ -42,21 +41,18 @@ Draws an ellipse (oval) to the screen. An ellipse with equal width and height is
 
 Underlying Processing method: `ellipse <https://processing.org/reference/ellipse_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    ellipse(a: float, b: float, c: float, d: float, /) -> None
+    ellipse(
+        a: float,  # x-coordinate of the ellipse
+        b: float,  # y-coordinate of the ellipse
+        c: float,  # width of the ellipse by default
+        d: float,  # height of the ellipse by default
+        /,
+    ) -> None
 
-Parameters
-----------
-
-* **a**: `float` - x-coordinate of the ellipse
-* **b**: `float` - y-coordinate of the ellipse
-* **c**: `float` - width of the ellipse by default
-* **d**: `float` - height of the ellipse by default
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

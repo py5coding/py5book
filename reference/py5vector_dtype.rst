@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     import numpy as np
 
@@ -44,6 +43,5 @@ Description
 
 Vector data type. This will be one of ``np.float16``, ``np.float32``, ``np.float64``, or ``np.float128``.
 
-
-Updated on January 16, 2022 16:51:21pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

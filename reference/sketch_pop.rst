@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.fill(255)
@@ -53,7 +52,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.ellipse(0, 50, 33, 33)  # left circle
@@ -85,12 +83,12 @@ The :doc:`sketch_push` and ``pop()`` functions can be used in place of :doc:`ske
 
 Underlying Processing method: `pop <https://processing.org/reference/pop_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     pop() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

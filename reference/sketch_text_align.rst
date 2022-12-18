@@ -22,7 +22,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.background(0)
@@ -50,7 +49,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         py5.background(0)
@@ -87,20 +85,21 @@ The vertical alignment is based on the value of :doc:`sketch_text_ascent`, which
 
 Underlying Processing method: `textAlign <https://processing.org/reference/textAlign_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    text_align(align_x: int, /) -> None
-    text_align(align_x: int, align_y: int, /) -> None
+    text_align(
+        align_x: int,  # horizontal alignment, either LEFT, CENTER, or RIGHT
+        /,
+    ) -> None
 
-Parameters
-----------
+    text_align(
+        align_x: int,  # horizontal alignment, either LEFT, CENTER, or RIGHT
+        align_y: int,  # vertical alignment, either TOP, BOTTOM, CENTER, or BASELINE
+        /,
+    ) -> None
 
-* **align_x**: `int` - horizontal alignment, either LEFT, CENTER, or RIGHT
-* **align_y**: `int` - vertical alignment, either TOP, BOTTOM, CENTER, or BASELINE
-
-
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

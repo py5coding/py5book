@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def draw():
         py5.rect(py5.random(py5.width), py5.random(py5.height), 10, 10)
@@ -54,12 +53,12 @@ Pausing a Sketch is not the same as stopping a Sketch, so this method will not c
 
 Underlying Processing method: PSurface.pauseThread
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     pause_thread() -> None
 
-Updated on November 12, 2021 11:30:58am UTC
+Updated on September 01, 2022 16:36:02pm UTC
 

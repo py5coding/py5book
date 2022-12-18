@@ -19,16 +19,15 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global promise
-        py5.size(250, 100)
+        py5.size(200, 100)
         promise = py5.launch_promise_thread(load_data)
 
 
     def load_data():
-        return py5.load_json('http://py5.ixora.io/secret_message.json')
+        return py5.load_json('http://py5coding.org/files/secret_message.json')
 
 
     def draw():
@@ -59,22 +58,19 @@ Use the ``daemon`` parameter to make the launched thread a daemon that will run 
 
 The new thread is a Python thread, so all the usual caveats about the Global Interpreter Lock (GIL) apply here.
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
-    launch_promise_thread(f: Callable, name: str = None, *, daemon: bool = True, args: tuple = None, kwargs: dict = None) -> Py5Promise
+    launch_promise_thread(
+        f: Callable,  # function to call in the launched thread
+        name: str = None,  # name of thread to be created
+        *,
+        daemon: bool = True,  # if the thread should be a daemon thread
+        args: tuple = None,  # positional arguments to pass to the given function
+        kwargs: dict = None  # keyword arguments to pass to the given function
+    ) -> Py5Promise
 
-Parameters
-----------
-
-* **args**: `tuple = None` - positional arguments to pass to the given function
-* **daemon**: `bool = True` - if the thread should be a daemon thread
-* **f**: `Callable` - function to call in the launched thread
-* **kwargs**: `dict = None` - keyword arguments to pass to the given function
-* **name**: `str = None` - name of thread to be created
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 04, 2022 12:55:11pm UTC
 

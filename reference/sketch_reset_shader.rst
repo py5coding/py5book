@@ -19,7 +19,6 @@ Examples
     </div><div class="example-cell-code">
 
 .. code:: python
-    :number-lines:
 
     def setup():
         global edges
@@ -50,19 +49,17 @@ Restores the default shaders. Code that runs after ``reset_shader()`` will not b
 
 Underlying Processing method: `resetShader <https://processing.org/reference/resetShader_.html>`_
 
-Syntax
-------
+Signatures
+----------
 
 .. code:: python
 
     reset_shader() -> None
-    reset_shader(kind: int, /) -> None
 
-Parameters
-----------
+    reset_shader(
+        kind: int,  # type of shader, either POINTS, LINES, or TRIANGLES
+        /,
+    ) -> None
 
-* **kind**: `int` - type of shader, either POINTS, LINES, or TRIANGLES
-
-
-Updated on March 22, 2022 21:53:01pm UTC
+Updated on September 01, 2022 16:36:02pm UTC
 
