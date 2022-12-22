@@ -22,7 +22,7 @@ Two types of curves well-known in mathematics and visualization are inherently u
 
 To better understand coordinates themselves, it can be easier if you have a visual guide. You can take this grid image and place it as a background in your py5 sketches (if you're using them somewhere on your computer) to make things easier. If you're using an online environment to play with py5, you'll instead want to link to the entire URL of the image so that py5 can find it.
 
-[grid.png](images/complex_shapes/grid.png)
+<a href="images/complex_shapes/grid.png">grid.png</a>
 
 You can place images in the same local folder as your py5 sketch in order to load them - `.gif`, `.jpg`, `.png` and `.tga` file types are all supported. (Many operating systems hide file extensions by default, so you're encouraged to hunt around and find out how to enable them in yours!) 
 
@@ -303,7 +303,7 @@ We've been calling these *points* throughout the rest of the tutorial, but it's 
 
 <img src="images/complex_shapes/vertices-blender.png">
 
-We'll be using the same [grid image](images/complex_shapes/grid.png) as our background while we experiment with vertices, so either keep it in the same folder or go ahead and call it by its entire URL.
+We'll be using the same <a href="images/complex_shapes/grid.png">grid image</a> as our background while we experiment with vertices, so either keep it in the same folder or go ahead and call it by its entire URL.
 
 There are two shape functions we'll be introducing here that are a bit unfamiliar, `begin_shape()` and `end_shape()`. You can think of using `begin_shape()` as being like hitting play on a recorder, and `end_shape()` is when you hit stop. Between those functions, we use the `vertex()` function to draw our individual points. `end_shape()` can also take optional arguments - for example, by using CLOSE, we can make sure it automatically closes the shape off once we're done.
 
@@ -362,7 +362,7 @@ bezierVertex(control_point_1_x, control_point_1_y,
              vertex_point_2_x, vertex_point_2_y)
 ```
 
-We'll be using image reference for the following shapes. It may be helpful to keep this image up or [save a copy](images/complex_shapes/vertices.png) to quickly reference. The light blue lines and circles represent our control points, and their connections to our Bézier vertices, so that we don't have to draw them ourselves.  
+We'll be using image reference for the following shapes. It may be helpful to keep this image up or <a href="images/complex_shapes/vertices.png">save a copy</a> to quickly reference. The light blue lines and circles represent our control points, and their connections to our Bézier vertices, so that we don't have to draw them ourselves.  
 
 <img src="images/complex_shapes/vertices.png">
 
@@ -405,7 +405,7 @@ end_shape()
 
 <img src="images/complex_shapes/shape3.png">
 
-If you go back and take a peek at that [reference image](images/complex_shapes/vertices.png), you can easily match the position of those light blue handles to the X and Y position of the control points in your actual code. 
+If you go back and take a peek at that <a href="images/complex_shapes/vertices.png">reference image</a>, you can easily match the position of those light blue handles to the X and Y position of the control points in your actual code. 
 
 ## heart
 
@@ -427,7 +427,7 @@ end_shape()
 
 <img src="images/complex_shapes/heart.png">
 
-Making the second half of the heart will be simple: you know that to close the shape, it will have to end where it began. Thus, the final `bezier_vertex()` will have to share its coordinates with the opening `vertex()`. To figure out what goes in the gaps, consult the [reference image](images/complex_shapes/vertices.png) again, and take a look at the position of the light blue handles and control points.
+Making the second half of the heart will be simple: you know that to close the shape, it will have to end where it began. Thus, the final `bezier_vertex()` will have to share its coordinates with the opening `vertex()`. To figure out what goes in the gaps, consult the <a href="images/complex_shapes/vertices.png">reference image</a> again, and take a look at the position of the light blue handles and control points.
 
 ```{code-cell} ipython3
 size(800,800)
@@ -446,7 +446,7 @@ end_shape()
 
 ## Chinese coin
 
-This shape (filled in with violet in the [reference image](images/complex_shapes/vertices.png)) is based on a metal coin with a square hole in it, first introduced in China many centuries ago. To make it, we'll not only be using `begin_shape()` and `end_shape()` to create the filled in areas, but new functions called `begin_contour()` and `end_contour()` to cut out the square hole. 
+This shape (filled in with violet in the <a href="images/complex_shapes/vertices.png">reference image</a>) is based on a metal coin with a square hole in it, first introduced in China many centuries ago. To make it, we'll not only be using `begin_shape()` and `end_shape()` to create the filled in areas, but new functions called `begin_contour()` and `end_contour()` to cut out the square hole. 
 
 Usually, we might draw a circle with the `ellipse()` function, but since we're required to use the shape functions here (so that we can cut a hole out of it) we'll have to make it out of `vertex()` and `bezier_vertex()` functions. To start with, we can build a diamond out of a few vertices:
 
@@ -547,7 +547,7 @@ end_shape()
 
 Time for another challenge!
 
-In addition to the [grid.png](images/complex_shapes/grid.png) image we're using to assist with drawing coordinates, you'll need this [beziers.png](images/complex_shapes/beziers.png) image to layer over it as a reference. Either make sure that both images are in the right place on your local computer (in the same folder as the sketch, or in a folder called DATA beside the sketch) or reference them using their complete URLs. 
+In addition to the <a href="images/complex_shapes/grid.png">grid.png</a> image we're using to assist with drawing coordinates, you'll need this <a href="images/complex_shapes/beziers.png">beziers.png</a> image to layer over it as a reference. Either make sure that both images are in the right place on your local computer (in the same folder as the sketch, or in a folder called DATA beside the sketch) or reference them using their complete URLs. 
 
 Here is the code you'll be using to set things up.
 
@@ -584,7 +584,7 @@ Either way, the bitten apple's symbology remains compelling.
 
 *Rob Janoff [Public domain], via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Apple_Computer_Logo_rainbow.svg)*
 
-In addition to our [grid.png](images/complex_shapes/grid.png) image, you'll want to layer our [apple.png](images/complex_shapes/apple.png) over it, so either keep them in the same folder or go ahead and call them by their entire URLs. Use this code to get started:
+In addition to our <a href="images/complex_shapes/grid.png">grid.png</a> image, you'll want to layer our <a href="images/complex_shapes/apple.png">apple.png</a> over it, so either keep them in the same folder or go ahead and call them by their entire URLs. Use this code to get started:
 
 ```{code-cell} ipython3
 size(800,850)

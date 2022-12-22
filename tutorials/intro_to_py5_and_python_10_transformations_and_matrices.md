@@ -54,7 +54,7 @@ $\begin{bmatrix} 2 & 5 & 12 \\ 19 & 9 & 7 \end{bmatrix}$
 
 Digital images are essentially just grids of pixels, with both rows and columns, so matrices are extremely useful when manipulating computer graphics (though they're also used in mathematics and other sciences). We'll be learning how these work from a mathematical perspective first, and then you'll be introduced to the matrix functions in py5 - so things will get much easier. If all the math seems a little advanced, you can read through without implementing it in your own code, and you'll still understand a little better when we get to the next section, *matrices in py5*. 
 
-To help you out in visualizing the coordinates in your sketch, you'll want to use the following two images, [grid.png]("images/transformations_and_matrices/grid.png") and [grid-overlay.png](images/transformations_and_matrices/grid-overlay.png). You can save them in the same folder as your sketch, or reference them by their full URL. 
+To help you out in visualizing the coordinates in your sketch, you'll want to use the following two images, <a href="images/transformations_and_matrices/grid.png">grid.png</a> and <a href="images/transformations_and_matrices/grid-overlay.png">grid-overlay.png</a>. You can save them in the same folder as your sketch, or reference them by their full URL. 
 
 <img src="images/transformations_and_matrices/grid.png">
 
@@ -477,7 +477,7 @@ You now know more things than you ever cared to know about matrices. Note that w
 
 ## matrices in py5
 
-We'll be using our [grid.png]("images/transformations_and_matrices/grid.png") and [grid-overlay.png](images/transformations_and_matrices/grid-overlay.png) images again. You can save them in the same folder as your sketch, or reference them by their full URL. 
+We'll be using our <a href="images/transformations_and_matrices/grid.png">grid.png</a> and <a href="images/transformations_and_matrices/grid-overlay.png">grid-overlay.png</a> images again. You can save them in the same folder as your sketch, or reference them by their full URL. 
 
 At first, our code will look very familiar. We don't need to use a `quad()` here unless you're particularly keen to, since py5 will handle each matrix itself, without us needing to directly access any vertices!
 

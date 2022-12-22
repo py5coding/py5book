@@ -298,7 +298,7 @@ run_sketch()
 
 Using the `texture()` function inside of a custom shape, before you start drawing vertices, you can apply an image to the surface of a shape. In addition to loading the image (with `load_image()`) and applying it (with `texture()`), you'll have to pass some extra arguments to each vertex. By default, these extra arguments relate to the full dimensions of the image in pixels. You can use `texture_mode(NORMAL)` to switch to a mode where these arguments are "normalized" to a range from 0 to 1, or `texture_mode(DEFAULT)` to switch back.
 
-Wrapping an image around 3D shapes is no trivial task. The example below uses a simple 2D triangle, though in a 3D space. I've elected to use the [grid.png]("images/3d/grid.png") image from previous tutorials here, but you could use any image of a sufficient size.
+Wrapping an image around 3D shapes is no trivial task. The example below uses a simple 2D triangle, though in a 3D space. I've elected to use the <a href="images/3d/grid.png">grid.png</a> image from previous tutorials here, but you could use any image of a sufficient size.
 
 ```{code-cell} ipython3
 x = 250
@@ -338,7 +338,7 @@ run_sketch()
 
 ## importing 3d models into py5
 
-In addition to the (admittedly tedious) method of building 3D shapes using vertices, you can actually load 3D models into py5 with the `load_shape()` function! This function can take file formats of .svg or .obj, with the latter being used for 3D models. For the purposes of this demo, we're using Suzanne, the unofficial mascot of the 3D modeling program Blender. You can download [suzanne.obj]("images/3d/suzanne.obj") yourself and put her in the same folder as your sketch, or use any other 3D model in the right format. 
+In addition to the (admittedly tedious) method of building 3D shapes using vertices, you can actually load 3D models into py5 with the `load_shape()` function! This function can take file formats of .svg or .obj, with the latter being used for 3D models. For the purposes of this demo, we're using Suzanne, the unofficial mascot of the 3D modeling program Blender. You can download <a href="images/3d/suzanne.obj">suzanne.obj</a> yourself and put her in the same folder as your sketch, or use any other 3D model in the right format. 
 
 First, we load our .obj in the `setup()` block. You can use `load_shape()` (or `load_image()`, for that matter) inside of `draw()`, but it's slow and expensive in terms of processing power, so it's much better to load things into a variable ahead of time and just use them when needed. 
 
