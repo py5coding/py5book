@@ -24,6 +24,12 @@ The P3D renderer (Processing 3D) is a three-dimensional graphics renderer that m
 
 Before we draw anything, or even change the renderer to P3D, we need to talk about how we position objects in 3D space. First, we'll have to look beyond the `x, y` positioning system, since it only accounts for two dimensions. In a 3D space, we'll be using `x, y, z` positioning to place objects. The Z axis is our missing third dimension. A negative Z value will move a 3D object "farther away" from the viewer, and a positive Z value will move it "closer" to the viewer. 
 
+It's important to note that this system is not universal! The way that the Z axis works in py5 is not, for example, the way that it works in the interface OpenGL. py5 is a "left-handed" coordinate system, and OpenGL is "right-handed". What does this mean? If you use your right hand, then point your index finger along the Y axis (upwards) and your thumb along the X axis, then bend your middle finger, it will be pointing along the Z axis, towards a "positive" value for a right-handed system. For a left-handed system, you can do the same thing with your left hand. The right-hand rule is even depicted on one of the banknotes for the Swiss franc:
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/CHF_200_9_front.jpg/277px-CHF_200_9_front.jpg">
+
+*Front of the Swiss 200-franc banknote, ninth series (issued in 2018), from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:CHF_200_9_front.jpg)*
+
 However, we also need to address the expectations you may have on *how* you can position these objects in 3D space. When drawing a 2D object, like a `rect()`, you typically pass it arguments to position it, as well as to size it.
 
 ```
