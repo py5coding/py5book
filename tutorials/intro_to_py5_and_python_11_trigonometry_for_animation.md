@@ -111,7 +111,7 @@ run_sketch()
 
 If you run this code, you'll also notice that both `sin()` and `cos()` return 0.7. At a theta value of 45 degrees, sine and cosine are equal. These values will diverge as theta changes, with perfectly opposite values at 135 degrees. 
 
-<img src="images/trigonometry_for_animation/unit-circles">
+<img src="images/trigonometry_for_animation/unit-circles.svg">
 
 Here's a lovely visualization of the way these values change along with the angle of theta:
 

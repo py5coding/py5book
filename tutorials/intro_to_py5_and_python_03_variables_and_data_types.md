@@ -66,7 +66,7 @@ x = 1 # Declaring a variable called x and assigning 1 to it
 y = 30
 w = 20
 h = w
-<img srect(x,y, w,h)
+rect(x,y, w,h)
 ```
 
 <img src='images/variables/rect.png'>

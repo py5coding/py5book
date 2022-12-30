@@ -22,6 +22,7 @@ Two types of curves well-known in mathematics and visualization are inherently u
 
 To better understand coordinates themselves, it can be easier if you have a visual guide. You can take this grid image and place it as a background in your py5 sketches (if you're using them somewhere on your computer) to make things easier. If you're using an online environment to play with py5, you'll instead want to link to the entire URL of the image so that py5 can find it.
 
+<img src="images/complex_shapes/grid.png">
 <a href="images/complex_shapes/grid.png">grid.png</a>
 
 You can place images in the same local folder as your py5 sketch in order to load them - `.gif`, `.jpg`, `.png` and `.tga` file types are all supported. (Many operating systems hide file extensions by default, so you're encouraged to hunt around and find out how to enable them in yours!) 
