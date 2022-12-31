@@ -29,6 +29,12 @@ $ cd pythonprocessing
 $ git clone https://github.com/py5coding/py5generator
 ```
 
+## Install Java 17
+
+You will need to have Java 17 installed on your computer and available on your
+path. Relevant information about how to install the correct version is available
+on the [py5 install page](/content/install).
+
 ## Create Anaconda Environment
 
 Next you will need to create the Anaconda environment. This will install
@@ -40,10 +46,6 @@ $ conda env create -f environment.yml
 $ conda activate py5
 (py5) $ cd ..
 ```
-
-The environment file will install a version of OpenJDK 11 that will
-provide the necessary Java tools used when the conda environment is
-active.
 
 ## Locate Processing Application
 
@@ -94,10 +96,9 @@ Processing library evolves. Be aware that signature changes to known methods
 will result in automatic updates to documentation files in the
 `py5_docs/Reference/api_en` directory.
 
-There are additional `make` commands for generating website
-documentation or building the PyPI distribution files.
+There is an additional `make` command for generating reference documentation for
+the website.
 
 ``` bash
 (py5) $ make generate_py5_docs py5_website_dir=../py5website py5_api_lang=api_en
-(py5) $ make distributions py5_build_dir=../py5code
 ```
