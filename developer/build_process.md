@@ -100,5 +100,5 @@ There is an additional `make` command for generating reference documentation for
 the website.
 
 ``` bash
-(py5) $ make generate_py5_docs py5_website_dir=../py5website py5_api_lang=api_en
+(py5) $ make generate_py5_docs py5_website_dir=../py5book py5_api_lang=api_en
 ```
