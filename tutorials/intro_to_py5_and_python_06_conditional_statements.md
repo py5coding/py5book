@@ -40,7 +40,7 @@ The question is, how do you communicate these sorts of concepts to the computer?
 
 ## boolean data types
 
-There are many simple types of data in py5 (and other programming languages). A single character of text is a *character*, many characters of text form a *string*, a whole number is an *integer*, and a number with a decimal point is a *float*. For comparing conditions to a target like this (*is the block red*), computers use a data type called a *boolean*. 
+There are many simple types of data in py5 (and other programming languages). Text, made of individual characters, is called a *string*, a whole number is an *integer*, and a number with a decimal point is a *float*. For comparing conditions to a target like this (*is the block red*), computers use a data type called a *boolean*. 
 
 Strings can hold pretty much any text, and integers/floats pretty much any number. Booleans only have two possible states: `True` or `False`. Let's write some simple code together to demonstrate how this works.
 
