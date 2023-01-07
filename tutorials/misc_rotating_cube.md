@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Rotating Cube
+# Animated Sketch with Sketch Portal
 
 This is a simple demonstration of using py5 in Jupyter notebooks. This will use the P3D (OpenGL) renderer. If you are running this notebook through binder, the running Sketch will be viewable through a py5 Sketch Portal. If you are viewing this page from the py5 documentation website, see the Binder or Live Code options by hovering your mouse over the rocket ship icon at the top of this page.
 

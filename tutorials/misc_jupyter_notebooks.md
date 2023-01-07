@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Jupyter Notebooks
+# Notebook Magic and Special Features
 
 The py5 library is designed to work well with Jupyter tools, including Jupyter notebook. There are included IPython magics that are useful for supporting your development and documentation efforts as well as your creative endeavors. Used well, they can greatly enhance your programming workflow.
 

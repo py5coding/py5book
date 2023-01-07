@@ -12,7 +12,7 @@ kernelspec:
   name: py5bot
 ---
 
-# Introduction to py5bot
+# Introducing py5bot
 
 This is py5bot. It is a simple and easy to use programming environment for teaching the very basics of Python programming and creative coding with py5.
 

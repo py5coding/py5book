@@ -18,6 +18,8 @@ These Render Helper Tools facilitate the creation of simple sketches.
 
 Currently this is limited to the default and OpenGL renderers (P2D and P3D). Support for other renderers such as SVG will be added in the future.
 
+All of the tools documented on this page work outside of Jupyter Notebooks, but it is here they are the most useful.
+
 ```{code-cell} ipython3
 from IPython.display import display
 
