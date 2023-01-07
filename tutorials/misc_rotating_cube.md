@@ -5,9 +5,9 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.5
+    jupytext_version: 1.14.4
 kernelspec:
-  display_name: Python 3
+  display_name: Python 3 (ipykernel)
   language: python
   name: python3
 ---
@@ -23,8 +23,12 @@ This is a simple demonstration of using py5 in Jupyter notebooks. This will use 
 Import the py5 library. When the library is imported the Java Virtual Machine (JVM) is started.
 
 ```{code-cell} ipython3
-import time
+:tags: [remove-cell]
 
+import time
+```
+
+```{code-cell} ipython3
 import py5_tools
 import py5
 ```
@@ -88,8 +92,12 @@ py5.run_sketch()
 Here's a screenshot, so readers of the static documentation website can understand what is happening:
 
 ```{code-cell} ipython3
-time.sleep(3)
+:tags: [remove-cell]
 
+time.sleep(3)
+```
+
+```{code-cell} ipython3
 py5_tools.screenshot()
 ```
 
@@ -115,11 +123,15 @@ You should see a clean and smooth animation. If you are running this through myb
 
 ## Check the Sketch `frame_rate`
 
-Check the [frame_rate](/reference/sketch_frame_rate). You should be able to get 30 frames per second for this Sketch. I've been able to get 60 frames per second while running on mybinder, but not all the time.
+Check the [frame_rate](/reference/sketch_frame_rate). You should be able to get 30 frames per second for this Sketch. You might be able to get 60 frames per second while running on mybinder, but not all the time.
 
 ```{code-cell} ipython3
-time.sleep(10)
+:tags: [remove-cell]
 
+time.sleep(10)
+```
+
+```{code-cell} ipython3
 py5.get_frame_rate()
 ```
 

@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.0
+    jupytext_version: 1.14.4
 kernelspec:
   display_name: py5bot
   language: python
@@ -14,7 +14,7 @@ kernelspec:
 
 # Introduction to py5bot
 
-This is py5bot. A simple and easy to use programming environment for teaching the very basics of Python programming and creative coding with py5.
+This is py5bot. It is a simple and easy to use programming environment for teaching the very basics of Python programming and creative coding with py5.
 
 You must use the [py5bot Jupyter kernel](/content/install#py5bot) to execute py5bot code.
 
@@ -45,7 +45,7 @@ Internally, py5 executes these commands inside of a `setup()` method to render a
 There are a few important rules that you should be aware of.
 
 * The [size()](/reference/sketch_size) command should be the first line of Python code. Comments are ignored. If the [size()](/reference/sketch_size) command is omitted, the output size will be 100 by 100 pixels.
-* When py5bot is run on Windows and Linux computers, you can use the `P2D` or `P3D` renderers. These OpenGL renderers are currently not supported on OSX. The `SVG` and `PDF` renderers supported on all platforms.
+* When py5bot is run on Windows and Linux computers, you can use the `P2D` or `P3D` renderers. These OpenGL renderers are currently not supported on OSX. The `SVG` and `PDF` renderers are supported on all platforms.
 * Each cell has its own local namespace. Variables and functions defined in one cell cannot be used in another cell.
 
 There are some less important rules that should be mentioned but aren't that important:
@@ -126,7 +126,7 @@ These error messages can be customized. That is a separate topic to be explained
 
 There are py5bot reserved words. You are not allowed to use a reserved word as a variable name.
 
-Ideally py5bot would have syntax hightlighting to color the reserved words differently, but that hasn't been implemented yet. Let me know if you are interested in working on that.
+Ideally py5bot would have syntax hightlighting to color the reserved words differently, but that hasn't been implemented yet. Let us know if you are interested in working on that.
 
 ```{code-cell} ipython3
 size(200, 200)

@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.0
+    jupytext_version: 1.14.4
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -19,8 +19,12 @@ The py5 library is designed to work well with Jupyter tools, including Jupyter n
 To use py5 in a notebook, first import the library:
 
 ```{code-cell} ipython3
-import time
+:tags: [remove-cell]
 
+import time
+```
+
+```{code-cell} ipython3
 import py5_tools
 import py5
 ```
@@ -138,7 +142,7 @@ for i in range(100):
     py5.rect(py5.random(py5.width), py5.random(py5.height), 10, 10)
 ```
 
-Now there's an image on my computer located at `images/jupyter_notebooks/simple_example.png`. I can embed that in this notebook using markdown.
+Now there's an image located at `images/jupyter_notebooks/simple_example.png`. You can embed that in this notebook using markdown.
 
 ![asdf](images/jupyter_notebooks/simple_example.png)
 
@@ -159,9 +163,9 @@ for i in range(100):
     py5.rect(py5.random(py5.width), py5.random(py5.height), 10, 10)    
 ```
 
-When that cell runs, a py5 window is quickly opened and closed. For whatever reason, the Processing's OpenGL renderers cannot draw to an invisible window (but I would be delighted to be proven wrong about that).
+When that cell runs, a py5 window is quickly opened and closed. For whatever reason, the Processing's OpenGL renderers cannot seem to draw to an invisible window (but we'd be delighted to be proven wrong about that).
 
-The previous `%%py5draw` examples in this notebook used a special `HIDDEN` renderer based on the default `JAVA2D` renderer that does not need to open a window. That `HIDDEN` renderer was created just for this purpose. Despite my best efforts, I couldn't create similar renderers based on the OpenGL renderers `P2D` and `P3D`.
+The previous `%%py5draw` examples in this notebook used a special `HIDDEN` renderer based on the default `JAVA2D` renderer that does not need to open a window. That `HIDDEN` renderer was created just for this purpose.
 
 The 3D renderer also works:
 
@@ -332,8 +336,12 @@ By default, the [run_sketch()](/reference/sketch_run_sketch) method returns righ
 The Sketch window cannot be embedded into the notebook, but the [`py5_tools.screenshot()`](/reference/py5tools_screenshot) function can grab a single snapshot of the window.
 
 ```{code-cell} ipython3
-time.sleep(3)
+:tags: [remove-cell]
 
+time.sleep(3)
+```
+
+```{code-cell} ipython3
 sketch_snapshot = py5_tools.screenshot()
 
 sketch_snapshot
@@ -410,9 +418,9 @@ shell = get_ipython()
 shell.log.critical('test message')
 ```
 
-In the terminal I used to run `jupyter notebook`, I see this message:
+In the terminal used to run `jupyter notebook`, this message appears:
 
-```
+```text
 [IPKernelApp] CRITICAL | test message
 ```
 
