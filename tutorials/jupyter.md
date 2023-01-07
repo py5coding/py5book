@@ -12,6 +12,6 @@ kernelspec:
   name: python3
 ---
 
-# misc
+# Using Jupyter Notebooks
 
 Placeholder page for other tutorials

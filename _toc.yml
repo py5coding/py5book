@@ -22,9 +22,12 @@ parts:
     sections:
     - glob: tutorials/intro_to_py5_and_python_*
 
-  - file: tutorials/misc
+  - file: tutorials/jupyter
     sections:
-    - glob: tutorials/misc_*
+    - file: tutorials/jupyter_introducing_py5bot
+    - file: tutorials/jupyter_animation_and_sketch_portals
+    - file: tutorials/jupyter_render_helper_tools
+    - file: tutorials/jupyter_notebook_magic_and_special_features
 
 - caption: How To...
   chapters:

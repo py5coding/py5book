@@ -16,7 +16,7 @@ kernelspec:
 
 This is py5bot. It is a simple and easy to use programming environment for teaching the very basics of Python programming and creative coding with py5.
 
-You must use the [py5bot Jupyter kernel](/content/install#py5bot) to execute py5bot code.
+You must use the [py5bot Jupyter kernel](/content/install) to execute py5bot code.
 
 If you are viewing this page from the py5 documentation website, see the Binder or Live Code options by hovering your mouse over the rocket ship icon at the top of this page.
 
