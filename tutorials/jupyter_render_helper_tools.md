@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.0
+    jupytext_version: 1.14.4
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -16,7 +16,9 @@ kernelspec:
 
 These Render Helper Tools facilitate the creation of simple sketches.
 
-Currently this is limited to the default and OpenGL renderers (P2D and P3D). I would like to add support for other renderers such as SVG at a later date.
+Currently this is limited to the default and OpenGL renderers (P2D and P3D). Support for other renderers such as SVG will be added in the future.
+
+All of the tools documented on this page work outside of Jupyter Notebooks, but it is here they are the most useful.
 
 ```{code-cell} ipython3
 from IPython.display import display
@@ -64,7 +66,7 @@ def draw_square(s: py5.Sketch, fill_color, square_size):
 
 Below, use the new `draw_square` function with [render_frame()](/reference/py5functions_render_frame). Arguments are passed to `draw_square` via [render_frame()](/reference/py5functions_render_frame)'s `draw_kwargs` parameter.
 
-You can pass positional arguments with `draw_args` but I think using keyword arguments is easier and more readable.
+You can pass positional arguments with `draw_args` but using keyword arguments is easier and more readable.
 
 ```{code-cell} ipython3
 img = py5.render_frame(draw_square, 200, 200,
@@ -73,9 +75,9 @@ img = py5.render_frame(draw_square, 200, 200,
 img
 ```
 
-[@render](/reference/py5functions_render) is the [decorator](https://realpython.com/primer-on-python-decorators/) equivalent for [render_frame()](/reference/py5functions_render_frame). I think it achieves cleaner results, particularly when passing function arguments.
+[@render](/reference/py5functions_render) is the [decorator](https://realpython.com/primer-on-python-decorators/) equivalent for [render_frame()](/reference/py5functions_render_frame). This achieves cleaner results, particularly when passing function arguments.
 
-When using decorators, don't forget to type that `@` sign at the beginning. If you forget, like I just did while writing this documentation, it won't work correctly. :(
+When using decorators, don't forget to type that `@` sign at the beginning. If you forget, it won't work correctly.
 
 ```{code-cell} ipython3
 @py5.render(200, 200)
@@ -249,4 +251,4 @@ display(cubes[0], cubes[5])
 
 In both Processing and py5 it is unwise or impossible to run a sketch inside of another sketch.
 
-These Render Helper Tools are creating and running sketches to provide their functionality. Although you might be tempted to do so, I do not recommend you use them in any way that places them inside of another running sketch.
+These Render Helper Tools are creating and running sketches to provide their functionality. Although you might be tempted to do so, do not use them in any way that places them inside of another running sketch.
