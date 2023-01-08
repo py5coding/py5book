@@ -116,7 +116,7 @@
 ### Keyboard Variables
 
 * [is_key_pressed](/reference/sketch_is_key_pressed) - The `is_key_pressed` variable stores whether or not a keyboard button is currently being pressed.
-* [key](/reference/sketch_key) - The system variable `key` always contains the value of the most recent key on the keyboard that was used (either pressed or released). It will contain the constant `CODED`, in the case of special keys that can then discriminated with `key_code`.
+* [key](/reference/sketch_key) - The system variable `key` always contains the value of the most recent key on the keyboard that was used (either pressed or released). It will contain the constant `CODED`, in the case of special keys that can then be discriminated with `key_code`.
 * [key_code](/reference/sketch_key_code) - The variable `key_code` is used to detect special keys such as the arrow keys (`UP`, `DOWN`, `LEFT`, and `RIGHT`) - as well as `ALT`, `CONTROL`, and `SHIFT`. 
 
 ### Keyboard Event Functions
