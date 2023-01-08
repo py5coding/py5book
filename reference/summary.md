@@ -9,14 +9,14 @@
 * [arc()](/reference/sketch_arc) - Draws an arc to the screen.
 * [circle()](/reference/sketch_circle) - Draws a circle to the screen.
 * [ellipse()](/reference/sketch_ellipse) - Draws an ellipse (oval) - to the screen.
-* [ellipse_mode()](/reference/sketch_ellipse_mode) - Modifies the location from which ellipses and circles are drawn by changing the way in which values given are intepreted.
+* [ellipse_mode()](/reference/sketch_ellipse_mode) - Modifies the location from which ellipses and circles are drawn by changing the way in which values given are interpreted.
 * [line()](/reference/sketch_line) - Draws a line (a direct path between two points) - to the screen.
 * [lines()](/reference/sketch_lines) - Draw a collection of lines to the screen.
 * [point()](/reference/sketch_point) - Draws a point, a coordinate in space at the dimension of one pixel.
 * [points()](/reference/sketch_points) - Draw a collection of points, each a coordinate in space at the dimension of one pixel.
 * [quad()](/reference/sketch_quad) - A quad is a quadrilateral, a four sided polygon.
 * [rect()](/reference/sketch_rect) - Draws a rectangle to the screen.
-* [rect_mode()](/reference/sketch_rect_mode) - Modifies the location from which rectangles and squares are drawn by changing the way in which values given are intepreted.
+* [rect_mode()](/reference/sketch_rect_mode) - Modifies the location from which rectangles and squares are drawn by changing the way in which values given are interpreted.
 * [square()](/reference/sketch_square) - Draws a square to the screen.
 * [triangle()](/reference/sketch_triangle) - A triangle is a plane created by connecting three points.
 
@@ -78,7 +78,7 @@
 * [color()](/reference/sketch_color) - Creates colors for storing in variables of the color datatype (a 32 bit integer).
 * [lerp_color()](/reference/sketch_lerp_color) - Calculates a color between two colors at a specific increment.
 
-### Analizing Colors
+### Analyzing Colors
 
 * [hex_color()](/reference/sketch_hex_color) - Convert a color value to a hex color string.
 * [alpha()](/reference/sketch_alpha) - Extracts the alpha value from a color, scaled to match current color_mode().
@@ -134,7 +134,7 @@
 * [mouse_y](/reference/sketch_mouse_y) - The system variable mouse_y always contains the current vertical coordinate of the mouse.
 * [pmouse_x](/reference/sketch_pmouse_x) - The system variable pmouse_x always contains the horizontal position of the mouse in the frame previous to the current frame.
 * [pmouse_y](/reference/sketch_pmouse_y) - The system variable pmouse_y always contains the vertical position of the mouse in the frame previous to the current frame.
-* [rmouse_x](/reference/sketch_rmouse_x) - The current horizonal coordinate of the mouse after activating scale invariant drawing.
+* [rmouse_x](/reference/sketch_rmouse_x) - The current horizontal coordinate of the mouse after activating scale invariant drawing.
 * [rmouse_y](/reference/sketch_rmouse_y) - The current vertical coordinate of the mouse after activating scale invariant drawing.
 
 ### Mouse Event Functions
@@ -151,13 +151,13 @@
 
 ### Time & Date Helpers
 
-* [day()](/reference/sketch_day) - Returns the current day as a value from 1 - 31, consulting the clock on your computer.
-* [hour()](/reference/sketch_hour) - Returns the current hour as a value from 0 to 23, consulting the clock on your computer.
+* [day()](/reference/sketch_day) - Returns the current day as a value from 1 - 31 by consulting the clock on your computer.
+* [hour()](/reference/sketch_hour) - Returns the current hour as a value from 0 to 23 by consulting the clock on your computer.
 * [millis()](/reference/sketch_millis) - Returns the number of milliseconds (thousandths of a second) - since starting the program.
-* [minute()](/reference/sketch_minute) - Returns the current minute as a value from 0 to 59, consulting the clock on your computer.
-* [month()](/reference/sketch_month) - Returns the current month as a value from 1 to 12 consulting the clock on your computer.
-* [second()](/reference/sketch_second) - Returns the current seconds as a value from 0 to 59 consulting the clock on your computer.
-* [year()](/reference/sketch_year) - Returns the current year consulting the clock on your computer.
+* [minute()](/reference/sketch_minute) - Returns the current minute as a value from 0 to 59 by consulting the clock on your computer.
+* [month()](/reference/sketch_month) - Returns the current month as a value from 1 to 12 by consulting the clock on your computer.
+* [second()](/reference/sketch_second) - Returns the current seconds as a value from 0 to 59 by consulting the clock on your computer.
+* [year()](/reference/sketch_year) - Returns the current year by consulting the clock on your computer.
 
 [back to top](#top)
 
@@ -191,7 +191,7 @@
 
 ### Drawing Text
 
-* [text()](/reference/sketch_text) - Draws text in the screen, that is, the sketch drawing area.
+* [text()](/reference/sketch_text) - Draws text on the screen, that is, the sketch drawing area.
 * [text_align()](/reference/sketch_text_align) - Sets the current alignment for drawing text.
 * [text_leading()](/reference/sketch_text_leading) - Sets the spacing between lines of text in units of pixels.
 * [text_mode()](/reference/sketch_text_mode) - Sets the way text draws to the screen, either as texture maps or as vector geometry.
@@ -218,7 +218,7 @@
 
 * [push_matrix()](/reference/sketch_push_matrix) - Saves the transformation matrix that describes the current coordinate system in the matrix stack so that it can be restored later with pop_matrix().
 * [pop_matrix()](/reference/sketch_pop_matrix) - Retrieves the last transformation matrix stored in the matrix stack restoring a previous coordinate system state.
-* [translate()](/reference/sketch_translate) - Specifies an amount to displace the coordinate system origin, displacing objects drawn within the display window. Can be used in 2D, `translate(x, y)`, or 3D, `traslate(x, y, z)`.
+* [translate()](/reference/sketch_translate) - Specifies an amount to displace the coordinate system origin, displacing objects drawn within the display window. Can be used in 2D, `translate(x, y)`, or 3D, `translate(x, y, z)`.
 * [rotate()](/reference/sketch_rotate) - Rotates the coordinate system the amount specified by the angle parameter.
 * [scale()](/reference/sketch_scale) - Increases or decreases the size of shapes by expanding and contracting the coordinate system.
 * [shear_x()](/reference/sketch_shear_x) - Shears shapes around the x-axis the amount specified by the angle parameter.
@@ -302,11 +302,11 @@
 
 ### Random
 
-* [noise()](/reference/sketch_noise) - Generate pseudo-random noise values for specific coodinates using Processing’s noise algorithm.
+* [noise()](/reference/sketch_noise) - Generate pseudo-random noise values for specific coordinates using Processing’s noise algorithm.
 * [noise_detail()](/reference/sketch_noise_detail) - Adjusts the character and level of detail of Processing’s noise algorithm, produced by the noise() function.
 * [noise_seed()](/reference/sketch_noise_seed) - Sets the seed value for noise().
 * [np_random](/reference/sketch_np_random) - Access the numpy random number generator that py5 uses to provide random number functionality.
-* [os_noise()](/reference/sketch_os_noise) - Generate pseudo-random noise values for specific coodinates using the OpenSimplex 2 algorithm (smooth version / SuperSimplex).
+* [os_noise()](/reference/sketch_os_noise) - Generate pseudo-random noise values for specific coordinates using the OpenSimplex 2 algorithm (smooth version / SuperSimplex).
 * [os_noise_seed()](/reference/sketch_os_noise_seed) - Sets the seed value for os_noise().
 * [random()](/reference/sketch_random) - Generates random numbers.
 * [random_choice()](/reference/sketch_random_choice) - Select random items from a list.
@@ -333,7 +333,7 @@
 ### Loading and Displaying
 
 * [image()](/reference/sketch_image) - The image() function draws an image to the display window.
-* [image_mode()](/reference/sketch_image_mode) - Modifies the location from which images are drawn by changing the way in which parameters given to image() are intepreted.
+* [image_mode()](/reference/sketch_image_mode) - Modifies the location from which images are drawn by changing the way in which parameters given to image() are interpreted.
 * [load_image()](/reference/sketch_load_image) - Load an image into a variable of type Py5Image.
 * [no_tint()](/reference/sketch_no_tint) - Removes the current fill value for displaying images and reverts to displaying images with their original hues.
 * [tint()](/reference/sketch_tint) - Sets the fill value for displaying images.
@@ -452,7 +452,7 @@
 * [is_running](/reference/sketch_is_running) - Boolean value reflecting if the Sketch is in the running state.
 * [pargs](/reference/sketch_pargs) - list of strings passed to the Sketch through the call to run_sketch() List of strings passed to the Sketch through the call to run_sketch().
 
-### Performance Profilling
+### Performance Profiling
 
 * [print_line_profiler_stats()](/reference/sketch_print_line_profiler_stats) - Print the line profiler stats initiated with profile_draw() or profile_functions().
 * [profile_draw()](/reference/sketch_profile_draw) - Profile the execution times of the draw function with a line profiler.
@@ -493,7 +493,7 @@
 ### Tools
 
 * [Py5 Magics](/reference/py5vector) - The py5 Magics are Jupyter Notebook “meta-commands” that can be within Jupyter Notebooks to enhance py5’s ability to work within the notebook. The py5 magics will enable users to create Sketches and embed the results in the Notebook without defining any functions or calling the size() function.
-* [Py5 Tools](/reference/py5tools) - The py5 Tools are extra utility functions not directly related to creating Sketches that help faciliate the use of py5. For example, you can use these to add jar files to the Java classpath before importing py5.
+* [Py5 Tools](/reference/py5tools) - The py5 Tools are extra utility functions not directly related to creating Sketches that help facilitate the use of py5. For example, you can use these to add jar files to the Java classpath before importing py5.
 * [Py5 Functions](/reference/py5functions) - The py5 Functions are extra utility functions that make py5 easier to use. For example, you can use these to Processing’s vlw font files without having to use Processing’s IDE.
 
 [back to top](#top)
