@@ -47,6 +47,8 @@ parts:
 
 - caption: Reference
   chapters:
+  - file: reference/summary
+
   - file: reference/sketch
     sections:
     - glob: reference/sketch_*
