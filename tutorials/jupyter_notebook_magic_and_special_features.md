@@ -14,7 +14,7 @@ kernelspec:
 
 # Notebook Magic and Special Features
 
-The py5 library is designed to work well with Jupyter tools, including Jupyter notebook. There are included IPython magics that are useful for supporting your development and documentation efforts as well as your creative endeavors. Used well, they can greatly enhance your programming workflow.
+The py5 library is designed to work well with Jupyter tools, including Jupyter notebook. There are included IPython magics that are useful for supporting your development and documentation efforts as well as your creative endeavors. These magics are not a part of the Python language. Think of them as meta-commands that let you communicate directly with Jupyter. Used well, they can greatly enhance your programming workflow.
 
 To use py5 in a notebook, first import the library:
 
