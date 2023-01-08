@@ -22,21 +22,21 @@
 
 ### 3D Shapes
 
-* [box()](/reference/sketch_box) - A box is an extruded rectangle. You'll need to set the P3D renderer in size() to use it.
-* [sphere()](/reference/sketch_sphere) - A sphere is a hollow ball made from tessellated triangles. You'll need the P3D renderer.
+* [box()](/reference/sketch_box) - A box is an extruded rectangle. You'll need to set the `P3D` renderer in `size()` to use it.
+* [sphere()](/reference/sketch_sphere) - A sphere is a hollow ball made from tessellated triangles. You'll need the `P3D` renderer.
 * [sphere_detail()](/reference/sketch_sphere_detail) - Controls the detail used to render a sphere by adjusting the number of vertices of the sphere mesh.
 
 ### Vertex Based Shapes
 
 * [begin_closed_shape()](/reference/sketch_begin_closed_shape) - This method is used to start a custom closed shape.
-* [begin_contour()](/reference/sketch_begin_contour) - Use the begin_contour() and end_contour() methods to create negative shapes within shapes such as the center of the letter ‘O’.
-* [begin_shape()](/reference/sketch_begin_shape) - Using the begin_shape() and end_shape() functions allow creating more complex forms.
+* [begin_contour()](/reference/sketch_begin_contour) - Use the `begin_contour()` and `end_contour()` methods to create negative shapes within shapes such as the center of the letter ‘O’.
+* [begin_shape()](/reference/sketch_begin_shape) - Using the `begin_shape()` and `end_shape()` functions allow creating more complex forms.
 * [bezier_vertex()](/reference/sketch_bezier_vertex) - Specifies vertex coordinates for Bezier curves.
 * [bezier_vertices()](/reference/sketch_bezier_vertices) - Create a collection of bezier vertices.
 * [curve_vertex()](/reference/sketch_curve_vertex) - Specifies vertex coordinates for curves.
 * [curve_vertices()](/reference/sketch_curve_vertices) - Create a collection of curve vertices.
-* [end_contour()](/reference/sketch_end_contour) - Use the begin_contour() and end_contour() methods to create negative shapes within shapes such as the center of the letter ‘O’.
-* [end_shape()](/reference/sketch_end_shape) - The end_shape() function is the companion to begin_shape() and may only be called after begin_shape().
+* [end_contour()](/reference/sketch_end_contour) - Use the `begin_contour()` and `end_contour()` methods to create negative shapes within shapes such as the center of the letter ‘O’.
+* [end_shape()](/reference/sketch_end_shape) - The `end_shape()` function is the companion to `begin_shape()` and may only be called after `begin_shape()`.
 * [quadratic_vertex()](/reference/sketch_quadratic_vertex) - Specifies vertex coordinates for quadratic Bezier curves.
 * [quadratic_vertices()](/reference/sketch_quadratic_vertices) - Add a collection of quadratic vertices.
 * [vertex()](/reference/sketch_vertex) - Add a new vertex to a shape.
@@ -52,7 +52,7 @@
 * [curve_detail()](/reference/sketch_curve_detail) - Sets the resolution at which curves display.
 * [curve_point()](/reference/sketch_curve_point) - Evaluates the curve at point t for points a, b, c, d.
 * [curve_tangent()](/reference/sketch_curve_tangent) - Calculates the tangent of a point on a curve.
-* [curve_tightness()](/reference/sketch_curve_tightness) - Modifies the quality of forms created with curve() and curve_vertex().
+* [curve_tightness()](/reference/sketch_curve_tightness) - Modifies the quality of forms created with `curve()` and `curve_vertex()`.
 
 ### Creating and Displaying Shape Objects
 
@@ -81,12 +81,12 @@
 ### Analyzing Colors
 
 * [hex_color()](/reference/sketch_hex_color) - Convert a color value to a hex color string.
-* [alpha()](/reference/sketch_alpha) - Extracts the alpha value from a color, scaled to match current color_mode().
-* [blue()](/reference/sketch_blue) - Extracts the blue value from a color, scaled to match current color_mode().
+* [alpha()](/reference/sketch_alpha) - Extracts the alpha value from a color, scaled to match current `color_mode()`.
+* [blue()](/reference/sketch_blue) - Extracts the blue value from a color, scaled to match current `color_mode()`.
 * [brightness()](/reference/sketch_brightness) - Extracts the brightness value from a color.
-* [green()](/reference/sketch_green) - Extracts the green value from a color, scaled to match current color_mode().
+* [green()](/reference/sketch_green) - Extracts the green value from a color, scaled to match current `color_mode()`.
 * [hue()](/reference/sketch_hue) - Extracts the hue value from a color.
-* [red()](/reference/sketch_red) - Extracts the red value from a color, scaled to match current color_mode().
+* [red()](/reference/sketch_red) - Extracts the red value from a color, scaled to match current `color_mode()`.
 * [saturation()](/reference/sketch_saturation) - Extracts the saturation value from a color.
 
 ### Stroke Attributes and Style Control
@@ -94,10 +94,10 @@
 * [stroke_weight()](/reference/sketch_stroke_weight) -  Sets the width of the stroke used for lines, points, and the border around shapes.
 * [stroke_cap()](/reference/sketch_stroke_cap) - Sets the style for rendering line endings.
 * [stroke_join()](/reference/sketch_stroke_join) - Sets the style of the joints which connect line segments.
-* [pop_style()](/reference/sketch_pop_style) - The push_style() function saves the current style settings and pop_style() restores the prior settings; these functions are always used together.
-* [push_style()](/reference/sketch_push_style) - The push_style() function saves the current style settings and pop_style() restores the prior settings.
-* [push()](/reference/sketch_push) - combines `push_style()` and `push_matrix()` The push() function saves the current drawing style settings and transformations, while pop() restores these settings.
-* [pop()](/reference/sketch_pop) - combines `pop_style()` and `pop_matrix()` The pop() function restores the previous drawing style settings and transformations after push() has changed them.
+* [pop_style()](/reference/sketch_pop_style) - The `push_style()` function saves the current style settings and `pop_style()` restores the prior settings; these functions are always used together.
+* [push_style()](/reference/sketch_push_style) - The `push_style()` function saves the current style settings and `pop_style()` restores the prior settings.
+* [push()](/reference/sketch_push) - combines `push_style()` and `push_matrix()` The `push()` function saves the current drawing style settings and transformations, while `pop()` restores these settings.
+* [pop()](/reference/sketch_pop) - combines `pop_style()` and `pop_matrix()` The `pop()` function restores the previous drawing style settings and transformations after `push()` has changed them.
 
 [back to top](#top)
 
@@ -115,38 +115,38 @@
 
 ### Keyboard Variables
 
-* [is_key_pressed](/reference/sketch_is_key_pressed) - The is_key_pressed variable stores whether or not a keyboard button is currently being pressed.
-* [key](/reference/sketch_key) - The system variable key always contains the value of the most recent key on the keyboard that was used (either pressed or released).
-* [key_code](/reference/sketch_key_code) - The variable key_code is used to detect special keys such as the arrow keys (UP, DOWN, LEFT, and RIGHT) - as well as ALT, CONTROL, and SHIFT.
+* [is_key_pressed](/reference/sketch_is_key_pressed) - The `is_key_pressed` variable stores whether or not a keyboard button is currently being pressed.
+* [key](/reference/sketch_key) - The system variable `key` always contains the value of the most recent key on the keyboard that was used (either pressed or released). It will contain the constant `CODED`, in the case of special keys that can then be discriminated with `key_code`.
+* [key_code](/reference/sketch_key_code) - The variable `key_code` is used to detect special keys such as the arrow keys (`UP`, `DOWN`, `LEFT`, and `RIGHT`) - as well as `ALT`, `CONTROL`, and `SHIFT`. 
 
 ### Keyboard Event Functions
 
-* key_pressed() - If defined, it will be called once when a keyboard key is pressed.
-* key_released() - If defined, it will be called once when a keyboard key is released.
-* key_typed() - If defined, it will be called once when a keyboard key is pressed and released.
+* `key_pressed()` - If defined, it will be called once when a keyboard key is pressed.
+* `key_released()` - If defined, it will be called once when a keyboard key is released.
+* `key_typed()` - If defined, it will be called once when a keyboard key is pressed and released.
 * [Py5KeyEvent Class](/reference/py5keyevent) - A Py5KeyEvent object will be passed to user-defined keyboard event functions.
 
 ### Mouse Variables
 
-* [is_mouse_pressed](/reference/sketch_is_mouse_pressed) - The is_mouse_pressed variable stores whether or not a mouse button is currently being pressed.
-* [mouse_button](/reference/sketch_mouse_button) - When a mouse button is pressed, the value of the system variable mouse_button is set to either LEFT, RIGHT, or CENTER, depending on which button is pressed.
-* [mouse_x](/reference/sketch_mouse_x) - The system variable mouse_x always contains the current horizontal coordinate of the mouse.
-* [mouse_y](/reference/sketch_mouse_y) - The system variable mouse_y always contains the current vertical coordinate of the mouse.
-* [pmouse_x](/reference/sketch_pmouse_x) - The system variable pmouse_x always contains the horizontal position of the mouse in the frame previous to the current frame.
-* [pmouse_y](/reference/sketch_pmouse_y) - The system variable pmouse_y always contains the vertical position of the mouse in the frame previous to the current frame.
+* [is_mouse_pressed](/reference/sketch_is_mouse_pressed) - The `is_mouse_pressed` variable stores whether or not a mouse button is currently being pressed.
+* [mouse_button](/reference/sketch_mouse_button) - When a mouse button is pressed, the value of the system variable `mouse_button` is set to either `LEFT`, `RIGHT`, or `CENTER`, depending on which button is pressed.
+* [mouse_x](/reference/sketch_mouse_x) - The system variable `mouse_x` always contains the current horizontal coordinate of the mouse.
+* [mouse_y](/reference/sketch_mouse_y) - The system variable `mouse_y` always contains the current vertical coordinate of the mouse.
+* [pmouse_x](/reference/sketch_pmouse_x) - The system variable `pmouse_x` always contains the horizontal position of the mouse in the frame previous to the current frame.
+* [pmouse_y](/reference/sketch_pmouse_y) - The system variable `pmouse_y` always contains the vertical position of the mouse in the frame previous to the current frame.
 * [rmouse_x](/reference/sketch_rmouse_x) - The current horizontal coordinate of the mouse after activating scale invariant drawing.
 * [rmouse_y](/reference/sketch_rmouse_y) - The current vertical coordinate of the mouse after activating scale invariant drawing.
 
 ### Mouse Event Functions
 
-* mouse_pressed() - If defined, it will be called once when a mouse button is pressed.
-* mouse_released() - If defined, it will be called once when a mouse button is pressed.
-* mouse_clicked() - If defined, it will be called once when a mouse button is clicked.
-* mouse_dragged() - If defined, it will be called many times as the mouse is moved while pressed.
-* mouse_wheel() - If defined, it will be called as the mouse wheel is rolled.
-* mouse_moved() - If defined, it will be called many times as the mouse is moved.
-* mouse_entered() - If defined, it will be called when the mouse enters the sketch area.
-* mouse_exited() - If defined, it will be called when the mouse leaves the sketch area.
+* `mouse_pressed()` - If defined, it will be called once when a mouse button is pressed.
+* `mouse_released()` - If defined, it will be called once when a mouse button is pressed.
+* `mouse_clicked()` - If defined, it will be called once when a mouse button is clicked.
+* `mouse_dragged()` - If defined, it will be called many times as the mouse is moved while pressed.
+* `mouse_wheel()` - If defined, it will be called as the mouse wheel is rolled.
+* `mouse_moved()` - If defined, it will be called many times as the mouse is moved.
+* `mouse_entered()` - If defined, it will be called when the mouse enters the sketch area.
+* `mouse_exited()` - If defined, it will be called when the mouse leaves the sketch area.
 * [Py5MouseEvent Class](/reference/py5mouseevent) - A Py5MouseEvent object will be passed to user-defined mouse event functions.
 
 ### Time & Date Helpers
@@ -165,10 +165,10 @@
 
 ### Saving Files
 
-* [begin_raw()](/reference/sketch_begin_raw) - To create vectors from 3D data, use the begin_raw() and end_raw() commands.
+* [begin_raw()](/reference/sketch_begin_raw) - To create vectors from 3D data, use the `begin_raw()` and `end_raw()` commands.
 * [begin_record()](/reference/sketch_begin_record) - Opens a new file and all subsequent drawing functions are echoed to this file as well as the display window.
-* [end_raw()](/reference/sketch_end_raw) - Complement to begin_raw(); they must always be used together.
-* [end_record()](/reference/sketch_end_record) - Stops the recording process started by begin_record() and closes the file.
+* [end_raw()](/reference/sketch_end_raw) - Complement to `begin_raw()`; they must always be used together.
+* [end_record()](/reference/sketch_end_record) - Stops the recording process started by `begin_record()` and closes the file.
 * [save_bytes()](/reference/sketch_save_bytes) - Save byte data to a file.
 * [save_json()](/reference/sketch_save_json) - Save JSON data to a file.
 * [save_pickle()](/reference/sketch_save_pickle) - Pickle a Python object to a file.
@@ -183,7 +183,7 @@
 ### Text Area (Console)
 
 * [println()](/reference/sketch_println) - Print text or other values to the console (not the sketch drawing area). Similar to Python's `print()`.
-* [set_println_stream()](/reference/sketch_set_println_stream) - Customize where the output of println() goes.
+* [set_println_stream()](/reference/sketch_set_println_stream) - Customize where the output of `println()` goes.
 
 [back to top](#top)
 
@@ -201,7 +201,7 @@
 
 * [create_font()](/reference/sketch_create_font) - Dynamically converts a font to the format used by py5 from a .ttf or .otf file inside the Sketch’s “data” folder or a font that’s installed elsewhere on the computer.
 * [load_font()](/reference/sketch_load_font) - Loads a .vlw formatted font into a Py5Font object.
-* [text_font()](/reference/sketch_text_font) - Sets the current font that will be drawn with the text() function.
+* [text_font()](/reference/sketch_text_font) - Sets the current font that will be drawn with the `text()` function.
 * [Py5Font](/reference/py5font) - Py5Font is the font class for py5, stores font information in a way py5 can use.
 
 ### Text Metrics
@@ -216,7 +216,7 @@
 
 ### Basic Operations
 
-* [push_matrix()](/reference/sketch_push_matrix) - Saves the transformation matrix that describes the current coordinate system in the matrix stack so that it can be restored later with pop_matrix().
+* [push_matrix()](/reference/sketch_push_matrix) - Saves the transformation matrix that describes the current coordinate system in the matrix stack so that it can be restored later with `pop_matrix()`.
 * [pop_matrix()](/reference/sketch_pop_matrix) - Retrieves the last transformation matrix stored in the matrix stack restoring a previous coordinate system state.
 * [translate()](/reference/sketch_translate) - Specifies an amount to displace the coordinate system origin, displacing objects drawn within the display window. Can be used in 2D, `translate(x, y)`, or 3D, `translate(x, y, z)`.
 * [rotate()](/reference/sketch_rotate) - Rotates the coordinate system the amount specified by the angle parameter.
@@ -244,11 +244,11 @@
 
 ### Setup and Variables
 
-* [size()](/reference/sketch_size) - Must be called only once to define the sketch dimensions, width and height, in pixel units. Other than in static mode, it must be used inside setup() or settings().
-* [full_screen()](/reference/sketch_full_screen) - Make the sketch use the full size of the computer’s display. Replaces size().
+* [size()](/reference/sketch_size) - Must be called only once to define the sketch dimensions, width and height, in pixel units. Other than in static mode, it must be used inside `setup()` or `settings()`.
+* [full_screen()](/reference/sketch_full_screen) - Make the sketch use the full size of the computer’s display. Replaces `size()`.
 * [width](/reference/sketch_width) - System variable that stores the width of the display window.
 * [height](/reference/sketch_height) - System variable that stores the height of the display window.
-* [smooth()](/reference/sketch_smooth) - Draws all geometry with smooth (anti-aliased) - edges. Must be used just after size().
+* [smooth()](/reference/sketch_smooth) - Draws all geometry with smooth (anti-aliased) - edges. Must be used just after `size()`.
 * [no_smooth()](/reference/sketch_no_smooth) - Draws all geometry and fonts with jagged (aliased) - edges and images with hard edges between the pixels when enlarged rather than interpolating pixels.
 * [cursor()](/reference/sketch_cursor) - Sets the cursor to a predefined symbol or an image, or makes it visible if already hidden.
 * [no_cursor()](/reference/sketch_no_cursor) - Hides the cursor from view.
@@ -303,11 +303,11 @@
 ### Random
 
 * [noise()](/reference/sketch_noise) - Generate pseudo-random noise values for specific coordinates using Processing’s noise algorithm.
-* [noise_detail()](/reference/sketch_noise_detail) - Adjusts the character and level of detail of Processing’s noise algorithm, produced by the noise() function.
-* [noise_seed()](/reference/sketch_noise_seed) - Sets the seed value for noise().
+* [noise_detail()](/reference/sketch_noise_detail) - Adjusts the character and level of detail of Processing’s noise algorithm, produced by the `noise()` function.
+* [noise_seed()](/reference/sketch_noise_seed) - Sets the seed value for `noise()`.
 * [np_random](/reference/sketch_np_random) - Access the numpy random number generator that py5 uses to provide random number functionality.
 * [os_noise()](/reference/sketch_os_noise) - Generate pseudo-random noise values for specific coordinates using the OpenSimplex 2 algorithm (smooth version / SuperSimplex).
-* [os_noise_seed()](/reference/sketch_os_noise_seed) - Sets the seed value for os_noise().
+* [os_noise_seed()](/reference/sketch_os_noise_seed) - Sets the seed value for `os_noise()`.
 * [random()](/reference/sketch_random) - Generates random numbers.
 * [random_choice()](/reference/sketch_random_choice) - Select random items from a list.
 * [random_gaussian()](/reference/sketch_random_gaussian) - Generates random gaussian values.
@@ -316,9 +316,9 @@
 
 ### Trigonometry
 
-* [acos()](/reference/sketch_acos) - The inverse of cos(), returns the arc cosine of a value.
-* [asin()](/reference/sketch_asin) - The inverse of sin(), returns the arc sine of a value.
-* [atan()](/reference/sketch_atan) - The inverse of tan(), returns the arc tangent of a value.
+* [acos()](/reference/sketch_acos) - The inverse of `cos()`, returns the arc cosine of a value.
+* [asin()](/reference/sketch_asin) - The inverse of `sin()`, returns the arc sine of a value.
+* [atan()](/reference/sketch_atan) - The inverse of `tan()`, returns the arc tangent of a value.
 * [atan2()](/reference/sketch_atan2) - Calculates the angle (in radians) - from a specified point to the coordinate origin as measured from the positive x-axis.
 * [cos()](/reference/sketch_cos) - Calculates the cosine of an angle.
 * [degrees()](/reference/sketch_degrees) - Converts a radian measurement to its corresponding value in degrees.
@@ -332,8 +332,8 @@
 
 ### Loading and Displaying
 
-* [image()](/reference/sketch_image) - The image() function draws an image to the display window.
-* [image_mode()](/reference/sketch_image_mode) - Modifies the location from which images are drawn by changing the way in which parameters given to image() are interpreted.
+* [image()](/reference/sketch_image) - The `image()` function draws an image to the display window.
+* [image_mode()](/reference/sketch_image_mode) - Modifies the location from which images are drawn by changing the way in which parameters given to `image()` are interpreted.
 * [load_image()](/reference/sketch_load_image) - Load an image into a variable of type Py5Image.
 * [no_tint()](/reference/sketch_no_tint) - Removes the current fill value for displaying images and reverts to displaying images with their original hues.
 * [tint()](/reference/sketch_tint) - Sets the fill value for displaying images.
@@ -344,13 +344,13 @@
 * [blend()](/reference/sketch_blend) - Blends a region of pixels from one image into another (or in itself again) - with full alpha channel support.
 * [copy()](/reference/sketch_copy) - Copies a region of pixels from the display window to another area of the display window and copies a region of pixels from an image used as the src_img parameter into the display window.
 * [get()](/reference/sketch_get) - Reads the color of any pixel or grabs a section of the drawing surface.
-* [load_np_pixels()](/reference/sketch_load_np_pixels) - Loads the pixel data of the current display window into the np_pixels[] array.
-* [load_pixels()](/reference/sketch_load_pixels) - Loads the pixel data of the current display window into the pixels[] array.
-* [np_pixels[]](/reference/sketch_np_pixels) - The np_pixels[] array contains the values for all the pixels in the display window.
-* [pixels[]](/reference/sketch_pixels) - The pixels[] array contains the values for all the pixels in the display window.
-* [set_np_pixels()](/reference/sketch_set_np_pixels) - Set the entire contents of np_pixels[] to the contents of another properly sized and typed numpy array.
-* [update_np_pixels()](/reference/sketch_update_np_pixels) - Updates the display window with the data in the np_pixels[] array.
-* [update_pixels()](/reference/sketch_update_pixels) - Updates the display window with the data in the pixels[] array.
+* [load_np_pixels()](/reference/sketch_load_np_pixels) - Loads the pixel data of the current display window into the `np_pixels[]` array.
+* [load_pixels()](/reference/sketch_load_pixels) - Loads the pixel data of the current display window into the `pixels[]` array.
+* [np_pixels[]](/reference/sketch_np_pixels) - The `np_pixels[]` array contains the values for all the pixels in the display window.
+* [pixels[]](/reference/sketch_pixels) - The `pixels[]` array contains the values for all the pixels in the display window.
+* [set_np_pixels()](/reference/sketch_set_np_pixels) - Set the entire contents of `np_pixels[]` to the contents of another properly sized and typed numpy array.
+* [update_np_pixels()](/reference/sketch_update_np_pixels) - Updates the display window with the data in the `np_pixels[]` array.
+* [update_pixels()](/reference/sketch_update_pixels) - Updates the display window with the data in the `pixels[]` array.
 
 ### Textures
 
@@ -372,9 +372,9 @@
 
 ### Camera
 
-* [begin_camera()](/reference/sketch_begin_camera) - The begin_camera() and end_camera() functions enable advanced customization of the camera space.
+* [begin_camera()](/reference/sketch_begin_camera) - The `begin_camera()` and `end_camera()` functions enable advanced customization of the camera space.
 * [camera()](/reference/sketch_camera) - Sets the position of the camera through setting the eye position, the center of the scene, and which axis is facing upward.
-* [end_camera()](/reference/sketch_end_camera) - The begin_camera() and end_camera() methods enable advanced customization of the camera space.
+* [end_camera()](/reference/sketch_end_camera) - The `begin_camera()` and `end_camera()` methods enable advanced customization of the camera space.
 * [frustum()](/reference/sketch_frustum) - Sets a perspective matrix as defined by the parameters.
 * [ortho()](/reference/sketch_ortho) - Sets an orthographic projection and defines a parallel clipping volume.
 * [perspective()](/reference/sketch_perspective) - Sets a perspective projection applying foreshortening, making distant objects appear smaller than closer ones.
@@ -422,7 +422,7 @@
 * [g](/reference/sketch_g) - The Py5Graphics object used by the Sketch.
 * [get_graphics()](/reference/sketch_get_graphics) - Get the Py5Graphics object used by the Sketch.
 * [hint()](/reference/sketch_hint) - This function is used to enable or disable special features that control how graphics are drawn.
-* [no_clip()](/reference/sketch_no_clip) - Disables the clipping previously started by the clip() function.
+* [no_clip()](/reference/sketch_no_clip) - Disables the clipping previously started by the `clip()` function.
 
 ### Shaders
 
@@ -436,11 +436,11 @@
 
 ### Draw Loop Control
 
-* [loop()](/reference/sketch_loop) - By default, py5 loops through draw() continuously, executing the code within it.
-* [no_loop()](/reference/sketch_no_loop) - Stops py5 from continuously executing the code within draw().
-* [redraw()](/reference/sketch_redraw) - Executes the code within draw() one time.
+* [loop()](/reference/sketch_loop) - By default, py5 loops through `draw()` continuously, executing the code within it.
+* [no_loop()](/reference/sketch_no_loop) - Stops py5 from continuously executing the code within `draw()`.
+* [redraw()](/reference/sketch_redraw) - Executes the code within `draw()` one time.
 * [exit_sketch()](/reference/sketch_exit_sketch) - Quits/stops/exits the program.
-* exiting() - A function that, if defined by the user, will be called to be executed after the sketch stops.
+* `exiting()` - A function that, if defined by the user, will be called to be executed after the sketch stops.
 
 ### Advanced Execution Control
 
@@ -450,11 +450,11 @@
 * [is_dead_from_error](/reference/sketch_is_dead_from_error) - Boolean value reflecting if the Sketch has been run and has now stopped because of an error.
 * [is_ready](/reference/sketch_is_ready) - Boolean value reflecting if the Sketch is in the ready state.
 * [is_running](/reference/sketch_is_running) - Boolean value reflecting if the Sketch is in the running state.
-* [pargs](/reference/sketch_pargs) - list of strings passed to the Sketch through the call to run_sketch() List of strings passed to the Sketch through the call to run_sketch().
+* [pargs](/reference/sketch_pargs) - list of strings passed to the Sketch through the call to `run_sketch()` List of strings passed to the Sketch through the call to `run_sketch()`.
 
 ### Performance Profiling
 
-* [print_line_profiler_stats()](/reference/sketch_print_line_profiler_stats) - Print the line profiler stats initiated with profile_draw() or profile_functions().
+* [print_line_profiler_stats()](/reference/sketch_print_line_profiler_stats) - Print the line profiler stats initiated with `profile_draw()` or `profile_functions()`.
 * [profile_draw()](/reference/sketch_profile_draw) - Profile the execution times of the draw function with a line profiler.
 * [profile_functions()](/reference/sketch_profile_functions) - Profile the execution times of the Sketch’s functions with a line profiler.
 
@@ -485,14 +485,14 @@
 * [Py5Shape](/reference/py5shape) - Datatype for storing shapes. Allows loading and displaying SVG (Scalable Vector Graphics) and OBJ shapes.
 * [Py5Shader](/reference/py5shader) - This class encapsulates a GLSL shader program, including a vertex and a fragment shader.
 * [Py5Surface](/reference/py5surface) - The Py5Surface object is the actual window py5 draws animations to. You can use this to interact with the window and change some of its characteristics, such as the window title or location.
-* [Py5Font](/reference/py5font) - Py5Font is the font class for py5. To create a font to use with py5, use create_font_file(). This will create a font in the format py5 requires.
+* [Py5Font](/reference/py5font) - Py5Font is the font class for py5. To create a font to use with py5, use `create_font_file()`. This will create a font in the format py5 requires.
 * [Py5MouseEvent](/reference/py5mouseevent) - A Py5MouseEvent object will be passed to user-defined mouse event functions. Useful for capturing all of a user’s mouse activity.
 * [Py5KeyEvent](/reference/py5keyevent) - A Py5MouseEvent object will be passed to user-defined mouse event functions. Useful for capturing all of a user’s keyboard activity.
 * [Py5Vector](/reference/py5vector) - Class to describe a 2D, 3D, or 4D vector. A vector is an entity that has both a magnitude and a direction. This datatype stores the components of the vector as a set of coordinates.
 
 ### Tools
 
-* [Py5 Magics](/reference/py5vector) - The py5 Magics are Jupyter Notebook “meta-commands” that can be within Jupyter Notebooks to enhance py5’s ability to work within the notebook. The py5 magics will enable users to create Sketches and embed the results in the Notebook without defining any functions or calling the size() function.
+* [Py5 Magics](/reference/py5vector) - The py5 Magics are Jupyter Notebook “meta-commands” that can be within Jupyter Notebooks to enhance py5’s ability to work within the notebook. The py5 magics will enable users to create Sketches and embed the results in the Notebook without defining any functions or calling the `size()` function.
 * [Py5 Tools](/reference/py5tools) - The py5 Tools are extra utility functions not directly related to creating Sketches that help facilitate the use of py5. For example, you can use these to add jar files to the Java classpath before importing py5.
 * [Py5 Functions](/reference/py5functions) - The py5 Functions are extra utility functions that make py5 easier to use. For example, you can use these to Processing’s vlw font files without having to use Processing’s IDE.
 
