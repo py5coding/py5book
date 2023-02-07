@@ -492,7 +492,7 @@
 
 ### Tools
 
-* [Py5 Magics](/reference/py5vector) - The py5 Magics are Jupyter Notebook “meta-commands” that can be within Jupyter Notebooks to enhance py5’s ability to work within the notebook. The py5 magics will enable users to create Sketches and embed the results in the Notebook without defining any functions or calling the `size()` function.
+* [Py5 Magics](/reference/py5magics) - The py5 Magics are Jupyter Notebook “meta-commands” that can be within Jupyter Notebooks to enhance py5’s ability to work within the notebook. The py5 magics will enable users to create Sketches and embed the results in the Notebook without defining any functions or calling the `size()` function.
 * [Py5 Tools](/reference/py5tools) - The py5 Tools are extra utility functions not directly related to creating Sketches that help facilitate the use of py5. For example, you can use these to add jar files to the Java classpath before importing py5.
 * [Py5 Functions](/reference/py5functions) - The py5 Functions are extra utility functions that make py5 easier to use. For example, you can use these to Processing’s vlw font files without having to use Processing’s IDE.
 
