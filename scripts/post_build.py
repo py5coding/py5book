@@ -80,3 +80,21 @@ if (BUILD_DIR / "files").exists():
 shutil.copytree("files", BUILD_DIR / "files")
 
 shutil.copytree("tutorials/images", BUILD_DIR / "tutorials/images")
+
+###############################################################################
+# FIX 404.HTML PAGE
+###############################################################################
+
+with open(BUILD_DIR / "404.html") as f:
+    html = f.read()
+
+html = re.sub(r'(href|src)="([^"]*)"', r'\1="/\2"', html)
+
+with open(BUILD_DIR / "404.html", 'w') as f:
+    f.write(html)
+
+###############################################################################
+# COPY SUMMARY PAGE TO INDEX.HTML
+###############################################################################
+
+shutil.copy(BUILD_DIR / "reference/summary.html", BUILD_DIR / "reference/index.html")
