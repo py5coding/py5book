@@ -17,6 +17,7 @@
 #   with this program. If not, see <https://www.gnu.org/licenses/>.
 #
 # *****************************************************************************
+import os
 import re
 from pathlib import Path
 import shutil
@@ -98,3 +99,12 @@ with open(BUILD_DIR / "404.html", 'w') as f:
 ###############################################################################
 
 shutil.copy(BUILD_DIR / "reference/summary.html", BUILD_DIR / "reference/index.html")
+
+###############################################################################
+# REMOVE JUNK FILES
+###############################################################################
+
+os.remove(BUILD_DIR / "README.html")
+
+for file in (BUILD_DIR / "reference").glob("include*"):
+    os.remove(file)
