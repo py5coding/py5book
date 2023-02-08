@@ -92,3 +92,9 @@ html = re.sub(r'(href|src)="([^"]*)"', r'\1="/\2"', html)
 
 with open(BUILD_DIR / "404.html", 'w') as f:
     f.write(html)
+
+###############################################################################
+# COPY SUMMARY PAGE TO INDEX.HTML
+###############################################################################
+
+shutil.copy(BUILD_DIR / "reference/summary.html", BUILD_DIR / "reference/index.html")
