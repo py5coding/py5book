@@ -16,7 +16,7 @@ def draw():
 
 
 def mouse_pressed():
-    exit()
+    py5.exit_sketch()
 ```
 
 </div></div>
@@ -39,4 +39,4 @@ Underlying Processing method: [exit](https://processing.org/reference/exit_.html
 exit_sketch() -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on March 07, 2023 15:37:49pm UTC
