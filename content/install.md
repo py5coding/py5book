@@ -49,35 +49,30 @@ pip install py5
 
 ### Jupyter Notebooks support
 
-If you like using Jupyter Notebooks you can install py5 and py5jupyter at the same time with this one command:
+If you intend to use py5 with Jupyter Notebooks, you can install py5 and py5jupyter at the same time with this one command:
 
 ``` bash
 pip install py5[jupyter]
 ```
 
-<sub>The ``[jupyter]`` bit at the end of that tells the Python package installer to install py5's optional py5jupyter library. If you have py5 installed already you can use `pip install py5jupyter`.</sub>
+The `[jupyter]` suffix tells the Python package installer to install py5's optional py5jupyter library. If you have py5 installed already you can use `pip install py5jupyter`.
 
-
-Then you can install one or both [py5's Jupyter Notebook Kernels](#jupyter-notebook-kernels): 
-
-- To install **py5 kernel** for import mode skethes:
+Next, you can install one or both of [py5's Jupyter Notebook Kernels](#jupyter-notebook-kernels). To install the [py5 kernel](#py5-kernel) for imported mode Sketches, use this command:
 
 ``` bash
 python -m py5jupyter.kernels.py5.install --sys-prefix
 ```
 
-- To install **py5bot** for static mode sketches:
+To install [py5bot](#py5bot) for static mode sketches, use this:
 
 ``` bash
 python -m py5jupyter.kernels.py5bot.install --sys-prefix
 ```
 
-
-### Optional SVG support with Cairo 
+### Optional SVG support with Cairo
 
 You can optionally install [Cairo](https://www.cairographics.org/) and
 [CairoSVG](https://cairosvg.org/) to enable py5's extra SVG support.
-
 
 ## Quick Example
 
