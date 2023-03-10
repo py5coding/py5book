@@ -47,9 +47,7 @@ print(py5.pargs[0])
 
 Run the Sketch. Code in the `settings()`, `setup()`, and `draw()` functions will be used to actualize your Sketch.
 
-Use the `block` parameter to specify if the call to `run_sketch()` should return immediately (asynchronous Sketch execution) or block until the Sketch exits. If the `block` parameter is not specified, py5 will first attempt to determine if the Sketch is running in a Jupyter Notebook or an IPython shell. If it is, `block` will default to `False`, and `True` otherwise.
-
-Blocking is not supported on OSX. This is because of the (current) limitations of py5 on OSX. If the `block` parameter is set to `True`, a warning message will appear and it will be changed to `False`.
+Use the `block` parameter to specify if the call to `run_sketch()` should return immediately (asynchronous Sketch execution) or block until the Sketch exits. If the `block` parameter is not specified, py5 will first attempt to determine if the Sketch is running in a Jupyter Notebook or an IPython shell. If it is, `block` will default to `False`, and `True` otherwise. However, on OSX, these default values are required, as py5 cannot work on OSX without them.
 
 A list of strings passed to `py5_options` will be passed to the Processing PApplet class as arguments to specify characteristics such as the window's location on the screen. A list of strings passed to `sketch_args` will be available to a running Sketch using [](sketch_pargs). See the third example for an example of how this can be used.
 
@@ -71,4 +69,4 @@ run_sketch(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on March 10, 2023 16:16:59pm UTC
