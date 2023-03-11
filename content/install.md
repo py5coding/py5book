@@ -184,8 +184,6 @@ Then use this next command to install Java 17.
 python -c "import jdk; print('Java installed to', jdk.install('17'))"
 ```
 
-You'll get a weird error if you run that command more than once.
-
 It isn't necessary to set the `JAVA_HOME` environment variable, but if it is
 already set, you will need to make sure it is set to a Java 17 installation
 because py5 will always use the version that `JAVA_HOME` points to, even if
