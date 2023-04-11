@@ -8,17 +8,16 @@ Processing.
 ## Prerequisites
 
 You will need to download and install
-[Anaconda](https://www.anaconda.com/products/individual). You\'ll also
+[Anaconda](https://www.anaconda.com/products/individual). You'll also
 need build tools such as `make` and `ant`, as well as the source control
 program `git`.
 
 ## Clone Source Repository from GitHub
 
 You will need to clone the [py5generator
-repo](https://github.com/py5coding/py5generator) from GitHub. If you don\'t
-already have the [Processing 4
-application](https://processing.org/download) on your computer, you\'ll need to
-download that too.
+repo](https://github.com/py5coding/py5generator) from GitHub. If you don't
+already have the [Processing 4 application](https://processing.org/download) on
+your computer, you'll need to download that too.
 
 On my computer I keep all of the py5 repos together in one directory.
 
@@ -79,7 +78,7 @@ The optional `skip_autopep8` argument will skip autopep8 formatting of
 the output code, accelerating the build process. Use this during
 development.
 
-A full build takes under a minute to complete. When this runs you\'ll
+A full build takes under a minute to complete. When this runs you'll
 see a lot of logging information appear on the screen. There will be a
 few warnings about skipping typehints for some Matrix functions, but
 everything else will be info messages. You should familiarize yourself
@@ -90,7 +89,7 @@ The final Makefile step installs the generated code into the active
 Anaconda environment. At this point the new code will be available for
 you to use.
 
-When the build process detects changes to Processing\'s methods and fields, a
+When the build process detects changes to Processing's methods and fields, a
 message will appear in the logs. This process is designed to adapt as the
 Processing library evolves. Be aware that signature changes to known methods
 will result in automatic updates to documentation files in the
