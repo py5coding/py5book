@@ -8,14 +8,14 @@ The intended audience is intermediate to advanced coders with some experience cr
 
 Before diving into the details of how py5 actually works, let's first discuss how py5 doesn't work.
 
-You should know that py5 was not the first open source project that attempted to create a Python 3 version of Processing that leveraged the Processing Jar files, as [Processing.py](https://py.processing.org/) does in Jython. The general approach of the other attempts, as well the first few iterations of py5's architecture, looked very much like this:
+You should know that py5 was not the first open source project that attempted to create a Python 3 version of Processing that leveraged the Processing Jar files, as [Processing.py](https://py.processing.org/) does in Jython. The general approach of the other attempts, as well the first few iterations of py5's architecture, followed this pattern:
 
 1. Python code calls the user's `settings()` function
 2. Python code calls Java code to initialize the Sketch window
 3. Python code calls the user's `setup()` function once
 4. Python code calls the user's `draw()` function in a loop
 
-You can imagine implementing the critical `run_sketch()` function with code that looks very much like this:
+You can imagine implementing the critical `run_sketch()` function with code that looks like this:
 
 ```python
 import time
@@ -29,12 +29,12 @@ def run_sketch(settings, setup, draw):
         time.sleep(1 / frame_rate)
 ```
 
-In fact, if you look at the [initial commit of the py5 project](https://github.com/py5coding/py5generator/blob/636712b1c786eee67a6e1cbec9d59d2a25afb0e8/packages/py5generator/py5generator/templates/py5_init_template.py), you can see this is very close to what py5 actually did. (Note that this early version of py5 also used modified Processing Library code that was never checked in.) Observe that with this approach, Python is managing the animation thread. This approach could in fact create runable py5 Sketches. There were, however, many problems. Two of the most critical were:
+In fact, if you look at the [initial commit of the py5 project](https://github.com/py5coding/py5generator/blob/636712b1c786eee67a6e1cbec9d59d2a25afb0e8/packages/py5generator/py5generator/templates/py5_init_template.py), you can see this is very close to what py5 actually did. (Note that this early version of py5 also used modified Processing Library code that was never checked in.) Observe that with this approach, Python is managing the animation thread. Remarkably, this could in fact create runnable py5 Sketches. There were, however, many problems. Two of the most critical were:
 
 * There's no way to trigger mouse and keyboard events
 * The OpenGL renderers `P2D` and `P3D` always crashed
 
-The problem with the OpenGL renderers had to do with something called a "context thread." Bottom line, only one thread is allowed to make OpenGL calls, and there is no way to make that thread be the Python thread this early version of py5 was using to call the user's `draw()` function in a loop. I tried everything I could think of to get OpenGL to work. As this work was done during the first month of COVID lockdowns, I had a lot of time to experiment. Nevertheless, this approach was not and could not be successful.
+The problem with the OpenGL renderers had to do with something called a "context thread." The bottom line is only one thread is allowed to make OpenGL calls, and there is no way to make that thread be the Python thread this early version of py5 was using to call the user's `draw()` function in a loop. I tried everything I could think of to get OpenGL to work. As this work was done during the first month of COVID lockdowns, I had a lot of time to experiment. Nevertheless, this approach was not and could not be successful.
 
 ## How py5 Actually Works
 
@@ -48,8 +48,8 @@ The basic steps of a running py5 Sketch look like this:
 2. Python code passes the instance of `py5.core.Sketch` to the Processing Library's `runSketch()` method
 3. The Processing Library's `runSketch()` method launches the Sketch, opening the Sketch window and starting the animation thread
 4. The Processing Library animation thread calls `py5.core.Sketch`'s `setup()` and `draw()` methods
-5. `py5.core.Sketch`'s `setup()` and `draw()` methods make calls from Java to Python, instructing it to call the user's `setup()` and `draw()` functions
-6. Execute the user's `setup()` and `draw()` functions, making calls to py5's API methods such as `rect()`, `begin_shape()`, `convert_shape()`, `random()`, etc.
+5. `py5.core.Sketch`'s `setup()` and `draw()` methods make calls from Java to Python, instructing it to call the user's `setup()` and `draw()` Python functions
+6. Execute the user's `setup()` and `draw()` Python functions, making calls to py5's API methods such as `rect()`, `begin_shape()`, `convert_shape()`, `random()`, etc.
 7. Calls to py5's API methods that leverage the Processing Library code such as `rect()` and `begin_shape()` make corresponding calls to the Processing Library methods `rect()`, `beginShape()`, etc.
 8. Calls to py5's API methods that are implemented in Python such as `convert_shape()` and `random()` provide their functionality without using the Processing Library
 
@@ -61,7 +61,7 @@ Let's review py5's code in more detail, examining each of the above steps to und
 
 The JPype library lets Python create instances of Java classes. It can create an instance of `py5.core.Sketch` with [`jpype.JClass`](https://jpype.readthedocs.io/en/latest/api.html#jpype.JClass).
 
-There is a Python class called `Sketch` that py5 uses to manage the interaction with the Java `py5.core.Sketch` instance. The Java class is instantiated in the Python `Sketch` class's `__init__()` method.
+There is a Python class called `Sketch`, found in [sketch.py](https://github.com/py5coding/py5generator/blob/main/py5_resources/py5_module/py5/sketch.py), that py5 uses to manage the interaction with the Java `py5.core.Sketch` instance. The Java class is instantiated in the Python `Sketch` class's `__init__()` method.
 
 ### 2. Pass `py5.core.Sketch` Instance to the Processing Library's `runSketch()` Method
 
@@ -114,7 +114,7 @@ Almost all of the code for py5's methods that leverage the Processing Library ar
 
 The `self._instance` attribute is the Java `py5.core.Sketch` instance created in step 1. Most of py5's methods are really simple wrappers of their underlying Processing Library methods.
 
-Code written with py5generator's template engine can be customized with decorators or overriden with Python code. How this works is explained in more detail in [](developer/understanding_py5generator).
+Code written with py5generator's template engine can be customized with decorators or overriden with Python code. How this works is explained in more detail in [](understanding_py5generator).
 
 ### 8. API Methods that are Implemented in Python
 
