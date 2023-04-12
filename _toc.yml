@@ -47,12 +47,6 @@ parts:
   - file: content/py5_internals
   - file: content/py5_design
 
-- caption: Developer Information
-  chapters:
-  - file: developer/how_does_py5_work
-  - file: developer/build_process
-  - file: developer/understanding_py5generator
-
 - caption: Reference
   chapters:
   - file: reference/summary
@@ -108,3 +102,9 @@ parts:
   - file: reference/py5functions
     sections:
     - glob: reference/py5functions_*
+
+- caption: Developer Information
+  chapters:
+  - file: developer/how_does_py5_work
+  - file: developer/build_process
+  # - file: developer/understanding_py5generator
