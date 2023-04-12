@@ -103,4 +103,7 @@ parts:
 
 - caption: Developer Information
   chapters:
+  - file: developer/how_does_py5_work
   - file: developer/build_process
+  - file: developer/understanding_py5generator
+
