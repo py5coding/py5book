@@ -34,13 +34,13 @@ In fact, if you look at the [initial commit of the py5 project](https://github.c
 * There's no way to trigger mouse and keyboard events
 * The OpenGL renderers `P2D` and `P3D` always crashed
 
-The problem with the OpenGL renderers had to do with something called a "context thread." The bottom line is only one thread is allowed to make OpenGL calls, and there is no way to make that thread be the Python thread this early version of py5 was using to call the user's `draw()` function in a loop. I tried everything I could think of to get OpenGL to work. As this work was done during the first month of COVID lockdowns, I had a lot of time to experiment. Nevertheless, this approach was not and could not be successful.
+The problem with the OpenGL renderers had to do with something called a "context thread." The bottom line is only one thread is allowed to make OpenGL calls, and there is no way to make that thread be the Python thread that this early version of py5 was using to call the user's `draw()` function in a loop. I tried everything I could think of to get OpenGL to work. As this work was done during the first month of COVID lockdowns, I had a lot of time to experiment. Nevertheless, this approach was not and could not be successful.
 
 ## How py5 Actually Works
 
 The key insight behind py5 was to abandon the above approach and instead leverage JPype's ability to call Python from Java. Calling Java from Python is obviously important, but py5 wouldn't exist if JPype couldn't also make calls in the other direction, making calls *from* Java *to* Python.
 
-The basic idea of py5 is to provide a Processing Sketch in Java that makes calls to Python to execute the user's functions, which will in turn makes calls back to Java to access Processing Library functionality. This approach lets the Processing Library manage the Sketch's animation thread and the various OpenGL complexities. As far as the Processing Library is concerned, every py5 user is running the exact same Java code, `py5.core.Sketch`, found in [Sketch.java](https://github.com/py5coding/py5generator/blob/main/py5_jar/src/main/java/py5/core/Sketch.java). This `py5.core.Sketch` class is an instance of the Processing Library's `processing.core.PApplet`. The `py5.core.Sketch` code makes calls to Python to execute the user's code.
+The basic idea of py5 is to provide a Processing Sketch in Java that makes calls to Python to execute the user's functions, which will in turn make calls back to Java to access Processing Library functionality. This approach lets the Processing Library manage the Sketch's animation thread and the various OpenGL complexities. As far as the Processing Library is concerned, every py5 user is running the exact same Java code, `py5.core.Sketch`, found in [Sketch.java](https://github.com/py5coding/py5generator/blob/main/py5_jar/src/main/java/py5/core/Sketch.java). This `py5.core.Sketch` class is an instance of the Processing Library's `processing.core.PApplet`. The `py5.core.Sketch` code makes calls to Python to execute the user's code.
 
 The basic steps of a running py5 Sketch look like this:
 
@@ -48,9 +48,9 @@ The basic steps of a running py5 Sketch look like this:
 2. Python code passes the instance of `py5.core.Sketch` to the Processing Library's `runSketch()` method
 3. The Processing Library's `runSketch()` method launches the Sketch, opening the Sketch window and starting the animation thread
 4. The Processing Library animation thread calls `py5.core.Sketch`'s `setup()` and `draw()` methods
-5. `py5.core.Sketch`'s `setup()` and `draw()` methods make calls from Java to Python, instructing it to call the user's `setup()` and `draw()` Python functions
-6. Execute the user's `setup()` and `draw()` Python functions, making calls to py5's API methods such as `rect()`, `begin_shape()`, `convert_shape()`, `random()`, etc.
-7. Calls to py5's API methods that leverage the Processing Library code such as `rect()` and `begin_shape()` make corresponding calls to the Processing Library methods `rect()`, `beginShape()`, etc.
+5. `py5.core.Sketch`'s `setup()` and `draw()` methods make calls from Java to Python, instructing it to call the user's `setup()` and `draw()` functions
+6. Execute the user's `setup()` and `draw()` functions, making calls to py5's API methods such as `rect()`, `begin_shape()`, `convert_shape()`, `random()`, etc.
+7. Calls to py5's API methods that leverage the Processing Library code such as `rect()` and `begin_shape()` make corresponding calls to the Processing Library's Java methods `rect()`, `beginShape()`, etc.
 8. Calls to py5's API methods that are implemented in Python such as `convert_shape()` and `random()` provide their functionality without using the Processing Library
 
 This approach is more complicated than the initial approach. However, the OpenGL renderers `P2D` and `P3D` work correctly. The mouse and keyboard event functions will also be triggered at the appropriate times.
@@ -77,7 +77,7 @@ In `processing.core.PApplet`'s `runSketch()` method, the Processing Library open
 
 ### 4. Animation Thread Calls `py5.core.Sketch`'s User Methods
 
-The animation thread will make calls to `py5.core.Sketch`'s `setup()` and `draw()` methods. It will also call its mouse and keyboard methods. The `py5.core.Sketch` class implements every possible user function.
+The animation thread will make calls to `py5.core.Sketch`'s `setup()` and `draw()` methods. It will also call its mouse and keyboard methods. The `py5.core.Sketch` class implements every possible user method so it can call the user's Python functions when needed.
 
 ### 5. Call User's Python Functions from `py5.core.Sketch`'s User Methods
 
@@ -114,14 +114,14 @@ Almost all of the code for py5's methods that leverage the Processing Library ar
 
 The `self._instance` attribute is the Java `py5.core.Sketch` instance created in step 1. Most of py5's methods are really simple wrappers of their underlying Processing Library methods.
 
-Code written with py5generator's template engine can be customized with decorators or overriden with Python code. How this works is explained in more detail in [](understanding_py5generator).
+Code written with py5generator's template engine can be customized with decorators or overridden with Python code. How this works is explained in more detail in [](understanding_py5generator).
 
 ### 8. API Methods that are Implemented in Python
 
-Not all of py5's methods are implemented in Java. API methods that draw to the Sketch window in some way must be implemented in Java. Generally, API methods that do not draw to the Sketch window are implemented in Python. This is done for performance reasons. Noteable exceptions are the noise functions.
+Not all of py5's methods are implemented in Java. API methods that draw to the Sketch window in some way must be implemented in Java. Generally, API methods that do not draw to the Sketch window are implemented in Python. This is done for performance reasons. Notable exceptions are the noise functions.
 
 ## What Else?
 
-The above description explains the core py5 architecture. All of this was rebuilt from scratch many times in the early days of py5. It took a lot of time, effort, research, and experimentation to figure out the right way to do this. Now, the core py5 code is stable and rarely needs updates.
+The above description gives an overview of the core py5 architecture. All of this was rebuilt from scratch many times in the early days of py5. It took a lot of time, effort, research, and experimentation to figure out the right way to do this. Now, the core py5 code is stable and rarely needs updates.
 
-There is much more to know about py5! There are other non-core but critical parts of py5 that are worth exploring for folks interested in looking through the source code. If you have any comments or questions about what you see, please head over to [GitHub discussions](https://github.com/py5coding/py5generator/discussions) and ask away.
+There is much more to know about py5! There are other non-core but critical parts of py5 that are worth exploring for folks interested in looking through the source code. If you have any comments or questions about what you see, please join us on py5's [GitHub discussions](https://github.com/py5coding/py5generator/discussions) forum.
