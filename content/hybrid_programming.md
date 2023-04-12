@@ -103,7 +103,42 @@ Compile the code with the Maven command `mvn -f java package` to create `py5util
 
 When py5 runs a Sketch, it will attempt to create an instance of `py5utils.Py5Utilities`. If successful, it will add the instance to `py5.utils` (or `self.utils` for coders using py5's class mode) for you to interact with in your code. If `py5utils.Py5Utilities` cannot be created, the `utils` attribute will be `None`.
 
-Below is a simple illustrative example:
+## Simple Hybrid Programming Example
+
+Imagine you want your py5 Sketch to draw ten thousand randomly colored points to the screen. To accomplish this, you might write the following code:
+
+```python
+def setup():
+    py5.size(500, 500, py5.P2D)
+
+
+def draw():
+    for _ in range(10000):
+        py5.stroke(py5.random_int(255), py5.random_int(255), py5.random_int(255))
+        py5.point(py5.width * py5.random(), py5.height * py5.random())
+```
+
+On my computer, this Sketch has a frame rate of 11 fps.
+
+The `draw()` function can be immediately optimized with numpy and more efficient py5 code:
+
+```python
+import numpy as np
+
+N = 10000
+
+def draw():
+    colors = 255 * np.random.rand(N, 3)
+    points = np.random.rand(N, 2) * [py5.width, py5.height]
+    with py5.begin_shape(py5.POINTS):
+        for i in range(N):
+            py5.stroke(*colors[i])
+            py5.vertex(*points[i])
+```
+
+On my computer, the frame rate increases to 31 fps.
+
+Now let's use hybrid programming to make this even faster. Use the `py5utils` command line tool to setup a `Py5Utilities` template and add the following Java code:
 
 ```java
 package py5utils;
@@ -118,29 +153,41 @@ public class Py5Utilities {
     this.sketch = sketch;
   }
 
-  public void drawColoredPoints(int[] colors, float[][] coords) {
-    sketch.beginShape();
+  public void drawColoredPoints(int[][] colors, float[][] coords) {
     sketch.pushStyle();
+    sketch.beginShape(Sketch.POINTS);
     for (int i = 0; i < colors.length; i++) {
-        sketch.stroke(colors[i]);
-        sketch.vertex(coords[i][0], coords[i][1]);
+      sketch.stroke(colors[i][0], colors[i][1], colors[i][2]);
+      sketch.vertex(coords[i][0], coords[i][1]);
     }
-    sketch.popStyle();
     sketch.endShape();
+    sketch.popStyle();
   }
 
 }
 ```
 
+Create the jar file with `mvn -f java package`. The for loop in the previous `draw()` method can be replaced with `py5.utils.drawColoredPoints(colors, points)`.
+
+```python
+N = 10000
+
+def draw():
+    colors = (255 * np.random.rand(N, 3)).astype(np.int32)
+    points = np.random.rand(N, 2).astype(np.float32) * [py5.width, py5.height]
+    py5.utils.drawColoredPoints(colors, points)
+```
+
+On my computer, the frame rate increases to 60 fps.
 
 ## Java and Python Object Conversion
 
-Py5Image to PImage
+Before continuing, we must observe the implicit conversion of Python objects to Java objects when they are passed from Python to Java. In the previous example, the numpy arrays `colors` and `points` were passed to a method that accepts 2D Java arrays of ints and floats. This works because JPype will automatically convert numpy arrays to Java arrays when numpy arrays are passed to a Java method. In addition to this builtin functionality, py5 adds its own conversion rules to convert py5 objects to Processing objects when py5 objects are passed to Java. There are also conversion rules for Processing objects that are passed from Java to Python. All object conversions are done without any programming burden placed on the end user.
 
-Strings
+Below is a table of the supported object conversion rules:
 
-## Performance Testing
+TODO: insert table
 
-Illustrative example using colored points
+## Advanced Hybrid Programming Optimization
 
-Show line profiler
+Further optimizations of the `drawColoredPoints()` example are still possible. One performance issue comes from the time it takes to copy the numpy arrays in Python's memory space over to Java. This can be addressed by sharing memory between Python and Java. Another performance issue comes from creating a new `POINTS` `PShape` object for every call to `drawColoredPoints()`. (This is happening internally in the Processing Libraries when `beginShape()` is called.) This can be addressed by creating the shape once with `createShape()` and updating the vertices' colors and coordinates in each call to `drawColoredPoints()`.
