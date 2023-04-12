@@ -42,10 +42,10 @@ parts:
   - file: how_tos/pyinstaller
     title: Create PyInstaller Packages
 
-- caption: Discussion
-  chapters:
-  - file: content/py5_internals
-  - file: content/py5_design
+# - caption: Discussion
+#   chapters:
+#   - file: content/py5_internals
+#   - file: content/py5_design
 
 - caption: Reference
   chapters:
