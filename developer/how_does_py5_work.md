@@ -114,7 +114,7 @@ Almost all of the code for py5's methods that leverage the Processing Library ar
 
 The `self._instance` attribute is the Java `py5.core.Sketch` instance created in step 1. Most of py5's methods are really simple wrappers of their underlying Processing Library methods.
 
-Code written with py5generator's template engine can be customized with decorators or overridden with Python code. How this works is explained in more detail in [](understanding_py5generator).
+Code written with py5generator's template engine can be customized with decorators or overridden with Python code.
 
 ### 8. API Methods that are Implemented in Python
 
