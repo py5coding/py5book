@@ -138,7 +138,7 @@ def draw():
 
 On my computer, the frame rate increases to 31 fps.
 
-Now let's use hybrid programming to make this even faster. Use the `py5utils` command line tool to setup a `Py5Utilities` template and add the following Java code:
+Now let's use hybrid programming to make this even faster. Use the `py5utils` command line tool to create a `Py5Utilities` template and then add the following Java code:
 
 ```java
 package py5utils;
@@ -178,16 +178,18 @@ def draw():
     py5.utils.drawColoredPoints(colors, points)
 ```
 
-On my computer, the frame rate increases to 60 fps.
+On my computer, the frame rate of this hybrid code is 60 fps.
 
 ## Java and Python Object Conversion
 
-Before continuing, we must observe the implicit conversion of Python objects to Java objects when they are passed from Python to Java. In the previous example, the numpy arrays `colors` and `points` were passed to a method that accepts 2D Java arrays of ints and floats. This works because JPype will automatically convert numpy arrays to Java arrays when numpy arrays are passed to a Java method. In addition to this builtin functionality, py5 adds its own conversion rules to convert py5 objects to Processing objects when py5 objects are passed to Java. There are also conversion rules for Processing objects that are passed from Java to Python. All object conversions are done without any programming burden placed on the end user.
+Before continuing, we must observe the implicit conversion of Python objects to Java objects when they are passed from Python to Java. In the previous example, the numpy arrays `colors` and `points` were passed to a method that accepts 2D Java arrays of ints and floats. This works because JPype will automatically convert numpy arrays to Java arrays when numpy arrays are passed to a Java method. In addition to this builtin functionality, py5 adds its own conversion rules to convert py5 objects to Processing objects when py5 objects are passed to Java. There are also conversion rules for Processing objects that are passed from Java back to Python. All object conversions are done without any programming burden placed on the end user.
 
 Below is a table of the supported object conversion rules:
 
 TODO: insert table
 
+TODO: say something about the astype() stuff above
+
 ## Advanced Hybrid Programming Optimization
 
-Further optimizations of the `drawColoredPoints()` example are still possible. One performance issue comes from the time it takes to copy the numpy arrays in Python's memory space over to Java. This can be addressed by sharing memory between Python and Java. Another performance issue comes from creating a new `POINTS` `PShape` object for every call to `drawColoredPoints()`. (This is happening internally in the Processing Libraries when `beginShape()` is called.) This can be addressed by creating the shape once with `createShape()` and updating the vertices' colors and coordinates in each call to `drawColoredPoints()`.
+Further optimizations of colored points example are still possible. One performance issue comes from the time it takes to copy the numpy arrays from Python's memory space over to Java. This issue can be addressed by sharing memory between Python and Java. Another performance issue comes from creating a new `PShape` object for every call to `drawColoredPoints()`. (This is happening internally in the Processing Library when `sketch.beginShape(Sketch.POINTS)` is called.) This can be addressed by creating the shape once with `createShape()` and updating the vertices' colors and coordinates in each call to `drawColoredPoints()`.
