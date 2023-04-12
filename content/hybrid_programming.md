@@ -21,7 +21,7 @@ Before exploring hybrid programming in py5, you should first read JPype's docume
 Technically you don't really need much from py5 to combine Python and Java code because JPype already provides the needed functionality. As explained in JPype's documentation, you can seamlessly import any Java class and create instances. To do this, you must do two things.
 
 1. Add the necessary jar files to your classpath *before* importing py5. There are a few ways you can do this:
-  * Explicitly adding the jars with [`py5_tools.add_jars()`](reference/py5tools_add_jars) and [`py5tools.add_classpath()`](reference/py5tools_add_classpath)
+  * Explicitly adding the jars with [](/reference/py5tools_add_jars) and [](/reference/py5tools_add_classpath)
   * Put your jar files in a `jars` directory that is a subdirectory of the current working directory
   * Create an environment variable `PY5_JARS` that points to a directory with jar files
 2. Import the Java libraries with the `import` command *after* importing py5. Importing py5 will also start the JVM. Jars cannot be added after the JVM is started.
