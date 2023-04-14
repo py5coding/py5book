@@ -1,6 +1,6 @@
 # Hybrid Programming
 
-Hybrid Programming refers to py5's ability to augment your py5 Sketch code with Java. This is very much like creating custom Processing extensions to enhance py5.
+Hybrid Programming refers to py5's ability to augment your py5 Sketch with Java code. This is very much like creating custom Processing extensions to enhance py5.
 
 ## Reasons for Hybrid Programming
 
@@ -20,11 +20,11 @@ Before exploring hybrid programming in py5, you should first consider reading JP
 
 Technically you don't really need much from py5 to combine Python and Java code because JPype already provides most of the functionality. As explained in JPype's documentation, you can already seamlessly import any Java class and create instances. To do this, you must do two things.
 
-1. Add the necessary jar files to your classpath *before* importing py5. You can do that any of the following ways:
+1. Add the necessary jar files to your classpath **before** importing py5. You can do that any of the following ways:
    * Explicitly adding the jars with [](/reference/py5tools_add_jars) or [](/reference/py5tools_add_classpath)
    * Place your jar files in a `jars` directory that is a subdirectory of the current working directory
    * Create an environment variable `PY5_JARS` that points to a directory with jar files
-2. Import the Java libraries with the `import` command *after* importing py5. Importing py5 will also start the JVM. Jars cannot be added after the JVM is started.
+2. Import the Java libraries with the `import` command **after** importing py5. Importing py5 will also start the JVM. Jars cannot be added after the JVM is started.
 
 A simple example might look like this:
 
@@ -95,6 +95,8 @@ public class Py5Utilities {
   public Sketch sketch;
 
   public Py5Utilities(Sketch sketch) {
+    // This constructor is called before the sketch starts running. DO NOT use
+    // Processing methods here, as they may not work correctly.
     this.sketch = sketch;
   }
 
@@ -103,7 +105,7 @@ public class Py5Utilities {
 
 Compile the code with the [Maven](https://maven.apache.org/) command `mvn -f java package` to create `py5utilities.jar` in the `jars` directory.
 
-When py5 runs a Sketch, it will attempt to create an instance of `py5utils.Py5Utilities`. If successful, it will add the instance to `py5.utils` (or `self.utils` for coders using py5's class mode) for you to interact with in your code. If `py5utils.Py5Utilities` cannot be created, the `utils` attribute will be `None`.
+When py5 runs a Sketch, it will attempt to create an instance of `py5utils.Py5Utilities`. If successful, it will add the instance to `py5.utils` (or `self.utils` for coders using py5's [class mode](/content/py5_modes.md#class-mode) for you to interact with in your code. If `py5utils.Py5Utilities` cannot be created, the `utils` attribute will be `None`.
 
 ## Simple Hybrid Programming Example
 
@@ -188,7 +190,7 @@ public class Py5Utilities {
 
 Create the jar file with `mvn -f java package`.
 
-The for loop in the previous `draw()` method can be replaced with `py5.utils.drawColoredPoints(colors, points)`.
+The for loop in the previous `draw()` method can be replaced with a call to `drawColoredPoints()`.
 
 ```python
 import numpy as np
@@ -219,7 +221,6 @@ Before continuing, we must take note of the implicit conversion of Python object
 Below is a table of the supported object conversion rules:
 
 TODO: insert table
-
 TODO: say something about the astype() stuff above
 
 ## Advanced Hybrid Programming Optimization
@@ -270,7 +271,7 @@ public class Py5Utilities {
 
 Observe there is a new method `shareBuffers()`. This gives our Sketch the opportunity to pass the Direct Buffers to Java. This only needs to be done once. Direct Buffers do not support array-like indexing so we must use the `get()` method to access the data. These Direct Buffer data structures are one dimensional so the parameters to `get()` must be cognizant of multidimensional arrays that have been flattened.
 
-Now replace the Python code with the below code. Observe the call to `shareBuffers()` in the `setup()` function. We also increased the number of points to one hundred thousand.
+Now replace the Python code with the below code. Observe the call to `shareBuffers()` in the `setup()` function. Also, the number of points has increased to one hundred thousand.
 
 ```python
 import numpy as np
@@ -304,10 +305,12 @@ def draw():
 py5.run_sketch()
 ```
 
+On my computer, the Sketch can draw the 100K points while achieving a frame rate of 60 fps.
+
 As explained in JPype's [Direct Buffers](https://jpype.readthedocs.io/en/latest/userguide.html#buffer-backed-numpy-arrays) documentation, we can create Numpy arrays that are backed by the Direct Buffers. With this arrangement, both Numpy and Java have access to the same block of memory. In Python we can work with the data in the same way that we would for any Numpy array. In Java we can work with the data through the DirectBuffer instances.
 
 In this example, our calls to `np.random.randint()` can assign data to the `colors[]` and `points[]` arrays. When the assignments are complete, our Java code can read the data immediately. The call to `drawColoredPoints()` no longer needs to pass any parameters.
 
 Also observe that the `colors[]` array was created with a DirectByteBuffer and therefore has a dtype of `np.uint8`. The `colors_buffer` is a DirectIntBuffer and interfaces with the same exact memory as the DirectByteBuffer. The DirectIntBuffer is shared with our Java extension because Processing represents colors with 32 bit integers. If the `colors[]` array had been created with the DirectIntBuffer, it would have one dimension a dtype of `np.int32`. Creating the `colors[]` array with a DirectByteBuffer means the array can have two dimensions with the second dimension representing alpha, red, green, and blue color channels (in that order). This is how color data is typically arranged in Python libraries such as [Pillow](https://pillow.readthedocs.io/) or [scipy](https://scipy.org/) (although the channel order might be different).
 
-The code used for the `colors[]` array is similar to py5's code for [](/reference/sketch_np_pixels). The main difference is the shape is `(width, height, 4)`.
+The code used for the `colors[]` array is similar to py5's code for [](/reference/sketch_np_pixels). The main difference is the shape is `(width, height, 4)` and not `(N, 4)`.
