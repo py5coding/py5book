@@ -237,7 +237,7 @@ For numpy arrays, the dtype must match the data type used in the array. Numpy ar
 
 ## Advanced Hybrid Programming Optimization
 
-Further optimizations of our colored points example are still possible. The time it takes to copy the numpy arrays from Python's memory space over to Java slows down the Sketch. This issue can be addressed by sharing memory between Python and Java with [Direct Buffers](https://jpype.readthedocs.io/en/latest/userguide.html#buffer-backed-numpy-arrays). JPype's support of Direct Buffers make it an excellent backbone for py5.
+Further optimizations of our colored points example are still possible. The time it takes to copy the numpy arrays from Python's memory space over to Java slows down the Sketch. This issue can be addressed by sharing memory between Python and Java with [Direct Buffers](https://jpype.readthedocs.io/en/latest/userguide.html#buffer-backed-numpy-arrays). With Direct Buffers, no data is copied between Python and Java. JPype's support of Direct Buffers make it an excellent backbone for py5.
 
 To employ Direct Buffers, replace the Java code with the following:
 
@@ -317,7 +317,7 @@ def draw():
 py5.run_sketch()
 ```
 
-On my computer, the Sketch can draw the 100K points while achieving a frame rate of 60 fps.
+On my computer, the Sketch can draw 100K points while achieving a frame rate of 60 fps.
 
 As explained in JPype's [Direct Buffers](https://jpype.readthedocs.io/en/latest/userguide.html#buffer-backed-numpy-arrays) documentation, we can create Numpy arrays that are backed by the Direct Buffers. With this arrangement, both Numpy and Java have access to the same block of memory. In Python we can work with the data in the same way that we would for any Numpy array. In Java we can work with the data through the DirectBuffer instances.
 
