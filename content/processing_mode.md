@@ -10,7 +10,7 @@ How to alter an existing Java Processing Sketch to add the `callPython()` method
 
 ### 1. Add py5 Jars to Classpath
 
-Add py5's core.jar to your classpath in your IDE. You need to do this so that your Java code can compile.
+Add Processing's core.jar and py5's py5.jar to your classpath in your IDE. You need to do this so that your Java code can compile.
 
 You can extract py5's classpath with this sample code:
 
@@ -22,7 +22,7 @@ import py5
 print(py5_tools.get_classpath().replace(':', '\n'))
 ```
 
-Look for `py5/jars/core.jar` in the output.
+Look for `py5/jars/core.jar` and `py5/jars/py5.jar` in the output.
 
 ### 2. Inherit from `SketchBase`
 
