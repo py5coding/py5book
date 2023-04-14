@@ -20,7 +20,7 @@ Before exploring hybrid programming in py5, you should first consider reading JP
 
 Technically you don't really need much from py5 to combine Python and Java code because JPype already provides most of the functionality. As explained in JPype's documentation, you can already seamlessly import any Java class and create instances. To do this, you must do two things.
 
-1. Add the necessary jar files to your classpath **before** importing py5. You can do that any of the following ways:
+1. Add the necessary jar files to your classpath **before** importing py5. You can do this any of the following ways:
    * Explicitly adding the jars with [](/reference/py5tools_add_jars) or [](/reference/py5tools_add_classpath)
    * Place your jar files in a `jars` directory that is a subdirectory of the current working directory
    * Create an environment variable `PY5_JARS` that points to a directory with jar files
@@ -157,7 +157,7 @@ def draw():
 py5.run_sketch()
 ```
 
-On my computer, the frame rate increases to 31 fps.
+On my computer, the frame rate increases to 31 fps. Note we cannot use [](/reference/sketch_vertices) for this because each point has a random color.
 
 Now let's use hybrid programming to make this even faster. Use the `py5utils` command line tool to create the template files and then add the following Java code to `Py5Utilities.java`:
 
@@ -309,8 +309,8 @@ On my computer, the Sketch can draw the 100K points while achieving a frame rate
 
 As explained in JPype's [Direct Buffers](https://jpype.readthedocs.io/en/latest/userguide.html#buffer-backed-numpy-arrays) documentation, we can create Numpy arrays that are backed by the Direct Buffers. With this arrangement, both Numpy and Java have access to the same block of memory. In Python we can work with the data in the same way that we would for any Numpy array. In Java we can work with the data through the DirectBuffer instances.
 
-In this example, our calls to `np.random.randint()` can assign data to the `colors[]` and `points[]` arrays. When the assignments are complete, our Java code can read the data immediately. The call to `drawColoredPoints()` no longer needs to pass any parameters.
+In this example, our calls to `np.random.randint()` can assign data to the `colors[]` and `points[]` arrays in a way that fits their Direct Buffers exactly. When the assignments are complete, our Java code can read the data immediately. The call to `drawColoredPoints()` no longer needs to pass any parameters.
 
-Also observe that the `colors[]` array was created with a DirectByteBuffer and therefore has a dtype of `np.uint8`. The `colors_buffer` is a DirectIntBuffer and interfaces with the same exact memory as the DirectByteBuffer. The DirectIntBuffer is shared with our Java extension because Processing represents colors with 32 bit integers. If the `colors[]` array had been created with the DirectIntBuffer, it would have one dimension a dtype of `np.int32`. Creating the `colors[]` array with a DirectByteBuffer means the array can have two dimensions with the second dimension representing alpha, red, green, and blue color channels (in that order). This is how color data is typically arranged in Python libraries such as [Pillow](https://pillow.readthedocs.io/) or [scipy](https://scipy.org/) (although the channel order might be different).
+Also observe that the `colors[]` array was created with a DirectByteBuffer and therefore has a dtype of `np.uint8`. The `colors_buffer` is a DirectIntBuffer and interfaces with the same exact memory as the DirectByteBuffer. The DirectIntBuffer is shared with our Java extension because Processing represents colors with 32 bit integers. If the `colors[]` array had been created with the DirectIntBuffer, it would have one dimension and a dtype of `np.int32`. Creating the `colors[]` array with a DirectByteBuffer means the array can have two dimensions with the second dimension representing alpha, red, green, and blue color channels (in that order). This is how color data is typically arranged in Python libraries such as [Pillow](https://pillow.readthedocs.io/) or [scipy](https://scipy.org/) (although the channel order might be different).
 
 The code used for the `colors[]` array is similar to py5's code for [](/reference/sketch_np_pixels). The main difference is the shape is `(width, height, 4)` and not `(N, 4)`.
