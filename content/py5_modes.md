@@ -178,6 +178,7 @@ py5.run_sketch(py5_options=['--sketch-path=/dir/that/contains/your/data/subdir']
 
 ``````
 
+(content-py5-modes-class-mode)=
 ## Class Mode
 
 Class mode lets you create a class with its own `settings`, `setup`, and

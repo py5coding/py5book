@@ -4,13 +4,9 @@ Hybrid Programming refers to py5's ability to augment your py5 Sketch with Java 
 
 ## Reasons for Hybrid Programming
 
-There are a few reasons why your coding projects might benefit from hybrid programming.
+There are a few reasons why your coding projects might benefit from hybrid programming. The most important is performance. Although py5 Sketches can provide excellent performance, you may experience performance problems if you have large or nested for loops making many calls from Python to Java. There is a small microsecond performance penalty for each individual call from Python to Java. This can accumulate to something significant in large or nested for loops. Hybrid programming can enable you to pass a large amount of data to Java with one call, where you can then iterate through the data in Java without the performance penalty.
 
-First, performance. This is the most important benefit. Although py5 Sketches can provide excellent performance, you may experience performance problems if you have large or nested for loops making many calls from Python to Java. There is a small microsecond performance penalty for each individual call from Python to Java. This can accumulate to something significant in large or nested for loops. Hybrid programming can enable you to pass a large amount of data to Java with one call, where you can then iterate through the data with Java code without the performance penalty.
-
-The second reason is that hybrid programming opens a door to incorporating Java libraries into your work. Much like Python, the Java library ecosystem is extensive and backed by a strong community. If you can't find the library you need in the Python world, the Java world might have what you need.
-
-The third benefit of hybrid programming is how it can add the simplicity and prototyping strengths of Python to the development process of a Java Processing Sketch. This is true even if the final output will ultimately be 100% Java.
+In addition, hybrid programming opens a door to incorporating Java libraries into your work. Much like Python, the Java library ecosystem is extensive and backed by a strong community. If you can't find the library you need in the Python world, the Java world might have what you need.
 
 ## Understand JPype
 
@@ -105,11 +101,11 @@ public class Py5Utilities {
 
 Compile the code with the [Maven](https://maven.apache.org/) command `mvn -f java package` to create `py5utilities.jar` in the `jars` directory.
 
-When py5 runs a Sketch, it will attempt to create an instance of `py5utils.Py5Utilities`. If successful, it will add the instance to `py5.utils` (or `self.utils` for coders using py5's [class mode](/content/py5_modes.md#class-mode) for you to interact with in your code. If `py5utils.Py5Utilities` cannot be created, the `utils` attribute will be `None`.
+When py5 runs a Sketch, it will attempt to create an instance of `py5utils.Py5Utilities`. If successful, it will add the instance to `py5.utils` (or `self.utils` for coders using py5's [class mode](content-py5-modes-class-mode) for you to interact with in your code. If `py5utils.Py5Utilities` cannot be created, the `utils` attribute will be `None`.
 
 ## Simple Hybrid Programming Example
 
-Imagine you want a py5 Sketch to draw ten thousand randomly colored points to the screen. This Sketch has little aesthetic value but it will concisely illustrate the benefits of hybrid programming.
+Imagine you want a py5 Sketch to draw ten thousand randomly colored points to the screen. This Sketch has little aesthetic value but it will concisely illustrate the performance benefits of hybrid programming.
 
 To accomplish this programming task, you might start with the following code:
 
@@ -233,7 +229,7 @@ Below is a table of the supported object conversion rules:
 | Py5Vector     | processing.core.PVector     |
 | numpy arrays  | Java arrays                 |
 
-For numpy arrays, the dtype must match the data type used in the array. Numpy arrays are (on most computers) by default 64 bit floats or integers, which convert to `double` or `long` in Java. Java functions that expect arrays of type `float` or `int` must be passed numpy arrays of `np.float32` or `np.int32`. In our example, the `astype()` calls convert the numpy arrays to the types expected by the `drawColoredPoints()` method. Note that converting 64 bit numbers to 32 bit numbers halves the the size of the data, making it faster to copy from Python to Java.
+For numpy arrays, the dtype must match the data type used in the array. Numpy arrays are (on most computers) by default 64 bit floats or integers, which convert to `double` or `long` in Java. Java functions that expect arrays of type `float` or `int` must be passed numpy arrays of `np.float32` or `np.int32`. In our example, the `astype()` calls convert the numpy arrays to the types expected by the `drawColoredPoints()` method. Note that converting 64 bit numbers to 32 bit numbers halves the size of the data, making it faster to copy from Python to Java.
 
 ## Advanced Hybrid Programming Optimization
 
@@ -283,7 +279,7 @@ public class Py5Utilities {
 
 Observe there is a new method `shareBuffers()`. This gives our Sketch the opportunity to pass the Direct Buffers to Java. This only needs to be done once. Direct Buffers do not support array-like indexing so we must use the `get()` method to access the data. These Direct Buffer data structures are one dimensional so the parameters to `get()` must be cognizant of multidimensional arrays that have been flattened.
 
-Now replace the Python code with the below code. Observe the call to `shareBuffers()` in the `setup()` function. Also, the number of points has increased to one hundred thousand.
+Now replace the Python code with the below code. Observe the call to `shareBuffers()` in the `setup()` function. Also, the number of points has increased tenfold to one hundred thousand.
 
 ```python
 import numpy as np
