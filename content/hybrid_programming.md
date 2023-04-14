@@ -216,12 +216,24 @@ On my computer, the frame rate of this hybrid code is 60 fps.
 
 ## Java and Python Object Conversion
 
-Before continuing, we must take note of the implicit conversion of Python objects to Java objects when they are passed from Python to Java. In the previous example, the 2D numpy arrays `colors` and `points` were passed to a method that accepts 2D Java arrays of ints and floats. This works because JPype will automatically convert numpy arrays to Java arrays when numpy arrays are passed to a Java method that accepts Java array parameters. In addition to this builtin functionality, py5 adds its own conversion rules to convert py5 objects to Processing objects when py5 objects are passed to Java. There are also conversion rules for Processing objects that are passed from Java back to Python. All object conversions are done without any programming burden placed on the end user.
+Before continuing, we must take note of the implicit conversion of Python objects to Java objects when they are passed from Python to Java. In the previous example, the 2D numpy arrays `colors` and `points` were passed to a method that accepts 2D Java arrays of ints and floats. This works because JPype will automatically convert numpy arrays to Java arrays when numpy arrays are passed to a Java method that accepts Java array parameters. In addition to this builtin functionality, py5 adds its own conversion rules to convert py5 objects to Processing objects when py5 objects are passed to Java. There are also conversion rules for Processing objects that are passed from Java back to Python. (TODO: this part needs a coding change) All object conversions are done without any programming burden placed on the end user.
 
 Below is a table of the supported object conversion rules:
 
-TODO: insert table
-TODO: say something about the astype() stuff above
+| Python Class  | Java Class                  |
+|:------------- |:--------------------------- |
+| Sketch        | py5.core.Sketch             |
+| Py5Graphics   | processing.core.PGraphics   |
+| Py5Image      | processing.core.PImage      |
+| Py5Font       | processing.core.PFont       |
+| Py5Shape      | processing.core.PShape      |
+| Py5Shader     | processing.opengl.PShader   |
+| Py5KeyEvent   | processing.event.KeyEvent   |
+| Py5MouseEvent | processing.event.MouseEvent |
+| Py5Vector     | processing.core.PVector     |
+| numpy arrays  | Java arrays                 |
+
+For numpy arrays, the dtype must match the data type used in the array. Numpy arrays are (on most computers) by default 64 bit floats or integers, which convert to `double` or `long` in Java. Java functions that expect arrays of type `float` or `int` must be passed numpy arrays of `np.float32` or `np.int32`. In our example, the `astype()` calls convert the numpy arrays to the types expected by the `drawColoredPoints()` method. Note that converting 64 bit numbers to 32 bit numbers halves the the size of the data, making it faster to copy from Python to Java.
 
 ## Advanced Hybrid Programming Optimization
 
