@@ -4,6 +4,8 @@ Processing Mode refers to py5's ability to function as a bridge from Java to Pyt
 
 Although there are a few caveats for users looking to run Processing Mode sketches in a Python Jupyter Notebook, this is a solid feature that will add a significant amount of value to the Processing community.
 
+To use Processing Mode, you should be comfortable programming in Python and Java and have some experience with py5 and [Processing](http://processing.org). Processing Mode will require you to program in an IDE like [Visual Studio Code](https://code.visualstudio.com/). Bringing Processing Mode to Processing's PDE, if this is even possible, would be a large amount of work.
+
 ## An Illustrative Example
 
 Let's introduce Processing Mode with a simple, illustrative example.
@@ -73,6 +75,10 @@ py5_tools.register_processing_mode_key('np', np)
 
 py5.run_sketch(_jclassname='test.TestSketch')
 ```
+
+The Sketch will look like this:
+
+![Large spotted red square in the center of a gray image with small white squares scattered about](/images/content/processing_mode_example.png)
 
 The printed output is:
 
