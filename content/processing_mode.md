@@ -73,7 +73,7 @@ def alter_image(msg: str, img: py5.Py5Image):
 py5_tools.register_processing_mode_key('test_transfer', alter_image)
 py5_tools.register_processing_mode_key('np', np)
 
-py5.run_sketch(_jclassname='test.TestSketch')
+py5.run_sketch(jclassname='test.TestSketch')
 ```
 
 The Sketch will look like this:
@@ -147,7 +147,7 @@ py5_tools.register_processing_mode_key('np', np)
 The callables linked to the keys must be registered with py5. The first call to [](/reference/py5tools_register_processing_mode_key) registers the `alter_image()` function with the key `'test_transfer'`. This key was used by the `callPython()` method in Java. The second call to [](/reference/py5tools_register_processing_mode_key) registers the imported Numpy library `np`. As this is a large library, all of its functions are accessible with `callPython()` given the correct key, as long as it can be called with position-only parameters. In our example, we called `np.random.randint()` with the key `"np.random.randint"`.
 
 ```python
-py5.run_sketch(_jclassname='test.TestSketch')
+py5.run_sketch(jclassname='test.TestSketch')
 ```
 
 To run the Processing Mode Sketch, we must tell py5 to create our Java class `'test.TestSketch'` instead of the default `py5.core.Sketch` (which inherits from `py5.core.SketchBase`).
@@ -204,7 +204,7 @@ First, you will need to add your compiled Java code to your classpath. This can 
 
 Next, you will need to write some Python code to define and register the functions you will call from Python. Registration is done with [](/reference/py5tools_register_processing_mode_key). Remember, the Java `callPython()` method can use the dot ("`.`") notation to access callables in modules or attached to objects.
 
-Finally, you will also need to tell py5 to create an instance of your class instead of `py5.core.Sketch`. You can do this with the `_jclassname` parameter in your call to [](/reference/sketch_run_sketch). If your Python code is using py5 in [class mode](content-py5-modes-class-mode), pass the `_jclassname` parameter to your constructor.
+Finally, you will also need to tell py5 to create an instance of your class instead of `py5.core.Sketch`. You can do this with the `jclassname` parameter in your call to [](/reference/sketch_run_sketch). If your Python code is using py5 in [class mode](content-py5-modes-class-mode), pass the `jclassname` parameter to your constructor.
 
 ## Limitations
 
