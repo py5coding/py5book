@@ -10,7 +10,7 @@ In addition, hybrid programming opens a door to incorporating Java libraries int
 
 ## Understand JPype
 
-Before exploring hybrid programming in py5, you should first consider reading JPype's documentation. Being knowledgeable about JPype will help you accomplish more with hybrid programming. Start with the [Java QuickStart Guide](https://jpype.readthedocs.io/en/latest/quickguide.html). Also read the [Working with Numpy](https://jpype.readthedocs.io/en/latest/userguide.html#working-with-numpy) and [Implementing Java interfaces](https://jpype.readthedocs.io/en/latest/userguide.html#implementing-java-interfaces) sections in the [JPype User Guide](https://jpype.readthedocs.io/en/latest/userguide.html).
+Before exploring hybrid programming in py5, you should first consider reading JPype's documentation. Being knowledgeable about JPype will help you accomplish more with hybrid programming. Start with the [Java QuickStart Guide](https://jpype.readthedocs.io/en/latest/quickguide.html). Also read the [Working with Numpy](https://jpype.readthedocs.io/en/latest/userguide.html#working-with-numpy) section in the [JPype User Guide](https://jpype.readthedocs.io/en/latest/userguide.html).
 
 ## Importing Java Classes into Python
 
@@ -102,7 +102,7 @@ public class Py5Utilities {
 
 Compile the code with the [Maven](https://maven.apache.org/) command `mvn -f java package` to create `py5utilities.jar` in the `jars` directory.
 
-When py5 runs a Sketch, it will attempt to create an instance of `py5utils.Py5Utilities`. If successful, it will add the instance's public variables and methods to `py5.utils` (or `self.utils` for coders using py5's [class mode](content-py5-modes-class-mode)) for you to interact with in your code.
+Before py5 runs a Sketch, it will attempt to create an instance of `py5utils.Py5Utilities`. If successful, it will add the instance's public variables and methods to `py5.utils` (or `self.utils` for coders using py5's [class mode](content-py5-modes-class-mode)) for you to interact with in your code.
 
 ## Simple Hybrid Programming Example
 
@@ -215,7 +215,7 @@ On my computer, the frame rate of this hybrid code is 60 fps.
 
 Before continuing, we must take note of the implicit conversion of Python objects to Java objects when they are passed from Python to Java. In the previous example, the 2D numpy arrays `colors` and `points` were passed to a method that accepts 2D Java arrays of ints and floats. This works because JPype will automatically convert numpy arrays to Java arrays when numpy arrays are passed to a Java method that accepts Java array parameters. In addition to this builtin functionality, py5 adds its own conversion rules to convert py5 objects to Processing objects when py5 objects are passed to Java. These conversion rules will also work in reverse for Processing objects that are returned from Java back to Python. All object conversions are done without any programming burden placed on the end user.
 
-Below is a table of the supported object conversion rules:
+Below is a table of the supported object pairs eligible for conversion:
 
 | Python Class  | Java Class                  |
 |:------------- |:--------------------------- |
@@ -232,7 +232,7 @@ Below is a table of the supported object conversion rules:
 | str           | java.lang.String            |
 | numpy arrays  | Java arrays                 |
 
-For numpy arrays, the dtype must match the data type used in the array. Numpy arrays are (on most computers) by default 64 bit floats or integers, which convert to `double` or `long` in Java. Java functions that expect arrays of type `float` or `int` must be passed numpy arrays of `np.float32` or `np.int32`. In our example, the `astype()` calls convert the numpy arrays to the types expected by the `drawColoredPoints()` method. Note that converting 64 bit numbers to 32 bit numbers halves the size of the data, making it faster to copy from Python to Java.
+For numpy arrays, the dtype must match the data type used in the array. Numpy arrays are (on most computers) by default 64 bit floats or integers, which convert to `double` or `long` in Java. Java functions that expect arrays of type `float` or `int` must be passed numpy arrays of `np.float32` or `np.int32`. In our example, the `astype()` calls convert the numpy arrays to the types expected by the `drawColoredPoints()` method. Note that converting 64 bit numbers to 32 bit numbers halves the size of the data, thus making it faster to copy from Python to Java.
 
 ## Advanced Hybrid Programming Optimization
 
@@ -322,6 +322,6 @@ As explained in JPype's [Direct Buffers](https://jpype.readthedocs.io/en/latest/
 
 In this example, our calls to `np.random.randint()` can assign data to the `colors[]` and `points[]` arrays in a way that fits their Direct Buffers exactly. When the assignments are complete, our Java code can read the data immediately. The call to `drawColoredPoints()` no longer needs to pass any parameters.
 
-Also observe that the `colors[]` array was created with a DirectByteBuffer and therefore has a dtype of `np.uint8`. The `colors_buffer` is a DirectIntBuffer and interfaces with the same exact memory as the DirectByteBuffer. The DirectIntBuffer is shared with our Java extension because Processing represents colors with 32 bit integers. If the `colors[]` array had been created with the DirectIntBuffer, it would have one dimension and a dtype of `np.int32`. Creating the `colors[]` array with a DirectByteBuffer means the array can have two dimensions with the second dimension representing alpha, red, green, and blue color channels (in that order). This is how color data is typically arranged in Python libraries such as [Pillow](https://pillow.readthedocs.io/) or [scipy](https://scipy.org/) (although the channel order might be different).
+Also observe that the `colors[]` array was created with a DirectByteBuffer and therefore has a dtype of `np.uint8`. The `colors_buffer` is a DirectIntBuffer and interfaces with the same exact memory as the DirectByteBuffer. The DirectIntBuffer is shared with our Java extension because Processing represents colors with 32 bit integers. If the `colors[]` array had been created with the DirectIntBuffer, it would have one dimension and a dtype of `np.int32`. Creating the `colors[]` array with a DirectByteBuffer means the array can have two dimensions with the second dimension representing alpha, red, green, and blue color channels (in that order). This is how color data is typically arranged in Python libraries such as [Pillow](https://pillow.readthedocs.io/) or [scipy](https://scipy.org/) (although the channel order might be different). With this code example, the same color data can be accessed in both Python and Java in the way that is most common for that programming environment.
 
 The code used for the `colors[]` array is similar to py5's code for [](/reference/sketch_np_pixels). The main difference is the shape is `(width, height, 4)` and not `(N, 4)`.
