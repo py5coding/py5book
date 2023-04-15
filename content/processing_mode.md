@@ -8,7 +8,7 @@ Although there are a few caveats for users looking to run Processing Mode sketch
 
 Let's introduce Processing Mode with a simple, illustrative example.
 
-### Illustrative Example Java Code
+### Example Java Code
 
 Imagine you created a Processing Sketch in Java with the following code:
 
@@ -46,7 +46,7 @@ public class TestSketch extends SketchBase {
 
 This Java code must be compiled into a Jar file. If the Jar file is in a `jars` subdirectory, it will be added to py5's classpath automatically.
 
-### Illustrative Example Python Code
+### Example Python Code
 
 You can run this Processing Mode Sketch with the following Python code:
 
@@ -76,7 +76,7 @@ py5.run_sketch(_jclassname='test.TestSketch')
 
 The printed output is:
 
-```txt
+```text
 PYTHON: Hello from Java!
 PYTHON: Py5Image(width=200, height=200)
 JAVA: Random number from Numpy: 61
@@ -84,7 +84,7 @@ JAVA: Random number from Numpy: 61
 
 ### Illustrative Example Breakdown
 
-From reading the code you might be able to figure out much of what is going on here, but let's add additional detail to the pertinent lines.
+You might be able to figure out much of what is going on here from reading the code, but let's add additional detail to the pertinent lines.
 
 First, you should notice that our class inherits from `py5.core.SketchBase` instead of `processing.core.PApplet`. The `py5.core.SketchBase` class inherits from `processing.core.PApplet` and makes the new `callPython()` and `py5Println()` methods available for you to use.
 
@@ -111,7 +111,7 @@ By default, Numpy's `np.random.randint` function returns a 64 bit integer (`np.i
     long randomNumber = (long) callPython("np.random.randint", 0, 100);
 ```
 
-The `py5Println()` method uses the same print mechanism as [](/reference/sketch_println). The output from both will appear in the same place.
+The `py5Println()` method uses the same print mechanism as py5's [](/reference/sketch_println). The output from both will appear in the same place.
 
 ```java
     py5Println("JAVA: Random number from Numpy: " + randomNumber);
@@ -121,7 +121,7 @@ Now let's look at the Python code.
 
 The Python function `alter_image()` takes two parameters. The type hints are optional but are useful for clarity and to assist your IDE with code completion. The `img` parameter is in fact a `Py5Image` object. The `Py5Image` object has all the features of `Py5Image` objects. Here, we are using [](/reference/sketch_np_pixels) to alter the object's pixels with numpy broadcasting.
 
-Look closely at what is happening between the Java code and the Python code: a `PImage` object in Java becomes a `Py5Image` object. That `Py5Image` object is returned to Java, where it can be cast back to a `PImage` object.
+Look closely at what is happening between the Java code and the Python code: a `PImage` object in Java becomes a `Py5Image` object in Python. That `Py5Image` object is returned to Java, where it can be cast back to a `PImage` object.
 
 ```python
 def alter_image(msg: str, img: py5.Py5Image):
@@ -135,7 +135,7 @@ def alter_image(msg: str, img: py5.Py5Image):
     return img
 ```
 
-The callables linked to the keys must be registered with py5. The first call to `py5_tools.register_processing_mode_key()` registers the `alter_image()` function with the key `'test_transfer'`. This key was used by the `callPython()` method in Java. The second call to `py5_tools.register_processing_mode_key()` registers the imported Numpy library `np`. As this is a large library, all of its functionality becomes available to `callPython()`, as long as it can be called with position-only parameters.
+The callables linked to the keys must be registered with py5. The first call to `py5_tools.register_processing_mode_key()` registers the `alter_image()` function with the key `'test_transfer'`. This key was used by the `callPython()` method in Java. The second call to `py5_tools.register_processing_mode_key()` registers the imported Numpy library `np`. As this is a large library, all of its functions are accessible with `callPython()` given the correct key, as long as it can be called with position-only parameters. In our example, we called `np.random.randint()` with the key `"np.random.randint"`.
 
 ```python
 py5_tools.register_processing_mode_key('test_transfer', alter_image)
@@ -148,11 +148,11 @@ To run the Processing Mode Sketch, we must tell py5 to create our Java class `'t
 py5.run_sketch(_jclassname='test.TestSketch')
 ```
 
-That's Processing Mode in a nutshell. There are still some things you need to be aware of related to error handling and Jupyter Notebooks, but beyond that, it's a pretty straightforward way of using py5.
+That's Processing Mode in a nutshell. There are still some things you need to be aware of related to error handling and Jupyter Notebooks, but beyond that, Processing Mode is a pretty straightforward way of using py5.
 
-## How To Use Processing Mode
+## Steps To Use Processing Mode
 
-How to alter an existing Java Processing Sketch to add the `callPython()` method.
+There are a few steps you need to take to alter an existing Java Processing Sketch to add py5's `callPython()` method.
 
 ### 1. Add py5 Jars to Classpath
 
@@ -180,20 +180,34 @@ As explained in [](/developer/how_does_py5_work), a py5 Sketch will create an in
 
 ### 3. Use `callPython()` Method
 
-Make a call to the `callPython()` method, possibly in a thread
+Use `callPython()` in your Sketch to make Python calls from Java. Remember to cast the returned `java.lang.Object` to the appropriate class.
 
-Also try using `py5Println()`
+If your call to Python involves complex or time-consuming computation, you may want to use `callPython()` in a separate thread. However, if you do use this feature in a separate thread, the Python code should not use any of py5's drawing functions. The Processing Library is not threadsafe and bugs can be hard to track down.
 
-### 4. Python Code
+Consider catching exceptions, either in Python or in Java. If an exception is thrown in Python, a `RuntimeException` will be thrown in Java. Thrown exceptions can be problematic if your Sketch is running through Jupyter Notebook because you might have to restart the Notebook to exit the Sketch.
 
-You will need to add your compiled Java code to your classpath.
+Finally, use `py5Println()` to print text. If you are using a Jupyter Notebook, `py5Println()` will place the text in the output of a notebook cell. Using `System.out.println()` would output text to the Jupyter Notebook logs.
 
-You will need to write some Python code to define and register the functions you will call from Python.
+### 4. Python Code Tasks
 
-You will also need to tell py5 to create an instance of your class instead of `py5.core.Sketch`.
+There are several tasks you must address in Python to use Processing Mode.
+
+First, you will need to add your compiled Java code to your classpath. This can be done one of three ways:
+
+1. Explicitly adding the jars with [](/reference/py5tools_add_jars) or [](/reference/py5tools_add_classpath)
+2. Place your jar files in a `jars` directory that is a subdirectory of the current working directory
+3. Create an environment variable `PY5_JARS` that points to a directory with jar files
+
+Second, you will need to write some Python code to define and register the functions you will call from Python. Remember, you can use the dot ("`.`") notation to access callables in modules or attached to objects.
+
+And finally, you will also need to tell py5 to create an instance of your class instead of `py5.core.Sketch`. You can do this with the `_jclassname` parameter in your call to [](/reference/sketch_run_sketch). If your Python code is using py5 in [class mode](content-py5-modes-class-mode), pass the `_jclassname` parameter to your constructor.
 
 ## Limitations
 
 Limitations for Jupyter Notebook users
 
+## Object Translation
+
 ## Creating Interfaces
+
+How to handle object translation?

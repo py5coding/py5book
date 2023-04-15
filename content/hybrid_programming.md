@@ -230,6 +230,7 @@ Below is a table of the supported object pairs eligible for conversion:
 | Py5Vector     | processing.core.PVector     |
 | numpy array   | processing.core.PMatrix     |
 | str           | java.lang.String            |
+| pathlib.Path  | java.lang.String            |
 | numpy arrays  | Java arrays                 |
 
 For numpy arrays, the dtype must match the data type used in the array. Numpy arrays are (on most computers) by default 64 bit floats or integers, which convert to `double` or `long` in Java. Java functions that expect arrays of type `float` or `int` must be passed numpy arrays of `np.float32` or `np.int32`. In our example, the `astype()` calls convert the numpy arrays to the types expected by the `drawColoredPoints()` method. Note that converting 64 bit numbers to 32 bit numbers halves the size of the data, thus making it faster to copy from Python to Java.
