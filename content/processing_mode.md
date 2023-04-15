@@ -1,10 +1,10 @@
 # Processing Mode
 
-Processing Mode refers to py5's ability to function as a bridge from Java to Python, allowing Processing Sketches to call Python functions using a new `callPython()` method.
+Processing Mode refers to py5's ability to serve as a bridge from Java to Python, allowing Processing Sketches to call Python functions using a new `callPython()` method.
 
-Although there are a few caveats for users looking to run Processing Mode sketches in a Python Jupyter Notebook, this is a solid feature that will add a significant amount of value to the Processing community.
+Although there are a few caveats for users looking to run Processing Mode sketches in a Python Jupyter Notebook, this is a solid feature that in time will add a significant amount of value to the Processing community.
 
-To use Processing Mode, you should be comfortable programming in Python and Java and have some experience with py5 and [Processing](http://processing.org). Processing Mode will require you to program in an IDE like [Visual Studio Code](https://code.visualstudio.com/). Bringing Processing Mode to Processing's PDE, if this is even possible, would be a large amount of work.
+To use Processing Mode, you should be comfortable programming in Python and Java and have some experience with py5 and [Processing](http://processing.org). Processing Mode will require you to program in an IDE like [Visual Studio Code](https://code.visualstudio.com/). Bringing Processing Mode to Processing's PDE, if possible, would be a large amount of work.
 
 ## An Illustrative Example
 
@@ -90,9 +90,7 @@ JAVA: Random number from Numpy: 61
 
 ### Illustrative Example Breakdown
 
-You might be able to figure out much of what is going on here from reading the code, but let's add additional detail to the pertinent lines.
-
-First, you should notice that our class inherits from `py5.core.SketchBase` instead of `processing.core.PApplet`. The `py5.core.SketchBase` class inherits from `processing.core.PApplet` and makes the new `callPython()` and `py5Println()` methods available for you to use.
+You might be able to figure out some of what is going on here from reading the code, but let's provide additional detail on the pertinent lines.
 
 ```java
 import py5.core.SketchBase;
@@ -100,13 +98,19 @@ import py5.core.SketchBase;
 public class TestSketch extends SketchBase {
 ```
 
+First, you should notice that our class inherits from `py5.core.SketchBase` instead of `processing.core.PApplet`. The `py5.core.SketchBase` class inherits from `processing.core.PApplet` and adds the new `callPython()` and `py5Println()` methods available for you to use.
+
+```java
+    PImage imgResponse = (PImage) callPython("test_transfer", msg, img);
+    image(imgResponse, 100, 100);
+```
+
 The first parameter to `callPython()` is called a "key". This key is used to locate the Python callable to execute. All of the remaining parameters are passed to that callable as position arguments.
 
 The return type of `callPython()` is `java.lang.Object` and must be cast to the correct type.
 
 ```java
-    PImage imgResponse = (PImage) callPython("test_transfer", msg, img);
-    image(imgResponse, 100, 100);
+    long randomNumber = (long) callPython("np.random.randint", 0, 100);
 ```
 
 The key parameter does not need to map directly to a callable. Periods ("`.`") can be used to denote "subkeys" to access callables in modules or Python objects. In this example, the `"np.random.randint"` key accesses the callable `randint` in Numpy's `np.random` module.
@@ -114,20 +118,12 @@ The key parameter does not need to map directly to a callable. Periods ("`.`") c
 By default, Numpy's `np.random.randint` function returns a 64 bit integer (`np.int64`). The equivalent type in Java is `long`, not `int`.
 
 ```java
-    long randomNumber = (long) callPython("np.random.randint", 0, 100);
+    py5Println("JAVA: Random number from Numpy: " + randomNumber);
 ```
 
 The `py5Println()` method uses the same print mechanism as py5's [](/reference/sketch_println). The output from both will appear in the same place.
 
-```java
-    py5Println("JAVA: Random number from Numpy: " + randomNumber);
-```
-
 Now let's look at the Python code.
-
-The Python function `alter_image()` takes two parameters. The type hints are optional but are useful for clarity and to assist your IDE with code completion. The `img` parameter is in fact a `Py5Image` object. The `Py5Image` object has all the features of `Py5Image` objects. Here, we are using [](/reference/sketch_np_pixels) to alter the object's pixels with numpy broadcasting.
-
-Look closely at what is happening between the Java code and the Python code: a `PImage` object in Java becomes a `Py5Image` object in Python. That `Py5Image` object is returned to Java, where it can be cast back to a `PImage` object.
 
 ```python
 def alter_image(msg: str, img: py5.Py5Image):
@@ -141,18 +137,22 @@ def alter_image(msg: str, img: py5.Py5Image):
     return img
 ```
 
-The callables linked to the keys must be registered with py5. The first call to [](/reference/py5tools_register_processing_mode_key) registers the `alter_image()` function with the key `'test_transfer'`. This key was used by the `callPython()` method in Java. The second call to [](/reference/py5tools_register_processing_mode_key) registers the imported Numpy library `np`. As this is a large library, all of its functions are accessible with `callPython()` given the correct key, as long as it can be called with position-only parameters. In our example, we called `np.random.randint()` with the key `"np.random.randint"`.
+The Python function `alter_image()` takes two parameters. The type hints are optional but are useful for clarity and to assist your IDE with code completion. The `img` parameter is in fact a `Py5Image` object. The `Py5Image` object has all the features of `Py5Image` objects. Here, we are using [](/reference/sketch_np_pixels) to alter the object's pixels with numpy broadcasting.
+
+Contemplate what is happening between the Java code and the Python code: a `PImage` object in Java becomes a `Py5Image` object in Python. That `Py5Image` object is returned to Java, where it can be cast back to the same `PImage` object. If you pass the same `PImage` object to Python multiple times, it will be the same `Py5Image` object every time.
 
 ```python
 py5_tools.register_processing_mode_key('test_transfer', alter_image)
 py5_tools.register_processing_mode_key('np', np)
 ```
 
-To run the Processing Mode Sketch, we must tell py5 to create our Java class `'test.TestSketch'` instead of the default `py5.core.Sketch` (which inherits from `py5.core.SketchBase`).
+The callables linked to the keys must be registered with py5. The first call to [](/reference/py5tools_register_processing_mode_key) registers the `alter_image()` function with the key `'test_transfer'`. This key was used by the `callPython()` method in Java. The second call to [](/reference/py5tools_register_processing_mode_key) registers the imported Numpy library `np`. As this is a large library, all of its functions are accessible with `callPython()` given the correct key, as long as it can be called with position-only parameters. In our example, we called `np.random.randint()` with the key `"np.random.randint"`.
 
 ```python
 py5.run_sketch(_jclassname='test.TestSketch')
 ```
+
+To run the Processing Mode Sketch, we must tell py5 to create our Java class `'test.TestSketch'` instead of the default `py5.core.Sketch` (which inherits from `py5.core.SketchBase`).
 
 That's Processing Mode in a nutshell. There are still some things you need to be aware of related to error handling and Jupyter Notebooks, but beyond that, Processing Mode is a pretty straightforward way of using py5.
 
