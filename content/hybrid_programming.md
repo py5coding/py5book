@@ -280,7 +280,7 @@ public class Py5Utilities {
 }
 ```
 
-Observe there is a new method `shareBuffers()`. This gives our Sketch the opportunity to pass the Direct Buffers to Java. This only needs to be done once. Direct Buffers do not support array-like indexing so we must use the `get()` method to access the data. These Direct Buffer data structures are one dimensional so the parameters to `get()` must be cognizant of multidimensional arrays that have been flattened.
+Observe there is a new method `shareBuffers()`. This gives our Sketch the opportunity to pass the Direct Buffers to Java. This only needs to be done once. Direct Buffers do not support array-like indexing so we must use the `get()` method to access the data. These Direct Buffer data structures can only be one dimensional so the parameters to `get()` may need to be calculated as you would to index into a flattened multidimensional array.
 
 Now replace the Python code with the below code. Observe the call to `shareBuffers()` in the `setup()` function. Also, the number of points has increased tenfold to one hundred thousand.
 
