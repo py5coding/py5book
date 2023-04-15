@@ -36,10 +36,14 @@ When coding py5 in module mode, a Sketch instance is created on your behalf that
 
 If `reset_py5()` is called when the current Sketch is in the ready or running states, it will do nothing and return `False`. If `reset_py5()` is called when the current Sketch is in the dead state, `reset_py5()` will replace it and return `True`.
 
+The `jclassname` parameter should only be used when programming in Processing Mode. This value must be the canonical name of your Processing Sketch class (i.e. `"org.test.MySketch"`). The class must inherit from `py5.core.SketchBase`. Read py5's online documentation to learn more about Processing Mode.
+
 ## Signatures
 
 ```python
-reset_py5() -> bool
+reset_py5(
+    jclassname: str = None,  # canonical name of class to instantiate when using py5 in processing mode
+) -> bool
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on April 15, 2023 22:56:12pm UTC

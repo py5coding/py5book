@@ -1,6 +1,6 @@
 # py5_tools.register_processing_mode_key()
 
-Register a callable or module for use with py5's Processing Mode.
+Register a callable or module when programming in py5's Processing Mode.
 
 ## Examples
 
@@ -31,7 +31,7 @@ def alter_image(msg: str, img: py5.Py5Image):
 py5_tools.register_processing_mode_key('test_transfer', alter_image)
 py5_tools.register_processing_mode_key('np', np)
 
-py5.run_sketch(_jclassname='test.TestSketch')
+py5.run_sketch(jclassname='test.TestSketch')
 ```
 
 </div></div>
@@ -40,7 +40,7 @@ py5.run_sketch(_jclassname='test.TestSketch')
 
 ## Description
 
-Register a callable or module for use with py5's Processing Mode. This will make Python code available to Processing Mode py5 users to call with the `callPython()` method. Please read py5's online documentation to learn more about Processing Mode.
+Register a callable or module when programming in py5's Processing Mode. This will make Python code available to Processing Mode py5 users to call in Java with the `callPython()` method. Please read py5's online documentation to learn more about Processing Mode.
 
 The `value` parameter can be a callable, a module or an object. If `value` is a module or an object, the `key` parameter in the Java `callPython()` call should use dots (`.`) to access the module's or object's callables.
 
@@ -55,4 +55,4 @@ register_processing_mode_key(
 ) -> None
 ```
 
-Updated on April 15, 2023 19:05:09pm UTC
+Updated on April 15, 2023 22:56:12pm UTC

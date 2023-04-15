@@ -32,6 +32,8 @@ By default the Sketch will be the currently running Sketch, as returned by [](py
 
 If the `limit` parameter is used, this function will wait to return a list of the filenames. If not, it will return right away as the frames are saved in the background. It will keep doing so as long as the Sketch continues to run.
 
+By default this function will report its progress as frames are saved. If you are using a Jupyter Notebook and happen to be saving tens of thousands of frames, this might cause Jupyter to crash. To avoid that fate, set the `display_progress` parameter to `False`.
+
 If your Sketch has a `post_draw()` method, use the `hook_post_draw` parameter to make this function run after `post_draw()` instead of `draw()`. This is important when using Processing libraries that support `post_draw()` such as Camera3D or ColorBlindness.
 
 ## Signatures
@@ -46,8 +48,9 @@ save_frames(
     limit: int = 0,  # limit the number of frames to save (default 0 means no limit)
     sketch: Sketch = None,  # running Sketch
     hook_post_draw: bool = False,  # attach hook to Sketch's post_draw method instead of draw
-    block: bool = False  # method returns immediately (False) or blocks until function returns (True)
+    block: bool = False,  # method returns immediately (False) or blocks until function returns (True)
+    display_progress: bool = True  # display progress as frames are saved
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on April 15, 2023 22:56:12pm UTC

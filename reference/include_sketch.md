@@ -86,12 +86,13 @@
 * [apply_filter()](sketch_apply_filter)
 * [blend()](sketch_blend)
 * [copy()](sketch_copy)
-* [get()](sketch_get)
+* [get_pixels()](sketch_get_pixels)
 * [load_np_pixels()](sketch_load_np_pixels)
 * [load_pixels()](sketch_load_pixels)
 * [np_pixels[]](sketch_np_pixels)
 * [pixels[]](sketch_pixels)
 * [set_np_pixels()](sketch_set_np_pixels)
+* [set_pixels()](sketch_set_pixels)
 * [update_np_pixels()](sketch_update_np_pixels)
 * [update_pixels()](sketch_update_pixels)
 
@@ -215,6 +216,7 @@
 * [random_choice()](sketch_random_choice)
 * [random_gaussian()](sketch_random_gaussian)
 * [random_int()](sketch_random_int)
+* [random_sample()](sketch_random_sample)
 * [random_seed()](sketch_random_seed)
 
 #### Trigonometry
