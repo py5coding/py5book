@@ -35,9 +35,10 @@ py5_tools.add_classpath(Path.home() / 'Projects' / 'MyJavaUtilities.jar')
 import py5
 
 from java.lang import String
-test_string = String('py5 is awesome')
+test_string = String('py5 is awesome!')
+print(test_string.toUpperCase())
 
-# import Java class MyJavaUtilities
+# import Java class MyJavaUtilities from jar file
 from org.utils import MyJavaUtilities
 # create instance of MyJavaUtilities class
 utils = MyJavaUtilities()
@@ -77,7 +78,7 @@ $ tree .
 7 directories, 2 files
 ```
 
-The `pom.xml` file is an XML file used by [Maven](https://maven.apache.org/) to build the Jar file. Among other things, it links to py5's Jar files. You will need to install [Maven](https://maven.apache.org/) if you don't have it installed already.
+The `pom.xml` file is an XML file used by [Maven](https://maven.apache.org/) to build the Jar file. Among other things, it links to the required jar files found in your py5 library installation. You will need to install [Maven](https://maven.apache.org/) if you don't have it installed already.
 
 The `Py5Utilities.java` file contains this code:
 
@@ -135,7 +136,7 @@ import numpy as np
 import py5
 
 
-N = 10000
+N = 10_000
 
 def setup():
     py5.size(500, 500, py5.P2D)
@@ -193,7 +194,7 @@ import numpy as np
 import py5
 
 
-N = 10000
+N = 10_000
 
 def setup():
     py5.size(500, 500, py5.P2D)
@@ -289,7 +290,7 @@ import jpype
 import py5
 
 
-N = 100000
+N = 100_000
 
 byte_buffer = jpype.nio.convertToDirectBuffer(bytearray(4 * N))
 colors = np.asarray(byte_buffer).reshape(N, 4)
