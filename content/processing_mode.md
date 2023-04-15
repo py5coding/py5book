@@ -98,16 +98,14 @@ import py5.core.SketchBase;
 public class TestSketch extends SketchBase {
 ```
 
-First, you should notice that our class inherits from `py5.core.SketchBase` instead of `processing.core.PApplet`. The `py5.core.SketchBase` class inherits from `processing.core.PApplet` and adds the new `callPython()` and `py5Println()` methods available for you to use.
+First, you should notice that our class inherits from `py5.core.SketchBase` instead of the expected `processing.core.PApplet`. The `py5.core.SketchBase` class inherits from `processing.core.PApplet` and adds the new `callPython()` and `py5Println()` methods available for you to use.
 
 ```java
     PImage imgResponse = (PImage) callPython("test_transfer", msg, img);
     image(imgResponse, 100, 100);
 ```
 
-The first parameter to `callPython()` is called a "key". This key is used to locate the Python callable to execute. All of the remaining parameters are passed to that callable as position arguments.
-
-The return type of `callPython()` is `java.lang.Object` and must be cast to the correct type.
+The first parameter to `callPython()` is called a "key". This key is used to locate the Python callable to execute. All of the remaining parameters are passed to that callable as position arguments. The return type of `callPython()` is `java.lang.Object` and must be cast to the correct type.
 
 ```java
     long randomNumber = (long) callPython("np.random.randint", 0, 100);
@@ -160,7 +158,7 @@ That's Processing Mode in a nutshell. There are still some things you need to be
 
 There are a few steps you need to take to alter an existing Java Processing Sketch to add py5's `callPython()` method.
 
-### 1. Add py5 Jars to Classpath
+### 1. Add py5 Jar to Classpath
 
 Add py5's py5.jar to your classpath in your IDE. You need to do this so that your Java code can compile.
 
@@ -186,7 +184,7 @@ As explained in [](/developer/how_does_py5_work), a py5 Sketch will create an in
 
 ### 3. Use `callPython()` Method
 
-Use `callPython()` in your Sketch to make Python calls from Java. Remember to cast the returned `java.lang.Object` to the appropriate class.
+Use `callPython()` in your Sketch to make Python calls from Java. Remember to cast the returned `java.lang.Object` to the appropriate class. Consider checking the type before casting the object.
 
 If your call to Python involves complex or time-consuming computation, you may want to use `callPython()` in a separate thread. However, if you do use this feature in a separate thread, the Python code should not use any of py5's drawing functions. The Processing Library is not threadsafe and bugs can be hard to track down.
 
@@ -196,7 +194,7 @@ Finally, use `py5Println()` to print text. If you are using a Jupyter Notebook, 
 
 ### 4. Python Code Tasks
 
-There are several tasks you must address in Python to use Processing Mode.
+There are several Python tasks you must address to use Processing Mode.
 
 First, you will need to add your compiled Java code to your classpath. This can be done one of three ways:
 
