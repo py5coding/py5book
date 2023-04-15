@@ -4,7 +4,7 @@ Processing Mode refers to py5's ability to serve as a bridge from Java to Python
 
 Although there are a few caveats for users looking to run Processing Mode sketches in a Python Jupyter Notebook, this is a solid feature that in time will add a significant amount of value to the Processing community.
 
-To use Processing Mode, you should be comfortable programming in Python and Java and have some experience with py5 and [Processing](http://processing.org). Processing Mode will require you to program in an IDE like [Visual Studio Code](https://code.visualstudio.com/). Bringing Processing Mode to Processing's PDE, if possible, would be a large amount of work.
+To use Processing Mode, you should be comfortable programming in Python and Java and have some experience with py5 and Processing. Processing Mode will require you to program in an IDE like [Visual Studio Code](https://code.visualstudio.com/). Bringing Processing Mode to Processing's PDE, if possible, would be a large amount of work.
 
 ## An Illustrative Example
 
@@ -204,7 +204,7 @@ First, you will need to add your compiled Java code to your classpath. This can 
 
 Next, you will need to write some Python code to define and register the functions you will call from Python. Registration is done with [](/reference/py5tools_register_processing_mode_key). Remember, the Java `callPython()` method can use the dot ("`.`") notation to access callables in modules or attached to objects.
 
-And finally, you will also need to tell py5 to create an instance of your class instead of `py5.core.Sketch`. You can do this with the `_jclassname` parameter in your call to [](/reference/sketch_run_sketch). If your Python code is using py5 in [class mode](content-py5-modes-class-mode), pass the `_jclassname` parameter to your constructor.
+Finally, you will also need to tell py5 to create an instance of your class instead of `py5.core.Sketch`. You can do this with the `_jclassname` parameter in your call to [](/reference/sketch_run_sketch). If your Python code is using py5 in [class mode](content-py5-modes-class-mode), pass the `_jclassname` parameter to your constructor.
 
 ## Limitations
 
@@ -213,6 +213,8 @@ Limitations for Jupyter Notebook users
 ## Object Translation
 
 Same as Hybrid Mode
+
+Test returning numpy arrays
 
 ## Creating Interfaces
 
