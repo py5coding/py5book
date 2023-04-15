@@ -135,7 +135,7 @@ def alter_image(msg: str, img: py5.Py5Image):
     return img
 ```
 
-The callables linked to the keys must be registered with py5. The first call to `py5_tools.register_processing_mode_key()` registers the `alter_image()` function with the key `'test_transfer'`. This key was used by the `callPython()` method in Java. The second call to `py5_tools.register_processing_mode_key()` registers the imported Numpy library `np`. As this is a large library, all of its functions are accessible with `callPython()` given the correct key, as long as it can be called with position-only parameters. In our example, we called `np.random.randint()` with the key `"np.random.randint"`.
+The callables linked to the keys must be registered with py5. The first call to [](/reference/py5tools_register_processing_mode_key) registers the `alter_image()` function with the key `'test_transfer'`. This key was used by the `callPython()` method in Java. The second call to [](/reference/py5tools_register_processing_mode_key) registers the imported Numpy library `np`. As this is a large library, all of its functions are accessible with `callPython()` given the correct key, as long as it can be called with position-only parameters. In our example, we called `np.random.randint()` with the key `"np.random.randint"`.
 
 ```python
 py5_tools.register_processing_mode_key('test_transfer', alter_image)
@@ -184,7 +184,7 @@ Use `callPython()` in your Sketch to make Python calls from Java. Remember to ca
 
 If your call to Python involves complex or time-consuming computation, you may want to use `callPython()` in a separate thread. However, if you do use this feature in a separate thread, the Python code should not use any of py5's drawing functions. The Processing Library is not threadsafe and bugs can be hard to track down.
 
-Consider catching exceptions, either in Python or in Java. If an exception is thrown in Python, a `RuntimeException` will be thrown in Java. Thrown exceptions can be problematic if your Sketch is running through Jupyter Notebook because you might have to restart the Notebook to exit the Sketch.
+Consider catching exceptions, either in Python or in Java. If an exception is thrown in Python, py5 will throw a `RuntimeException` in Java from `callPython()`. Thrown exceptions can be problematic if your Sketch is running through Jupyter Notebook because you might have to restart the Notebook to exit the Sketch.
 
 Finally, use `py5Println()` to print text. If you are using a Jupyter Notebook, `py5Println()` will place the text in the output of a notebook cell. Using `System.out.println()` would output text to the Jupyter Notebook logs.
 
@@ -198,7 +198,7 @@ First, you will need to add your compiled Java code to your classpath. This can 
 2. Place your jar files in a `jars` directory that is a subdirectory of the current working directory
 3. Create an environment variable `PY5_JARS` that points to a directory with jar files
 
-Second, you will need to write some Python code to define and register the functions you will call from Python. Remember, you can use the dot ("`.`") notation to access callables in modules or attached to objects.
+Next, you will need to write some Python code to define and register the functions you will call from Python. Registration is done with [](/reference/py5tools_register_processing_mode_key). Remember, the Java `callPython()` method can use the dot ("`.`") notation to access callables in modules or attached to objects.
 
 And finally, you will also need to tell py5 to create an instance of your class instead of `py5.core.Sketch`. You can do this with the `_jclassname` parameter in your call to [](/reference/sketch_run_sketch). If your Python code is using py5 in [class mode](content-py5-modes-class-mode), pass the `_jclassname` parameter to your constructor.
 
@@ -208,6 +208,10 @@ Limitations for Jupyter Notebook users
 
 ## Object Translation
 
+Same as Hybrid Mode
+
 ## Creating Interfaces
+
+Link to JPype documentation
 
 How to handle object translation?
