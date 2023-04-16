@@ -13,7 +13,7 @@ You should know that py5 was not the first open source project that attempted to
 1. Python code calls the user's `settings()` function
 2. Python code calls Java code to initialize the Sketch window
 3. Python code calls the user's `setup()` function once
-4. Python code calls the user's `draw()` function in a loop
+4. Python code repeatedly calls the user's `draw()` function in a loop
 
 You can imagine implementing the critical `run_sketch()` function with code that looks like this:
 
@@ -29,7 +29,7 @@ def run_sketch(settings, setup, draw):
         time.sleep(1 / frame_rate)
 ```
 
-In fact, if you look at the [initial commit of the py5 project](https://github.com/py5coding/py5generator/blob/636712b1c786eee67a6e1cbec9d59d2a25afb0e8/packages/py5generator/py5generator/templates/py5_init_template.py), you can see this is very close to what py5 actually did. (Note that this early version of py5 also used modified Processing Library code that was never checked in.) Observe that with this approach, Python is managing the animation thread. Remarkably, this could in fact create runnable py5 Sketches. There were, however, many problems. Two of the most critical were:
+In fact, if you look at the [initial commit of the py5 project](https://github.com/py5coding/py5generator/blob/636712b1c786eee67a6e1cbec9d59d2a25afb0e8/packages/py5generator/py5generator/templates/py5_init_template.py), you can see that this is very close to what py5 actually did. (Note that this early version of py5 also used modified Processing Library code that was never checked in.) Observe that with this approach, Python is managing the animation thread. Remarkably, this could in fact create runnable py5 Sketches. There were, however, many problems. Two of the most critical were:
 
 * There's no way to trigger mouse and keyboard events
 * The OpenGL renderers `P2D` and `P3D` always crashed
@@ -38,7 +38,7 @@ The problem with the OpenGL renderers had to do with something called a "context
 
 ## How py5 Actually Works
 
-The key insight behind py5 was to abandon the above approach and instead leverage JPype's ability to call Python from Java. Calling Java from Python is obviously important, but py5 wouldn't exist if JPype couldn't also make calls in the other direction, making calls *from* Java *to* Python.
+The key insight behind py5 was to abandon the above approach and instead leverage JPype's ability to call Python from Java. Calling Java from Python is obviously important for py5, but py5 wouldn't exist if JPype couldn't also make calls in the other direction, making calls *from* Java *to* Python.
 
 The basic idea of py5 is to provide a Processing Sketch in Java that makes calls to Python to execute the user's functions, which will in turn make calls back to Java to access Processing Library functionality. This approach lets the Processing Library manage the Sketch's animation thread and the various OpenGL complexities. As far as the Processing Library is concerned, every py5 user is running the exact same Java code, `py5.core.Sketch`, found in [Sketch.java](https://github.com/py5coding/py5generator/blob/main/py5_jar/src/main/java/py5/core/Sketch.java). This `py5.core.Sketch` class is an instance of the Processing Library's `processing.core.PApplet`. The `py5.core.Sketch` code makes calls to Python to execute the user's code.
 
@@ -105,20 +105,20 @@ The user's `setup()` and `draw()` functions are executed just like any other Pyt
 Exceptions are always caught and handled in Python. Error handling in py5 is complex; Java and Python cannot throw or handle each other's exceptions.
 
 When a Python exception is thrown, py5 will make it look like the Sketch has stopped by pausing the `py5.core.Sketch` instance. Pausing the Sketch instead of stopping it by throwing a Java exception is necessary to ensure py5 can reliably dispose of the Sketch window without also shutting down the Java Virtual Machine.
-Thrown exceptions have an unpredictable impact on Processing.
+Thrown exceptions have an unpredictable impact on Processing's internals.
 
 In Processing, when an exception is thrown, the exception can put the Sketch into a weird state that would complicate code that attempts to dispose of the Sketch window resources properly. That doesn't matter for a Processing Sketch because the Sketch window is terminated with a call `System.exit()`. This will shut down the Java Virtual Machine and as a consequence dispose of the Sketch window. In py5, calling `System.exit()` is not an option because it would make py5 unusable until you restarted your Python interpreter or Jupyter Notebook.
 
 ### 7. API Methods that Leverage the Processing Library Code
 
-Almost all of the code for py5's methods that leverage the Processing Library are written dynamically using py5generator's custom code template engine. The code for a typical function, minus the docstring, is very simple:
+Almost all of the code for py5's methods that leverage the Processing Library are written dynamically using py5generator's custom code template engine. The code for a typical function, minus the docstring, is austere:
 
 ```python
     def rect(self, *args):
         return self._instance.rect(*args)
 ```
 
-The `self._instance` attribute is the Java `py5.core.Sketch` instance created in step 1. Most of py5's methods are really simple wrappers of their underlying Processing Library methods.
+The `self._instance` attribute is the Java `py5.core.Sketch` instance created in step 1. Most of py5's methods are really thin wrappers of their underlying Processing Library methods. Except for [](/reference/py5vector), all py5 class instances have an `_instance` attribute referencing the underlying Processing object.
 
 Code written with py5generator's template engine can be customized with decorators or overridden with Python code.
 

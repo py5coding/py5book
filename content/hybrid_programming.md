@@ -22,7 +22,7 @@ Technically you don't really need much from py5 to combine Python and Java code 
    * Create an environment variable `PY5_JARS` that points to a directory with jar files
 2. Import the Java libraries with the `import` command **after** importing py5. Importing py5 will also start the JVM. Jars cannot be added after the JVM is started.
 
-A simple example might look like this:
+An example might look like this:
 
 ```python
 from pathlib import Path

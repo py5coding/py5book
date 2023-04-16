@@ -6,7 +6,7 @@ To use Processing Mode, you should be comfortable programming in Python and Java
 
 ## An Illustrative Example
 
-Let's introduce Processing Mode with a simple, illustrative example.
+Let's introduce Processing Mode with an illustrative example.
 
 ### Example Java Code
 
@@ -204,7 +204,7 @@ First, you will need to add your compiled Java code to your classpath. This can 
 
 Next, you will need to write some Python code to define and register the functions you will call from Python. Registration is done with [](/reference/py5tools_register_processing_mode_key). Remember, the Java `callPython()` method can use the dot ("`.`") notation to access callables in modules or attached to objects.
 
-Finally, you will also need to tell py5 to create an instance of your class instead of `py5.core.Sketch`. You can do this with the `jclassname` parameter in your call to [](/reference/sketch_run_sketch). If your Python code is using py5 in [class mode](content-py5-modes-class-mode), pass the `jclassname` parameter to your constructor.
+Finally, you will also need to tell py5 to create an instance of your class instead of `py5.core.Sketch`. You can do this with the `jclassname` parameter in your call to [](/reference/sketch_run_sketch). If your Python code is using py5 in [class mode](content-py5-modes-class-mode), your class should inherit from the Python `Sketch` class and pass the `jclassname` parameter as a keyword argument to the parent's `__init__()` method.
 
 ## Jupyter Notebook Limitations
 
@@ -251,7 +251,7 @@ void setup() {
 }
 ```
 
-This procedure has a side effect on Windows for Sketches using the OpenGL renderer. Moving the window to the front causes Processing to think the window was resized, which triggers a reapplication of the background color to the Sketch. Anything drawn before this redraw will be erased. There are workarounds for this if this causes a problem for your work. The simplest is to just wait a few frames before your code starts using any of Processing's draw commands.
+This procedure has a side effect on Windows for Sketches using the OpenGL renderer. Moving the window to the front causes Processing to think the window was resized, which triggers a reapplication of the background color to the Sketch. Anything drawn before this redraw will be erased. There are workarounds for this if this causes a problem for your work. One approach is to just wait a few frames before your code starts using any of Processing's draw commands.
 
 ## Java and Python Object Conversion
 
@@ -261,7 +261,7 @@ The mechanisms for converting Python objects to Java objects and Java objects to
 
 JPype supports Java Interfaces that are implemented Python. You cannot create a Python class that inherits from a Java class but you can create a Python class that implements a Java Interface. You should read JPype's documentation on [implementing Java Interfaces](https://jpype.readthedocs.io/en/latest/userguide.html#implementing-java-interfaces) if you want to explore the matter further.
 
-Here is a simple example to illustrate how to use this feature with py5.
+Here is a quick example to illustrate how to use this feature with py5.
 
 Start with this Java Interface:
 
