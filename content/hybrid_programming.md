@@ -231,9 +231,27 @@ Below is a table of the supported object pairs eligible for conversion:
 | numpy array   | processing.core.PMatrix     |
 | str           | java.lang.String            |
 | pathlib.Path  | java.lang.String            |
-| numpy arrays  | Java arrays                 |
 
-For numpy arrays, the dtype must match the data type used in the array. Numpy arrays are (on most computers) by default 64 bit floats or integers, which convert to `double` or `long` in Java. Java functions that expect arrays of type `float` or `int` must be passed numpy arrays of `np.float32` or `np.int32`. In our example, the `astype()` calls convert the numpy arrays to the types expected by the `drawColoredPoints()` method. Note that converting 64 bit numbers to 32 bit numbers halves the size of the data, thus making it faster to copy from Python to Java.
+Both Python `str` and `pathlib.Path` objects will be converted to `java.lang.String` objects but a `java.lang.String` returned to Python will always be converted to a Python `str`.
+
+Numpy array and Java array conversion is a bit more complex.
+
+If your hybrid programming function returns a Java array, it cannot be automatically converted to a numpy array. If you want to convert a Java array to a read-only numpy array and you know the Java array is not jagged, you can convert it with a call to `np.asarray()`. If the Java array is jagged, the call to `np.asarray()` will raise an exception.
+
+When a numpy array is passed to Java, it will be copied to a Java array. The dtype must match the data type used for the array in the Java function signature. The below table lists the data type equivalents.
+
+| numpy dtype | java primitive | Java object       |
+|:----------- |:-------------- |:----------------- |
+| np.int8     | byte           | java.lang.Byte    |
+| np.int16    | short          | java.lang.Short   |
+| np.int32    | int            | java.lang.Integer |
+| np.int64    | long           | java.lang.Long    |
+| np.float32  | float          | java.lang.Float   |
+| np.float64  | double         | java.lang.Double  |
+
+Numpy arrays are (on most computers) by default 64 bit floats or integers, which convert to `double` or `long` in Java. Java functions that expect arrays of type `float` or `int` must be passed numpy arrays of `np.float32` or `np.int32`. In our example, the `astype()` calls convert the numpy arrays to the types expected by the `drawColoredPoints()` method. Note that converting 64 bit numbers to 32 bit numbers halves the size of the data, thus making it faster to copy from Python to Java.
+
+If you don't want the limitations of read-only arrays or you don't want the performance impacts of array copying, consider using Direct Buffers, explained in the next section.
 
 ## Advanced Hybrid Programming Optimization
 
@@ -319,7 +337,7 @@ py5.run_sketch()
 
 On my computer, the Sketch can draw 100K points while achieving a frame rate of 60 fps.
 
-As explained in JPype's [Direct Buffers](https://jpype.readthedocs.io/en/latest/userguide.html#buffer-backed-numpy-arrays) documentation, we can create Numpy arrays that are backed by the Direct Buffers. With this arrangement, both Numpy and Java have access to the same block of memory. In Python we can work with the data in the same way that we would for any Numpy array. In Java we can work with the data through the DirectBuffer instances.
+As explained in JPype's [Direct Buffers](https://jpype.readthedocs.io/en/latest/userguide.html#buffer-backed-numpy-arrays) documentation, we can create numpy arrays that are backed by the Direct Buffers. With this arrangement, both numpy and Java have access to the same block of memory. In Python we can work with the data in the same way that we would for any numpy array. In Java we can work with the data through the DirectBuffer instances.
 
 In this example, our calls to `np.random.randint()` can assign data to the `colors[]` and `points[]` arrays in a way that fits their Direct Buffers exactly. When the assignments are complete, our Java code can read the data immediately. The call to `drawColoredPoints()` no longer needs to pass any parameters.
 
