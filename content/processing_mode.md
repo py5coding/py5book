@@ -36,7 +36,7 @@ public class TestSketch extends SketchBase {
     image(imgResponse, 100, 100);
 
     long randomNumber = (long) callPython("np.random.randint", 0, 100);
-    py5Println("JAVA: Random number from Numpy: " + randomNumber);
+    py5Println("JAVA: Random number from numpy: " + randomNumber);
   }
 
   public void draw() {
@@ -85,7 +85,7 @@ The printed output is:
 ```text
 PYTHON: Hello from Java!
 PYTHON: Py5Image(width=200, height=200)
-JAVA: Random number from Numpy: 61
+JAVA: Random number from numpy: 61
 ```
 
 ### Illustrative Example Breakdown
@@ -111,12 +111,12 @@ The first parameter to `callPython()` is called a "key". This key is used to loc
     long randomNumber = (long) callPython("np.random.randint", 0, 100);
 ```
 
-The key parameter does not need to map directly to a callable. Periods ("`.`") can be used to denote "subkeys" to access callables in modules or Python objects. In this example, the `"np.random.randint"` key accesses the callable `randint` in Numpy's `np.random` module.
+The key parameter does not need to map directly to a callable. Periods ("`.`") can be used to denote "subkeys" to access callables in modules or Python objects. In this example, the `"np.random.randint"` key accesses the callable `randint` in numpy's `np.random` module.
 
-By default, Numpy's `np.random.randint` function returns a 64 bit integer (`np.int64`). The equivalent type in Java is `long`, not `int`.
+By default, numpy's `np.random.randint` function returns a 64 bit integer (`np.int64`). The equivalent type in Java is `long`, not `int`.
 
 ```java
-    py5Println("JAVA: Random number from Numpy: " + randomNumber);
+    py5Println("JAVA: Random number from numpy: " + randomNumber);
 ```
 
 The `py5Println()` method uses the same print mechanism as py5's [](/reference/sketch_println). The output from both will appear in the same place.
@@ -144,7 +144,7 @@ py5_tools.register_processing_mode_key('test_transfer', alter_image)
 py5_tools.register_processing_mode_key('np', np)
 ```
 
-The callables linked to the keys must be registered with py5. The first call to [](/reference/py5tools_register_processing_mode_key) registers the `alter_image()` function with the key `'test_transfer'`. This key was used by the `callPython()` method in Java. The second call to [](/reference/py5tools_register_processing_mode_key) registers the imported Numpy library `np`. As this is a large library, all of its functions are accessible with `callPython()` given the correct key, as long as it can be called with position-only parameters. In our example, we called `np.random.randint()` with the key `"np.random.randint"`.
+The callables linked to the keys must be registered with py5. The first call to [](/reference/py5tools_register_processing_mode_key) registers the `alter_image()` function with the key `'test_transfer'`. This key was used by the `callPython()` method in Java. The second call to [](/reference/py5tools_register_processing_mode_key) registers the imported numpy library `np`. As this is a large library, all of its functions are accessible with `callPython()` given the correct key, as long as it can be called with position-only parameters. In our example, we called `np.random.randint()` with the key `"np.random.randint"`.
 
 ```python
 py5.run_sketch(jclassname='test.TestSketch')
@@ -236,14 +236,29 @@ Unfortunately, after calling `py5Bridge.terminate_sketch()`, the Sketch will sti
 
 If you are not happy with any of this you can always override `exitActual()` in your Sketch class and call `System.exit()` or whatever else best suits your needs. If you figure out a better way to manage these exception issues, please talk to the py5 maintainer about making a pull request.
 
-## Object Translation
+### Window Ordering
 
-Same as Hybrid Mode
+The Sketch window may open behind your browser window. If this happens, you can call [](/reference/py5surface_set_always_on_top) in your `setup()` method to move the window to the front.
 
-Test returning numpy arrays
+```java
+void setup() {
+    // ...
+
+    // move the Sketch window to the front
+    getSurface().setAlwaysOnTop(true);
+    // if you don't want the Sketch window to always be on top, set it to false.
+    getSurface().setAlwaysOnTop(false);
+}
+```
+
+This procedure causes a problem on Windows for Sketches that use the OpenGL renderer. Moving the window to the front causes Processing to think the window was resized, which triggers a reapplication of the background color to the Sketch. Anything drawn before this redraw will be erased. There are workarounds for this. The simplest is to just wait a few frames before your code starts using draw commands.
+
+## Java and Python Object Conversion
+
+The mechanisms for converting Python objects to Java objects and Java objects to Python objects is the same as what is documented in the [](hybrid_programming) documentation's [](hybrid-programming-java-python-object-conversion) section. Keep in mind that conversions for numpy arrays and Python arrays are more complicated. Direct Buffers, as documented in the [](hybrid-programming-advanced-hybrid-programming-optimization) section, are very useful.
 
 ## Creating Interfaces
 
 Link to JPype documentation
 
-How to handle object translation?
+How to handle object translation for this?

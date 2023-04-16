@@ -211,6 +211,7 @@ py5.run_sketch()
 
 On my computer, the frame rate of this hybrid code is 60 fps.
 
+(hybrid-programming-java-python-object-conversion)=
 ## Java and Python Object Conversion
 
 Before continuing, we must take note of the implicit conversion of Python objects to Java objects when they are passed from Python to Java. In the previous example, the 2D numpy arrays `colors` and `points` were passed to a method that accepts 2D Java arrays of ints and floats. This works because JPype will automatically convert numpy arrays to Java arrays when numpy arrays are passed to a Java method that accepts Java array parameters. In addition to this builtin functionality, py5 adds its own conversion rules to convert py5 objects to Processing objects when py5 objects are passed to Java. These conversion rules will also work in reverse for Processing objects that are returned from Java back to Python. All object conversions are done without any programming burden placed on the end user.
@@ -240,7 +241,7 @@ If your hybrid programming function returns a Java array, it cannot be automatic
 
 When a numpy array is passed to Java, it will be copied to a Java array. The dtype must match the data type used for the array in the Java function signature. The below table lists the data type equivalents.
 
-| numpy dtype | java primitive | Java object       |
+| numpy dtype | Java primitive | Java object       |
 |:----------- |:-------------- |:----------------- |
 | np.int8     | byte           | java.lang.Byte    |
 | np.int16    | short          | java.lang.Short   |
@@ -253,6 +254,7 @@ Numpy arrays are (on most computers) by default 64 bit floats or integers, which
 
 If you don't want the limitations of read-only arrays or you don't want the performance impacts of array copying, consider using Direct Buffers, explained in the next section.
 
+(hybrid-programming-advanced-hybrid-programming-optimization)=
 ## Advanced Hybrid Programming Optimization
 
 Further optimizations of our colored points example are still possible. The time it takes to copy the numpy arrays from Python's memory space over to Java slows down the Sketch. This issue can be addressed by sharing memory between Python and Java with [Direct Buffers](https://jpype.readthedocs.io/en/latest/userguide.html#buffer-backed-numpy-arrays). With Direct Buffers, no data is copied between Python and Java. JPype's support of Direct Buffers make it an excellent backbone for py5.
