@@ -472,11 +472,11 @@ run_sketch()
 
 <img src="images/mouse_and_keyboard_interaction/palette.png">
 
-Let's add in the ability to change the size of our brush. We could redo our previous code, that increases the size with a right click and resets it with the middle click... but it'd be more elegant to use the mouse wheel to scroll up and down and change the size that way. 
+Let's add in the ability to change the size of our brush. We could redo our previous code, that increases the size with a right click and resets it with the middle click... but it'd be more elegant to use the mouse wheel to scroll up and down and change the size that way.
 
-Thankfully, the `mouse_wheel()` event can do the hard part for us, waiting to capture that event. Scrolling the mouse wheel up or down (or, on some laptops, scrolling the touchpad with two fingers) will trigger thie event... but the values produced from it for an *upwards* scroll or a *downwards* scroll vary by device, so we'll do some testing first to determine which way is which. 
+Thankfully, the `mouse_wheel()` event can do the hard part for us, waiting to capture that event. Scrolling the mouse wheel up or down (or, on some laptops, scrolling the touchpad with two fingers) will trigger thie event... but the values produced from it for an *upwards* scroll or a *downwards* scroll vary by device, so we'll do some testing first to determine which way is which.
 
-Add in a `mouse_wheel()` event that captures the event information (we've called it *e*, but you can name it anything) and prints it to the console. The data returned by just printing *e* is pretty useless -- you might see some kind of a mess like `<py5.mouseevent.Py5MouseEvent object at 0x0000018F3E0B96D0>` -- but we're also using a method called `.get_count()` to turn this mouse event into a human-readable number.
+Add in a `mouse_wheel()` event that captures the event information (we've called it *e*, but you can name it anything) and print `e.get_count()` to the console.
 
 ```{code-cell} ipython3
 # Global variables live outside of our various functions.
@@ -544,7 +544,7 @@ def mouse_wheel(e):
 run_sketch()
 ```
 
-Scrolling the mouse wheel at this point will print either a -1 or a 1 in the console. On some devices, -1 will correspond to scrolling upwards... on other devices it could be the opposite. However, you'll quickly be able to figure out which one is the case for you. For simplicity's sake, we'll just be adding this value to our *brushsize* variable. 
+Scrolling the mouse wheel at this point will print either a -1 or a 1 in the console. On some devices, -1 will correspond to scrolling upwards... on other devices it could be the opposite. However, you'll quickly be able to figure out which one is the case for you. For simplicity's sake, we'll just be adding this value to our *brushsize* variable.
 
 We'll also be bringing in a different mode here. While we're adjusting our brush size, our painting mode will be on *select*. When we've adjusted our brush size, the `redraw()` line will run `draw()` again -- just once -- to set the painting mode back to *free*. To prevent blobs of paint appearing around the edges of the palette when you select colors with a large brush size, we've also added in a line to set our painting mode to *select* while we're selecting from our swatches.
 
