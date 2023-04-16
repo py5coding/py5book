@@ -42,7 +42,7 @@ py5.run_sketch(jclassname='test.TestSketch')
 
 Register a callable or module when programming in py5's Processing Mode. This will make Python code available to Processing Mode py5 users to call in Java with the `callPython()` method. Please read py5's online documentation to learn more about Processing Mode.
 
-The `value` parameter can be a callable, a module or an object. If `value` is a module or an object, the `key` parameter in the Java `callPython()` call should use dots (`.`) to access the module's or object's callables.
+The `value` parameter can be a callable, a module or an object. If `value` is a module or an object, the `key` parameter in the Java `callPython()` call should use dots ("`.`") to access the module's or object's callables.
 
 ## Signatures
 
@@ -55,4 +55,4 @@ register_processing_mode_key(
 ) -> None
 ```
 
-Updated on April 15, 2023 22:56:12pm UTC
+Updated on April 16, 2023 17:26:49pm UTC
