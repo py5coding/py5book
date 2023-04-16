@@ -1,8 +1,6 @@
 # Processing Mode
 
-Processing Mode refers to py5's ability to serve as a bridge from Java to Python, allowing Processing Sketches to call Python functions using a new `callPython()` method.
-
-Although there are a few caveats for users looking to run Processing Mode sketches in a Python Jupyter Notebook, this is a solid feature that in time will add a significant amount of value to the Processing community.
+Processing Mode refers to py5's ability to serve as a bridge from Java to Python, allowing Processing Sketches to call Python functions using a new `callPython()` method. This is a solid feature that in time will add a significant amount of value to the Processing community.
 
 To use Processing Mode, you should be comfortable programming in Python and Java and have some experience with py5 and Processing. Processing Mode will require you to program in an IDE like [Visual Studio Code](https://code.visualstudio.com/). Bringing Processing Mode to Processing's PDE, if possible, would be a large amount of work.
 
@@ -246,19 +244,21 @@ void setup() {
 
     // move the Sketch window to the front
     getSurface().setAlwaysOnTop(true);
-    // if you don't want the Sketch window to always be on top, set it to false.
+    // if you don't want the Sketch window to always be on top, immediately set it to false.
     getSurface().setAlwaysOnTop(false);
 }
 ```
 
-This procedure causes a problem on Windows for Sketches that use the OpenGL renderer. Moving the window to the front causes Processing to think the window was resized, which triggers a reapplication of the background color to the Sketch. Anything drawn before this redraw will be erased. There are workarounds for this. The simplest is to just wait a few frames before your code starts using draw commands.
+This procedure has a side effect on Windows for Sketches that use the OpenGL renderer. Moving the window to the front causes Processing to think the window was resized, which triggers a reapplication of the background color to the Sketch. Anything drawn before this redraw will be erased. There are workarounds for this. The simplest is to just wait a few frames before your code starts using any of Processing's draw commands.
 
 ## Java and Python Object Conversion
 
-The mechanisms for converting Python objects to Java objects and Java objects to Python objects is the same as what is documented in the [](hybrid_programming) documentation's [](hybrid-programming-java-python-object-conversion) section. Keep in mind that conversions for numpy arrays and Python arrays are more complicated. Direct Buffers, as documented in the [](hybrid-programming-advanced-hybrid-programming-optimization) section, are very useful.
+The mechanisms for converting Python objects to Java objects and Java objects to Python objects is the same as what is documented in the [](hybrid_programming) documentation's [](hybrid-programming-java-python-object-conversion) section. Keep in mind that conversions for numpy arrays and Python arrays are complicated. Direct Buffers, as documented in the [](hybrid-programming-advanced-hybrid-programming-optimization) section, are very useful for Processing Mode Sketches.
 
 ## Creating Interfaces
 
 Link to JPype documentation
+
+https://jpype.readthedocs.io/en/latest/userguide.html#implementing-java-interfaces
 
 How to handle object translation for this?
