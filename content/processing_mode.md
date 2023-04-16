@@ -232,7 +232,7 @@ The following block of code may be useful to you:
 
 Unfortunately, after calling `py5Bridge.terminate_sketch()`, the Sketch will still respond to mouse and keyboard events. This might be undesirable. If this is a problem, set a terminated flag that your code checks in the event methods before proceeding with your desired event code.
 
-If you are not happy with any of this you can always override `exitActual()` in your Sketch class and call `System.exit()` or whatever else best suits your needs. If you figure out a better way to manage these exception issues, please talk to the py5 maintainer about making a pull request.
+If you are not happy with any of this you can always override `exitActual()` in your Sketch class and call `System.exit()` or whatever else best suits your needs. If you figure out a better way to manage these exception issues, please share what you have learned and make a pull request.
 
 ### Window Ordering
 
@@ -249,7 +249,7 @@ void setup() {
 }
 ```
 
-This procedure has a side effect on Windows for Sketches that use the OpenGL renderer. Moving the window to the front causes Processing to think the window was resized, which triggers a reapplication of the background color to the Sketch. Anything drawn before this redraw will be erased. There are workarounds for this. The simplest is to just wait a few frames before your code starts using any of Processing's draw commands.
+This procedure has a side effect on Windows for Sketches using the OpenGL renderer. Moving the window to the front causes Processing to think the window was resized, which triggers a reapplication of the background color to the Sketch. Anything drawn before this redraw will be erased. There are workarounds for this if this causes a problem for your work. The simplest is to just wait a few frames before your code starts using any of Processing's draw commands.
 
 ## Java and Python Object Conversion
 
@@ -257,8 +257,116 @@ The mechanisms for converting Python objects to Java objects and Java objects to
 
 ## Creating Interfaces
 
-Link to JPype documentation
+JPype supports Java Interfaces that are implemented Python. You cannot create a Python class that inherits from a Java class but you can create a Python class that implements a Java Interface. You should read JPype's documentation on [implementing Java Interfaces](https://jpype.readthedocs.io/en/latest/userguide.html#implementing-java-interfaces) if you want to explore the matter further.
 
-https://jpype.readthedocs.io/en/latest/userguide.html#implementing-java-interfaces
+Here is a simple example to illustrate how to use this feature with py5.
 
-How to handle object translation for this?
+Start with this Java Interface:
+
+```java
+package test;
+
+import processing.core.PImage;
+
+public interface TestInterface {
+  public PImage passImage(String message, PImage pimage);
+}
+```
+
+This can be implemented in Python using JPype's `JImplements` and `JOverride` decorators:
+
+```python
+import traceback
+
+from jpype import JImplements, JOverride
+
+import py5_tools
+import py5
+from py5 import object_conversion
+
+
+@JImplements('test.TestInterface')
+class Test:
+
+    @JOverride
+    def passImage(self, message, pimage):
+        try:
+            py5.println(f"PYTHON: message type is {type(message)}")
+            py5.println(f"PYTHON: message is {message}")
+
+            py5.println(f"PYTHON: img type is {type(pimage)}")
+
+            # convert Java PImage object to Python Py5Image object
+            py5image = object_conversion.convert_to_python_type(pimage)
+
+            py5.println(f"PYTHON: py5image type is {type(py5image)}")
+            py5.println(f"PYTHON: py5image is {py5image}")
+
+            new_py5image = py5.create_image(200, 200, py5.RGB)
+            new_py5image.load_np_pixels()
+            new_py5image.np_pixels[::2, ::2] = [255, 255, 0, 0]
+            new_py5image.update_np_pixels()
+
+            # convert Python Py5Image object to Java PImage object
+            return object_conversion.convert_to_java_type(new_py5image)
+        except Exception as e:
+            traceback.print_exc()
+            return None
+
+py5_tools.register_processing_mode_key('setup_test_interface', lambda: Test())
+```
+
+The goal of this example is to show how objects can be passed back and forth between Java and Python.
+
+Calls to the Python `passImage()` method will bypass py5's mechanisms for converting between Python and Java objects. You can use py5's convenience functions `convert_to_python_type()` and `convert_to_java_type()` to take care of the object conversion for you.
+
+Recall that Java arrays can be converted to read-only numpy arrays with `np.asarray()`. The function `convert_to_python_type()` will not do this for you, but `convert_to_java_type()` will take care of converting numpy arrays back to Java arrays.
+
+Java Strings can be converted to Python strings with `str()` if `convert_to_python_type()` is too much typing. Note that Java Strings cannot be concatenated with Python strings. Java Strings have less functionality than Python strings.
+
+Make note of the exception handling in `passImage()`. Calls to the Python `passImage()` method will also bypass py5's mechanisms for handling exceptions. Without adding exception handling to `passImage()`, exceptions would yield Java error messages that are as horrific as they are useless. Make life easier on yourself and surround your Python code with `try` `catch` blocks.
+
+The remaining Java code that uses `TestInterface` is as follows:
+
+```java
+package test;
+
+import processing.core.PImage;
+import py5.core.SketchBase;
+
+public class TestSketch extends SketchBase {
+
+  protected TestInterface testInterface;
+
+  public void settings() {
+    size(400, 400, P2D);
+  }
+
+  public void setup() {
+    rectMode(CENTER);
+
+    test = (TestInterface) callPython("setup_test_interface");
+
+    String message = "Hello from Java!";
+    PImage pimage = createImage(150, 150, RGB);
+    PImage imageResponse = test.passImage(message, pimage);
+    if (imageResponse != null) {
+      image(imageResponse, 100, 100);
+    }
+
+  }
+
+  public void draw() {
+    rect(mouseX, mouseY, 20, 20);
+  }
+
+}
+```
+
+Observe that there is only one use of `callPython()` to obtain the Python object that implements the Java Interface `TestInterface`. Thereafter, the code can use the `test` object to make calls to Python without needing to cast objects.
+
+The only remaining task to run this Sketch is to call `runSketch()`:
+
+```python
+py5.run_sketch(jclassname='test.TestSketch')
+```
