@@ -44,7 +44,7 @@ public class TestSketch extends SketchBase {
 }
 ```
 
-This Java code must be compiled into a Jar file. If the Jar file is in a `jars` subdirectory, it will be added to py5's classpath automatically.
+Observe the two calls to `callPython()`. This Java code must be compiled into a Jar file. If the Jar file is in a `jars` subdirectory, it will be added to py5's classpath automatically.
 
 ### Example Python Code
 
@@ -133,7 +133,7 @@ def alter_image(msg: str, img: py5.Py5Image):
     return img
 ```
 
-The Python function `alter_image()` takes two parameters. The type hints are optional but are useful for clarity and to assist your IDE with code completion. The `img` parameter is in fact a `Py5Image` object. The `Py5Image` object has all the features of `Py5Image` objects. Here, we are using [](/reference/sketch_np_pixels) to alter the object's pixels with numpy broadcasting.
+The Python function `alter_image()` takes two parameters. The type hints are optional but are useful for clarity and to assist your IDE with code completion. The `img` parameter is in fact a `Py5Image` object. The `Py5Image` object has all the features of `Py5Image` objects. Here, we are using [](/reference/py5image_np_pixels.md) to alter the object's pixels with numpy broadcasting.
 
 Contemplate what is happening between the Java code and the Python code: a `PImage` object in Java becomes a `Py5Image` object in Python. That `Py5Image` object is returned to Java, where it can be cast back to the same `PImage` object. If you pass the same `PImage` object to Python multiple times, it will be the same `Py5Image` object every time.
 
@@ -172,6 +172,8 @@ print(py5_tools.get_classpath().replace(':', '\n'))
 
 Look for `py5/jars/py5.jar` in the output.
 
+For a new project, you can use the `py5utils` command line tool to create working project files for you.
+
 ### 2. Inherit from `SketchBase`
 
 Modify your class to inherit from `py5.core.SketchBase` instead of `processing.core.PApplet`.
@@ -182,11 +184,11 @@ As explained in [](/developer/how_does_py5_work), a py5 Sketch will create an in
 
 ### 3. Use `callPython()` Method
 
-Use `callPython()` in your Sketch to make Python calls from Java. Remember to cast the returned `java.lang.Object` to the appropriate class. Consider checking the type before casting the object.
+Use `callPython()` in your Sketch to make Python calls from Java. Remember the return type is `java.lang.Object` and must be cast to the appropriate class. Consider checking the object's type before casting the object to avoid cast exceptions.
 
 If your call to Python involves complex or time-consuming computation, you may want to use `callPython()` in a separate thread. However, if you do use this feature in a separate thread, the Python code should not use any of py5's drawing functions. The Processing Library is not threadsafe and bugs can be hard to track down.
 
-Consider catching exceptions, either in Python or in Java. If an exception is thrown in Python, py5 will throw a `RuntimeException` in Java from `callPython()`. Thrown exceptions can be problematic if your Sketch is running through Jupyter Notebook because you might have to restart the Notebook to exit the Sketch.
+Consider catching exceptions, either in Python or in Java. If an exception is thrown in Python, py5 will print a stack trace and throw a `RuntimeException` in Java from `callPython()`. Thrown exceptions can be problematic if your Sketch is running through Jupyter Notebook because you might have to restart the Notebook to exit the Sketch.
 
 Finally, use `py5Println()` to print text. If you are using a Jupyter Notebook, `py5Println()` will place the text in the output of a notebook cell. Using `System.out.println()` would output text to the Jupyter Notebook logs.
 
@@ -194,7 +196,7 @@ Finally, use `py5Println()` to print text. If you are using a Jupyter Notebook, 
 
 There are several Python tasks you must address to use Processing Mode.
 
-First, you will need to add your compiled Java code to your classpath. This can be done one of three ways:
+First, you will need to add your compiled Java code to your classpath. This can be done in one of three ways:
 
 1. Explicitly adding the jars with [](/reference/py5tools_add_jars) or [](/reference/py5tools_add_classpath)
 2. Place your jar files in a `jars` directory that is a subdirectory of the current working directory
@@ -206,7 +208,7 @@ Finally, you will also need to tell py5 to create an instance of your class inst
 
 ## Jupyter Notebook Limitations
 
-There are a handful of limitations you might face if you want to launch a Processing Mode Sketch in a Jupyter Notebook. Depending on your situation, not all of these limitations will be applicable to you. Use the information here to assist you but don't bother if these are not actual problems.
+There are a handful of limitations you might face if you want to launch a Processing Mode Sketch in a Jupyter Notebook. Depending on your situation, not all of these limitations will be applicable to you. Use the information here to assist you but don't bother if these are not actual problems in your project.
 
 ### Exception Handling
 
@@ -318,11 +320,11 @@ py5_tools.register_processing_mode_key('setup_test_interface', lambda: Test())
 
 The goal of this example is to show how objects can be passed back and forth between Java and Python.
 
-Calls to the Python `passImage()` method will bypass py5's mechanisms for converting between Python and Java objects. You can use py5's convenience functions `convert_to_python_type()` and `convert_to_java_type()` to take care of the object conversion for you.
+Calls to this Interface's Python `passImage()` method will bypass py5's mechanisms for converting between Python and Java objects. You can use py5's convenience functions `convert_to_python_type()` and `convert_to_java_type()` to take care of the object conversion for you.
 
 Recall that Java arrays can be converted to read-only numpy arrays with `np.asarray()`. The function `convert_to_python_type()` will not do this for you, but `convert_to_java_type()` will take care of converting numpy arrays back to Java arrays.
 
-Java Strings can be converted to Python strings with `str()` if `convert_to_python_type()` is too much typing. Note that Java Strings cannot be concatenated with Python strings. Java Strings have less functionality than Python strings.
+Java Strings can be converted to Python strings with `str()` if `convert_to_python_type()` is too much typing. Note that Java Strings cannot be concatenated with Python strings. Java Strings have less functionality than Python strings and may disappoint you.
 
 Make note of the exception handling in `passImage()`. Calls to the Python `passImage()` method will also bypass py5's mechanisms for handling exceptions. Without adding exception handling to `passImage()`, exceptions would yield Java error messages that are as horrific as they are useless. Make life easier on yourself and surround your Python code with `try` `catch` blocks.
 
@@ -365,8 +367,22 @@ public class TestSketch extends SketchBase {
 
 Observe that there is only one use of `callPython()` to obtain the Python object that implements the Java Interface `TestInterface`. Thereafter, the code can use the `test` object to make calls to Python without needing to cast objects.
 
-The only remaining task to run this Sketch is to call `runSketch()`:
+The only remaining task is to call `runSketch()` to run this Sketch:
 
 ```python
 py5.run_sketch(jclassname='test.TestSketch')
+```
+
+The Sketch will look much like the first example:
+
+![Large spotted red square in the center of a gray image with small white squares scattered about](/images/content/processing_mode_example2.png)
+
+The printed output is:
+
+```text
+PYTHON: message type is <java class 'java.lang.String'>
+PYTHON: message is Hello from Java!
+PYTHON: img type is <java class 'processing.core.PImage'>
+PYTHON: py5image type is <class 'py5.image.Py5Image'>
+PYTHON: py5image is Py5Image(width=150, height=150)
 ```
