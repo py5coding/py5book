@@ -206,9 +206,35 @@ Next, you will need to write some Python code to define and register the functio
 
 Finally, you will also need to tell py5 to create an instance of your class instead of `py5.core.Sketch`. You can do this with the `jclassname` parameter in your call to [](/reference/sketch_run_sketch). If your Python code is using py5 in [class mode](content-py5-modes-class-mode), pass the `jclassname` parameter to your constructor.
 
-## Limitations
+## Jupyter Notebook Limitations
 
-Limitations for Jupyter Notebook users
+There are a handful of limitations you might face if you want to launch a Processing Mode Sketch in a Jupyter Notebook. Depending on your situation, not all of these limitations will be applicable to you. Use the information here to assist you but don't bother if these are not actual problems.
+
+### Exception Handling
+
+As explained in [How Does py5 Work?](how-does-py5-work-execute-user-implemented-functions), exception handling in py5 is complicated because of the two languages. A regular py5 Sketch is designed to manage these complications in a way that allows errors to happen but without requiring you to terminate a Sketch by restarting your Jupyter Notebook or killing operating system processes. Unfortunately, a Processing Mode Sketch is not able to help with this. Therefore, you will need to manage this issue on your own.
+
+By default, if a Processing Mode Sketch detects that it is running in a generic Python interpreter and not in a Jupyter Notebook, it will call `System.exit()`. This will consistently terminate the Sketch resources for you.
+
+If a Processing Mode Sketch detects that it is running in a Jupyter Notebook, it will not call `System.exit()`. It will do the best it can to dispose of the Sketch window resources. If an exception has been thrown, it might not be successful. You will then need to restart the Jupyter Notebook. You can avoid this by catching any exceptions, whether they be from `callPython()` or elsewhere. If an exception is not handleable, call `py5Bridge.terminate_sketch()` to terminate the Sketch in a way that allows the user to still close the Sketch window.
+
+The following block of code may be useful to you:
+
+```java
+   try {
+        callPython("your_python_function");
+    } catch (Exception e) {
+        // handle exception
+        /// ...
+        
+        // if you want the exception to halt the Sketch, call this:
+        py5Bridge.terminate_sketch();
+    }
+```
+
+Unfortunately, after calling `py5Bridge.terminate_sketch()`, the Sketch will still respond to mouse and keyboard events. This might be undesirable. If this is a problem, set a terminated flag that your code checks in the event methods before proceeding with your desired event code.
+
+If you are not happy with any of this you can always override `exitActual()` in your Sketch class and call `System.exit()` or whatever else best suits your needs. If you figure out a better way to manage these exception issues, please talk to the py5 maintainer about making a pull request.
 
 ## Object Translation
 

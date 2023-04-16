@@ -97,11 +97,17 @@ The code in each of `py5.core.Sketch`'s user functions looks very much like this
 
 The boolean `success` variable is a flag that is set to `false` if an exception is thrown in Python and py5 needs to terminate the Sketch.
 
+(how-does-py5-work-execute-user-implemented-functions)=
 ### 6. Execute User Implemented Functions
 
 The user's `setup()` and `draw()` functions are executed just like any other Python function.
 
-Exceptions are always caught and handled in Python. Error handling in py5 is complex; Java and Python cannot throw or handle each other's exceptions. When a Python exception is thrown, py5 will make it look like the Sketch has stopped by pausing the `py5.core.Sketch` instance. Pausing the Sketch instead of stopping it by throwing a Java exception is necessary to ensure py5 can reliably dispose of the Sketch window without also shutting down the Java Virtual Machine.
+Exceptions are always caught and handled in Python. Error handling in py5 is complex; Java and Python cannot throw or handle each other's exceptions.
+
+When a Python exception is thrown, py5 will make it look like the Sketch has stopped by pausing the `py5.core.Sketch` instance. Pausing the Sketch instead of stopping it by throwing a Java exception is necessary to ensure py5 can reliably dispose of the Sketch window without also shutting down the Java Virtual Machine.
+Thrown exceptions have an unpredictable impact on Processing.
+
+In Processing, when an exception is thrown, the exception can put the Sketch into a weird state that would complicate code that attempts to dispose of the Sketch window resources properly. That doesn't matter for a Processing Sketch because the Sketch window is terminated with a call `System.exit()`. This will shut down the Java Virtual Machine and as a consequence dispose of the Sketch window. In py5, calling `System.exit()` is not an option because it would make py5 unusable until you restarted your Python interpreter or Jupyter Notebook.
 
 ### 7. API Methods that Leverage the Processing Library Code
 
