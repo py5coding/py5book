@@ -222,7 +222,7 @@ The following block of code may be useful to you:
 
 ```java
    try {
-        callPython("your_python_function");
+        callPython("key");
     } catch (Exception e) {
         // handle exception
         /// ...
@@ -287,9 +287,11 @@ import py5
 from py5 import object_conversion
 
 
+# tell JPype this class implements the Java Interface test.TestInterface
 @JImplements('test.TestInterface')
 class Test:
 
+    # tell JPype this method implements method in the Java Interface
     @JOverride
     def passImage(self, message, pimage):
         try:
@@ -365,7 +367,7 @@ public class TestSketch extends SketchBase {
 }
 ```
 
-Observe that there is only one use of `callPython()` to obtain the Python object that implements the Java Interface `TestInterface`. Thereafter, the code can use the `test` object to make calls to Python without needing to cast objects.
+Observe that there is only one use of `callPython()` to obtain the Python object that implements the Java Interface `TestInterface`. Thereafter, the code can use the `test` object to make calls to Python through the interface without needing to cast the objects returned by each method.
 
 The only remaining task is to call `runSketch()` to run this Sketch:
 

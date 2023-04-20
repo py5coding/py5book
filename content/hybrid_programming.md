@@ -147,14 +147,14 @@ def draw():
     points = np.random.rand(N, 2) * [py5.width, py5.height]
     with py5.begin_shape(py5.POINTS):
         for i in range(N):
-            py5.stroke(*colors[i])
-            py5.vertex(*points[i])
+            py5.stroke(colors[i, 0], colors[i, 1], colors[i, 2])
+            py5.vertex(points[i, 0], points[i, 1])
 
 
 py5.run_sketch()
 ```
 
-On my computer, the frame rate increases to 31 fps. Note we cannot use [](/reference/sketch_vertices) for this because each point has a random color.
+On my computer, the frame rate increases to 43 fps. Note we cannot use [](/reference/sketch_vertices) for this because each point has a random color.
 
 Now let's use hybrid programming to make this even faster. Use the `py5utils` command line tool to create the template files and then add the following Java code to `Py5Utilities.java`:
 
@@ -187,7 +187,7 @@ public class Py5Utilities {
 
 Create the jar file with `mvn -f java package`.
 
-The for loop in the previous `draw()` method can be replaced with a call to `drawColoredPoints()`.
+The for loop in the previous `draw()` method can now be replaced with a call to `drawColoredPoints()`.
 
 ```python
 import numpy as np
@@ -203,6 +203,7 @@ def setup():
 def draw():
     colors = (255 * np.random.rand(N, 3)).astype(np.int32)
     points = np.random.rand(N, 2).astype(np.float32) * [py5.width, py5.height]
+    # call Py5Utilities Java method
     py5.utils.drawColoredPoints(colors, points)
 
 
@@ -257,7 +258,7 @@ If you don't want the limitations of read-only arrays or you don't want the perf
 (hybrid-programming-advanced-hybrid-programming-optimization)=
 ## Advanced Hybrid Programming Optimization
 
-Further optimizations of our colored points example are still possible. The time it takes to copy the numpy arrays from Python's memory space over to Java slows down the Sketch. This issue can be addressed by sharing memory between Python and Java with [Direct Buffers](https://jpype.readthedocs.io/en/latest/userguide.html#buffer-backed-numpy-arrays). With Direct Buffers, no data is copied between Python and Java. JPype's support of Direct Buffers make it an excellent backbone for py5.
+Further optimizations of our colored points example are still possible. The time it takes to copy the numpy arrays from Python's memory space over to Java slows down the Sketch. This issue can be addressed by sharing memory between Python and Java with [Direct Buffers](https://jpype.readthedocs.io/en/latest/userguide.html#buffer-backed-numpy-arrays). With Direct Buffers, no data is copied between Python and Java. JPype's support of Direct Buffers make it an excellent foundation for py5.
 
 To employ Direct Buffers, replace the Java code with the following:
 
@@ -313,11 +314,13 @@ import py5
 
 N = 100_000
 
+# create Direct Buffers
+points_buffer = jpype.nio.convertToDirectBuffer(bytearray(4 * N * 2)).asFloatBuffer()
 byte_buffer = jpype.nio.convertToDirectBuffer(bytearray(4 * N))
-colors = np.asarray(byte_buffer).reshape(N, 4)
 colors_buffer = byte_buffer.asIntBuffer()
 
-points_buffer = jpype.nio.convertToDirectBuffer(bytearray(4 * N * 2)).asFloatBuffer()
+# create numpy arrays backed by the Direct Buffers
+colors = np.asarray(byte_buffer).reshape(N, 4)
 points = np.asarray(points_buffer).reshape(N, 2)
 
 
@@ -343,6 +346,6 @@ As explained in JPype's [Direct Buffers](https://jpype.readthedocs.io/en/latest/
 
 In this example, our calls to `np.random.randint()` can assign data to the `colors[]` and `points[]` arrays in a way that fits their Direct Buffers exactly. When the assignments are complete, our Java code can read the data immediately. The call to `drawColoredPoints()` no longer needs to pass any parameters.
 
-Also observe that the `colors[]` array was created with a DirectByteBuffer and therefore has a dtype of `np.uint8`. The `colors_buffer` is a DirectIntBuffer and interfaces with the same exact memory as the DirectByteBuffer. The DirectIntBuffer is shared with our Java extension because Processing represents colors with 32 bit integers. If the `colors[]` array had been created with the DirectIntBuffer, it would have one dimension and a dtype of `np.int32`. Creating the `colors[]` array with a DirectByteBuffer means the array can have two dimensions with the second dimension representing alpha, red, green, and blue color channels (in that order). This is how color data is typically arranged in Python libraries such as [Pillow](https://pillow.readthedocs.io/) or [scipy](https://scipy.org/) (although the channel order might be different). With this code example, the same color data can be accessed in both Python and Java in the way that is most common for that programming environment.
+Also observe that the `colors[]` array was created with a DirectByteBuffer and therefore has a dtype of `np.uint8`. The `colors_buffer` is also a DirectIntBuffer and interfaces with the same exact memory as the DirectByteBuffer. The DirectIntBuffer is shared with our Java extension because Processing represents colors with 32 bit integers, not bytes. If the `colors[]` array had been created with the DirectIntBuffer, it would have one dimension and a dtype of `np.int32`. Creating the `colors[]` array with a DirectByteBuffer means the array can have two dimensions with the second dimension representing alpha, red, green, and blue color channels (in that order). This is how color data is typically arranged in Python libraries such as [Pillow](https://pillow.readthedocs.io/) or [scipy](https://scipy.org/) (although the channel order might be different). With this code example, the same color data can be accessed in both Python and Java in the way that is most common for that programming environment.
 
 The code used for the `colors[]` array is similar to py5's code for [](/reference/sketch_np_pixels). The main difference is the shape is `(width, height, 4)` and not `(N, 4)`.

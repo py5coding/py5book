@@ -2,17 +2,17 @@
 
 This document explains py5's basic architecture and how it is able to make the Java Processing jars available to the Python 3 interpreter using JPype.
 
-The intended audience is intermediate to advanced coders with some experience creating Sketches with the original Java version of Processing.
+The intended audience is intermediate to advanced coders with some experience using Processing in Java.
 
 ## How py5 Doesn't Work
 
 Before diving into the details of how py5 actually works, let's first discuss how py5 doesn't work.
 
-You should know that py5 was not the first open source project that attempted to create a Python 3 version of Processing that leveraged the Processing Jar files, as [Processing.py](https://py.processing.org/) does in Jython. The general approach of the other attempts, as well the first few iterations of py5's architecture, followed this pattern:
+You should know that py5 was not the first open source project that attempted to create a Python 3 version of Processing that leveraged the Processing Jar files, as [Processing.py](https://py.processing.org/) does in Jython. The general approach of the other attempts I've seen, as well the first few iterations of py5's architecture, followed this pattern:
 
 1. Python code calls the user's `settings()` function
 2. Python code calls Java code to initialize the Sketch window
-3. Python code calls the user's `setup()` function once
+3. Python code calls the user's `setup()` function
 4. Python code repeatedly calls the user's `draw()` function in a loop
 
 You can imagine implementing the critical `run_sketch()` function with code that looks like this:
@@ -67,7 +67,7 @@ There is a Python class called `Sketch`, found in [sketch.py](https://github.com
 
 The Python class `Sketch` has a method `_run_sketch()` that calls `processing.core.PApplet`'s `runSketch()` method.
 
-In addition, the `_run_sketch()` method builds a bridge between the Java class `py5.core.Sketch` and Python. This bridge implements the Java Interface `py5.core.Py5Bridge` but is coded in Python with the Python class `Py5Bridge`, found in [bridge.py](https://github.com/py5coding/py5generator/blob/main/py5_resources/py5_module/py5/bridge.py). This programming sorcery uses [`jpype.JImplements`](https://jpype.readthedocs.io/en/latest/api.html#jpype.JImplements) to create a Python object that can be passed to Java. This bridge is the mechanism through which `py5.core.Sketch` makes calls back to Python to run the user defined functions. The bridge will also inform the `py5.core.Sketch` instance which user functions are defined so it knows which calls to make to Python and which to skip.
+In addition, the `_run_sketch()` method builds a bridge between the Java class `py5.core.Sketch` and Python. This bridge implements the Java Interface `py5.core.Py5Bridge` but is coded in Python with the Python class `Py5Bridge`, found in [bridge.py](https://github.com/py5coding/py5generator/blob/main/py5_resources/py5_module/py5/bridge.py). This programming sorcery uses [`jpype.JImplements`](https://jpype.readthedocs.io/en/latest/api.html#jpype.JImplements) to create a Python object that can be "passed" to Java. This bridge is the mechanism through which `py5.core.Sketch` makes calls back to Python to run the user defined functions. The bridge will also inform the `py5.core.Sketch` instance which user functions are defined so it knows which calls to make to Python and which to skip.
 
 The `_run_sketch()` method also has some special code needed to get py5 to run on OSX.
 
@@ -77,7 +77,7 @@ In `processing.core.PApplet`'s `runSketch()` method, the Processing Library open
 
 ### 4. Animation Thread Calls `py5.core.Sketch`'s User Methods
 
-The animation thread will make calls to `py5.core.Sketch`'s `setup()` and `draw()` methods. It will also call its mouse and keyboard methods. The `py5.core.Sketch` class implements every possible user method so it can call the user's Python functions when needed.
+The animation thread created by the Processing Library will make calls to `py5.core.Sketch`'s `setup()` and `draw()` methods. It will also call its mouse and keyboard methods. The `py5.core.Sketch` class implements every possible user method so it can call the user's Python functions when needed.
 
 ### 5. Call User's Python Functions from `py5.core.Sketch`'s User Methods
 
@@ -104,14 +104,13 @@ The user's `setup()` and `draw()` functions are executed just like any other Pyt
 
 Exceptions are always caught and handled in Python. Error handling in py5 is complex; Java and Python cannot throw or handle each other's exceptions.
 
-When a Python exception is thrown, py5 will make it look like the Sketch has stopped by pausing the `py5.core.Sketch` instance. Pausing the Sketch instead of stopping it by throwing a Java exception is necessary to ensure py5 can reliably dispose of the Sketch window without also shutting down the Java Virtual Machine.
-Thrown exceptions have an unpredictable impact on Processing's internals.
+When a Python exception is thrown, py5 will make it look like the Sketch has stopped by pausing the `py5.core.Sketch` instance. It will also set the `success` variable mentioned in the previous step to `false`. Pausing the Sketch instead of stopping it by throwing a Java exception is necessary to ensure py5 can reliably dispose of the Sketch window without also shutting down the Java Virtual Machine. Thrown exceptions have an unpredictable impact on Processing's internals.
 
 In Processing, when an exception is thrown, the exception can put the Sketch into a weird state that would complicate code that attempts to dispose of the Sketch window resources properly. That doesn't matter for a Processing Sketch because the Sketch window is terminated with a call `System.exit()`. This will shut down the Java Virtual Machine and as a consequence dispose of the Sketch window. In py5, calling `System.exit()` is not an option because it would make py5 unusable until you restarted your Python interpreter or Jupyter Notebook.
 
 ### 7. API Methods that Leverage the Processing Library Code
 
-Almost all of the code for py5's methods that leverage the Processing Library are written dynamically using py5generator's custom code template engine. The code for a typical function, minus the docstring, is austere:
+Almost all of the code for py5's methods that leverage the Processing Library are written dynamically using py5generator's custom code template engine. The code for a typical function, minus the docstring, is brief:
 
 ```python
     def rect(self, *args):
@@ -119,6 +118,8 @@ Almost all of the code for py5's methods that leverage the Processing Library ar
 ```
 
 The `self._instance` attribute is the Java `py5.core.Sketch` instance created in step 1. Most of py5's methods are really thin wrappers of their underlying Processing Library methods. Except for [](/reference/py5vector), all py5 class instances have an `_instance` attribute referencing the underlying Processing object.
+
+Critically, the API method calls back to Java are with the same thread as the call from `py5.core.Sketch`'s user methods to the user's Python functions described in step 5. This means that the context thread issue that doomed the first few py5 prototypes is solved.
 
 Code written with py5generator's template engine can be customized with decorators or overridden with Python code.
 
