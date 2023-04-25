@@ -238,7 +238,7 @@ Both Python `str` and `pathlib.Path` objects will be converted to `java.lang.Str
 
 Numpy array and Java array conversion is a bit more complex.
 
-If your hybrid programming function returns a Java array, it cannot be automatically converted to a numpy array. If you want to convert a Java array to a read-only numpy array and you know the Java array is not jagged, you can convert it with a call to `np.asarray()`. If the Java array is jagged, the call to `np.asarray()` will raise an exception.
+If your hybrid programming function returns a Java array, it cannot be automatically converted to a numpy array. If you want to convert a Java array to a read-only numpy array and you know the Java array is rectangular, you can convert it with a call to `np.asarray()`. If the Java array is not rectangular (i.e., a [jagged array](https://en.wikipedia.org/wiki/Jagged_array)), the call to `np.asarray()` will raise an exception.
 
 When a numpy array is passed to Java, it will be copied to a Java array. The dtype must match the data type used for the array in the Java function signature. The below table lists the data type equivalents.
 
