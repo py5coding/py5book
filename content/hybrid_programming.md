@@ -104,7 +104,7 @@ Compile the code with the [Maven](https://maven.apache.org/) command `mvn -f jav
 
 Before py5 runs a Sketch, it will attempt to create an instance of `py5utils.Py5Utilities`. If successful, it will add the instance's public variables and methods to `py5.utils` (or `self.utils` for coders using py5's [class mode](content-py5-modes-class-mode)) for you to interact with in your code.
 
-## Simple Hybrid Programming Example
+## Basic Hybrid Programming Example
 
 Imagine you want a py5 Sketch to draw ten thousand randomly colored points to the screen. This Sketch has little aesthetic value but it will concisely illustrate the performance benefits of hybrid programming.
 
@@ -195,6 +195,7 @@ import py5
 
 
 N = 10_000
+
 
 def setup():
     py5.size(500, 500, py5.P2D)

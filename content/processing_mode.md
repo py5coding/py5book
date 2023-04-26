@@ -18,7 +18,7 @@ package test;
 import processing.core.PImage;
 import py5.core.SketchBase;
 
-public class TestSketch extends SketchBase {
+public class Example1Sketch extends SketchBase {
 
   public void settings() {
     size(400, 400, P2D);
@@ -71,7 +71,7 @@ def alter_image(msg: str, img: py5.Py5Image):
 py5_tools.register_processing_mode_key('test_transfer', alter_image)
 py5_tools.register_processing_mode_key('np', np)
 
-py5.run_sketch(jclassname='test.TestSketch')
+py5.run_sketch(jclassname='test.Example1Sketch')
 ```
 
 The Sketch will look like this:
@@ -93,7 +93,7 @@ You might be able to figure out some of what is going on here from reading the c
 ```java
 import py5.core.SketchBase;
 
-public class TestSketch extends SketchBase {
+public class Example1Sketch extends SketchBase {
 ```
 
 First, you should notice that our class inherits from `py5.core.SketchBase` instead of the expected `processing.core.PApplet`. The `py5.core.SketchBase` class inherits from `processing.core.PApplet` and adds the new `callPython()` and `py5Println()` methods available for you to use.
@@ -145,10 +145,10 @@ py5_tools.register_processing_mode_key('np', np)
 The callables linked to the keys must be registered with py5. The first call to [](/reference/py5tools_register_processing_mode_key) registers the `alter_image()` function with the key `'test_transfer'`. This key was used by the `callPython()` method in Java. The second call to [](/reference/py5tools_register_processing_mode_key) registers the imported numpy library `np`. As this is a large library, all of its functions are accessible with `callPython()` given the correct key, as long as it can be called with position-only parameters. In our example, we called `np.random.randint()` with the key `"np.random.randint"`.
 
 ```python
-py5.run_sketch(jclassname='test.TestSketch')
+py5.run_sketch(jclassname='test.Example1Sketch')
 ```
 
-To run the Processing Mode Sketch, we must tell py5 to create our Java class `'test.TestSketch'` instead of the default `py5.core.Sketch` (which inherits from `py5.core.SketchBase`).
+To run the Processing Mode Sketch, we must tell py5 to create our Java class `'test.Example1Sketch'` instead of the default `py5.core.Sketch` (which inherits from `py5.core.SketchBase`).
 
 That's Processing Mode in a nutshell. There are still some things you need to be aware of related to error handling and Jupyter Notebooks, but beyond that, Processing Mode is a pretty straightforward way of using py5.
 
@@ -280,7 +280,7 @@ This can be implemented in Python using JPype's `JImplements` and `JOverride` de
 ```python
 import traceback
 
-from jpype import JImplements, JOverride
+from jpype import JImplements, JOverride, JClass
 
 import py5_tools
 import py5
@@ -315,9 +315,12 @@ class Test:
             return object_conversion.convert_to_java_type(new_py5image)
         except Exception as e:
             traceback.print_exc()
-            return None
+            return JClass('java.lang.RuntimeException')(str(e))
+
 
 py5_tools.register_processing_mode_key('setup_test_interface', lambda: Test())
+
+py5.run_sketch(jclassname='test.Example2Sketch')
 ```
 
 The goal of this example is to show how objects can be passed back and forth between Java and Python.
@@ -338,9 +341,9 @@ package test;
 import processing.core.PImage;
 import py5.core.SketchBase;
 
-public class TestSketch extends SketchBase {
+public class Example2Sketch extends SketchBase {
 
-  protected TestInterface testInterface;
+  protected TestInterface test;
 
   public void settings() {
     size(400, 400, P2D);
@@ -372,7 +375,7 @@ Observe that there is only one use of `callPython()` to obtain the Python object
 The only remaining task is to call `runSketch()` to run this Sketch:
 
 ```python
-py5.run_sketch(jclassname='test.TestSketch')
+py5.run_sketch(jclassname='test.Example2Sketch')
 ```
 
 The Sketch will look much like the first example:
