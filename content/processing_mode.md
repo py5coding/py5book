@@ -4,7 +4,7 @@ Processing Mode refers to py5's ability to serve as a bridge from Java to Python
 
 To use Processing Mode, you should be comfortable programming in Python and Java and have some experience with py5 and Processing. Processing Mode will require you to program in an IDE like [Visual Studio Code](https://code.visualstudio.com/). Bringing Processing Mode to Processing's PDE, if possible, would be a large amount of work.
 
-All of the example code on this page is available in a [GitHub repo](https://github.com/py5coding/py5-python-and-java/tree/main/processing-mode) for you to experiment with.
+All of the example code on this page is available in a [GitHub repo](https://github.com/py5coding/py5-python-and-java/tree/main/processing-mode) for you to experiment with. If Processing Mode is a place where you want to invest a lot of your time, you should also familiarize yourself with py5's [developer documentation on how py5 works](/developer/how_does_py5_work).
 
 ## An Illustrative Example
 
@@ -47,6 +47,8 @@ public class Example1Sketch extends SketchBase {
 ```
 
 Observe the two calls to `callPython()`. This Java code must be compiled into a Jar file. If the Jar file is in a `jars` subdirectory, it will be added to py5's classpath automatically.
+
+The class `Example1Sketch` inherits from `py5.core.SketchBase`, which in turn inherits from Processing's `processing.core.PApplet` base class.
 
 ### Example Python Code
 
