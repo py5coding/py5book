@@ -1,6 +1,6 @@
 # Processing Mode
 
-Processing Mode refers to py5's ability to serve as a bridge from Java to Python, allowing Processing Sketches to call Python functions using a new `callPython()` method. This is a solid feature that in time will add a significant amount of value to the Processing community.
+Processing Mode refers to py5's ability to serve as a bridge from Java to Python, allowing Processing Sketches to call Python functions using a new `callPython()` method. This is a solid feature that in time will add a significant amount of value to the Processing Community.
 
 To use Processing Mode, you should be comfortable programming in Python and Java and have some experience with py5 and Processing. Processing Mode will require you to program in an IDE like [Visual Studio Code](https://code.visualstudio.com/). Bringing Processing Mode to Processing's PDE, if possible, would be a large amount of work.
 
@@ -25,14 +25,14 @@ public class Example1Sketch extends SketchBase {
   }
 
   public void setup() {
-    rectMode(CENTER);
-
     String msg = "Hello from Java!";
     PImage img = createImage(200, 200, RGB);
 
+    // call Python function `alter_image(msg, img)` and get back a PImage object
     PImage imgResponse = (PImage) callPython("test_transfer", msg, img);
     image(imgResponse, 100, 100);
 
+    // call numpy `random.randint()` function
     long randomNumber = (long) callPython("np.random.randint", 0, 100);
     py5Println("JAVA: Random number from numpy: " + randomNumber);
   }
@@ -68,9 +68,11 @@ def alter_image(msg: str, img: py5.Py5Image):
     return img
 
 
+# register processing mode keys so the Java `callPython()` method can find them
 py5_tools.register_processing_mode_key('test_transfer', alter_image)
 py5_tools.register_processing_mode_key('np', np)
 
+# run the sketch in processing mode, specifying the Java class to instantiate
 py5.run_sketch(jclassname='test.Example1Sketch')
 ```
 
@@ -232,7 +234,7 @@ The following block of code may be useful to you:
     }
 ```
 
-Unfortunately, after calling `py5Bridge.terminate_sketch()`, the Sketch will still respond to mouse and keyboard events. This might be undesirable. If this is a problem, set a terminated flag that your code checks in the event methods before proceeding with your desired event code.
+Unfortunately, the Sketch will still respond to mouse and keyboard events after calling `py5Bridge.terminate_sketch()`. This might be undesirable. If this is a problem, set a terminated flag that your code checks in the event methods before proceeding with your desired event code.
 
 If you are not happy with any of this you can always override `exitActual()` in your Sketch class and call `System.exit()` or whatever else best suits your needs. If you figure out a better way to manage these exception issues, please share what you have learned and make a pull request.
 
@@ -261,7 +263,7 @@ The mechanisms for converting Python objects to Java objects and Java objects to
 
 JPype supports Java Interfaces that are implemented Python. You cannot create a Python class that inherits from a Java class but you can create a Python class that implements a Java Interface. You should read JPype's documentation on [implementing Java Interfaces](https://jpype.readthedocs.io/en/latest/userguide.html#implementing-java-interfaces) if you want to explore the matter further.
 
-Here is a quick example to illustrate how to use this feature with py5.
+Here is an example to illustrate how to use this feature with py5.
 
 Start with this Java Interface:
 
@@ -318,8 +320,10 @@ class Test:
             return JClass('java.lang.RuntimeException')(str(e))
 
 
+# register processing mode keys so the Java `callPython()` method can find them
 py5_tools.register_processing_mode_key('setup_test_interface', lambda: Test())
 
+# run the sketch in processing mode, specifying the Java class to instantiate
 py5.run_sketch(jclassname='test.Example2Sketch')
 ```
 
@@ -350,17 +354,19 @@ public class Example2Sketch extends SketchBase {
   }
 
   public void setup() {
-    rectMode(CENTER);
-
+    // call Python to obtain a Python object that implements the Java
+    // Interface `TestInterface`
     test = (TestInterface) callPython("setup_test_interface");
 
     String message = "Hello from Java!";
     PImage pimage = createImage(150, 150, RGB);
+
+    // make calls to Python through the Java interface `TestInterface`
     PImage imageResponse = test.passImage(message, pimage);
+
     if (imageResponse != null) {
       image(imageResponse, 100, 100);
     }
-
   }
 
   public void draw() {
