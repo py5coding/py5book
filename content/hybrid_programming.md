@@ -2,6 +2,8 @@
 
 Hybrid Programming refers to py5's ability to augment your py5 Sketch with Java code. This is very much like creating custom Processing extensions to enhance py5.
 
+All of the example code on this page is available in a [GitHub repo](https://github.com/py5coding/py5-python-and-java/tree/main/hybrid-programming) for you to experiment with.
+
 ## Reasons for Hybrid Programming
 
 There are a few reasons why your coding projects might benefit from Hybrid Programming. The most important is performance. Although py5 Sketches can provide excellent performance, you may experience performance problems if you have large or nested for loops making many calls from Python to Java. There is a small microsecond performance penalty for each individual call from Python to Java. This can accumulate to something significant in large or nested for loops. Hybrid programming can enable you to pass a large amount of data to Java with one call, where you can then iterate through the data in Java without accumulating a performance penalty.
