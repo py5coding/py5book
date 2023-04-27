@@ -4,13 +4,13 @@ Hybrid Programming refers to py5's ability to augment your py5 Sketch with Java 
 
 ## Reasons for Hybrid Programming
 
-There are a few reasons why your coding projects might benefit from hybrid programming. The most important is performance. Although py5 Sketches can provide excellent performance, you may experience performance problems if you have large or nested for loops making many calls from Python to Java. There is a small microsecond performance penalty for each individual call from Python to Java. This can accumulate to something significant in large or nested for loops. Hybrid programming can enable you to pass a large amount of data to Java with one call, where you can then iterate through the data in Java without accumulating a performance penalty.
+There are a few reasons why your coding projects might benefit from Hybrid Programming. The most important is performance. Although py5 Sketches can provide excellent performance, you may experience performance problems if you have large or nested for loops making many calls from Python to Java. There is a small microsecond performance penalty for each individual call from Python to Java. This can accumulate to something significant in large or nested for loops. Hybrid programming can enable you to pass a large amount of data to Java with one call, where you can then iterate through the data in Java without accumulating a performance penalty.
 
-In addition, hybrid programming opens a door to incorporating Java libraries into your work. Much like Python, the Java library ecosystem is extensive and backed by a strong community. If you can't find the library you need in the Python world, the Java world might have what you need.
+In addition, Hybrid Programming opens a door to incorporating Java libraries into your work. Much like Python, the Java library ecosystem is extensive and backed by a strong community. If you can't find the library you need in the Python world, the Java world might have what you need.
 
 ## Understand JPype
 
-Before exploring hybrid programming in py5, you should first consider reading JPype's documentation. Being knowledgeable about JPype will help you accomplish more with hybrid programming. Start with the [Java QuickStart Guide](https://jpype.readthedocs.io/en/latest/quickguide.html). Also read the [Working with Numpy](https://jpype.readthedocs.io/en/latest/userguide.html#working-with-numpy) section in the [JPype User Guide](https://jpype.readthedocs.io/en/latest/userguide.html).
+Before exploring Hybrid Programming in py5, you should first consider reading JPype's documentation. Being knowledgeable about JPype will help you accomplish more with Hybrid Programming. Start with the [Java QuickStart Guide](https://jpype.readthedocs.io/en/latest/quickguide.html). Also read the [Working with Numpy](https://jpype.readthedocs.io/en/latest/userguide.html#working-with-numpy) section in the [JPype User Guide](https://jpype.readthedocs.io/en/latest/userguide.html).
 
 ## Importing Java Classes into Python
 
@@ -46,7 +46,7 @@ utils = MyJavaUtilities()
 
 ## Hybrid Programming Support in py5
 
-The py5 installation comes with the `py5utils` command line utility for creating a template for hybrid programming.
+The py5 installation comes with the `py5utils` command line utility for creating a template for Hybrid Programming.
 
 ```bash
 $ py5utils -h
@@ -106,7 +106,7 @@ Before py5 runs a Sketch, it will attempt to create an instance of `py5utils.Py5
 
 ## Basic Hybrid Programming Example
 
-Imagine you want a py5 Sketch to draw ten thousand randomly colored points to the screen. This Sketch has little aesthetic value but it will concisely illustrate the performance benefits of hybrid programming.
+Imagine you want a py5 Sketch to draw ten thousand randomly colored points to the screen. This Sketch has little aesthetic value but it will concisely illustrate the performance benefits of Hybrid Programming.
 
 To accomplish this programming task, you might start with the following code:
 
@@ -156,7 +156,7 @@ py5.run_sketch()
 
 On my computer, the frame rate increases to 43 fps. Note we cannot use [](/reference/sketch_vertices) for this because each point has a random color.
 
-Now let's use hybrid programming to make this even faster. Use the `py5utils` command line tool to create the template files and then add the following Java code to `Py5Utilities.java`:
+Now let's use Hybrid Programming to make this even faster. Use the `py5utils` command line tool to create the template files and then add the following Java code to `Py5Utilities.java`:
 
 ```java
 package py5utils;
@@ -168,10 +168,13 @@ public class Py5Utilities {
   public Sketch sketch;
 
   public Py5Utilities(Sketch sketch) {
+    // This constructor is called before the sketch starts running. DO NOT use
+    // Processing methods here, as they may not work correctly.
     this.sketch = sketch;
   }
 
   public void drawColoredPoints(int[][] colors, float[][] coords) {
+    // iterate through the colors and coords arrays to draw multicolored points
     sketch.pushStyle();
     sketch.beginShape(Sketch.POINTS);
     for (int i = 0; i < colors.length; i++) {
@@ -239,7 +242,7 @@ Both Python `str` and `pathlib.Path` objects will be converted to `java.lang.Str
 
 Numpy array and Java array conversion is a bit more complex.
 
-If your hybrid programming function returns a Java array, it cannot be automatically converted to a numpy array. If you want to convert a Java array to a read-only numpy array and you know the Java array is rectangular, you can convert it with a call to `np.asarray()`. If the Java array is not rectangular (i.e., a [jagged array](https://en.wikipedia.org/wiki/Jagged_array)), the call to `np.asarray()` will raise an exception.
+If your Hybrid Programming function returns a Java array, it cannot be automatically converted to a numpy array. If you want to convert a Java array to a read-only numpy array and you know the Java array is rectangular, you can convert it with a call to `np.asarray()`. If the Java array is not rectangular (i.e., a [jagged array](https://en.wikipedia.org/wiki/Jagged_array)), the call to `np.asarray()` will raise an exception.
 
 When a numpy array is passed to Java, it will be copied to a Java array. The dtype must match the data type used for the array in the Java function signature. The below table lists the data type equivalents.
 
@@ -285,11 +288,14 @@ public class Py5Utilities {
   }
 
   public void shareBuffers(IntBuffer colors, FloatBuffer points) {
+    // share the direct buffers created with Python code
     this.colors = colors;
     this.points = points;
   }
 
   public void drawColoredPoints() {
+    // iterate through the colors and points direct buffers to draw
+    // multicolored points
     sketch.pushStyle();
     sketch.beginShape(Sketch.POINTS);
     for (int i = 0; i < colors.capacity() / 3; i++) {
@@ -324,9 +330,14 @@ colors_buffer = byte_buffer.asIntBuffer()
 colors = np.asarray(byte_buffer).reshape(N, 4)
 points = np.asarray(points_buffer).reshape(N, 2)
 
+# Note that the `colors_buffer` is like an array of 32 bit Integers, which is
+# how Processing stores color values. The `colors` array is an array of unsigned
+# integers ranging from 0 to 255. The third dimension of the `colors` array
+# stores the alpha, red, green, and blue color values, in that order.
 
 def setup():
     py5.size(500, 500, py5.P2D)
+    # call Py5Utilities Java method
     py5.utils.shareBuffers(colors_buffer, points_buffer)
     colors[:, 0] = 255
 
@@ -335,6 +346,7 @@ def draw():
     colors[:, 1:] = np.random.randint(0, 255, (N, 3), dtype=np.uint8)
     points[:, 0] = np.random.randint(0, py5.width, N, dtype=np.int32)
     points[:, 1] = np.random.randint(0, py5.height, N, dtype=np.int32)
+    # call Py5Utilities Java method
     py5.utils.drawColoredPoints()
 
 
