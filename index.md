@@ -14,7 +14,7 @@ kernelspec:
 
 # Welcome to py5!
 
-py5 is a new version of [**Processing**][processing] for Python 3.8+. It makes
+py5 is a version of [**Processing**][processing] for Python 3.8+. It makes
 the Java [**Processing**][processing] jars available to the CPython interpreter
 using [**JPype**][jpype]. It can do just about all of the 2D and 3D drawing
 [**Processing**][processing] can do, except with Python instead of Java code.
