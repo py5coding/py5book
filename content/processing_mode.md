@@ -192,7 +192,7 @@ As explained in [](/developer/how_does_py5_work), a py5 Sketch will create an in
 
 Use `callPython()` in your Sketch to make Python calls from Java. Remember the return type is `java.lang.Object` and must be cast to the appropriate class. Consider checking the object's type before casting the object to avoid cast exceptions.
 
-If your call to Python involves complex or time-consuming computation, you may want to use `callPython()` in a separate thread. However, if you do use this feature in a separate thread, the Python code should not use any of py5's drawing functions. The Processing Library is not threadsafe and bugs can be hard to track down.
+If your call to Python involves complex or time-consuming computation, you may want to use `callPython()` in a separate thread. However, if you do use this feature in a separate thread, the Python code should not use any of py5's drawing functions. The Processing Library is not always thread safe and bugs can be hard to track down.
 
 Consider catching exceptions, either in Python or in Java. If an exception is thrown in Python, py5 will print a stack trace and throw a `RuntimeException` in Java from `callPython()`. Thrown exceptions can be problematic if your Sketch is running through Jupyter Notebook because you might have to restart the Notebook to exit the Sketch.
 
@@ -265,7 +265,7 @@ The mechanisms for converting Python objects to Java objects and Java objects to
 
 ## Creating Interfaces
 
-JPype supports Java Interfaces that are implemented Python. You cannot create a Python class that inherits from a Java class but you can create a Python class that implements a Java Interface. You should read JPype's documentation on [implementing Java Interfaces](https://jpype.readthedocs.io/en/latest/userguide.html#implementing-java-interfaces) if you want to explore the matter further.
+JPype supports Java Interfaces that are implemented in Python. You cannot create a Python class that inherits from a Java class but you can create a Python class that implements a Java Interface. You should read JPype's documentation on [implementing Java Interfaces](https://jpype.readthedocs.io/en/latest/userguide.html#implementing-java-interfaces) if you want to explore the matter further.
 
 Here is an example to illustrate how to use this feature with py5.
 

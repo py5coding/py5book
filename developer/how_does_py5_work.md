@@ -50,7 +50,7 @@ The basic steps of a running py5 Sketch look like this:
 4. The Processing Library animation thread calls `py5.core.Sketch`'s `setup()` and `draw()` methods
 5. `py5.core.Sketch`'s `setup()` and `draw()` methods make calls from Java to Python, instructing it to call the user's `setup()` and `draw()` functions
 6. Execute the user's `setup()` and `draw()` functions, making calls to py5's API methods such as `rect()`, `begin_shape()`, `convert_shape()`, `random()`, etc.
-7. Calls to py5's API methods that leverage Processing Library code such as `rect()` and `begin_shape()` make corresponding calls to the Processing Library's Java methods `rect()`, `beginShape()`, etc.
+7. Calls to py5's API methods that leverage Processing Library code such as `rect()` and `begin_shape()` make corresponding calls to the Processing Library Java methods `rect()`, `beginShape()`, etc.
 8. Calls to py5's API methods that are implemented in Python such as `convert_shape()` and `random()` provide their functionality without using the Processing Library
 
 This approach is more complicated than the initial approach. However, the OpenGL renderers `P2D` and `P3D` work correctly. The mouse and keyboard event functions will also be triggered at the appropriate times.
