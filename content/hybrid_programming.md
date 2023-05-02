@@ -31,8 +31,8 @@ from pathlib import Path
 
 import py5_tools
 
-# import jar containing the code for MyJavaUtilities
-py5_tools.add_classpath(Path.home() / 'Projects' / 'MyJavaUtilities.jar')
+# import jar containing the code for MyJavaTools
+py5_tools.add_classpath(Path.home() / 'Projects' / 'MyJavaTools.jar')
 
 import py5
 
@@ -40,10 +40,10 @@ from java.lang import String
 test_string = String('py5 is awesome!')
 print(test_string.toUpperCase())
 
-# import Java class MyJavaUtilities from jar file
-from org.utils import MyJavaUtilities
-# create instance of MyJavaUtilities class
-utils = MyJavaUtilities()
+# import Java class MyJavaTools from jar file
+from org.utils import MyJavaTools
+# create instance of MyJavaTools class
+utils = MyJavaTools()
 ```
 
 ## Hybrid Programming Support in py5
@@ -80,7 +80,7 @@ $ tree .
 7 directories, 2 files
 ```
 
-The `pom.xml` file is an XML file used by [Maven](https://maven.apache.org/) to build the Jar file. Among other things, it links to the required jar files found in your py5 library installation. You will need to install [Maven](https://maven.apache.org/) if you don't have it installed already.
+The `pom.xml` file is an XML file used by [Maven](https://maven.apache.org/) to build the Jar file. Among other things, it links to the required jar files found in your py5 library installation. Linking to those specific jar files during development and compilation is important because those same jar files will also be used when py5 executes your code. You will need to install [Maven](https://maven.apache.org/) if you don't have it installed already.
 
 The `Py5Utilities.java` file contains this code:
 
@@ -221,7 +221,7 @@ On my computer, the frame rate of this hybrid code is 60 fps.
 (hybrid-programming-java-python-object-conversion)=
 ## Java and Python Object Conversion
 
-Before continuing, we must take note of the implicit conversion of Python objects to Java objects when they are passed from Python to Java. In the previous example, the 2D numpy arrays `colors` and `points` were passed to a method that accepts 2D Java arrays of ints and floats. This works because JPype will automatically convert numpy arrays to Java arrays when numpy arrays are passed to a Java method that accepts Java array parameters. In addition to this builtin functionality, py5 adds its own conversion rules to convert py5 objects to Processing objects when py5 objects are passed to Java. These conversion rules will also work in reverse for Processing objects that are returned from Java back to Python. All object conversions are done without any programming burden placed on the end user.
+Before continuing, we must take note of the implicit conversion of Python objects to Java objects when they are passed from Python to Java. In the previous example, the 2D numpy arrays `colors` and `points` were passed to a method that accepts 2D Java arrays of ints and floats. This works because JPype will automatically convert numpy arrays to Java arrays when numpy arrays are passed to a Java method that accepts Java array parameters. In addition to this builtin functionality, py5 adds its own conversion rules to convert py5 objects to Processing objects when py5 objects are passed to Java. The py5 conversion rules will also work in reverse for Processing objects that are returned from Java back to Python. All object conversions are done without any programming burden placed on the end user.
 
 Below is a table of the supported object pairs eligible for conversion:
 
@@ -244,7 +244,7 @@ Both Python `str` and `pathlib.Path` objects will be converted to `java.lang.Str
 
 Numpy array and Java array conversion is a bit more complex.
 
-If your Hybrid Programming function returns a Java array, it cannot be automatically converted to a numpy array. If you want to convert a Java array to a read-only numpy array and you know the Java array is rectangular, you can convert it with a call to `np.asarray()`. If the Java array is not rectangular (i.e., a [jagged array](https://en.wikipedia.org/wiki/Jagged_array)), the call to `np.asarray()` will raise an exception.
+If your Hybrid Programming function returns a Java array, it cannot be automatically converted to a numpy array. If you want to convert a Java array to a read-only numpy array and you know the Java array is rectangular, you can convert it with a call to `np.asarray()`. If the Java array is not rectangular (i.e., a [jagged array](https://en.wikipedia.org/wiki/Jagged_array)), the call to `np.asarray()` will raise an exception. [This is discussed in more detail in JPype's documentation](https://jpype.readthedocs.io/en/latest/userguide.html#transfers-to-numpy).
 
 When a numpy array is passed to Java, it will be copied to a Java array. The dtype must match the data type used for the array in the Java function signature. The below table lists the data type equivalents.
 
@@ -311,7 +311,7 @@ public class Py5Utilities {
 }
 ```
 
-Observe there is a new method `shareBuffers()`. This gives our Sketch the opportunity to pass the Direct Buffers to Java. This only needs to be done once. Direct Buffers do not support array-like indexing so we must use the `get()` method to access the data. These Direct Buffer data structures can only be one dimensional so the parameters to `get()` may need to be calculated as you would to index into a flattened multidimensional array.
+Observe there is a new method `shareBuffers()`. This gives our Sketch the opportunity to pass Direct Buffers to Java. This only needs to be done once. Direct Buffers do not support array-like indexing so we must use the `get()` method to access the data. These Direct Buffer data structures can only be one dimensional so the parameters to `get()` may need to be calculated as you would to index into a flattened multidimensional array.
 
 Now replace the Python code with the below code. Observe the call to `shareBuffers()` in the `setup()` function. Also, the number of points has increased tenfold to one hundred thousand.
 
