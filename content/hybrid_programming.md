@@ -2,6 +2,8 @@
 
 Hybrid Programming refers to py5's ability to augment your py5 Sketch with Java code. This is very much like creating custom Processing extensions to enhance py5.
 
+To use Hybrid Programming, you should be comfortable programming in Python and Java and have some experience with py5 and Processing. Hybrid Programming will require you to program in an IDE like [Visual Studio Code](https://code.visualstudio.com/).
+
 All of the example code on this page is available in a [GitHub repo](https://github.com/py5coding/py5-python-and-java/tree/main/hybrid-programming) for you to experiment with.
 
 ## Reasons for Hybrid Programming
