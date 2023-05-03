@@ -360,7 +360,7 @@ py5.run_sketch()
 
 On my computer, the Sketch can draw 100K points while achieving a frame rate of 60 fps.
 
-As explained in JPype's [Direct Buffers](https://jpype.readthedocs.io/en/latest/userguide.html#buffer-backed-numpy-arrays) documentation, we can create numpy arrays that are backed by the Direct Buffers. With this arrangement, both numpy and Java have access to the same block of memory. In Python we can work with the data in the same way that we would for any numpy array. In Java we can work with the data through the DirectBuffer instances.
+As explained in JPype's [Direct Buffers](https://jpype.readthedocs.io/en/latest/userguide.html#buffer-backed-numpy-arrays) documentation, we can create numpy arrays that are backed by a Java Direct Buffer or a Python `bytearray`. With this arrangement, both numpy and Java have access to the same block of memory. In Python we can work with the data in the same way that we would for any numpy array. In Java we can work with the data through the DirectBuffer instances.
 
 In this example, our calls to `np.random.randint()` can assign data to the `colors[]` and `points[]` arrays in a way that fits their Direct Buffers exactly. When the assignments are complete, our Java code can read the data immediately. The call to `drawColoredPoints()` no longer needs to pass any parameters.
 
