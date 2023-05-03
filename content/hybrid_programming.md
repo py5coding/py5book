@@ -325,19 +325,20 @@ import py5
 
 N = 100_000
 
-# create Direct Buffers
-points_buffer = jpype.nio.convertToDirectBuffer(bytearray(4 * N * 2)).asFloatBuffer()
-byte_buffer = jpype.nio.convertToDirectBuffer(bytearray(4 * N))
-colors_buffer = byte_buffer.asIntBuffer()
-
-# create numpy arrays backed by the Direct Buffers
-colors = np.asarray(byte_buffer).reshape(N, 4)
+# create points direct buffer and array
+points_bytearray = bytearray(4 * N * 2)
+points_buffer = jpype.nio.convertToDirectBuffer(points_bytearray).asFloatBuffer()
 points = np.asarray(points_buffer).reshape(N, 2)
 
+# create colors direct buffer and array
+color_bytearray = bytearray(4 * N)
+colors_buffer = jpype.nio.convertToDirectBuffer(color_bytearray).asIntBuffer()
+colors = np.asarray(color_bytearray).reshape(N, 4)
+
 # Note that the `colors_buffer` is like an array of 32 bit Integers, which is
-# how Processing stores color values. The `colors` array is an array of unsigned
-# integers ranging from 0 to 255. The third dimension of the `colors` array
-# stores the alpha, red, green, and blue color values, in that order.
+# how Processing stores color values. The `colors` numpy array is an array of
+# unsigned integers ranging from 0 to 255. The third dimension of the `colors`
+# array stores the alpha, red, green, and blue color values, in that order.
 
 def setup():
     py5.size(500, 500, py5.P2D)
@@ -363,7 +364,7 @@ As explained in JPype's [Direct Buffers](https://jpype.readthedocs.io/en/latest/
 
 In this example, our calls to `np.random.randint()` can assign data to the `colors[]` and `points[]` arrays in a way that fits their Direct Buffers exactly. When the assignments are complete, our Java code can read the data immediately. The call to `drawColoredPoints()` no longer needs to pass any parameters.
 
-Also observe that the `colors[]` array was created with a DirectByteBuffer and therefore has a dtype of `np.uint8`. The `colors_buffer` is also a DirectIntBuffer and interfaces with the same exact memory as the DirectByteBuffer. The DirectIntBuffer is shared with our Java extension because Processing represents colors with 32 bit integers, not bytes. If the `colors[]` array had been created with the DirectIntBuffer, it would have one dimension and a dtype of `np.int32`. Creating the `colors[]` array with a DirectByteBuffer means the array can have two dimensions with the second dimension representing alpha, red, green, and blue color channels (in that order). This is how color data is typically arranged in Python libraries such as [Pillow](https://pillow.readthedocs.io/) or [scipy](https://scipy.org/) (although the channel order might be different). With this code example, the same color data can be accessed in both Python and Java in the way that is most common for that programming environment.
+Also observe that the `colors[]` array was created with a `bytearray` and therefore has a dtype of `np.uint8`. The `colors_buffer` is a DirectIntBuffer and interfaces with the same exact memory as the `bytearray`. The DirectIntBuffer is shared with our Java extension because Processing represents colors with 32 bit integers, not bytes. If the `colors[]` array had been created with the DirectIntBuffer, it would have one dimension and a dtype of `np.int32`. Creating the `colors[]` array with a `bytearray` like this means the array can have two dimensions with the second dimension representing alpha, red, green, and blue color channels (in that order). This is how color data is typically arranged in Python libraries such as [Pillow](https://pillow.readthedocs.io/) or [scipy](https://scipy.org/) (although the channel order might be different). With this code example, the same color data can be accessed in both Python and Java in the way that is most common for that programming environment.
 
 The code used for the `colors[]` array is similar to py5's code for [](/reference/sketch_np_pixels). The main difference is the shape is `(width, height, 4)` and not `(N, 4)`.
 
