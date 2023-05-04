@@ -196,9 +196,9 @@ Use `callPython()` in your Sketch to make Python calls from Java. Remember the r
 
 If your call to Python involves complex or time-consuming computation, you may want to use `callPython()` in a separate thread. However, if you do use `callPython()` in a separate thread, the Python code should not use any of py5's drawing functions. The Processing Library is not always thread safe and bugs can be hard to track down.
 
-Consider catching exceptions, either in Python or in Java. If an exception is thrown in Python, py5 will print a stack trace and throw a `RuntimeException` in Java from `callPython()`. Thrown exceptions can be problematic if your Sketch is running through Jupyter Notebook because you might have to restart the Notebook to exit the Sketch.
+Consider catching exceptions, either in Python or in Java. If an exception is thrown in Python, py5 will print a stack trace and throw a `java.lang.RuntimeException` in Java from `callPython()`. Thrown exceptions can be problematic if your Sketch is running through Jupyter Notebook because you might have to restart the Notebook to exit the Sketch.
 
-Finally, use `py5Println()` to print text. If you are using a Jupyter Notebook, `py5Println()` will place the text in the output of a notebook cell. Using `System.out.println()` would output text to the Jupyter Notebook logs.
+Finally, use `py5Println()` to print text. If you are using a Jupyter Notebook, `py5Println()` will place the text in the output of a notebook cell. Calls to `System.out.println()` output text to the Jupyter Notebook logs.
 
 ### 4. Write Python Code
 
