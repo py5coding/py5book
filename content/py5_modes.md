@@ -1,4 +1,4 @@
-# The Four py5 Modes
+# The Five py5 Modes
 
 The py5 library is similar to [Processing](https://processing.org/) and
 [p5](https://p5js.org/) in that the basic functionality comes from user
@@ -13,9 +13,13 @@ All of this is analogous to what users familiar with
 [Processing](https://processing.org/) and [p5](https://p5js.org/) might
 expect.
 
-The py5 library has four "modes" that you can use to code these
-methods and write Sketches. They are called Module Mode, Class Mode,
-Imported Mode, and Static Mode.
+The py5 library has five "modes" that you can use to code these
+methods and write Sketches. Four of them are called Module Mode, Class Mode,
+Imported Mode, and Static Mode. They are documented on this page.
+
+The fifth mode, [Processing Mode](processing_mode), is a special mode enabling
+Processing (Java) users to make calls to Python, using py5 as a bridge to link
+Processing to Python. [Processing Mode](processing_mode) is documented separately.
 
 ```{important}
 There are some known issues using py5 on Mac computers. The best option
@@ -178,6 +182,7 @@ py5.run_sketch(py5_options=['--sketch-path=/dir/that/contains/your/data/subdir']
 
 ``````
 
+(content-py5-modes-class-mode)=
 ## Class Mode
 
 Class mode lets you create a class with its own `settings`, `setup`, and

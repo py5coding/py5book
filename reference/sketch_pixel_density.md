@@ -53,7 +53,7 @@ When programming in module mode and imported mode, py5 will allow calls to `pixe
 
 The `pixel_density()` should only be used with hardcoded numbers (in almost all cases this number will be 2) or in combination with [](sketch_display_density) as in the second example.
 
-When the pixel density is set to more than 1, it changes all of the pixel operations including the way [](sketch_get), [](sketch_blend), [](sketch_copy), [](sketch_update_pixels), and [](sketch_update_np_pixels) all work. See the reference for [](sketch_pixel_width) and [](sketch_pixel_height) for more information.
+When the pixel density is set to more than 1, it changes all of the pixel operations including the way [](sketch_get_pixels), [](sketch_set_pixels), [](sketch_blend), [](sketch_copy), [](sketch_update_pixels), and [](sketch_update_np_pixels) all work. See the reference for [](sketch_pixel_width) and [](sketch_pixel_height) for more information.
 
 Underlying Processing method: [pixelDensity](https://processing.org/reference/pixelDensity_.html)
 
@@ -66,4 +66,4 @@ pixel_density(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on April 16, 2023 17:26:49pm UTC

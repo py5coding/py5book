@@ -7,6 +7,7 @@
 * [get_jvm_debug_info()](py5tools_get_jvm_debug_info): Get Java Virtual Machine debug information.
 * [is_jvm_running()](py5tools_is_jvm_running): Determine if the Java Virtual Machine (JVM) is or is not running.
 * [offline_frame_processing()](py5tools_offline_frame_processing): Process Sketch frames in a separate thread that will minimize the performance impact on the Sketch's main animation thread.
+* [register_processing_mode_key()](py5tools_register_processing_mode_key): Register a callable or module when programming in py5's Processing Mode.
 * [save_frames()](py5tools_save_frames): Save a running Sketch's frames to a directory.
 * [screenshot()](py5tools_screenshot): Take a screenshot of a running Sketch.
 * [sketch_portal()](py5tools_sketch_portal): Creates a portal widget to continuously stream frames from a running Sketch into a Jupyter notebook.

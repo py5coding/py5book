@@ -1,6 +1,6 @@
 # random_choice()
 
-Select random items from a list.
+Select a random item from a list.
 
 ## Examples
 
@@ -23,7 +23,7 @@ def setup():
 
 ## Description
 
-Select random items from a list. The list items can be of any type. If multiple items are selected, this function will by default allow the same item to be selected multiple times. Set the `replace` parameter to `False` to prevent the same item from being selected multiple times.
+Select a random item from a list. The list items can be of any type. If the list of objects is empty, `None` will be returned.
 
 This function's randomness can be influenced by [](sketch_random_seed), and makes calls to numpy to select the random items.
 
@@ -32,9 +32,7 @@ This function's randomness can be influenced by [](sketch_random_seed), and make
 ```python
 random_choice(
     objects: list[Any],  # list of objects to choose from
-    size: int = 1,  # number of random items to select
-    replace: bool = True,  # whether to select random items with or without replacement
 ) -> Any
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on April 15, 2023 22:56:12pm UTC

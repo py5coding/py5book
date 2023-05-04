@@ -1,14 +1,7 @@
 # Install py5
 
-Before proceeding, you should know that this is a new project with
-documentation and setup instructions that are a bit rough around the edges.
-Additionally, there are a few [issues with Mac (OSX) computers](osx_users). And
-finally, you should also know that this project is currently maintained by
-only one person, and in my free time.
-
-I have tested these instructions on Linux, Windows, and OSX, so I believe
-this will work for most people. Nevertheless, getting this working might
-not go smoothly for you. If that's the case, please be patient and try to
+These instructions have been tested on Linux, Windows, and OSX, and they should
+work for most people. If you have difficulties, please be patient and try to
 work through it or let me know and I'll do what I can to help. If you hit
 a snag and figure out a solution, tell me about it and I'll update the
 documentation to share what you've learned.
@@ -23,15 +16,19 @@ the [](osx_users) page for more information.
 Below are the basic requirements for using py5.
 
 * Python 3.8+
-* Java 17
+* Java 17+
 * Cairo (optional)
 
-I know that you may not have Java 17 or Python 3.8 on your computer and that
+Python 3.8 is the minimum Python version but you can use a newer version if you
+wish. Java 17 is the minimum Java version but you can install a newer version
+of that as well.
+
+You may not have Java 17 or Python on your computer and you may find that
 [Cairo](https://www.cairographics.org/) can be difficult to install on
 non-Linux machines. If this applies to you, I recommend making your life
 easier by trying the [Anaconda Setup](#anaconda-setup).
 
-The easiest and best setup for beginners is to use the
+The best setup for beginners is to use the
 [Thonny Python Editor](https://thonny.org/) and the
 [py5 Thonny plugin](https://github.com/tabreturn/thonny-py5mode), created by
 [@tabreturn](https://github.com/tabreturn). For this route, follow the
@@ -93,7 +90,7 @@ py5.run_sketch()
 
 You should see a small window that draws squares as you move your mouse around. If that works, have a look at the tutorials for more interesting examples.
 
-## Anaconda Setup
+## Anaconda or Miniconda Setup
 
 [Anaconda](https://www.anaconda.com/products/individual) is a widely
 used platform for working with Python and the open-source ecosystem. It
@@ -101,12 +98,15 @@ makes it very easy to create and manage Python environments containing
 various Python libraries such as py5. Anaconda will also make it easy
 for you to use other popular Python tools such as Jupyter Notebooks.
 
-First you will need to [download the Anaconda Installer for your
-Operating
-System](https://www.anaconda.com/products/individual#Downloads).
-Anaconda's [installation
-instructions](https://docs.anaconda.com/anaconda/install/) are extensive
-and should be able to provide the necessary guidance for your computer.
+[Miniconda](https://docs.conda.io/en/latest/miniconda.html) is similar to
+Anaconda but with a minimal installation.
+
+Download either [the Anaconda Installer](https://www.anaconda.com/products/individual#Downloads)
+or [the Miniconda Installer](https://docs.conda.io/en/latest/miniconda.html) for your Operating System.
+
+[Anaconda's installation instructions](https://docs.anaconda.com/anaconda/install/) and
+[Miniconda's installation instructions](https://conda.io/projects/conda/en/stable/user-guide/install/index.html)
+are both extensive and should be able to provide the necessary guidance for your computer.
 
 ### Brief Steps
 
@@ -133,7 +133,7 @@ name: py5coding
 channels:
   - conda-forge
 dependencies:
-  - python=3.8
+  - python=3.10
   - cairo
   - cairosvg
   - jedi=0.17.2
@@ -191,6 +191,9 @@ there is a newer version available elsewhere on your machine. If it is set
 incorrectly, py5 will provide you with an error message with some debugging
 information to help you fix it.
 
+Although the `JAVA_HOME` environment variable is optional, some users have
+solved their installation problems by setting it.
+
 Now that Java is installed, you can launch jupyter lab and start coding with py5.
 
 ``` bash
@@ -213,14 +216,14 @@ information to work through any difficulties.
 
 First you must create an Anaconda environment to install the Python
 packages into. Below, we create an environment called `py5coding` with
-Python 3.8. Note that py5 does not support earlier versions of Python.
+Python 3.8+. Note that py5 does not support earlier versions of Python.
 Later versions seem to work OK but have not been extensively tested.
 
 The below command will also install Jupyter Lab, which py5 is designed to work
 well with.
 
 ``` bash
-conda create -n py5coding python=3.8 jupyterlab jedi=0.17.2
+conda create -n py5coding python=3.10 jupyterlab jedi=0.17.2
 ```
 
 After creating the `py5coding` environment you must \"activate\" it so that the

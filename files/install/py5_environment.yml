@@ -2,7 +2,7 @@ name: py5coding
 channels:
   - conda-forge
 dependencies:
-  - python=3.8
+  - python=3.10
   - cairo
   - cairosvg
   - jedi=0.17.2
