@@ -38,8 +38,6 @@ Specifies a `Py5Shape` object's vertex coordinates for curves. This method may o
 
 Drawing 2D curves requires using the `P2D` renderer and drawing 3D curves requires using the `P3D` renderer. When drawing directly with `Py5Shape` objects, curves do not work at all using the default renderer.
 
-This method can only be used within a [](py5shape_begin_shape) and [](py5shape_end_shape) pair.
-
 Underlying Processing method: PShape.curveVertex
 
 ## Signatures
@@ -59,4 +57,4 @@ curve_vertex(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on June 26, 2023 01:48:07am UTC

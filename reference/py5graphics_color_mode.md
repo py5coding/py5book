@@ -1,10 +1,10 @@
 # Py5Graphics.color_mode()
 
-Changes the way py5 interprets color data.
+Changes the way a `Py5Graphics` object interprets color data.
 
 ## Description
 
-Changes the way py5 interprets color data. By default, the parameters for [](py5graphics_fill), [](py5graphics_stroke), [](py5graphics_background), and [](py5graphics_color) are defined by values between 0 and 255 using the `RGB` color model. The `color_mode()` function is used to change the numerical range used for specifying colors and to switch color systems. For example, calling `color_mode(RGB, 1.0)` will specify that values are specified between 0 and 1. The limits for defining colors are altered by setting the parameters `max`, `max1`, `max2`, `max3`, and `max_a`.
+Changes the way a `Py5Graphics` object interprets color data. By default, the parameters for [](py5graphics_fill), [](py5graphics_stroke), [](py5graphics_background), and [](py5graphics_color) are defined by values between 0 and 255 using the `RGB` color model. The `color_mode()` function is used to change the numerical range used for specifying colors and to switch color systems. For example, calling `color_mode(RGB, 1.0)` will specify that values are specified between 0 and 1. The limits for defining colors are altered by setting the parameters `max`, `max1`, `max2`, `max3`, and `max_a`.
 
 After changing the range of values for colors with code like `color_mode(HSB, 360, 100, 100)`, those ranges remain in use until they are explicitly changed again. For example, after running `color_mode(HSB, 360, 100, 100)` and then changing back to `color_mode(RGB)`, the range for R will be 0 to 360 and the range for G and B will be 0 to 100. To avoid this, be explicit about the ranges when changing the color mode. For instance, instead of `color_mode(RGB)`, write `color_mode(RGB, 255, 255, 255)`.
 
@@ -44,4 +44,4 @@ color_mode(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on June 26, 2023 01:43:25am UTC

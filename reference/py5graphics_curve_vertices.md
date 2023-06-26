@@ -10,8 +10,6 @@ The `coordinates` parameter should be a numpy array with one row for each curve 
 
 This method is the same as [](sketch_curve_vertices) but linked to a `Py5Graphics` object. To see example code for how it can be used, see [](sketch_curve_vertices).
 
-Underlying Processing method: PGraphics.curveVertices
-
 ## Signatures
 
 ```python
@@ -21,4 +19,4 @@ curve_vertices(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on June 26, 2023 01:51:29am UTC
