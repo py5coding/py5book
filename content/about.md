@@ -29,7 +29,7 @@ possible.
 - [Ben Fry](https://benfry.com/), [Casey Reas](http://reas.com/), and
   [the rest of the Processing
   team](https://github.com/processing/processing4/graphs/contributors?from=2019-10-01&to=2021-01-01&type=c).
-  [Processing](https://processing.org/) has been around for almost 20
+  [Processing](https://processing.org/) has been around for over 20
   years and is used by thousands for creative coding projects. Much of
   py5\'s functionality is provided by the Processing core libraries.
   Py5 stands on the shoulders of giants.
