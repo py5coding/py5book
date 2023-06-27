@@ -314,7 +314,17 @@ run_sketch()
 Observe that any "`py5.`" and "`self.`" prefixes are removed. There
 are no "`import py5`" or "`from py5 import *`" statements.
 
-To actually use this, make sure you have installed the py5 Jupyter
+Imported Mode does not let you define functions or variables with names that
+are identical to py5's functions or variables. For example, you cannot create
+a variable named `size` or a function named `rect()`. These are considered
+"reserved" words. This is to protect you from writing code that redefines py5's
+functions and variables and potentially creating hard to debug errors for you
+to fix. However, `g`, the main [](/reference/py5graphics) object
+([](/reference/sketch_g)), is an exception to this rule because a single
+character reserved word would be confusing and because the variables `r`, `g`,
+and `b` are so commonly used for color values.
+
+To run the Imported Mode code, make sure you have installed the py5 Jupyter
 Notebook Kernel, as described on the [Install
 py5](install) page. Then start Jupyter Lab
 using this command:
