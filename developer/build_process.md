@@ -46,6 +46,14 @@ $ conda activate py5
 (py5) $ cd ..
 ```
 
+If you have difficulties creating the Anaconda environment, try setting the
+[channel priority to strict](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-channels.html#strict-channel-priority)
+with this command:
+
+```bash
+conda config --set channel_priority strict
+```
+
 ## Locate Processing Application
 
 When the build process runs, the code will search for and copy
