@@ -5,11 +5,11 @@ into multiple files. Python libraries or modules are also typically organized
 across multiple files. Coders can use the Python `import` command to make code
 stored in other files or modules available to be used in their py5 projects.
 This page outlines the recommended ways to write importable py5 code, either for
-one person or to be shared with others.
+use by the author or to be shared with others.
 
 ## General py5 Importing Guidelines
 
-If you typically use py5's Module Mode, you might decide to also write your py5
+If you make use of py5's Module Mode, you might decide to also write your py5
 library code in Module Mode. Your library code might then like this:
 
 ```python
@@ -26,8 +26,8 @@ If you are writing code for yourself, do whatever works best for you. However,
 if you plan to distribute this *helper_functions.py* code to others, you should
 be aware that it will only work correctly for users who are also programming in
 Module Mode. It can't work for py5 users programming in Class Mode. Imported
-Mode users will experience difficulties with dynamic variables like `mouse_x`
-and `mouse_y`.
+Mode users will experience difficulties with the dynamic variables like
+`mouse_x` and `mouse_y`.
 
 You should not assume that other py5 users will want to use the same py5 Mode
 that you use.
@@ -46,7 +46,7 @@ def draw_two_squares(*, sketch: py5.Sketch=None):
     s.rect(s.random_int(s.width), s.random_int(s.height), 10, 10)
 ```
 
-The important thing to observe here is that the code should obtain a
+The important thing to observe here is that the function should obtain a
 `py5.Sketch` instance and then use that instance to access py5's methods and
 variables. Accessing py5's methods through the py5 module (i.e. `py5.rect()`,
 `py5.mouse_x`, etc.) is incorrect for Class Mode users and will result in
@@ -55,7 +55,8 @@ confusing errors for Imported Mode users because the dynamic variables such as
 
 The extra bit of complexity will be transparent to your users, and will make
 the library accessible to users programming in any of py5's Modes. For example,
-a coder using Module Mode would use `helper_functions.py` like this:
+a coder writing py5 code in Module Mode would use `helper_functions.py` like
+this:
 
 ```python
 import py5
@@ -103,8 +104,8 @@ class Example(Sketch):
         helper_functions.draw_two_squares(sketch=self)
 ```
 
-If you decide to ignore Class Mode you can simplify `helper_functions.py`
-slightly:
+If you decide to ignore Class Mode you can simplify the `helper_functions.py`
+code slightly:
 
 ```python
 # helper_functions.py
@@ -125,7 +126,7 @@ then only use that instance to access py5's methods and variables.
 The guidelines for Imported Mode users are simplified so that beginner coders
 writing code in Imported Mode can split their code into multiple files without
 needing to know about the other py5 Modes. This feature will help educators
-introduce Python code importing to their students.
+introduce the benefits of Python code importing to their students.
 
 Continuing with our `helper_functions.py` example, an Imported Mode coder would
 write the following code:
@@ -141,9 +142,10 @@ def draw_two_squares():
 ```
 
 The extra `# PY5 IMPORTED MODE CODE` comment is important. It is a marker to
-signal an import hook added by py5 that this module contains py5 code written in
-Imported Mode. This Python module will be imported slightly differently,
-enabling the Imported Mode code to work correctly by an Import Mode py5 Sketch.
+signal an import hook added by py5's Imported Mode execution engine that this
+module contains py5 code written in Imported Mode. This Python module will be
+imported differently, enabling the Imported Mode code to work correctly by an
+Import Mode py5 Sketch.
 
 This `helper_functions` library can be imported much like any other Python
 module and used in a Sketch:
