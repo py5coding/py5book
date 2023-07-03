@@ -122,7 +122,7 @@ To reiterate, your py5 module code should obtain a `py5.Sketch` instance and
 then only use that instance to access py5's methods and variables. If you don't
 do this, your py5 module code will only work for users coding in Module Mode. If
 the module is just for yourself, that's fine, but if you will distribute it to
-others, it is recommened that you follow these guidelines.
+others, it is recommended that you follow these guidelines.
 
 (importing_imported_mode_code)=
 ## Importing Imported Mode Code
