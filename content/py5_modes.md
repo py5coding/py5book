@@ -354,6 +354,11 @@ the Python editor Thonny that has been configured to use py5 in Imported Mode,
 The operation of Imported Mode should work just as well as analogous
 code written in the other py5 modes.
 
+As of release 0.9.1, py5 supports writing importable Python libraries written
+in Imported Mode. To enable this feature, you must add a specific identifying
+string to your Python library to flag it for special import processing. Refer
+to [](importing_imported_mode_code) for more information.
+
 ## Static Mode
 
 Static Mode lets you create static images using functionless code. It is
