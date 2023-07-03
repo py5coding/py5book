@@ -55,7 +55,7 @@ confusing errors for Imported Mode users because the dynamic variables such as
 
 The extra bit of complexity will be transparent to your users, and will make
 the library accessible to users programming in any of py5's Modes. For example,
-a coder writing py5 code in Module Mode would use `helper_functions.py` like
+a coder writing py5 code in Module Mode would use *helper_functions.py* like
 this:
 
 ```python
@@ -104,7 +104,7 @@ class Example(Sketch):
         helper_functions.draw_two_squares(sketch=self)
 ```
 
-If you decide to ignore Class Mode you can simplify the `helper_functions.py`
+If you decide to ignore Class Mode you can simplify the *helper_functions.py*
 code slightly:
 
 ```python
@@ -119,7 +119,10 @@ def draw_two_squares():
 ```
 
 To reiterate, your py5 module code should obtain a `py5.Sketch` instance and
-then only use that instance to access py5's methods and variables.
+then only use that instance to access py5's methods and variables. If you don't
+do this, your py5 module code will only work for users coding in Module Mode. If
+the module is just for yourself, that's fine, but if you will distribute it to
+others, it is recommened that you follow these guidelines.
 
 (importing_imported_mode_code)=
 ## Importing Imported Mode Code
@@ -129,7 +132,7 @@ writing code in Imported Mode can split their code into multiple files without
 needing to know about the other py5 Modes. This feature will help educators
 introduce the benefits of Python code importing to their students.
 
-Continuing with our `helper_functions.py` example, an Imported Mode coder would
+Continuing with our *helper_functions.py* example, an Imported Mode coder would
 write the following code:
 
 ```python
@@ -163,7 +166,7 @@ def draw():
     helper_functions.draw_two_squares()
 ```
 
-As the `helper_functions.py` module grows, you might want to break it up into
+As the `helper_functions` module grows, you might want to break it up into
 multiple files. In that case, the `# PY5 IMPORTED MODE CODE` comment only
 needs to be used once in your library's root `__init__.py` file.
 
