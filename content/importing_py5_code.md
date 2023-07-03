@@ -176,4 +176,15 @@ from . import line_helpers
 ```
 
 There's no need to add the `# PY5 IMPORTED MODE CODE` marker to every file in
-the module.
+the module. The marker is case insensitive, so `# py5 Imported Mode code` will
+work just as well. If you forget to add this or add it incorrectly, you will
+get an error message reminding you.
+
+```txt
+File "/tmp/test/helper_functions.py", line 13, in draw_squares
+    12   def draw_squares():
+--> 13       rect(mouse_x, mouse_y, 10, 10)
+    14       rect(random_int(width), random_int(height), 10, 10)
+
+NameError: The name "rect" is not defined. Your Sketch is also running in Imported Mode. If the code throwing this exception was imported into your main py5 Sketch code, please ensure the py5 Imported Mode marker "# PY5 IMPORTED MODE CODE" has been properly added to the module.
+```
