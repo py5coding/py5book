@@ -30,8 +30,6 @@ Draw a collection of lines to the screen. The purpose of this method is to provi
 
 The `coordinates` parameter should be a numpy array with one row for each line. The first few columns are for the first point of each line and the next few columns are for the second point of each line. There will be four or six columns for 2D or 3D points, respectively.
 
-Underlying Processing method: lines
-
 ## Signatures
 
 ```python
@@ -41,4 +39,4 @@ lines(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on June 26, 2023 01:53:06am UTC

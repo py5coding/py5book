@@ -30,8 +30,6 @@ Draw a collection of points, each a coordinate in space at the dimension of one 
 
 The `coordinates` parameter should be a numpy array with one row for each point. There should be two or three columns for 2D or 3D points, respectively.
 
-Underlying Processing method: points
-
 ## Signatures
 
 ```python
@@ -41,4 +39,4 @@ points(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on June 26, 2023 01:53:06am UTC

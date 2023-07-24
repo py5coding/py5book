@@ -5,6 +5,7 @@
 
 * [begin_closed_shape()](py5shape_begin_closed_shape)
 * [begin_shape()](py5shape_begin_shape)
+* [color_mode()](py5shape_color_mode)
 * [disable_style()](py5shape_disable_style)
 * [enable_style()](py5shape_enable_style)
 * [end_shape()](py5shape_end_shape)
@@ -113,9 +114,11 @@
 * [begin_contour()](py5shape_begin_contour)
 * [bezier_detail()](py5shape_bezier_detail)
 * [bezier_vertex()](py5shape_bezier_vertex)
+* [bezier_vertices()](py5shape_bezier_vertices)
 * [curve_detail()](py5shape_curve_detail)
 * [curve_tightness()](py5shape_curve_tightness)
 * [curve_vertex()](py5shape_curve_vertex)
+* [curve_vertices()](py5shape_curve_vertices)
 * [end_contour()](py5shape_end_contour)
 * [get_normal()](py5shape_get_normal)
 * [get_normal_x()](py5shape_get_normal_x)
@@ -131,9 +134,11 @@
 * [get_vertex_z()](py5shape_get_vertex_z)
 * [normal()](py5shape_normal)
 * [quadratic_vertex()](py5shape_quadratic_vertex)
+* [quadratic_vertices()](py5shape_quadratic_vertices)
 * [set_path()](py5shape_set_path)
 * [set_vertex()](py5shape_set_vertex)
 * [vertex()](py5shape_vertex)
+* [vertices()](py5shape_vertices)
 
 
     </td></tr></table>

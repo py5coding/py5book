@@ -17,6 +17,7 @@ parts:
   - file: content/py5_modes
   - file: content/hybrid_programming
   - file: content/processing_mode
+  - file: content/importing_py5_code
 
 - caption: Tutorials
   chapters:

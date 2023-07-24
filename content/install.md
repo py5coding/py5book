@@ -170,7 +170,8 @@ OpenJDK 64-Bit Server VM 21.9 (build 17.0.2+8, mixed mode, sharing)
 
 If you get an error or see the version number is something like 1.8 or 11.0.14,
 you will need to install or upgrade Java. You can install
-it any way you like. One straightforward installation approach is to use the
+it any way you like, but note that installing Java through Anaconda has caused
+problems in the past. One straightforward installation approach is to use the
 [Python library install-jdk](https://github.com/jyksnw/install-jdk). Install it
 into your Anaconda environment using `pip install`:
 

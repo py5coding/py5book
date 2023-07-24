@@ -17,10 +17,9 @@ import numpy as np
 
 def setup():
     random_curve_vertices = 100 * np.random.rand(25, 2)
-    py5.begin_shape()
-    py5.vertex(py5.width / 2, py5.height / 2)
-    py5.curve_vertices(random_curve_vertices)
-    py5.end_shape()
+    with py5.begin_shape():
+        py5.vertex(py5.width / 2, py5.height / 2)
+        py5.curve_vertices(random_curve_vertices)
 ```
 
 </div></div>
@@ -33,8 +32,6 @@ Create a collection of curve vertices. The purpose of this method is to provide 
 
 The `coordinates` parameter should be a numpy array with one row for each curve vertex.  There should be two or three columns for 2D or 3D points, respectively.
 
-Underlying Processing method: curveVertices
-
 ## Signatures
 
 ```python
@@ -44,4 +41,4 @@ curve_vertices(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on June 26, 2023 01:53:06am UTC

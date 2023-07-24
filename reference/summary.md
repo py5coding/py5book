@@ -421,7 +421,6 @@
 * [clip()](/reference/sketch_clip) - Limits the rendering to the boundaries of a rectangle defined by the parameters.
 * [create_graphics()](/reference/sketch_create_graphics) - Creates and returns a new Py5Graphics object.
 * [flush()](/reference/sketch_flush) - Flush drawing commands to the renderer.
-* [g](/reference/sketch_g) - The Py5Graphics object used by the Sketch.
 * [get_graphics()](/reference/sketch_get_graphics) - Get the Py5Graphics object used by the Sketch.
 * [hint()](/reference/sketch_hint) - This function is used to enable or disable special features that control how graphics are drawn.
 * [no_clip()](/reference/sketch_no_clip) - Disables the clipping previously started by the `clip()` function.

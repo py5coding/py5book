@@ -10,8 +10,6 @@ The `coordinates` parameter should be a numpy array with one row for each vertex
 
 This method is the same as [](sketch_vertices) but linked to a `Py5Graphics` object. To see example code for how it can be used, see [](sketch_vertices).
 
-Underlying Processing method: PGraphics.vertices
-
 ## Signatures
 
 ```python
@@ -21,4 +19,4 @@ vertices(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on June 26, 2023 01:51:29am UTC

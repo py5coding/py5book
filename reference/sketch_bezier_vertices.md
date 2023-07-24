@@ -17,10 +17,9 @@ import numpy as np
 
 def setup():
     random_bezier_vertices = 100 * np.random.rand(25, 6)
-    py5.begin_shape()
-    py5.vertex(py5.width / 2, py5.height / 2)
-    py5.bezier_vertices(random_bezier_vertices)
-    py5.end_shape()
+    with py5.begin_shape():
+        py5.vertex(py5.width / 2, py5.height / 2)
+        py5.bezier_vertices(random_bezier_vertices)
 ```
 
 </div></div>
@@ -33,8 +32,6 @@ Create a collection of bezier vertices. The purpose of this method is to provide
 
 The `coordinates` parameter should be a numpy array with one row for each bezier vertex. The first few columns are for the first control point, the next few columns are for the second control point, and the final few columns are for the anchor point. There should be six or nine columns for 2D or 3D points, respectively.
 
-Underlying Processing method: bezierVertices
-
 ## Signatures
 
 ```python
@@ -44,4 +41,4 @@ bezier_vertices(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on June 26, 2023 01:53:06am UTC

@@ -9,7 +9,7 @@ clean:
 	jb clean .
 
 deploydev:
-	aws s3 sync --delete _build/html s3://py5dev.ixora.io/
+	aws s3 sync --delete _build/html s3://dev.py5coding.org/
 
 deployprod:
 	aws s3 sync --delete _build/html s3://py5coding.org/

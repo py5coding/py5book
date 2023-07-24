@@ -1,4 +1,4 @@
-# vertices()
+# Py5Shape.vertices()
 
 Create a collection of vertices.
 
@@ -8,7 +8,7 @@ Create a collection of vertices.
 
 <div class="example-row"><div class="example-cell-image">
 
-![example picture for vertices()](/images/reference/Sketch_vertices_0.png)
+![example picture for vertices()](/images/reference/Py5Shape_vertices_0.png)
 
 </div><div class="example-cell-code">
 
@@ -17,8 +17,10 @@ import numpy as np
 
 def setup():
     random_triangle_vertices = 100 * np.random.rand(25, 2)
-    with py5.begin_shape(py5.TRIANGLES):
-        py5.vertices(random_triangle_vertices)
+    s = py5.create_shape()
+    with s.begin_shape(s.TRIANGLES):
+        s.vertices(random_triangle_vertices)
+    py5.shape(s)
 ```
 
 </div></div>
@@ -27,7 +29,7 @@ def setup():
 
 ## Description
 
-Create a collection of vertices. The purpose of this method is to provide an alternative to repeatedly calling [](sketch_vertex) in a loop. For a large number of vertices, the performance of `vertices()` will be much faster.
+Create a collection of vertices. The purpose of this method is to provide an alternative to repeatedly calling [](py5shape_vertex) in a loop. For a large number of vertices, the performance of `vertices()` will be much faster.
 
 The `coordinates` parameter should be a numpy array with one row for each vertex. There should be two or three columns for 2D or 3D points, respectively.
 
@@ -40,4 +42,4 @@ vertices(
 ) -> None
 ```
 
-Updated on June 26, 2023 01:53:06am UTC
+Updated on June 26, 2023 01:48:37am UTC
