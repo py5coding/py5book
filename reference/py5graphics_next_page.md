@@ -20,7 +20,7 @@ def draw():
         py5.rect(py5.random_int(py5.width), py5.random_int(py5.height), 10, 10)
 
     if py5.frame_count < 5:
-        py5.g.next_page()
+        py5.get_graphics().next_page()
     else:
         py5.exit_sketch()
 ```
@@ -41,4 +41,4 @@ Underlying Processing method: PGraphics.nextPage
 next_page() -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on August 02, 2023 16:07:04pm UTC
