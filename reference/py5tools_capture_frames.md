@@ -42,7 +42,7 @@ capture_frames(
     sketch: Sketch = None,  # running Sketch
     hook_post_draw: bool = False,  # attach hook to Sketch's post_draw method instead of draw
     block: bool = False  # method returns immediately (False) or blocks until function returns (True)
-) -> list[PIL.Image]
+) -> list[PIL_Image]
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on August 07, 2023 14:29:21pm UTC

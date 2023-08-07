@@ -94,7 +94,7 @@ render_sequence(
     setup_args: tuple = None,  # additional positional arguments to pass to setup function
     setup_kwargs: dict = None,  # additional keyword arguments to pass to setup function
     use_py5graphics: bool = False  # pass a py5graphics object instead of a sketch object
-) -> list[PIL.ImageFile.ImageFile]
+) -> list[PIL_Image]
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on August 07, 2023 14:28:34pm UTC

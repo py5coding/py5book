@@ -19,9 +19,8 @@ def setup():
     py5.background(255, 0, 0)
     array = np.full((50, 50, 1), 240, dtype=np.uint8)
     g = py5.create_graphics(50, 50)
-    g.begin_draw()
-    g.set_np_pixels(array, bands='L')
-    g.end_draw()
+    with g.begin_draw():
+        g.set_np_pixels(array, bands='L')
     py5.image(g, 20, 20)
 ```
 
@@ -50,4 +49,4 @@ set_np_pixels(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on August 07, 2023 14:29:21pm UTC
