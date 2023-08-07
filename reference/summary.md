@@ -344,6 +344,7 @@
 * [apply_filter()](/reference/sketch_apply_filter) - Filters the display window using a preset filter or with a custom shader.
 * [blend()](/reference/sketch_blend) - Blends a region of pixels from one image into another (or in itself again) - with full alpha channel support.
 * [copy()](/reference/sketch_copy) - Copies a region of pixels from the display window to another area of the display window and copies a region of pixels from an image used as the src_img parameter into the display window.
+* [get_np_pixels()](/reference/sketch_get_np_pixels) - Returns the contents of `np_pixels[]` as a numpy array.
 * [get_pixels()](/reference/sketch_get_pixels) - Reads the color of any pixel or grabs a section of the drawing surface.
 * [load_np_pixels()](/reference/sketch_load_np_pixels) - Loads the pixel data of the current display window into the `np_pixels[]` array.
 * [load_pixels()](/reference/sketch_load_pixels) - Loads the pixel data of the current display window into the `pixels[]` array.
@@ -351,6 +352,7 @@
 * [pixels[]](/reference/sketch_pixels) - The `pixels[]` array contains the values for all the pixels in the display window.
 * [set_np_pixels()](/reference/sketch_set_np_pixels) - Set the entire contents of `np_pixels[]` to the contents of another properly sized and typed numpy array.
 * [set_pixels()](/reference/sketch_set_pixels) - Changes the color of any pixel or writes an image directly into the drawing surface.
+* [to_pil()](/reference/sketch_to_pil) - Returns the drawing surface as a PIL Image object.
 * [update_np_pixels()](/reference/sketch_update_np_pixels) - Updates the display window with the data in the `np_pixels[]` array.
 * [update_pixels()](/reference/sketch_update_pixels) - Updates the display window with the data in the `pixels[]` array.
 
