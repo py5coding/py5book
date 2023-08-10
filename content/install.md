@@ -52,9 +52,11 @@ If you intend to use py5 with Jupyter Notebooks, you can install py5 and py5jupy
 pip install py5[jupyter]
 ```
 
-The `[jupyter]` suffix tells the Python package installer to install py5's optional py5jupyter library. If you have py5 installed already you can use `pip install py5jupyter`.
+The `[jupyter]` suffix tells the Python package installer to install py5's optional py5jupyter library.
+If you have py5 installed already you can use `pip install py5jupyter`.
 
-Next, you can install one or both of [py5's Jupyter Notebook Kernels](#jupyter-notebook-kernels). To install the [py5 kernel](#py5-kernel) for imported mode Sketches, use this command:
+Next, you can install one or both of [py5's Jupyter Notebook Kernels](#jupyter-notebook-kernels).
+To install the [py5 kernel](#py5-kernel) for imported mode Sketches, use this command:
 
 ``` bash
 python -m py5jupyter.kernels.py5.install --sys-prefix
@@ -73,7 +75,12 @@ You can optionally install [Cairo](https://www.cairographics.org/) and
 
 ## Quick Example
 
-Here is a quick py5 example to test that everything works.
+Here is a quick py5 example to test that everything works. Please test this with
+a Jupyter Notebook, the IPython REPL, or by saving it to a *.py file and running
+it from the command line like this: `python quick_example.py`. Typing py5 python
+code into the generic python REPL is generally not a good idea, and this specific
+example will not work for
+[reasons that are too detailed to explain here](https://github.com/py5coding/py5generator/discussions/337).
 
 ``` python
 import py5
@@ -88,7 +95,8 @@ def draw():
 py5.run_sketch()
 ```
 
-You should see a small window that draws squares as you move your mouse around. If that works, have a look at the tutorials for more interesting examples.
+You should see a small window that draws squares as you move your mouse around.
+If that works, have a look at the tutorials for more interesting examples.
 
 ## Anaconda or Miniconda Setup
 
