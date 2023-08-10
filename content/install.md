@@ -73,7 +73,12 @@ You can optionally install [Cairo](https://www.cairographics.org/) and
 
 ## Quick Example
 
-Here is a quick py5 example to test that everything works.
+Here is a quick py5 example to test that everything works. Please test this with
+a Jupyter Notebook, the IPython REPL, or by saving it to a *.py file and running
+it from the command line like this: `python quick_example.py`. Typing py5 python
+code into the generic python REPL is generally not a good idea, and this specific
+example will not work for
+[reasons that are too detailed to explain here](https://github.com/py5coding/py5generator/discussions/337).
 
 ``` python
 import py5
