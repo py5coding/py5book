@@ -40,8 +40,8 @@ save_frame(
     format: str = None,  # image format, if not determined from filename extension
     drop_alpha: bool = True,  # remove the alpha channel when saving the image
     use_thread: bool = False,  # write file in separate thread
-    **params
+    **params,
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on August 11, 2023 15:42:07pm UTC

@@ -56,8 +56,8 @@ launch_thread(
     *,
     daemon: bool = True,  # if the thread should be a daemon thread
     args: tuple = None,  # positional arguments to pass to the given function
-    kwargs: dict = None  # keyword arguments to pass to the given function
+    kwargs: dict = None,  # keyword arguments to pass to the given function
 ) -> str
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on August 11, 2023 15:42:07pm UTC
