@@ -281,17 +281,17 @@ def setup():
     background('#000000')
     
     # Moving Violet to the end of the sequence...
-    violet = bands[?] # Place the correct index here!
+    violet = bands['?'] # Place the correct index here!
     bands.append(violet)
     bands.remove(violet)
     
     # Drawing our rainbow bands...
-    fill(bands[0]); rect(0,100, width,50)
-    fill(bands[1]); rect(0,150, width,50)
-    fill(bands[2]); rect(0,200, width,50)
-    fill(bands[3]); rect(0,250, width,50)
-    fill(bands[4]); rect(0,300, width,50)
-    fill(bands[5]); rect(0,350, width,50)
+    fill(bands[0]); rect(0, 100, width, 50)
+    fill(bands[1]); rect(0, 150, width, 50)
+    fill(bands[2]); rect(0, 200, width, 50)
+    fill(bands[3]); rect(0, 250, width, 50)
+    fill(bands[4]); rect(0, 300, width, 50)
+    fill(bands[5]); rect(0, 350, width, 50)
     
 run_sketch()
 ```
@@ -317,7 +317,7 @@ def setup():
     background('#000000')
     
     # Moving Violet to the end of the sequence...
-    violet = bands[?] # Place the correct index here!
+    violet = bands['?'] # Place the correct index here!
     bands.append(violet)
     bands.remove(violet)
     
@@ -326,12 +326,12 @@ def setup():
     bands.insert(4, bands.pop(blueindex))
     
     # Drawing our rainbow bands...
-    fill(bands[0]); rect(0,100, width,50)
-    fill(bands[1]); rect(0,150, width,50)
-    fill(bands[2]); rect(0,200, width,50)
-    fill(bands[3]); rect(0,250, width,50)
-    fill(bands[4]); rect(0,300, width,50)
-    fill(bands[5]); rect(0,350, width,50)
+    fill(bands[0]); rect(0, 100, width, 50)
+    fill(bands[1]); rect(0, 150, width, 50)
+    fill(bands[2]); rect(0, 200, width, 50)
+    fill(bands[3]); rect(0, 250, width, 50)
+    fill(bands[4]); rect(0, 300, width, 50)
+    fill(bands[5]); rect(0, 350, width, 50)
     
 run_sketch()
 ```
@@ -357,7 +357,7 @@ def setup():
     background('#000000')
     
     # Moving Violet to the end of the sequence...
-    violet = bands[?] # Place the correct index here!
+    violet = bands['?'] # Place the correct index here!
     bands.append(violet)
     bands.remove(violet)
     
@@ -366,16 +366,16 @@ def setup():
     bands.insert(4, bands.pop(blueindex))
     
     # Swapping Orange and Red around
-    bands.insert(bands.index('?'), bands.???(?)) 
+    bands.insert(bands.index('?'), bands.one_other_method('?')) 
     # What should we find with .index()? What other method might we need?
     
     # Drawing our rainbow bands...
-    fill(bands[0]); rect(0,100, width,50)
-    fill(bands[1]); rect(0,150, width,50)
-    fill(bands[2]); rect(0,200, width,50)
-    fill(bands[3]); rect(0,250, width,50)
-    fill(bands[4]); rect(0,300, width,50)
-    fill(bands[5]); rect(0,350, width,50)
+    fill(bands[0]); rect(0, 100, width, 50)
+    fill(bands[1]); rect(0, 150, width, 50)
+    fill(bands[2]); rect(0, 200, width, 50)
+    fill(bands[3]); rect(0, 250, width, 50)
+    fill(bands[4]); rect(0, 300, width, 50)
+    fill(bands[5]); rect(0, 350, width, 50)
     
 run_sketch()
 ```
@@ -386,7 +386,7 @@ Nice work. Let's keep this code to use for the next challenge.
 
 ## loops and lists
 
-The way that lists are structured, and the fact that the data in them can essentially be "swapped out" at any time, makes them particularly well-suited to iterative tasks, like you might perform using loops. If you can create a loop that does something with a particular set of data, any similarly-structured list could be swapped out and perform the same way. 
+The way that lists are structured, and the fact that the data in them can essentially be "swapped out" at any time, makes them particularly well-suited to iterative tasks, like you might perform using loops. If you can create a loop that does something with a particular set of data, any similarly-structured list could be swapped out and perform the same way.
 
 If you remember using *loops*, you know we usually give them some sort of range, or a number of times the loop should run. To use the contents of a list in a loop, you could first determine the length of that list with `len()`. You can even use the output of the `len()` function as your range directly in a for loop.
 
@@ -454,13 +454,13 @@ None of these three approaches are inherently superior; as with many different c
 
 Remember the rainbow code we produced above? It's got this big, ugly chunk in it:
 
-```
-fill(bands[0]); rect(0,100, width,50)
-fill(bands[1]); rect(0,150, width,50)
-fill(bands[2]); rect(0,200, width,50)
-fill(bands[3]); rect(0,250, width,50)
-fill(bands[4]); rect(0,300, width,50)
-fill(bands[5]); rect(0,350, width,50)
+```python
+fill(bands[0]); rect(0, 100, width, 50)
+fill(bands[1]); rect(0, 150, width, 50)
+fill(bands[2]); rect(0, 200, width, 50)
+fill(bands[3]); rect(0, 250, width, 50)
+fill(bands[4]); rect(0, 300, width, 50)
+fill(bands[5]); rect(0, 350, width, 50)
 ```
 
 Rewrite this to use a loop of some kind, instead. In addition to the syntax change, you'll want to replace those hard-coded values for the height of the band with something that increases over time. 
@@ -473,7 +473,7 @@ What's better at organizing data than a list? A list of lists!
 
 If you return to our very first example, with student names and ages, you'll see that we have stored information for a few different students in a single list.
 
-```
+```python
 students = [ 'Sam', 24, 
             'Kim', 23, 
             'Tia', 25, 
@@ -483,7 +483,7 @@ students = [ 'Sam', 24,
 
 Getting information from this list is possible, but tedious. If you searched the list with the method `.index('Sam')`, you could simply know that to find Sam's age, you should also check whatever exists at `.index('Sam') + 1`. Better yet, you could assume that the first student is at `students[0]`, their age is at `students[1]`, and the second student is at `student[2]`, so "stepping" through this information is easy. However, this can become problematic if you later realize you have to add more information about each student, like their ID number. 
 
-```
+```python
 students = [ 'Sam', 24, '111111',
             'Kim', 23, '111112',
             'Tia', 25, '111113',
@@ -493,7 +493,7 @@ students = [ 'Sam', 24, '111111',
 
 Suddenly, any assumptions about where each student's section of the list begins and ends has been broken. One way to get around this is by using a list of lists.
 
-```
+```python
 students = [
             ['Sam', 24, '111111'],
             ['Kim', 23, '111112'],
