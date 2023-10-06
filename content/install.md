@@ -26,7 +26,7 @@ of that as well.
 You may not have Java 17 or Python on your computer and you may find that
 [Cairo](https://www.cairographics.org/) can be difficult to install on
 non-Linux machines. If this applies to you, I recommend making your life
-easier by trying the [Anaconda Setup](#anaconda-setup).
+easier by trying the <a href="#anaconda-setup">Anaconda Setup</a>.
 
 The best setup for beginners is to use the
 [Thonny Python Editor](https://thonny.org/) and the
@@ -54,13 +54,13 @@ pip install py5[jupyter]
 
 The `[jupyter]` suffix tells the Python package installer to install py5's optional py5jupyter library. If you have py5 installed already you can use `pip install py5jupyter`.
 
-Next, you can install one or both of [py5's Jupyter Notebook Kernels](#jupyter-notebook-kernels). To install the [py5 kernel](#py5-kernel) for imported mode Sketches, use this command:
+Next, you can install one or both of <a href="#jupyter-notebook-kernels">py5's Jupyter Notebook Kernels</a>. To install the <a href="#py5-kernel">py5 kernel</a> for imported mode Sketches, use this command:
 
 ``` bash
 python -m py5jupyter.kernels.py5.install --sys-prefix
 ```
 
-To install [py5bot](#py5bot) for static mode sketches, use this:
+To install <a href="#py5bot">py5bot</a> for static mode sketches, use this:
 
 ``` bash
 python -m py5jupyter.kernels.py5bot.install --sys-prefix
@@ -71,6 +71,8 @@ python -m py5jupyter.kernels.py5bot.install --sys-prefix
 You can optionally install [Cairo](https://www.cairographics.org/) and
 [CairoSVG](https://cairosvg.org/) to enable py5's extra SVG support.
 
+
+<a name="quick-example"></a>
 ## Quick Example
 
 Here is a quick py5 example to test that everything works. Please test this with
@@ -95,6 +97,7 @@ py5.run_sketch()
 
 You should see a small window that draws squares as you move your mouse around. If that works, have a look at the tutorials for more interesting examples.
 
+<a name="anaconda-setup"></a>
 ## Anaconda or Miniconda Setup
 
 [Anaconda](https://www.anaconda.com/products/individual) is a widely
@@ -113,6 +116,7 @@ or [the Miniconda Installer](https://docs.conda.io/en/latest/miniconda.html) for
 [Miniconda's installation instructions](https://conda.io/projects/conda/en/stable/user-guide/install/index.html)
 are both extensive and should be able to provide the necessary guidance for your computer.
 
+<a name="brief-steps">
 ### Brief Steps
 
 You can create a complete Anaconda environment for py5 using one
@@ -206,15 +210,15 @@ Now that Java is installed, you can launch jupyter lab and start coding with py5
 jupyter lab
 ```
 
-Try testing with the [Quick Example](#quick-example) to verify
+Try testing with the <a href="#quick-example">Quick Example</a> to verify
 everything works.
 
 Before moving on, consider installing one or both of py5's Jupyter
-Notebook Kernels: [py5 kernel](#py5-kernel) and [py5bot](#py5bot).
+Notebook Kernels: <a href="#py5-kernel">py5 kernel</a> and <a href="#py5bot">py5bot</a>.
 
 ### Detailed Steps
 
-If the [Brief Steps](#brief-steps) don't work for you or you want more
+If the <a href="#brief-steps">Brief Steps</a> don't work for you or you want more
 detailed information, the below steps will provide you with the necessary
 information to work through any difficulties.
 
@@ -354,11 +358,10 @@ the error, then try `pip install py5` again.
 conda install -c conda-forge line_profiler
 ```
 
-After installing py5, try testing with the [Quick
-Example](#quick-example) to verify everything works. Also, consider
-installing one or both of py5's Jupyter Notebook Kernels: [py5
-kernel](#py5-kernel) and [py5bot](#py5bot).
+After installing py5, try testing with the <a href="#quick-example">Quick Example</a> to verify everything works. Also, consider
+installing one or both of py5's Jupyter Notebook Kernels: <a href="#py5-kernel">py5 kernel</a> and <a href="#py5bot">py5bot</a>.
 
+<a name="jupyter-notebook-kernels"></a>
 ## Jupyter Notebook Kernels
 
 To use py5's Jupyter support you must have the py5jupyter library installed.
@@ -366,6 +369,7 @@ Starting with version 0.8.0, py5's Jupyter functionality requires the second
 optional dependency py5jupyter. Use of py5 and Jupyter without py5jupyter is
 possible but is deprecated.
 
+<a name="py5-kernel"></a>
 ### py5 kernel
 
 You can optionally install the py5 Jupyter Notebook Kernel. This is a
@@ -382,6 +386,7 @@ will install the py5 kernel inside the py5 Anaconda environment and
 Jupyter will only present it as an option when Jupyter is run in that
 environment.
 
+<a name="py5bot"></a>
 ### py5bot
 
 You can optionally install py5bot, which is also a Jupyter Notebook
