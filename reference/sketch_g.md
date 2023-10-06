@@ -24,8 +24,8 @@ def setup():
 
 The [](py5graphics) object used by the Sketch. Internally, all of Processing's drawing functionality comes from interaction with PGraphics objects, and this will provide direct access to the PGraphics object used by the Sketch.
 
-Use of `g` is deprecated as of version 0.9.1. Please use [](sketch_get_graphics) instead.
+Use of `g` was deprecated in version 0.9.1 and was removed in version 0.9.2. Please use [](sketch_get_graphics) instead.
 
 Underlying Processing field: g
 
-Updated on July 16, 2023 16:47:49pm UTC
+Updated on October 06, 2023 20:06:55pm UTC
