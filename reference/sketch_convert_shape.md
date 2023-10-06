@@ -21,8 +21,8 @@ def setup():
 
     poly1 = Polygon([(0, 0), (0, 40), (40, 40), (40, 0)])
     poly2 = affinity.translate(poly1, 20, 20)
-
     shapely_shape = poly1.union(poly2)
+
     py5_shape = py5.convert_shape(shapely_shape)
     py5.shape(py5_shape, 20, 20)
 ```
@@ -50,4 +50,4 @@ convert_shape(
 ) -> Py5Shape
 ```
 
-Updated on October 06, 2023 13:36:04pm UTC
+Updated on October 06, 2023 20:02:22pm UTC
