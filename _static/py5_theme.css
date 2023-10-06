@@ -1,0 +1,79 @@
+html[data-theme=light] {
+    --pst-color-secondary: #3157aa;
+    --pst-color-secondary-highlight: #142f8f;
+}
+
+html[data-theme=dark] {
+    --pst-color-secondary: #3157aa;
+    --pst-color-secondary-highlight: #142f8f;
+}
+
+nav.bd-links ul ul {
+    padding: 0 0 0 0.25rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a.headerlink {
+    text-decoration: none;
+}
+
+.bd-header .navbar-nav li a.nav-link:hover {
+    text-decoration: none;
+}
+
+.bd-header .navbar-nav .dropdown button:hover {
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-decoration: none;
+}
+
+nav.bd-links li>a:hover {
+    text-decoration: none;
+
+}
+
+ul.bd-breadcrumbs li.breadcrumb-item a:hover {
+    text-decoration: none;
+}
+
+.navbar-brand:hover:hover,
+.navbar-brand:visited:hover:hover {
+    text-decoration: none;
+}
+
+.navbar-nav li a:hover {
+    text-decoration: none;
+}
+
+.prev-next-area a p.prev-next-title {
+    text-decoration: none;
+}
+
+.prev-next-area a:hover p.prev-next-title:hover {
+    text-decoration: none;
+}
+
+div#searchbox p.highlight-link a {
+    text-decoration: none;
+}
+
+button.btn.version-switcher__button:hover {
+    text-decoration: none;
+}
+
+.version-switcher__menu a.list-group-item:hover {
+    text-decoration: none;
+}
+
+.toc-entry a.nav-link:hover {
+    text-decoration: none;
+}
