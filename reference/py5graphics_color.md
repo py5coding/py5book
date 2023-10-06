@@ -46,6 +46,17 @@ color(
 ) -> int
 
 color(
+    hex_code: str,  # hex color code
+    /,
+) -> int
+
+color(
+    hex_code: str,  # hex color code
+    alpha: int,  # alpha value relative to current color range
+    /,
+) -> int
+
+color(
     v1: float,  # red or hue values relative to the current color range
     v2: float,  # green or saturation values relative to the current color range
     v3: float,  # blue or brightness values relative to the current color range
@@ -76,4 +87,4 @@ color(
 ) -> int
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on October 06, 2023 13:36:04pm UTC

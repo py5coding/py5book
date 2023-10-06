@@ -279,6 +279,7 @@
 
 ### Shape
 
+* [convert_shape()](sketch_convert_shape)
 * [create_shape()](sketch_create_shape)
 * [load_shape()](sketch_load_shape)
 

@@ -86,13 +86,16 @@
 
 #### Properties
 
+* [depth](py5shape_depth)
 * [get_depth()](py5shape_get_depth)
 * [get_height()](py5shape_get_height)
 * [get_width()](py5shape_get_width)
+* [height](py5shape_height)
 * [is2d()](py5shape_is2d)
 * [is3d()](py5shape_is3d)
 * [is_visible()](py5shape_is_visible)
 * [set_visible()](py5shape_set_visible)
+* [width](py5shape_width)
 
 
     </td><td style="vertical-align:top">

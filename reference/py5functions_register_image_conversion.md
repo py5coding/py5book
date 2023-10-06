@@ -45,7 +45,7 @@ def setup():
 
 Register new image conversion functionality to be used by [](sketch_convert_image).  This will allow users to extend py5's capabilities and compatability within the Python ecosystem.
 
-The `precondition` parameter must be function that accepts an object as a parameter and returns `True` if and only if the `convert_function` can successfully convert the object.
+The `precondition` parameter must be a function that accepts an object as a parameter and returns `True` if and only if the `convert_function` can successfully convert the object.
 
 The `convert_function` parameter must be a function that accepts an object as a parameter and returns either a filename that can be read by [](sketch_load_image), a `py5.NumpyImageArray` object, or a [](py5image) object. View py5's source code for detailed information about `py5.NumpyImageArray` objects.
 
@@ -58,4 +58,4 @@ register_image_conversion(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on October 06, 2023 13:36:04pm UTC

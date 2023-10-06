@@ -83,6 +83,48 @@ color_mode(
 
 color_mode(
     mode: int,  # Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
+    color_map: Colormap,  # matplotlib Colormap instance
+    /,
+) -> None
+
+color_mode(
+    mode: int,  # Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
+    color_map: Colormap,  # matplotlib Colormap instance
+    max1: float,  # range for the red or hue depending on the current color mode
+    /,
+) -> None
+
+color_mode(
+    mode: int,  # Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
+    color_map: Colormap,  # matplotlib Colormap instance
+    max1: float,  # range for the red or hue depending on the current color mode
+    max_a: float,  # range for the alpha
+    /,
+) -> None
+
+color_mode(
+    mode: int,  # Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
+    color_map: str,  # name of matplotlib colormap
+    /,
+) -> None
+
+color_mode(
+    mode: int,  # Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
+    color_map: str,  # name of matplotlib colormap
+    max1: float,  # range for the red or hue depending on the current color mode
+    /,
+) -> None
+
+color_mode(
+    mode: int,  # Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
+    color_map: str,  # name of matplotlib colormap
+    max1: float,  # range for the red or hue depending on the current color mode
+    max_a: float,  # range for the alpha
+    /,
+) -> None
+
+color_mode(
+    mode: int,  # Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
     max1: float,  # range for the red or hue depending on the current color mode
     max2: float,  # range for the green or saturation depending on the current color mode
     max3: float,  # range for the blue or brightness depending on the current color mode
@@ -105,4 +147,4 @@ color_mode(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on October 06, 2023 13:36:04pm UTC
