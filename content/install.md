@@ -21,7 +21,7 @@ Below are the basic requirements for using py5.
 
 Python 3.8 is the minimum Python version but you can use a newer version if you
 wish. Java 17 is the minimum Java version but you can install a newer version
-of that as well.
+of that as well. The Java Virtual Machine cannot be a headless JVM.
 
 You may not have Java 17 or Python on your computer and you may find that
 [Cairo](https://www.cairographics.org/) can be difficult to install on
@@ -116,7 +116,7 @@ or [the Miniconda Installer](https://docs.conda.io/en/latest/miniconda.html) for
 [Miniconda's installation instructions](https://conda.io/projects/conda/en/stable/user-guide/install/index.html)
 are both extensive and should be able to provide the necessary guidance for your computer.
 
-<a name="brief-steps">
+<a name="brief-steps"></a>
 ### Brief Steps
 
 You can create a complete Anaconda environment for py5 using one
@@ -178,9 +178,13 @@ OpenJDK 64-Bit Server VM 21.9 (build 17.0.2+8, mixed mode, sharing)
 ```
 
 If you get an error or see the version number is something like 1.8 or 11.0.14,
-you will need to install or upgrade Java. You can install
-it any way you like, but note that installing Java through Anaconda has caused
-problems in the past. One straightforward installation approach is to use the
+you will need to install or upgrade Java. If your Java installation is a
+headless JVM, the output of `java -version` may not indicate this but py5 will
+later raise an Exception when you import the py5 library.
+
+You can install Java any way you like, but note that installing Java through
+Anaconda has caused problems in the past. One straightforward installation
+approach is to use the
 [Python library install-jdk](https://github.com/jyksnw/install-jdk). Install it
 into your Anaconda environment using `pip install`:
 
