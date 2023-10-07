@@ -1,11 +1,11 @@
 html[data-theme=light] {
-    --pst-color-secondary: #3157aa;
-    --pst-color-secondary-highlight: #142f8f;
+    --pst-color-secondary: #c98138;
+    --pst-color-secondary-highlight: #925315;
 }
 
 html[data-theme=dark] {
-    --pst-color-secondary: #3157aa;
-    --pst-color-secondary-highlight: #142f8f;
+    --pst-color-secondary: #c98138;
+    --pst-color-secondary-highlight: #925315;
 }
 
 nav.bd-links ul ul {
@@ -17,7 +17,7 @@ a {
 }
 
 a:hover {
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a.headerlink {
@@ -38,7 +38,6 @@ a.headerlink {
 
 nav.bd-links li>a:hover {
     text-decoration: none;
-
 }
 
 ul.bd-breadcrumbs li.breadcrumb-item a:hover {
