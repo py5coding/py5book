@@ -1,5 +1,3 @@
-<a name="top"></a>
-
 # py5 Reference Summary
 
 ## Drawing Shapes
@@ -62,8 +60,6 @@
 * [shape_mode()](/reference/sketch_shape_mode) - Modifies the location from which shapes draw.
 * [Py5Shape class](/reference/py5shape) - Datatype for storing shapes. Allows loading and displaying SVG and OBJ shapes.
 
-<a href="#top">back to top</a>
-
 ## Color and Other Graphic Attributes
 
 ### Creating and Setting Colors
@@ -98,8 +94,6 @@
 * [push_style()](/reference/sketch_push_style) - The `push_style()` function saves the current style settings and `pop_style()` restores the prior settings.
 * [push()](/reference/sketch_push) - combines `push_style()` and `push_matrix()` The `push()` function saves the current drawing style settings and transformations, while `pop()` restores these settings.
 * [pop()](/reference/sketch_pop) - combines `pop_style()` and `pop_matrix()` The `pop()` function restores the previous drawing style settings and transformations after `push()` has changed them.
-
-<a href="#top">back to top</a>
 
 ## Inputs
 
@@ -159,8 +153,6 @@
 * [second()](/reference/sketch_second) - Returns the current seconds as a value from 0 to 59 by consulting the clock on your computer.
 * [year()](/reference/sketch_year) - Returns the current year by consulting the clock on your computer.
 
-<a href="#top">back to top</a>
-
 ## Output
 
 ### Saving Files
@@ -185,8 +177,6 @@
 * [println()](/reference/sketch_println) - Print text or other values to the console (not the sketch drawing area). Similar to Python's `print()`.
 * [set_println_stream()](/reference/sketch_set_println_stream) - Customize where the output of `println()` goes.
 
-<a href="#top">back to top</a>
-
 ## Typography
 
 ### Drawing Text
@@ -209,8 +199,6 @@
 * [text_width()](/reference/sketch_text_width) - Calculates and returns the width of any character or text string.
 * [text_ascent()](/reference/sketch_text_ascent) - Returns ascent of the current font at its current size.
 * [text_descent()](/reference/sketch_text_descent) - Returns descent of the current font at its current size.
-
-<a href="#top">back to top</a>
 
 ## Coordinate System Transformations
 
@@ -237,8 +225,6 @@
 * [print_matrix()](/reference/sketch_print_matrix) - Prints the current matrix to standard output.
 * [reset_matrix()](/reference/sketch_reset_matrix) - Replaces the current matrix with the identity matrix.
 * [set_matrix()](/reference/sketch_set_matrix) - Set the current matrix to the one specified through the parameter source.
-
-<a href="#top">back to top</a>
 
 ## Sketch Environment
 
@@ -279,8 +265,6 @@
 * [window_title()](/reference/sketch_window_title) - Set the Sketch window’s title.
 * [window_x](/reference/sketch_window_x) - The x-coordinate of the current window location.
 * [window_y](/reference/sketch_window_y) - The y-coordinate of the current window location.
-
-<a href="#top">back to top</a>
 
 ## Math Related
 
@@ -327,8 +311,6 @@
 * [sin()](/reference/sketch_sin) - Calculates the sine of an angle.
 * [tan()](/reference/sketch_tan) - Calculates the ratio of the sine and cosine of an angle.
 
-<a href="#top">back to top</a>
-
 ## Working with Images
 
 ### Loading and Displaying
@@ -369,8 +351,6 @@
 * [convert_image()](/reference/sketch_convert_image) - Convert non-py5 image objects into Py5Image objects.
 * [create_image_from_numpy()](/reference/sketch_create_image_from_numpy) - Convert a numpy array into a Py5Image object.
 * [request_image()](/reference/sketch_request_image) - Use a Py5Promise object to load an image into a variable of type Py5Image.
-
-<a href="#top">back to top</a>
 
 ## 3D Scene
 
@@ -413,8 +393,6 @@
 * [shininess()](/reference/sketch_shininess) - Sets the amount of gloss in the surface of shapes.
 * [specular()](/reference/sketch_specular) - Sets the specular color of the materials used for shapes drawn to the screen, which sets the color of highlights.
 
-<a href="#top">back to top</a>
-
 ## Rendering
 
 ### Graphics Context
@@ -432,8 +410,6 @@
 * [load_shader()](/reference/sketch_load_shader) - Loads a shader into a Py5Shader object.
 * [reset_shader()](/reference/sketch_reset_shader) - Restores the default shaders.
 * [shader()](/reference/sketch_shader) - Applies the shader specified by the parameters.
-
-<a href="#top">back to top</a>
 
 ## Sketch Execution
 
@@ -477,8 +453,6 @@
 * [java_platform](/reference/sketch_java_platform) - Version of Java currently being used by py5.
 * [java_version_name](/reference/sketch_java_version_name) - Version name of Java currently being used by py5.
 
-<a href="#top">back to top</a>
-
 ## py5 Classes and Other Tools
 
 ### Classes
@@ -498,5 +472,3 @@
 * [Py5 Magics](/reference/py5magics) - The py5 Magics are Jupyter Notebook “meta-commands” that can be within Jupyter Notebooks to enhance py5’s ability to work within the notebook. The py5 magics will enable users to create Sketches and embed the results in the Notebook without defining any functions or calling the `size()` function.
 * [Py5 Tools](/reference/py5tools) - The py5 Tools are extra utility functions not directly related to creating Sketches that help facilitate the use of py5. For example, you can use these to add jar files to the Java classpath before importing py5.
 * [Py5 Functions](/reference/py5functions) - The py5 Functions are extra utility functions that make py5 easier to use. For example, you can use these to Processing’s vlw font files without having to use Processing’s IDE.
-
-<a href="#top">back to top</a>
