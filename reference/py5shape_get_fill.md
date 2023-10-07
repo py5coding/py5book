@@ -14,6 +14,7 @@ Gets the fill color used for a `Py5Shape` object.
 
 ```python
 def setup():
+    py5.size(100, 100, py5.P2D)
     py5.no_stroke()
     py5.fill(200, 50, 50)
     s = py5.create_shape(py5.RECT, 20, 20, 60, 60)
@@ -44,4 +45,4 @@ get_fill(
 ) -> int
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on October 07, 2023 00:09:31am UTC
