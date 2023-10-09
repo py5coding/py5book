@@ -16,6 +16,7 @@
 * [get_fill()](py5shape_get_fill)
 * [no_fill()](py5shape_no_fill)
 * [set_fill()](py5shape_set_fill)
+* [set_fills()](py5shape_set_fills)
 
 #### Stroke
 
@@ -26,6 +27,7 @@
 * [set_stroke_cap()](py5shape_set_stroke_cap)
 * [set_stroke_join()](py5shape_set_stroke_join)
 * [set_stroke_weight()](py5shape_set_stroke_weight)
+* [set_strokes()](py5shape_set_strokes)
 * [stroke()](py5shape_stroke)
 * [stroke_cap()](py5shape_stroke_cap)
 * [stroke_join()](py5shape_stroke_join)
