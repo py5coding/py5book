@@ -32,6 +32,16 @@ parts:
     - file: tutorials/jupyter_render_helper_tools
     - file: tutorials/jupyter_notebook_magic_and_special_features
 
+- caption: Python Ecosystem Integrations
+  chapters:
+    - file: integrations/python_ecosystem_integrations
+    - file: integrations/colors
+    - file: integrations/matplotlib
+    - file: integrations/shapely
+    - file: integrations/trimesh
+    - file: integrations/cairo
+    - file: integrations/custom_integrations
+
 - caption: How To...
   chapters:
   - file: how_tos/use_camera3D
