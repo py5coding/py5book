@@ -26,4 +26,6 @@ explain [](/reference/sketch_convert_image), how to use it well
 
 ## ColorMap Color Mode
 
-Explain `CMAP` color mode
+Explain `CMAP` color mode, link to color page? don't have it twice
+
+Also matplotlib named colors.

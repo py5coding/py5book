@@ -18,4 +18,8 @@ kernelspec:
 
 How to setup and install cairo
 
+Difficult on Windows
+
+Move from install page
+
 ## Convert SVG images to Py5Image objects

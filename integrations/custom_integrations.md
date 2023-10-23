@@ -1,5 +1,5 @@
 # Custom Integrations
 
-register new methods
+how to register new customization methods
 
 Ask for ideas
