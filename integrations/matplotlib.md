@@ -14,13 +14,27 @@ kernelspec:
 
 # Charts, Plots, and Matplotlib
 
-overview
+[Matplotlib](https://matplotlib.org/) is a commonly used library for creating
+charts and other data visualizations. It has a long history within the Python
+community.
 
 ## Setup
 
-Install matplotlib
+Install matplotlib with pip or with conda.
 
-## Convert Figures to Py5Images
+```bash
+pip install matplotlib
+```
+
+```bash
+conda install matplotlib -c conda-forge
+```
+
+Refer to matplotlib's [Getting Started](https://matplotlib.org/stable/users/getting_started/)
+page or [Installation Guide](https://matplotlib.org/stable/users/installing/index.html)
+for more information.
+
+## Convert matplotlib Figures to Py5Images objects
 
 explain [](/reference/sketch_convert_image), how to use it well
 
