@@ -48,7 +48,7 @@ If Trimesh is missing a dependent library needed for the functionality you want
 to use, it will provide you with an error message informing you of what you
 should install.
 
-## Basic Example
+## Convert Trimesh objects to Py5Shapely objects
 
 Example showing how to load a glb or gltf file with the texture
 

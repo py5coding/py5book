@@ -40,7 +40,7 @@ with an older version of the GEOS library and then frustrate yourself with bugs.
 Development of py5's integration code was done with Shapely version 2.0.
 The previous version, 1.8, should work just as well though.
 
-## Convert to Py5Shape objects
+## Convert Shapely objects to Py5Shape objects
 
 Basic idea
 
