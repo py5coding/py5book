@@ -14,8 +14,8 @@ kernelspec:
 
 # 3D Shapes and Trimesh
 
-Trimesh is a well-known and well-maintained library for working with 3D
-geometry.
+[Trimesh](https://trimesh.org/) is a well-known and well-maintained library for
+working with 3D geometry.
 
 The goal of Trimesh is to "provide a full featured and well tested Trimesh
 object which allows for easy manipulation and analysis, in the style of the
@@ -30,12 +30,15 @@ Installing Trimesh by itself is acceptable but Trimesh is much more useful if
 you install its dependent libraries. At a minimum, you should install the easy
 to install dependencies with this command:
 
-```python
+```bash
 pip install trimesh[easy]
 ```
 
 Refer to the [Trimesh Installation page](https://trimesh.org/install.html) for
 more information about Trimesh's dependencies and installation options.
+
+Development of py5's integration code was done with Trimesh version 3.23.
+Version 4.0 was released shortly after but seems to work just as well as 3.23.
 
 Installing [OpenSCAD](https://openscad.org/) or
 [Blender](https://www.blender.org/) on your computer may also be useful. Trimesh
