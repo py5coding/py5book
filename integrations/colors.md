@@ -35,9 +35,11 @@ For more information, refer to the [colour library's documentation on github](ht
 or matplotlib's [Getting Started](https://matplotlib.org/stable/users/getting_started/)
 page.
 
-## hex codes
+## hex color codes
 
-Use any hex code
+Any hex color code can be used as a color. The color code must always be a
+string with values representing red, green, blue, and optionally the alpha
+channel.
 
 as a string, 3, 4, 6, or 8 characters
 3 - rgb
@@ -45,12 +47,14 @@ as a string, 3, 4, 6, or 8 characters
 6 - rrggbb
 8 - rrggbbaa
 
-Consistent with hex strings for web / html
+The rules for hex codes are consistent with hex values commonly used for web
+development in HTML and CSS files.
 
 eg: `#ff0000` for red
 
-Can also use a hexidecimal integer, like so. For this, it is always `0x` followed
-by 8 values, order is alpha, red, green, blue.
+If you like, you can also use a hexidecimal integer, such as `0xffff0000`.
+For this, it is always `0x` followed by 8 values, and the order is alpha, red,
+green, and blue.
 
 `0xffff0000`
 
