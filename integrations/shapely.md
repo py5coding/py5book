@@ -35,7 +35,8 @@ Refer to [Shapely Installation page](https://shapely.readthedocs.io/en/stable/in
 for more information.
 
 Pro tip: DO NOT install Shapely from the default conda channel. You may end up
-with an older version of the GEOS library and then frustrate yourself with bugs.
+with the current version of shapely and old version of the GEOS library. You
+will then frustrate yourself with bugs.
 
 Development of py5's integration code was done with Shapely version 2.0.
 The previous version, 1.8, should work just as well though.
