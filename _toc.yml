@@ -19,6 +19,16 @@ parts:
   - file: content/processing_mode
   - file: content/importing_py5_code
 
+- caption: Python Ecosystem Integrations
+  chapters:
+    - file: integrations/python_ecosystem_integrations
+    - file: integrations/colors
+    - file: integrations/matplotlib
+    - file: integrations/shapely
+    - file: integrations/trimesh
+    - file: integrations/cairo
+    - file: integrations/custom_integrations
+
 - caption: Tutorials
   chapters:
   - file: tutorials/intro_to_py5_and_python
@@ -31,16 +41,6 @@ parts:
     - file: tutorials/jupyter_animation_and_sketch_portals
     - file: tutorials/jupyter_render_helper_tools
     - file: tutorials/jupyter_notebook_magic_and_special_features
-
-- caption: Python Ecosystem Integrations
-  chapters:
-    - file: integrations/python_ecosystem_integrations
-    - file: integrations/colors
-    - file: integrations/matplotlib
-    - file: integrations/shapely
-    - file: integrations/trimesh
-    - file: integrations/cairo
-    - file: integrations/custom_integrations
 
 - caption: How To...
   chapters:
