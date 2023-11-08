@@ -186,13 +186,13 @@ The [](/reference/sketch_convert_shape) method did all the heavy lifting to crea
 Note that Trimesh objects can have additional texture maps for things such as surface normals or metallic roughness. Since the
 default py5 polygon shader cannot make use of these texture maps, py5's [](/reference/sketch_convert_shape) method will not add them to the created `Py5Shape` object. One could write additional code to make use of them, however.
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ## Using Trimesh Primitives
 
 Trimesh has a set of [primitive objects](https://trimesh.org/trimesh.primitives.html) such as [Box](https://trimesh.org/trimesh.primitives.html#trimesh.primitives.Box), [Capsule](https://trimesh.org/trimesh.primitives.html#trimesh.primitives.Capsule), [Cylinder](https://trimesh.org/trimesh.primitives.html#trimesh.primitives.Cylinder), and [Sphere](https://trimesh.org/trimesh.primitives.html#trimesh.primitives.Sphere).
 
-The arrangement of triangles in a Trimesh Sphere is different from the arrangement created by py5's [](/reference/sketch_sphere) method.
+The arrangement of triangles in a Trimesh Sphere is different from the arrangement created by py5's [](/reference/sketch_sphere) method. Capsules are kind of like cylinders with two half-spheres on each end. These primitives extend the basic shapes you can work with in py5.
 
 Let's create a simple example showcasing these objects.
 
@@ -241,6 +241,12 @@ def draw():
     py5.shape(primitives)
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+Each of our primitives will inherit the drawing style active at the time [](/reference/sketch_convert_shape) is called.
+
+When we run this, the primitive shapes will rotate around for us to see.
+
 ```{code-cell} ipython3
 ---
 editable: true
@@ -259,6 +265,10 @@ tags: [remove-cell]
 ---
 time.sleep(4)
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+Here's a screenshot of what it looks like:
 
 ```{code-cell} ipython3
 ---
@@ -283,7 +293,12 @@ py5.exit_sketch()
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-Include note about colors, may need to disable style. Sometimes trimesh adds a style to something. If the object has a style, py5 (should) pick up on that and use it.
+A final comment on drawing styles: Trimesh objects can have their own drawing style information ([ColorVisuals](https://trimesh.org/trimesh.visual.color.html#trimesh.visual.color.ColorVisuals)) instead of texture-based styles ([TextureVisuals](https://trimesh.org/trimesh.visual.texture.html#trimesh.visual.texture.TextureVisuals)). If [](/reference/sketch_convert_shape) detects a ColorVisuals object, it will use that drawing style information instead of py5's active drawing style. 
+
+Also, some Trimesh library operations seem to add ColorVisuals objects to their output. This can be a bit confusing because your calls to py5's style methods such as [](/reference/sketch_stroke) and [](/reference/sketch_fill) will have no effect. Be aware of this possibility to avoid coding frustrations. If you suspect this is happening, one easy way to address this is to call the [](https://py5coding.org/reference/py5shape_disable_style.html) method to remove Trimesh's drawing style settings from the `Py5Shape` object and take control of the drawing style.
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 
 Scene, Trimesh, Path2D, Path3D
 
