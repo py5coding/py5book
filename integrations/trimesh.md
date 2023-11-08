@@ -299,7 +299,6 @@ Also, some Trimesh library operations seem to add ColorVisuals objects to their 
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-
 Scene, Trimesh, Path2D, Path3D
 
 ## Options
