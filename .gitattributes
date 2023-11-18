@@ -1,0 +1,2 @@
+integrations/*.ipynb filter=strip-notebook-output
+
