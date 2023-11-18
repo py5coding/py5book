@@ -101,9 +101,9 @@ def setup():
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-After converting the model into a `Py5Shape` object, we need to increase the scale and rotate it to change its orientation. Consider py5's coordinate system: the positive Y axis points towards the bottom of the drawing surface. It is likely that the 3D modeling program used to create this strawberry had a different coordinate system, perhaps with the positive Z axis pointing towards the top of the screen. Therefore, when using this model in py5 you may need to do some rotations to get the result you want. Similarly, the scale may need to be some adjustments.
+After converting the model into a `Py5Shape` object, we need to increase the scale and rotate it to change its orientation. Consider py5's coordinate system: the positive Y axis points towards the bottom of the drawing surface. It is likely that the 3D modeling program used to create this strawberry had a different coordinate system, perhaps with the positive Z axis pointing towards the top of the screen. Therefore, you will often need to do some rotations to get the result you want when using this trimesh conversion feature in py5. Similarly, you will often need to adjust the scale.
 
-When loading a model, you will often want to apply some transformations so it can be drawn as you intend for it to be drawn. These adjustments can be done after converting the model into a `Py5Shape` object, as we did here in our `setup()` function. Alternatively, we can do the adjustments in the `draw()` function before the drawing the `Py5Shape` object to the screen with [](/reference/sketch_shape).
+When loading a model, you will often want to apply some transformations so it can be drawn as you intend for it to be drawn. These adjustments can be done to the model itself after converting the model into a `Py5Shape` object, as we did here in our `setup()` function. Alternatively, we can do global transformations in the `draw()` function before the drawing the `Py5Shape` object to the screen with [](/reference/sketch_shape).
 
 You can also adjust the Trimesh mesh object using Trimesh's transformation tools, before the call to [](/reference/sketch_convert_shape). You will use Trimesh's [apply_transform()](https://trimesh.org/trimesh.html#trimesh.Trimesh.apply_transform) method to apply a transformation matrix to a mesh.
 
@@ -136,8 +136,6 @@ def draw():
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
-
-We need to invert the model's y axis because the top of the strawberry is oriented towards the positive y axis but Processing and therefore py5 has the positive y axis pointing towards the bottom of the drawing surface. You will frequently need to employ rotations and scale adjustments when working with models created outside of py5.
 
 When we run this, the strawberry will slowly rotate along its main axis.
 
@@ -179,7 +177,7 @@ py5.exit_sketch()
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-Neat, huh? 
+Neat, huh?
 
 The [](/reference/sketch_convert_shape) method did all the heavy lifting to create the object and add apply the base color texture using the UV coordinates.
 
@@ -216,7 +214,7 @@ def setup():
     box.translate(150, 0, 0)
     primitives.add_child(box)
 
-    # NOTE: Trimesh's sections parameter might have a bug
+    # NOTE: Trimesh's Capsule `sections` parameter might have a bug
     capsule = py5.convert_shape(Capsule(70, 40, sections=12))
     capsule.translate(0, 150, 0)
     primitives.add_child(capsule)
@@ -293,9 +291,9 @@ py5.exit_sketch()
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-A final comment on drawing styles: Trimesh objects can have their own drawing style information ([ColorVisuals](https://trimesh.org/trimesh.visual.color.html#trimesh.visual.color.ColorVisuals)) instead of texture-based styles ([TextureVisuals](https://trimesh.org/trimesh.visual.texture.html#trimesh.visual.texture.TextureVisuals)). If [](/reference/sketch_convert_shape) detects a ColorVisuals object, it will use that drawing style information instead of py5's active drawing style. 
+A final comment on drawing styles: Trimesh objects can have their own drawing style information ([ColorVisuals](https://trimesh.org/trimesh.visual.color.html#trimesh.visual.color.ColorVisuals)) instead of texture-based styles ([TextureVisuals](https://trimesh.org/trimesh.visual.texture.html#trimesh.visual.texture.TextureVisuals)). If [](/reference/sketch_convert_shape) detects a ColorVisuals object, it will use that drawing style information instead of py5's active drawing style.
 
-Also, some Trimesh library operations seem to add ColorVisuals objects to their output. This can be a bit confusing because your calls to py5's style methods such as [](/reference/sketch_stroke) and [](/reference/sketch_fill) will have no effect. Be aware of this possibility to avoid coding frustrations. If you suspect this is happening, one easy way to address this is to call the [](https://py5coding.org/reference/py5shape_disable_style.html) method to remove Trimesh's drawing style settings from the `Py5Shape` object and take control of the drawing style.
+Also, know that some Trimesh library operations seem to add ColorVisuals objects to their output. This can be a bit confusing because your calls to py5's style methods such as [](/reference/sketch_stroke) and [](/reference/sketch_fill) will have no effect. Be aware of this possibility to avoid coding frustrations. If you suspect this is happening, one easy way to address this is to call the [](https://py5coding.org/reference/py5shape_disable_style.html) method to remove Trimesh's drawing style settings from the `Py5Shape` object and take control of the drawing style.
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
