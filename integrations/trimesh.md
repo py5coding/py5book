@@ -20,9 +20,9 @@ kernelspec:
 
 The goal of Trimesh is to "provide a full featured and well tested Trimesh object which allows for easy manipulation and analysis, in the style of the Polygon object in the Shapely library."
 
-Trimesh and [](/reference/sketch_convert_shape) can greatly extend py5's ability to load 3D objects, far exceeding what can be achieved with [](/reference/sketch_load_shape).
+Trimesh and [](/reference/sketch_convert_shape) can greatly extend py5's ability to load and manipulate 3D objects, far exceeding what can be achieved with [](/reference/sketch_load_shape) and other `Py5Shape` methods.
 
-Finally, know that Trimesh is a large and complex library. It is possible (likely) that there are Trimesh features that don't work well with py5's [](/reference/sketch_convert_shape) method. If you find something that doesn't work but should or have ideas for how py5's Trimesh integrations can be improved, please let us know by [opening an issue](https://github.com/py5coding/py5generator/issues) or starting a thread in [GitHub Discussions](https://github.com/py5coding/py5generator/discussions).
+Finally, know that Trimesh is a large and complex library. It is possible (likely) that there are Trimesh features that don't work well with py5's [](/reference/sketch_convert_shape) method. If you find something that doesn't work but probably should or have ideas for how py5's Trimesh integrations can be improved, please let us know by [opening an issue](https://github.com/py5coding/py5generator/issues) or starting a thread in [GitHub Discussions](https://github.com/py5coding/py5generator/discussions).
 
 ## Setup
 
@@ -64,7 +64,7 @@ import py5
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 For our first example, we will use a 3D model file in [glTF format](https://en.wikipedia.org/wiki/GlTF) downloaded from [TurboSquid](https://www.turbosquid.com/). Our example is a
-[strawberry](https://www.turbosquid.com/3d-models/3d-strawberry-1962030) created by the artist [minimoku](https://www.turbosquid.com/Search/Artists/minimoku).
+[Strawberry](https://www.turbosquid.com/3d-models/3d-strawberry-1962030) created by the artist [minimoku](https://www.turbosquid.com/Search/Artists/minimoku).
 
 This model format can contain embedded texture images. Trimesh stores this texture information in a [TextureVisuals](https://trimesh.org/trimesh.visual.texture.html#trimesh.visual.texture.TextureVisuals) object. The [](/reference/sketch_convert_shape) will detect this and create a `Py5Shape` object with the texture.
 
@@ -76,9 +76,9 @@ editable: true
 slideshow:
   slide_type: ''
 ---
-strawberry_model = trimesh.load('models/Strawberry_gltf.gltf')
+strawberry_scene = trimesh.load('models/Strawberry_gltf.gltf')
 
-print(type(strawberry_model))
+strawberry_scene
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
@@ -96,7 +96,7 @@ slideshow:
 def setup():
     global strawberry
     py5.size(300, 500, py5.P3D)
-    strawberry = py5.convert_shape(strawberry_model)
+    strawberry = py5.convert_shape(strawberry_scene)
     assert isinstance(strawberry, py5.Py5Shape)
 
     # increase the model's scale and change its orientation
@@ -106,11 +106,11 @@ def setup():
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-After converting the model into a `Py5Shape` object, we need to increase the scale and rotate it to change its orientation. Consider py5's coordinate system: the positive Y axis points towards the bottom of the drawing surface. It is likely that the 3D modeling program used to create this strawberry had a different coordinate system, perhaps with the positive Z axis pointing towards the top of the screen. Therefore, you will often need to do some rotations to get the result you want when using this trimesh conversion feature in py5. Similarly, you will often need to adjust the scale.
+After converting the model into a `Py5Shape` object, we need to increase the scale and rotate it to change its orientation. Consider py5's coordinate system: the positive Y axis points towards the bottom of the drawing surface. It is likely that the 3D modeling program used to create this strawberry had a different coordinate system, perhaps with the positive Z axis pointing towards the top of the screen. Therefore, you will often need to do some rotations to get the result you want. Similarly, you will often need to adjust the scale.
 
-When loading a model, you will often want to apply some transformations so it can be drawn as you intend for it to be drawn. These adjustments can be done to the model itself after converting the model into a `Py5Shape` object, as we did here in our `setup()` function. Alternatively, we can do global transformations in the `draw()` function before the drawing the `Py5Shape` object to the screen with [](/reference/sketch_shape).
+These adjustments can be done to the model itself after converting the model into a `Py5Shape` object, as we did here in our `setup()` function. Alternatively, we can do global transformations in the `draw()` function before the drawing the `Py5Shape` object to the screen with [](/reference/sketch_shape).
 
-You can also adjust the `trimesh.Trimesh` object using Trimesh's transformation tools, before the call to [](/reference/sketch_convert_shape). You will use Trimesh's [apply_transform()](https://trimesh.org/trimesh.html#trimesh.Trimesh.apply_transform) method to apply a transformation matrix to a mesh.
+You can also adjust the `trimesh.Trimesh` object using Trimesh's transformation tools, before the call to [](/reference/sketch_convert_shape). You will use Trimesh's [apply_transform()](https://trimesh.org/trimesh.html#trimesh.Trimesh.apply_transform) method to apply a transformation matrix to `trimesh.Trimesh` objects.
 
 Now let's create a `draw()` method to draw the `Py5Shape` object with the [](/reference/sketch_shape) method.
 
@@ -142,7 +142,7 @@ def draw():
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-When we run this, the strawberry will slowly rotate along its main axis.
+When we run this, the Strawberry will rotate along its main axis.
 
 ```{code-cell} ipython3
 ---
@@ -182,9 +182,7 @@ py5.exit_sketch()
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-Neat, huh?
-
-The [](/reference/sketch_convert_shape) method did all the heavy lifting to create the object and add apply the base color texture using the UV coordinates.
+Neat, huh? The [](/reference/sketch_convert_shape) method did all the heavy lifting to create the object and add apply the base color texture using the UV coordinates.
 
 Note that `trimesh.Trimesh` objects can have additional texture maps for things such as surface normals or metallic roughness. Since the
 default py5 polygon shader cannot make use of these texture maps, py5's [](/reference/sketch_convert_shape) method will not add them to the created `Py5Shape` object. One could write additional code to make use of them, however.
@@ -246,7 +244,7 @@ def draw():
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-Each of these [trimesh.Trimesh](https://trimesh.org/trimesh.html#trimesh.Trimesh) object primitives will inherit the drawing style active at the time [](/reference/sketch_convert_shape) is called.
+Each of these [trimesh.Trimesh](https://trimesh.org/trimesh.html#trimesh.Trimesh) object primitives will inherit the drawing style active at the time [](/reference/sketch_convert_shape) is called. In this example, the stroke weight will be set to `1.5`.
 
 When we run this, the primitive shapes will rotate around for us to see.
 
@@ -298,7 +296,7 @@ py5.exit_sketch()
 
 A final comment on drawing styles: Trimesh objects can have their own drawing style information ([ColorVisuals](https://trimesh.org/trimesh.visual.color.html#trimesh.visual.color.ColorVisuals)) instead of texture-based styles ([TextureVisuals](https://trimesh.org/trimesh.visual.texture.html#trimesh.visual.texture.TextureVisuals)). If [](/reference/sketch_convert_shape) detects a`ColorVisuals` object, it will use that drawing style information instead of py5's active drawing style.
 
-Also, be aware that some Trimesh library operations seem to add `ColorVisuals` objects to their output. This can be a bit confusing because your calls to py5's style methods such as [](/reference/sketch_stroke) and [](/reference/sketch_fill) will have no effect. Be aware of this possibility to avoid coding frustrations. If you suspect this is happening, one easy way to address this is to call the [](https://py5coding.org/reference/py5shape_disable_style.html) method to remove Trimesh's drawing style settings from the `Py5Shape` object and take control of the drawing style.
+Also, be aware that some Trimesh library operations seem to add `ColorVisuals` objects to their output. This can be a bit confusing because your calls to py5's style methods such as [](/reference/sketch_stroke) and [](/reference/sketch_fill) will have no effect. Be aware of this possibility to avoid coding frustrations. If you suspect this is happening, one easy way to address this is to call the [](/reference/py5shape_disable_style) method to remove Trimesh's drawing style settings from the `Py5Shape` object and take control of the drawing style.
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
@@ -309,6 +307,11 @@ In addition to [trimesh.Scene](https://trimesh.org/trimesh.html#trimesh.Scene) a
 Creating `Path2D` and `Path3D` objects directly is a bit tedious. You might do so with code like this:
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 line1 = Line(
     np.random.choice(np.arange(8), replace=False, size=4),
 )
@@ -316,23 +319,225 @@ line2 = Line(
     np.random.choice(np.arange(8), replace=False, size=4),
 )
 
-path3d = Path3D(
+path2d = Path2D(
     entities=[line1, line2],
-    vertices=250 * np.random.random((8, 3)),
+    vertices=250 * np.random.random((8, 2)),
     colors=np.random.randint(255, size=(2, 3)).astype(np.uint8),
 )
 ```
 
-Next, `path3d` could be converted to a `Py5Shape` object with [](/reference/sketch_convert_shape). It would look like a 3D line with random vertices and colors. Most likely you would never go through the trouble of creating a `Path3D` object like this, however.
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+Next, `path2d` could be converted to a `Py5Shape` object with [](/reference/sketch_convert_shape). It would look like a 2D line with random vertices and colors. However, that's a lot of code to create something that could be done more simply with the methods already provided by py5. Most likely you would never go through the trouble of creating a `Path2D` object like this.
+
+More likely you get `Path2D` or `Path3D` objects as the output of other Trimesh methods. Let's explore this by using Trimesh's [section_multiplane()](https://trimesh.org/trimesh.base.html#trimesh.base.Trimesh.section_multiplane) method to create slices of our Strawberry model.
+
+First we will need to extract the [trimesh.Trimesh](https://trimesh.org/trimesh.html#trimesh.Trimesh) object from the [trimesh.Scene](https://trimesh.org/trimesh.html#trimesh.Scene) object.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+strawberry_model = strawberry_scene.geometry['strawberry']
+
+strawberry_model
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+Next we will create the 2D slices, which will then be converted to slices that exist in 3D space.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+xmin, xmax = strawberry_model.bounds[:, 0]
+
+strawberry_slices_2d = strawberry_model.section_multiplane(
+    (0, 0, 0), (1, 0, 0), np.linspace(xmin, xmax, num=40)
+)
+strawberry_slices_3d = [
+    slice.to_3D() for slice in strawberry_slices_2d if slice is not None
+]
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+In our `setup()` function we can convert each slice into a `Py5Shape` object and then add them to a `GROUP` shape.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+def setup():
+    global strawberry
+    py5.size(300, 500, py5.P3D)
+
+    # convert each slices into a Py5Shape object
+    strawberry_slices = [py5.convert_shape(slice) for slice in strawberry_slices_3d]
+    # assemble the Py5Shape objects into a GROUP Py5Shape object
+    strawberry = py5.create_shape(py5.GROUP)
+    for slice in strawberry_slices:
+        strawberry.add_child(slice)
+
+    # increase the model's scale and change its orientation
+    strawberry.scale(50)
+    strawberry.set_stroke_weight(0.025)
+    strawberry.rotate_z(-py5.radians(90))
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+Now we can create the `draw()` function and run the Sketch.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+def draw():
+    global y_rot
+    y_rot += 1
+
+    py5.background(255)
+
+    py5.translate(225, 400, 0)
+    py5.rotate_z(py5.radians(-25))
+    py5.rotate_x(py5.radians(-25))
+    py5.rotate_y(py5.radians(y_rot))
+
+    py5.shape(strawberry)
+
+
+py5.run_sketch()
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+The Sketch will look like this:
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+py5_tools.screenshot()
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+time.sleep(1)
+
+py5.exit_sketch()
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+## `trimesh.PointCloud`
+
+Finally, py5's [](/reference/sketch_convert_shape) method supports `trimesh.PointCloud` objects. To make this interesting, let's create a `trimesh.PointCloud` object from the Strawberry model's vertices.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+strawberry_pointcloud = trimesh.PointCloud(strawberry_model.vertices)
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+In the `setup()` function we can convert the `trimesh.PointCloud` object to a `Py5Shape` object using [](/reference/sketch_convert_shape), just like before.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+def setup():
+    global strawberry
+    py5.size(300, 500, py5.P3D)
+
+    strawberry = py5.convert_shape(strawberry_pointcloud)
+    
+    # increase the model's scale and change its orientation
+    strawberry.scale(50)
+    strawberry.set_stroke_weight(0.0005)
+    strawberry.rotate_z(-py5.radians(90))
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+Note that this example is a bit contrived in that we could have also created the `Py5Shape` object from the vertices directly, without using `trimesh.PointCloud`:
+
+```python
+    strawberry = py5.create_shape()
+    with strawberry.begin_shape(py5.POINTS):
+        strawberry.vertices(strawberry_model.vertices)
+```
+
+We can run the Sketch using the same `draw()` function as before.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+py5.run_sketch()
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+Here's what that looks like:
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+py5_tools.screenshot()
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+time.sleep(1)
+
+py5.exit_sketch()
+```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ## Options
 
-Don't forget about PointClouds!!
-
-textures
+textures, lines_allow_fill
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 
 ```
