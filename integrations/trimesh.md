@@ -40,7 +40,7 @@ Installing [OpenSCAD](https://openscad.org/) or [Blender](https://www.blender.or
 
 If Trimesh is missing a dependent library needed for the functionality you want to use, it will provide you with an error message informing you of what you should install.
 
-## Convert `trimesh.Scene` objects to Py5Shapely objects
+## Convert `trimesh.Scene` objects to `Py5Shapely` objects
 
 Let's start by importing the Trimesh library and some classes we will use later.
 
@@ -50,18 +50,23 @@ editable: true
 slideshow:
   slide_type: ''
 ---
-import py5_tools
-import py5
+import numpy as np
 
 import trimesh
 from trimesh.path import Path2D, Path3D
+from trimesh.path.entities import Line
 from trimesh.primitives import Box, Capsule, Cylinder, Sphere
+
+import py5_tools
+import py5
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-For our first example, we will use a 3D model file downloaded from [TurboSquid](https://www.turbosquid.com/). Our example is a
+For our first example, we will use a 3D model file in [glTF format](https://en.wikipedia.org/wiki/GlTF) downloaded from [TurboSquid](https://www.turbosquid.com/). Our example is a
 [strawberry](https://www.turbosquid.com/3d-models/3d-strawberry-1962030) created by the artist [minimoku](https://www.turbosquid.com/Search/Artists/minimoku).
+
+This model format can contain embedded texture images. Trimesh stores this texture information in a [TextureVisuals](https://trimesh.org/trimesh.visual.texture.html#trimesh.visual.texture.TextureVisuals) object. The [](/reference/sketch_convert_shape) will detect this and create a `Py5Shape` object with the texture.
 
 Loading a complex 3D model in Trimesh may be slow. Don't load a model from within a Sketch unless absolutely necessary.  If you need to do this, load it once in `setup()`.
 
@@ -105,7 +110,7 @@ After converting the model into a `Py5Shape` object, we need to increase the sca
 
 When loading a model, you will often want to apply some transformations so it can be drawn as you intend for it to be drawn. These adjustments can be done to the model itself after converting the model into a `Py5Shape` object, as we did here in our `setup()` function. Alternatively, we can do global transformations in the `draw()` function before the drawing the `Py5Shape` object to the screen with [](/reference/sketch_shape).
 
-You can also adjust the Trimesh mesh object using Trimesh's transformation tools, before the call to [](/reference/sketch_convert_shape). You will use Trimesh's [apply_transform()](https://trimesh.org/trimesh.html#trimesh.Trimesh.apply_transform) method to apply a transformation matrix to a mesh.
+You can also adjust the `trimesh.Trimesh` object using Trimesh's transformation tools, before the call to [](/reference/sketch_convert_shape). You will use Trimesh's [apply_transform()](https://trimesh.org/trimesh.html#trimesh.Trimesh.apply_transform) method to apply a transformation matrix to a mesh.
 
 Now let's create a `draw()` method to draw the `Py5Shape` object with the [](/reference/sketch_shape) method.
 
@@ -181,7 +186,7 @@ Neat, huh?
 
 The [](/reference/sketch_convert_shape) method did all the heavy lifting to create the object and add apply the base color texture using the UV coordinates.
 
-Note that Trimesh objects can have additional texture maps for things such as surface normals or metallic roughness. Since the
+Note that `trimesh.Trimesh` objects can have additional texture maps for things such as surface normals or metallic roughness. Since the
 default py5 polygon shader cannot make use of these texture maps, py5's [](/reference/sketch_convert_shape) method will not add them to the created `Py5Shape` object. One could write additional code to make use of them, however.
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
@@ -241,7 +246,7 @@ def draw():
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-Each of our primitives will inherit the drawing style active at the time [](/reference/sketch_convert_shape) is called.
+Each of these [trimesh.Trimesh](https://trimesh.org/trimesh.html#trimesh.Trimesh) object primitives will inherit the drawing style active at the time [](/reference/sketch_convert_shape) is called.
 
 When we run this, the primitive shapes will rotate around for us to see.
 
@@ -291,15 +296,40 @@ py5.exit_sketch()
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-A final comment on drawing styles: Trimesh objects can have their own drawing style information ([ColorVisuals](https://trimesh.org/trimesh.visual.color.html#trimesh.visual.color.ColorVisuals)) instead of texture-based styles ([TextureVisuals](https://trimesh.org/trimesh.visual.texture.html#trimesh.visual.texture.TextureVisuals)). If [](/reference/sketch_convert_shape) detects a ColorVisuals object, it will use that drawing style information instead of py5's active drawing style.
+A final comment on drawing styles: Trimesh objects can have their own drawing style information ([ColorVisuals](https://trimesh.org/trimesh.visual.color.html#trimesh.visual.color.ColorVisuals)) instead of texture-based styles ([TextureVisuals](https://trimesh.org/trimesh.visual.texture.html#trimesh.visual.texture.TextureVisuals)). If [](/reference/sketch_convert_shape) detects a`ColorVisuals` object, it will use that drawing style information instead of py5's active drawing style.
 
-Also, know that some Trimesh library operations seem to add ColorVisuals objects to their output. This can be a bit confusing because your calls to py5's style methods such as [](/reference/sketch_stroke) and [](/reference/sketch_fill) will have no effect. Be aware of this possibility to avoid coding frustrations. If you suspect this is happening, one easy way to address this is to call the [](https://py5coding.org/reference/py5shape_disable_style.html) method to remove Trimesh's drawing style settings from the `Py5Shape` object and take control of the drawing style.
+Also, be aware that some Trimesh library operations seem to add `ColorVisuals` objects to their output. This can be a bit confusing because your calls to py5's style methods such as [](/reference/sketch_stroke) and [](/reference/sketch_fill) will have no effect. Be aware of this possibility to avoid coding frustrations. If you suspect this is happening, one easy way to address this is to call the [](https://py5coding.org/reference/py5shape_disable_style.html) method to remove Trimesh's drawing style settings from the `Py5Shape` object and take control of the drawing style.
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-Scene, Trimesh, Path2D, Path3D
+## `trimesh.Path2D` and `trimesh.Path3D` objects
+
+In addition to [trimesh.Scene](https://trimesh.org/trimesh.html#trimesh.Scene) and [trimesh.Trimesh](https://trimesh.org/trimesh.html#trimesh.Trimesh) objects, py5's [](/reference/sketch_convert_shape) method can also convert [trimesh.path.Path2D](https://trimesh.org/trimesh.path.html#trimesh.path.Path2D) and [trimesh.path.Path3D](https://trimesh.org/trimesh.path.html#trimesh.path.Path3D).
+
+Creating `Path2D` and `Path3D` objects directly is a bit tedious. You might do so with code like this:
+
+```{code-cell} ipython3
+line1 = Line(
+    np.random.choice(np.arange(8), replace=False, size=4),
+)
+line2 = Line(
+    np.random.choice(np.arange(8), replace=False, size=4),
+)
+
+path3d = Path3D(
+    entities=[line1, line2],
+    vertices=250 * np.random.random((8, 3)),
+    colors=np.random.randint(255, size=(2, 3)).astype(np.uint8),
+)
+```
+
+Next, `path3d` could be converted to a `Py5Shape` object with [](/reference/sketch_convert_shape). It would look like a 3D line with random vertices and colors. Most likely you would never go through the trouble of creating a `Path3D` object like this, however.
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ## Options
+
+Don't forget about PointClouds!!
 
 textures
 
