@@ -20,7 +20,8 @@ kernelspec:
 
 The goal of Trimesh is to "provide a full featured and well tested Trimesh object which allows for easy manipulation and analysis, in the style of the Polygon object in the Shapely library."
 
-Trimesh and [](/reference/sketch_convert_shape) can greatly extend py5's ability to load and manipulate 3D objects, far exceeding what can be achieved with [](/reference/sketch_load_shape) and other `Py5Shape` methods.
+Trimesh and [](/reference/sketch_convert_shape) can greatly extend py5's ability to load and manipulate 3D objects, far exceeding what can be achieved with [](/reference/sketch_load_shape) and other `Py5Shape` methods. Supported object types are [trimesh.Scene](https://trimesh.org/trimesh.html#trimesh.Scene), [trimesh.Trimesh](https://trimesh.org/trimesh.html#trimesh.Trimesh), [trimesh.path.Path2D](https://trimesh.org/trimesh.path.html#trimesh.path.Path2D), [trimesh.path.Path3D](https://trimesh.org/trimesh.path.html#trimesh.path.Path3D), and [trimesh.PointCloud](https://trimesh.org/trimesh.html#trimesh.PointCloud).
+
 
 Finally, know that Trimesh is a large and complex library. It is possible (likely) that there are Trimesh features that don't work well with py5's [](/reference/sketch_convert_shape) method. If you find something that doesn't work but probably should or have ideas for how py5's Trimesh integrations can be improved, please let us know by [opening an issue](https://github.com/py5coding/py5generator/issues) or starting a thread in [GitHub Discussions](https://github.com/py5coding/py5generator/discussions).
 
@@ -51,6 +52,8 @@ slideshow:
   slide_type: ''
 ---
 import numpy as np
+
+from PIL import Image
 
 import trimesh
 from trimesh.path import Path2D, Path3D
@@ -300,11 +303,11 @@ Also, be aware that some Trimesh library operations seem to add `ColorVisuals` o
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-## `trimesh.Path2D` and `trimesh.Path3D` objects
+## `trimesh.path.Path2D` and `trimesh.path.Path3D` objects
 
 In addition to [trimesh.Scene](https://trimesh.org/trimesh.html#trimesh.Scene) and [trimesh.Trimesh](https://trimesh.org/trimesh.html#trimesh.Trimesh) objects, py5's [](/reference/sketch_convert_shape) method can also convert [trimesh.path.Path2D](https://trimesh.org/trimesh.path.html#trimesh.path.Path2D) and [trimesh.path.Path3D](https://trimesh.org/trimesh.path.html#trimesh.path.Path3D).
 
-Creating `Path2D` and `Path3D` objects directly is a bit tedious. You might do so with code like this:
+Creating `Path2D` and `Path3D` objects directly is a bit tedious. You could do so with code like this:
 
 ```{code-cell} ipython3
 ---
@@ -330,7 +333,7 @@ path2d = Path2D(
 
 Next, `path2d` could be converted to a `Py5Shape` object with [](/reference/sketch_convert_shape). It would look like a 2D line with random vertices and colors. However, that's a lot of code to create something that could be done more simply with the methods already provided by py5. Most likely you would never go through the trouble of creating a `Path2D` object like this.
 
-More likely you get `Path2D` or `Path3D` objects as the output of other Trimesh methods. Let's explore this by using Trimesh's [section_multiplane()](https://trimesh.org/trimesh.base.html#trimesh.base.Trimesh.section_multiplane) method to create slices of our Strawberry model.
+Instead, you can get `Path2D` or `Path3D` objects as the output of other Trimesh methods. Let's explore this by using Trimesh's [section_multiplane()](https://trimesh.org/trimesh.base.html#trimesh.base.Trimesh.section_multiplane) method to create slices of our Strawberry model.
 
 First we will need to extract the [trimesh.Trimesh](https://trimesh.org/trimesh.html#trimesh.Trimesh) object from the [trimesh.Scene](https://trimesh.org/trimesh.html#trimesh.Scene) object because [section_multiplane()](https://trimesh.org/trimesh.base.html#trimesh.base.Trimesh.section_multiplane) is a `trimesh.Trimesh` method.
 
@@ -448,7 +451,7 @@ py5.exit_sketch()
 
 ## `trimesh.PointCloud`
 
-Finally, py5's [](/reference/sketch_convert_shape) method supports `trimesh.PointCloud` objects. To make this interesting, let's create a `trimesh.PointCloud` object from the Strawberry model's vertices.
+Finally, py5's [](/reference/sketch_convert_shape) method supports [trimesh.PointCloud](https://trimesh.org/trimesh.html#trimesh.PointCloud) objects. To make this interesting, let's create a `trimesh.PointCloud` object from the Strawberry model's vertices.
 
 ```{code-cell} ipython3
 ---
@@ -533,9 +536,21 @@ py5.exit_sketch()
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-## Options
+## `convert_shape()` Options
 
-textures, lines_allow_fill
+The [](/reference/sketch_convert_shape) method has a few optional customization parameters.
+
+The first optional parameter is for textures. Our Strawberry model in [glTF format](https://en.wikipedia.org/wiki/GlTF) has embedded textures that are managed for you in [](/reference/sketch_convert_shape). Not every 3D model format has embedded textures though. If the model file was a [Wavefront OBJ file](https://en.wikipedia.org/wiki/Wavefront_.obj_file), you would need to apply the texture to the 3D mesh separately.
+
+One way to do that is with the [](/reference/py5shape_set_texture) method, called after converting the model to a `Py5Shape` instance [](/reference/sketch_convert_shape).
+
+Alternatively, you can use the [](/reference/sketch_convert_shape) method's `texture` keyword argument, like this:
+
+```python
+py5.convert_shape(strawberry_obj, texture=strawberry_texture)
+```
+
+Putting that in context, our first Strawberry model example could been implemented using the following `setup()` function:
 
 ```{code-cell} ipython3
 ---
@@ -543,5 +558,95 @@ editable: true
 slideshow:
   slide_type: ''
 ---
+strawberry_obj = trimesh.load('models/Strawberry_obj.obj')
+strawberry_texture = Image.open('models/Strawberry_basecolor.jpg')
 
+
+def setup():
+    global strawberry
+    py5.size(300, 500, py5.P3D)
+    strawberry = py5.convert_shape(strawberry_obj, texture=strawberry_texture)
+    assert isinstance(strawberry, py5.Py5Shape)
+
+    # increase the model's scale and change its orientation
+    strawberry.scale(40)
+    strawberry.rotate_z(py5.radians(180))
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+The other optional parameter is for filling the interior of [trimesh.path.Path2D](https://trimesh.org/trimesh.path.html#trimesh.path.Path2D) and [trimesh.path.Path3D](https://trimesh.org/trimesh.path.html#trimesh.path.Path3D) objects.
+
+Trimesh `Path2D` and `Path3D` objects can have stroke colors but they have no concept of filled lines like py5 does. By default, `Path2D` and `Path3D` objects will never have fill. Pass `True` to the optional keyword argument `lines_allow_fill` to change that.
+
+Using this feature, our previous sliced Strawberry example would look like this:
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+def setup():
+    global strawberry
+    py5.size(300, 500, py5.P3D)
+
+    py5.fill(py5.xkcd_colors.STRAWBERRY, 64)
+    
+    # convert each slices into a Py5Shape object
+    strawberry_slices = [
+        py5.convert_shape(slice, lines_allow_fill=True)
+        for slice in strawberry_slices_3d
+    ]
+    # assemble the Py5Shape objects into a GROUP Py5Shape object
+    strawberry = py5.create_shape(py5.GROUP)
+    for slice in strawberry_slices:
+        strawberry.add_child(slice)
+
+    # increase the model's scale and change its orientation
+    strawberry.scale(50)
+    strawberry.set_stroke_weight(0.025)
+    strawberry.rotate_z(-py5.radians(90))
+
+
+def draw():
+    global y_rot
+    y_rot += 1
+
+    py5.background(255)
+
+    py5.translate(225, 400, 0)
+    py5.rotate_z(py5.radians(-25))
+    py5.rotate_x(py5.radians(-25))
+    py5.rotate_y(py5.radians(y_rot))
+
+    py5.shape(strawberry)
+
+
+py5.run_sketch()
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+The partially transparent fill has in interesting effect:
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+py5_tools.screenshot()
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+time.sleep(1)
+
+py5.exit_sketch()
 ```
