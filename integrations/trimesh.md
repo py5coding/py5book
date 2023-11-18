@@ -196,7 +196,7 @@ default py5 polygon shader cannot make use of these texture maps, py5's [](/refe
 
 Trimesh has a set of [primitive objects](https://trimesh.org/trimesh.primitives.html) such as [Box](https://trimesh.org/trimesh.primitives.html#trimesh.primitives.Box), [Capsule](https://trimesh.org/trimesh.primitives.html#trimesh.primitives.Capsule), [Cylinder](https://trimesh.org/trimesh.primitives.html#trimesh.primitives.Cylinder), and [Sphere](https://trimesh.org/trimesh.primitives.html#trimesh.primitives.Sphere).
 
-The arrangement of triangles in a Trimesh Sphere is different from the arrangement created by py5's [](/reference/sketch_sphere) method. Capsules are kind of like cylinders with two half-spheres on each end. These primitives extend the basic shapes you can work with in py5.
+The arrangement of triangles in a Trimesh Sphere is different from the arrangement created by py5's [](/reference/sketch_sphere) method. Capsules are kind of like cylinders with two half-spheres on each end. These primitives extend the basic shapes you can work with in py5. They are also great for boolean operations to construct complex geometries.
 
 Let's create a simple example showcasing these objects.
 
@@ -550,7 +550,7 @@ Alternatively, you can use the [](/reference/sketch_convert_shape) method's `tex
 py5.convert_shape(strawberry_obj, texture=strawberry_texture)
 ```
 
-Putting that in context, our first Strawberry model example could been implemented using the following `setup()` function:
+Putting that in context, our first Strawberry model example could have been implemented using the following `setup()` function:
 
 ```{code-cell} ipython3
 ---
@@ -595,6 +595,7 @@ def setup():
     
     # convert each slices into a Py5Shape object
     strawberry_slices = [
+        # use `lines_allow_fill` to create filled slices
         py5.convert_shape(slice, lines_allow_fill=True)
         for slice in strawberry_slices_3d
     ]
@@ -628,7 +629,7 @@ py5.run_sketch()
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-The partially transparent fill has in interesting effect:
+The partially transparent fill has interesting effect:
 
 ```{code-cell} ipython3
 ---
