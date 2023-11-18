@@ -45,6 +45,8 @@ If Trimesh is missing a dependent library needed for the functionality you want 
 
 Let's start by importing the Trimesh library and some classes we will use later.
 
+test
+
 ```{code-cell} ipython3
 ---
 editable: true
