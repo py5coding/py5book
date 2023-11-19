@@ -41,9 +41,11 @@ Installing [OpenSCAD](https://openscad.org/) or [Blender](https://www.blender.or
 
 If Trimesh is missing a dependent library needed for the functionality you want to use, it will provide you with an error message informing you of what you should install.
 
-## Convert `trimesh.Scene` objects to `Py5Shapely` objects
+## `Scene` Objects
 
-Let's start by importing the Trimesh library and some classes we will use later.
+Let's start with an example that uses a [trimesh.Scene](https://trimesh.org/trimesh.html#trimesh.Scene) object.
+
+First we will import the trimesh library and some libraries and classes we will use later.
 
 ```{code-cell} ipython3
 ---
@@ -66,7 +68,7 @@ import py5
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-For our first example, we will use a 3D model file in [glTF format](https://en.wikipedia.org/wiki/GlTF) downloaded from [TurboSquid](https://www.turbosquid.com/). Our example is a
+For this example, we will use a 3D model file in [glTF format](https://en.wikipedia.org/wiki/GlTF) downloaded from [TurboSquid](https://www.turbosquid.com/). Our example is a
 [Strawberry](https://www.turbosquid.com/3d-models/3d-strawberry-1962030) created by the artist [minimoku](https://www.turbosquid.com/Search/Artists/minimoku).
 
 This model format can contain embedded texture images. Trimesh stores this texture information in a [TextureVisuals](https://trimesh.org/trimesh.visual.texture.html#trimesh.visual.texture.TextureVisuals) object. The [](/reference/sketch_convert_shape) will detect this and create a `Py5Shape` object with the texture.
@@ -192,7 +194,7 @@ default py5 polygon shader cannot make use of these texture maps, py5's [](/refe
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-## Using Trimesh Primitives
+## Trimesh Primitives
 
 Trimesh has a set of [primitive objects](https://trimesh.org/trimesh.primitives.html) such as [Box](https://trimesh.org/trimesh.primitives.html#trimesh.primitives.Box), [Capsule](https://trimesh.org/trimesh.primitives.html#trimesh.primitives.Capsule), [Cylinder](https://trimesh.org/trimesh.primitives.html#trimesh.primitives.Cylinder), and [Sphere](https://trimesh.org/trimesh.primitives.html#trimesh.primitives.Sphere).
 
@@ -303,7 +305,7 @@ Also, be aware that some Trimesh library operations seem to add `ColorVisuals` o
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-## `trimesh.path.Path2D` and `trimesh.path.Path3D` objects
+## `Path2D` and `Path3D` Objects
 
 In addition to [trimesh.Scene](https://trimesh.org/trimesh.html#trimesh.Scene) and [trimesh.Trimesh](https://trimesh.org/trimesh.html#trimesh.Trimesh) objects, py5's [](/reference/sketch_convert_shape) method can also convert [trimesh.path.Path2D](https://trimesh.org/trimesh.path.html#trimesh.path.Path2D) and [trimesh.path.Path3D](https://trimesh.org/trimesh.path.html#trimesh.path.Path3D).
 
@@ -350,7 +352,7 @@ strawberry_model
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-Next we will create the 2D slices, which will then be converted to slices that exist in 3D space. We could also use the 2D slices here, but then we'd need to do an additional transformation to position each slice with the correct elevation.
+Next we will create the 2D slices, which will then be converted to slices that exist in 3D space. We could also use the 2D slices in our Sketch, but then we'd need to do an additional transformation to position each slice with the correct elevation in 3D space.
 
 ```{code-cell} ipython3
 ---
@@ -449,7 +451,7 @@ py5.exit_sketch()
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-## `trimesh.PointCloud`
+## `PointCloud` Objects
 
 Finally, py5's [](/reference/sketch_convert_shape) method supports [trimesh.PointCloud](https://trimesh.org/trimesh.html#trimesh.PointCloud) objects. To make this interesting, let's create a `trimesh.PointCloud` object from the Strawberry model's vertices.
 
@@ -536,7 +538,7 @@ py5.exit_sketch()
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-## `convert_shape()` Options
+## Optional Conversion Parameters
 
 The [](/reference/sketch_convert_shape) method has a few optional customization parameters.
 
