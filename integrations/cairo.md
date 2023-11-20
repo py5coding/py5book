@@ -64,28 +64,47 @@ TODO: remove this from the install page
 Let's start by importing the necessary libraries for this demonstration.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 from IPython.display import SVG
 
 import py5_tools
 import py5
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 Here is the SVG file we will be working with.
 
 TODO: make my own SVG file in Inscape that breaks this load_shape(). Use fonts
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 with open('images/bot.svg') as f:
     svg_code = f.read()
 
 SVG(svg_code)
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 Now let's use that in our Sketch. Notice we are passing the SVG image path to
 [](/reference/convert_image). It will load the SVG file, send it to Cairo for
 rastorization, and return a `Py5Image` object.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 def setup():
     py5.size(300, 300)
 
@@ -96,19 +115,52 @@ def setup():
 ```
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 py5.run_sketch()
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 Here's what that looks like:
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 py5_tools.screenshot()
 ```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+import time
+
+time.sleep(1)
+
+py5.exit_sketch()
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 If instead we had tried to load the SVG file as a Py5Shape object with
 [](/reference/sketch_load_shape), we would have seen this:
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 def setup():
     py5.size(300, 300)
 
@@ -119,14 +171,21 @@ def setup():
 
 py5.run_sketch()
 
-# TODO: screenshot() should consistently work here, it should pause and make sure
-# drawing is complete
-
 py5_tools.screenshot()
 ```
 
-There are warnings, and it doesn't look as it should. Therefore, using [](/reference/convert_image) is a better option for working with this SVG image.
-
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+time.sleep(1)
 
+py5.exit_sketch()
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+There are warnings, and it doesn't look as it should. Therefore, using [](/reference/convert_image) is a better option for working with this SVG image.
