@@ -14,7 +14,7 @@ kernelspec:
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-# Converting SVG Images with Cairo
+# SVG Images and Cairo
 
 [Cairo](https://www.cairographics.org/) is a widely used graphics library for
 working with SVG images. Cairo is written in C but there are several Python
@@ -204,7 +204,7 @@ slideshow:
 | parent_width | width of parent container in pixels |
 | parent_height | height of parent container in pixels |
 | dpi | ratio between 1 inch and 1 pixel |
-| scale | output_scaling factor |
+| scale | output scaling factor |
 | unsafe | resolve XML entities and allow very large files |
 | background_color | background color to replace transparent background |
 | negate_colors | negate SVG colors |
