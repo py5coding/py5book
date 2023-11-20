@@ -113,7 +113,7 @@ slideshow:
 def setup():
     py5.size(300, 300)
 
-    svg = py5.convert_image('images/us_map.svg')
+    svg = py5.convert_image('images/us_map.svg', scale=0.3, background_color='red')
     assert isinstance(svg, py5.Py5Image)
 
     py5.image(svg, 0, 0)
@@ -194,3 +194,38 @@ py5.exit_sketch()
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 There are warnings, and it doesn't look as it should. Therefore, using [](/reference/convert_image) is a better option for working with this SVG image.
+
+## Cairo Surfaces
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+| keyword argument | meaning |
+|---|---|
+| parent_width | width of parent container in pixels |
+| parent_height | height of parent container in pixels |
+| dpi | ratio between 1 inch and 1 pixel |
+| scale | output_scaling factor |
+| unsafe | resolve XML entities and allow very large files |
+| background_color | background color to replace transparent background |
+| negate_colors | negate SVG colors |
+| invert_images | negate colors in embedded images |
+| output_width | desired output width in pixels |
+| output_height | desired output height in pixels |
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+
+```
