@@ -45,22 +45,13 @@ If you don't want to use conda, refer to the install instructions in the [Cairo
 documentation](https://www.cairographics.org/download/). Installing Cairo on
 Windows without conda is challenging.
 
-Next you will need to install a Python library that uses Cairo. Pick one (1) of
-the following options:
+Next you will need to install the Python libraries that py5 uses to access Cairo.
 
+```bash
+conda install --channel conda-forge cairosvg cairocffi
 ```
-conda install --channel conda-forge cairosvg
-conda install --channel conda-forge pycairo
-conda install --channel conda-forge cairocffi
-```
-
-TODO: is this correct?
-TODO: I should say which is installed for this example
 
 You can also install these with `pip`.
-
-There's no need to install more than one. While testing it seemed that
-installing more than one caused problems.
 
 TODO: remove this from the install page
 
@@ -208,7 +199,7 @@ slideshow:
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-| keyword argument | meaning |
+| keyword argument | description |
 |---|---|
 | parent_width | width of parent container in pixels |
 | parent_height | height of parent container in pixels |
@@ -220,6 +211,12 @@ slideshow:
 | invert_images | negate colors in embedded images |
 | output_width | desired output width in pixels |
 | output_height | desired output height in pixels |
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+```bash
+conda install --channel conda-forge pycairo
+```
 
 ```{code-cell} ipython3
 ---
