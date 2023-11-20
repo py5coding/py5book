@@ -12,19 +12,24 @@ kernelspec:
   name: python3
 ---
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 # Converting SVG Images with Cairo
 
 [Cairo](https://www.cairographics.org/) is a widely used graphics library for
 working with SVG images. Cairo is written in C but there are several Python
 libraries available to make it accessible to py5.
 
-Converting SVG Images with Cairo is useful to py5 users that want to use SVG
+Converting SVG Images to Py5Image objects with Cairo and
+[](/reference/sketch_convert_shape) is useful to py5 users that want to use SVG
 content in a Sketch that uses a rasterized renderer (such as the default JAVA2D
-renderer or the OpenGL renderers P2D or P3D). Processing and therefore py5's
-ability to load SVG files as Py5Shape objects with
-[](/reference/sketch_load_shape) is limited because Processing is not able to
-interpret the full SVG specification syntax. This leads to aberrations in what
-in the loaded Py5Shape object.
+renderer or the OpenGL renderers P2D or P3D).
+
+Processing can also load SVG images as Py5Shape objects with
+[](/reference/sketch_load_shape) but they will load correctly if the SVG code
+uses only a small subset of the full SVG specification. These limitations will
+result in problems when loading SVG files created in sophisticated SVG editors
+such as Inkscape or Adobe Illustrator.
 
 ## Setup
 
