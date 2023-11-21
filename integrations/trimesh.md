@@ -540,7 +540,7 @@ py5.exit_sketch()
 
 ## Optional Conversion Parameters
 
-The [](/reference/sketch_convert_shape) method has a few optional customization parameters.
+The [](/reference/sketch_convert_shape) method provides a few optional customization parameters for Trimesh.
 
 The first optional parameter is for textures. Our Strawberry model in [glTF format](https://en.wikipedia.org/wiki/GlTF) has embedded textures that are managed for you in [](/reference/sketch_convert_shape). Not every 3D model format has embedded textures though. If the model file was a [Wavefront OBJ file](https://en.wikipedia.org/wiki/Wavefront_.obj_file), you would need to apply the texture to the 3D mesh separately.
 
@@ -557,6 +557,8 @@ Putting that in context, our first Strawberry model example could have been impl
 ```{code-cell} ipython3
 ---
 editable: true
+jupyter:
+  source_hidden: true
 slideshow:
   slide_type: ''
 ---
