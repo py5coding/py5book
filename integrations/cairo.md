@@ -20,17 +20,18 @@ kernelspec:
 working with SVG (Scalable Vector Graphics) images. Cairo is written in C but
 there are several Python libraries available to make it accessible to py5.
 
-Converting SVG Images to Py5Image objects with Cairo and
-[](/reference/sketch_convert_shape) is useful to py5 users that want to use SVG
-content in a Sketch that uses a rasterized renderer (such as the default JAVA2D
-renderer or the OpenGL renderers P2D or P3D).
+Converting SVG Images to Py5Image objects with the
+[](/reference/sketch_convert_image) method is useful to py5 users that want to
+use SVG content in a Sketch that uses a rasterized renderer (such as the default
+JAVA2D renderer or the OpenGL renderers P2D or P3D).
 
-Processing can also load SVG images as Py5Shape objects with
+Processing and therefore py5 can load SVG images as Py5Shape objects with
 [](/reference/sketch_load_shape) but the method supports only a small subset of
-the full SVG specification. The method is not intended to be a comprehensive SVG
-interpreter, as providing that functionality would be a significant undertaking.
-Nevertheless, the method's limitations will result in problems when loading SVG
-files created in sophisticated SVG editors such as Inkscape or Adobe Illustrator.
+the full SVG specification. Processing does not intend to provide a comprehensive
+SVG interpreter, as implementing that functionality would be a significant
+undertaking. Nevertheless, the method's limitations will frequently result in
+problems when loading SVG files created in sophisticated SVG editors such as
+[Inkscape](https://inkscape.org/) or Adobe Illustrator.
 
 ## Setup
 
@@ -56,8 +57,6 @@ conda install --channel conda-forge cairosvg cairocffi
 
 You can also install these with `pip`.
 
-TODO: remove this from the install page
-
 ## Convert SVG Images
 
 Let's start by importing the necessary libraries for this demonstration.
@@ -69,9 +68,7 @@ slideshow:
   slide_type: ''
 ---
 from IPython.display import SVG
-
 import numpy as np
-
 import cairocffi
 
 import py5_tools
@@ -80,8 +77,8 @@ import py5
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-Here is the SVG file we will be working with. Observe the SVG image uses a
-color gradient and has centered text.
+Below is the SVG file we will be working with, created in Inkscape. Observe
+the SVG image uses a color gradient and has centered text.
 
 ```{code-cell} ipython3
 ---
@@ -97,8 +94,8 @@ SVG(svg_code)
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-Now let's use that in our Sketch. Notice we are passing the SVG image path to
-[](/reference/convert_image). It will read the SVG file, and then the cairosvg
+Now let's use this in a Sketch. Notice we are passing the SVG image path to
+[](/reference/sketch_convert_image). It will read the SVG file, and then the cairosvg
 library will send it to Cairo for rastorization via cairocffi. The method call
 returns a `Py5Image` object.
 
@@ -192,13 +189,14 @@ py5.exit_sketch()
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-It can't handle the color gradient and the text alignment is wrong. Therefore, using
-[](/reference/convert_image) is a better option for working with this SVG image.
+Not awesome. It can't handle the color gradient and the text alignment is wrong.
+Therefore, using [](/reference/sketch_convert_image) is a better option for
+working with this SVG image.
 
 ## Optional Conversion Parameters
 
 The [](/reference/sketch_convert_shape) method provides a few optional customization
-parameters for SVG files.
+parameters for the conversion of SVG images.
 
 The most useful optional parameter is `scale`, allowing you to change the scale of
 the converted SVG image. Another useful parameter is `negate_colors`, which will
@@ -293,7 +291,7 @@ def setup():
     context = cairocffi.Context(surface)
     context.scale(500, 500)
 
-    context.set_line_width(0.04)
+    context.set_line_width(0.1)
     context.move_to(0.1, 0.5)
     context.curve_to(0.4, 0.9, 0.6, 0.1, 0.9, 0.5)
     context.stroke()
@@ -347,4 +345,5 @@ Cairocffi is designed to be a drop-in replacement to Pycairo, so it can be used 
 like cairocffi in the previous example.
 
 Do not install both Pycairo and cairocffi, as this seems to cause problems. Removing
-cairocffi means removing cairosvg and py5's ability to convert SVG images.
+cairocffi means removing cairosvg and py5's ability to convert SVG files to `Py5Image`
+objects.
