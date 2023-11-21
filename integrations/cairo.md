@@ -324,6 +324,7 @@ py5_tools.screenshot()
 editable: true
 slideshow:
   slide_type: ''
+tags: [remove-cell]
 ---
 time.sleep(1)
 
@@ -341,9 +342,19 @@ instead of cairocffi.
 conda install --channel conda-forge pycairo
 ```
 
-Cairocffi is designed to be a drop-in replacement to Pycairo, so it can be used just
-like cairocffi in the previous example.
+Cairocffi is designed to be a drop-in replacement to Pycairo, so Pycairo can be used
+just like cairocffi in the previous example.
 
-Do not install both Pycairo and cairocffi, as this seems to cause problems. Removing
-cairocffi means removing cairosvg and py5's ability to convert SVG files to `Py5Image`
-objects.
+Do not install both Pycairo and cairocffi in the same Python environment, as this
+seems to cause problems. Removing cairocffi means removing cairosvg and py5's
+ability to convert SVG files to `Py5Image` objects. For most users, installing
+cairocffi and cairosvg is the best choice.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+
+```
