@@ -17,8 +17,8 @@ kernelspec:
 # SVG Images and Cairo
 
 [Cairo](https://www.cairographics.org/) is a widely used graphics library for
-working with SVG images. Cairo is written in C but there are several Python
-libraries available to make it accessible to py5.
+working with SVG (Scalable Vector Graphics) images. Cairo is written in C but
+there are several Python libraries available to make it accessible to py5.
 
 Converting SVG Images to Py5Image objects with Cairo and
 [](/reference/sketch_convert_shape) is useful to py5 users that want to use SVG
@@ -26,10 +26,11 @@ content in a Sketch that uses a rasterized renderer (such as the default JAVA2D
 renderer or the OpenGL renderers P2D or P3D).
 
 Processing can also load SVG images as Py5Shape objects with
-[](/reference/sketch_load_shape) but they will load correctly if the SVG code
-uses only a small subset of the full SVG specification. These limitations will
-result in problems when loading SVG files created in sophisticated SVG editors
-such as Inkscape or Adobe Illustrator.
+[](/reference/sketch_load_shape) but the method supports only a small subset of
+the full SVG specification. The method is not intended to be a comprehensive SVG
+interpreter, as providing that functionality would be a significant undertaking.
+Nevertheless, the method's limitations will result in problems when loading SVG
+files created in sophisticated SVG editors such as Inkscape or Adobe Illustrator.
 
 ## Setup
 
@@ -45,7 +46,8 @@ If you don't want to use conda, refer to the install instructions in the [Cairo
 documentation](https://www.cairographics.org/download/). Installing Cairo on
 Windows without conda is challenging.
 
-Next you will need to install the Python libraries that py5 uses to access Cairo.
+Next you will need to install the Python libraries that py5 uses to access Cairo
+and work with SVG files. The cairosvg library depends on cairocffi.
 
 ```bash
 conda install --channel conda-forge cairosvg cairocffi
@@ -73,9 +75,8 @@ import py5
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-Here is the SVG file we will be working with.
-
-TODO: make my own SVG file in Inscape that breaks this load_shape(). Use fonts
+Here is the SVG file we will be working with. Observe the SVG image uses a
+color gradient and has centered text.
 
 ```{code-cell} ipython3
 ---
@@ -83,7 +84,7 @@ editable: true
 slideshow:
   slide_type: ''
 ---
-with open('images/bot.svg') as f:
+with open('images/py5_is_awesome.svg') as f:
     svg_code = f.read()
 
 SVG(svg_code)
@@ -92,8 +93,9 @@ SVG(svg_code)
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 Now let's use that in our Sketch. Notice we are passing the SVG image path to
-[](/reference/convert_image). It will load the SVG file, send it to Cairo for
-rastorization, and return a `Py5Image` object.
+[](/reference/convert_image). It will read the SVG file, and then the cairosvg
+library will send it to Cairo for rastorization via cairocffi. The method call
+returns a `Py5Image` object.
 
 ```{code-cell} ipython3
 ---
@@ -102,20 +104,14 @@ slideshow:
   slide_type: ''
 ---
 def setup():
-    py5.size(300, 300)
+    py5.size(500, 500)
 
-    svg = py5.convert_image('images/us_map.svg', scale=0.3, background_color='red')
+    svg = py5.convert_image('images/py5_is_awesome.svg')
     assert isinstance(svg, py5.Py5Image)
 
     py5.image(svg, 0, 0)
-```
 
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
+
 py5.run_sketch()
 ```
 
@@ -158,15 +154,22 @@ slideshow:
   slide_type: ''
 ---
 def setup():
-    py5.size(300, 300)
+    py5.size(500, 500)
 
-    svg = py5.load_shape('images/us_map.svg')
+    svg = py5.load_shape('images/py5_is_awesome.svg')
 
     py5.shape(svg, 0, 0)
 
 
 py5.run_sketch()
+```
 
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 py5_tools.screenshot()
 ```
 
@@ -184,9 +187,15 @@ py5.exit_sketch()
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-There are warnings, and it doesn't look as it should. Therefore, using [](/reference/convert_image) is a better option for working with this SVG image.
+It can't handle the color gradient and the text alignment is wrong. Therefore, using [](/reference/convert_image) is a better option for working with this SVG image.
 
-## Cairo Surfaces
+## Optional Conversion Parameters
+
+The [](/reference/sketch_convert_shape) method provides a few optional customization parameters for SVG files.
+
+The most useful optional parameter is `scale`, allowing you to change the scale of the
+converted SVG image. There are some others such as `negate_colors` that will invert
+the SVG's color palette.
 
 ```{code-cell} ipython3
 ---
@@ -194,8 +203,49 @@ editable: true
 slideshow:
   slide_type: ''
 ---
+def setup():
+    py5.size(500, 500)
 
+    svg1 = py5.convert_image('images/py5_is_awesome.svg', scale=0.5)
+    svg2 = py5.convert_image('images/py5_is_awesome.svg', scale=0.5, negate_colors=True)
+
+    py5.image(svg1, 0, 0)
+    py5.image(svg2, 250, 0)
+    py5.image(svg2, 0, 250)
+    py5.image(svg1, 250, 250)
+
+
+py5.run_sketch()
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+Here's the result:
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+py5_tools.screenshot()
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+time.sleep(1)
+
+py5.exit_sketch()
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+The full list of optional parameters is below.
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
@@ -211,6 +261,10 @@ slideshow:
 | invert_images | negate colors in embedded images |
 | output_width | desired output width in pixels |
 | output_height | desired output height in pixels |
+
++++
+
+## Cairo Surfaces
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
