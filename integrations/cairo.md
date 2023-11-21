@@ -47,7 +47,8 @@ documentation](https://www.cairographics.org/download/). Installing Cairo on
 Windows without conda is challenging.
 
 Next you will need to install the Python libraries that py5 uses to access Cairo
-and work with SVG files. The cairosvg library depends on cairocffi.
+and work with SVG files. The [cairosvg](https://cairosvg.org/) library depends on
+[cairocffi](https://doc.courtbouillon.org/cairocffi/stable/).
 
 ```bash
 conda install --channel conda-forge cairosvg cairocffi
@@ -68,6 +69,10 @@ slideshow:
   slide_type: ''
 ---
 from IPython.display import SVG
+
+import numpy as np
+
+import cairocffi
 
 import py5_tools
 import py5
@@ -187,15 +192,17 @@ py5.exit_sketch()
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-It can't handle the color gradient and the text alignment is wrong. Therefore, using [](/reference/convert_image) is a better option for working with this SVG image.
+It can't handle the color gradient and the text alignment is wrong. Therefore, using
+[](/reference/convert_image) is a better option for working with this SVG image.
 
 ## Optional Conversion Parameters
 
-The [](/reference/sketch_convert_shape) method provides a few optional customization parameters for SVG files.
+The [](/reference/sketch_convert_shape) method provides a few optional customization
+parameters for SVG files.
 
-The most useful optional parameter is `scale`, allowing you to change the scale of the
-converted SVG image. There are some others such as `negate_colors` that will invert
-the SVG's color palette.
+The most useful optional parameter is `scale`, allowing you to change the scale of
+the converted SVG image. Another useful parameter is `negate_colors`, which will
+invert the SVG's color palette.
 
 ```{code-cell} ipython3
 ---
@@ -262,14 +269,47 @@ The full list of optional parameters is below.
 | output_width | desired output width in pixels |
 | output_height | desired output height in pixels |
 
-+++
+## Cairo Drawing Surfaces
 
-## Cairo Surfaces
+Next we will demonstrate py5's ability to support Cairo drawing Surfaces.
+Drawing images with this is a bit tedious but perhaps someone will get good
+use out of it. The drawing methods provided by py5 are generally easier to
+use but this approach offers drawing techniques not available in py5. See the
+[cairocffi documentation](https://doc.courtbouillon.org/cairocffi/stable/api.html)
+for inspiration and ideas.
 
-+++ {"editable": true, "slideshow": {"slide_type": ""}}
+Below is a simple example to get you started.
 
-```bash
-conda install --channel conda-forge pycairo
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+def setup():
+    py5.size(500, 500)
+
+    surface = cairocffi.RecordingSurface(cairocffi.CONTENT_COLOR_ALPHA, (0, 0, 500, 500))
+    context = cairocffi.Context(surface)
+    context.scale(500, 500)
+
+    context.set_line_width(0.04)
+    context.move_to(0.1, 0.5)
+    context.curve_to(0.4, 0.9, 0.6, 0.1, 0.9, 0.5)
+    context.stroke()
+
+    context.set_source_rgba(1, 0.1, 0.1, 0.5)
+    context.set_line_width(0.01)
+    for y in np.linspace(0, 1, num=20):
+        context.move_to(0, y)
+        context.line_to(1, y)
+    context.stroke()
+    
+    cairo_surface = py5.convert_image(surface)
+    py5.image(cairo_surface, 0, 0)
+
+
+py5.run_sketch()
 ```
 
 ```{code-cell} ipython3
@@ -278,5 +318,33 @@ editable: true
 slideshow:
   slide_type: ''
 ---
-
+py5_tools.screenshot()
 ```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+time.sleep(1)
+
+py5.exit_sketch()
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+## Pycairo
+
+Alternatively, you can install [Pycairo](https://pycairo.readthedocs.io/en/latest/)
+instead of cairocffi.
+
+```bash
+conda install --channel conda-forge pycairo
+```
+
+Cairocffi is designed to be a drop-in replacement to Pycairo, so it can be used just
+like cairocffi in the previous example.
+
+Do not install both Pycairo and cairocffi, as this seems to cause problems. Removing
+cairocffi means removing cairosvg and py5's ability to convert SVG images.

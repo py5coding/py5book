@@ -557,8 +557,6 @@ Putting that in context, our first Strawberry model example could have been impl
 ```{code-cell} ipython3
 ---
 editable: true
-jupyter:
-  source_hidden: true
 slideshow:
   slide_type: ''
 ---
