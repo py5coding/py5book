@@ -27,7 +27,7 @@ JAVA2D renderer or the OpenGL renderers P2D or P3D).
 
 Processing and therefore py5 can load SVG images as Py5Shape objects with
 [](/reference/sketch_load_shape) but the method supports only a small subset of
-the full SVG specification. Processing does not intend to provide a comprehensive
+the full SVG specification. Processing did not intend to provide a comprehensive
 SVG interpreter, as implementing that functionality would be a significant
 undertaking. Nevertheless, the method's limitations will frequently result in
 problems when loading SVG files created in sophisticated SVG editors such as
@@ -195,7 +195,7 @@ working with this SVG image.
 
 ## Optional Conversion Parameters
 
-The [](/reference/sketch_convert_shape) method provides a few optional customization
+The [](/reference/sketch_convert_image) method provides a few optional customization
 parameters for the conversion of SVG images.
 
 The most useful optional parameter is `scale`, allowing you to change the scale of
