@@ -20,10 +20,12 @@ kernelspec:
 working with SVG (Scalable Vector Graphics) images. Cairo is written in C but
 there are several Python libraries available to make it accessible to py5.
 
-Converting SVG Images to Py5Image objects with the
+Converting SVG images to Py5Image objects with the
 [](/reference/sketch_convert_image) method is useful to py5 users that want to
-use SVG content in a Sketch that uses a rasterized renderer (such as the default
-JAVA2D renderer or the OpenGL renderers P2D or P3D).
+use SVG content in a Sketch and don't mind converting it to an image. Converting
+SVG content to an image does not preserve its scalable vector graphics nature
+but this isn't a problem when used with a rasterized renderer (such as the default JAVA2D renderer or the OpenGL renderers P2D or P3D). The main benefit to this
+approach is the SVG image is much more likely to be drawn correctly.
 
 Processing and therefore py5 can load SVG images as Py5Shape objects with
 [](/reference/sketch_load_shape) but the method supports only a small subset of
@@ -31,7 +33,8 @@ the full SVG specification. Processing did not intend to provide a comprehensive
 SVG interpreter, as implementing that functionality would be a significant
 undertaking. Nevertheless, the method's limitations will frequently result in
 problems when loading SVG files created in sophisticated SVG editors such as
-[Inkscape](https://inkscape.org/) or Adobe Illustrator.
+[Inkscape](https://inkscape.org/) or Adobe Illustrator. Presented here is an
+alternative approach that can avoid most of the problems.
 
 ## Setup
 
@@ -119,7 +122,7 @@ py5.run_sketch()
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-Here's what that looks like:
+Below you can see the SVG image has been drawn correctly.
 
 ```{code-cell} ipython3
 ---
