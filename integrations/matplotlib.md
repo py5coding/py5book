@@ -598,7 +598,7 @@ insight into how to
 for your use case.
 
 This Colormap Color Mode feature does not work for Py5Graphics or
-Py5Shape objects. It is only available for your Sketch. That
+Py5Shape objects. It is only available for your Sketch. This
 shouldn't limit you in any way because you can always use the
 Sketch's [](/reference/sketch_color) method as a work-around
 (i.e. `shape.fill(py5.color(val))`).
