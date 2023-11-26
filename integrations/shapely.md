@@ -240,10 +240,10 @@ better to use Shapely shapes with py5's coordinate system in mind and
 ignore how Shapely orients shapes when it displays them in this notebook.
 
 Internally, the `flip_y_axis` keyword argument is using the following
-Shapely code to flip the object relative to the object's center. This code,
-or any of Shapely's
+Shapely code to flip the object relative to the object's center. This code
+or any of Shapely's other
 [Affine Transformations](https://shapely.readthedocs.io/en/stable/manual.html#affine-transformations)
-that might be useful to you to make adjustments to Shapely's geometries.
+might be useful to you to make adjustments to Shapely's geometries.
 
 ```{code-cell} ipython3
 ---
