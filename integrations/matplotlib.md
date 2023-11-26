@@ -415,7 +415,7 @@ time.sleep(10)
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-The performance of this new Sketch is now 60 frames per second.
+The performance of this new Sketch is now a solid 60 frames per second.
 
 ```{code-cell} ipython3
 ---
