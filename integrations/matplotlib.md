@@ -598,7 +598,10 @@ insight into how to
 for your use case.
 
 This Colormap Color Mode feature does not work for Py5Graphics or
-Py5Shape objects. It is only available for your Sketch.
+Py5Shape objects. It is only available for your Sketch. That
+shouldn't limit you in any way because you can always use the
+Sketch's [](/reference/sketch_color) method as a work-around
+(i.e. `shape.fill(py5.color(val))`).
 
 The below example uses the "ocean" colormap with the color
 range from 0 to the sketch width (500) and the alpha value
@@ -642,7 +645,7 @@ time.sleep(1)
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-The above example used `py5.mpl_cmaps`, the built-in dictionary of
+The above example used `py5.mpl_cmaps`, py5's built-in dictionary of
 matplotlib's provided Colormaps. We could have just as easily used the
 string "ocean" there, but like named colors, it is easier to not have
 to remember the list of available Colormap names.
@@ -651,13 +654,15 @@ Observe the call to `py5.background()`, which used a named color.
 Non-numeric values will bypass the Colormap functionality.
 
 Matplotlib colormaps typically don't have transparency except for "bad"
-or invalid data values. If you use this Color Mode feature and pass
+or invalid data values, which by the way seem to be fully transparent
+for many of the colormaps (and this may not be what you want or
+expect.) But anyhow, if you use this Color Mode feature and pass
 alpha values, as we did in here with the variable `y`, the alpha value
 will replace that of the color that comes out of the colormap.
 
-Anyhow, here's a screenshot of what this example looks like. As you
-can see, the colors blend from left to right and the transparency varies
-from top to bottom.
+Here's a screenshot of what this example looks like. As you can see, the
+colors blend from left to right and the transparency varies from top to
+bottom.
 
 ```{code-cell} ipython3
 ---
