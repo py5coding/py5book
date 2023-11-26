@@ -180,9 +180,9 @@ tags: [remove-cell]
 ---
 import time
 
-time.sleep(1)
-
+time.sleep(0.5)
 py5.exit_sketch()
+time.sleep(0.5)
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
@@ -292,9 +292,9 @@ slideshow:
   slide_type: ''
 tags: [remove-cell]
 ---
-time.sleep(1)
-
+time.sleep(0.5)
 py5.exit_sketch()
+time.sleep(0.5)
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
@@ -444,9 +444,9 @@ slideshow:
   slide_type: ''
 tags: [remove-cell]
 ---
-time.sleep(1)
-
+time.sleep(0.5)
 py5.exit_sketch()
+time.sleep(0.5)
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
@@ -531,9 +531,9 @@ slideshow:
   slide_type: ''
 tags: [remove-cell]
 ---
-time.sleep(1)
-
+time.sleep(0.5)
 py5.exit_sketch()
+time.sleep(0.5)
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
@@ -649,7 +649,7 @@ slideshow:
   slide_type: ''
 tags: [remove-cell]
 ---
-time.sleep(1)
-
+time.sleep(0.5)
 py5.exit_sketch()
+time.sleep(0.5)
 ```
