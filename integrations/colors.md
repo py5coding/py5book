@@ -5,71 +5,128 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.5
+    jupytext_version: 1.14.7
 kernelspec:
-  display_name: Python 3
+  display_name: Python 3 (ipykernel)
   language: python
   name: python3
 ---
 
 # All About Colors
 
-link to matplotlib
+This page is a collection of all of py5's color-related integrations with other
+Python libraries.
 
-Somewhere in here I should document how color objects are printed to the terminal
+In addition to what is documented here, the [](integrations/matplotlib) page
+documents a few color-related matplotlib contributions. Scroll to the bottom
+of the page to read about Named Colors and a new Colormap Color Mode.
+
 
 ## setup
 
-To use all of the features documented on this page, you'll need to install the
-matplotlib and colour libraries with pip or with conda.
+To use all of the features documented on this page, you'll need to install the colour library
+with pip or with conda.
 
 ```bash
-pip install matplotlib colour
+pip install colour
 ```
 
 ```bash
-conda install matplotlib colour -c conda-forge
+conda install colour -c conda-forge
 ```
 
-For more information, refer to the [colour library's documentation on github](https://github.com/vaab/colour)
-or matplotlib's [Getting Started](https://matplotlib.org/stable/users/getting_started/)
-page.
+For more information, refer to the [colour library's documentation on github](https://github.com/vaab/colour).
 
-## hex color codes
+TODO: Somewhere in here I should document how color objects are printed to the terminal and that you can create colors outside of a Sketch
 
-Any hex color code can be used as a color. The color code must always be a
-string with values representing red, green, blue, and optionally the alpha
-channel.
++++
 
-as a string, 3, 4, 6, or 8 characters
-3 - rgb
-4 - rgba
-6 - rrggbb
-8 - rrggbbaa
+## Hex Color Codes
 
-The rules for hex codes are consistent with hex values commonly used for web
-development in HTML and CSS files.
+Any [Web Color](https://en.wikipedia.org/wiki/Web_colors) or Hex Color Code
+can be used as a color. The color code must always be a string with values
+representing red, green, blue, and optionally the alpha channel, in that
+order. This is consistent with the hex color codes found in HTML and CSS
+files.
 
-eg: `#ff0000` for red
+The Hex Color Code is always a `"#"` character followed by a 6 or 8 digit
+hexadecimal number. If a 6 digit hexadecimal number is used, the color
+has no transparency. If an 8 digit hexadecimal number is used, the color
+has an alpha channel. The Hex Color Code should always be a string, wrapped
+in quotes.
+
+A 6 digit example is `"#CC6633"` and an 8 digit example is `"#CC663399"`.
+
+You may also use [Shorthand hexadecimal form](https://en.wikipedia.org/wiki/Web_colors#Shorthand_hexadecimal_form).
+With this specification, the Hex Color Code is always a `"#"` character
+followed by a 3 or 4 digit hexadecimal number. To convert shorthand form
+to the canonical form, repeat each digit. For example, `"#C63"` is the same
+as `"#CC6633"`, and `"#C639"` is the same as `"#CC663399"`.
+
+Let's create a simple example Sketch that demonstrates the use of Hex Color
+Codes. But first, the imports for this page.
+
+```{code-cell} ipython3
+from colour import Color
+
+import py5_tools
+import py5
+```
+
+Now a Sketch that creates colors using the discussed Hex Color Codes.
+
+```{code-cell} ipython3
+def setup():
+    py5.size(400, 400)
+    py5.background(240)
+    py5.no_stroke()
+
+    # add a black bar so the transparency is obvious
+    py5.fill("#000000")
+    py5.rect(90, 0, 30, 400)
+    py5.rect(280, 0, 30, 400)
+
+    py5.fill("#CC6633")
+    py5.rect(20, 20, 170, 170)
+
+    py5.fill("#CC663399")
+    py5.rect(210, 20, 170, 170)
+
+    py5.fill("#C63")
+    py5.rect(20, 210, 170, 170)
+
+    py5.fill("#C639")
+    py5.rect(210, 210, 170, 170)
+
+
+py5.run_sketch()
+```
+
+```{code-cell} ipython3
+import time
+
+time.sleep(1)
+```
+
+```{code-cell} ipython3
+py5_tools.screenshot()
+```
+
+```{code-cell} ipython3
+time.sleep(0.5)
+py5.exit_sketch()
+time.sleep(0.5)
+```
+
+## Hexidecimal Integers
 
 If you like, you can also use a hexidecimal integer, such as `0xffff0000`.
-For this, it is always `0x` followed by 8 values, and the order is alpha, red,
-green, and blue.
+For this specification, it is always `0x` followed by 8 values, and the
+order is alpha, red, green, and blue. T
 
 `0xffff0000`
 
-## matplotlib colors
-
-If you have matplotlib installed, any string that matplotlib accepts as a color
-will work in py5.
-
-However, this requires you to remember the names of colors and how to properly
-spell them.
-
-## builtin color names
-
-`css4_colors`
-`xkcd_colors`
++++
 
 ## colour library
 
@@ -77,22 +134,10 @@ Color class
 
 Uses RGB, HSL (not the same as HSB), hex, or web (css4 colors)
 
-## matplotlib colormaps
++++
 
-Colormode based on matplotlib
+## Printing Colors
 
-```python
-def setup():
-    py5.color_mode(py5.CMAP, 'plasma', 100, 100)
+```{code-cell} ipython3
+
 ```
-
-Pass the name of any of matplotlib's builtin colormaps:
-
-https://matplotlib.org/stable/gallery/color/colormap_reference.html
-
-Or an actual Colormap instance, either from matplotlib library or from a 3rd
-party library.
-
-https://matplotlib.org/mpl-third-party/#colormaps-and-styles
-
-Or you can create your own Colormap instance with your own color settings.
