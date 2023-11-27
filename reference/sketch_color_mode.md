@@ -77,49 +77,49 @@ Underlying Processing method: [colorMode](https://processing.org/reference/color
 
 ```python
 color_mode(
-    mode: int,  # Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
+    colormap_mode: int,  # CMAP, activating matplotlib Colormap mode
+    color_map: str,  # name of builtin matplotlib Colormap
     /,
 ) -> None
 
 color_mode(
-    mode: int,  # Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
-    color_map: Colormap,  # matplotlib Colormap instance
+    colormap_mode: int,  # CMAP, activating matplotlib Colormap mode
+    color_map: str,  # name of builtin matplotlib Colormap
+    max_map: float,  # range for the color map
     /,
 ) -> None
 
 color_mode(
-    mode: int,  # Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
-    color_map: Colormap,  # matplotlib Colormap instance
-    max1: float,  # range for the red or hue depending on the current color mode
+    colormap_mode: int,  # CMAP, activating matplotlib Colormap mode
+    color_map: str,  # name of builtin matplotlib Colormap
+    max_map: float,  # range for the color map
+    max_a: float,  # range for the alpha
     /,
 ) -> None
 
 color_mode(
-    mode: int,  # Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
-    color_map: Colormap,  # matplotlib Colormap instance
-    max1: float,  # range for the red or hue depending on the current color mode
+    colormap_mode: int,  # CMAP, activating matplotlib Colormap mode
+    color_map_instance: Colormap,  # matplotlib.colors.Colormap instance
+    /,
+) -> None
+
+color_mode(
+    colormap_mode: int,  # CMAP, activating matplotlib Colormap mode
+    color_map_instance: Colormap,  # matplotlib.colors.Colormap instance
+    max_map: float,  # range for the color map
+    /,
+) -> None
+
+color_mode(
+    colormap_mode: int,  # CMAP, activating matplotlib Colormap mode
+    color_map_instance: Colormap,  # matplotlib.colors.Colormap instance
+    max_map: float,  # range for the color map
     max_a: float,  # range for the alpha
     /,
 ) -> None
 
 color_mode(
     mode: int,  # Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
-    color_map: str,  # name of matplotlib colormap
-    /,
-) -> None
-
-color_mode(
-    mode: int,  # Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
-    color_map: str,  # name of matplotlib colormap
-    max1: float,  # range for the red or hue depending on the current color mode
-    /,
-) -> None
-
-color_mode(
-    mode: int,  # Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
-    color_map: str,  # name of matplotlib colormap
-    max1: float,  # range for the red or hue depending on the current color mode
-    max_a: float,  # range for the alpha
     /,
 ) -> None
 
@@ -147,4 +147,4 @@ color_mode(
 ) -> None
 ```
 
-Updated on October 06, 2023 13:36:04pm UTC
+Updated on November 27, 2023 04:29:59am UTC
