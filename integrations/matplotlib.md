@@ -597,12 +597,6 @@ insight into how to
 [choose colormaps](https://matplotlib.org/stable/users/explain/colors/colormaps.html)
 for your use case.
 
-This Colormap Color Mode feature does not work for Py5Graphics or
-Py5Shape objects. It is only available for your Sketch. This
-shouldn't limit you in any way because you can always use the
-Sketch's [](/reference/sketch_color) method as a work-around
-(i.e. `shape.fill(py5.color(val))`).
-
 The below example uses the "ocean" colormap with the color
 range from 0 to the sketch width (500) and the alpha value
 range from 0 to the sketch height (also 500).
@@ -652,13 +646,6 @@ to remember the list of available Colormap names.
 
 Observe the call to `py5.background()`, which used a named color.
 Non-numeric values will bypass the Colormap functionality.
-
-Matplotlib colormaps typically don't have transparency except for "bad"
-or invalid data values, which by the way seem to be fully transparent
-for many of the colormaps (and this may not be what you want or
-expect.) But anyhow, if you use this Color Mode feature and pass
-alpha values, as we did in here with the variable `y`, the alpha value
-will replace that of the color that comes out of the colormap.
 
 Here's a screenshot of what this example looks like. As you can see, the
 colors blend from left to right and the transparency varies from top to
@@ -787,3 +774,58 @@ time.sleep(0.5)
 py5.exit_sketch()
 time.sleep(0.5)
 ```
+
+### Function Signatures
+
+Since this is a new feature, we should clearly articulate the function signatures and
+some details about how all of this works.
+
+The [](/reference/sketch_color_mode) reference documentation provides this signature:
+
+```python
+color_mode(
+    colormap_mode: int,  # CMAP, activating matplotlib Colormap mode
+    color_map: Union[str, matplotlib.colors.Colormap],  # name of builtin matplotlib Colormap
+    max_map: float,  # range for the color map
+    max_a: float,  # range for the alpha
+    /,
+) -> None
+```
+
+The first parameter will be `CMAP` and the second parameter will be the name of one of the
+built-in matplotlib Colormaps or an actual `matplotlib.colors.Colormap` instance. The third
+parameter sets the value of the maximum input range; the minimum is always zero. The last
+parameter sets the value of the maximum alpha value, and works just like the other color
+modes. The third and fourth parameters are optional and default to 1.0 and 255, respectively.
+
+In our first example, we used this code:
+
+```python
+def setup():
+    py5.size(500, 500)
+
+    py5.color_mode(py5.CMAP, py5.mpl_cmaps.OCEAN, py5.width, py5.height)
+```
+
+The `max_map` and `max_a` values are both 500.
+
+If we then set the stroke style property with `py5.stroke(42)`, py5 would divide the input
+value 42 by 500 and pass the result into the Colormap. The color value and alpha value
+would be set by the output of the Colormap. If we set the stroke style property with
+`py5.stroke(42, 250)`, py5 would get the same color value from the Colormap but override
+the alpha value to be 250 divided by 500.
+
+You can bypass the colormap functionality by passing a non-numeric argument such as
+a named color or a color hex code. Refer to [](/integrations/colors) for more possibilities.
+
+When this color mode is activated, py5 will accept `np.nan` values and map them to the
+Colormap's "bad" or invalid color setting. Typically this is completely transparent.
+If this isn't what you want, the best choice is to create your own Colormap and
+use the instance's [set_bad()](https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.Colormap.html#matplotlib.colors.Colormap.set_bad)
+method. You can also set a new "bad" value for a built-in Colormap.
+
+This Colormap Color Mode feature does not work for Py5Graphics or
+Py5Shape objects. It is only available for your Sketch. This
+shouldn't limit you in any way because you can always use the
+Sketch's [](/reference/sketch_color) method as a work-around
+(i.e. `shape.fill(py5.color(42))`).
