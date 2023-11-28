@@ -24,8 +24,8 @@ of the page to read about Named Colors and a new Colormap Color Mode.
 
 ## setup
 
-To use all of the features documented on this page, you'll need to install the colour library
-with pip or with conda.
+To use all of the features documented on this page, you'll need to install the
+[colour](https://pypi.org/project/colour/) library with pip or with conda.
 
 ```bash
 pip install colour
@@ -67,15 +67,27 @@ Let's create a simple example Sketch that demonstrates the use of Hex Color
 Codes. But first, the imports for this page.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 from colour import Color
 
 import py5_tools
 import py5
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 Now a Sketch that creates colors using the discussed Hex Color Codes.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 def setup():
     py5.size(400, 400)
     py5.background(240)
@@ -103,6 +115,12 @@ py5.run_sketch()
 ```
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
 import time
 
 time.sleep(1)
@@ -113,6 +131,12 @@ py5_tools.screenshot()
 ```
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
 time.sleep(0.5)
 py5.exit_sketch()
 time.sleep(0.5)
@@ -132,6 +156,11 @@ the same exact color as `"#CC663399"`.
 Let's use this in an example sketch.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 def setup():
     py5.size(400, 400)
     py5.background(240)
@@ -159,18 +188,114 @@ py5.run_sketch()
 ```
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
 time.sleep(1)
 ```
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 py5_tools.screenshot()
 ```
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
 time.sleep(0.5)
 py5.exit_sketch()
 time.sleep(0.5)
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+## Printing Colors
+
+Let's take a small diversion.
+
+Printing color values in Processing outputs odd looking numbers. For
+example, printing the color created with `py5.color(204, 102, 51, 153)`
+yields the number -1714657741. Why is it such a large negative number?
+And how can we look at that number and determine if it is our intended
+color?
+
+Rather than decypher these mysteries, py5 added some Python magic to colors
+so that they display useful information when printed. For example:
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+print(py5.color(0xFFCC6633))
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+That's much easier to comprehend than -1714657741.
+
+You will never create Py5Color instances directly. They are created for you with [](/reference/sketch_color)
+as well as any other method that returns colors (such as [](/reference/py5shape_get_fill)).
+
+Let's experiment with this in an example.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+def setup():
+    py5.size(400, 400)
+    py5.background(240)
+    py5.no_stroke()
+
+    fill_color = py5.color("#CC6633FF")
+
+    py5.println(fill_color)
+
+    # change the color mode
+    py5.color_mode(py5.HSB, 360, 100, 100)
+
+    py5.println(fill_color)
+
+    py5.fill(fill_color)
+    py5.rect(20, 20, 360, 360)
+
+
+py5.run_sketch()
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+Notice that our color maintained a link to its creator and changed its printed
+representation when the color mode changed. Clearly this makes it much easier
+to debug color-related code in a py5 Sketch.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+time.sleep(0.5)
+py5.exit_sketch()
+time.sleep(0.5)
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ## colour library
 
