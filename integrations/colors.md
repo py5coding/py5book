@@ -53,7 +53,7 @@ The Hex Color Code is always a `"#"` character followed by a 6 or 8 digit
 hexadecimal number. If a 6 digit hexadecimal number is used, the color
 has no transparency. If an 8 digit hexadecimal number is used, the color
 has an alpha channel. The Hex Color Code should always be a string, wrapped
-in quotes.
+in quotes. Uppercase and lowercase are both fine.
 
 A 6 digit example is `"#CC6633"` and an 8 digit example is `"#CC663399"`.
 
@@ -92,10 +92,10 @@ def setup():
     py5.fill("#CC663399")
     py5.rect(210, 20, 170, 170)
 
-    py5.fill("#C63")
+    py5.fill("#c63")
     py5.rect(20, 210, 170, 170)
 
-    py5.fill("#C639")
+    py5.fill("#c639")
     py5.rect(210, 210, 170, 170)
 
 
@@ -118,15 +118,59 @@ py5.exit_sketch()
 time.sleep(0.5)
 ```
 
-## Hexidecimal Integers
+## Hexadecimal Integers
 
-If you like, you can also use a hexidecimal integer, such as `0xffff0000`.
+If you like, you can also use a Hexadecimal Integer, such as `0x99CC6633`.
+These are similar to the previously described Hex Color Codes. The main
+difference is the alpha value is moved to the beginning.
+
 For this specification, it is always `0x` followed by 8 values, and the
-order is alpha, red, green, and blue. T
+order is alpha, red, green, and blue. Do not use quotes. Uppercase and
+lowercase are both fine. The Hexadecimal Integer `0x99CC6633` represents
+the same exact color as `"#CC663399"`.
 
-`0xffff0000`
+Let's use this in an example sketch.
 
-+++
+```{code-cell} ipython3
+def setup():
+    py5.size(400, 400)
+    py5.background(240)
+    py5.no_stroke()
+
+    # add a black bar so the transparency is obvious
+    py5.fill(0x00000000)
+    py5.rect(90, 0, 30, 400)
+    py5.rect(280, 0, 30, 400)
+
+    py5.fill(0x99CC6633)
+    py5.rect(20, 20, 170, 170)
+
+    py5.fill(0xFFCC6633)
+    py5.rect(210, 20, 170, 170)
+
+    py5.fill(0x66FFCC33)
+    py5.rect(20, 210, 170, 170)
+
+    py5.fill(0xFFFFCC66)
+    py5.rect(210, 210, 170, 170)
+
+
+py5.run_sketch()
+```
+
+```{code-cell} ipython3
+time.sleep(1)
+```
+
+```{code-cell} ipython3
+py5_tools.screenshot()
+```
+
+```{code-cell} ipython3
+time.sleep(0.5)
+py5.exit_sketch()
+time.sleep(0.5)
+```
 
 ## colour library
 
