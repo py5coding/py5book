@@ -41,13 +41,144 @@ For more information, refer to the [colour library's documentation on github](ht
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
+## Colour Library
+
+The [colour](https://pypi.org/project/colour/) library is integrated into py5.
+Any method with color parameters that accepts Hex Color Codes or Hexadecimal
+Integers will also accept instances of the `colour.Color` class.
+
+The colour library provides extensive color-related functionality that does
+overlap somewhat with py5's built-in functionality. It is the colour library's
+unique features that make this integration useful. We will demonstrate some
+of the features here, but also have a look at the
+[colour library's documentation on github](https://github.com/vaab/colour) for
+the complete feature set.
+
+One of the unique features that will be made clear here is that the colour
+library supports the HSL (Hue, Saturation, Lightness) color model. This
+contrasts with py5's HSB (Hue, Saturation, Brightness) color model (also
+known as HSV, with the V standing for Value). The
+[HSL and HSV](https://en.wikipedia.org/wiki/HSL_and_HSV) color models are
+similar but are not the same. HSB (HSV) attempts to model how colors appear
+under light. HSL models the way different paints mix together to create color
+in the real world.
+
+Our example Sketch below will experiment with this new library while also
+exploring the differences between the color models.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+from colour import Color
+
+import py5_tools
+import py5
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+def setup():
+    py5.size(400, 590)
+    py5.background(240)
+    py5.no_stroke()
+
+    py5.color_mode(py5.HSB, 360, 1.0, 1.0)
+    
+    py5.fill(Color(hue=0, saturation=0.9, luminance=0.1))
+    py5.rect(20, 20, 170, 170)
+
+    py5.fill(Color(hue=0, saturation=0.9, luminance=0.5))
+    py5.rect(20, 210, 170, 170)
+
+    py5.fill(Color(hue=0, saturation=0.9, luminance=0.9))
+    py5.rect(20, 400, 170, 170)
+
+    py5.fill(0, 0.9, 0.1)
+    py5.rect(210, 20, 170, 170)
+
+    py5.fill(0, 0.9, 0.5)
+    py5.rect(210, 210, 170, 170)
+
+    py5.fill(0, 0.9, 0.9)
+    py5.rect(210, 400, 170, 170)
+
+    # add some text labels
+    py5.fill("#fff")
+    py5.text('luminance=0.1', 70, 105)
+    py5.text('brightness=0.1', 255, 105)
+
+    py5.fill("#000")
+    py5.text('luminance=0.5', 70, 295)
+    py5.text('luminance=0.9', 70, 485)
+    py5.text('brightness=0.5', 255, 295)
+    py5.text('brightness=0.9', 255, 485)
+
+
+py5.run_sketch()
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+import time
+
+time.sleep(1)
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+In our example, we were able to create instances of `colour.Color` and
+pass them to the [](/reference/sketch_fill) method.
+
+As you can see below, colors in the HSL model become whiter as
+the luminance approaches 100%. In the HSB model, colors become
+brigher forms of the given hue.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+py5_tools.screenshot()
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+time.sleep(0.5)
+py5.exit_sketch()
+time.sleep(0.5)
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+The remainder of the color features described on this page built-in to py5
+and are independent of the colour library.
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 ## Hex Color Codes
 
 Any [Web Color](https://en.wikipedia.org/wiki/Web_colors) or Hex Color Code
 can be used as a color. The color code must always be a string with values
 representing red, green, blue, and optionally the alpha channel, in that
-order. This is consistent with the hex color codes found in HTML and CSS
-files.
+order. This is consistent with the hex color codes found in HTML and CSS files.
 
 The Hex Color Code is always a `"#"` character followed by a 6 or 8 digit
 hexadecimal number. If a 6 digit hexadecimal number is used, the color
@@ -64,23 +195,7 @@ to the canonical form, repeat each digit. For example, `"#C63"` is the same
 as `"#CC6633"`, and `"#C639"` is the same as `"#CC663399"`.
 
 Let's create a simple example Sketch that demonstrates the use of Hex Color
-Codes. We will start with the necessary imports for this series of examples.
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
-from colour import Color
-
-import py5_tools
-import py5
-```
-
-+++ {"editable": true, "slideshow": {"slide_type": ""}}
-
-Now a Sketch that creates colors using the discussed Hex Color Codes.
+Codes.
 
 ```{code-cell} ipython3
 ---
@@ -128,12 +243,15 @@ slideshow:
   slide_type: ''
 tags: [remove-cell]
 ---
-import time
-
 time.sleep(1)
 ```
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 py5_tools.screenshot()
 ```
 
@@ -284,19 +402,29 @@ def setup():
 
     fill_color = py5.color("#CC6633FF")
 
-    py5.println(fill_color)
+    print(fill_color)
 
     # change the color mode
     py5.color_mode(py5.HSB, 360, 100, 100)
 
-    py5.println(fill_color)
-    py5.println("hex color", py5.hex_color(fill_color))
+    print(fill_color)
+    print("hex color", py5.hex_color(fill_color))
 
     py5.fill(fill_color)
     py5.rect(20, 20, 360, 360)
 
 
 py5.run_sketch()
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-input]
+---
+time.sleep(1)
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
@@ -308,112 +436,6 @@ much easier to debug color-related code in a py5 Sketch.
 This example also includes a call to the [](/reference/sketch_hex_color)
 method, demonstrating how to convert a color back to an 8-digit Hex Color Code.
 
-Never again will py5 users have to decypher the meaning of numbers like -1714657741.
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
-tags: [remove-cell]
----
-time.sleep(0.5)
-py5.exit_sketch()
-time.sleep(0.5)
-```
-
-+++ {"editable": true, "slideshow": {"slide_type": ""}}
-
-## colour library
-
-The [colour](https://pypi.org/project/colour/) library is integrated into py5.
-Any method with color parameters that accepts Hex Color Codes or Hexadecimal
-Integers will also accept instances of the `colour.Color` class.
-
-The colour library provides extensive color-related functionality that does
-overlap somewhat with py5's built-in functionality. It is the colour library's
-unique features that make this integration useful. We will demonstrate some
-of the features here, but also have a look at the
-[colour library's documentation on github](https://github.com/vaab/colour) for
-the complete feature set.
-
-One of the unique features that will be made clear here is that the colour
-library supports the HSL (Hue, Saturation, Lightness) color model. This
-contrasts with py5's HSB (Hue, Saturation, Brightness) color model (also
-known as HSV, with the V standing for Value). The
-[HSL and HSV](https://en.wikipedia.org/wiki/HSL_and_HSV) color models are
-similar but are not the same. HSB (HSV) attempts to model how colors appear
-under light. HSL models the way different paints mix together to create color
-in the real world.
-
-Our example Sketch below will experiment with this new library while also
-exploring the differences between the color models.
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
-def setup():
-    py5.size(400, 590)
-    py5.background(240)
-    py5.no_stroke()
-
-    py5.color_mode(py5.HSB, 360, 1.0, 1.0)
-    
-    py5.fill(Color(hue=0, saturation=0.9, luminance=0.1))
-    py5.rect(20, 20, 170, 170)
-
-    py5.fill(Color(hue=0, saturation=0.9, luminance=0.5))
-    py5.rect(20, 210, 170, 170)
-
-    py5.fill(Color(hue=0, saturation=0.9, luminance=0.9))
-    py5.rect(20, 400, 170, 170)
-
-    py5.fill(0, 0.9, 0.1)
-    py5.rect(210, 20, 170, 170)
-
-    py5.fill(0, 0.9, 0.5)
-    py5.rect(210, 210, 170, 170)
-
-    py5.fill(0, 0.9, 0.9)
-    py5.rect(210, 400, 170, 170)
-
-    # add some text labels
-    py5.fill("#fff")
-    py5.text('luminance=0.1', 70, 105)
-    py5.text('brightness=0.1', 255, 105)
-
-    py5.fill("#000")
-    py5.text('luminance=0.5', 70, 295)
-    py5.text('luminance=0.9', 70, 485)
-    py5.text('brightness=0.5', 255, 295)
-    py5.text('brightness=0.9', 255, 485)
-
-
-py5.run_sketch()
-```
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
-tags: [remove-cell]
----
-time.sleep(1)
-```
-
-+++ {"editable": true, "slideshow": {"slide_type": ""}}
-
-In our example, we were able to create instances of `colour.Color` and
-pass them to the [](/reference/sketch_fill) method.
-
-As you can see below, colors in the HSL model become whiter as
-the luminance approaches 100%. In the HSB model, colors become
-brigher forms of the given hue.
-
 ```{code-cell} ipython3
 ---
 editable: true
@@ -422,6 +444,10 @@ slideshow:
 ---
 py5_tools.screenshot()
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+Never again will py5 users have to decypher the meaning of numbers like -1714657741.
 
 ```{code-cell} ipython3
 ---
