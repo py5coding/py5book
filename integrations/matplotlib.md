@@ -12,6 +12,8 @@ kernelspec:
   name: python3
 ---
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 # Charts, Plots, and Matplotlib
 
 [Matplotlib](https://matplotlib.org/) is a widely used library for creating
@@ -60,6 +62,11 @@ To begin, we will import matplotlib and some other libraries
 we will use for our examples.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 from collections import deque
 
 import numpy as np
@@ -71,6 +78,8 @@ import py5_tools
 import py5
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 Next we will set matplotlib's drawing style. There are
 [many style sheets](https://matplotlib.org/stable/gallery/style_sheets/style_sheets_reference.html)
 to choose from. Here we are using "ggplot" with the "fast" style to improve
@@ -80,6 +89,11 @@ We will not use the matplotlib Jupyter Notebook magic `%matplotlib inline`. It i
 for this example and it seems to confict with the code py5 uses to run correctly on OSX.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 mpl.style.use(['ggplot', 'fast'])
 ```
 
@@ -142,6 +156,8 @@ slideshow:
 ---
 mpl.use('agg')
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 Now, the py5 Sketch. Here, we are creating a new chart in each execution of the
 `draw()` method. The Figure object is converted to a Py5Image object using
@@ -451,6 +467,11 @@ to customize the aesthetics of a Sketch.
 Here is a simple example, referencing each color as a string.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 def setup():
     py5.size(400, 400)
     py5.background(240)
@@ -460,17 +481,24 @@ def setup():
     py5.fill('m')
     py5.rect(20, 20, 170, 170)
 
-    # tableau palette
-    py5.fill('tab:orange')
-    py5.rect(210, 20, 170, 170)
-
     # CSS4 colors
     py5.fill('chartreuse')
     py5.rect(20, 210, 170, 170)
 
+    # tableau palette
+    py5.fill('tab:orange')
+    py5.rect(210, 20, 170, 170)
+
     # xkcd color survey
     py5.fill('xkcd:blue with a hint of purple')
     py5.rect(210, 210, 170, 170)
+
+    # add some text labels
+    py5.fill("#000")
+    py5.text('m', 70, 105)
+    py5.text('chartreuse', 70, 295)
+    py5.text('tab:orange', 255, 105)
+    py5.text('xkcd:blue with a hint of purple', 220, 295)
 
 
 py5.run_sketch()
@@ -534,13 +562,20 @@ def setup():
     py5.rect(20, 20, 170, 170)
 
     py5.fill(py5.css4_colors.PALETURQUOISE)
-    py5.rect(210, 20, 170, 170)
+    py5.rect(20, 210, 170, 170)
 
     py5.fill(py5.xkcd_colors.PERIWINKLE_BLUE)
-    py5.rect(20, 210, 170, 170)
+    py5.rect(210, 20, 170, 170)
 
     py5.fill(py5.xkcd_colors.PALE_MAUVE)
     py5.rect(210, 210, 170, 170)
+
+    # add some text labels
+    py5.fill("#000")
+    py5.text('css4_colors.FIREBRICK', 30, 105)
+    py5.text('css4_colors.PALETURQUOISE', 30, 295)
+    py5.text('xkcd_colors.PERIWINKLE_BLUE', 215, 105)
+    py5.text('xkcd_colors.PALE_MAUVE', 215, 295)
 
 
 py5.run_sketch()
