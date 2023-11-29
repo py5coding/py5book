@@ -24,7 +24,7 @@ documents a few color-related matplotlib contributions. Scroll to the bottom
 of the page to read about Named Colors and a new Colormap Color Mode.
 
 
-## setup
+## Setup
 
 To use all of the features documented on this page, you'll need to install the
 [colour](https://pypi.org/project/colour/) library with pip or with conda.
@@ -64,7 +64,7 @@ to the canonical form, repeat each digit. For example, `"#C63"` is the same
 as `"#CC6633"`, and `"#C639"` is the same as `"#CC663399"`.
 
 Let's create a simple example Sketch that demonstrates the use of Hex Color
-Codes. But first, the imports for this page.
+Codes. We will start with the necessary imports for this series of examples.
 
 ```{code-cell} ipython3
 ---
@@ -153,7 +153,7 @@ time.sleep(0.5)
 
 ## Hexadecimal Integers
 
-If you like, you can also use a Hexadecimal Integer, such as `0x99CC6633`.
+If you like, you can also use a Hexadecimal Integer such as `0x99CC6633`.
 These are similar to the previously described Hex Color Codes. The main
 difference is the alpha value is moved to the beginning.
 
@@ -264,6 +264,10 @@ That's much easier to comprehend than -1714657741.
 
 You will never create Py5Color instances directly. They are created for you with [](/reference/sketch_color)
 as well as any other method that returns colors (such as [](/reference/py5shape_get_fill)).
+
+Also, observe that you can create colors in py5 outside of a running Sketch. When
+colors are created this way, it will always use the default RGB color mode settings,
+limiting each color channel to 255.
 
 Let's experiment with this in an example.
 
