@@ -403,8 +403,12 @@ time.sleep(1)
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-As you can see below, colors in the HSL model become whiter as the luminance approaches 100%.
-In the HSB model, colors become brigher forms of the given hue.
+As you can see below, colors in the HSL model become whiter as
+the luminance approaches 100%. In the HSB model, colors become
+brigher forms of the given hue.
+
+We were also able to create instances of `colour.Color` and
+pass them to the [](/reference/sketch_fill) method.
 
 ```{code-cell} ipython3
 ---
