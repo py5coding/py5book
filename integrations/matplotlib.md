@@ -199,7 +199,7 @@ tags: [remove-cell]
 ---
 import time
 
-time.sleep(15)
+time.sleep(20)
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
@@ -494,7 +494,7 @@ def setup():
     py5.rect(210, 210, 170, 170)
 
     # add some text labels
-    py5.fill("#000")
+    py5.fill('black')
     py5.text('m', 70, 105)
     py5.text('chartreuse', 70, 295)
     py5.text('tab:orange', 255, 105)
@@ -571,7 +571,7 @@ def setup():
     py5.rect(210, 210, 170, 170)
 
     # add some text labels
-    py5.fill("#000")
+    py5.fill(py5.css4_colors.BLACK)
     py5.text('css4_colors.FIREBRICK', 30, 105)
     py5.text('css4_colors.PALETURQUOISE', 30, 295)
     py5.text('xkcd_colors.PERIWINKLE_BLUE', 215, 105)
