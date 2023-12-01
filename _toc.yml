@@ -24,6 +24,7 @@ parts:
     - file: integrations/python_ecosystem_integrations
     - file: integrations/colors
     - file: integrations/matplotlib
+    - file: integrations/numpy
     - file: integrations/shapely
     - file: integrations/trimesh
     - file: integrations/cairo
