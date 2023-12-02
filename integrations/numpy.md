@@ -24,18 +24,20 @@ for numerical computing because of its close ties with numpy.
 Numpy is one of py5's dependencies, so it will always installed
 alongside py5.
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ## Comparing `pixels` & `np_pixels`
 
 In Processing and p5, direct pixel manipulation is done
 with `pixels`, a one dimensional array of colors (integers).
-Using this array can be a bit tedious. For example, to
+Using this array can be a bit tedious because we think about
+the Sketch window in two dimensions, not one. For example, to
 change a pixel at a specific location in the Sketch window,
-one must do a few calculations to find that pixel's location
+we must do a few calculations to find that pixel's location
 in the one dimensional array.
 
-This approach will get the job done. However, this approach
+You can accomplish many things working with a one dimensional
+array of pixels. However, working with pixels in this way
 is also very different from how direct pixel manipulation is
 typically done by virtually every Python program that has
 access to numpy.
@@ -51,11 +53,18 @@ dimensional array `np_pixels`. This is actualized in
 and [](/reference/py5image_np_pixels).
 
 Let's explore these two pixel data structures with a
-simple example.
+simple example. We will start with our imports.
 
 TODO: link to vectorized noise page somewhere
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+from itertools import product
+
 import numpy as np
 import cv2
 from PIL import Image
@@ -64,31 +73,165 @@ import py5_tools
 import py5
 ```
 
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
-# example that does something with pixels
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-# alpha, followed by Red,
-# Green, and finally, Blue. This is often abreviated 'ARGB'.
-```
+Our example will first load an image and draw it to the screen. Then we will swap the
+color channels for all of the pixels contained within an inner square of the Sketch
+window. For each modified pixel, we will rotate the color channels so that Blue
+becomes Red, Red becomes Green, and Green becomes Blue.
 
-```{code-cell} ipython3
-# example that does the same thing with np_pixels
-```
-
-```{code-cell} ipython3
-
-```
+To do this we must loop through all of the pixels in [](/reference/sketch_pixels) and
+extract each pixel's Red, Green, and Blue values. Then we will re-order the Red, Green,
+and Blue values to create a new color. This new color will be assigned back to
+[](/reference/sketch_pixels).
 
 ```{code-cell} ipython3
 ---
 editable: true
 slideshow:
   slide_type: ''
+---
+def setup():
+    py5.size(600, 452)
+
+    img = py5.load_image('images/trees.jpg')
+    py5.background(img)
+
+    py5.load_pixels()
+
+    for x, y in product(range(50, py5.width - 50), range(50, py5.height - 50)):
+        color = py5.pixels[y * py5.width + x]
+        red = py5.red(color)
+        green = py5.green(color)
+        blue = py5.blue(color)
+        new_color = py5.color(blue, red, green)
+
+        py5.pixels[y * py5.width + x] = new_color
+
+    py5.update_pixels()
+
+
+py5.run_sketch()
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+In the Sketch code, observe the calls to [](/reference/sketch_load_pixels) and
+[](/reference/sketch_update_pixels). These are necessary to prepare
+[](/reference/sketch_pixels) for use and to write changes to
+[](/reference/sketch_pixels) back to the Sketch window.
+
+Also observe the `y * py5.width + x` code used to find each pixel in the
+[](/reference/sketch_pixels) array. If that calculation was incorrect, the
+Sketch would behave erratically or crash.
+
+If you are running this code yourself, you will also notice the Sketch is very
+slow. It takes at least a few seconds for it to complete the pixel changes.
+It does finish eventually, and has a nice result:
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+import time
+
+time.sleep(5)
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+py5_tools.screenshot()
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+time.sleep(0.5)
+py5.exit_sketch()
+time.sleep(0.5)
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+Now let's do this again, but with [](/reference/sketch_np_pixels).
+
+In the following code, the `for` loop is gone, and [](/reference/sketch_load_pixels) and
+[](/reference/sketch_update_pixels) have been replaced with
+[](/reference/sketch_load_np_pixels) and [](/reference/sketch_update_np_pixels).
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+def setup():
+    py5.size(600, 452)
+
+    img = py5.load_image('images/trees.jpg')
+    py5.background(img)
+
+    py5.load_np_pixels()
+
+    # extract individual channels
+    alpha_channel = py5.np_pixels[50:-50, 50:-50, 0].copy()
+    red_channel = py5.np_pixels[50:-50, 50:-50, 1].copy()
+    green_channel = py5.np_pixels[50:-50, 50:-50, 2].copy()
+    blue_channel = py5.np_pixels[50:-50, 50:-50, 3].copy()
+
+    # assign red channel to green
+    py5.np_pixels[50:-50, 50:-50, 2] = red_channel
+
+    # assign green channel to blue
+    py5.np_pixels[50:-50, 50:-50, 3] = green_channel
+
+    # assign blue channel to red
+    py5.np_pixels[50:-50, 50:-50, 1] = blue_channel
+
+    py5.update_np_pixels()
+
+py5.run_sketch()
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+Observe how our code is extracting each of the individual color
+channels.
+
+```python
+    # extract individual channels
+    alpha_channel = py5.np_pixels[50:-50, 50:-50, 0].copy()
+    red_channel = py5.np_pixels[50:-50, 50:-50, 1].copy()
+    green_channel = py5.np_pixels[50:-50, 50:-50, 2].copy()
+    blue_channel = py5.np_pixels[50:-50, 50:-50, 3].copy()
+```
+
+We are indexing into [](/reference/sketch_np_pixels) to extract entire
+blocks of data. The last index value, 0, 1, 2, and 3, correspond to
+the Alpha, Red, Green, and Blue channels.
+
+Those blocks of data are then assigned back to [](/reference/sketch_np_pixels)
+to swap the color channels.
+
+This approach yields the same result, but is considerably faster.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
 ---
 import time
 
@@ -101,7 +244,7 @@ editable: true
 slideshow:
   slide_type: ''
 ---
-# py5_tools.screenshot()
+py5_tools.screenshot()
 ```
 
 ```{code-cell} ipython3
@@ -109,10 +252,11 @@ slideshow:
 editable: true
 slideshow:
   slide_type: ''
+tags: [remove-cell]
 ---
-# time.sleep(0.5)
-# py5.exit_sketch()
-# time.sleep(0.5)
+time.sleep(0.5)
+py5.exit_sketch()
+time.sleep(0.5)
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
@@ -496,21 +640,41 @@ difference between the two approaches can be significant.
 ```
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 
 ```
 
 ```{code-cell} ipython3
-time.sleep(1)
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+# time.sleep(1)
 ```
 
 ```{code-cell} ipython3
-py5_tools.screenshot()
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+# py5_tools.screenshot()
 ```
 
 ```{code-cell} ipython3
-time.sleep(0.5)
-py5.exit_sketch()
-time.sleep(0.5)
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+# time.sleep(0.5)
+# py5.exit_sketch()
+# time.sleep(0.5)
 ```
 
 TODO: list all of the bulk commands
