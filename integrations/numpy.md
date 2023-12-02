@@ -12,17 +12,20 @@ kernelspec:
   name: python3
 ---
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 # Numpy, Arrays, and Images
 
-[Numpy](https://numpy.org/) is used extensively in Python. It is the
-foundation of virtually all numerical computing projects in Python.
-It has a long history within the Python community, and like
-[](/integrations/matplotlib), numpy's contributions to the scientific
-community cannot be understated. Py5 is well positioned to be used
-for numerical computing because of its close ties with numpy.
+[Numpy](https://numpy.org/) is used extensively in the Python world.
+It is the foundation of virtually all of the numerical computing projects
+that are implemented in the Python language. It has a long history within
+the Python community, and like [](/integrations/matplotlib), numpy's
+contributions to the scientific community cannot be understated.
+Py5 is well positioned to be used for numerical computing because of its
+close ties with numpy.
 
-Numpy is one of py5's dependencies, so it will always installed
-alongside py5.
+Numpy is one of py5's dependencies, so it will always installed alongside
+py5.
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
@@ -30,7 +33,7 @@ alongside py5.
 
 In Processing and p5, direct pixel manipulation is done
 with `pixels`, a one dimensional array of colors (integers).
-Using this array can be a bit tedious because we think about
+Using this array can be a bit tedious because we usually think about
 the Sketch window in two dimensions, not one. For example, to
 change a pixel at a specific location in the Sketch window,
 we must do a few calculations to find that pixel's location
@@ -65,8 +68,8 @@ slideshow:
 ---
 from itertools import product
 
-import numpy as np
 import cv2
+import numpy as np
 from PIL import Image
 
 import py5_tools
@@ -76,7 +79,7 @@ import py5
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 Our example will first load an image and draw it to the screen. Then we will swap the
-color channels for all of the pixels contained within an inner square of the Sketch
+color channels for all of the pixels contained within an inner region of the Sketch
 window. For each modified pixel, we will rotate the color channels so that Blue
 becomes Red, Red becomes Green, and Green becomes Blue.
 
@@ -118,7 +121,7 @@ py5.run_sketch()
 
 In the Sketch code, observe the calls to [](/reference/sketch_load_pixels) and
 [](/reference/sketch_update_pixels). These are necessary to prepare
-[](/reference/sketch_pixels) for use and to write changes to
+[](/reference/sketch_pixels) for accessing color information and to write changes to
 [](/reference/sketch_pixels) back to the Sketch window.
 
 Also observe the `y * py5.width + x` code used to find each pixel in the
@@ -126,7 +129,7 @@ Also observe the `y * py5.width + x` code used to find each pixel in the
 Sketch would behave erratically or crash.
 
 If you are running this code yourself, you will also notice the Sketch is very
-slow. It takes at least a few seconds for it to complete the pixel changes.
+slow. It takes at least a few seconds for it to complete the pixel alterations.
 It does finish eventually, and has a nice result:
 
 ```{code-cell} ipython3
@@ -218,10 +221,10 @@ channels.
 ```
 
 We are indexing into [](/reference/sketch_np_pixels) to extract entire
-blocks of data. The last index value, 0, 1, 2, and 3, correspond to
-the Alpha, Red, Green, and Blue channels.
+blocks of data. The last index value in each line of code, 0, 1, 2, and 3,
+correspond to the Alpha, Red, Green, and Blue channels, in that order.
 
-Those blocks of data are then assigned back to [](/reference/sketch_np_pixels)
+Those blocks of numbers are then assigned back to [](/reference/sketch_np_pixels)
 to swap the color channels.
 
 This approach yields the same result, but is considerably faster.
@@ -419,7 +422,7 @@ The answer has to do with Color Channel Ordering.
 
 We know from the previous section that in py5, the Color Channel Order
 of [](/reference/sketch_np_pixels) starts with Alpha, followed by Red,
-Green, and finally, Blue (also known as ARGB).
+Green, and finally, Blue (also abbreviated as ARGB).
 
 And here's the problem: our PIL and OpenCV image arrays use different
 Color Channel Orderings.
@@ -438,10 +441,10 @@ logo_img_pil.mode
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-It is 'RGBA', not 'ARGB'.
+It is 'RGBA', not 'ARGB'. The Alpha channel is last, not first.
 
-It's different from what py5 and [](/reference/sketch_create_image_from_numpy)
-expect.
+It's different from what py5 and the [](/reference/sketch_create_image_from_numpy)
+method expect.
 
 Before we continue, let's think about why this matters.
 
@@ -533,7 +536,7 @@ time.sleep(0.5)
 It looks better. The logo image on the left is correct. The black
 color in the logo image on the right is correct, but the rest are
 incorrect. We must still be using the wrong Color Channel Order
-for the image when loaded by OpenCV.
+for the image loaded by OpenCV.
 
 If we search around online we will discover that OpenCV reverses the
 Color Channel Order, ordering it 'BGR', or 'BGRA' for images with
