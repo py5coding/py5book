@@ -264,6 +264,13 @@ time.sleep(0.5)
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
+Before moving on to the next section, take a moment to ponder the effects of swapping color
+channels. The image retains the same basic structure, but the colors look odd.
+From looking at an image, do you think you'd be able to tell that the color channels
+have been moved around?
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 ## Color Channel Ordering
 
 The `np_pixels` array's third dimension can sometimes be tricky
