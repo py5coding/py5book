@@ -624,8 +624,8 @@ be overlooked.
 
 ## Bulk Coordinate Methods
 
-If you are using py5 and need to create a shape with a
-thousand vertices, one approach for implementing this
+If you are using py5 and need to create a shape with
+thousands of vertices, one approach for implementing this
 would involve a `for` loop that created each vertex,
 one at a time.
 
@@ -635,7 +635,7 @@ It would execute slowly because the method call for
 each individual vertex would involve a separate call
 to py5's underlying Processing code.
 
-A better approach would involve skipping the `for`
+A better approach would involve omitting the `for`
 loop and creating all of the vertices with a single
 command. This approach lets py5 create the vertices
 in the most efficient way possible. The performance
@@ -793,6 +793,7 @@ The result is the same but the code is faster and more efficient.
 editable: true
 slideshow:
   slide_type: ''
+tags: [remove-cell]
 ---
 time.sleep(1)
 ```
@@ -811,6 +812,7 @@ py5_tools.screenshot()
 editable: true
 slideshow:
   slide_type: ''
+tags: [remove-cell]
 ---
 time.sleep(0.5)
 py5.exit_sketch()
