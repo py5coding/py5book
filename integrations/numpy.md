@@ -700,6 +700,11 @@ time.sleep(1)
 ```
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 py5_tools.screenshot()
 ```
 
@@ -731,10 +736,6 @@ editable: true
 slideshow:
   slide_type: ''
 ---
-
-```
-
-```{code-cell} ipython3
 INNER_RADIUS = 5
 OUTER_RADIUS = 225
 ROTATION_COUNT = 20
@@ -748,12 +749,17 @@ def setup():
     py5.no_fill()
     py5.stroke_weight(2.5)
 
+    # angle of each of the vertices in radians
     angles = np.radians(np.arange(0, STEPS) % 360)
+
+    # radius of each of the vertices from center
     radius = np.linspace(INNER_RADIUS, OUTER_RADIUS, STEPS)
 
+    # x and y coordinates of vertices
     xvals = radius * np.cos(angles)
     yvals = radius * np.sin(angles)
 
+    # assemble x and y coordinates into one array
     coordinates = np.stack([xvals, yvals], axis=1)
 
     with py5.begin_shape():
@@ -763,28 +769,32 @@ def setup():
 py5.run_sketch()
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+This code is very similar to before, except that we are using numpy arrays
+instead of doing calculations on one number a time.
+
+We start by creating numpy arrays `angles` and `radius` that contain the all
+of the vertex angles and all of the vertex radii. We do that with the numpy
+methods [arange()](https://numpy.org/doc/stable/reference/generated/numpy.arange.html#numpy-arange)
+and [linspace()](https://numpy.org/doc/stable/reference/generated/numpy.linspace.html#numpy-linspace).
+
+Then we proceed much like the first example, calculating the x and y coordinates.
+The code looks the same, but because `angles` and `radius` are arrays, we are
+calculating the coordinates for all of the vertices at the same time.
+
+The last step is to assemble `xvals` and `yvals` into one numpy array using numpy's
+[stack()](https://numpy.org/doc/stable/reference/generated/numpy.stack.html#numpy.stack) method.
+
+The result is the same but the code is faster and more efficient.
+
 ```{code-cell} ipython3
-
-```
-
-```{code-cell} ipython3
-
-```
-
-```{code-cell} ipython3
-
-```
-
-```{code-cell} ipython3
-
-```
-
-```{code-cell} ipython3
-
-```
-
-```{code-cell} ipython3
-
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+time.sleep(1)
 ```
 
 ```{code-cell} ipython3
@@ -793,7 +803,7 @@ editable: true
 slideshow:
   slide_type: ''
 ---
-# time.sleep(1)
+py5_tools.screenshot()
 ```
 
 ```{code-cell} ipython3
@@ -802,8 +812,39 @@ editable: true
 slideshow:
   slide_type: ''
 ---
-# py5_tools.screenshot()
+time.sleep(0.5)
+py5.exit_sketch()
+time.sleep(0.5)
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+Py5 provide many methods for bulk operations. Here is the complete list:
+
+* [](/reference/sketch_points)
+* [](/reference/sketch_lines)
+* [](/reference/sketch_vertices)
+* [](/reference/sketch_curve_vertices)
+* [](/reference/sketch_quadratic_vertices)
+* [](/reference/sketch_bezier_vertices)
+
+Also, in Py5Graphics objects:
+
+* [](/reference/py5graphics_points)
+* [](/reference/py5graphics_lines)
+* [](/reference/py5graphics_vertices)
+* [](/reference/py5graphics_curve_vertices)
+* [](/reference/py5graphics_quadratic_vertices)
+* [](/reference/py5graphics_bezier_vertices)
+
+And in Py5Shape objects:
+
+* [](/reference/py5shape_vertices)
+* [](/reference/py5shape_curve_vertices)
+* [](/reference/py5shape_quadratic_vertices)
+* [](/reference/py5shape_bezier_vertices)
+* [](/reference/py5shape_set_fills)
+* [](/reference/py5shape_set_strokes)
 
 ```{code-cell} ipython3
 ---
@@ -811,13 +852,5 @@ editable: true
 slideshow:
   slide_type: ''
 ---
-# time.sleep(0.5)
-# py5.exit_sketch()
-# time.sleep(0.5)
-```
-
-TODO: list all of the bulk commands
-
-```{code-cell} ipython3
 
 ```
