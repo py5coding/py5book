@@ -641,13 +641,8 @@ command. This approach lets py5 create the vertices
 in the most efficient way possible. The performance
 difference between the two approaches can be significant.
 
-```{code-cell} ipython3
-# slow for loop example
-```
-
-```{code-cell} ipython3
-# fast vertices example
-```
+Let's explore this difference with a simple example
+that draws a spiral using a `for` loop.
 
 ```{code-cell} ipython3
 ---
@@ -655,6 +650,140 @@ editable: true
 slideshow:
   slide_type: ''
 ---
+INNER_RADIUS = 5
+OUTER_RADIUS = 225
+ROTATION_COUNT = 20
+STEPS_PER_ROTATION = 500
+STEPS = ROTATION_COUNT * STEPS_PER_ROTATION
+
+
+def setup():
+    py5.size(500, 500)
+    py5.translate(py5.width / 2, py5.height / 2)
+    py5.no_fill()
+    py5.stroke_weight(2.5)
+
+    with py5.begin_shape():
+        for i in range(0, STEPS):
+            # angle of vertex in radians
+            angle = np.radians(i % 360)
+
+            # radius of vertex from center
+            radius = py5.remap(i, 0, STEPS, INNER_RADIUS, OUTER_RADIUS)
+
+            # x and y coordinates of vertex
+            xval = radius * np.cos(angle)
+            yval = radius * np.sin(angle)
+
+            # add vertex
+            py5.vertex(xval, yval)
+
+
+py5.run_sketch()
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+In this example, we create a loop that draws one vertex at a time. For
+each step, it calculates the angle in radians and the radius of the
+vertex from the spiral center. Then it uses trigonometry to calculate
+the x and y coordinates of the vertex.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+time.sleep(1)
+```
+
+```{code-cell} ipython3
+py5_tools.screenshot()
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+time.sleep(0.5)
+py5.exit_sketch()
+time.sleep(0.5)
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+The problem here is that the [](/reference/sketch_vertex) method is
+called `20 * 500 = 10000` times. That's a lot, and can cause
+performance problems for py5. It's not that big of a deal here but
+this can cause problems if the number of vertices increases even
+more.
+
+Let's look at a different approach that avoids the `for` loop.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+
+```
+
+```{code-cell} ipython3
+INNER_RADIUS = 5
+OUTER_RADIUS = 225
+ROTATION_COUNT = 20
+STEPS_PER_ROTATION = 500
+STEPS = ROTATION_COUNT * STEPS_PER_ROTATION
+
+
+def setup():
+    py5.size(500, 500)
+    py5.translate(py5.width / 2, py5.height / 2)
+    py5.no_fill()
+    py5.stroke_weight(2.5)
+
+    angles = np.radians(np.arange(0, STEPS) % 360)
+    radius = np.linspace(INNER_RADIUS, OUTER_RADIUS, STEPS)
+
+    xvals = radius * np.cos(angles)
+    yvals = radius * np.sin(angles)
+
+    coordinates = np.stack([xvals, yvals], axis=1)
+
+    with py5.begin_shape():
+        py5.vertices(coordinates)
+
+
+py5.run_sketch()
+```
+
+```{code-cell} ipython3
+
+```
+
+```{code-cell} ipython3
+
+```
+
+```{code-cell} ipython3
+
+```
+
+```{code-cell} ipython3
+
+```
+
+```{code-cell} ipython3
+
+```
+
+```{code-cell} ipython3
 
 ```
 
