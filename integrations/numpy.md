@@ -58,8 +58,6 @@ and [](/reference/py5image_np_pixels).
 Let's explore these two pixel data structures with a
 simple example. We will start with our imports.
 
-TODO: link to vectorized noise page somewhere
-
 ```{code-cell} ipython3
 ---
 editable: true
@@ -725,7 +723,7 @@ time.sleep(0.5)
 The problem here is that the [](/reference/sketch_vertex) method is
 called `20 * 500 = 10000` times. That's a lot, and can cause
 performance problems for py5. It's not that big of a deal here but
-this can cause problems if the number of vertices increases even
+this will cause problems if the number of vertices increases even
 more.
 
 Let's look at a different approach that avoids the `for` loop.
@@ -847,3 +845,20 @@ And finally, Py5Shape objects:
 * [](/reference/py5shape_bezier_vertices)
 * [](/reference/py5shape_set_fills)
 * [](/reference/py5shape_set_strokes)
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+## Vectorized Noise
+
+Py5 uses numpy for its noise functionality. Have a look at
+[](/how_tos/generate_noise_values) for detailed documentation
+and examples.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+
+```
