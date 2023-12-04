@@ -20,7 +20,7 @@ kernelspec:
 It is the foundation of virtually all of the numerical computing projects
 that are implemented in the Python language. It has a long history within
 the Python community, and like [](/integrations/matplotlib), numpy's
-contributions to the scientific community cannot be understated.
+contributions to the scientific community cannot be overstated.
 Py5 is well positioned to be used for numerical computing because of its
 close ties with numpy.
 

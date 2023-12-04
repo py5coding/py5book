@@ -19,7 +19,7 @@ kernelspec:
 [Matplotlib](https://matplotlib.org/) is a widely used library for creating
 high quality static, animated, and interactive data visualizations. It has
 a long history within the Python community. Matplotlib's contributions to
-the scientific community cannot be understated. Integrating matplotlib into
+the scientific community cannot be overstated. Integrating matplotlib into
 py5 creates many exciting possibilities.
 
 In the future, matplotlib will have even more integrations with py5, beyond
