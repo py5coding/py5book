@@ -8,6 +8,8 @@ Register new shape conversion functionality to be used by [](sketch_convert_shap
 
 <div class="example-row"><div class="example-cell-image">
 
+![example picture for register_shape_conversion()](/images/reference/Py5Functions_register_shape_conversion_0.png)
+
 </div><div class="example-cell-code">
 
 ```python
@@ -17,10 +19,10 @@ from shapely import Point
 def shapely_point_precondition(obj):
     return isinstance(obj, Point)
 
-
-# draw shapely points as a group of points
+# draw shapely points as a group of gaussian distributed points
 def shapely_point_converter(sketch, obj, **kwargs):
-    points = 10 * np.random.randn(1000, 2) + [obj.x, obj.y]
+    sigma = kwargs.get('sigma', 5)
+    points = sigma * np.random.randn(1000, 2) + [obj.x, obj.y]
 
     s = sketch.create_shape()
     with s.begin_shape(sketch.POINTS):
@@ -28,19 +30,18 @@ def shapely_point_converter(sketch, obj, **kwargs):
 
     return s
 
-
 py5.register_shape_conversion(
     shapely_point_precondition, shapely_point_converter
 )
-
 
 def setup():
     point1 = Point(30, 70)
     point2 = Point(70, 30)
 
     points1 = py5.convert_shape(point1)
-    points2 = py5.convert_shape(point2)
-
+    points2 = py5.convert_shape(point2, sigma=10)
+    py5.println(type(points1))
+    py5.println(type(points2))
     py5.shape(points1)
     py5.shape(points2)
 ```
@@ -66,4 +67,4 @@ register_shape_conversion(
 ) -> None
 ```
 
-Updated on October 06, 2023 13:32:21pm UTC
+Updated on December 11, 2023 16:58:45pm UTC
