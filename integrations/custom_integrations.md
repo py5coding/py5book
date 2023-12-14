@@ -1,18 +1,22 @@
 ---
-jupyter:
-  jupytext:
-    cell_metadata_filter: -all
-    formats: ipynb,md
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
-      jupytext_version: 1.14.7
+jupytext:
+  formats: ipynb,md:myst
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
     name: python3
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.14.7
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
 ---
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 # Custom Integrations
 
@@ -28,7 +32,7 @@ This page will explain the customization design in detail, but if you are going 
 custom integration, it is recommended you also have a look at the source code for the built-in
 [image](https://github.com/py5coding/py5generator/blob/main/py5_resources/py5_module/py5/image_conversion.py)
 and [shape](https://github.com/py5coding/py5generator/blob/main/py5_resources/py5_module/py5/shape_conversion.py)
-customizations for additional examples. You can also ask for help in
+customizations for additional insight and examples. You can also ask for help in
 [GitHub Discussions](https://github.com/py5coding/py5generator/discussions).
 
 Your custom integration will require two functions. The first function is a predicate function
@@ -40,7 +44,12 @@ Your custom integrations will always take presidence over the builtin integratio
 
 We will begin with some imports needed for our examples.
 
-```python
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 import numpy as np
 from PIL import Image
 from shapely import Point
@@ -49,21 +58,29 @@ import py5_tools
 import py5
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 ## Custom Integrations for Image Conversion
 
-
-As an example, we will create a custom integration that converts PIL Image objects
-and by default rotates them 180 degrees. We will also support a keyword argument
-to rotate the image by a different angle.
+For our image conversion example, we will create a custom integration that
+converts PIL Image objects and by default rotates them 180 degrees. We will
+also support a keyword argument to rotate the image by a different angle.
 
 First we create our predicate function. It will simply check if an object is a PIL
 Image object and return True or False. This function is identical to py5's built-in
 customization for PIL Image objects.
 
-```python
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 def pillow_image_to_ndarray_precondition(obj):
     return isinstance(obj, Image.Image)
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 The second function's parameters will be the object to be converted and `**kwargs` parameters.
 It should not return a Py5Image object. Instead, it should return a special `NumpyImageArray`
@@ -87,7 +104,12 @@ this.
 The below conversion function is very similar to py5's built-in customization for PIL Image
 objects.
 
-```python
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 def pillow_image_to_ndarray_converter(img, **kwargs):
     rotate = kwargs.get('rotate', 180)
     if img.mode not in ["RGB", "RGBA"]:
@@ -96,21 +118,35 @@ def pillow_image_to_ndarray_converter(img, **kwargs):
     return py5.NumpyImageArray(np.asarray(img), img.mode)
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 The last step is to register the pair of functions with py5. After
 registering, when the [](/reference/sketch_convert_image) method is
 called, it will use the conversion function we wrote to convert PIL
 Image objects.
 
-```python
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 py5.register_image_conversion(
     pillow_image_to_ndarray_precondition, pillow_image_to_ndarray_converter
 )
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 Now that everything is configured correctly,  let's create a Sketch
 that uses our new PIL image conversion functionality.
 
-```python
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 def setup():
     pil_img = Image.open('images/rockies.jpg').reduce(2)
     img1 = py5.convert_image(pil_img)
@@ -119,41 +155,82 @@ def setup():
     py5.image(img2, 50, 25)
 ```
 
-```python
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 py5.run_sketch()
 ```
 
-```python
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
 import time
 
 time.sleep(1)
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 The result looks as we would expect. The left image is upside down
 and the right image is rotated 45 degrees.
 
-```python
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 py5_tools.screenshot()
 ```
 
-```python
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
 time.sleep(0.5)
 py5.exit_sketch()
 time.sleep(0.5)
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 ## Custom Integrations for Shape Conversion
 
-```python
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 
 ```
 
-```python
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 def shapely_point_precondition(obj):
     return isinstance(obj, Point)
 ```
 
-```python
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 # draw shapely points as a group of gaussian distributed points
 def shapely_point_converter(sketch, obj, **kwargs):
     sigma = kwargs.get('sigma', 5)
@@ -166,20 +243,34 @@ def shapely_point_converter(sketch, obj, **kwargs):
     return s
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 We again register the pair of functions with py5. When
 the [](/reference/sketch_convert_shape) method is called, it will
 use the conversion function we wrote to convert shapely
 Point objects.
 
-```python
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 py5.register_shape_conversion(
     shapely_point_precondition, shapely_point_converter
 )
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 Now let's create a Sketch that uses our shapely Point conversion functionality.
 
-```python
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 def setup():
     point1 = Point(30, 70)
     point2 = Point(70, 30)
@@ -190,30 +281,68 @@ def setup():
     py5.shape(points2)
 ```
 
-```python
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 py5.run_sketch()
 ```
 
-```python
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
 time.sleep(1)
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 As expected, each point is rendered as a scattered field of individual points.
 
-```python
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 py5_tools.screenshot()
 ```
 
-```python
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
 time.sleep(0.5)
 py5.exit_sketch()
 time.sleep(0.5)
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 ## Share Your Ideas!
 
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+2+2
+```
 
-
-```python
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 
 ```
