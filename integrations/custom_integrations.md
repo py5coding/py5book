@@ -148,11 +148,13 @@ slideshow:
   slide_type: ''
 ---
 def setup():
-    pil_img = Image.open('images/rockies.jpg').reduce(2)
+    py5.size(300, 300)
+
+    pil_img = Image.open('images/rockies.jpg')
     img1 = py5.convert_image(pil_img)
     img2 = py5.convert_image(pil_img, rotate=45)
-    py5.image(img1, 0, 25)
-    py5.image(img2, 50, 25)
+    py5.image(img1, 25, 100)
+    py5.image(img2, 175, 100)
 ```
 
 ```{code-cell} ipython3
@@ -233,8 +235,8 @@ slideshow:
 ---
 # draw shapely points as a group of gaussian distributed points
 def shapely_point_converter(sketch, obj, **kwargs):
-    sigma = kwargs.get('sigma', 5)
-    points = sigma * np.random.randn(1000, 2) + [obj.x, obj.y]
+    sigma = kwargs.get('sigma', 25)
+    points = sigma * np.random.randn(2500, 2) + [obj.x, obj.y]
 
     s = sketch.create_shape()
     with s.begin_shape(sketch.POINTS):
@@ -272,8 +274,10 @@ slideshow:
   slide_type: ''
 ---
 def setup():
-    point1 = Point(30, 70)
-    point2 = Point(70, 30)
+    py5.size(300, 300)
+
+    point1 = Point(130, 210)
+    point2 = Point(210, 130)
 
     points1 = py5.convert_shape(point1)
     points2 = py5.convert_shape(point2, sigma=10)
