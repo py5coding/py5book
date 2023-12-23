@@ -35,12 +35,13 @@ and [shape](https://github.com/py5coding/py5generator/blob/main/py5_resources/py
 customizations for additional insight and examples. You can also ask for help in
 [GitHub Discussions](https://github.com/py5coding/py5generator/discussions).
 
-Your custom integration will require two functions. The first function is a predicate function
-that accepts a Python object as its parameter and return True or False to indicate if the object
-is convertable by your custom integration. The second function must accept the same Python
-object and `**kwargs` parameters, and return an object compatible with py5.
+Your custom integration will require you to create two functions. The first function is a
+predicate function that accepts a Python object as its parameter and return True or False
+to indicate if the object is convertable by your custom integration. The second function
+must accept the same Python object and `**kwargs` parameters, and return an object compatible
+with py5.
 
-Your custom integrations will always take presidence over the builtin integrations.
+Your custom integrations will always take presidence over py5's builtin integrations.
 
 We will begin with some imports needed for our examples.
 
@@ -83,9 +84,9 @@ def pillow_image_to_ndarray_precondition(obj):
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 The second function's parameters will be the object to be converted and `**kwargs` parameters.
-It should not return a Py5Image object. Instead, it should return a special `NumpyImageArray`
-object or it should return the path to an image saved to disk that can be read and loaded by
-py5.
+It should not return a Py5Image object. Instead, it should either return a special
+`NumpyImageArray` object or it should return the path to an image saved to disk that can
+be read and loaded by py5.
 
 The `NumpyImageArray` class is a special class py5 uses internally to manage image data in
 numpy arrays. When creating an instance of `NumpyImageArray`, the first parameter should be
@@ -122,8 +123,8 @@ def pillow_image_to_ndarray_converter(img, **kwargs):
 
 The last step is to register the pair of functions with py5. After
 registering, when the [](/reference/sketch_convert_image) method is
-called, it will use the conversion function we wrote to convert PIL
-Image objects.
+called, it will use this new conversion function we wrote to convert
+PIL Image objects.
 
 ```{code-cell} ipython3
 ---
@@ -208,14 +209,13 @@ time.sleep(0.5)
 
 ## Custom Integrations for Shape Conversion
 
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
+For our shape conversion example, we will create a custom integration that
+converts shapely Point objects into clouds of gaussian distributed points.
+We will support keyword arguments for the standard deviation and count of
+the points in the cloud.
 
-```
+First we create our predicate function. It will check if an object is a shapely
+Point object and return True or False.
 
 ```{code-cell} ipython3
 ---
@@ -227,16 +227,20 @@ def shapely_point_precondition(obj):
     return isinstance(obj, Point)
 ```
 
+The second function's parameters will be a sketch instance, the object to be converted,
+and `**kwargs` parameters. The conversion function must return a new Py5Shape object
+to be returned by [](/reference/sketch_convert_shape).
+
 ```{code-cell} ipython3
 ---
 editable: true
 slideshow:
   slide_type: ''
 ---
-# draw shapely points as a group of gaussian distributed points
 def shapely_point_converter(sketch, obj, **kwargs):
-    sigma = kwargs.get('sigma', 25)
-    points = sigma * np.random.randn(2500, 2) + [obj.x, obj.y]
+    count = kwargs.get('count', 2500)
+    stdev = kwargs.get('stdev', 25)
+    points = stdev * np.random.randn(count, 2) + [obj.x, obj.y]
 
     s = sketch.create_shape()
     with s.begin_shape(sketch.POINTS):
@@ -280,7 +284,7 @@ def setup():
     point2 = Point(210, 130)
 
     points1 = py5.convert_shape(point1)
-    points2 = py5.convert_shape(point2, sigma=10)
+    points2 = py5.convert_shape(point2, count=5000, stdev=10)
     py5.shape(points1)
     py5.shape(points2)
 ```
@@ -333,14 +337,9 @@ time.sleep(0.5)
 
 ## Share Your Ideas!
 
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
-2+2
-```
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+# 2+2
 
 ```{code-cell} ipython3
 ---
