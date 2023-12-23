@@ -342,8 +342,4 @@ for Python libraries we aren't familiar with that can further
 enhance py5's capabilities. If you know of a Python library
 that you think would be a good fit, please let us know in
 [GitHub Discussions](https://github.com/py5coding/py5generator/discussions)
-or elsewhere on Social Media.
-
-```{code-cell} ipython3
-
-```
+or elsewhere on Social Media!
