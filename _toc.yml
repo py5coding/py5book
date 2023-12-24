@@ -19,9 +19,14 @@ parts:
   - file: content/processing_mode
   - file: content/importing_py5_code
 
-- caption: Python Ecosystem Integrations
+- caption: Tutorials
   chapters:
-    - file: integrations/python_ecosystem_integrations
+  - file: tutorials/intro_to_py5_and_python
+    sections:
+    - glob: tutorials/intro_to_py5_and_python_*
+
+  - file: integrations/python_ecosystem_integrations
+    sections:
     - file: integrations/colors
     - file: integrations/matplotlib
     - file: integrations/numpy
@@ -29,12 +34,6 @@ parts:
     - file: integrations/trimesh
     - file: integrations/cairo
     - file: integrations/custom_integrations
-
-- caption: Tutorials
-  chapters:
-  - file: tutorials/intro_to_py5_and_python
-    sections:
-    - glob: tutorials/intro_to_py5_and_python_*
 
   - file: tutorials/jupyter
     sections:
