@@ -36,12 +36,12 @@ customizations for additional insight and examples. You can also ask for help in
 [GitHub Discussions](https://github.com/py5coding/py5generator/discussions).
 
 Your custom integration will require you to create two functions. The first function is a
-predicate function that accepts a Python object as its parameter and return `True` or `False`
-to indicate if the object is convertable by your custom integration. The second function
+predicate function that accepts a Python object as its parameter and returns `True` or `False`
+to indicate if the object is convertible by your custom integration. The second function
 must accept the same Python object and `**kwargs` parameters, and return an object compatible
 with py5.
 
-Your custom integrations will always take presidence over py5's builtin integrations.
+Your custom integrations will always take precedence over py5's builtin integrations.
 
 We will begin with some imports needed for our examples.
 
@@ -104,7 +104,7 @@ If it is more convenient, your code can save the converted image to disk in a te
 The Python library [tempfile](https://docs.python.org/3/library/tempfile.html) can help with
 this.
 
-The below conversion function is very similar to py5's built-in customization for PIL Image
+The conversion function below is very similar to py5's built-in customization for PIL Image
 objects.
 
 ```{code-cell} ipython3
