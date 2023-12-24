@@ -36,7 +36,7 @@ customizations for additional insight and examples. You can also ask for help in
 [GitHub Discussions](https://github.com/py5coding/py5generator/discussions).
 
 Your custom integration will require you to create two functions. The first function is a
-predicate function that accepts a Python object as its parameter and return True or False
+predicate function that accepts a Python object as its parameter and return `True` or `False`
 to indicate if the object is convertable by your custom integration. The second function
 must accept the same Python object and `**kwargs` parameters, and return an object compatible
 with py5.
@@ -68,7 +68,7 @@ converts PIL Image objects and by default rotates them 180 degrees. We will
 also support a keyword argument to rotate the image by a different angle.
 
 First we create our predicate function. It will simply check if an object is a PIL
-Image object and return True or False. This function is identical to py5's built-in
+Image object and return `True` or `False`. This function is identical to py5's built-in
 customization for PIL Image objects.
 
 ```{code-cell} ipython3
@@ -83,12 +83,14 @@ def pillow_image_to_ndarray_precondition(obj):
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-The second function's parameters will be the object to be converted and `**kwargs` parameters.
-It should not return a Py5Image object. Instead, it should either return a special
-`NumpyImageArray` object or it should return the path to an image saved to disk that can
-be read and loaded by py5.
+The second function's parameters will be a sketch instance, the object to be converted,
+and `**kwargs` parameters. You do not have to return a `Py5Image` object. Instead, it is
+simpler and less coding for you to return a special `NumpyImageArray` object or just
+return the path (as a string or a `pathlib.Path` instance) to an image saved to disk that
+can be read and loaded by py5. If for some reason these options are not ideal for what
+you want to do, you can create the `Py5Image` object anyway and return that.
 
-The `NumpyImageArray` class is a special class py5 uses internally to manage image data in
+This `NumpyImageArray` class is a special class py5 uses internally to manage image data in
 numpy arrays. When creating an instance of `NumpyImageArray`, the first parameter should be
 the numpy array with three dimensions. The first two dimensions should be the image's vertical
 and horizontal dimensions, respectively. The third should be the image's color channels.
@@ -111,7 +113,7 @@ editable: true
 slideshow:
   slide_type: ''
 ---
-def pillow_image_to_ndarray_converter(img, **kwargs):
+def pillow_image_to_ndarray_converter(sketch, img, **kwargs):
     rotate = kwargs.get('rotate', 180)
     if img.mode not in ["RGB", "RGBA"]:
         img = img.convert(mode="RGB")
@@ -210,12 +212,12 @@ time.sleep(0.5)
 ## Custom Integrations for Shape Conversion
 
 For our shape conversion example, we will create a custom integration that
-converts shapely Point objects into clouds of gaussian distributed points.
+converts shapely `Point` objects into clouds of gaussian distributed points.
 We will support keyword arguments for the standard deviation and count of
 the points in the cloud.
 
 First we create our predicate function. It will check if an object is a shapely
-Point object and return True or False.
+Point object and return `True` or `False`.
 
 ```{code-cell} ipython3
 ---
@@ -228,7 +230,7 @@ def shapely_point_precondition(obj):
 ```
 
 The second function's parameters will be a sketch instance, the object to be converted,
-and `**kwargs` parameters. The conversion function must return a new Py5Shape object
+and `**kwargs` parameters. The conversion function must return a new `Py5Shape` object
 to be returned by [](/reference/sketch_convert_shape).
 
 ```{code-cell} ipython3
@@ -254,7 +256,7 @@ def shapely_point_converter(sketch, obj, **kwargs):
 We again register the pair of functions with py5. When
 the [](/reference/sketch_convert_shape) method is called, it will
 use the conversion function we wrote to convert shapely
-Point objects.
+`Point` objects.
 
 ```{code-cell} ipython3
 ---
@@ -269,7 +271,7 @@ py5.register_shape_conversion(
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-Now let's create a Sketch that uses our shapely Point conversion functionality.
+Now let's create a Sketch that uses our shapely `Point` conversion functionality.
 
 ```{code-cell} ipython3
 ---
