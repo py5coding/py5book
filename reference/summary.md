@@ -56,6 +56,7 @@
 
 * [create_shape()](/reference/sketch_create_shape) - Used to define a new empty Py5Shape object.
 * [load_shape()](/reference/sketch_load_shape) - Loads SVG or OBJ geometry making it available as a Py5Shape object.
+* [convert_shape()](/reference/sketch_convert_shape) - Converts Python objects into Py5Shape objects.
 * [shape()](/reference/sketch_shape) - Draws shapes to the display window.
 * [shape_mode()](/reference/sketch_shape_mode) - Modifies the location from which shapes draw.
 * [Py5Shape class](/reference/py5shape) - Datatype for storing shapes. Allows loading and displaying SVG and OBJ shapes.
