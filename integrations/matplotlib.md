@@ -86,7 +86,7 @@ to choose from. Here we are using "ggplot" with the "fast" style to improve
 [performance](https://matplotlib.org/stable/users/explain/artists/performance.html#using-the-fast-style).
 
 We will not use the matplotlib Jupyter Notebook magic `%matplotlib inline`. It isn't necessary
-for this example and it seems to confict with the code py5 uses to run correctly on OSX.
+for this example and it seems to conflict with the code py5 uses to run correctly on OSX.
 
 ```{code-cell} ipython3
 ---
@@ -268,7 +268,7 @@ Figures is in general a bad idea.
 The second change is to recycle the Py5Image object. The
 [](/reference/sketch_convert_image) method lets us provide a Py5Image
 object to write the converted image data into. The Py5Image object must
-be the correct size. Recycling one Py5Image object in this way is lets
+be the correct size. Recycling one Py5Image object in this way lets
 us skip the repeated object creation of new Py5Image objects and garbage
 collection of old Py5Image objects.
 
@@ -675,11 +675,11 @@ time.sleep(1)
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 The above example used `py5.mpl_cmaps`, py5's built-in dictionary of
-matplotlib's provided Colormaps. We could have just as easily used the
+matplotlib provided Colormaps. We could have just as easily used the
 string "ocean" there, but like named colors, it is easier to not have
 to remember the list of available Colormap names.
 
-Observe the call to `py5.background()`, which used a named color.
+Observe the call to `py5.background()`, which uses a named color.
 Non-numeric values will bypass the Colormap functionality.
 
 Here's a screenshot of what this example looks like. As you can see, the
@@ -711,7 +711,7 @@ time.sleep(0.5)
 
 ### Creating Colormaps
 
-You are not limited to matplotlib's build-in colormaps. If you like,
+You are not limited to matplotlib's built-in colormaps. If you like,
 you can pass [](/reference/sketch_color_mode) a matplotlib Colormap
 object from one of
 [matplotlib's 3rd party libraries](https://matplotlib.org/mpl-third-party/#colormaps-and-styles)

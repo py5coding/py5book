@@ -99,7 +99,7 @@ SVG(svg_code)
 
 Now let's use this in a Sketch. Notice we are passing the SVG image path to
 [](/reference/sketch_convert_image). It will read the SVG file, and then the cairosvg
-library will send it to Cairo for rastorization via cairocffi. The method call
+library will send it to Cairo for rasterization via cairocffi. The method call
 returns a `Py5Image` object.
 
 ```{code-cell} ipython3

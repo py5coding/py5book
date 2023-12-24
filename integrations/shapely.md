@@ -32,7 +32,7 @@ pip install shapely
 conda install shapely --channel conda-forge
 ```
 
-Refer to [Shapely Installation page](https://shapely.readthedocs.io/en/stable/installation.html)
+Refer to the [Shapely Installation page](https://shapely.readthedocs.io/en/stable/installation.html)
 for more information.
 
 Pro tip: DO NOT install Shapely from the default conda channel. You may end up
@@ -172,7 +172,7 @@ It's also upside down compared to what we saw when we created it:
 polygon1
 ```
 
-Why is is that?
+Why is that?
 
 To understand this, consider py5's coordinate system. The origin is
 in the upper left corner of the Sketch window. The positive x axis
@@ -237,7 +237,7 @@ The `flip_y_axis` argument makes them look the same, but be warned: if
 you are working with multiple shapes, all with different sizes, using
 this feature may create confusing problems for you to debug. It is
 better to use Shapely shapes with py5's coordinate system in mind and
-ignore how Shapely orients shapes when it displays them in this notebook.
+ignore how Shapely orientates shapes when it displays them in this notebook.
 
 Internally, the `flip_y_axis` keyword argument is using the following
 Shapely code to flip the object relative to the object's center. This code

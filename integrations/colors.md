@@ -143,7 +143,7 @@ pass them to the [](/reference/sketch_fill) method.
 
 As you can see below, colors in the HSL model become whiter as
 the luminance approaches 100%. In the HSB model, colors become
-brigher forms of the given hue.
+brighter forms of the given hue.
 
 ```{code-cell} ipython3
 ---
@@ -168,7 +168,7 @@ time.sleep(0.5)
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-The remainder of the color features described on this page built-in to py5
+The remainder of the color features described on this page are built-in to py5
 and are independent of the colour library.
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
@@ -447,7 +447,7 @@ py5_tools.screenshot()
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-Never again will py5 users have to decypher the meaning of numbers like -1714657741.
+Never again will py5 users have to decipher the meaning of numbers like -1714657741.
 
 ```{code-cell} ipython3
 ---

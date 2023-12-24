@@ -24,7 +24,7 @@ contributions to the scientific community cannot be overstated.
 Py5 is well positioned to be used for numerical computing because of its
 close ties with numpy.
 
-Numpy is one of py5's dependencies, so it will always installed alongside
+Numpy is one of py5's dependencies, so it will always be installed alongside
 py5.
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
@@ -48,7 +48,7 @@ access to numpy.
 In the Python world, direct pixel manipulation is typically
 done with a 3 dimensional array. The 3 dimensions represent
 the vertical and horizontal positioning of the pixel and the
-pixels's color, split into several color channels.
+pixel's color, split into several color channels.
 
 To provide analogous functionality, py5 offers the 3
 dimensional array `np_pixels`. This is actualized in 
@@ -292,7 +292,7 @@ colors will be incorrect.
 
 It is best to illustrate what this means for you, the py5 coder,
 with a brief example. We will explore this by loading an image of
-the py5 logo and using it understand Color Channel Ordering.
+the py5 logo and using it to understand Color Channel Ordering.
 
 To begin, we will load the image with the PIL, the Python Imaging
 Library.
@@ -624,7 +624,7 @@ be overlooked.
 
 If you are using py5 and need to create a shape with
 thousands of vertices, one approach for implementing this
-would involve a `for` loop that created each vertex,
+would involve a `for` loop that creates each vertex,
 one at a time.
 
 Unfortunately, that py5 code would execute slowly.
@@ -772,7 +772,7 @@ py5.run_sketch()
 This code is very similar to before, except that we are using numpy arrays
 instead of doing calculations on one number a time.
 
-We start by creating numpy arrays `angles` and `radii` that contain the all
+We start by creating numpy arrays `angles` and `radii` that contain all
 of the vertex angles and all of the vertex radii. We do that with the numpy
 methods [arange()](https://numpy.org/doc/stable/reference/generated/numpy.arange.html#numpy-arange)
 and [linspace()](https://numpy.org/doc/stable/reference/generated/numpy.linspace.html#numpy-linspace).
@@ -819,7 +819,7 @@ time.sleep(0.5)
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-Py5 provide many methods for bulk operations. Here is the complete list:
+Py5 provides many methods for bulk operations. Here is the complete list:
 
 * [](/reference/sketch_points)
 * [](/reference/sketch_lines)
