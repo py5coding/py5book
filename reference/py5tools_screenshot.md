@@ -14,7 +14,7 @@ Take a screenshot of a running Sketch.
 import time
 import py5_tools
 
-py5.run_sketch()
+py5.run_sketch(block=False)
 # take a screenshot of the running sketch after a two second delay
 time.sleep(2)
 img = py5_tools.screenshot()
@@ -47,4 +47,4 @@ screenshot(
 ) -> PIL_Image
 ```
 
-Updated on November 27, 2023 03:49:48am UTC
+Updated on December 25, 2023 17:40:34pm UTC

@@ -15,7 +15,7 @@ import skvideo.io
 import py5_tools
 
 
-py5.run_sketch()
+py5.run_sketch(block=False)
 
 writer = skvideo.io.FFmpegWriter(
     '/tmp/video.mp4',
@@ -63,4 +63,4 @@ offline_frame_processing(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 25, 2023 17:40:34pm UTC

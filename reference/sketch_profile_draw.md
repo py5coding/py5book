@@ -11,9 +11,6 @@ Profile the execution times of the draw function with a line profiler.
 </div><div class="example-cell-code">
 
 ```python
-import time
-
-
 def draw():
     py5.stroke(py5.random_int(255), py5.random_int(255), py5.random_int(255))
     # this draw function should use `points` instead
@@ -21,14 +18,12 @@ def draw():
         py5.point(py5.random_int(py5.width), py5.random_int(py5.height))
 
 
+def key_pressed():
+    py5.print_line_profiler_stats()
+
+
 py5.profile_draw()
 py5.run_sketch()
-
-
-# let the sketch run for a bit to accumulate data
-time.sleep(10)
-
-py5.print_line_profiler_stats()
 ```
 
 </div></div>
@@ -49,4 +44,4 @@ To profile a other functions besides draw, use [](sketch_profile_functions). To 
 profile_draw() -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 25, 2023 17:40:34pm UTC

@@ -13,7 +13,7 @@ Save a running Sketch's frames to a directory.
 ```python
 import py5_tools
 
-py5.run_sketch()
+py5.run_sketch(block=False)
 # save the next 50 frames to the `/tmp/frames` directory
 frames = py5_tools.save_frames('/tmp/frames', limit=50, start=0)
 ```
@@ -53,4 +53,4 @@ save_frames(
 ) -> None
 ```
 
-Updated on April 15, 2023 22:56:12pm UTC
+Updated on December 25, 2023 17:40:34pm UTC

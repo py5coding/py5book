@@ -11,9 +11,6 @@ Profile the execution times of the Sketch's functions with a line profiler.
 </div><div class="example-cell-code">
 
 ```python
-import time
-
-
 def setup():
     # to load images from the web, use `request_image` instead
     img = py5.load_image('http://py5coding.org/files/apples.jpg')
@@ -21,11 +18,12 @@ def setup():
     py5.image(img, 10, 10, py5.width - 10, py5.height - 10)
 
 
+def key_pressed():
+    py5.print_line_profiler_stats()
+
+
 py5.profile_functions(['setup'])
 py5.run_sketch()
-
-time.sleep(5)
-py5.print_line_profiler_stats()
 ```
 
 </div></div>
@@ -48,4 +46,4 @@ profile_functions(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 25, 2023 17:40:34pm UTC

@@ -19,7 +19,7 @@ def setup():
 
 print("the sketch is ready:", py5.is_ready)
 
-py5.run_sketch()
+py5.run_sketch(block=False)
 
 print("the sketch is running:", py5.is_running)
 
@@ -40,4 +40,4 @@ print("did the sketch exit from an error?", py5.is_dead_from_error)
 
 Boolean value reflecting if the Sketch is in the ready state. This will be `True` before [](sketch_run_sketch) is called. It will be `False` while the Sketch is running and after it has exited.
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 25, 2023 17:40:34pm UTC

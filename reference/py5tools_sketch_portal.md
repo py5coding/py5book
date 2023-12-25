@@ -13,7 +13,7 @@ Creates a portal widget to continuously stream frames from a running Sketch into
 ```python
 import py5_tools
 
-py5.run_sketch()
+py5.run_sketch(block=False)
 # stream frames from the currently running sketch for 5 seconds
 portal = py5_tools.sketch_portal(time_limit=5)
 
@@ -59,4 +59,4 @@ sketch_portal(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 25, 2023 17:40:34pm UTC

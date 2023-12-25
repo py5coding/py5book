@@ -13,7 +13,7 @@ Capture frames from a running Sketch.
 ```python
 import py5_tools
 
-py5.run_sketch()
+py5.run_sketch(block=False)
 # capture 10 frames from the currently running sketch
 frames = py5_tools.capture_frames(count=10, period=1)
 ```
@@ -65,4 +65,4 @@ capture_frames(
 ) -> list[PIL_Image]
 ```
 
-Updated on October 06, 2023 19:34:57pm UTC
+Updated on December 25, 2023 17:40:34pm UTC

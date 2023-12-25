@@ -13,7 +13,7 @@ Create an animated GIF using a running Sketch.
 ```python
 import py5_tools
 
-py5.run_sketch()
+py5.run_sketch(block=False)
 # create a 10 frame animated GIF saved to '/tmp/animated.gif'
 py5_tools.animated_gif('/tmp/animated.gif', count=10, period=1, duration=0.5)
 ```
@@ -69,4 +69,4 @@ animated_gif(
 ) -> None
 ```
 
-Updated on October 06, 2023 19:34:57pm UTC
+Updated on December 25, 2023 17:40:34pm UTC
