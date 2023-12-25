@@ -48,6 +48,8 @@ Sets a `Py5Shape` object's ambient reflectance. This is combined with the ambien
 
 This method can only be used within a [](py5shape_begin_shape) and [](py5shape_end_shape) pair. The ambient color setting will be applied to vertices added after the call to this method.
 
+This method has additional color functionality that is not reflected in the method's signatures. For example, you can pass the name of a color (e.g. "green", "mediumpurple", etc). Look at the online ["All About Colors"](/integrations/colors) Python Ecosystem Integration tutorial for more information.
+
 Underlying Processing method: PShape.ambient
 
 ## Signatures
@@ -71,4 +73,4 @@ ambient(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 25, 2023 16:36:33pm UTC

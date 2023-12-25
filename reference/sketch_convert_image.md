@@ -38,6 +38,8 @@ The `convert_image()` method has builtin support for the conversion of `PIL.Imag
 
 The caller can optionally pass an existing Py5Image object to put the converted image into using the `dst` parameter. This can have performance benefits in code that would otherwise continuously create new Py5Image objects. The converted image width and height must match that of the recycled Py5Image object.
 
+The `convert_image()` method has builtin support for the conversion of matplotlib charts and Cairo surfaces. Look at the online ["Charts, Plots, and Matplotlib"](/integrations/matplotlib) and ["SVG Images and Cairo"](/integrations/cairo) Python Ecosystem Integration tutorials for more information. You can also create your own custom integrations. Look at the online ["Custom Integrations"](/integrations/custom_integrations) Python Ecosystem Integration tutorial to learn more.
+
 ## Signatures
 
 ```python
@@ -49,4 +51,4 @@ convert_image(
 ) -> Py5Image
 ```
 
-Updated on October 06, 2023 13:36:04pm UTC
+Updated on December 25, 2023 17:02:43pm UTC

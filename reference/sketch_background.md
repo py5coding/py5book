@@ -51,10 +51,12 @@ def setup():
 ## Description
 
 The `background()` function sets the color used for the background of the py5 window. The default background is light gray. This function is typically used within `draw()` to clear the display window at the beginning of each frame, but it can be used inside `setup()` to set the background on the first frame of animation or if the backgound need only be set once.
- 
+
 An image can also be used as the background for a Sketch, although the image's width and height must match that of the Sketch window. Images used with `background()` will ignore the current [](sketch_tint) setting. To resize an image to the size of the Sketch window, use `image.resize(width, height)`.
- 
+
 It is not possible to use the transparency `alpha` parameter with background colors on the main drawing surface. It can only be used along with a `Py5Graphics` object and [](sketch_create_graphics).
+
+This method has additional color functionality that is not reflected in the method's signatures. For example, you can pass the name of a color (e.g. "green", "mediumpurple", etc). Look at the online ["All About Colors"](/integrations/colors) Python Ecosystem Integration tutorial for more information.
 
 Underlying Processing method: [background](https://processing.org/reference/background_.html)
 
@@ -104,4 +106,4 @@ background(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 25, 2023 16:36:33pm UTC

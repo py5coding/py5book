@@ -32,6 +32,8 @@ def setup():
 
 Extracts the brightness value from a color.
 
+This method has additional color functionality that is not reflected in the method's signatures. For example, you can pass the name of a color (e.g. "green", "mediumpurple", etc). Look at the online ["All About Colors"](/integrations/colors) Python Ecosystem Integration tutorial for more information.
+
 Underlying Processing method: [brightness](https://processing.org/reference/brightness_.html)
 
 ## Signatures
@@ -43,4 +45,4 @@ brightness(
 ) -> float
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 25, 2023 16:36:33pm UTC

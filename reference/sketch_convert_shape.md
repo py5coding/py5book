@@ -39,7 +39,7 @@ This method is comparable to [](sketch_load_shape), except instead of reading sh
 
 Passed shape object types must be known to py5's shape conversion tools. New object types and functions to effect conversions can be registered with [](py5functions_register_shape_conversion).
 
-The `convert_shape()` method has builtin support for the conversion of shapely and trimesh objects. This will allow users to explore the geometry capabilities of those libraries.
+The `convert_shape()` method has builtin support for the conversion of shapely and trimesh objects. This will allow users to explore the geometry capabilities of those libraries. Look at the online ["2D Shapes and Shapely"](/integrations/shapely) and ["3D Shapes and Trimesh"](/integrations/trimesh) Python Ecosystem Integration tutorials for more information. You can also create your own custom integrations. Look at the online ["Custom Integrations"](/integrations/custom_integrations) Python Ecosystem Integration tutorial to learn more.
 
 ## Signatures
 
@@ -50,4 +50,4 @@ convert_shape(
 ) -> Py5Shape
 ```
 
-Updated on October 06, 2023 20:02:22pm UTC
+Updated on December 25, 2023 17:02:43pm UTC

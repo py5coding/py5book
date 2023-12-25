@@ -33,6 +33,8 @@ def draw():
 
 The `set_fill()` method defines the fill color of a `Py5Shape`. This method is used after shapes are created or when a shape is defined explicitly (e.g. `create_shape(RECT, 20, 20, 60, 60)`) as shown in the example. When a shape is created with [](py5shape_begin_shape) and [](py5shape_end_shape), its attributes may be changed with [](py5shape_fill) and [](py5shape_stroke) between the calls to [](py5shape_begin_shape) and [](py5shape_end_shape). However, after the shape is created, only the `set_fill()` method can define a new fill value for the `Py5Shape`.
 
+This method has additional color functionality that is not reflected in the method's signatures. For example, you can pass the name of a color (e.g. "green", "mediumpurple", etc). Look at the online ["All About Colors"](/integrations/colors) Python Ecosystem Integration tutorial for more information.
+
 Underlying Processing method: [PShape.setFill](https://processing.org/reference/PShape_setFill_.html)
 
 ## Signatures
@@ -55,4 +57,4 @@ set_fill(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 25, 2023 16:36:33pm UTC

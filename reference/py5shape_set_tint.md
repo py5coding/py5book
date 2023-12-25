@@ -73,6 +73,8 @@ This method differs from [](py5shape_tint) in that it is only to be used outside
 
 Calling this method with the boolean parameter `False` will delete the assigned tint. A later call with the boolean parameter `True` will not restore it; you must reassign the tint color, as shown in the second example.
 
+This method has additional color functionality that is not reflected in the method's signatures. For example, you can pass the name of a color (e.g. "green", "mediumpurple", etc). Look at the online ["All About Colors"](/integrations/colors) Python Ecosystem Integration tutorial for more information.
+
 Underlying Processing method: PShape.setTint
 
 ## Signatures
@@ -95,4 +97,4 @@ set_tint(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 25, 2023 16:36:33pm UTC

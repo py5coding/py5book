@@ -6,6 +6,8 @@ Sets the specular color of the materials used for shapes drawn to the Py5Graphic
 
 Sets the specular color of the materials used for shapes drawn to the Py5Graphics drawing surface, which sets the color of highlights. Specular refers to light which bounces off a surface in a preferred direction (rather than bouncing in all directions like a diffuse light). Use in combination with [](py5graphics_emissive), [](py5graphics_ambient), and [](py5graphics_shininess) to set the material properties of shapes.
 
+This method has additional color functionality that is not reflected in the method's signatures. For example, you can pass the name of a color (e.g. "green", "mediumpurple", etc). Look at the online ["All About Colors"](/integrations/colors) Python Ecosystem Integration tutorial for more information.
+
 This method is the same as [](sketch_specular) but linked to a `Py5Graphics` object. To see example code for how it can be used, see [](sketch_specular).
 
 Underlying Processing method: PGraphics.specular
@@ -31,4 +33,4 @@ specular(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 25, 2023 16:36:33pm UTC

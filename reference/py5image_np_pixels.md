@@ -35,4 +35,6 @@ Much like the [](py5image_pixels) array, there are load and update methods that 
 
 To set the entire contents of `np_pixels[]` to the contents of another equally sized numpy array, consider using [](py5image_set_np_pixels).
 
-Updated on March 06, 2023 02:49:26am UTC
+Look at the online ["Numpy, Arrays, and Images"](/integrations/numpy) Python Ecosystem Integration tutorial for more information about how to make best use of `np_pixels[]`.
+
+Updated on December 25, 2023 17:02:43pm UTC

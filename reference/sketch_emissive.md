@@ -32,6 +32,8 @@ def setup():
 
 Sets the emissive color of the material used for drawing shapes drawn to the screen. Use in combination with [](sketch_ambient), [](sketch_specular), and [](sketch_shininess) to set the material properties of shapes.
 
+This method has additional color functionality that is not reflected in the method's signatures. For example, you can pass the name of a color (e.g. "green", "mediumpurple", etc). Look at the online ["All About Colors"](/integrations/colors) Python Ecosystem Integration tutorial for more information.
+
 Underlying Processing method: [emissive](https://processing.org/reference/emissive_.html)
 
 ## Signatures
@@ -55,4 +57,4 @@ emissive(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 25, 2023 16:36:33pm UTC
