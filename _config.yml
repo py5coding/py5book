@@ -30,6 +30,7 @@ repository:
 launch_buttons:
   # notebook_interface: "classic"
   thebe: true
+  binderhub_url: "https://mybinder.org"
 
 # Add GitHub buttons to your book
 html:
