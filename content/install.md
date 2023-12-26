@@ -258,15 +258,12 @@ information to work through any difficulties.
 #### Create Anaconda Environment
 
 First you must create an Anaconda environment to install the Python
-packages into. Below, we create an environment called `py5coding` with
-Python 3.8+. Note that py5 does not support earlier versions of Python.
-Later versions seem to work OK but have not been extensively tested.
-
-The below command will also install Jupyter Lab, which py5 is designed to work
-well with.
+packages into. Below, we create a Python environment called `py5coding` with
+Python 3.10. This command will also install Jupyter Lab and py5's required and
+optional dependencies from Anaconda.
 
 ``` bash
-conda create -n py5coding python=3.10 jupyterlab
+conda create -n py5coding python=3.10 colour>=0.1.5 jpype1>=1.4 jupyterlab line_profiler>=4.0 matplotlib>=3.7 numpy>=1.24 pillow>=9.5 pip shapely>=2.0 trimesh>=3.23
 ```
 
 After creating the `py5coding` environment you must \"activate\" it so that the
@@ -361,10 +358,10 @@ conda install -c conda-forge cairo cairosvg
 
 #### Install py5 library
 
-Finally, install the py5 library with its required and optional dependencies.
+Finally, install the py5 and py5jupyter libraries.
 
 ``` bash
-pip install py5[extras]
+pip install py5 py5jupyter
 ```
 
 If you are on Windows or on a Mac, you may get an error relating to the
