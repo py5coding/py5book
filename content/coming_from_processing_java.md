@@ -48,9 +48,11 @@ Maybe you want to port some existing Processing Java code to Python + py5?  The 
 
 - Comments with `//` in Java become comments with `#`. Multiline comments with `/*…*/` can be converted to *docstrings*, with triple quotes in Python, `""" … """`.
 
-- Java is a *static typing  language* and Python is a *dynamic typing language* that means we will remove all type declarations. Remove `int`, `float`, `String`, `color`, `boolean` from variable declarations. For example, `int i = 0;` becomes `i = 0`.
+- Java is a *static typing language* and Python is a *dynamic typing language* that means we can remove all type declarations and everything should work fine, but, alternatively, one can keep the type information as [type annotations](https://docs.python.org/3/library/typing.html) that can then be used by a static type checking tool (like `mypy` or the checkers in some IDEs).
 
-- We should also remove `void` or any type declaration from a function definition, replacing it with Python's `def`. Also remove the type declaration from the function parameters.
+- For variables, you either simply remove the type `int`, `float`, `String`, `color`, `boolean` from variable declarations (for example, `int i = 0;` becomes `i = 0`), otherwise you can write `i : int = 0`, in this case `String` should be written `str`, `Boolean` will become `bool` and you might have to figure out a few other different class/type names. 
+
+- On function definitions, we should remove `void` or any return type declaration, replacing it with Python's `def`. You can optionaly annotate the return type using `-> T:` as shown below. The type declaration of parameters should be removed or should follow the same pattern as the annotations for variables.
 
    **Java**
   
@@ -64,6 +66,13 @@ Maybe you want to port some existing Processing Java code to Python + py5?  The 
   
   ```python
   def average(a, b):
+      return (a + b) / 2
+  ```
+
+**Type annotated Python**
+
+  ```python
+  def average(a: float, b: float) -> float:
       return (a + b) / 2
   ```
 
