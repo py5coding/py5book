@@ -18,7 +18,9 @@ Processing's `get()` and `set()` functions to manipulate pixels become `get_pixe
 
 Instead of `frameRate`, use the [frame_rate()](/reference/sketch_frame_rate) function to set a target frame rate and the [get_frame_rate()](/reference/sketch_get_frame_rate) function to find out the current frame rate (an exponential moving average).
 
-**Please have a look at the [py5 Reference Summary](/reference/summary), it will help you find any missing names**
+```{important}
+Please have a look at the [py5 Reference Summary](/reference/summary), it will help you find any missing names.
+```
 
 ## How about the P-Classes?
 
@@ -46,7 +48,7 @@ Maybe you want to port some existing Processing Java code to Python + py5?  The 
 
 - Remove the `;` at the end of the lines.
 
-- Comments with `//` in Java become comments with `#`. Multiline comments with `/*…*/` can be converted to *docstrings*, with triple quotes in Python, `""" … """`.
+- Comments with `//` in Java become comments with `#`. Multiline comments with `/*...*/` can be converted to *docstrings*, with triple quotes in Python, `""" ... """`.
 
 - Java is a *static typing language* and Python is a *dynamic typing language* that means we can remove all type declarations and everything should work fine, but, alternatively, one can keep the type information as [type annotations](https://docs.python.org/3/library/typing.html) that can then be used by a static type checking tool (like `mypy` or the checkers in some IDEs).
 
@@ -82,7 +84,7 @@ Boolean values in Java are named `true` and `false`, in Python they are `True` a
 
 | Java | Python |
 | ------------------------------------------------ | ------------------------------------------ |
-| `void func() {…}` | `def func():…` |
+| `void func() {...}` | `def func():...` |
 | **`true`** and **`false`** | **`True`** and **`False`** |
 | <code>a <b>&&</b> b</code> (logical AND) | `a` **`and`** `b` |
 | <code>a <b>&#x7C;&#x7C;</b> b</code> (logical OR) | `a` **`or`** `b` |
@@ -90,16 +92,16 @@ Boolean values in Java are named `true` and `false`, in Python they are `True` a
 | `i++` (increment) | `i += 1` |
 | `i--` (decrement) | `i -= 1` |
 | `a <= b && b < c` | `a <= b < c` |
-| `for (int i=0; i<limit; i++) { …` | `for i in range (limit): …` |
-| `for (int i=start; i<limit; i+=step) { …` | `for i in range (start, limit, step): …` |
-| `for (Ball b : arrayListOfBalls) { …` | `for b in list_of_balls: …` |
+| `for (int i=0; i<limit; i++) { ...` | `for i in range(limit): ...` |
+| `for (int i=start; i<limit; i+=step) { ...` | `for i in range(start, limit, step): ...` |
+| `for (Ball b : arrayListOfBalls) { ...` | `for b in list_of_balls: ...` |
 | `fill(#FFCC00) // hexadecimal color notation` | `fill('#FFCC00') # needs ' ' or " "` |
 
 Similar to `null` in Java we have the special value `None` in Python, they are not totally equivalent but it is usually a good guess to make the substitution.
 
 ### Looping with `for`
 
-The simplest case is a `for` based on a counter, such as `for (int i=0; i<limit; i++) { …` which translates into `for i in range(limit): …` and the so-called *for each* loop, shown in the chart, is also very straightforward.
+The simplest case is a `for` based on a counter, such as `for (int i=0; i<limit; i++) { ...` which translates into `for i in range(limit): ...` and the so-called *for each* loop, shown in the chart, is also very straightforward.
 
 But if you have a Java `for` loop with a *float* step, as the `range()` based `for` construct in Python works only with integers, you might want to define a 'special' non-int range generator, or convert it to a `while` loop like in the example below.
 
@@ -108,7 +110,7 @@ But if you have a Java `for` loop with a *float* step, as the `range()` based `f
 ```java
 float angleStep = TWO_PI / 18
 for (float angle=0; angle < TWO_PI; angle += angleStep){ 
-    …
+    ...
 }
 ```
 
@@ -120,7 +122,7 @@ Using a `while` loop
 angle_step = TWO_PI / 18
 angle = 0
 while angle < TWO_PI:
-    …
+    ...
     angle += angle_step
 ```
 
@@ -131,7 +133,7 @@ def frange(start, stop=None, step=1):
     if stop is None:
         stop, start = start, 0
     assert step != 0, "step can't be zero"
-    invalid_limit_error_message =  (
+    invalid_limit_error_message = (
         'start must be smaller than stop for positive step'
         if step > 0 else
         'stop must be smaller than start for negative step'
@@ -145,7 +147,7 @@ def frange(start, stop=None, step=1):
 # and then frange in use...
 step = TWO_PI / 18
 for angle in frange(0, TWO_PI, step):
-    …    
+    ...
 ```
 
 Now an example of a loop made just to get objects from a data structure:
@@ -212,14 +214,14 @@ Note that the `if` condition in Python does not require the parentheses as in Ja
 ```java
 for (int i = 2; i < width-2; i += 2) {
   if ((i% 20) == 0) {
-    stroke (255);
-    line (i, 80, i, height / 2);
+    stroke(255);
+    line(i, 80, i, height / 2);
   } else if ((i% 10) == 0) {
-    stroke (153);
-    line (i, 20, i, 180);
+    stroke(153);
+    line(i, 20, i, 180);
   } else {
-    stroke (102);
-    line (i, height / 2, i, height-20);
+    stroke(102);
+    line(i, height / 2, i, height-20);
   }
 }
 ```
@@ -328,17 +330,17 @@ yspeed float = 2.2; // Speed of the shape
 int xdirection = 1; // Left or Right
 int ydirection = 1; // Top to Bottom
 
-void setup ()
+void setup()
 {
-  size (600, 300);
+  size(600, 300);
   // Set the starting position of the shape
   xpos = width / 2;
   ypos = height / 2;
 }
 
-void draw ()
+void draw()
 {
-  background (102);
+  background(102);
   xpos = xpos + (xspeed * xdirection);
   ypos = ypos + (yspeed * ydirection);
     
@@ -349,7 +351,7 @@ void draw ()
     ydirection * = -1;
   }
 
-  ellipse (xpos, ypos, rad * 2, rad * 2);
+  ellipse(xpos, ypos, rad * 2, rad * 2);
 }
 ```
 
@@ -363,16 +365,16 @@ yspeed = 2.2;   # Speed of the shape
 xdirection = 1; # Left or Right
 ydirection = 1; # Top to Bottom
 
-def setup (): 
-    size (600, 300)
+def setup(): 
+    size(600, 300)
     global xpos, ypos # xpos, ypos are assigned first here in setup
-    noStroke ()
+    noStroke()
     xpos = width / 2
     ypos = height / 2
 
-def draw ():
+def draw():
     global xpos, ypos, xdirection, ydirection # will be changed!
-    background (102)
+    background(102)
     xpos + = xspeed * xdirection
     ypos + = yspeed * ydirection
     
@@ -380,7 +382,7 @@ def draw ():
         xdirection * = -1
     if ypos < rad or height - rad < ypos:
         ydirection * = -1
-    ellipse (xpos, ypos, rad * 2, rad * 2)
+    ellipse(xpos, ypos, rad * 2, rad * 2)
 ```
 
 ### Strings
@@ -470,7 +472,7 @@ def setup():
 
 #### Declaring a class
 
-Class declarations change slightly, roughly, the `def __init__(self …): …` method plays the same initialization role of the *constructor* method of a Java class (the method with the same name as the class). Strictly, the `__init__()` method, which we read like "dunder init", is not a constructor, but you don't have to worry about it. If you are curious, read more about Python's "data model" at the [Python docs](https://docs.python.org/3/reference/datamodel.html#basic-customization).
+Class declarations change slightly, roughly, the `def __init__(self ...): ...` method plays the same initialization role of the *constructor* method of a Java class (the method with the same name as the class). Strictly, the `__init__()` method, which we read like "dunder init", is not a constructor, but you don't have to worry about it. If you are curious, read more about Python's "data model" at the [Python docs](https://docs.python.org/3/reference/datamodel.html#basic-customization).
 
 By convention, you'll add `self` as the first parameter of each method, and then use `self.` to access its members, any methods or attributes, of the class or instance.
 
@@ -497,7 +499,7 @@ class MRect
     t = it;
   }
  
-  void move (float posX, float posY, float damping) {
+  void move(float posX, float posY, float damping) {
     float dif = ypos - posY;
     if (abs(dif) > 1) {
       ypos -= dif/damping;
