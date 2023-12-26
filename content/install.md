@@ -7,8 +7,8 @@ a snag and figure out a solution, tell me about it and I'll update the
 documentation to share what you've learned.
 
 ```{important}
-There are known issues using py5 on Mac computers. Mac users should read
-the [](osx_users) page for more information.
+There are a few manageable issues related to using py5 on Mac computers. Mac
+users should read the [](osx_users) page for more information.
 ```
 
 ## Requirements
@@ -17,16 +17,10 @@ Below are the basic requirements for using py5.
 
 * Python 3.8+
 * Java 17+
-* Cairo (optional)
 
 Python 3.8 is the minimum Python version but you can use a newer version if you
 wish. Java 17 is the minimum Java version but you can install a newer version
 of that as well. The Java Virtual Machine cannot be a headless JVM.
-
-You may not have Java 17 or Python on your computer and you may find that
-[Cairo](https://www.cairographics.org/) can be difficult to install on
-non-Linux machines. If this applies to you, I recommend making your life
-easier by trying the <a href="#anaconda-setup">Anaconda Setup</a>.
 
 The best setup for beginners is to use the
 [Thonny Python Editor](https://thonny.org/) and the
@@ -44,17 +38,33 @@ can install py5 with the below command.
 pip install py5
 ```
 
-### Jupyter Notebooks support
+### Extra Dependencies
 
-If you intend to use py5 with Jupyter Notebooks, you can install py5 and py5jupyter at the same time with this one command:
+If you intend to use py5 with Jupyter Notebooks, you can install py5 and
+py5jupyter at the same time with this one command:
 
 ``` bash
 pip install py5[jupyter]
 ```
 
-The `[jupyter]` suffix tells the Python package installer to install py5's optional py5jupyter library. If you have py5 installed already you can use `pip install py5jupyter`.
+If you want to use py5's [](/integrations/python_ecosystem_integrations), you
+can install py5, py5jupyter, and all of py5's optional dependencies (except for
+[Cairo](https://www.cairographics.org/)) with this command:
 
-Next, you can install one or both of <a href="#jupyter-notebook-kernels">py5's Jupyter Notebook Kernels</a>. To install the <a href="#py5-kernel">py5 kernel</a> for imported mode Sketches, use this command:
+``` bash
+pip install py5[extras]
+```
+
+The `[jupyter]` or `[extras]` suffixes tell the Python package installer to install
+py5's optional dependencies. If you have py5 installed already you can use
+`pip install py5jupyter` or `pip install colour matplotlib py5jupyter shapely trimesh`
+instead.
+
+### Jupyter Notebook Kernels
+
+Next, you can install one or both of <a href="#jupyter-notebook-kernels">py5's
+Jupyter Notebook Kernels</a>. To install the <a href="#py5-kernel">py5 kernel</a>
+for imported mode Sketches, use this command:
 
 ``` bash
 python -m py5jupyter.kernels.py5.install --sys-prefix
@@ -69,8 +79,9 @@ python -m py5jupyter.kernels.py5bot.install --sys-prefix
 ### Optional SVG support with Cairo
 
 You can optionally install [Cairo](https://www.cairographics.org/) and
-[CairoSVG](https://cairosvg.org/) to enable py5's extra SVG support.
-
+[CairoSVG](https://cairosvg.org/) to enable py5's extra SVG support. Installing
+Cairo is a bit of a hassle so don't install it if you aren't going to use it.
+Read the [](/integrations/cairo) documentation page for more information.
 
 <a name="quick-example"></a>
 ## Quick Example
@@ -135,7 +146,7 @@ and create the environment using
 [Anaconda Navigator](https://docs.anaconda.com/anaconda/navigator/).
 
 That environment file contains the below information, telling Anaconda
-to create an environment with Cairo and Jupyter Notebooks.
+to create an environment with Jupyter.
 
 ``` yaml
 name: py5coding
@@ -143,13 +154,16 @@ channels:
   - conda-forge
 dependencies:
   - python=3.10
-  - cairo
-  - cairosvg
-  - jedi
+  - colour
+  - jpype1
   - jupyterlab
   - line_profiler
   - matplotlib
+  - numpy
+  - pillow
   - pip
+  - shapely
+  - trimesh[easy]
   - pip:
       - py5[jupyter]
 ```

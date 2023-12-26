@@ -3,12 +3,15 @@ channels:
   - conda-forge
 dependencies:
   - python=3.10
-  - cairo
-  - cairosvg
-  - jedi
+  - colour
+  - jpype1
   - jupyterlab
   - line_profiler
   - matplotlib
+  - numpy
+  - pillow
   - pip
+  - shapely
+  - trimesh[easy]
   - pip:
       - py5[jupyter]
