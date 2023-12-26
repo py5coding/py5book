@@ -12,25 +12,25 @@ Another thing you should know is that the global `mousePressed` variable becomes
 
 This is because in Python the namespace for variable names and function names is the same. Note also that `keyPressed` becomes `is_key_pressed` for the variable, and `key_pressed()` for the event function.
 
-Processing's `map(value, start, end, target_start, target_end)` is now [`remap()`](https://py5coding.org/reference/sketch_remap.htm) because there is a Python built-in [`map(func, iterable)`](https://docs.python.org/3/library/functions.html#map). Likewise, `filter()` becomes [`apply_filter()`](https://py5coding.org/reference/sketch_apply_filter.htm).
+Processing's `map(value, start, end, target_start, target_end)` is now [](/reference/sketch_remap) because there is a Python built-in [`map(func, iterable)`](https://docs.python.org/3/library/functions.html#map). Likewise, `filter()` becomes [](/reference/sketch_apply_filter).
 
-Processing's `get()` and `set()` functions to manipulate pixels become `get_pixels()` and `set_pixels()`, but you might want to read about `np_pixels` and [`set_np_pixels()`](http://py5coding.org/reference/sketch_set_np_pixels.html). That's because, in Python, `set()` creates a [*set* data structure](https://docs.python.org/3/tutorial/datastructures.html#sets).
+Processing's `get()` and `set()` functions to manipulate pixels become `get_pixels()` and `set_pixels()`, but you might want to read about `np_pixels` and [](/reference/sketch_set_np_pixels). That's because in Python, `set()` creates a [*set* data structure](https://docs.python.org/3/tutorial/datastructures.html#sets).
 
-Instead of `frameRate`, use the [`frame_rate()`](https://py5coding.org/reference/sketch_frame_rate.html) function to set a target frame rate and the [`get_frame_rate()`](https://py5coding.org/reference/sketch_get_frame_rate.html) function to find out the current frame rate (an exponential moving average).
+Instead of `frameRate`, use the [](/reference/sketch_frame_rate) function to set a target frame rate and the [](/reference/sketch_get_frame_rate) function to find out the current frame rate (an exponential moving average).
 
-**Please have a look at the [Reference Summary](https://py5coding.org/reference/summary.html), it will help you find any missing names**
+**Please have a look at the [](/reference/summary), it will help you find any missing names**
 
 ## How about the P-Classes?
 
 Most of Processing high-level objects, like `PFont` for typography fonts, or `PImage`, for image buffers, have an equivalent, a wrapper, in py5. So `Py5Font` does whatever `PFont` does, and `Py5Image` everything `PImage` does.
 
-Then, there is some bonus stuff, `Py5Image` brings in a very helpful new [`numpy` interface for an "array of pixels"](https://py5coding.org/reference/py5image_np_pixels.html).
+Then, there is some bonus stuff, `Py5Image` brings in a very helpful new [`numpy` interface for an "array of pixels"](/reference/py5image_np_pixels).
 
-If you are used to `PVector`, please note that `Py5Vector` is a completely new implementation of vector objects, 2D, 3D and 4D, so it has some different method & attribute names, you won't regret reading the [Py5Vector documentation](https://py5coding.org/reference/py5vector.html).
+If you are used to `PVector`, please note that `Py5Vector` is a completely new implementation of vector objects, 2D, 3D and 4D, so it has some different method & attribute names, you won't regret reading the [](/reference/py5vector) documentation.
 
 ## About the libraries
 
-No`import processing.pdf.*;` is needed for using the PDF features, same with the SVG export, but for other Processing Java libraries... it could be more complicated. Have a look at this [Camera3D tutorial](https://py5coding.org/how_tos/use_camera3D.html).
+No`import processing.pdf.*;` is needed for using the PDF features, same with the SVG export, but for other Processing Java libraries... it could be more complicated. Have a look at this [Camera3D tutorial](/how_tos/use_camera3D).
 
 On the other hand, you can now import Python libraries with the `import` statement, you'll also need it to bring in functions and classes from other *modules* (files) if you split your sketch into several `.py` files.
 
