@@ -12,6 +12,8 @@ kernelspec:
   name: py5
 ---
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 # Welcome to py5!
 
 py5 is a version of [**Processing**][processing] for Python 3.8+. It makes

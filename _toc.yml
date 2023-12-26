@@ -38,7 +38,7 @@ parts:
   - file: tutorials/jupyter
     sections:
     - file: tutorials/jupyter_introducing_py5bot
-    - file: tutorials/jupyter_animation_and_sketch_portals
+    # - file: tutorials/jupyter_animation_and_sketch_portals
     - file: tutorials/jupyter_render_helper_tools
     - file: tutorials/jupyter_notebook_magic_and_special_features
 

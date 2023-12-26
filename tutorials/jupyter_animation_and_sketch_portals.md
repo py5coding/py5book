@@ -5,18 +5,20 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.4
+    jupytext_version: 1.14.7
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
   name: python3
 ---
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 # Animation and Sketch Portals
 
 This is a simple demonstration of using py5 in Jupyter notebooks. This will use the P3D (OpenGL) renderer. If you are running this notebook through binder, the running Sketch will be viewable through a py5 Sketch Portal. If you are viewing this page from the py5 documentation website, see the Binder or Live Code options by hovering your mouse over the rocket ship icon at the top of this page.
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ## Import py5 and py5_tools
 
@@ -42,6 +44,8 @@ rot_x = 0
 rot_y = 0
 rot_z = 0
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ## Define `setup` Method
 

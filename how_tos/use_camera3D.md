@@ -5,12 +5,14 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.5
+    jupytext_version: 1.14.7
 kernelspec:
-  display_name: Python 3
+  display_name: Python 3 (ipykernel)
   language: python
   name: python3
 ---
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 # How to Use Camera3D
 
@@ -124,10 +126,17 @@ py5.run_sketch()
 Here's a screenshot, so readers of the static documentation website can understand what is happening:
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 time.sleep(3)
 
 py5_tools.screenshot(hook_post_draw=True)
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": ["remove-cell"]}
 
 ## Open the py5 Sketch Portal
 
@@ -136,10 +145,16 @@ If you are running this through Binder, or possibly using the documentation webs
 Since Camera3D works by calling the `draw` method multiple times and creating a composite image, the py5 Sketch Portal needs to run after the composite image has been created. To do that, we will use the dummy `post_draw` method and the `hook_post_draw` parameter.
 
 ```{code-cell} ipython3
-:tags: [remove-output]
-
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-output, remove-cell]
+---
 py5_tools.sketch_portal(hook_post_draw=True)
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": ["remove-cell"]}
 
 ## Next Steps for Jupyter Lab Users
 
