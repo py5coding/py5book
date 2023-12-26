@@ -12,13 +12,13 @@ Another thing you should know is that the global `mousePressed` variable becomes
 
 This is because in Python the namespace for variable names and function names is the same. Note also that `keyPressed` becomes `is_key_pressed` for the variable, and `key_pressed()` for the event function.
 
-Processing's `map(value, start, end, target_start, target_end)` is now [](/reference/sketch_remap) because there is a Python built-in [`map(func, iterable)`](https://docs.python.org/3/library/functions.html#map). Likewise, `filter()` becomes [](/reference/sketch_apply_filter).
+Processing's `map(value, start, end, target_start, target_end)` is now [remap()](/reference/sketch_remap) because there is a Python built-in [`map(func, iterable)`](https://docs.python.org/3/library/functions.html#map). Likewise, `filter()` becomes [apply_filter()](/reference/sketch_apply_filter).
 
-Processing's `get()` and `set()` functions to manipulate pixels become `get_pixels()` and `set_pixels()`, but you might want to read about `np_pixels` and [](/reference/sketch_set_np_pixels). That's because in Python, `set()` creates a [*set* data structure](https://docs.python.org/3/tutorial/datastructures.html#sets).
+Processing's `get()` and `set()` functions to manipulate pixels become `get_pixels()` and `set_pixels()`, but you might want to read about `np_pixels` and [set_np_pixels()](/reference/sketch_set_np_pixels). That's because in Python, `set()` creates a [*set* data structure](https://docs.python.org/3/tutorial/datastructures.html#sets).
 
-Instead of `frameRate`, use the [](/reference/sketch_frame_rate) function to set a target frame rate and the [](/reference/sketch_get_frame_rate) function to find out the current frame rate (an exponential moving average).
+Instead of `frameRate`, use the [frame_rate()](/reference/sketch_frame_rate) function to set a target frame rate and the [get_frame_rate()](/reference/sketch_get_frame_rate) function to find out the current frame rate (an exponential moving average).
 
-**Please have a look at the [](/reference/summary), it will help you find any missing names**
+**Please have a look at the [py5 Reference Summary](/reference/summary), it will help you find any missing names**
 
 ## How about the P-Classes?
 
@@ -26,7 +26,7 @@ Most of Processing high-level objects, like `PFont` for typography fonts, or `PI
 
 Then, there is some bonus stuff, `Py5Image` brings in a very helpful new [`numpy` interface for an "array of pixels"](/reference/py5image_np_pixels).
 
-If you are used to `PVector`, please note that `Py5Vector` is a completely new implementation of vector objects, 2D, 3D and 4D, so it has some different method & attribute names, you won't regret reading the [](/reference/py5vector) documentation.
+If you are used to `PVector`, please note that `Py5Vector` is a completely new implementation of vector objects, 2D, 3D and 4D, so it has some different method & attribute names, you won't regret reading the [Py5Vector](/reference/py5vector) documentation.
 
 ## About the libraries
 
