@@ -2,9 +2,11 @@
 
 These instructions have been tested on Linux, Windows, and OSX, and they should
 work for most people. If you have difficulties, please be patient and try to
-work through it or let me know and I'll do what I can to help. If you hit
-a snag and figure out a solution, tell me about it and I'll update the
-documentation to share what you've learned.
+work through it or let us know on
+[GitHub Issues](https://github.com/py5coding/py5generator/issues) and we'll do
+what we can to help. If you hit a snag and figure out a solution, tell us about
+it on [GitHub Discussions](https://github.com/py5coding/py5generator/discussions)
+and we'll update the documentation to share what you've learned.
 
 ```{important}
 There are a few manageable issues related to using py5 on Mac computers. Mac
@@ -63,7 +65,7 @@ alternatively use:
 pip install py5jupyter
 ```
 
-instead of `[jupyter]` or:
+instead of `[jupyter]`, or:
 
 ``` bash
 pip install colour matplotlib py5jupyter shapely trimesh
@@ -157,7 +159,8 @@ and create the environment using
 [Anaconda Navigator](https://docs.anaconda.com/anaconda/navigator/).
 
 That environment file contains the below information, telling Anaconda
-to create an environment with Jupyter.
+to create a Python 3.10 environment with Jupyter and many of py5's required and
+optional dependencies.
 
 ``` yaml
 name: py5coding
@@ -165,22 +168,23 @@ channels:
   - conda-forge
 dependencies:
   - python=3.10
-  - colour
-  - jpype1
+  - colour>=0.1.5
+  - jpype1>=1.4
   - jupyterlab
-  - line_profiler
-  - matplotlib
-  - numpy
-  - pillow
+  - line_profiler>=4.0
+  - matplotlib>=3.7
+  - numpy>=1.24
+  - pillow>=9.5
   - pip
-  - shapely
-  - trimesh
+  - shapely>=2.0
+  - trimesh>=3.23
   - pip:
-      - py5[extras]
+      - py5[jupyter]
 ```
 
-You must activate the environment using `conda activate`. When the environment
-is active, you will see `(py5coding)` in the command prompt.
+You must activate the environment using `conda activate <environment name>`.
+When the environment is active, you will see the environment name
+(e.g. "py5coding") in the command prompt.
 
 ``` bash
 conda activate py5coding
@@ -262,7 +266,7 @@ The below command will also install Jupyter Lab, which py5 is designed to work
 well with.
 
 ``` bash
-conda create -n py5coding python=3.10 jupyterlab jedi=0.17.2
+conda create -n py5coding python=3.10 jupyterlab
 ```
 
 After creating the `py5coding` environment you must \"activate\" it so that the
@@ -342,41 +346,25 @@ the architecture (32 bit vs 64 bit) of your Python installation and your Java
 installation are not the same. If you get an error, you will also see some
 helpful debug information that you can use to address your situation.
 
-#### Install Cairo and CairoSVG (optional)
+#### Install Cairo (Optional)
 
-[Cairo](https://www.cairographics.org/) is a drawing library for working
-with [Scalable Vector Graphics
-(SVG)](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) files. If
-you complete this optional step, py5 will have the ability to convert
-SVG images to [](/reference/py5image) objects using the
-[](/reference/sketch_convert_image) method. As Cairo's
-ability to work with the SVG language is more complete than
-Processing's, this will provide better support for that image format.
-
-Installing [Cairo](https://www.cairographics.org/) on Windows or Mac
-computers is difficult without using an Anaconda environment. To install
-it with Anaconda, use the below commands. The first installs Cairo and
-the second installs [CairoSVG](https://cairosvg.org/), which is the
-Python library that py5 interfaces with to convert SVG images to
-[](/reference/py5image) objects.
+As previously stated, you can optionally install
+[Cairo](https://www.cairographics.org/) and [CairoSVG](https://cairosvg.org/) to
+enable py5's extra SVG support. Installing
+Cairo is a bit of a hassle, particularly on Windows and OSX machines. Don't
+install it if you aren't going to use it. Read the [](/integrations/cairo)
+documentation page for more information.
 
 ``` bash
-conda install -c conda-forge cairo
-```
-
-You may get a message saying that it has already been installed. If so,
-express joy and proceed to the next step.
-
-``` bash
-conda install -c conda-forge cairosvg
+conda install -c conda-forge cairo cairosvg
 ```
 
 #### Install py5 library
 
-Finally, install the py5 library.
+Finally, install the py5 library with its required and optional dependencies.
 
 ``` bash
-pip install py5
+pip install py5[extras]
 ```
 
 If you are on Windows or on a Mac, you may get an error relating to the

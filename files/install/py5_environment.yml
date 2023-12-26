@@ -3,15 +3,15 @@ channels:
   - conda-forge
 dependencies:
   - python=3.10
-  - colour
-  - jpype1
+  - colour>=0.1.5
+  - jpype1>=1.4
   - jupyterlab
-  - line_profiler
-  - matplotlib
-  - numpy
-  - pillow
+  - line_profiler>=4.0
+  - matplotlib>=3.7
+  - numpy>=1.24
+  - pillow>=9.5
   - pip
-  - shapely
-  - trimesh
+  - shapely>=2.0
+  - trimesh>=3.23
   - pip:
-      - py5[extras]
+      - py5[jupyter]
