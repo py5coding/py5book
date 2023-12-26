@@ -435,23 +435,28 @@ Java needs the keyword **`new`** to create an instance of a class, just remove i
 **Java**
 
 ```java
-VideoExport videoExport;
+import camera3D.Camera3D;
+
+Camera3D camera3D;
 
 void setup() {
   size(600, 600);
-  videoExport = new VideoExport(this);
-  videoExport.startMovie();
+  camera3D = new VideoExport(this);
+  camera3D.setBackgroundColor(192);
 }
 ```
 
 **Python**
 
 ``` python
+from camera3D import Camera3D
+
 def setup():
-    global videoExport
+    global camera3D
     size(600, 600)
-    videoExport = VideoExport(this)
-    videoExport.startMovie()
+    this = get_current_sketch()    
+    camera3D = Camera3D(this)
+    camera3D.setBackgroundColor(192)
 ```
 
 #### Declaring a class
