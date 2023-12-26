@@ -55,10 +55,21 @@ can install py5, py5jupyter, and all of py5's optional dependencies (except for
 pip install py5[extras]
 ```
 
-The `[jupyter]` or `[extras]` suffixes tell the Python package installer to install
-py5's optional dependencies. If you have py5 installed already you can use
-`pip install py5jupyter` or `pip install colour matplotlib py5jupyter shapely trimesh`
-instead.
+The `[jupyter]` or `[extras]` suffixes tell the Python package installer to
+install py5's optional dependencies. If you have py5 installed already you can
+alternatively use:
+
+``` bash
+pip install py5jupyter
+```
+
+instead of `[jupyter]` or:
+
+``` bash
+pip install colour matplotlib py5jupyter shapely trimesh
+```
+
+instead of `[extras]`.
 
 ### Jupyter Notebook Kernels
 
@@ -163,9 +174,9 @@ dependencies:
   - pillow
   - pip
   - shapely
-  - trimesh[easy]
+  - trimesh
   - pip:
-      - py5[jupyter]
+      - py5[extras]
 ```
 
 You must activate the environment using `conda activate`. When the environment

@@ -12,6 +12,6 @@ dependencies:
   - pillow
   - pip
   - shapely
-  - trimesh[easy]
+  - trimesh
   - pip:
-      - py5[jupyter]
+      - py5[extras]
