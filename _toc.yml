@@ -28,6 +28,7 @@ parts:
   - file: integrations/python_ecosystem_integrations
     sections:
     - file: integrations/colors
+    - file: integrations/pillow
     - file: integrations/matplotlib
     - file: integrations/numpy
     - file: integrations/shapely

@@ -34,7 +34,7 @@ This method is comparable to [](sketch_load_image), except instead of reading im
 
 Passed image object types must be known to py5's image conversion tools. New object types and functions to effect conversions can be registered with [](py5functions_register_image_conversion).
 
-The `convert_image()` method has builtin support for the conversion of `PIL.Image` objects. This will allow users to use image formats that [](sketch_load_image) cannot read. To convert a numpy array into a Py5Image, use [](sketch_create_image_from_numpy).
+The `convert_image()` method has builtin support for the conversion of `PIL.Image` objects. This will allow users to use image formats that [](sketch_load_image) cannot read. Look at the online ["Images and Pillow"](/integrations/pillow) Python Ecosystem Integration tutorial for more information. To convert a numpy array into a Py5Image, use [](sketch_create_image_from_numpy).
 
 The caller can optionally pass an existing Py5Image object to put the converted image into using the `dst` parameter. This can have performance benefits in code that would otherwise continuously create new Py5Image objects. The converted image width and height must match that of the recycled Py5Image object.
 
@@ -51,4 +51,4 @@ convert_image(
 ) -> Py5Image
 ```
 
-Updated on December 25, 2023 17:02:43pm UTC
+Updated on December 26, 2023 12:27:15pm UTC
