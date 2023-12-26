@@ -385,6 +385,12 @@ def draw():
     ellipse(xpos, ypos, rad * 2, rad * 2)
 ```
 
+### Integer Division
+
+In Java, arithmetic operations on integers will always yield an integer result. This is true for all operations, including division. Therefore, `5 / 2` in Java will equal `2`.
+
+In Python, arithmetic operations are handled differently. Python (3+) evaluates `5 / 2` as `2.5`. If you want the same `2` result as Java, use the integer division operator `//`, as in `5 // 2`.
+
 ### Strings
 
 **Type *char* in Java**
