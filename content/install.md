@@ -51,7 +51,7 @@ pip install py5[jupyter]
 
 If you want to use py5's [](/integrations/python_ecosystem_integrations), you
 can install py5, py5jupyter, and all of py5's optional dependencies (except for
-[Cairo](https://www.cairographics.org/)) with this command:
+the [](/integrations/cairo) Integration) with this command:
 
 ``` bash
 pip install py5[extras]
@@ -59,25 +59,15 @@ pip install py5[extras]
 
 The `[jupyter]` or `[extras]` suffixes tell the Python package installer to
 install py5's optional dependencies. If you have py5 installed already you can
-alternatively use:
-
-``` bash
-pip install py5jupyter
-```
-
-instead of `[jupyter]`, or:
-
-``` bash
-pip install colour matplotlib py5jupyter shapely trimesh
-```
-
-instead of `[extras]`.
+alternatively use `pip install py5jupyter` instead of `[jupyter]`, or
+`pip install colour matplotlib py5jupyter shapely trimesh` instead of `[extras]`.
 
 ### Jupyter Notebook Kernels
 
-Next, you can install one or both of <a href="#jupyter-notebook-kernels">py5's
-Jupyter Notebook Kernels</a>. To install the <a href="#py5-kernel">py5 kernel</a>
-for imported mode Sketches, use this command:
+If you have py5jupyter installed, you can install one or both of
+<a href="#jupyter-notebook-kernels">py5's Jupyter Notebook Kernels</a>. To
+install the <a href="#py5-kernel">py5 kernel</a> for imported mode Sketches, use
+this command:
 
 ``` bash
 python -m py5jupyter.kernels.py5.install --sys-prefix
@@ -89,15 +79,8 @@ To install <a href="#py5bot">py5bot</a> for static mode sketches, use this:
 python -m py5jupyter.kernels.py5bot.install --sys-prefix
 ```
 
-### Optional SVG support with Cairo
-
-You can optionally install [Cairo](https://www.cairographics.org/) and
-[CairoSVG](https://cairosvg.org/) to enable py5's extra SVG support. Installing
-Cairo is a bit of a hassle so don't install it if you aren't going to use it.
-Read the [](/integrations/cairo) documentation page for more information.
-
 <a name="quick-example"></a>
-## Quick Example
+### Quick Example
 
 Here is a quick py5 example to test that everything works. Please test this with
 a Jupyter Notebook, the IPython REPL, or by saving it to a *.py file and running
@@ -259,8 +242,8 @@ information to work through any difficulties.
 
 First you must create an Anaconda environment to install the Python
 packages into. Below, we create a Python environment called `py5coding` with
-Python 3.10. This command will also install Jupyter Lab and py5's required and
-optional dependencies from Anaconda.
+Python 3.10. This command will also install Jupyter Lab and many of py5's
+required and optional dependencies from Anaconda.
 
 ``` bash
 conda create -n py5coding python=3.10 colour>=0.1.5 jpype1>=1.4 jupyterlab line_profiler>=4.0 matplotlib>=3.7 numpy>=1.24 pillow>=9.5 pip shapely>=2.0 trimesh>=3.23
@@ -342,19 +325,6 @@ Java into and search through both to find a sufficient Java installation to use.
 the architecture (32 bit vs 64 bit) of your Python installation and your Java
 installation are not the same. If you get an error, you will also see some
 helpful debug information that you can use to address your situation.
-
-#### Install Cairo (Optional)
-
-As previously stated, you can optionally install
-[Cairo](https://www.cairographics.org/) and [CairoSVG](https://cairosvg.org/) to
-enable py5's extra SVG support. Installing
-Cairo is a bit of a hassle, particularly on Windows and OSX machines. Don't
-install it if you aren't going to use it. Read the [](/integrations/cairo)
-documentation page for more information.
-
-``` bash
-conda install -c conda-forge cairo cairosvg
-```
 
 #### Install py5 library
 
