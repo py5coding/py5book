@@ -30,7 +30,7 @@ def setup():
 
 Open a file chooser dialog to select a file for input. After the selection is made, the selected File will be passed to the `callback` function. If the dialog is closed or canceled, `None` will be sent to the function, so that the program is not waiting for additional input. The callback is necessary because of how threading works.
 
-This method has some platform specific quirks. On OSX, this does not work when the Sketch is run through a Jupyter notebook. On Windows, Sketches using the OpenGL renderers (`P2D` or `P3D`) will be minimized while the select dialog box is open. This method only uses native dialog boxes on OSX.
+This method has some platform specific quirks. On macOS, this does not work when the Sketch is run through a Jupyter notebook. On Windows, Sketches using the OpenGL renderers (`P2D` or `P3D`) will be minimized while the select dialog box is open. This method only uses native dialog boxes on macOS.
 
 Underlying Processing method: [selectInput](https://processing.org/reference/selectInput_.html)
 
@@ -44,4 +44,4 @@ select_input(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 27, 2023 13:47:02pm UTC

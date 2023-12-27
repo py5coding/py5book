@@ -65,7 +65,7 @@ Decorator function to render a single frame using the decorated `draw` function.
 
 The decorated draw function's first parameter must be either a `py5.Sketch` object or a `py5.Py5Graphics` object, depending on the parameter `use_py5graphics`. That object must be used for all of the function's py5 commands. The function can have additional positional and keyword arguments. To use them, pass the desired values when you call the decorated function as you would to any other Python function.
 
-On OSX, only the default renderer is currently supported. Other platforms support the default renderer and the OpenGL renderers (P2D and P3D).
+On macOS, only the default renderer is currently supported. Other platforms support the default renderer and the OpenGL renderers (P2D and P3D).
 
 The rendered frame can have transparent pixels if and only if the `use_py5graphics` parameter is `True` because only a `py5.Py5Graphics` object can create an image with transparency. There is no need to call [](py5graphics_begin_draw) or [](py5graphics_end_draw) in the decorated function as `@render()` does that for you.
 
@@ -84,4 +84,4 @@ render(
 ) -> Image
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 27, 2023 13:47:02pm UTC

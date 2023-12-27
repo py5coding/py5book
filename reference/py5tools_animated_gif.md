@@ -45,7 +45,7 @@ You have two choices for how to specify which frames should be included in the a
 
 Bottom line, you must use either the `count` parameter or the `frame_numbers` parameter but not both. The `period` parameter can only be used in conjunction with the `count` parameter. The duration parameter must always be used.
 
-By default this function will return right away and construct the animated gif in the background while the Sketch is running. The completed gif will be saved to the location specified by the `filename` parameter when it is ready. Set the `block` parameter to `True` to instruct the function to not return until the gif construction is complete. This blocking feature is not available on OSX when the Sketch is executed through an IPython kernel. If the Sketch terminates prematurely, no gif will be created.
+By default this function will return right away and construct the animated gif in the background while the Sketch is running. The completed gif will be saved to the location specified by the `filename` parameter when it is ready. Set the `block` parameter to `True` to instruct the function to not return until the gif construction is complete. This blocking feature is not available on macOS when the Sketch is executed through an IPython kernel. If the Sketch terminates prematurely, no gif will be created.
 
 By default the Sketch will be the currently running Sketch, as returned by [](py5functions_get_current_sketch). Use the `sketch` parameter to specify a different running Sketch, such as a Sketch created using Class mode.
 
@@ -69,4 +69,4 @@ animated_gif(
 ) -> None
 ```
 
-Updated on December 25, 2023 17:40:34pm UTC
+Updated on December 27, 2023 13:47:02pm UTC

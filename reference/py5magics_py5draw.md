@@ -29,7 +29,7 @@ Create a PNG image with py5 and embed the result in the notebook.
 
 For users who are familiar with Processing and py5 programming, you can pretend the code in this cell will be executed in a Sketch with no `draw()` function and your code in the `setup()` function. By default it will use the default Processing renderer.
 
-On OSX, only the default renderer is currently supported. Other platforms support the default renderer and the OpenGL renderers (P2D and P3D).
+On macOS, only the default renderer is currently supported. Other platforms support the default renderer and the OpenGL renderers (P2D and P3D).
 
 Internally this magic command creates a static Sketch using the user provided code. The static Sketch drawing surface does not allow transparency. If you want to quickly create an image that has transparency, consider using [](py5functions_render) or [](py5functions_render_frame) with the `use_py5graphics` parameter.
 
@@ -60,4 +60,4 @@ optional arguments:
   --unsafe              allow new variables to enter the user namespace
 ```
 
-Updated on March 06, 2023 03:33:38am UTC
+Updated on December 27, 2023 13:47:02pm UTC

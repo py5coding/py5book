@@ -26,7 +26,7 @@ frames = py5_tools.save_frames('/tmp/frames', limit=50, start=0)
 
 Save a running Sketch's frames to a directory.
 
-By default this function will return right away and save frames in the background while the Sketch is running. The frames will be saved in the directory specified by the `dirname` parameter. Set the `block` parameter to `True` to instruct the method to not return until the number of frames saved reaches the number specified by the `limit` parameter. This blocking feature is not available on OSX when the Sketch is executed through an IPython kernel.
+By default this function will return right away and save frames in the background while the Sketch is running. The frames will be saved in the directory specified by the `dirname` parameter. Set the `block` parameter to `True` to instruct the method to not return until the number of frames saved reaches the number specified by the `limit` parameter. This blocking feature is not available on macOS when the Sketch is executed through an IPython kernel.
 
 By default the Sketch will be the currently running Sketch, as returned by [](py5functions_get_current_sketch). Use the `sketch` parameter to specify a different running Sketch, such as a Sketch created using Class mode.
 
@@ -53,4 +53,4 @@ save_frames(
 ) -> None
 ```
 
-Updated on December 25, 2023 17:40:34pm UTC
+Updated on December 27, 2023 13:47:02pm UTC

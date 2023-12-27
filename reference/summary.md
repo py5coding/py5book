@@ -242,7 +242,7 @@
 * [frame_count](/reference/sketch_frame_count) - The system variable frame_count contains the number of frames that have been displayed since the program started.
 * [frame_rate()](/reference/sketch_frame_rate) - Specifies the target number of frames to be displayed every second. If drawing a frame gets slow the target will not be met!
 * [get_frame_rate()](/reference/sketch_get_frame_rate) - Get the running Sketch’s current frame rate.
-* [display_density()](/reference/sketch_display_density) - This function returns the number “2” if the screen is a high-density screen (called a Retina display on OSX or high-dpi on Windows and Linux) - and a “1” if not.
+* [display_density()](/reference/sketch_display_density) - This function returns the number “2” if the screen is a high-density screen (called a Retina display on macOS or high-dpi on Windows and Linux) - and a “1” if not.
 * [pixel_density()](/reference/sketch_pixel_density) - This function makes it possible for py5 to render using all of the pixels on high resolutions screens like Apple Retina displays and Windows High-DPI displays.
 * [display_height](/reference/sketch_display_height) - System variable that stores the height of the entire screen display.
 * [display_width](/reference/sketch_display_width) - System variable that stores the width of the entire screen display.
