@@ -69,7 +69,7 @@ The Python class `Sketch` has a method `_run_sketch()` that calls `processing.co
 
 In addition, the `_run_sketch()` method builds a bridge between the Java class `py5.core.Sketch` and Python. This bridge implements the Java Interface `py5.core.Py5Bridge` but is coded in Python with the Python class `Py5Bridge`, found in [bridge.py](https://github.com/py5coding/py5generator/blob/main/py5_resources/py5_module/py5/bridge.py). This programming sorcery uses [`jpype.JImplements`](https://jpype.readthedocs.io/en/latest/api.html#jpype.JImplements) to create a Python object that can be "passed" to Java. This bridge is the mechanism through which `py5.core.Sketch` makes calls back to Python to run the user defined functions. The bridge will also inform the `py5.core.Sketch` instance which user functions are defined so it knows which calls to make to Python and which to skip.
 
-The `_run_sketch()` method also has some special code needed to get py5 to run on OSX.
+The `_run_sketch()` method also has some special code needed to get py5 to run on macOS.
 
 ### 3. Processing Library's `runSketch()` Method Launches the Sketch
 

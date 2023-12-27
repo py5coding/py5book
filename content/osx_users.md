@@ -1,9 +1,9 @@
-# Special Notes for OSX Users
+# Special Notes for macOS Users
 
-Although much progress has been made getting py5 to work on OSX, there are a few
+Although much progress has been made getting py5 to work on macOS, there are a few
 remaining issues and limitations. The issues that are fixable will be addressed
 in future py5 releases. The remaining issues are minor and in line with typical
-OSX experiences.
+macOS experiences.
 
 ```{admonition} TL;DR
 
@@ -22,7 +22,7 @@ OSX experiences.
     #6](https://github.com/py5coding/py5generator/issues/6))
 ```
 
-None of these will stop you from using py5 productively on OSX.
+None of these will stop you from using py5 productively on macOS.
 
 ## Jupyter Notebooks
 
@@ -37,7 +37,7 @@ This changes how Jupyter executes later notebook cells to allow GUI windows to
 open and be usable. Do this *before* importing py5. If you import py5 without
 doing this, py5 will run the magic for you after giving you a polite warning.
 
-That magic command should not be run on non-OSX machines. If you need your
+That magic command should not be run on non-macOS machines. If you need your
 notebook code to run on multiple platforms, use the following code instead:
 
 ```python
@@ -47,15 +47,15 @@ if sys.platform == 'darwin':
         get_ipython().run_line_magic('gui', 'osx')
 ```
 
-The `%osx gui` magic will enable OSX Cocoa event loop integration. Use of this
+The `%gui osx` magic will enable macOS Cocoa event loop integration. Use of this
 magic is not unique to py5; it is also used for other Python applications that
 open interactive windows. It instructs Jupyter's Python kernel to share the main
-thread with the window. On OSX, all GUIs are required to run on the main thread.
+thread with the window. On macOS, all GUIs are required to run on the main thread.
 The Python kernel, however, also needs to use the main thread to execute cells.
 Therefore, the main thread must be shared.
 
 To see an example demonstrating the consequences of this sharing, try running
-the following Sketch on OSX:
+the following Sketch on macOS:
 
 ```python
 import time
@@ -91,7 +91,7 @@ end pause
 ...
 ```
 
-But when run on OSX, the output will be:
+But when run on macOS, the output will be:
 
 ```text
 start pause
@@ -117,7 +117,7 @@ the shared main thread, the new frames are not being drawn to the screen. This
 behavior only applies to the `JAVA2D` renderer and not the OpenGL
 renderers `P2D` and `P3D`.
 
-There are just a few more things OSX users need to know about using py5 in a
+There are just a few more things macOS users need to know about using py5 in a
 Jupyter notebook.
 
 ### Blocking
@@ -130,7 +130,7 @@ happen anyway. If you want some code to run right when the Sketch exits,
 implement an `exiting()` function, which will be called by py5 as the Sketch is
 shutting down.
 
-If you need to simultaneously run multiple Sketches in the same process on OSX,
+If you need to simultaneously run multiple Sketches in the same process on macOS,
 running them through a Jupyter notebook (using class-mode) is your only option.
 
 ### Select Methods
@@ -149,7 +149,7 @@ generic Python interpreter.
 
 ### py5bot and py5 magics
 
-On OSX, the Jupyter py5bot kernel and the py5 magic command
+On macOS, the Jupyter py5bot kernel and the py5 magic command
 [](/reference/py5magics_py5bot) cannot use the OpenGL (P2D and P3D) renderers.
 The [](/reference/py5magics_py5draw) magic also cannot use the OpenGL renderers,
 and the [](/reference/py5magics_py5drawdxf) magic is not available.

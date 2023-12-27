@@ -1,6 +1,6 @@
 # Install py5
 
-These instructions have been tested on Linux, Windows, and OSX, and they should
+These instructions have been tested on Linux, Windows, and macOS, and they should
 work for most people. If you have difficulties, please be patient and try to
 work through it or let us know on
 [GitHub Issues](https://github.com/py5coding/py5generator/issues) and we'll do

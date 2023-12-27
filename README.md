@@ -41,7 +41,7 @@ If you have Java 17 installed on your computer, you can install py5 using pip:
 pip install py5
 ```
 
-[Detailed installation instructions](https://py5coding.org/content/install.html) are available on the documentation website. There are some [Special Notes for Mac Users](https://py5coding.org/content/osx_users.html) that you should read if you use OSX.
+[Detailed installation instructions](https://py5coding.org/content/install.html) are available on the documentation website. There are some [Special Notes for Mac Users](https://py5coding.org/content/osx_users.html) that you should read if you use macOS.
 
 ## Getting Started
 
