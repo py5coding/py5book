@@ -10,7 +10,7 @@ and we'll update the documentation to share what you've learned.
 
 ```{important}
 There are a few manageable issues related to using py5 on Mac computers. Mac
-users should read the [](osx_users) page for more information.
+users should read the [](macos_users) page for more information.
 ```
 
 ## Requirements

@@ -14,7 +14,7 @@ parts:
   chapters:
   - file: content/install
   - file: content/coming_from_processing_java
-  - file: content/osx_users
+  - file: content/macos_users
   - file: content/py5_modes
   - file: content/hybrid_programming
   - file: content/processing_mode

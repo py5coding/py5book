@@ -99,7 +99,7 @@ See below for demonstrations of what each does.
 
 ## Running py5 on Mac Computers
 
-There are several known [issues running py5 on macOS computers](/content/osx_users/). If you use a Mac, you should read about the Mac issues before continuing. Bottom line, the `%gui osx` Jupyter magic is necessary to use py5 on macOS computers.
+There are several known [issues running py5 on macOS computers](/content/macos_users/). If you use a Mac, you should read about the Mac issues before continuing. Bottom line, the `%gui osx` Jupyter magic is necessary to use py5 on macOS computers.
 
 ## Static Sketches
 
