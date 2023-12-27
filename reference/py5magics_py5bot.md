@@ -32,7 +32,7 @@ This cell magic uses the same rendering mechanism as the py5bot kernel. For user
 
 This magic is similar to [](py5magics_py5draw) in that both can be used to create a static Sketch. One key difference is that `%%py5bot` requires the user to begin the code with a call to [](sketch_size), while [](py5magics_py5draw) calls [](sketch_size) for you based on the magic's arguments. 
 
-This magic supports the default renderer and the `P2D` and `P3D` renderers. Note that both of the OpenGL renderers will briefly open a window on your screen. This magic is only available when using the py5 kernel and coding in imported mode. The `P2D` and `P3D` renderers are not available when the py5 kernel is hosted on an macOS computer.
+This magic supports the default renderer and the `P2D` and `P3D` renderers. Note that both of the OpenGL renderers will briefly open a window on your screen. This magic is only available when using the py5 kernel and coding in imported mode. The `P2D` and `P3D` renderers are not available when the py5 kernel is hosted on a macOS computer.
 
 Code used in this cell can reference functions and variables defined in other cells because a copy of the user namespace is provided during execution. Variables and functions created in this cell will be local to only this cell because to do otherwise would be unsafe. Mutable objects in the user namespace, however, can be altered and those changes will persist elsewhere in the notebook. Be aware that using py5 objects in a different notebook cell or reusing them in another Sketch can result in nasty errors and bizzare consequences.
 
@@ -52,4 +52,4 @@ optional arguments:
                         assign image to variable
 ```
 
-Updated on December 27, 2023 13:47:02pm UTC
+Updated on December 27, 2023 14:04:39pm UTC
