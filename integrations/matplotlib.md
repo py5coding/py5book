@@ -86,7 +86,7 @@ to choose from. Here we are using "ggplot" with the "fast" style to improve
 [performance](https://matplotlib.org/stable/users/explain/artists/performance.html#using-the-fast-style).
 
 We will not use the matplotlib Jupyter Notebook magic `%matplotlib inline`. It isn't necessary
-for this example and it seems to conflict with the code py5 uses to run correctly on OSX.
+for this example and it seems to conflict with the code py5 uses to run correctly on macOS.
 
 ```{code-cell} ipython3
 ---
