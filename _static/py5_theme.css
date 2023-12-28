@@ -1,9 +1,14 @@
 html[data-theme=light] {
+    --pst-color-link: hsl(0, 60%, 33%);
+    --pst-color-primary: hsl(0, 60%, 16%);
     --pst-color-secondary: #c98138;
     --pst-color-secondary-highlight: #925315;
+
 }
 
 html[data-theme=dark] {
+    --pst-color-link: hsl(0, 50%, 50%);
+    --pst-color-primary: hsl(0, 50%, 80%);
     --pst-color-secondary: #c98138;
     --pst-color-secondary-highlight: #925315;
 }
