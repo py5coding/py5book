@@ -142,7 +142,7 @@ and create the environment using
 [Anaconda Navigator](https://docs.anaconda.com/anaconda/navigator/).
 
 That environment file contains the below information, telling Anaconda
-to create a Python 3.10 environment with Jupyter and many of py5's required and
+to create a Python 3.11 environment with Jupyter and many of py5's required and
 optional dependencies.
 
 ``` yaml
@@ -150,7 +150,7 @@ name: py5coding
 channels:
   - conda-forge
 dependencies:
-  - python=3.10
+  - python=3.11
   - colour>=0.1.5
   - jpype1>=1.4
   - jupyterlab
@@ -242,11 +242,11 @@ information to work through any difficulties.
 
 First you must create an Anaconda environment to install the Python
 packages into. Below, we create a Python environment called `py5coding` with
-Python 3.10. This command will also install Jupyter Lab and many of py5's
+Python 3.11. This command will also install Jupyter Lab and many of py5's
 required and optional dependencies from Anaconda.
 
 ``` bash
-conda create -n py5coding python=3.10 colour>=0.1.5 jpype1>=1.4 jupyterlab line_profiler>=4.0 matplotlib>=3.7 numpy>=1.24 pillow>=9.5 pip shapely>=2.0 trimesh>=3.23
+conda create -n py5coding python=3.11 colour>=0.1.5 jpype1>=1.4 jupyterlab line_profiler>=4.0 matplotlib>=3.7 numpy>=1.24 pillow>=9.5 pip shapely>=2.0 trimesh>=3.23
 ```
 
 After creating the `py5coding` environment you must \"activate\" it so that the
