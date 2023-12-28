@@ -12,8 +12,6 @@ py5 is a version of [**Processing**][processing] for Python 3.8+. It makes the J
 
 The goal of py5 is to create a new version of Processing that is [integrated into the Python ecosystem](/integrations/python_ecosystem_integrations). Built into the library are thoughtful choices about how to best get py5 to work with other popular Python libraries and tools such as [Jupyter](https://jupyter.org/), [numpy](https://numpy.org/), [shapely](https://shapely.readthedocs.io/en/stable/), [trimesh](https://trimesh.org/), [matplotlib](https://matplotlib.org/), and [Pillow](https://python-pillow.org/).
 
-py5 was created by the artist and software developer [Jim Schmitz](https://ixora.io/) (@hx2A) starting in March of 2020. The library is the foundation of his [art practice](https://ixora.io/art/).
-
 ## Simple Example
 
 Here is a simple example of a working py5 Sketch, written in module mode:
@@ -58,6 +56,8 @@ There are currently five basic ways to use py5. They are:
 * **processing mode**: make calls to Python from a Processing (Java) Sketch. This mode enables py5 to function as bridge, connecting the Python and Java ecosystems through a new `callPython()` method.
 
 ## Source Code
+
+py5 was created by the artist and software developer [Jim Schmitz](https://ixora.io/) (@hx2A) starting in March of 2020. The library is the foundation of his [art practice](https://ixora.io/art/).
 
 To view the actual installed py5 library code, look at the [py5 repository][py5_repo]. The py5 library code is the output of the meta-programming project [py5generator][py5generator_repo]. All py5 development is done through [py5generator][py5generator_repo].
 
