@@ -21,15 +21,22 @@ the Java [**Processing**][processing] jars available to the CPython interpreter
 using [**JPype**][jpype]. It can do just about all of the 2D and 3D drawing
 [**Processing**][processing] can do, except with Python instead of Java code.
 
-The goal of py5 is to create a new version of Processing that is integrated
-into the Python ecosystem. Built into the library are thoughtful choices about
-how to best get py5 to work with other popular Python libraries and tools such
-as [Jupyter](https://jupyter.org/), [numpy](https://numpy.org/), and
-[Pillow](https://python-pillow.org/).
+The goal of py5 is to create a new version of Processing that is [integrated
+into the Python ecosystem](/integrations/python_ecosystem_integrations).
+Built into the library are thoughtful choices about how to best get py5 to work
+with other popular Python libraries and tools such as
+[Jupyter](https://jupyter.org/), [numpy](https://numpy.org/),
+[shapely](https://shapely.readthedocs.io/en/stable/), [trimesh](https://trimesh.org/),
+[matplotlib](https://matplotlib.org/), and [Pillow](https://python-pillow.org/).
 
 Here is the simplest possible example of a py5 Sketch:
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 def setup():
     size(400, 400)
     rect_mode(CENTER)
@@ -80,6 +87,18 @@ the Python ecosystem.
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
+py5 is an excellent choice for educators looking to teach Python in the
+context of creative coding and is currently used in classrooms all around the world.
+This website's documentation includes
+[introductory tutorials](/tutorials/intro_to_py5_and_python) as well as extensive
+[reference documentation](/reference/summary), complete with example code.
+
+py5 was created by the artist and software developer [Jim Schmitz](https://ixora.io/) (@hx2A)
+starting in March of 2020. The library is the foundation of his [art practice](https://ixora.io/art/).
+
+New py5 features and bug fixes are being added to py5 every day. The library is always
+in active development and is well maintained.
+
 Have a comment or question about py5? We'd love to hear from you! The best ways
 to reach out are:
 
@@ -87,9 +106,6 @@ to reach out are:
 * Mastodon <a rel="me" href="https://fosstodon.org/@py5coding">@py5coding@fosstodon.org</a>
 * twitter [@py5coding](https://twitter.com/py5coding)
 * [processing foundation discourse](https://discourse.processing.org/)
-
-The py5 library has many features but is alpha software. The library and this
-website are both a work in progress.
 
 To view the actual installed py5 library code, look at the
 [py5 repository][py5_repo]. The py5 library code is the output of the
