@@ -29,9 +29,9 @@ with other popular Python libraries and tools such as
 [shapely](https://shapely.readthedocs.io/en/stable/), [trimesh](https://trimesh.org/),
 [matplotlib](https://matplotlib.org/), and [Pillow](https://python-pillow.org/).
 
-## Simple Example
+## Basic Example
 
-Here is the simplest possible example of a py5 Sketch:
+Here is a basic example of a py5 Sketch:
 
 ```{code-cell} ipython3
 ---

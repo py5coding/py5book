@@ -12,9 +12,9 @@ py5 is a version of [**Processing**][processing] for Python 3.8+. It makes the J
 
 The goal of py5 is to create a new version of Processing that is [integrated into the Python ecosystem](/integrations/python_ecosystem_integrations). Built into the library are thoughtful choices about how to best get py5 to work with other popular Python libraries and tools such as [Jupyter](https://jupyter.org/), [numpy](https://numpy.org/), [shapely](https://shapely.readthedocs.io/en/stable/), [trimesh](https://trimesh.org/), [matplotlib](https://matplotlib.org/), and [Pillow](https://python-pillow.org/).
 
-## Simple Example
+## Basic Example
 
-Here is a simple example of a working py5 Sketch, written in module mode:
+Here is a basic example of a working py5 Sketch:
 
 ```{code-cell} ipython3
 def setup():
