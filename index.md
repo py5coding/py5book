@@ -101,8 +101,6 @@ pip install py5
 
 ## Getting Started
 
-Go to the [](/content/install) page to learn how to setup py5 on your computer.
-
 py5 is an excellent choice for educators looking to teach Python in the
 context of creative coding and is currently used in classrooms all around the world.
 This website's documentation includes
