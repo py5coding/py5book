@@ -107,6 +107,14 @@ This website's documentation includes
 [introductory tutorials](/tutorials/intro_to_py5_and_python) as well as extensive
 [reference documentation](/reference/summary), complete with example code.
 
+There are currently [five basic ways to use py5](/content/py5_modes). They are:
+
+* **module mode**: create a sketch with `setup()` and `draw()` functions that call methods provided by the `py5` library. The above example is created in module mode.
+* **class mode**: create a Python class inherited from `py5.Sketch`. This mode supports multiple Sketches running at the same time.
+* **imported mode**: simplified code that omits the `py5.` prefix. This mode is supported by the py5 Jupyter notebook kernel and the `run_sketch` command line utility.
+* **static mode**: functionless code to create static images. This mode is supported by the py5bot Jupyter notebook kernel, the `%%py5bot` IPython magic, and the `run_sketch` command line utility.
+* **processing mode**: make calls to Python from a Processing (Java) Sketch. This mode enables py5 to function as bridge, connecting the Python and Java ecosystems through a new `callPython()` method.
+
 ## Source Code
 
 py5 was created by the artist and software developer [Jim Schmitz](https://ixora.io/) ([@hx2A](https://github.com/hx2A/))
