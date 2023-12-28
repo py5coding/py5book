@@ -29,6 +29,8 @@ with other popular Python libraries and tools such as
 [shapely](https://shapely.readthedocs.io/en/stable/), [trimesh](https://trimesh.org/),
 [matplotlib](https://matplotlib.org/), and [Pillow](https://python-pillow.org/).
 
+## Simple Example
+
 Here is the simplest possible example of a py5 Sketch:
 
 ```{code-cell} ipython3
@@ -87,17 +89,30 @@ the Python ecosystem.
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
+## Getting Started
+
+Go to the [](/content/install) page to learn how to setup py5 on your computer.
+
 py5 is an excellent choice for educators looking to teach Python in the
 context of creative coding and is currently used in classrooms all around the world.
 This website's documentation includes
 [introductory tutorials](/tutorials/intro_to_py5_and_python) as well as extensive
 [reference documentation](/reference/summary), complete with example code.
 
+## Source Code
+
 py5 was created by the artist and software developer [Jim Schmitz](https://ixora.io/) (@hx2A)
 starting in March of 2020. The library is the foundation of his [art practice](https://ixora.io/art/).
 
 New py5 features and bug fixes are being added to py5 every day. The library is always
 in active development and is well maintained.
+
+To view the actual installed py5 library code, look at the
+[py5 repository][py5_repo]. The py5 library code is the output of the
+meta-programming project [py5generator][py5generator_repo]. All py5 development
+is done through [py5generator][py5generator_repo].
+
+## Get In Touch
 
 Have a comment or question about py5? We'd love to hear from you! The best ways
 to reach out are:
@@ -106,11 +121,6 @@ to reach out are:
 * Mastodon <a rel="me" href="https://fosstodon.org/@py5coding">@py5coding@fosstodon.org</a>
 * twitter [@py5coding](https://twitter.com/py5coding)
 * [processing foundation discourse](https://discourse.processing.org/)
-
-To view the actual installed py5 library code, look at the
-[py5 repository][py5_repo]. The py5 library code is the output of the
-meta-programming project [py5generator][py5generator_repo]. All py5 development
-is done through [py5generator][py5generator_repo].
 
 [processing]: https://github.com/benfry/processing4
 [jpype]: https://github.com/jpype-project/jpype
