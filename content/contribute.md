@@ -18,7 +18,7 @@ If you get stuck somewhere, we'd like to know that too. Our goal is for py5's do
 
 ## Contribute to Processing
 
-Internally, py5 relies on Processing's core library (written in Java) for many of its features. [Processing's core library](https://github.com/processing/processing4/tree/main/core) is maintained by a different team in the Processing community. Any bug fixes or enhancements to Processing will also benefit py5. Therefore, a contribution to Processing is a contribution to py5. [The Processing team](https://github.com/processing/processing4/graphs/contributors) works very hard maintaining a large code base; anything that makes their lives easier would be a big help to both them and us.
+Internally, py5 relies on Processing's core library (written in Java) for many of its features. [Processing's core library](https://github.com/benfry/processing4/tree/main/core) is maintained by different people in the Processing community. Any bug fixes or enhancements to Processing will also benefit py5. Therefore, a contribution to Processing is a contribution to py5. [The Processing folks](https://github.com/benfry/processing4/graphs/contributors) work very hard maintaining a large code base; anything that makes their lives easier would be a big help to both them and us.
 
 ## Teach Others About py5
 
