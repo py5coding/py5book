@@ -57,7 +57,7 @@ There are currently five basic ways to use py5. They are:
 
 ## Source Code
 
-py5 was created by the artist and software developer [Jim Schmitz](https://ixora.io/) (@hx2A) starting in March of 2020. The library is the foundation of his [art practice](https://ixora.io/art/).
+py5 was created by the artist and software developer [Jim Schmitz](https://ixora.io/) ([@hx2A](https://github.com/hx2A)) starting in March of 2020. The library is the foundation of his [art practice](https://ixora.io/art/).
 
 To view the actual installed py5 library code, look at the [py5 repository][py5_repo]. The py5 library code is the output of the meta-programming project [py5generator][py5generator_repo]. All py5 development is done through [py5generator][py5generator_repo].
 
