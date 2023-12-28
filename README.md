@@ -10,7 +10,7 @@
 
 py5 is a version of [**Processing**][processing] for Python 3.8+. It makes the Java [**Processing**][processing] jars available to the CPython interpreter using [**JPype**][jpype]. It can do just about all of the 2D and 3D drawing [**Processing**][processing] can do, except with Python instead of Java code.
 
-The goal of py5 is to create a new version of Processing that is integrated into the Python ecosystem. Built into the library are thoughtful choices about how to best get py5 to work with other popular Python libraries and tools such as [Jupyter][jupyter], [numpy][numpy], and [Pillow][pillow].
+The goal of py5 is to create a new version of Processing that is [integrated into the Python ecosystem](/integrations/python_ecosystem_integrations). Built into the library are thoughtful choices about how to best get py5 to work with other popular Python libraries and tools such as [Jupyter](https://jupyter.org/), [numpy](https://numpy.org/), [shapely](https://shapely.readthedocs.io/en/stable/), [trimesh](https://trimesh.org/), [matplotlib](https://matplotlib.org/), and [Pillow](https://python-pillow.org/).
 
 ## Simple Example
 
@@ -53,20 +53,24 @@ There are currently five basic ways to use py5. They are:
 * **static mode**: functionless code to create static images. This mode is supported by the py5bot Jupyter notebook kernel, the `%%py5bot` IPython magic, and the `run_sketch` command line utility.
 * **processing mode**: make calls to Python from a Processing (Java) Sketch. This mode enables py5 to function as bridge, connecting the Python and Java ecosystems through a new `callPython()` method.
 
-The documentation website, [https://py5coding.org/](https://py5coding.org/), is a work in progress, but contains solid reference documentation and many tutorials for beginner coders.
+py5 is an excellent choice for educators looking to teach Python in the context of creative coding and is currently used in classrooms all around the world. This website's documentation includes [introductory tutorials](https://py5coding.org/tutorials/intro_to_py5_and_python.html) as well as extensive [reference documentation](https://py5coding.org/reference/summary.html), complete with example code.
 
-[py5generator][py5generator_repo] is a meta-programming project that creates the py5 library. To view the actual installed py5 library code, look at the [py5 repository][py5_repo]. All py5 library development is done through py5generator.
+py5 was created by the artist and software developer [Jim Schmitz](https://ixora.io/) (@hx2A) starting in March of 2020. The library is the foundation of his [art practice](https://ixora.io/art/).
+
+New py5 features and bug fixes are being added to py5 every day. The library is always in active development and is well maintained.
 
 ## Get In Touch
 
-Have a comment or question? We'd love to hear from you! The best ways to reach out are:
+Have a comment or question about py5? We'd love to hear from you! The best ways to reach out are:
 
 * github [discussions](https://github.com/py5coding/py5generator/discussions) and [issues](https://github.com/py5coding/py5generator/issues)
 * Mastodon <a rel="me" href="https://fosstodon.org/@py5coding">fosstodon.org/@py5coding</a>
 * twitter [@py5coding](https://twitter.com/py5coding)
 * [processing foundation discourse](https://discourse.processing.org/)
 
-[processing]: https://github.com/processing/processing4
+To view the actual installed py5 library code, look at the [py5 repository][py5_repo]. The py5 library code is the output of the meta-programming project [py5generator][py5generator_repo]. All py5 development is done through [py5generator][py5generator_repo].
+
+[processing]: https://github.com/benfry/processing4
 [jpype]: https://github.com/jpype-project/jpype
 [py5_repo]: https://github.com/py5coding/py5
 [py5generator_repo]: https://github.com/py5coding/py5generator
