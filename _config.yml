@@ -39,3 +39,7 @@ html:
   use_repository_button: true
   use_issues_button: true
   baseurl: http://py5coding.org
+
+sphinx:
+  config:
+    language: en
