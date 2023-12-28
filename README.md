@@ -26,6 +26,10 @@ def draw():
     py5.rect(py5.random(py5.width), py5.random(py5.height), 10, 10)
 
 
+def mouse_clicked():
+    py5.fill(py5.random_int(255), py5.random_int(255), py5.random_int(255))
+
+
 py5.run_sketch()
 ```
 
