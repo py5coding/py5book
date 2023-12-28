@@ -89,6 +89,16 @@ the Python ecosystem.
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
+## Installation
+
+If you have Java 17 installed on your computer, you can install py5 using pip:
+
+```bash
+pip install py5
+```
+
+[Detailed installation instructions](/content/install) are available on this website. There are some [Special Notes for Mac Users](/content/macos_users) that you should read if you use macOS.
+
 ## Getting Started
 
 Go to the [](/content/install) page to learn how to setup py5 on your computer.
@@ -101,7 +111,7 @@ This website's documentation includes
 
 ## Source Code
 
-py5 was created by the artist and software developer [Jim Schmitz](https://ixora.io/) (@hx2A)
+py5 was created by the artist and software developer [Jim Schmitz](https://ixora.io/) ([@hx2A](https://github.com/hx2A/))
 starting in March of 2020. The library is the foundation of his [art practice](https://ixora.io/art/).
 
 New py5 features and bug fixes are being added to py5 every day. The library is always
