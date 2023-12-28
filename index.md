@@ -112,7 +112,7 @@ To view the actual installed py5 library code, look at the
 meta-programming project [py5generator][py5generator_repo]. All py5 development
 is done through [py5generator][py5generator_repo].
 
-[processing]: https://github.com/processing/processing4
+[processing]: https://github.com/benfry/processing4
 [jpype]: https://github.com/jpype-project/jpype
 [py5_repo]: https://github.com/py5coding/py5
 [py5generator_repo]: https://github.com/py5coding/py5generator
