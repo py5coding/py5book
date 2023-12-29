@@ -443,10 +443,16 @@ Unlike in Processing Java mode, other files in the same folder, that would appea
 Here you can see a few ways you can bring in functions and classes from other modules/libraries or other files, if you split your sketch into several `.py` files.
 
 ```python
+import numpy as np
 import library_with_a_big_name as short_alias
+
+from shapely import Polygon
+
 from some_module_or_other import helpful_function
-from other_fil import MyClass
-from other_file import *  # everything from the file other.py
+
+from my_other_file import MyClass, my_function # from other_file.py in the same folder
+# this is generally considered not very good style, and could be trouble with libraries
+from other_file import *  # everything from other_file.py
 ```
 
 When you are using py5 in *imported mode* you can add a special comment to your other files like explained on this [Importing py5 code](https://py5coding.org/content/importing_py5_code.html#importing-imported-mode-code) section.
