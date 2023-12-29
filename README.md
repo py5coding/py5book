@@ -63,10 +63,7 @@ There are currently five basic ways to use py5. They are:
 
 py5 was created by the artist and software developer [Jim Schmitz](https://ixora.io/) ([@hx2A](https://github.com/hx2A)) starting in March of 2020. The library is the foundation of his [art practice](https://ixora.io/art/).
 
-The py5 library makes the Java Processing jars available to the CPython interpreter
-using [JPype][jpype]. It can do just about everything Processing can do, except with
-Python instead of Java code. New py5 features and bug fixes are being added to py5
-every day. The library is always in active development and is well maintained.
+The py5 library makes the Java Processing jars available to the CPython interpreter using [JPype][jpype]. It can do just about everything Processing can do, except with Python instead of Java code. New py5 features and bug fixes are being added to py5 every day. The library is always in active development and is well maintained.
 
 To view the actual installed py5 library code, look at the [py5 repository][py5_repo]. The py5 library code is the output of the meta-programming project [py5generator][py5generator_repo]. All py5 development is done through [py5generator][py5generator_repo].
 
@@ -83,7 +80,3 @@ Have a comment or question about py5? We'd love to hear from you! The best ways 
 [jpype]: https://github.com/jpype-project/jpype
 [py5_repo]: https://github.com/py5coding/py5
 [py5generator_repo]: https://github.com/py5coding/py5generator
-
-[jupyter]: https://jupyter.org/
-[numpy]: https://numpy.org/
-[pillow]: https://python-pillow.org/
