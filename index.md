@@ -16,18 +16,20 @@ kernelspec:
 
 # Welcome to py5!
 
-The goal of py5 is to create a new version of [Processing][processing] that is [integrated
-into the Python ecosystem](/integrations/python_ecosystem_integrations).
+py5 is a new version of [Processing][processing] for Python 3.8+. The goal of py5
+is to create a version of Processing that is
+[integrated into the Python ecosystem](/integrations/python_ecosystem_integrations).
 Built into the library are thoughtful choices about how to best get py5 to work
 with other popular Python libraries and tools such as
 [Jupyter](https://jupyter.org/), [numpy](https://numpy.org/),
 [shapely](https://shapely.readthedocs.io/en/stable/), [trimesh](https://trimesh.org/),
 [matplotlib](https://matplotlib.org/), and [Pillow](https://python-pillow.org/).
 
-py5 is a version of Processing for Python 3.8+. It makes
-the Java Processing jars available to the CPython interpreter
-using [JPype][jpype]. It can do just about all of the 2D and 3D drawing
-Processing can do, except with Python instead of Java code.
+py5 is an excellent choice for educators looking to teach Python in the
+context of creative coding and is currently used in classrooms all around the world.
+This website's documentation includes
+[introductory tutorials](/tutorials/intro_to_py5_and_python) as well as extensive
+[reference documentation](/reference/summary), complete with example code.
 
 ## Basic Example
 
@@ -101,11 +103,9 @@ pip install py5
 
 ## Getting Started
 
-py5 is an excellent choice for educators looking to teach Python in the
-context of creative coding and is currently used in classrooms all around the world.
-This website's documentation includes
-[introductory tutorials](/tutorials/intro_to_py5_and_python) as well as extensive
-[reference documentation](/reference/summary), complete with example code.
+If you are new to Python, start with the [](/tutorials/intro_to_py5_and_python) tutorials.
+If you are familiar with Java programming and Processing, you'll find the [](/content/coming_from_processing_java)
+page to be helpful.
 
 There are currently [five basic ways to use py5](/content/py5_modes). They are:
 
@@ -117,11 +117,14 @@ There are currently [five basic ways to use py5](/content/py5_modes). They are:
 
 ## Source Code
 
-py5 was created by the artist and software developer [Jim Schmitz](https://ixora.io/) ([@hx2A](https://github.com/hx2A/))
-starting in March of 2020. The library is the foundation of his [art practice](https://ixora.io/art/).
+py5 was created by the artist and software developer [Jim Schmitz](https://ixora.io/)
+([@hx2A](https://github.com/hx2A/)) starting in March of 2020. The library is the
+foundation of his [art practice](https://ixora.io/art/).
 
-New py5 features and bug fixes are being added to py5 every day. The library is always
-in active development and is well maintained.
+The py5 library makes the Java Processing jars available to the CPython interpreter
+using [JPype][jpype]. It can do just about everything Processing can do, except with
+Python instead of Java code. New py5 features and bug fixes are being added to py5
+every day. The library is always in active development and is well maintained.
 
 To view the actual installed py5 library code, look at the
 [py5 repository][py5_repo]. The py5 library code is the output of the
