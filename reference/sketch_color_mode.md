@@ -77,6 +77,48 @@ Underlying Processing method: [colorMode](https://processing.org/reference/color
 
 ```python
 color_mode(
+    colormap_mode: int,  # CMAP, activating matplotlib Colormap mode
+    color_map: str,  # name of builtin matplotlib Colormap
+    /,
+) -> None
+
+color_mode(
+    colormap_mode: int,  # CMAP, activating matplotlib Colormap mode
+    color_map: str,  # name of builtin matplotlib Colormap
+    max_map: float,  # range for the color map
+    /,
+) -> None
+
+color_mode(
+    colormap_mode: int,  # CMAP, activating matplotlib Colormap mode
+    color_map: str,  # name of builtin matplotlib Colormap
+    max_map: float,  # range for the color map
+    max_a: float,  # range for the alpha
+    /,
+) -> None
+
+color_mode(
+    colormap_mode: int,  # CMAP, activating matplotlib Colormap mode
+    color_map_instance: Colormap,  # matplotlib.colors.Colormap instance
+    /,
+) -> None
+
+color_mode(
+    colormap_mode: int,  # CMAP, activating matplotlib Colormap mode
+    color_map_instance: Colormap,  # matplotlib.colors.Colormap instance
+    max_map: float,  # range for the color map
+    /,
+) -> None
+
+color_mode(
+    colormap_mode: int,  # CMAP, activating matplotlib Colormap mode
+    color_map_instance: Colormap,  # matplotlib.colors.Colormap instance
+    max_map: float,  # range for the color map
+    max_a: float,  # range for the alpha
+    /,
+) -> None
+
+color_mode(
     mode: int,  # Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness
     /,
 ) -> None
@@ -105,4 +147,4 @@ color_mode(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on November 27, 2023 04:29:59am UTC

@@ -54,7 +54,7 @@ Loads geometry into a variable of type `Py5Shape`. SVG and OBJ files may be load
 
 Alternatively, the file maybe be loaded from anywhere on the local computer using an absolute path (something that starts with / on Unix and Linux, or a drive letter on Windows), or the filename parameter can be a URL for a file found on a network.
 
-If the file is not available or an error occurs, `None` will be returned and an error message will be printed to the console. The error message does not halt the program, however the `None` value may cause errors if your code does not check whether the value returned is `None`.
+If the shape file is not available or for whatever reason a shape cannot be created, an exception will be thrown.
 
 Underlying Processing method: [loadShape](https://processing.org/reference/loadShape_.html)
 
@@ -73,4 +73,4 @@ load_shape(
 ) -> Py5Shape
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on October 06, 2023 13:36:04pm UTC

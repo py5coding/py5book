@@ -1,6 +1,7 @@
 * [apply_filter()](py5image_apply_filter): Apply an image filter.
 * [blend()](py5image_blend): Blends a region of pixels into the image specified by the `img` parameter.
 * [copy()](py5image_copy): Copies a region of pixels from one image into another.
+* [get_np_pixels()](py5image_get_np_pixels): Get the contents of [](py5image_np_pixels) as a numpy array.
 * [get_pixels()](py5image_get_pixels): Reads the color of any pixel or grabs a section of an image.
 * [height](py5image_height): The height of the image in units of pixels.
 * [load_np_pixels()](py5image_load_np_pixels): Loads the pixel data of the image into the [](py5image_np_pixels) array.
@@ -14,6 +15,7 @@
 * [save()](py5image_save): Save the Py5Image object to an image file.
 * [set_np_pixels()](py5image_set_np_pixels): Set the entire contents of [](py5image_np_pixels) to the contents of another properly sized and typed numpy array.
 * [set_pixels()](py5image_set_pixels): Changes the color of any pixel or writes an image directly into the Py5Image object.
+* [to_pil()](py5image_to_pil): Convert the Py5Image object to a PIL Image object.
 * [update_np_pixels()](py5image_update_np_pixels): Updates the image with the data in the [](py5image_np_pixels) array.
 * [update_pixels()](py5image_update_pixels): Updates the image with the data in its [](py5image_pixels) array.
 * [width](py5image_width): The width of the image in units of pixels.

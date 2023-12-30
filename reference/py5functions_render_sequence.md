@@ -73,7 +73,7 @@ The decorated function's first parameter must be either a `py5.Sketch` object or
 
 Optionally, the caller can pass the decorator a `setup` function, along with corresponding `setup_args` and `setup_kwargs` arguments. This will be called once, just like it would for any other py5 Sketch. The type of the first parameter must also depend on the `use_py5graphics` parameter.
 
-On OSX, only the default renderer is currently supported. Other platforms support the default renderer and the OpenGL renderers (P2D and P3D).
+On macOS, only the default renderer is currently supported. Other platforms support the default renderer and the OpenGL renderers (P2D and P3D).
 
 The rendered frames can have transparent pixels if and only if the `use_py5graphics` parameter is `True` because only a `py5.Py5Graphics` object can create an image with transparency. If you need to clear the canvas between one frame and the next, use [](py5graphics_clear). There is no need to call [](py5graphics_begin_draw) or [](py5graphics_end_draw) in the decorated function as `@render_sequence()` does that for you.
 
@@ -94,7 +94,7 @@ render_sequence(
     setup_args: tuple = None,  # additional positional arguments to pass to setup function
     setup_kwargs: dict = None,  # additional keyword arguments to pass to setup function
     use_py5graphics: bool = False  # pass a py5graphics object instead of a sketch object
-) -> list[PIL.ImageFile.ImageFile]
+) -> list[PIL_Image]
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 27, 2023 13:47:02pm UTC

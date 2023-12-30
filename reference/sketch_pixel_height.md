@@ -56,8 +56,8 @@ def draw():
 
 ## Description
 
-Height of the display window in pixels. When `pixel_density(2)` is used to make use of a high resolution display (called a Retina display on OSX or high-dpi on Windows and Linux), the width and height of the Sketch do not change, but the number of pixels is doubled. As a result, all operations that use pixels (like [](sketch_load_pixels), [](sketch_get_pixels), etc.) happen in this doubled space. As a convenience, the variables [](sketch_pixel_width) and `pixel_height` hold the actual width and height of the Sketch in pixels. This is useful for any Sketch that use the [](sketch_pixels) or [](sketch_np_pixels) arrays, for instance, because the number of elements in each array will be `pixel_width*pixel_height`, not `width*height`.
+Height of the display window in pixels. When `pixel_density(2)` is used to make use of a high resolution display (called a Retina display on macOS or high-dpi on Windows and Linux), the width and height of the Sketch do not change, but the number of pixels is doubled. As a result, all operations that use pixels (like [](sketch_load_pixels), [](sketch_get_pixels), etc.) happen in this doubled space. As a convenience, the variables [](sketch_pixel_width) and `pixel_height` hold the actual width and height of the Sketch in pixels. This is useful for any Sketch that use the [](sketch_pixels) or [](sketch_np_pixels) arrays, for instance, because the number of elements in each array will be `pixel_width*pixel_height`, not `width*height`.
 
 Underlying Processing field: [pixelHeight](https://processing.org/reference/pixelHeight.html)
 
-Updated on April 15, 2023 22:56:12pm UTC
+Updated on December 27, 2023 13:47:02pm UTC

@@ -86,6 +86,7 @@
 * [apply_filter()](sketch_apply_filter)
 * [blend()](sketch_blend)
 * [copy()](sketch_copy)
+* [get_np_pixels()](sketch_get_np_pixels)
 * [get_pixels()](sketch_get_pixels)
 * [load_np_pixels()](sketch_load_np_pixels)
 * [load_pixels()](sketch_load_pixels)
@@ -93,6 +94,7 @@
 * [pixels[]](sketch_pixels)
 * [set_np_pixels()](sketch_set_np_pixels)
 * [set_pixels()](sketch_set_pixels)
+* [to_pil()](sketch_to_pil)
 * [update_np_pixels()](sketch_update_np_pixels)
 * [update_pixels()](sketch_update_pixels)
 
@@ -277,6 +279,7 @@
 
 ### Shape
 
+* [convert_shape()](sketch_convert_shape)
 * [create_shape()](sketch_create_shape)
 * [load_shape()](sketch_load_shape)
 

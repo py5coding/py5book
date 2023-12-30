@@ -38,6 +38,8 @@ The `emissive` parameter can be applied to the entire `Py5Shape` object or to a 
 
 This method can only be used for a complete `Py5Shape` object, and never within a [](py5shape_begin_shape) and [](py5shape_end_shape) pair.
 
+This method has additional color functionality that is not reflected in the method's signatures. For example, you can pass the name of a color (e.g. "green", "mediumpurple", etc). Look at the online ["All About Colors"](/integrations/colors) Python Ecosystem Integration tutorial for more information.
+
 Underlying Processing method: PShape.setEmissive
 
 ## Signatures
@@ -55,4 +57,4 @@ set_emissive(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 25, 2023 16:36:33pm UTC

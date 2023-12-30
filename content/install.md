@@ -1,14 +1,16 @@
 # Install py5
 
-These instructions have been tested on Linux, Windows, and OSX, and they should
+These instructions have been tested on Linux, Windows, and macOS, and they should
 work for most people. If you have difficulties, please be patient and try to
-work through it or let me know and I'll do what I can to help. If you hit
-a snag and figure out a solution, tell me about it and I'll update the
-documentation to share what you've learned.
+work through it or let us know on
+[GitHub Issues](https://github.com/py5coding/py5generator/issues) and we'll do
+what we can to help. If you hit a snag and figure out a solution, tell us about
+it on [GitHub Discussions](https://github.com/py5coding/py5generator/discussions)
+and we'll update the documentation to share what you've learned.
 
 ```{important}
-There are known issues using py5 on Mac computers. Mac users should read
-the [](osx_users) page for more information.
+There are a few manageable issues related to using py5 on Mac computers. Mac
+users should read the [](macos_users) page for more information.
 ```
 
 ## Requirements
@@ -17,16 +19,10 @@ Below are the basic requirements for using py5.
 
 * Python 3.8+
 * Java 17+
-* Cairo (optional)
 
 Python 3.8 is the minimum Python version but you can use a newer version if you
 wish. Java 17 is the minimum Java version but you can install a newer version
-of that as well.
-
-You may not have Java 17 or Python on your computer and you may find that
-[Cairo](https://www.cairographics.org/) can be difficult to install on
-non-Linux machines. If this applies to you, I recommend making your life
-easier by trying the [Anaconda Setup](#anaconda-setup).
+of that as well. The Java Virtual Machine cannot be a headless JVM.
 
 The best setup for beginners is to use the
 [Thonny Python Editor](https://thonny.org/) and the
@@ -44,36 +40,47 @@ can install py5 with the below command.
 pip install py5
 ```
 
-### Jupyter Notebooks support
+### Extra Dependencies
 
-If you intend to use py5 with Jupyter Notebooks, you can install py5 and py5jupyter at the same time with this one command:
+If you intend to use py5 with Jupyter Notebooks, you can install py5 and
+py5jupyter at the same time with this one command:
 
 ``` bash
 pip install py5[jupyter]
 ```
 
-The `[jupyter]` suffix tells the Python package installer to install py5's optional py5jupyter library.
-If you have py5 installed already you can use `pip install py5jupyter`.
+If you want to use py5's [](/integrations/python_ecosystem_integrations), you
+can install py5, py5jupyter, and all of py5's optional dependencies (except for
+the [](/integrations/cairo) Integration) with this command:
 
-Next, you can install one or both of [py5's Jupyter Notebook Kernels](#jupyter-notebook-kernels).
-To install the [py5 kernel](#py5-kernel) for imported mode Sketches, use this command:
+``` bash
+pip install py5[extras]
+```
+
+The `[jupyter]` or `[extras]` suffixes tell the Python package installer to
+install py5's optional dependencies. If you have py5 installed already you can
+alternatively use `pip install py5jupyter` instead of `[jupyter]`, or
+`pip install colour matplotlib py5jupyter shapely trimesh` instead of `[extras]`.
+
+### Jupyter Notebook Kernels
+
+If you have py5jupyter installed, you can install one or both of
+<a href="#jupyter-notebook-kernels">py5's Jupyter Notebook Kernels</a>. To
+install the <a href="#py5-kernel">py5 kernel</a> for imported mode Sketches, use
+this command:
 
 ``` bash
 python -m py5jupyter.kernels.py5.install --sys-prefix
 ```
 
-To install [py5bot](#py5bot) for static mode sketches, use this:
+To install <a href="#py5bot">py5bot</a> for static mode sketches, use this:
 
 ``` bash
 python -m py5jupyter.kernels.py5bot.install --sys-prefix
 ```
 
-### Optional SVG support with Cairo
-
-You can optionally install [Cairo](https://www.cairographics.org/) and
-[CairoSVG](https://cairosvg.org/) to enable py5's extra SVG support.
-
-## Quick Example
+<a name="quick-example"></a>
+### Quick Example
 
 Here is a quick py5 example to test that everything works. Please test this with
 a Jupyter Notebook, the IPython REPL, or by saving it to a *.py file and running
@@ -98,6 +105,7 @@ py5.run_sketch()
 You should see a small window that draws squares as you move your mouse around.
 If that works, have a look at the tutorials for more interesting examples.
 
+<a name="anaconda-setup"></a>
 ## Anaconda or Miniconda Setup
 
 [Anaconda](https://www.anaconda.com/products/individual) is a widely
@@ -116,6 +124,7 @@ or [the Miniconda Installer](https://docs.conda.io/en/latest/miniconda.html) for
 [Miniconda's installation instructions](https://conda.io/projects/conda/en/stable/user-guide/install/index.html)
 are both extensive and should be able to provide the necessary guidance for your computer.
 
+<a name="brief-steps"></a>
 ### Brief Steps
 
 You can create a complete Anaconda environment for py5 using one
@@ -134,27 +143,32 @@ and create the environment using
 [Anaconda Navigator](https://docs.anaconda.com/anaconda/navigator/).
 
 That environment file contains the below information, telling Anaconda
-to create an environment with Cairo and Jupyter Notebooks.
+to create a Python 3.11 environment with Jupyter and many of py5's required and
+optional dependencies.
 
 ``` yaml
 name: py5coding
 channels:
   - conda-forge
 dependencies:
-  - python=3.10
-  - cairo
-  - cairosvg
-  - jedi
+  - python=3.11
+  - colour>=0.1.5
+  - jpype1>=1.4
   - jupyterlab
-  - line_profiler
-  - matplotlib
+  - line_profiler>=4.0
+  - matplotlib>=3.7
+  - numpy>=1.24
+  - pillow>=9.5
   - pip
+  - shapely>=2.0
+  - trimesh>=3.23
   - pip:
       - py5[jupyter]
 ```
 
-You must activate the environment using `conda activate`. When the environment
-is active, you will see `(py5coding)` in the command prompt.
+You must activate the environment using `conda activate <environment name>`.
+When the environment is active, you will see the environment name
+(e.g. "py5coding") in the command prompt.
 
 ``` bash
 conda activate py5coding
@@ -177,9 +191,13 @@ OpenJDK 64-Bit Server VM 21.9 (build 17.0.2+8, mixed mode, sharing)
 ```
 
 If you get an error or see the version number is something like 1.8 or 11.0.14,
-you will need to install or upgrade Java. You can install
-it any way you like, but note that installing Java through Anaconda has caused
-problems in the past. One straightforward installation approach is to use the
+you will need to install or upgrade Java. If your Java installation is a
+headless JVM, the output of `java -version` may not indicate this but py5 will
+later raise an Exception when you import the py5 library.
+
+You can install Java any way you like, but note that installing Java through
+Anaconda has caused problems in the past. One straightforward installation
+approach is to use the
 [Python library install-jdk](https://github.com/jyksnw/install-jdk). Install it
 into your Anaconda environment using `pip install`:
 
@@ -209,30 +227,27 @@ Now that Java is installed, you can launch jupyter lab and start coding with py5
 jupyter lab
 ```
 
-Try testing with the [Quick Example](#quick-example) to verify
+Try testing with the <a href="#quick-example">Quick Example</a> to verify
 everything works.
 
 Before moving on, consider installing one or both of py5's Jupyter
-Notebook Kernels: [py5 kernel](#py5-kernel) and [py5bot](#py5bot).
+Notebook Kernels: <a href="#py5-kernel">py5 kernel</a> and <a href="#py5bot">py5bot</a>.
 
 ### Detailed Steps
 
-If the [Brief Steps](#brief-steps) don't work for you or you want more
+If the <a href="#brief-steps">Brief Steps</a> don't work for you or you want more
 detailed information, the below steps will provide you with the necessary
 information to work through any difficulties.
 
 #### Create Anaconda Environment
 
 First you must create an Anaconda environment to install the Python
-packages into. Below, we create an environment called `py5coding` with
-Python 3.8+. Note that py5 does not support earlier versions of Python.
-Later versions seem to work OK but have not been extensively tested.
-
-The below command will also install Jupyter Lab, which py5 is designed to work
-well with.
+packages into. Below, we create a Python environment called `py5coding` with
+Python 3.11. This command will also install Jupyter Lab and many of py5's
+required and optional dependencies from Anaconda.
 
 ``` bash
-conda create -n py5coding python=3.10 jupyterlab jedi=0.17.2
+conda create -n py5coding python=3.11 colour>=0.1.5 jpype1>=1.4 jupyterlab line_profiler>=4.0 matplotlib>=3.7 numpy>=1.24 pillow>=9.5 pip shapely>=2.0 trimesh>=3.23
 ```
 
 After creating the `py5coding` environment you must \"activate\" it so that the
@@ -312,41 +327,12 @@ the architecture (32 bit vs 64 bit) of your Python installation and your Java
 installation are not the same. If you get an error, you will also see some
 helpful debug information that you can use to address your situation.
 
-#### Install Cairo and CairoSVG (optional)
-
-[Cairo](https://www.cairographics.org/) is a drawing library for working
-with [Scalable Vector Graphics
-(SVG)](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) files. If
-you complete this optional step, py5 will have the ability to convert
-SVG images to [](/reference/py5image) objects using the
-[](/reference/sketch_convert_image) method. As Cairo's
-ability to work with the SVG language is more complete than
-Processing's, this will provide better support for that image format.
-
-Installing [Cairo](https://www.cairographics.org/) on Windows or Mac
-computers is difficult without using an Anaconda environment. To install
-it with Anaconda, use the below commands. The first installs Cairo and
-the second installs [CairoSVG](https://cairosvg.org/), which is the
-Python library that py5 interfaces with to convert SVG images to
-[](/reference/py5image) objects.
-
-``` bash
-conda install -c conda-forge cairo
-```
-
-You may get a message saying that it has already been installed. If so,
-express joy and proceed to the next step.
-
-``` bash
-conda install -c conda-forge cairosvg
-```
-
 #### Install py5 library
 
-Finally, install the py5 library.
+Finally, install the py5 and py5jupyter libraries.
 
 ``` bash
-pip install py5
+pip install py5 py5jupyter
 ```
 
 If you are on Windows or on a Mac, you may get an error relating to the
@@ -357,11 +343,10 @@ the error, then try `pip install py5` again.
 conda install -c conda-forge line_profiler
 ```
 
-After installing py5, try testing with the [Quick
-Example](#quick-example) to verify everything works. Also, consider
-installing one or both of py5's Jupyter Notebook Kernels: [py5
-kernel](#py5-kernel) and [py5bot](#py5bot).
+After installing py5, try testing with the <a href="#quick-example">Quick Example</a> to verify everything works. Also, consider
+installing one or both of py5's Jupyter Notebook Kernels: <a href="#py5-kernel">py5 kernel</a> and <a href="#py5bot">py5bot</a>.
 
+<a name="jupyter-notebook-kernels"></a>
 ## Jupyter Notebook Kernels
 
 To use py5's Jupyter support you must have the py5jupyter library installed.
@@ -369,6 +354,7 @@ Starting with version 0.8.0, py5's Jupyter functionality requires the second
 optional dependency py5jupyter. Use of py5 and Jupyter without py5jupyter is
 possible but is deprecated.
 
+<a name="py5-kernel"></a>
 ### py5 kernel
 
 You can optionally install the py5 Jupyter Notebook Kernel. This is a
@@ -385,6 +371,7 @@ will install the py5 kernel inside the py5 Anaconda environment and
 Jupyter will only present it as an option when Jupyter is run in that
 environment.
 
+<a name="py5bot"></a>
 ### py5bot
 
 You can optionally install py5bot, which is also a Jupyter Notebook

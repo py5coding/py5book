@@ -184,7 +184,7 @@ the module. The marker also is case insensitive, so `# py5 Imported Mode code`
 will work just as well. If you forget to add this or add it incorrectly, you
 will get an error message reminding you.
 
-```txt
+```text
 File "/tmp/test/helper_functions.py", line 13, in draw_squares
     12   def draw_squares():
 --> 13       rect(mouse_x, mouse_y, 10, 10)

@@ -30,7 +30,7 @@ For users who are familiar with Processing and py5 programming, you can pretend 
 
 As this is creating a DXF file, your code will be limited to the capabilities of that renderer. 
 
-This magic is not available on OSX.
+This magic is not available on macOS.
 
 Code used in this cell can reference functions and variables defined in other cells because a copy of the user namespace is provided during execution. By default, variables and functions created in this cell will be local to only this cell because to do otherwise would be unsafe. Mutable objects in the user namespace, however, can be altered and those changes will persist elsewhere in the notebook.
 
@@ -54,4 +54,4 @@ optional arguments:
   --unsafe  allow new variables to enter the user namespace
 ```
 
-Updated on March 06, 2023 03:33:38am UTC
+Updated on December 27, 2023 13:47:02pm UTC

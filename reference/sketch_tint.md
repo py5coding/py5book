@@ -70,6 +70,8 @@ The value for the gray parameter must be less than or equal to the current maxim
 
 The `tint()` function is also used to control the coloring of textures in 3D.
 
+This method has additional color functionality that is not reflected in the method's signatures. For example, you can pass the name of a color (e.g. "green", "mediumpurple", etc). Look at the online ["All About Colors"](/integrations/colors) Python Ecosystem Integration tutorial for more information.
+
 Underlying Processing method: [tint](https://processing.org/reference/tint_.html)
 
 ## Signatures
@@ -113,4 +115,4 @@ tint(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 25, 2023 16:36:33pm UTC

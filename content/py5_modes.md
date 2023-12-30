@@ -24,7 +24,7 @@ Processing to Python. [Processing Mode](processing_mode) is documented separatel
 ```{important}
 There are some known issues using py5 on Mac computers. The best option
 for Mac users is to use py5 through Jupyter Notebooks, and after using the
-`%gui osx` magic. See [](osx_users) for more information.
+`%gui osx` magic. See [](macos_users) for more information.
 ```
 
 ## Module Mode

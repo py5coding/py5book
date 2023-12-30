@@ -108,6 +108,17 @@ Underlying Processing method: [color](https://processing.org/reference/color_.ht
 
 ```python
 color(
+    cmap_input: float,  # input value when using colormap color mode
+    /,
+) -> int
+
+color(
+    cmap_input: float,  # input value when using colormap color mode
+    alpha: int,  # alpha value relative to current color range
+    /,
+) -> int
+
+color(
     fgray: float,  # number specifying value between white and black
     /,
 ) -> int
@@ -125,6 +136,17 @@ color(
 
 color(
     gray: int,  # number specifying value between white and black
+    alpha: int,  # alpha value relative to current color range
+    /,
+) -> int
+
+color(
+    hex_code: str,  # hex color code
+    /,
+) -> int
+
+color(
+    hex_code: str,  # hex color code
     alpha: int,  # alpha value relative to current color range
     /,
 ) -> int
@@ -160,4 +182,4 @@ color(
 ) -> int
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on October 06, 2023 13:36:04pm UTC

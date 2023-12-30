@@ -48,6 +48,8 @@ The value for the "gray" parameter must be less than or equal to the current max
 
 To change the color of an image or a texture, use [](sketch_tint).
 
+This method has additional color functionality that is not reflected in the method's signatures. For example, you can pass the name of a color (e.g. "green", "mediumpurple", etc). Look at the online ["All About Colors"](/integrations/colors) Python Ecosystem Integration tutorial for more information.
+
 Underlying Processing method: [fill](https://processing.org/reference/fill_.html)
 
 ## Signatures
@@ -91,4 +93,4 @@ fill(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 25, 2023 16:36:33pm UTC

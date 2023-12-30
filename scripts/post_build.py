@@ -19,13 +19,12 @@
 # *****************************************************************************
 import os
 import re
-from pathlib import Path
 import shutil
-
+from pathlib import Path
 
 BUILD_DIR = Path("_build/html/")
 
-IMG_REGEX = re.compile(r'<img src=\"(images/[^\"]*)\"[^>]*>')
+IMG_REGEX = re.compile(r"<img src=\"(images/[^\"]*)\"[^>]*>")
 GITHUB_EDIT_LINK_REGEX = re.compile(
     r"https://github.com/py5coding/py5book/edit/main/reference/([^\.]*)\.rst"
 )
@@ -63,11 +62,14 @@ for doc in BUILD_DIR.glob("**/*.html"):
                 stem = stem.replace(lowercase, py5case)
                 break
 
-        new_link = f'https://github.com/py5coding/py5generator/edit/main/py5_docs/Reference/api_en/{stem}.txt'
+        new_link = f"https://github.com/py5coding/py5generator/edit/main/py5_docs/Reference/api_en/{stem}.txt"
         html = html.replace(original_link, new_link)
 
     # fix new issue link to point to py5generator repo
-    html = html.replace('https://github.com/py5coding/py5book/issues/new?', 'https://github.com/py5coding/py5generator/issues/new?')
+    html = html.replace(
+        "https://github.com/py5coding/py5book/issues/new?",
+        "https://github.com/py5coding/py5generator/issues/new?",
+    )
 
     with open(doc, "w") as f:
         f.write(html)
@@ -81,6 +83,8 @@ if (BUILD_DIR / "files").exists():
 shutil.copytree("files", BUILD_DIR / "files")
 
 shutil.copytree("tutorials/images", BUILD_DIR / "tutorials/images")
+shutil.copytree("integrations/images", BUILD_DIR / "integrations/images")
+shutil.copytree("integrations/models", BUILD_DIR / "integrations/models")
 
 ###############################################################################
 # FIX 404.HTML PAGE
@@ -91,7 +95,7 @@ with open(BUILD_DIR / "404.html") as f:
 
 html = re.sub(r'(href|src)="([^"]*)"', r'\1="/\2"', html)
 
-with open(BUILD_DIR / "404.html", 'w') as f:
+with open(BUILD_DIR / "404.html", "w") as f:
     f.write(html)
 
 ###############################################################################

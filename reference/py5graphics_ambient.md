@@ -6,6 +6,8 @@ Sets the ambient reflectance for shapes drawn to the screen.
 
 Sets the ambient reflectance for shapes drawn to the screen. This is combined with the ambient light component of the environment. The color components set through the parameters define the reflectance. For example in the default color mode, setting `ambient(255, 127, 0)`, would cause all the red light to reflect and half of the green light to reflect. Use in combination with [](py5graphics_emissive), [](py5graphics_specular), and [](py5graphics_shininess) to set the material properties of shapes.
 
+This method has additional color functionality that is not reflected in the method's signatures. For example, you can pass the name of a color (e.g. "green", "mediumpurple", etc). Look at the online ["All About Colors"](/integrations/colors) Python Ecosystem Integration tutorial for more information.
+
 This method is the same as [](sketch_ambient) but linked to a `Py5Graphics` object. To see example code for how it can be used, see [](sketch_ambient).
 
 Underlying Processing method: PGraphics.ambient
@@ -31,4 +33,4 @@ ambient(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 25, 2023 16:36:33pm UTC

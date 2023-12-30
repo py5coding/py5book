@@ -61,6 +61,7 @@
 * [apply_filter()](py5graphics_apply_filter)
 * [blend()](py5graphics_blend)
 * [copy()](py5graphics_copy)
+* [get_np_pixels()](py5graphics_get_np_pixels)
 * [get_pixels()](py5graphics_get_pixels)
 * [load_np_pixels()](py5graphics_load_np_pixels)
 * [load_pixels()](py5graphics_load_pixels)
@@ -68,6 +69,7 @@
 * [pixels[]](py5graphics_pixels)
 * [set_np_pixels()](py5graphics_set_np_pixels)
 * [set_pixels()](py5graphics_set_pixels)
+* [to_pil()](py5graphics_to_pil)
 * [update_np_pixels()](py5graphics_update_np_pixels)
 * [update_pixels()](py5graphics_update_pixels)
 

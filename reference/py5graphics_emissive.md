@@ -6,6 +6,8 @@ Sets the emissive color of the material used for drawing shapes drawn to the scr
 
 Sets the emissive color of the material used for drawing shapes drawn to the screen. Use in combination with [](py5graphics_ambient), [](py5graphics_specular), and [](py5graphics_shininess) to set the material properties of shapes.
 
+This method has additional color functionality that is not reflected in the method's signatures. For example, you can pass the name of a color (e.g. "green", "mediumpurple", etc). Look at the online ["All About Colors"](/integrations/colors) Python Ecosystem Integration tutorial for more information.
+
 This method is the same as [](sketch_emissive) but linked to a `Py5Graphics` object. To see example code for how it can be used, see [](sketch_emissive).
 
 Underlying Processing method: PGraphics.emissive
@@ -31,4 +33,4 @@ emissive(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 25, 2023 16:36:33pm UTC

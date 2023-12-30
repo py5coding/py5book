@@ -5,12 +5,14 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.4
+    jupytext_version: 1.14.7
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
   name: python3
 ---
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 # Notebook Magic and Special Features
 
@@ -19,15 +21,26 @@ The py5 library is designed to work well with Jupyter tools, including Jupyter n
 To use py5 in a notebook, first import the library:
 
 ```{code-cell} ipython3
-:tags: [remove-cell]
-
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
 import time
 ```
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 import py5_tools
 import py5
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 You should never need to import the py5jupyter library directly.
 
@@ -38,22 +51,36 @@ Before continuing, it is worth pointing out that you can access the docstrings f
 Using the `?` which something like `py5.rect?` temporarily displays the documentation at the bottom of the notebook window. The builtin `help` function puts the result in the notebook cell.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 help(py5.rect)
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 Pause to take a moment to appreciate that documentation, with its proper type signatures and explicit variable types. You'll also notice the content is analogous what is in py5's [rect()](/reference/sketch_rect) reference documentation. Producing thorough and coordinated py5 docstrings and reference documentation like this took an enormous amount of work.
 
 You'll notice that all the usual Jupyter niceties such as tab completion work for py5. There are also Python typehints for all py5 objects.
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ## Load IPython Magics
 
 Next, load the py5 magics:
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 %load_ext py5
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 These "magic" commands are like extra functionality added to what Python and Jupyter notebooks can already do.
 
@@ -68,11 +95,11 @@ As before, documentation for each is available by appending a `?`, such as when 
 
 See below for demonstrations of what each does.
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ## Running py5 on Mac Computers
 
-There are several known [issues running py5 on OSX computers](/content/osx_users/). If you use a Mac, you should read about the Mac issues before continuing. Bottom line, the `%gui osx` Jupyter magic is necessary to use py5 on OSX computers.
+There are several known [issues running py5 on macOS computers](/content/macos_users/). If you use a Mac, you should read about the Mac issues before continuing. Bottom line, the `%gui osx` Jupyter magic is necessary to use py5 on macOS computers.
 
 ## Static Sketches
 
@@ -83,6 +110,11 @@ The first line in the cell, `%%py5draw 300 200`, is not Python code. Instead, it
 Observe that there are no defined `setup` or `draw` functions.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 %%py5draw 300 200
 
 # make the background light gray
@@ -99,18 +131,32 @@ py5.stroke_weight(15)
 py5.line(40, 30, 220, 180)
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 The code can access variables and functions defined in other non-magic notebook cells. This is especially useful when the code leverages py5 functionality.
 
 For example, the below function sets the fill color to a random color.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 def pick_random_fill():
     py5.fill(py5.random(255), py5.random(255), py5.random(255))
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 The below example uses `pick_random_fill` to draw randomly colored rectangles. This example is a bit contrived, but you do see how the code below can call a function defined elsewhere.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 %%py5draw 300 200
 
 py5.background(240)
@@ -121,17 +167,24 @@ for i in range(100):
     py5.rect(py5.random(py5.width), py5.random(py5.height), 10, 10)
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 The `pick_random_fill` function can be reused again elsewhere in this notebook.
 
 By default, any new functions and variables defined in that `%%py5draw` cell are not available outside of the cell. However, you can explicitly change this. See below for further discussion.
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ### Saving to a File
 
 If you like you can save the generated image to a file with the `-f` parameter, like so:
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 %%py5draw 300 200 -f images/jupyter_notebooks/simple_example.png
 
 py5.background(240)
@@ -142,17 +195,24 @@ for i in range(100):
     py5.rect(py5.random(py5.width), py5.random(py5.height), 10, 10)
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 Now there's an image located at `images/jupyter_notebooks/simple_example.png`. You can embed that in this notebook using markdown.
 
 ![asdf](images/jupyter_notebooks/simple_example.png)
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ### OpenGL Renderers
 
 You can also use the OpenGL renderers with the `-r` parameter, like so.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 %%py5draw 300 200 -r P2D
 
 py5.background(240)
@@ -163,6 +223,8 @@ for i in range(100):
     py5.rect(py5.random(py5.width), py5.random(py5.height), 10, 10)    
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 When that cell runs, a py5 window is quickly opened and closed. For whatever reason, the Processing's OpenGL renderers cannot seem to draw to an invisible window (but we'd be delighted to be proven wrong about that).
 
 The previous `%%py5draw` examples in this notebook used a special `HIDDEN` renderer based on the default `JAVA2D` renderer that does not need to open a window. That `HIDDEN` renderer was created just for this purpose.
@@ -170,6 +232,11 @@ The previous `%%py5draw` examples in this notebook used a special `HIDDEN` rende
 The 3D renderer also works:
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 %%py5draw 300 300 -r P3D
 
 py5.background(240)
@@ -184,6 +251,8 @@ for i in range(N):
     py5.pop_matrix()
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 ### SVG Renderer
 
 To create SVG images, use the `%%py5drawsvg` magic.
@@ -191,6 +260,11 @@ To create SVG images, use the `%%py5drawsvg` magic.
 As before, the result can be saved to a file with the `-f` parameter.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 %%py5drawsvg 300 200 -f /tmp/test.svg
 
 py5.background(240)
@@ -201,11 +275,18 @@ for i in range(100):
     py5.rect(py5.random(py5.width), py5.random(py5.height), 10, 10)
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 ### PDF Renderer
 
 Write to PDF files using `%%py5drawpdf`. Since Jupyter notebook does not support embedded PDF files, writing the output to a file is not optional.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 %%py5drawpdf 300 200 /tmp/simple_example.pdf
 
 py5.background(240)
@@ -216,11 +297,18 @@ for i in range(100):
     py5.rect(py5.random(py5.width), py5.random(py5.height), 10, 10)
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 ### DXF Renderer
 
 Write 3D objects to DXF files with `%%py5drawdxf`. This probably won't be a popular choice, but maybe somebody will appreciate it.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 %%py5drawdxf 200 200 /tmp/test.dxf
 
 py5.translate(py5.width / 2, py5.height / 2)
@@ -230,8 +318,15 @@ py5.box(80)
 ```
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 !head /tmp/test.dxf
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ### Variable Scope
 
@@ -240,6 +335,11 @@ By default, new variables defined inside cell magics such as `%%py5draw` cannot 
 Consider the below example. It creates new variables `random_x` and `random_y` to store the location of the square.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 %%py5draw 300 200
 
 py5.background(240)
@@ -250,13 +350,21 @@ random_y = py5.random(py5.height)
 py5.rect(random_x, random_y, 50, 50)
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 The variables `random_x` and `random_y` are not accessible outside of that cell:
 
 ```{code-cell} ipython3
-:tags: [raises-exception]
-
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [raises-exception]
+---
 random_x, random_y
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 This behavior is by design.
 
@@ -265,6 +373,11 @@ Consider that the py5 library is using the Processing library to create these gr
 If you understand the risks, or if you are working with non-Processing objects (as is the case for `random_x` and `random_y` in the above example), you can use the `--unsafe` parameter. This lets the cell magic add new variables and functions to the notebook namespace. As the name implies, you can cause problems for yourself by using this.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 %%py5draw 300 200 --unsafe
 
 py5.background(240)
@@ -276,8 +389,15 @@ py5.rect(random_x, random_y, 50, 50)
 ```
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 random_x, random_y
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ## Animated Sketches
 
@@ -288,118 +408,201 @@ Note that starting your development process with static Sketches is a great way 
 Let's create a simple example. The below `setup` function will tell py5 to create a 500 by 400 Sketch window. It will set the background color and set the rect mode.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 def setup():
     py5.size(500, 400, py5.P2D)
     py5.background(240)
     py5.rect_mode(py5.CENTER)
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 Next, the `draw` function to draw random squares.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 def draw():
     random_x = py5.random(py5.width)
     random_y = py5.random(py5.height)
     py5.rect(random_x, random_y, 10, 10)
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": ["remove-cell"]}
+
 Finally, let's define a `mouse_clicked` function to change the fill color when the Sketch is clicked.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
 def mouse_clicked():
     pick_random_fill()
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 To run the Sketch, use the [run_sketch()](/reference/sketch_run_sketch) method. It will pull out the `setup` and `draw` functions from the notebook's namespace and put them together in a Sketch.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 py5.run_sketch()
 print('the sketch is running!')
 ```
 
-If you are runnning this notebook locally, you will see a new window open for the running Sketch. If you are running this through Binder, or possibly using the documentation website's Live Code feature (see the rocket ship icon at the top of the page), the Sketch is running on a server somewhere in the cloud. In that case, to see the Sketch you will need to create a Sketch Portal using [py5tools.sketch_portal()](/reference/py5tools_sketch_portal). This will create what is effectively a view into what is being displayed on that Sketch window running in the cloud. To be clear, although you will see a live animation in the Sketch Portal, the Sketch is not actually running in your browser. It’s kind of like when you watch a live television program on your TV. The live events are taking place somewhere else, but images of the events are being broadcast to your television.
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+If you are running this notebook locally, you will see a new window open for the running Sketch. If you are running this through Binder, or possibly using the documentation website's Live Code feature (see the rocket ship icon at the top of the page), the Sketch is running on a server somewhere in the cloud. In that case, to see what the Sketch is doing you will need to create some screenshots and embed them in the notebook.
+
++++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": ["remove-cell"]}
+
+If you are running this notebook locally, you will see a new window open for the running Sketch. If you are running this through Binder, or possibly using the documentation website's Live Code feature (see the rocket ship icon at the top of the page), the Sketch is running on a server somewhere in the cloud. In that case, to see the Sketch you will need to create a Sketch Portal using [py5tools.sketch_portal()](/reference/py5tools_sketch_portal). This will create what is effectively a view into what is being displayed on that Sketch window running in the cloud. To be clear, although you will see a live animation in the Sketch Portal, the Sketch is not actually running in your browser. It’s kind of like when you watch a live television program on your TV. The live events are taking place somewhere else, but images of the events are being broadcast to your television.
 
 ```{code-cell} ipython3
-:tags: [remove-output]
-
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-output, remove-cell]
+---
 py5_tools.sketch_portal()
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": ["remove-cell"]}
+
 Click on the Sketch Portal to make the fill color change. The Sketch Portal will respond to all of py5's keyboard and mouse events. It is fully interactive!
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 By default, the [run_sketch()](/reference/sketch_run_sketch) method returns right away, as illustrated by the `print` statement. This enables the notebook user to continue coding, including executing code that interacts with the Sketch. The Sketch continues to run in its own window.
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ### Screenshots
 
 The Sketch window cannot be embedded into the notebook, but the [`py5_tools.screenshot()`](/reference/py5tools_screenshot) function can grab a single snapshot of the window.
 
 ```{code-cell} ipython3
-:tags: [remove-cell]
-
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
 time.sleep(3)
 ```
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 sketch_snapshot = py5_tools.screenshot()
 
 sketch_snapshot
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 Observe that this function returns a frame of the Sketch as a [PIL Image object](https://pillow.readthedocs.io/en/stable/index.html).
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 print(type(sketch_snapshot))
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 The [`py5_tools.save_frames()`](/reference/py5tools_save_frames) function will save multiple frames to a directory.
 
 Of course you can also call [`save_frame()`](/reference/sketch_save_frame) from the `draw` method, but that would require you to redefine the `draw` method with a few extra lines of code. This is more convenient.
 
 ```{code-cell} ipython3
-:tags: [remove-output]
-
-frames = py5_tools.save_frames('/tmp/testframes/', start=0, limit=10)
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-output]
+---
+py5_tools.save_frames('/tmp/testframes/', start=0, limit=10)
 ```
 
-```{code-cell} ipython3
-frames
-```
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 Those frames can be assembled into a video file.
 
 The [`py5_tools.capture_frames()`](/reference/py5tools_capture_frames) function is similar to [`py5_tools.save_frames()`](/reference/py5tools_save_frames) except it returns the frames as a `list` of [PIL Image object](https://pillow.readthedocs.io/en/stable/index.html)s.
 
 ```{code-cell} ipython3
-:tags: [remove-output]
-
-frames = py5_tools.capture_frames(10, period=1, block=True)
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-output]
+---
+frames = py5_tools.capture_frames(count=10, period=1, block=True)
 ```
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 frames[0]
 ```
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 frames[-1]
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ### Animated GIFs
 
 The last magic creates animated GIFs from your Sketch. Everybody loves animated GIFs.
 
 ```{code-cell} ipython3
-:tags: [remove-output]
-
-py5_tools.animated_gif('images/jupyter_notebooks/simple_example.gif', 10, 1, 0.5)
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-output]
+---
+py5_tools.animated_gif('images/jupyter_notebooks/simple_example.gif', count=10, period=1, duration=0.5)
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 The animated GIF can then be embedded in a notebook markdown cell.
 
 ![simple_example](images/jupyter_notebooks/simple_example.gif)
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ### Print Statements
 
@@ -414,9 +617,16 @@ This is less than perfect, and might frustrate users who like to debug their cod
 If instead you want to send messages to the Jupyter notebook log, you can always do so like this:
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 shell = get_ipython()
 shell.log.critical('test message')
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 In the terminal used to run `jupyter notebook`, this message appears:
 

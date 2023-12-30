@@ -52,4 +52,6 @@ Much like the [](sketch_pixels) array, there are load and update methods that mu
 
 To set the entire contents of `np_pixels[]` to the contents of another properly sized numpy array, consider using [](sketch_set_np_pixels).
 
-Updated on March 06, 2023 02:49:26am UTC
+Look at the online ["Numpy, Arrays, and Images"](/integrations/numpy) Python Ecosystem Integration tutorial for more information about how to make best use of `np_pixels[]`.
+
+Updated on December 25, 2023 17:02:43pm UTC

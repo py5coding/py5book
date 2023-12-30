@@ -13,7 +13,7 @@ Creates a portal widget to continuously stream frames from a running Sketch into
 ```python
 import py5_tools
 
-py5.run_sketch()
+py5.run_sketch(block=False)
 # stream frames from the currently running sketch for 5 seconds
 portal = py5_tools.sketch_portal(time_limit=5)
 
@@ -27,6 +27,8 @@ portal
 ## Description
 
 Creates a portal widget to continuously stream frames from a running Sketch into a Jupyter notebook. Each frame will appear embedded in the notebook, with each new frame replacing the previous frame.
+
+**Unfortunately, the Sketch Portal feature had to be removed from py5 in release 0.10.0. Changes to Jupyter Lab and Jupyter Widgets somehow broke the code and it was too difficult to figure out why. Rather than fix the code, the Sketch Portal will be re-implemented using the Python library anywidget. This new approach will hopefully be simpler to implement and easier to maintain.**
 
 By default the Sketch will be the currently running Sketch, as returned by [](py5functions_get_current_sketch). Use the `sketch` parameter to specify a different running Sketch, such as a Sketch created using Class mode.
 
@@ -59,4 +61,4 @@ sketch_portal(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 26, 2023 10:50:51am UTC

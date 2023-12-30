@@ -19,7 +19,7 @@ def setup():
 
 print("the sketch is ready:", py5.is_ready)
 
-py5.run_sketch()
+py5.run_sketch(block=False)
 
 print("the sketch is running:", py5.is_running)
 
@@ -42,4 +42,4 @@ Boolean value reflecting if the Sketch has been run and has now stopped. This wi
 
 After an error or a call to [](py5surface_stop_thread), the Sketch window will still be open. Call [](sketch_exit_sketch) to close the window.
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 25, 2023 17:40:34pm UTC

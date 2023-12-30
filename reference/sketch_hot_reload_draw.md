@@ -22,7 +22,7 @@ def draw2():
     py5.circle(py5.mouse_x, py5.mouse_y, 10)
 
 
-py5.run_sketch()
+py5.run_sketch(block=False)
 
 time.sleep(10)
 py5.hot_reload_draw(draw2)
@@ -44,4 +44,4 @@ hot_reload_draw(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 25, 2023 17:40:34pm UTC

@@ -13,7 +13,8 @@ parts:
 - caption: Getting Started
   chapters:
   - file: content/install
-  - file: content/osx_users
+  - file: content/coming_from_processing_java
+  - file: content/macos_users
   - file: content/py5_modes
   - file: content/hybrid_programming
   - file: content/processing_mode
@@ -25,10 +26,21 @@ parts:
     sections:
     - glob: tutorials/intro_to_py5_and_python_*
 
+  - file: integrations/python_ecosystem_integrations
+    sections:
+    - file: integrations/colors
+    - file: integrations/pillow
+    - file: integrations/matplotlib
+    - file: integrations/numpy
+    - file: integrations/shapely
+    - file: integrations/trimesh
+    - file: integrations/cairo
+    - file: integrations/custom_integrations
+
   - file: tutorials/jupyter
     sections:
     - file: tutorials/jupyter_introducing_py5bot
-    - file: tutorials/jupyter_animation_and_sketch_portals
+    # - file: tutorials/jupyter_animation_and_sketch_portals
     - file: tutorials/jupyter_render_helper_tools
     - file: tutorials/jupyter_notebook_magic_and_special_features
 

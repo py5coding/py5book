@@ -1,6 +1,6 @@
 # display_density()
 
-This function returns the number "2" if the screen is a high-density screen (called a Retina display on OSX or high-dpi on Windows and Linux) and a "1" if not.
+This function returns the number "2" if the screen is a high-density screen (called a Retina display on macOS or high-dpi on Windows and Linux) and a "1" if not.
 
 ## Examples
 
@@ -28,7 +28,7 @@ def draw():
 
 ## Description
 
-This function returns the number "2" if the screen is a high-density screen (called a Retina display on OSX or high-dpi on Windows and Linux) and a "1" if not. This information is useful for a program to adapt to run at double the pixel density on a screen that supports it.
+This function returns the number "2" if the screen is a high-density screen (called a Retina display on macOS or high-dpi on Windows and Linux) and a "1" if not. This information is useful for a program to adapt to run at double the pixel density on a screen that supports it.
 
 Underlying Processing method: [displayDensity](https://processing.org/reference/displayDensity_.html)
 
@@ -43,4 +43,4 @@ display_density(
 ) -> int
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 27, 2023 13:47:02pm UTC

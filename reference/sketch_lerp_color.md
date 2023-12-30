@@ -40,6 +40,8 @@ Calculates a color between two colors at a specific increment. The `amt` paramet
 
 An amount below 0 will be treated as 0. Likewise, amounts above 1 will be capped at 1. This is different from the behavior of [](sketch_lerp), but necessary because otherwise numbers outside the range will produce strange and unexpected colors.
 
+This method has additional color functionality that is not reflected in the method's signatures. For example, you can pass the name of a color (e.g. "green", "mediumpurple", etc). Look at the online ["All About Colors"](/integrations/colors) Python Ecosystem Integration tutorial for more information.
+
 Underlying Processing method: [lerpColor](https://processing.org/reference/lerpColor_.html)
 
 ## Signatures
@@ -61,4 +63,4 @@ lerp_color(
 ) -> int
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 25, 2023 16:36:33pm UTC

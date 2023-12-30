@@ -1,5 +1,3 @@
-<a name="top"></a>
-
 # py5 Reference Summary
 
 ## Drawing Shapes
@@ -58,11 +56,10 @@
 
 * [create_shape()](/reference/sketch_create_shape) - Used to define a new empty Py5Shape object.
 * [load_shape()](/reference/sketch_load_shape) - Loads SVG or OBJ geometry making it available as a Py5Shape object.
+* [convert_shape()](/reference/sketch_convert_shape) - Converts Python objects into Py5Shape objects.
 * [shape()](/reference/sketch_shape) - Draws shapes to the display window.
 * [shape_mode()](/reference/sketch_shape_mode) - Modifies the location from which shapes draw.
 * [Py5Shape class](/reference/py5shape) - Datatype for storing shapes. Allows loading and displaying SVG and OBJ shapes.
-
-[back to top](#top)
 
 ## Color and Other Graphic Attributes
 
@@ -98,8 +95,6 @@
 * [push_style()](/reference/sketch_push_style) - The `push_style()` function saves the current style settings and `pop_style()` restores the prior settings.
 * [push()](/reference/sketch_push) - combines `push_style()` and `push_matrix()` The `push()` function saves the current drawing style settings and transformations, while `pop()` restores these settings.
 * [pop()](/reference/sketch_pop) - combines `pop_style()` and `pop_matrix()` The `pop()` function restores the previous drawing style settings and transformations after `push()` has changed them.
-
-[back to top](#top)
 
 ## Inputs
 
@@ -159,8 +154,6 @@
 * [second()](/reference/sketch_second) - Returns the current seconds as a value from 0 to 59 by consulting the clock on your computer.
 * [year()](/reference/sketch_year) - Returns the current year by consulting the clock on your computer.
 
-[back to top](#top)
-
 ## Output
 
 ### Saving Files
@@ -185,8 +178,6 @@
 * [println()](/reference/sketch_println) - Print text or other values to the console (not the sketch drawing area). Similar to Python's `print()`.
 * [set_println_stream()](/reference/sketch_set_println_stream) - Customize where the output of `println()` goes.
 
-[back to top](#top)
-
 ## Typography
 
 ### Drawing Text
@@ -209,8 +200,6 @@
 * [text_width()](/reference/sketch_text_width) - Calculates and returns the width of any character or text string.
 * [text_ascent()](/reference/sketch_text_ascent) - Returns ascent of the current font at its current size.
 * [text_descent()](/reference/sketch_text_descent) - Returns descent of the current font at its current size.
-
-[back to top](#top)
 
 ## Coordinate System Transformations
 
@@ -238,8 +227,6 @@
 * [reset_matrix()](/reference/sketch_reset_matrix) - Replaces the current matrix with the identity matrix.
 * [set_matrix()](/reference/sketch_set_matrix) - Set the current matrix to the one specified through the parameter source.
 
-[back to top](#top)
-
 ## Sketch Environment
 
 ### Setup and Variables
@@ -255,7 +242,7 @@
 * [frame_count](/reference/sketch_frame_count) - The system variable frame_count contains the number of frames that have been displayed since the program started.
 * [frame_rate()](/reference/sketch_frame_rate) - Specifies the target number of frames to be displayed every second. If drawing a frame gets slow the target will not be met!
 * [get_frame_rate()](/reference/sketch_get_frame_rate) - Get the running Sketch’s current frame rate.
-* [display_density()](/reference/sketch_display_density) - This function returns the number “2” if the screen is a high-density screen (called a Retina display on OSX or high-dpi on Windows and Linux) - and a “1” if not.
+* [display_density()](/reference/sketch_display_density) - This function returns the number “2” if the screen is a high-density screen (called a Retina display on macOS or high-dpi on Windows and Linux) - and a “1” if not.
 * [pixel_density()](/reference/sketch_pixel_density) - This function makes it possible for py5 to render using all of the pixels on high resolutions screens like Apple Retina displays and Windows High-DPI displays.
 * [display_height](/reference/sketch_display_height) - System variable that stores the height of the entire screen display.
 * [display_width](/reference/sketch_display_width) - System variable that stores the width of the entire screen display.
@@ -279,8 +266,6 @@
 * [window_title()](/reference/sketch_window_title) - Set the Sketch window’s title.
 * [window_x](/reference/sketch_window_x) - The x-coordinate of the current window location.
 * [window_y](/reference/sketch_window_y) - The y-coordinate of the current window location.
-
-[back to top](#top)
 
 ## Math Related
 
@@ -327,8 +312,6 @@
 * [sin()](/reference/sketch_sin) - Calculates the sine of an angle.
 * [tan()](/reference/sketch_tan) - Calculates the ratio of the sine and cosine of an angle.
 
-[back to top](#top)
-
 ## Working with Images
 
 ### Loading and Displaying
@@ -344,6 +327,7 @@
 * [apply_filter()](/reference/sketch_apply_filter) - Filters the display window using a preset filter or with a custom shader.
 * [blend()](/reference/sketch_blend) - Blends a region of pixels from one image into another (or in itself again) - with full alpha channel support.
 * [copy()](/reference/sketch_copy) - Copies a region of pixels from the display window to another area of the display window and copies a region of pixels from an image used as the src_img parameter into the display window.
+* [get_np_pixels()](/reference/sketch_get_np_pixels) - Returns the contents of `np_pixels[]` as a numpy array.
 * [get_pixels()](/reference/sketch_get_pixels) - Reads the color of any pixel or grabs a section of the drawing surface.
 * [load_np_pixels()](/reference/sketch_load_np_pixels) - Loads the pixel data of the current display window into the `np_pixels[]` array.
 * [load_pixels()](/reference/sketch_load_pixels) - Loads the pixel data of the current display window into the `pixels[]` array.
@@ -351,6 +335,7 @@
 * [pixels[]](/reference/sketch_pixels) - The `pixels[]` array contains the values for all the pixels in the display window.
 * [set_np_pixels()](/reference/sketch_set_np_pixels) - Set the entire contents of `np_pixels[]` to the contents of another properly sized and typed numpy array.
 * [set_pixels()](/reference/sketch_set_pixels) - Changes the color of any pixel or writes an image directly into the drawing surface.
+* [to_pil()](/reference/sketch_to_pil) - Returns the drawing surface as a PIL Image object.
 * [update_np_pixels()](/reference/sketch_update_np_pixels) - Updates the display window with the data in the `np_pixels[]` array.
 * [update_pixels()](/reference/sketch_update_pixels) - Updates the display window with the data in the `pixels[]` array.
 
@@ -367,8 +352,6 @@
 * [convert_image()](/reference/sketch_convert_image) - Convert non-py5 image objects into Py5Image objects.
 * [create_image_from_numpy()](/reference/sketch_create_image_from_numpy) - Convert a numpy array into a Py5Image object.
 * [request_image()](/reference/sketch_request_image) - Use a Py5Promise object to load an image into a variable of type Py5Image.
-
-[back to top](#top)
 
 ## 3D Scene
 
@@ -411,8 +394,6 @@
 * [shininess()](/reference/sketch_shininess) - Sets the amount of gloss in the surface of shapes.
 * [specular()](/reference/sketch_specular) - Sets the specular color of the materials used for shapes drawn to the screen, which sets the color of highlights.
 
-[back to top](#top)
-
 ## Rendering
 
 ### Graphics Context
@@ -430,8 +411,6 @@
 * [load_shader()](/reference/sketch_load_shader) - Loads a shader into a Py5Shader object.
 * [reset_shader()](/reference/sketch_reset_shader) - Restores the default shaders.
 * [shader()](/reference/sketch_shader) - Applies the shader specified by the parameters.
-
-[back to top](#top)
 
 ## Sketch Execution
 
@@ -475,8 +454,6 @@
 * [java_platform](/reference/sketch_java_platform) - Version of Java currently being used by py5.
 * [java_version_name](/reference/sketch_java_version_name) - Version name of Java currently being used by py5.
 
-[back to top](#top)
-
 ## py5 Classes and Other Tools
 
 ### Classes
@@ -496,5 +473,3 @@
 * [Py5 Magics](/reference/py5magics) - The py5 Magics are Jupyter Notebook “meta-commands” that can be within Jupyter Notebooks to enhance py5’s ability to work within the notebook. The py5 magics will enable users to create Sketches and embed the results in the Notebook without defining any functions or calling the `size()` function.
 * [Py5 Tools](/reference/py5tools) - The py5 Tools are extra utility functions not directly related to creating Sketches that help facilitate the use of py5. For example, you can use these to add jar files to the Java classpath before importing py5.
 * [Py5 Functions](/reference/py5functions) - The py5 Functions are extra utility functions that make py5 easier to use. For example, you can use these to Processing’s vlw font files without having to use Processing’s IDE.
-
-[back to top](#top)
