@@ -67,6 +67,12 @@ The py5 library makes the Java Processing jars available to the CPython interpre
 
 To view the actual installed py5 library code, look at the [py5 repository][py5_repo]. The py5 library code is the output of the meta-programming project [py5generator][py5generator_repo]. All py5 development is done through [py5generator][py5generator_repo].
 
+## Funding
+
+[Please sponsor py5!](https://github.com/sponsors/py5coding)
+
+py5 is not an official part of the Processing Foundation and is not receiving any funding from them. Any funds you contribute will be used first for website expenses and next to support [@hx2A](https://github.com/hx2A/)'s time to further develop py5 as a solid creative coding framework used by educators, artists, and hobbyists all around the world.
+
 ## Get In Touch
 
 Have a comment or question about py5? We'd love to hear from you! The best ways to reach out are:
