@@ -2,7 +2,7 @@
 
 **Welcome!**
 
-We hope you enjoy using the Processing graphics vocabulary, now with Python 3. This page shows all examples in py5 *imported mode style*, you can learn more about py5 modes at [The Five py5 Modes](https://py5coding.org/content/py5_modes.html) page.
+We hope you enjoy using the Processing graphics vocabulary, now with Python 3. This page shows all examples in py5 *imported mode style*. You can learn more about the py5 modes at [](/content/py5_modes).
 
 ## The slightly different *snake_case* names
 
