@@ -434,7 +434,7 @@ else:
 
 ### Importing libraries and using multiple files in your sketch
 
-No`import processing.pdf.*;` is needed for using the Processing PDF export feature with py5, same with SVG, but for other Processing Java libraries... it could be more complicated. Have a look at this [Camera3D tutorial](/how_tos/use_camera3D).
+No`import processing.pdf.*;` is needed for using the Processing PDF export feature with py5, same with SVG, but for other Processing Java libraries... it could be more complicated. Have a look at the [Camera3D tutorial](/how_tos/use_camera3D) for an example.
 
 In Processing Java mode the libraries are imported with `import` but in Python mode this instruction is more often used to import *modules* from the *Python standard library*, other installed Python libraries, and **.py** files in the same folder. 
 
