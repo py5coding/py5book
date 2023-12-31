@@ -2,7 +2,7 @@
 
 **Welcome!**
 
-We hope you enjoy using the Processing graphics vocabulary, now with Python 3.
+We hope you enjoy using the Processing graphics vocabulary, now with Python 3. This page shows all examples in py5 *imported mode style*. You can learn more about the py5 modes at [](/content/py5_modes).
 
 ## The slightly different *snake_case* names
 
@@ -29,12 +29,6 @@ Most of Processing high-level objects, like `PFont` for typography fonts, or `PI
 Then, there is some bonus stuff, `Py5Image` brings in a very helpful new [`numpy` interface for an "array of pixels"](/reference/py5image_np_pixels).
 
 If you are used to `PVector`, please note that `Py5Vector` is a completely new implementation of vector objects, 2D, 3D and 4D, so it has some different method & attribute names, you won't regret reading the [Py5Vector](/reference/py5vector) documentation.
-
-## About the libraries
-
-No`import processing.pdf.*;` is needed for using the PDF features, same with the SVG export, but for other Processing Java libraries... it could be more complicated. Have a look at this [Camera3D tutorial](/how_tos/use_camera3D).
-
-On the other hand, you can now import Python libraries with the `import` statement, you'll also need it to bring in functions and classes from other *modules* (files) if you split your sketch into several `.py` files.
 
 ## More tips for porting Processing Java code to py5
 
@@ -71,7 +65,7 @@ Maybe you want to port some existing Processing Java code to Python + py5?  The 
       return (a + b) / 2
   ```
 
-**Type annotated Python**
+  **Type annotated Python**
 
   ```python
   def average(a: float, b: float) -> float:
@@ -296,18 +290,21 @@ else:
 You might want to try a dictionary strategy.
 
 ```python
-func = {
-    'r': rect,
-    'e': ellipse,
-    't': (lambda x, y, w, h:
-          triangle(x, y, x + w, y, x, y + h)),
-    } 
-
 def setup():
   size(400, 400)
 
+def t( x, y, w, h):
+    triangle(x, y, x + w, y, x, y + h)
+
+func = {
+    'r': rect,
+    'e': ellipse,
+    't': t,
+    'default': rect,
+    } 
+
 def draw():
-    func.get(key, func['r'])(100, 100, 200, 50)
+    func.get(key, func['default'])(100, 100, 200, 50)
 ```
 
 ### Global variables
@@ -435,13 +432,30 @@ else:
   println("not equal")
 ```
 
-### Importing libraries and using multiple tabs in your sketch
+### Importing libraries and using multiple files in your sketch
 
-In Processing Java mode the libraries are imported with `import` but in Python mode this instruction is more often used to import *modules* from the *Python standard library*, and **.py** files in the same folder (which, unlike in Java mode, are not automatically a part of the sketch).
+No`import processing.pdf.*;` is needed for using the Processing PDF export feature with py5, same with SVG, but for other Processing Java libraries... it could be more complicated. Have a look at the [Camera3D tutorial](/how_tos/use_camera3D) for an example.
+
+In Processing Java mode the libraries are imported with `import` but in Python mode this instruction is more often used to import *modules* from the *Python standard library*, other installed Python libraries, and **.py** files in the same folder. 
+
+Unlike in Processing Java mode, other files in the same folder, that would appear as tabs in the Processing IDE, are not automatically a part of your sketch, and you have to import them or parts of their content.
+
+Here you can see a few ways you can bring in functions and classes from other modules/libraries or other files, if you split your sketch into several `.py` files.
 
 ```python
-from other_file import *  # everything from the file other.py
+import numpy as np
+import library_with_a_big_name as short_alias
+
+from shapely import Polygon
+
+from some_module_or_other import helpful_function
+
+from my_other_file import MyClass, my_function # from other_file.py in the same folder
+# this is generally considered not very good style, and could be trouble with libraries
+from other_file import *  # everything from other_file.py
 ```
+
+When you are using py5 in *imported mode* you can add a special comment to your other files like explained on this [Importing py5 code](https://py5coding.org/content/importing_py5_code.html#importing-imported-mode-code) section.
 
 ### Object Orientation
 
@@ -552,9 +566,7 @@ class MRect:
                  self.ypos, self.w, height * self.h)
 ```
 
-`# TO DO:`
-
-- How to deal with inheritance & method/function overloading.
+You can read about Object Orientafion in Python at the official Python Tutorial, for instance, details like [how inheritance works in Python](https://docs.python.org/release/3.12.1/tutorial/classes.html#inheritance).
 
 ### Data structures
 
@@ -622,10 +634,10 @@ print(board)
 #        [0., 0., 0.]]
 ```
 
-#### Other things (WIP)
+#### Other things you might want to explore
 
 - `HashMap` and `FloatDict`, are *mapping* data structures in Java, they become dictionaries (`dict`) in Python.
 
-- If an *array* or an `ArrayList` is used to retain some kind of 'history', you might want to learn about `deque` (`from collections import deque`).
+- If an *array* or an `ArrayList` is used to retain some kind of 'history', you might want to learn about *double ended queues*, [`deque`](https://docs.python.org/3/library/collections.html#deque-objects) (`from collections import deque`).
 
-- Very simple classes in Java might suitably become just a *named tuple*.
+- Very simple classes in Java might suitably become just a [*named tuple*](https://docs.python.org/3/library/collections.html#collections.namedtuple) or a [*data class*](https://docs.python.org/3/library/dataclasses.html).
