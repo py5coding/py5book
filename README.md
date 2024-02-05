@@ -75,6 +75,7 @@ This project is not an official part of the Processing Foundation and is not rec
 
 Thank you much for the support from py5's generous sponsors!
 
+* [@adanaher](https://github.com/adanaher) (Alec Danaher)
 * [@ericof](https://github.com/ericof) (Érico Andrei)
 * [@nickmcintyre](https://github.com/nickmcintyre) (Nick McIntyre)
 
