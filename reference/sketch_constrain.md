@@ -30,8 +30,8 @@ Constrains a value to not exceed a maximum and minimum value.
 ```python
 constrain(
     amt: Union[float, npt.NDArray],  # the value to constrain
-    low: Union[float, npt.NDArray],  # maximum limit
-    high: Union[float, npt.NDArray],  # minimum limit
+    low: Union[float, npt.NDArray],  # minimum limit
+    high: Union[float, npt.NDArray],  # maximum limit
 ) -> Union[float, npt.NDArray]
 ```
 
