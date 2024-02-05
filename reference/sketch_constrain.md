@@ -1,6 +1,6 @@
 # constrain()
 
-Constrains a value to not exceed a maximum and minimum value.
+Constrains a value between a minimum and maximum value.
 
 ## Examples
 
@@ -23,7 +23,7 @@ def draw():
 
 ## Description
 
-Constrains a value to not exceed a maximum and minimum value.
+Restrict the input value to a specified range defined by a minimum and a maximum limit.
 
 ## Signatures
 
