@@ -1,6 +1,6 @@
 # constrain()
 
-Constrains a value to not exceed a maximum and minimum value.
+Constrains a value between a minimum and maximum value.
 
 ## Examples
 
@@ -23,16 +23,16 @@ def draw():
 
 ## Description
 
-Constrains a value to not exceed a maximum and minimum value.
+Constrains a value between a minimum and maximum value.
 
 ## Signatures
 
 ```python
 constrain(
     amt: Union[float, npt.NDArray],  # the value to constrain
-    low: Union[float, npt.NDArray],  # maximum limit
-    high: Union[float, npt.NDArray],  # minimum limit
+    low: Union[float, npt.NDArray],  # minimum limit
+    high: Union[float, npt.NDArray],  # maximum limit
 ) -> Union[float, npt.NDArray]
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on February 07, 2024 03:43:17am UTC

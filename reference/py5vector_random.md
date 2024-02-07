@@ -58,8 +58,8 @@ When used as a `Py5Vector` class method, the `dim` parameter is required to spec
 random(
     dim: int,  # dimension of the random vector to create
     *,
-    dtype: type = np.float_  # dtype of the random vector to create
+    dtype: type = np.float64  # dtype of the random vector to create
 ) -> Py5Vector
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on February 07, 2024 03:43:17am UTC

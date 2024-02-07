@@ -45,8 +45,8 @@ For 4D vectors, the heading values follow the spherical coordinate system define
 ```python
 from_heading(
     *heading,
-    dtype: int = np.float_  # dtype of new vector to create
+    dtype: int = np.float64  # dtype of new vector to create
 ) -> Py5Vector
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on February 07, 2024 03:43:17am UTC
