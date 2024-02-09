@@ -16,7 +16,8 @@ Processing's `map(value, start, end, target_start, target_end)` is now [remap()]
 
 Processing's `get()` and `set()` functions to manipulate pixels become `get_pixels()` and `set_pixels()`, but you might want to read about `np_pixels` and [set_np_pixels()](/reference/sketch_set_np_pixels). That's because in Python, `set()` creates a [*set* data structure](https://docs.python.org/3/tutorial/datastructures.html#sets).
 
-Instead of `frameRate`, use the [frame_rate()](/reference/sketch_frame_rate) function to set a target frame rate and the [get_frame_rate()](/reference/sketch_get_frame_rate) function to find out the current frame rate (an exponential moving average).
+Instead of `frameRate`, use the [frame_rate()](/reference/sketch_frame_rate) function to set a target frame rate and the [get_frame_rate()](/reference/sketch_get_frame_rate) function to find out the current frame rate (an exponential moving average). Lastly, if you used the `g` reference to the main PGraphics object, you can obtain an equivalent Py5Graphics object with [get_graphics()](/reference/sketch_get_graphics).
+
 
 ```{important}
 Please have a look at the [py5 Reference Summary](/reference/summary), it will help you find any missing names.
