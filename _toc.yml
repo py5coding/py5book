@@ -16,6 +16,7 @@ parts:
   - file: content/coming_from_processing_java
   - file: content/macos_users
   - file: content/py5_modes
+  - file: content/user_functions
   - file: content/hybrid_programming
   - file: content/processing_mode
   - file: content/importing_py5_code
