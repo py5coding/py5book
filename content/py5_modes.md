@@ -285,7 +285,7 @@ mode to another. I make this mistake all the time.
 
 A good way to avoid this is to import the library with only one of
 "`import py5`" or "`from py5 import Sketch`", depending on which
-mode you want to use. Importing both ways is asking for trouble.
+mode you want to use. Using both import statements is asking for trouble.
 ``````
 
 ## Imported Mode
