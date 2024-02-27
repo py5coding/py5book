@@ -43,6 +43,8 @@ The `queue_limit` parameter specifies a maximum queue size. If frames are added 
 
 By default this function will return right away and will process frames in the background while the Sketch is running. Set the `block` parameter to `True` to instruct the method to not return until the processing is complete or the Sketch terminates. This blocking feature is not available on macOS when the Sketch is executed through an IPython kernel.
 
+By default this function will report its progress as frames are processed. If you are using a Jupyter Notebook and happen to be processing tens of thousands of frames, this might cause Jupyter to crash. To avoid that fate, set the `display_progress` parameter to `False`.
+
 Use the `sketch` parameter to specify a different running Sketch, such as a Sketch created using Class mode. If your Sketch has a `post_draw()` method, use the `hook_post_draw` parameter to make this function run after `post_draw()` instead of `draw()`. This is important when using Processing libraries that support `post_draw()` such as Camera3D or ColorBlindness.
 
 ## Signatures
@@ -59,8 +61,9 @@ offline_frame_processing(
     sketch: Sketch = None,  # running Sketch
     hook_post_draw: bool = False,  # attach hook to Sketch's post_draw method instead of draw
     queue_limit: int = None,  # maximum number of frames that can be on the queue waiting to be processed
-    block: bool = False  # method returns immediately (False) or blocks until function returns (True)
+    block: bool = False,  # method returns immediately (False) or blocks until function returns (True)
+    display_progress: bool = True  # display progress as frames are processed
 ) -> None
 ```
 
-Updated on December 27, 2023 13:47:02pm UTC
+Updated on February 27, 2024 16:53:28pm UTC
