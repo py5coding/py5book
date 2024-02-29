@@ -52,10 +52,10 @@ ortho(
     right: float,  # right plane of the clipping volume
     bottom: float,  # bottom plane of the clipping volume
     top: float,  # top plane of the clipping volume
-    near: float,  # maximum distance from the origin to the viewer
-    far: float,  # maximum distance from the origin away from the viewer
+    near: float,  # distance from the viewer to the nearest clipping plane
+    far: float,  # distance from the viewer to the farthest clipping plane
     /,
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on February 29, 2024 00:18:21am UTC
