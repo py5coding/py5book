@@ -200,11 +200,36 @@ Include simple example
 
 ## Update Function
 
-Unique to py5
+The `predraw_update()` function is unique to py5. It offers an opportunity to make a small improvement in a Sketch's frame rate. The main idea is to allow users to execute code inbetween calls to `draw()`. It isn't clear from the design of py5 (or Processing) that `draw()` is not immediately called after the previous call completes. There is a small gap, usually just a few milliseconds. Due to technical reasons about how py5 works, the Python interpreter is idle during this gap. The `predraw_update()` function gives you an opportunity to do something useful during the time that would otherwise be idle.
 
-`predraw_update()`
+For a Sketch with performance problems, use of the `predraw_update()` function will typically improve the frame rate by 5 to 10%. When performance tuning a Sketch, moving some code from `draw()` to `predraw_update()` can be an easy change to make to get a small speed boost.
 
-Small performance improvement, link to github discussion too tedious to include here
+The most important thing to know about the `predraw_update()` function is that you should not make any calls to py5 methods. Many of them will not work correctly, and it is difficult to know which are safe to call without being familiar with the source code of both py5 and Processing.
+
+Here is an example that uses  `predraw_update()` function.
+
+```python
+import numpy as np
+
+
+def setup():
+    py5.size(500, 500)
+    py5.rect_mode(py5.CENTER)
+
+
+def predraw_update():
+    global x, y
+    # perform slow calculations for x and y
+    x, y = 500 * np.random.rand(2)
+
+
+def draw():
+    def rect(x, y, 10, 10)
+```
+
+If `np.random.rand(2)` was sufficiently slow, the Sketch would perform better with the code in `predraw_update()` and not `draw()`.
+
+There is a [GitHub Discussion thread](https://github.com/py5coding/py5generator/discussions/408) created during the development and testing of this feature. Most of what is discussed there is too tedious to include here.
 
 ## Camera3D Support Functions
 
