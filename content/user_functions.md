@@ -209,14 +209,20 @@ def setup():
     movie_player.loop()
 
 
-def movie_event(movie):
-    movie.read()
+def movie_event(m):
+    m.read()
 
 
 def draw():
     if movie_player.isPlaying():
         py5.image(movie_player, 0, 0)
+
+
+def exiting():
+    movie_player.stop()
 ```
+
+Here, the `exiting()` event function shuts down the movie player resources when the Sketch exits.
 
 ## Update Function
 
