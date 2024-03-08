@@ -208,9 +208,42 @@ Small performance improvement, link to github discussion too tedious to include 
 
 ## Camera3D Support Functions
 
-Only for Camera3D users
+And finally, the `pre_draw()` and `post_draw()` user functions. These functions are only for Sketches using the Processing library [Camera3D](https://ixora.io/projects/camera-3D/) with py5; without Camera3D, py5 will never call them.
 
-`pre_draw()`
-`post_draw()`
+Support for these user functions are a part of py5 because the author of py5, [@hx2A](https://github.com/hx2A/), is also the author of Camera3D.
 
-[](/how_tos/use_camera3D)
+Camera3D alters Processing execution in such a way that the user's `draw()` function is called multiple times. The `pre_draw()` and `post_draw()` user functions will be called once, regardless of how many times `draw()` is called. Code that you want to be called once per frame should be included here.
+
+Here is an example that uses `pre_draw()`:
+
+```python
+from camera3D import Camera3D
+
+rot_x, rot_y, rot_z = 0, 0, 0
+
+
+def setup():
+    py5.size(400, 400, py5.P3D)
+    camera3D = Camera3D(py5.get_current_sketch())
+    camera3D.renderDefaultAnaglyph().setDivergence(1)
+
+
+def pre_draw():
+    global rot_x, rot_y, rot_z
+    rot_x += 0.8
+    rot_y += 0.3
+    rot_z += 0.5
+
+
+def draw():
+    py5.translate(py5.width / 2, py5.height / 2, -200)
+    py5.rotate_x(py5.radians(rot_x))
+    py5.rotate_y(py5.radians(rot_y))
+    py5.rotate_z(py5.radians(rot_z))
+
+    py5.box(250)
+```
+
+Here, the `pre_draw()` function is used to update the rotation angles. If the rotation angles were updated in the `draw()` function, the angles would change between the anaglyph's right and left frames, impeding the 3D effect.
+
+Again, the `pre_draw()` and `post_draw()` user functions are only for Camera3D users. If you would like to learn more about py5 and Camera3D, read [](/how_tos/use_camera3D).
