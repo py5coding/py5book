@@ -69,6 +69,8 @@ def setup():
 
 The call to [](/reference/sketch_size) is moved to a separate `settings()` function. The rest of the code remained in `setup()`.
 
+This coding magic is a feature of py5 because it is also a feature in Processing. This reduces the cognitive load placed on beginners learning to use py5. Instead of needing to write `settings()`, `setup()`, and `draw()` functions, beginners only need to write `setup()` and `draw()`.
+
 This code transformation is facilitated by a few organizational rules about how the user must write their `setup()` function. The key rule is that the call to [](/reference/sketch_size) must be first, before the calls to methods like [](/reference/sketch_frame_rate) and [](/reference/sketch_fill). The other special methods that must be used at the beginning of `setup()`, before other code, are [](/reference/sketch_full_screen), [](/reference/sketch_smooth), [](/reference/sketch_no_smooth), and [](/reference/sketch_pixel_density). When the user's `setup()` function is organized in this way, py5 is able to reliably separate the code and divide it into two new functions.
 
 The code separation process can manage the inclusion of global statements, comments, and docstrings. The recommended coding style for Python is to place global statements at the very beginning of a function or method, and py5 allows for that in user `setup()` functions. Here is an example that demonstrates this:
@@ -111,11 +113,44 @@ def draw():
     py5.shape(shape, py5.mouse_x, py5.mouse_y)
 ```
 
-The vertical space you see in these `settings()` and `setup()` functions are there to ensure that any exceptions thrown by the executed code will point to the correct line numbers in the user's `setup()` function. This completes the illusion of the user's `setup()` function.
+The extra vertical space you see in these `settings()` and `setup()` functions is there to ensure that any exceptions thrown by the executed code will point to the correct line numbers in the user's `setup()` function. This completes the illusion of the user's `setup()` function.
 
-Why this might be useful, use variable to choose between fullscreen and window, etc
+There are times when you might want to define the `settings()` function yourself and not rely on py5's transformation code. If your code would trip up py5's code transformation abilities, you will need to do this. For example, consider the following `setup()` function that optionally calls [](/reference/sketch_size) or [](/reference/sketch_full_screen).
 
-Class Mode, requires `settings()`
+```python
+USE_FULL_SCREEN = True
+
+def setup():
+    if USE_FULL_SCREEN:
+        py5.full_screen()
+    else:
+        py5.size(500, 500)
+
+    py5.frame_rate(30)
+    py5.rect_mode(py5.CENTER)
+    py5.fill(255, 0, 0)
+```
+
+The `if` statement in that function would prevent py5 from creating `settings()` and `setup()` functions. Instead, you would need to write the following code:
+
+```python
+USE_FULL_SCREEN = True
+
+
+def settings():
+    if USE_FULL_SCREEN:
+        py5.full_screen()
+    else:
+        py5.size(500, 500)
+
+
+def setup():
+    py5.frame_rate(30)
+    py5.rect_mode(py5.CENTER)
+    py5.fill(255, 0, 0)
+```
+
+Finally, py5's [Class Mode](/content/py5_modes) does not support this code transformation magic. When writing Class Mode code, you must write a `settings()` method that makes the call to [](/reference/sketch_size).
 
 ## Keyboard Events
 
