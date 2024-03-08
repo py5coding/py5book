@@ -189,12 +189,39 @@ Close resources such as OpenCV webcam
 
 ## Window Events
 
-`window_moved()`
-`window_resized()`
+The `window_moved()` and `window_resized()` event functions are called in response to changes to the Sketch window. If the user moves the Sketch window, the `window_moved()` event function will be called. If the Sketch window is resizeable and the user resizes it, the `window_resized()` event function will be called.
+
+Below is a basic example demonstrating both functions.
+
+```python
+def setup():
+    py5.size(500, 500)
+    py5.window_resizable(True)
+    py5.text_align(py5.CENTER, py5.CENTER)
+    py5.text_size(50)
+    py5.fill(0)
+
+
+def window_moved():
+    py5.println('Sketch window moved')
+
+
+def window_resized():
+    py5.println('Sketch window resized')
+
+
+def draw():
+    msg = f'({py5.width}, {py5.height})'
+    py5.text(msg, py5.width / 2, py5.height / 2)
+```
+
+The `window_moved()` and `window_resized()` event functions will print messages when they are called. Note that on MacOS, the `window_resized()` event function may not be immediately called as the Sketch window is being resized. TODO: TEST THIS
 
 ## Movie Events
 
 Processing supports a `movieEvent()` user function to best work with the [Processing Video Library](https://processing.org/reference/libraries/video/index.html). Similarly, py5 provides a `movie_event()` function to aid users who wish to use the Processing Video Library with py5. This event function is called when a new movie frame is available.
+
+When the `movie_event()` function is called, it will always be passed the Processing Video Library Movie object as a parameter.
 
 Here is a basic example, playing a movie found at `"/tmp/movie.mov"`.
 
