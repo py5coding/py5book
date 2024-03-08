@@ -194,9 +194,29 @@ Close resources such as OpenCV webcam
 
 ## Movie Events
 
-`movie_event()`
+Processing supports a `movieEvent()` user function to best work with the [Processing Video Library](https://processing.org/reference/libraries/video/index.html). Similarly, py5 provides a `movie_event()` function to aid users who wish to use the Processing Video Library with py5. This event function is called when a new movie frame is available.
 
-Include simple example
+Here is a basic example, playing a movie found at `"/tmp/movie.mov"`.
+
+```python
+from processing.video import Movie
+
+
+def setup():
+    py5.size(500, 500)
+    global movie_player
+    movie_player = Movie(py5.get_current_sketch(), "/tmp/movie.mov")
+    movie_player.loop()
+
+
+def movie_event(movie):
+    movie.read()
+
+
+def draw():
+    if movie_player.isPlaying():
+        py5.image(movie_player, 0, 0)
+```
 
 ## Update Function
 
