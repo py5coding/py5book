@@ -1,8 +1,10 @@
 # User Functions
 
+User Functions are the code you write to create your py5 Sketches. There are many such functions available, each called by the py5 framework for different purposes. This page documents all of the user functions py5 supports.
+
 ## Animated Sketches
 
-The foundation of animated py5 Sketches are the `setup()` and `draw()` user functions. The `setup()` function is called once when the Sketch begins running and the `draw()` function gets called repeatedly in (usually) regular intervals.
+The foundation of animated py5 Sketches are the `setup()` and `draw()` user functions. The `setup()` function is called once when the Sketch begins running and the `draw()` function gets called repeatedly at (ideally) regular intervals.
 
 Here is a straightforward example:
 
@@ -22,7 +24,7 @@ Here, the `setup()` function executes py5 commands that only need to be executed
 
 Code that you want to be called once should be placed in the `setup()` function. Typically this code will do things like load image assets and set drawing styles.
 
-Code that you want to be called repeatedly should be placed in the `draw()` method. Typically this code will draw to the Sketch window, as well as supporting Python code that determines what should be drawn.
+Code that you want to be called repeatedly should be placed in the `draw()` method. Typically this will be the code that draws to the Sketch window, as well as supporting Python code that determines what should be drawn.
 
 Within the `setup()` function, the [](/reference/sketch_frame_count) property will be zero. In the `draw()` function, it will be one or more.
 
@@ -46,6 +48,8 @@ def setup():
 This Sketch is similar to the previous one except it will draw 10 random rectangles and then stop drawing.
 
 For static Sketches, code that you would typically see in the `draw()` function is placed in the `setup()` function. This technique is useful for creating static images.
+
+This kind of Sketch is very similar, but not the same as, [Static Mode](/content/py5_modes) Sketches.
 
 ## Settings
 
@@ -150,7 +154,7 @@ def setup():
     py5.fill(255, 0, 0)
 ```
 
-Finally, py5's [Class Mode](/content/py5_modes) does not support this code transformation magic. When writing Class Mode code, you must write a `settings()` method that makes the call to [](/reference/sketch_size).
+Finally, py5's [Class Mode](/content/py5_modes) does not support this code transformation magic. When using py5 in Class Mode code, you must write a `settings()` method that makes the call to [](/reference/sketch_size).
 
 ## Keyboard Events
 
@@ -158,7 +162,9 @@ Finally, py5's [Class Mode](/content/py5_modes) does not support this code trans
 `key_typed()`
 `key_released()`
 
-Mention `Py5KeyEvent` objects
+Mention `Py5KeyEvent` objects and also [](/reference/sketch_key) and [](/reference/sketch_key_code)
+
+[](/reference/sketch_is_key_pressed)
 
 ## Mouse Events
 
@@ -171,28 +177,40 @@ Mention `Py5KeyEvent` objects
 `mouse_released()`
 `mouse_wheel()`
 
-Mention `Py5MouseEvent` objects
+Mention `Py5MouseEvent` objects and also [](/reference/sketch_is_mouse_pressed)
 
-## Everything Else
+[](/reference/sketch_mouse_button), other mouse properties, don't usually need `Py5MouseEvent` objects
 
-### Window Events
+## Sketch Exiting Event
+
+`exiting()`
+
+Close resources such as OpenCV webcam
+
+## Window Events
 
 `window_moved()`
 `window_resized()`
 
-### Sketch Exiting Event
+## Movie Events
 
-`exiting()`
+`movie_event()`
 
-### Performance Improvement
+Include simple example
+
+## Update Function
+
+Unique to py5
 
 `predraw_update()`
 
-### Camera3D Support
+Small performance improvement, link to github discussion too tedious to include here
+
+## Camera3D Support Functions
+
+Only for Camera3D users
 
 `pre_draw()`
 `post_draw()`
 
-### Movie Events
-
-`movie_event()`
+[](/how_tos/use_camera3D)
