@@ -183,9 +183,31 @@ Mention `Py5MouseEvent` objects and also [](/reference/sketch_is_mouse_pressed)
 
 ## Sketch Exiting Event
 
-`exiting()`
+The Sketch `exiting()` event function is called when the Sketch stops running and is shut down. This event is particularly useful for closing or releasing resources, such as a webcam.
 
-Close resources such as OpenCV webcam
+```python
+import cv2
+
+
+def setup():
+    global webcam
+    py5.size(500, 500)
+    py5.window_resizable(True)
+
+    webcam = cv2.VideoCapture(0)
+
+
+def draw():
+    _, frame = webcam.read()
+    img = py5.create_image_from_numpy(frame, bands="BGR")
+    py5.image(img, 0, 0, py5.width, py5.height)
+
+
+def exiting():
+    webcam.release()
+```
+
+In the above example, the Sketch uses OpenCV to connect to a webcam. When py5 calls the `exiting()` event function, it will release the webcam and make it available to other processes.
 
 ## Window Events
 
@@ -215,7 +237,7 @@ def draw():
     py5.text(msg, py5.width / 2, py5.height / 2)
 ```
 
-The `window_moved()` and `window_resized()` event functions will print messages when they are called. Note that on MacOS, the `window_resized()` event function may not be immediately called as the Sketch window is being resized. TODO: TEST THIS
+The `window_moved()` and `window_resized()` event functions will print messages when they are called. Note that on MacOS, the `window_resized()` event function may not be immediately called as the Sketch window is being resized. TODO: TEST THIS, NOT ALWAYS TRUE
 
 ## Movie Events
 
@@ -296,6 +318,7 @@ Here is an example that uses `pre_draw()`:
 
 ```python
 from camera3D import Camera3D
+
 
 rot_x, rot_y, rot_z = 0, 0, 0
 
