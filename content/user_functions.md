@@ -168,14 +168,16 @@ Mention `Py5KeyEvent` objects and also [](/reference/sketch_key) and [](/referen
 
 ## Mouse Events
 
-`mouse_clicked()`
-`mouse_dragged()`
-`mouse_moved()`
-`mouse_entered()`
-`mouse_exited()`
-`mouse_pressed()`
-`mouse_released()`
-`mouse_wheel()`
+There are many event functions that respond to inputs from a mouse. The complete list, and what triggers each of them, is below:
+
+* `mouse_clicked()` - after any button is pressed and then released
+* `mouse_dragged()`- while the mouse is moving and any button is pressed
+* `mouse_moved()` - while the mouse is moving and no button is pressed
+* `mouse_entered()` - when the mouse first enters the Sketch window area
+* `mouse_exited()` - when the mouse exits the Sketch window area
+* `mouse_pressed()` - after any button is pressed
+* `mouse_released()` - after a pressed button is released
+* `mouse_wheel()` - while the mouse wheel is rotating
 
 Mention `Py5MouseEvent` objects and also [](/reference/sketch_is_mouse_pressed)
 
