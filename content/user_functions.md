@@ -183,31 +183,29 @@ Like py5's keyboard event functions, py5 can pass each of the mouse event functi
 
 The below example demonstrates all of the possible mouse event functions. Try running it and experimenting with your mouse to understand the events that trigger them.
 
-# TODO: some of these should use Py5MouseEvent objects
-
 ```python
 def setup():
     py5.size(500, 500)
 
 
-def mouse_clicked():
-    py5.println("mouse clicked")
+def mouse_clicked(e):
+    py5.println(f"mouse clicked - count = {e.get_count()}")
 
 
-# def mouse_dragged():
-#     py5.println("mouse dragged")
+def mouse_dragged():
+    py5.println("mouse dragged")
 
 
-# def mouse_moved():
-#     py5.println("mouse moved")
+def mouse_moved():
+    py5.println("mouse moved")
 
 
-def mouse_entered():
-    py5.println("mouse entered")
+def mouse_entered(e):
+    py5.println(f"mouse entered at time {e.get_millis()}")
 
 
-def mouse_exited():
-    py5.println("mouse exited")
+def mouse_exited(e):
+    py5.println(f"mouse exited at time {e.get_millis()}")
 
 
 def mouse_pressed():
@@ -225,7 +223,7 @@ def mouse_wheel():
 
 Observe that this Sketch does not define a `draw()` user function. A `draw()` function is not necessary for mouse events to be triggered.
 
-In addition to the above event functions, py5 also provides mouse-related methods for you to use. They are:
+In addition to the above event functions, py5 also provides mouse-related properties and methods for you to use. They are:
 
 * [is_mouse_pressed](/reference/sketch_is_mouse_pressed) - The `is_mouse_pressed` variable stores whether or not a mouse button is currently being pressed.
 * [mouse_button](/reference/sketch_mouse_button) - When a mouse button is pressed, the value of the system variable `mouse_button` is set to either `LEFT`, `RIGHT`, or `CENTER`, depending on which button is pressed.
@@ -233,10 +231,10 @@ In addition to the above event functions, py5 also provides mouse-related method
 * [mouse_y](/reference/sketch_mouse_y) - The system variable `mouse_y` always contains the current vertical coordinate of the mouse.
 * [pmouse_x](/reference/sketch_pmouse_x) - The system variable `pmouse_x` always contains the horizontal position of the mouse in the frame previous to the current frame.
 * [pmouse_y](/reference/sketch_pmouse_y) - The system variable `pmouse_y` always contains the vertical position of the mouse in the frame previous to the current frame.
-* [rmouse_x](/reference/sketch_rmouse_x) - The current horizontal coordinate of the mouse after activating scale invariant drawing.
-* [rmouse_y](/reference/sketch_rmouse_y) - The current vertical coordinate of the mouse after activating scale invariant drawing.
+* [rmouse_x](/reference/sketch_rmouse_x) - The current horizontal coordinate of the mouse after activating scale invariant drawing (activated with [](/reference/sketch_window_ratio)).
+* [rmouse_y](/reference/sketch_rmouse_y) - The current vertical coordinate of the mouse after activating scale invariant drawing (activated with [](/reference/sketch_window_ratio)).
 
-Between py5's mouse event functions, `Py5MouseEvent` object, and the above methods, there are many ways for your Sketch to respond to mouse inputs.
+Between py5's mouse event functions, `Py5MouseEvent` object, and the above properties and methods, there are many ways for you to code your Sketch to respond to mouse inputs.
 
 ## Sketch Exiting Event
 
