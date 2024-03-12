@@ -170,9 +170,13 @@ Mention `Py5KeyEvent` objects
 # TODO: insert example
 ```
 
+In addition to the above event functions, py5 also provides several keyboard-related properties for you to use. They are:
+
 * [](/reference/sketch_is_key_pressed) - The `is_key_pressed` variable stores whether or not a keyboard button is currently being pressed.
 * [](/reference/sketch_key) - The system variable `key` always contains the value of the most recent key on the keyboard that was used (either pressed or released). It will contain the constant `CODED` if it was a special key that can then be discriminated with `key_code`.
 * [](/reference/sketch_key_code) - The variable `key_code` is used to detect special keys such as the arrow keys (`UP`, `DOWN`, `LEFT`, and `RIGHT`) as well as `ALT`, `CONTROL`, and `SHIFT`.
+
+Between py5's keyboard event functions, the `Py5KeyEvent` object, and the above properties, there are many ways for you to code your Sketch to respond to keyboard inputs.
 
 ## Mouse Events
 
@@ -242,7 +246,7 @@ In addition to the above event functions, py5 also provides mouse-related proper
 * [](/reference/sketch_rmouse_x) - The current horizontal coordinate of the mouse after activating scale invariant drawing (activated with [](/reference/sketch_window_ratio)).
 * [](/reference/sketch_rmouse_y) - The current vertical coordinate of the mouse after activating scale invariant drawing (activated with [](/reference/sketch_window_ratio)).
 
-Between py5's mouse event functions, `Py5MouseEvent` object, and the above properties and methods, there are many ways for you to code your Sketch to respond to mouse inputs.
+Between py5's mouse event functions, the `Py5MouseEvent` object, and the above properties and methods, there are many ways for you to code your Sketch to respond to mouse inputs.
 
 ## Sketch Exiting Event
 
