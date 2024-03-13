@@ -49,9 +49,9 @@ This Sketch is similar to the previous one except it will draw 10 random rectang
 
 For static Sketches, code that you would typically see in the `draw()` function is placed in the `setup()` function. This technique is useful for creating static images.
 
-This kind of Sketch is very similar, but not the same as, [Static Mode](/content/py5_modes) Sketches.
+This kind of Sketch is very similar, but not the same as, [Static Mode](/content/py5_modes) Sketches. With Static Mode Sketches, you write a series of py5 commands without a `setup()` function. Your Static Mode code is interpreted as if it was contained in a `setup()` function, and will achieve the same result as a Static Sketch described in this section.
 
-## Settings
+## Settings Magic
 
 There is a little bit of magic taking place within the `setup()` function. Before executing your Sketch, py5 will split the user's `setup()` function into its own `settings()` and `setup()` functions. For our previous example, the new code would be:
 
@@ -116,6 +116,8 @@ def draw():
     py5.background(204)
     py5.shape(shape, py5.mouse_x, py5.mouse_y)
 ```
+
+The transformed code is the actual code executed by py5, not the code as written by the user.
 
 The extra vertical space you see in these `settings()` and `setup()` functions is there to ensure that any exceptions thrown by the executed code will point to the correct line numbers in the user's `setup()` function. This completes the illusion of the user's `setup()` function.
 
@@ -330,7 +332,7 @@ Processing supports a `movieEvent()` user function to best work with the [Proces
 
 When the `movie_event()` function is called, it will always be passed the Processing Video Library Movie object as a parameter.
 
-Here is a basic example, playing a movie found at `"/tmp/movie.mov"`.
+Here is a basic example, playing a video file `"movie.mov"`.
 
 ```python
 from processing.video import Movie
@@ -339,7 +341,7 @@ from processing.video import Movie
 def setup():
     py5.size(500, 500)
     global movie_player
-    movie_player = Movie(py5.get_current_sketch(), "/tmp/movie.mov")
+    movie_player = Movie(py5.get_current_sketch(), "movie.mov")
     movie_player.loop()
 
 
@@ -360,7 +362,7 @@ Here, the `exiting()` event function shuts down the movie player resources when 
 
 ## Update Function
 
-The `predraw_update()` function is unique to py5. It offers an opportunity to make a small improvement in a Sketch's frame rate. The main idea is to allow users to execute code in-between calls to `draw()`. It isn't clear from the design of py5 (or Processing) that `draw()` is not immediately called after the previous call completes. There is a small gap, usually just a few milliseconds. Due to technical reasons about how py5 works, the Python interpreter is idle during this gap. The `predraw_update()` function gives you an opportunity to do something useful during the time that would otherwise be idle.
+The `predraw_update()` function is unique to py5. It offers an opportunity to make a small improvement in a Sketch's frame rate. The main idea is to allow users to execute code in-between calls to `draw()`. It isn't clear from the design of py5 (or Processing) that `draw()` is not immediately called after the previous call completes. There is a small gap, usually just a few milliseconds. Due to technical reasons about how py5 works, the Python interpreter is idle during this gap. The `predraw_update()` function gives you an opportunity to do something useful during the time that would otherwise be idle. For most use cases, a few milliseconds is too trivial bother with. But for those situations where a few millisconds matters, the `predraw_update()` function can help.
 
 For a Sketch with performance problems, use of the `predraw_update()` function will typically improve the frame rate by 5 to 10%. When performance tuning a Sketch, moving some code from `draw()` to `predraw_update()` can be an easy change to make to get a small speed boost.
 
@@ -430,6 +432,6 @@ def draw():
     py5.box(250)
 ```
 
-Here, the `pre_draw()` function is used to update the rotation angles. If the rotation angles were updated in the `draw()` function, the angles would change between the anaglyph's right and left frames, impeding the 3D effect.
+Here, the `pre_draw()` function is used to update the rotation angles. If the rotation angles were updated in the `draw()` function, the angles would change between the anaglyph's right and left frames, interfering with the 3D effect.
 
 Again, the `pre_draw()` and `post_draw()` user functions are only for Camera3D users. If you would like to learn more about py5 and Camera3D, read [](/how_tos/use_camera3D).
