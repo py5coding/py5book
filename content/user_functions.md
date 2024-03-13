@@ -56,7 +56,7 @@ This kind of Sketch is very similar, but not the same as, [Static Mode](/content
 There is a little bit of magic taking place within the `setup()` function. Before executing your Sketch, py5 will split the user's `setup()` function into its own `settings()` and `setup()` functions. For our previous example, the new code would be:
 
 ```python
-def setttings():
+def settings():
     py5.size(500, 500)
 
 
@@ -296,7 +296,7 @@ In the above example, the Sketch uses OpenCV to connect to a webcam. When py5 ca
 
 ## Window Events
 
-The `window_moved()` and `window_resized()` event functions are called in response to changes to the Sketch window. If the user moves the Sketch window, the `window_moved()` event function will be called. If the Sketch window is resizeable and the user resizes it, the `window_resized()` event function will be called.
+The `window_moved()` and `window_resized()` event functions are called in response to changes to the Sketch window. If the user moves the Sketch window, the `window_moved()` event function will be called. If the Sketch window is resizable and the user resizes it, the `window_resized()` event function will be called.
 
 Below is a basic example demonstrating both functions.
 
@@ -360,7 +360,7 @@ Here, the `exiting()` event function shuts down the movie player resources when 
 
 ## Update Function
 
-The `predraw_update()` function is unique to py5. It offers an opportunity to make a small improvement in a Sketch's frame rate. The main idea is to allow users to execute code inbetween calls to `draw()`. It isn't clear from the design of py5 (or Processing) that `draw()` is not immediately called after the previous call completes. There is a small gap, usually just a few milliseconds. Due to technical reasons about how py5 works, the Python interpreter is idle during this gap. The `predraw_update()` function gives you an opportunity to do something useful during the time that would otherwise be idle.
+The `predraw_update()` function is unique to py5. It offers an opportunity to make a small improvement in a Sketch's frame rate. The main idea is to allow users to execute code in-between calls to `draw()`. It isn't clear from the design of py5 (or Processing) that `draw()` is not immediately called after the previous call completes. There is a small gap, usually just a few milliseconds. Due to technical reasons about how py5 works, the Python interpreter is idle during this gap. The `predraw_update()` function gives you an opportunity to do something useful during the time that would otherwise be idle.
 
 For a Sketch with performance problems, use of the `predraw_update()` function will typically improve the frame rate by 5 to 10%. When performance tuning a Sketch, moving some code from `draw()` to `predraw_update()` can be an easy change to make to get a small speed boost.
 
