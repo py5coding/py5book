@@ -170,6 +170,7 @@ The below example demonstrates all of the possible key event functions. Try runn
 
 ```python
 def setup():
+    # TODO: does this need to be P2D?
     py5.size(500, 500, py5.P2D)
 
 
@@ -250,7 +251,7 @@ def mouse_wheel():
     py5.println("mouse wheel")
 ```
 
-Observe that this Sketch does not define a `draw()` user function. A `draw()` function is not necessary for mouse events to be triggered.
+Like the previous example, this Sketch does not define a `draw()` user function. A `draw()` function is not necessary for mouse events to be triggered.
 
 In addition to the above event functions, py5 also provides mouse-related properties and methods for you to use. They are:
 
@@ -263,7 +264,7 @@ In addition to the above event functions, py5 also provides mouse-related proper
 * [](/reference/sketch_rmouse_x) - The current horizontal coordinate of the mouse after activating scale invariant drawing (activated with [](/reference/sketch_window_ratio)).
 * [](/reference/sketch_rmouse_y) - The current vertical coordinate of the mouse after activating scale invariant drawing (activated with [](/reference/sketch_window_ratio)).
 
-Between py5's mouse event functions, the `Py5MouseEvent` object, and the above properties and methods, there are many ways for you to code your Sketch to respond to mouse inputs.
+Using py5's mouse event functions, the `Py5MouseEvent` object, and the above properties and methods, you have many ways to code your Sketch to respond to mouse inputs.
 
 ## Sketch Exiting Event
 
