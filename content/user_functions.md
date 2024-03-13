@@ -169,8 +169,23 @@ For each of these key event functions, py5 can pass a [](/reference/py5keyevent)
 The below example demonstrates all of the possible key event functions. Try running it and experimenting to understand the events that trigger them.
 
 ```python
-# TODO: insert example
+def setup():
+    py5.size(500, 500, py5.P2D)
+
+
+def key_pressed():
+    py5.println("key pressed")
+
+
+def key_typed(e):
+    py5.println(f"key typed - key = {e.get_key()}")
+
+
+def key_released():
+    py5.println("key released")
 ```
+
+Observe that this Sketch does not define a `draw()` user function. A `draw()` function is not necessary for key events to be triggered.
 
 In addition to the above event functions, py5 also provides several key-related properties for you to use. They are:
 
@@ -199,7 +214,7 @@ The below example demonstrates all of the possible mouse event functions. Try ru
 
 ```python
 def setup():
-    py5.size(500, 500)
+    py5.size(500, 500, py5.P2D)
 
 
 def mouse_clicked(e):
