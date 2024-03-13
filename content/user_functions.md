@@ -156,27 +156,29 @@ def setup():
 
 Finally, py5's [Class Mode](/content/py5_modes) does not support this code transformation magic. When using py5 in Class Mode code, you must write a `settings()` method that makes the call to [](/reference/sketch_size).
 
-## Keyboard Events
+## Key Events
 
-There are three keyboard event functions that respond to inputs from a keyboard. The below list outlines the functions and their triggers.
+There are three key event functions that respond to inputs from a keyboard. The below list outlines the functions and their triggers.
 
 * `key_pressed()` - after any key is pressed
 * `key_typed()` - after any key is pressed and released
 * `key_released()` - after any key is released
 
-Mention `Py5KeyEvent` objects
+For each of these key event functions, py5 can pass a [](/reference/py5keyevent) object. If a key event function is defined with a single parameter, it will receive a `Py5KeyEvent` object; if defined with no parameters, the `Py5KeyEvent` object will be omitted.
+
+The below example demonstrates all of the possible key event functions. Try running it and experimenting to understand the events that trigger them.
 
 ```python
 # TODO: insert example
 ```
 
-In addition to the above event functions, py5 also provides several keyboard-related properties for you to use. They are:
+In addition to the above event functions, py5 also provides several key-related properties for you to use. They are:
 
 * [](/reference/sketch_is_key_pressed) - The `is_key_pressed` variable stores whether or not a keyboard button is currently being pressed.
 * [](/reference/sketch_key) - The system variable `key` always contains the value of the most recent key on the keyboard that was used (either pressed or released). It will contain the constant `CODED` if it was a special key that can then be discriminated with `key_code`.
 * [](/reference/sketch_key_code) - The variable `key_code` is used to detect special keys such as the arrow keys (`UP`, `DOWN`, `LEFT`, and `RIGHT`) as well as `ALT`, `CONTROL`, and `SHIFT`.
 
-Between py5's keyboard event functions, the `Py5KeyEvent` object, and the above properties, there are many ways for you to code your Sketch to respond to keyboard inputs.
+Between py5's key event functions, the `Py5KeyEvent` object, and the above properties, there are many ways for you to code your Sketch to respond to keyboard inputs.
 
 ## Mouse Events
 
@@ -191,7 +193,7 @@ There are many event functions that respond to inputs from a mouse. The complete
 * `mouse_released()` - after a pressed button is released
 * `mouse_wheel()` - while the mouse wheel is rotating
 
-Like py5's keyboard event functions, py5 can pass each of the mouse event functions a [](/reference/py5mouseevent) object. If a mouse event function is defined with a single parameter, it will receive the `Py5MouseEvent` object; if defined with no parameters, the `Py5MouseEvent` object will be omitted.
+Similar to py5's keyboard event functions, py5 can pass each of the mouse event functions a [](/reference/py5mouseevent) object. If a mouse event function is defined with a single parameter, it will receive the `Py5MouseEvent` object; if defined with no parameters, the `Py5MouseEvent` object will be omitted.
 
 The below example demonstrates all of the possible mouse event functions. Try running it and experimenting with your mouse to understand the events that trigger them.
 
