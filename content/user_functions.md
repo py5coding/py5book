@@ -173,7 +173,7 @@ The below example demonstrates all of the possible key event functions. Try runn
 
 ```python
 def setup():
-    # TODO: does this need to be P2D?
+    # TODO: does this need to be P2D ON OSX?
     py5.size(500, 500, py5.P2D)
 
 
