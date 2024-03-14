@@ -402,7 +402,7 @@ Support for these user functions are a part of py5 because the author of py5, [@
 
 Camera3D alters Processing execution in such a way that the user's `draw()` function is called multiple times. The `pre_draw()` and `post_draw()` user functions will be called once, regardless of how many times `draw()` is called. Code that you want to be called once per frame should be included here.
 
-Here is an example that uses `pre_draw()`:
+Here is an example that uses both `pre_draw()` and `post_draw()`:
 
 ```python
 from camera3D import Camera3D
@@ -413,6 +413,8 @@ rot_x, rot_y, rot_z = 0, 0, 0
 
 def setup():
     py5.size(400, 400, py5.P3D)
+    py5.stroke_weight(8)
+    py5.text_size(16)
     camera3D = Camera3D(py5.get_current_sketch())
     camera3D.renderDefaultAnaglyph().setDivergence(1)
 
@@ -425,14 +427,19 @@ def pre_draw():
 
 
 def draw():
+    py5.fill(255)
     py5.translate(py5.width / 2, py5.height / 2, -200)
     py5.rotate_x(py5.radians(rot_x))
     py5.rotate_y(py5.radians(rot_y))
     py5.rotate_z(py5.radians(rot_z))
-
     py5.box(250)
+
+
+def post_draw():
+    py5.fill(0)
+    py5.text("made with Camera3D", 225, 375)
 ```
 
-Here, the `pre_draw()` function is used to update the rotation angles. If the rotation angles were updated in the `draw()` function, the angles would change between the anaglyph's right and left frames, interfering with the 3D effect.
+Here, the `pre_draw()` function is used to update the rotation angles. If the rotation angles were updated in the `draw()` function, the angles would change between the anaglyph's right and left frames, interfering with the 3D effect. The `post_draw()` function adds a text label that is not altered by Camera3D's anaglyph algorithm, as the label would be if it were drawn in the `draw()` function.
 
 Again, the `pre_draw()` and `post_draw()` user functions are only for Camera3D users. If you would like to learn more about py5 and Camera3D, read [](/how_tos/use_camera3D).
