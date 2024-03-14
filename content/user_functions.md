@@ -173,7 +173,6 @@ The below example demonstrates all of the possible key event functions. Try runn
 
 ```python
 def setup():
-    # TODO: does this need to be P2D ON OSX?
     py5.size(500, 500, py5.P2D)
 
 
@@ -325,7 +324,7 @@ def draw():
     py5.text(msg, py5.width / 2, py5.height / 2)
 ```
 
-The `window_moved()` and `window_resized()` event functions will print messages when they are called. Note that on MacOS, the `window_resized()` event function may not be immediately called as the Sketch window is being resized. TODO: TEST THIS, NOT ALWAYS TRUE
+These `window_moved()` and `window_resized()` event functions will print messages when they are called. 
 
 ## Movie Events
 
