@@ -359,6 +359,7 @@ in Imported Mode. To enable this feature, you must add a specific identifying
 string to your Python library to flag it for special import processing. Refer
 to [](importing_imported_mode_code) for more information.
 
+(content-py5-modes-static-mode)=
 ## Static Mode
 
 Static Mode lets you create static images using functionless code. It is

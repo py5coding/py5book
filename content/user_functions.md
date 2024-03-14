@@ -49,8 +49,7 @@ This Sketch is similar to the previous one except it will draw 10 random rectang
 
 For static Sketches, code that you would typically see in the `draw()` function is placed in the `setup()` function. This technique is useful for creating static images.
 
-TODO: can't I use an anchor link? I do this in the hybrid programming page
-This kind of Sketch is very similar, but not the same as, [Static Mode](/content/py5_modes) Sketches. With Static Mode Sketches, you write a series of py5 commands without a `setup()` function. Your Static Mode code is interpreted as if it was contained in a `setup()` function, and will achieve the same result as a Static Sketch described in this section.
+This kind of Sketch is very similar, but not the same as, [Static Mode](content-py5-modes-static-mode) Sketches. With Static Mode Sketches, you write a series of py5 commands without a `setup()` function. Your Static Mode code is interpreted as if it was contained in a `setup()` function, and will achieve the same result as a Static Sketch described in this section.
 
 ## Settings Magic
 
@@ -158,7 +157,7 @@ def setup():
     py5.fill(255, 0, 0)
 ```
 
-Finally, py5's [Class Mode](/content/py5_modes) does not support this code transformation magic. When using py5 in Class Mode code, you must write a `settings()` method that makes the call to [](/reference/sketch_size).
+Finally, py5's [Class Mode](content-py5-modes-class-mode) does not support this code transformation magic. When using py5 in Class Mode code, you must write a `settings()` method that makes the call to [](/reference/sketch_size).
 
 ## Key Events
 
