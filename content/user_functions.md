@@ -127,6 +127,7 @@ There are times when you might want to define the `settings()` function yourself
 ```python
 USE_FULL_SCREEN = True
 
+
 def setup():
     if USE_FULL_SCREEN:
         py5.full_screen()
@@ -169,7 +170,9 @@ There are three key event functions that respond to inputs from a keyboard. The 
 
 For each of these key event functions, py5 can pass a [](/reference/py5keyevent) object. If a key event function is defined with a single parameter, it will receive a `Py5KeyEvent` object; if defined with no parameters, the `Py5KeyEvent` object will be omitted.
 
-The below example demonstrates all of the possible key event functions. Try running it and experimenting to understand the events that trigger them.
+The below example demonstrates all of the possible key event functions. One of the key event functions uses the `Py5KeyEvent` object to show you what that looks like.
+
+Try running this example and experimenting with your keyboard to understand the events that trigger them.
 
 ```python
 def setup():
@@ -213,7 +216,9 @@ There are many event functions that respond to inputs from a mouse. The complete
 
 Much like py5's key event functions, py5 can pass each of these mouse event functions a [](/reference/py5mouseevent) object. If a mouse event function is defined with a single parameter, it will receive the `Py5MouseEvent` object; if defined with no parameters, the `Py5MouseEvent` object will be omitted.
 
-The example below demonstrates all of the supported mouse event functions. Try running it and experimenting with your mouse to understand the events that trigger them.
+The example below demonstrates all of the supported mouse event functions. Some of the event functions use the `Py5MouseEvent` object and some do not, in an effort to show you both use cases.
+
+Try running this example and experimenting with your mouse to understand the events that trigger them.
 
 ```python
 def setup():
@@ -389,7 +394,7 @@ def draw():
     def rect(x, y, 10, 10)
 ```
 
-If `np.random.rand(2)` was sufficiently slow, the Sketch would perform better with the code in `predraw_update()` and not `draw()`.
+If `np.random.rand(2)` was sufficiently slow, the Sketch would perform better with that code in `predraw_update()` and not `draw()`.
 
 There is a [GitHub Discussion thread](https://github.com/py5coding/py5generator/discussions/408) created during the development and testing of this feature. Most of what is discussed there is too tedious to include here.
 
@@ -415,7 +420,7 @@ def setup():
     py5.stroke_weight(8)
     py5.text_size(16)
     camera3D = Camera3D(py5.get_current_sketch())
-    camera3D.renderDefaultAnaglyph().setDivergence(1)
+    camera3D.renderDefaultAnaglyph().setDivergence(2)
 
 
 def pre_draw():
