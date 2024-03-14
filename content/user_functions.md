@@ -4,7 +4,7 @@ User Functions are the code you write to create your py5 Sketches. There are man
 
 ## Animated Sketches
 
-The foundation of animated py5 Sketches are the `setup()` and `draw()` user functions. The `setup()` function is called once when the Sketch begins running and the `draw()` function gets called repeatedly at (ideally) regular intervals.
+The foundation of animated py5 Sketches are the `setup()` and `draw()` user functions. The `setup()` function is called once when the Sketch starts running and the `draw()` function gets called repeatedly at (ideally) regular intervals.
 
 Here is a straightforward example:
 
@@ -22,7 +22,7 @@ def draw():
 
 Here, the `setup()` function executes py5 commands that only need to be executed once. The [](/reference/sketch_size) method creates the Sketch window and sets the window's width and height. The [](/reference/sketch_frame_rate) method tells py5 the speed at which to call the `draw()` method. In this case, it will be called 30 times a second. And finally, the [](/reference/sketch_fill) method sets the shape fill color to red.
 
-Code that you want to be called once should be placed in the `setup()` function. Typically this code will do things like load image assets and set drawing styles.
+Place code that you want to be called once in the `setup()` function. Typically this code will do things like load image assets and set drawing styles.
 
 Code that you want to be called repeatedly should be placed in the `draw()` method. Typically this will be the code that draws to the Sketch window, as well as supporting Python code that determines what should be drawn.
 
@@ -62,6 +62,7 @@ def settings():
 
 
 def setup():
+
     py5.frame_rate(30)
     py5.rect_mode(py5.CENTER)
     py5.fill(255, 0, 0)
@@ -74,7 +75,7 @@ def setup():
 
 The call to [](/reference/sketch_size) is moved to a separate `settings()` function. The rest of the code remained in `setup()`.
 
-This coding magic is a feature of py5 because it is also a feature in Processing. This reduces the cognitive load placed on beginners learning to use py5. Instead of needing to write `settings()`, `setup()`, and `draw()` functions, beginners only need to write `setup()` and `draw()`.
+This coding magic is a feature of py5 because it is also a feature in Processing. This reduces the cognitive load placed on beginners learning to use py5. Instead of needing to write the three functions `settings()`, `setup()`, and `draw()`, beginners only need to define `setup()` and `draw()`.
 
 This code transformation is facilitated by a few organizational rules about how the user must write their `setup()` function. The key rule is that the call to [](/reference/sketch_size) must be first, before the calls to methods like [](/reference/sketch_frame_rate) and [](/reference/sketch_fill). The other special methods that must be used at the beginning of `setup()`, before other code, are [](/reference/sketch_full_screen), [](/reference/sketch_smooth), [](/reference/sketch_no_smooth), and [](/reference/sketch_pixel_density). When the user's `setup()` function is organized in this way, py5 is able to reliably separate the code and divide it into two new functions.
 
@@ -120,7 +121,7 @@ def draw():
 
 The transformed code is the actual code executed by py5, not the code as written by the user.
 
-The extra vertical space you see in these `settings()` and `setup()` functions is there to ensure that any exceptions thrown by the executed code will point to the correct line numbers in the user's `setup()` function. This completes the illusion of the user's `setup()` function.
+The extra vertical space you see in these `settings()` and `setup()` functions is there to ensure that any exceptions thrown by the executed code will point to the correct line numbers in the user's `setup()` function. This facilitates the illusion of the user's `setup()` function as the code that is actually executed by py5.
 
 There are times when you might want to define the `settings()` function yourself and not rely on py5's transformation code. If your code would trip up py5's code transformation abilities, you will need to do this. For example, consider the following `setup()` function that optionally calls [](/reference/sketch_size) or [](/reference/sketch_full_screen).
 
@@ -138,7 +139,7 @@ def setup():
     py5.fill(255, 0, 0)
 ```
 
-The `if` statement in that function would prevent py5 from creating `settings()` and `setup()` functions. Instead, you would need to write the following code:
+The `if` statement in that function would prevent py5 from properly creating `settings()` and `setup()` functions. Instead, you would need to write the following code:
 
 ```python
 USE_FULL_SCREEN = True
@@ -190,13 +191,13 @@ def key_released():
 
 Observe that this Sketch does not define a `draw()` user function. A `draw()` function is not necessary for key events to be triggered.
 
-In addition to the above event functions, py5 also provides several key-related properties for you to use. They are:
+In addition to the above event functions, py5 also provides a few key-related properties for you to use. They are:
 
 * [](/reference/sketch_is_key_pressed) - The `is_key_pressed` variable stores whether or not a keyboard button is currently being pressed.
 * [](/reference/sketch_key) - The system variable `key` always contains the value of the most recent key on the keyboard that was used (either pressed or released). It will contain the constant `CODED` if it was a special key that can then be discriminated with `key_code`.
 * [](/reference/sketch_key_code) - The variable `key_code` is used to detect special keys such as the arrow keys (`UP`, `DOWN`, `LEFT`, and `RIGHT`) as well as `ALT`, `CONTROL`, and `SHIFT`.
 
-Between py5's key event functions, the `Py5KeyEvent` object, and the above properties, there are many ways for you to code your Sketch to respond to keyboard inputs.
+Between py5's key event functions, the `Py5KeyEvent` object, and the above properties, there are many ways for you to build a Sketch that responds to keyboard inputs.
 
 ## Mouse Events
 
@@ -211,9 +212,9 @@ There are many event functions that respond to inputs from a mouse. The complete
 * `mouse_released()` - after a pressed button is released
 * `mouse_wheel()` - while the mouse wheel is rotating
 
-Similar to py5's keyboard event functions, py5 can pass each of the mouse event functions a [](/reference/py5mouseevent) object. If a mouse event function is defined with a single parameter, it will receive the `Py5MouseEvent` object; if defined with no parameters, the `Py5MouseEvent` object will be omitted.
+Much like py5's key event functions, py5 can pass each of these mouse event functions a [](/reference/py5mouseevent) object. If a mouse event function is defined with a single parameter, it will receive the `Py5MouseEvent` object; if defined with no parameters, the `Py5MouseEvent` object will be omitted.
 
-The below example demonstrates all of the possible mouse event functions. Try running it and experimenting with your mouse to understand the events that trigger them.
+The example below demonstrates all of the supported mouse event functions. Try running it and experimenting with your mouse to understand the events that trigger them.
 
 ```python
 def setup():
@@ -255,7 +256,7 @@ def mouse_wheel(e):
 
 Like the previous example, this Sketch does not define a `draw()` user function. A `draw()` function is not necessary for mouse events to be triggered.
 
-In addition to the above event functions, py5 also provides mouse-related properties and methods for you to use. They are:
+In addition to the above event functions, py5 also provides many mouse-related properties and methods for you to use. They are:
 
 * [](/reference/sketch_is_mouse_pressed) - The `is_mouse_pressed` variable stores whether or not a mouse button is currently being pressed.
 * [](/reference/sketch_mouse_button) - When a mouse button is pressed, the value of the system variable `mouse_button` is set to either `LEFT`, `RIGHT`, or `CENTER`, depending on which button is pressed.
@@ -266,7 +267,7 @@ In addition to the above event functions, py5 also provides mouse-related proper
 * [](/reference/sketch_rmouse_x) - The current horizontal coordinate of the mouse after activating scale invariant drawing (activated with [](/reference/sketch_window_ratio)).
 * [](/reference/sketch_rmouse_y) - The current vertical coordinate of the mouse after activating scale invariant drawing (activated with [](/reference/sketch_window_ratio)).
 
-Using py5's mouse event functions, the `Py5MouseEvent` object, and the above properties and methods, you have many ways to code your Sketch to respond to mouse inputs.
+Using py5's mouse event functions, the `Py5MouseEvent` object, and the above properties and methods, you have many ways to create a Sketch that responds to mouse inputs.
 
 ## Sketch Exiting Event
 
@@ -324,7 +325,7 @@ def draw():
     py5.text(msg, py5.width / 2, py5.height / 2)
 ```
 
-These `window_moved()` and `window_resized()` event functions will print messages when they are called. 
+These `window_moved()` and `window_resized()` event functions will print messages when they are called.
 
 ## Movie Events
 
@@ -362,13 +363,13 @@ Here, the `exiting()` event function shuts down the movie player resources when 
 
 ## Update Function
 
-The `predraw_update()` function is unique to py5. It offers an opportunity to make a small improvement in a Sketch's frame rate. The main idea is to allow users to execute code in-between calls to `draw()`. It isn't clear from the design of py5 (or Processing) that `draw()` is not immediately called after the previous call completes. There is a small gap, usually just a few milliseconds. Due to technical reasons about how py5 works, the Python interpreter is idle during this gap. The `predraw_update()` function gives you an opportunity to do something useful during the time that would otherwise be idle. For most use cases, a few milliseconds is too trivial bother with. But for those situations where a few millisconds matters, the `predraw_update()` function can help.
+The `predraw_update()` function is unique to py5. It offers an opportunity to make a small improvement in a Sketch's frame rate. The main idea is to allow users to execute code in-between calls to `draw()`. It isn't clear from the design of py5 (or Processing) that `draw()` is not immediately called after the previous call completes. There is a small gap, usually just a few milliseconds. Due to technical reasons about how py5 works, the Python interpreter is idle during this gap. The `predraw_update()` function gives you an opportunity to do something useful during the time that Python would otherwise be idle. For most use cases, a few milliseconds is too trivial bother with. But for those situations where a few millisconds matters, the `predraw_update()` function can help.
 
-For a Sketch with performance problems, use of the `predraw_update()` function will typically improve the frame rate by 5 to 10%. When performance tuning a Sketch, moving some code from `draw()` to `predraw_update()` can be an easy change to make to get a small speed boost.
+For a Sketch with performance problems, use of the `predraw_update()` function will typically improve the frame rate by 5 to 10%. When performance tuning a Sketch, moving some code from `draw()` to `predraw_update()` can be an easy change to make that provides a small speed boost.
 
-The most important thing to know about the `predraw_update()` function is that you should not make any calls to py5 methods. Many of them will not work correctly, and it is difficult to know which are safe to call without being familiar with the source code of both py5 and Processing.
+The most important thing to know about the `predraw_update()` function is that it should not make any calls to py5 methods. Many of them will not work correctly. It is difficult to know which are safe to call without being familiar with the source code of both py5 and Processing.
 
-Here is an example that uses  `predraw_update()` function.
+Here is an example that uses a `predraw_update()` function.
 
 ```python
 import numpy as np
@@ -381,7 +382,7 @@ def setup():
 
 def predraw_update():
     global x, y
-    # perform slow calculations for x and y
+    # pretend this is a slow calculation for x and y
     x, y = 500 * np.random.rand(2)
 
 
@@ -395,7 +396,7 @@ There is a [GitHub Discussion thread](https://github.com/py5coding/py5generator/
 
 ## Camera3D Support Functions
 
-And finally, the `pre_draw()` and `post_draw()` user functions. These functions are only for Sketches using the Processing library [Camera3D](https://ixora.io/projects/camera-3D/) with py5; without Camera3D, py5 will never call them.
+And finally, the `pre_draw()` and `post_draw()` user functions. These functions are only for Sketches that use the Processing library [Camera3D](https://ixora.io/projects/camera-3D/) with py5; without Camera3D, py5 will never call them.
 
 Support for these user functions are a part of py5 because the author of py5, [@hx2A](https://github.com/hx2A/), is also the author of Camera3D.
 
