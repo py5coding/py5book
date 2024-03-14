@@ -49,6 +49,7 @@ This Sketch is similar to the previous one except it will draw 10 random rectang
 
 For static Sketches, code that you would typically see in the `draw()` function is placed in the `setup()` function. This technique is useful for creating static images.
 
+TODO: can't I use an anchor link? I do this in the hybrid programming page
 This kind of Sketch is very similar, but not the same as, [Static Mode](/content/py5_modes) Sketches. With Static Mode Sketches, you write a series of py5 commands without a `setup()` function. Your Static Mode code is interpreted as if it was contained in a `setup()` function, and will achieve the same result as a Static Sketch described in this section.
 
 ## Settings Magic
@@ -248,9 +249,9 @@ def mouse_released():
     py5.println("mouse released")
 
 
-def mouse_wheel():
-    # TODO: how to tell if it is moving up or down?
-    py5.println("mouse wheel")
+def mouse_wheel(e):
+    direction = "down" if e.get_count() == 1 else "up"
+    py5.println(f"mouse wheel rotating {direction}")
 ```
 
 Like the previous example, this Sketch does not define a `draw()` user function. A `draw()` function is not necessary for mouse events to be triggered.
