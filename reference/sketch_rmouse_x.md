@@ -1,6 +1,6 @@
 # rmouse_x
 
-The current horizonal coordinate of the mouse after activating scale invariant drawing.
+The current horizontal coordinate of the mouse after activating scale invariant drawing.
 
 ## Examples
 
@@ -40,10 +40,10 @@ def draw():
 
 ## Description
 
-The current horizonal coordinate of the mouse after activating scale invariant drawing. See [](sketch_window_ratio) for more information about how to activate this and why it is useful.
+The current horizontal coordinate of the mouse after activating scale invariant drawing. See [](sketch_window_ratio) for more information about how to activate this and why it is useful.
 
 Note that py5 can only track the mouse position when the pointer is over the current window. The default value of `rmouse_x` is `0`, so `0` will be returned until the mouse moves in front of the Sketch window. (This typically happens when a Sketch is first run.)  Once the mouse moves away from the window, `rmouse_x` will continue to report its most recent position.
 
 Underlying Processing field: rmouseX
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on March 14, 2024 17:13:34pm UTC

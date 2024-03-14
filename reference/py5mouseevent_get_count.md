@@ -22,6 +22,11 @@ def draw():
 
 def mouse_clicked(e):
     py5.println('mouse click count:', e.get_count())
+
+
+def mouse_wheel(e):
+    direction = "down" if e.get_count() == 1 else "up"
+    py5.println(f"mouse wheel rotating {direction}")
 ```
 
 </div></div>
@@ -32,6 +37,8 @@ def mouse_clicked(e):
 
 Get the number of mouse clicks. This will be 1 for a single mouse click and 2 for a double click. The value can be much higher if the user clicks fast enough.
 
+This method also responds to the mouse wheel. It will be 1 when the mouse wheel is rotating down and -1 when the mouse wheel is rotating up.
+
 Underlying Processing method: getCount
 
 ## Signatures
@@ -40,4 +47,4 @@ Underlying Processing method: getCount
 get_count() -> int
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on March 14, 2024 17:13:34pm UTC
