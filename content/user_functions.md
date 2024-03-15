@@ -2,6 +2,12 @@
 
 User Functions are the code you write to create your py5 Sketches. There are many such functions available, each called by the py5 framework for different purposes. This page documents all of the user functions py5 supports.
 
+To execute each of the examples on this page, remember to first import py5.
+
+```python
+import py5
+```
+
 ## Animated Sketches
 
 The foundation of animated py5 Sketches are the `setup()` and `draw()` user functions. The `setup()` function is called once when the Sketch starts running and the `draw()` function gets called repeatedly at (ideally) regular intervals.
@@ -18,6 +24,9 @@ def setup():
 
 def draw():
     py5.rect(py5.mouse_x, py5.mouse_y, 10, 10)
+
+
+py5.run_sketch()
 ```
 
 Here, the `setup()` function executes py5 commands that only need to be executed once. The [](/reference/sketch_size) method creates the Sketch window and sets the window's width and height. The [](/reference/sketch_frame_rate) method tells py5 the speed at which to call the `draw()` method. In this case, it will be called 30 times a second. And finally, the [](/reference/sketch_fill) method sets the shape fill color to red.
@@ -28,6 +37,7 @@ Code that you want to be called repeatedly should be placed in the `draw()` meth
 
 Within the `setup()` function, the [](/reference/sketch_frame_count) property will be zero. In the `draw()` function, it will be one or more.
 
+(content-user-functions-static-sketches)=
 ## Static Sketches
 
 A py5 Sketch need not be animated; you can also create static Sketches by omitting the `draw()` function. For example:
@@ -43,6 +53,9 @@ def setup():
         py5.rect(py5.random(500), py5.random(500), 10, 10)
 
     py5.save('/tmp/static_sketch.png')
+
+
+py5.run_sketch()
 ```
 
 This Sketch is similar to the previous one except it will draw 10 random rectangles and then stop drawing.
@@ -82,6 +95,9 @@ def key_typed(e):
 
 def key_released():
     py5.println("key released")
+
+
+py5.run_sketch()
 ```
 
 Observe that this Sketch does not define a `draw()` user function. A `draw()` function is not necessary for key events to be triggered.
@@ -149,6 +165,9 @@ def mouse_released():
 def mouse_wheel(e):
     direction = "down" if e.get_count() == 1 else "up"
     py5.println(f"mouse wheel rotating {direction}")
+
+
+py5.run_sketch()
 ```
 
 Like the previous example, this Sketch does not define a `draw()` user function. A `draw()` function is not necessary for mouse events to be triggered.
@@ -190,6 +209,9 @@ def draw():
 
 def exiting():
     webcam.release()
+
+
+py5.run_sketch()
 ```
 
 In the above example, the Sketch uses OpenCV to connect to a webcam. When py5 calls the `exiting()` event function, it will release the webcam and make it available to other processes.
@@ -220,6 +242,9 @@ def window_resized():
 def draw():
     msg = f'({py5.width}, {py5.height})'
     py5.text(msg, py5.width / 2, py5.height / 2)
+
+
+py5.run_sketch()
 ```
 
 These `window_moved()` and `window_resized()` event functions will print messages when they are called.
@@ -256,6 +281,9 @@ def draw():
 
 def exiting():
     movie_player.stop()
+
+
+py5.run_sketch()
 ```
 
 Here, the `exiting()` event function shuts down the movie player resources when the Sketch exits.
@@ -287,6 +315,9 @@ def predraw_update():
 
 def draw():
     def rect(x, y, 10, 10)
+
+
+py5.run_sketch()
 ```
 
 If `np.random.rand(2)` was sufficiently slow, the Sketch would perform better with that code in `predraw_update()` and not `draw()`.
@@ -339,6 +370,9 @@ def draw():
 def post_draw():
     py5.fill(0)
     py5.text("made with Camera3D", 225, 375)
+
+
+py5.run_sketch()
 ```
 
 Here, the `pre_draw()` function is used to update the rotation angles. If the rotation angles were updated in the `draw()` function, the angles would change between the anaglyph's right and left frames, interfering with the 3D effect. The `post_draw()` function adds a text label that is not altered by Camera3D's anaglyph algorithm, as the label would be if it were drawn in the `draw()` function.
@@ -348,7 +382,7 @@ Again, the `pre_draw()` and `post_draw()` user functions are only for Camera3D u
 (content-user_functions-settings-magic)=
 ## Settings Magic
 
-There is a little bit of magic taking place within the previously discussed `setup()` function. Before executing your Sketch, py5 will split the user's `setup()` function into its own `settings()` and `setup()` functions. To illustrate, consider this example Static Sketch:
+There is a little bit of magic taking place within the previously discussed `setup()` function. Before executing your Sketch, py5 will split the user's `setup()` function into its own `settings()` and `setup()` functions. To illustrate, consider this example `setup()` function from the [](content-user-functions-static-sketches) section of this page:
 
 ```python
 def setup():
@@ -363,7 +397,7 @@ def setup():
     py5.save('/tmp/static_sketch.png')
 ```
 
-The `setup()` function code will be split into this:
+This `setup()` function will be split into this:
 
 ```python
 def settings():
@@ -403,6 +437,9 @@ def setup():
 def draw():
     py5.background(204)
     py5.shape(shape, py5.mouse_x, py5.mouse_y)
+
+
+py5.run_sketch()
 ```
 
 For this example, the transformed code would be:
@@ -426,6 +463,9 @@ def setup():
 def draw():
     py5.background(204)
     py5.shape(shape, py5.mouse_x, py5.mouse_y)
+
+
+py5.run_sketch()
 ```
 
 The transformed code is the actual code executed by py5, not the code as written by the user.
@@ -447,9 +487,12 @@ def setup():
     py5.frame_rate(30)
     py5.rect_mode(py5.CENTER)
     py5.fill(255, 0, 0)
+
+
+# py5.run_sketch()
 ```
 
-The `if` statement in that function would prevent py5 from properly creating `settings()` and `setup()` functions. Instead, you would need to write the following code:
+The `if` statement in that function would prevent py5 from properly creating `settings()` and `setup()` functions, and py5 would not execute the Sketch. Instead, you would need to write the following code:
 
 ```python
 USE_FULL_SCREEN = True
@@ -466,6 +509,9 @@ def setup():
     py5.frame_rate(30)
     py5.rect_mode(py5.CENTER)
     py5.fill(255, 0, 0)
+
+
+py5.run_sketch()
 ```
 
 Finally, py5's [Class Mode](content-py5-modes-class-mode) does not support this code transformation magic. When using py5 in Class Mode code, you must write a `settings()` method that makes the call to [](/reference/sketch_size).
