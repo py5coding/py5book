@@ -335,6 +335,8 @@ These `window_moved()` and `window_resized()` event functions will print message
 
 Processing supports a `movieEvent()` user function to best work with the [Processing Video Library](https://processing.org/reference/libraries/video/index.html). Similarly, py5 provides a `movie_event()` function to aid users who wish to use the Processing Video Library with py5. This event function is called when a new movie frame is available.
 
+To use the [Processing Video Library](https://processing.org/reference/libraries/video/index.html) you must download it and make it available to py5. You can download the library by finding the [video.zip](https://github.com/processing/processing-video/releases/download/latest/video.zip) link on  [GitHub](https://github.com/processing/processing-video/releases). Unzip the zip file and put the contents in a sub-directory called `jars`.
+
 When the `movie_event()` function is called, it will always be passed the Processing Video Library Movie object as a parameter.
 
 Here is a basic example, playing a video file `"movie.mov"`.
@@ -403,6 +405,8 @@ There is a [GitHub Discussion thread](https://github.com/py5coding/py5generator/
 And finally, the `pre_draw()` and `post_draw()` user functions. These functions are only for Sketches that use the Processing library [Camera3D](https://ixora.io/projects/camera-3D/) with py5; without Camera3D, py5 will never call them.
 
 Support for these user functions are a part of py5 because the author of py5, [@hx2A](https://github.com/hx2A/), is also the author of Camera3D.
+
+Like the [Processing Video Library](https://processing.org/reference/libraries/video/index.html), you must download Camera3D and make it available to py5. You can download the library from [https://ixora.io/downloads/camera3D/Camera3D.zip](https://ixora.io/downloads/camera3D/Camera3D.zip). Unzip the contents and put it in a `jars` sub-directory.
 
 Camera3D alters Processing execution in such a way that the user's `draw()` function is called multiple times. The `pre_draw()` and `post_draw()` user functions will be called once, regardless of how many times `draw()` is called. Code that you want to be called once per frame should be included here.
 
