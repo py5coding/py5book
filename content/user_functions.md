@@ -253,7 +253,7 @@ These `window_moved()` and `window_resized()` event functions will print message
 
 Processing supports a `movieEvent()` user function to best work with the [Processing Video Library](https://processing.org/reference/libraries/video/index.html). Similarly, py5 provides a `movie_event()` function to aid users who wish to use the Processing Video Library with py5. This event function is called when a new movie frame is available.
 
-To use the [Processing Video Library](https://processing.org/reference/libraries/video/index.html) you must download it and make it available to py5. You can download the library by finding the [video.zip](https://github.com/processing/processing-video/releases/download/latest/video.zip) link on  [GitHub](https://github.com/processing/processing-video/releases). Unzip the zip file and put the contents in a sub-directory called `jars`.
+To use the [Processing Video Library](https://processing.org/reference/libraries/video/index.html) you must download it and make it available to py5. You can download the library by finding the [video.zip](https://github.com/processing/processing-video/releases/download/latest/video.zip) link on the library's [GitHub Releases](https://github.com/processing/processing-video/releases) page. Unzip the zip file and put the contents in a sub-directory called `jars`.
 
 When the `movie_event()` function is called, it will always be passed the Processing Video Library Movie object as a parameter.
 
@@ -489,6 +489,7 @@ def setup():
     py5.fill(255, 0, 0)
 
 
+# do not run this code
 # py5.run_sketch()
 ```
 
