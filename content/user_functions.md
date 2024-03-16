@@ -288,6 +288,7 @@ py5.run_sketch()
 
 Here, the `exiting()` event function shuts down the movie player resources when the Sketch exits.
 
+(content-user-functions-update_functon)=
 ## Update Function
 
 The `predraw_update()` function is unique to py5. It offers an opportunity to make a small improvement in a Sketch's frame rate. The main idea is to allow users to execute code in-between calls to `draw()`. It isn't clear from the design of py5 (or Processing) that `draw()` is not immediately called after the previous call completes. There is a small gap, usually just a few milliseconds. Due to technical reasons about how py5 works, the Python interpreter is idle during this gap. The `predraw_update()` function gives you an opportunity to do something useful during the time that Python would otherwise be idle. For most use cases, a few milliseconds is too trivial bother with. But for those situations where a few millisconds matters, the `predraw_update()` function can help.
