@@ -27,6 +27,7 @@ for Mac users is to use py5 through Jupyter Notebooks, and after using the
 `%gui osx` magic. See [](macos_users) for more information.
 ```
 
+(content-py5-modes-module-mode)=
 ## Module Mode
 
 Module Mode lets you write standalone `settings`, `setup`, and `draw`
@@ -288,6 +289,7 @@ A good way to avoid this is to import the library with only one of
 mode you want to use. Using both import statements is asking for trouble.
 ``````
 
+(content-py5-modes-imported-mode)=
 ## Imported Mode
 
 Imported Mode was originally designed to be used by beginner
