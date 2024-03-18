@@ -45,7 +45,7 @@ By default this function will return right away and will process frames in the b
 
 By default this function will report its progress as frames are processed. If you are using a Jupyter Notebook and happen to be processing tens of thousands of frames, this might cause Jupyter to crash. To avoid that fate, set the `display_progress` parameter to `False`.
 
-Use the `sketch` parameter to specify a different running Sketch, such as a Sketch created using Class mode. If your Sketch has a `post_draw()` method, use the `hook_post_draw` parameter to make this function run after `post_draw()` instead of `draw()`. This is important when using Processing libraries that support `post_draw()` such as Camera3D or ColorBlindness.
+Use the `sketch` parameter to specify a different running Sketch, such as a Sketch created using [class mode](content-py5-modes-class-mode). If your Sketch has a `post_draw()` method, use the `hook_post_draw` parameter to make this function run after `post_draw()` instead of `draw()`. This is important when using Processing libraries that support `post_draw()` such as Camera3D or ColorBlindness.
 
 ## Signatures
 
@@ -66,4 +66,4 @@ offline_frame_processing(
 ) -> None
 ```
 
-Updated on February 27, 2024 16:53:28pm UTC
+Updated on March 18, 2024 05:08:14am UTC

@@ -32,7 +32,7 @@ assert first_sketch is not second_sketch
 
 Reset the py5 module's current `Sketch` instance.
 
-When coding py5 in module mode, a Sketch instance is created on your behalf that is referenced within the py5 module itself. That Sketch is called the "Current Sketch." If the current Sketch exits, it will be in a dead state and cannot be re-run. `reset_py5()` will discard that exited Sketch instance and replace it with a new one in the ready state.
+When coding py5 in [module mode](content-py5-modes-module-mode), a Sketch instance is created on your behalf that is referenced within the py5 module itself. That Sketch is called the "Current Sketch." If the current Sketch exits, it will be in a dead state and cannot be re-run. `reset_py5()` will discard that exited Sketch instance and replace it with a new one in the ready state.
 
 If `reset_py5()` is called when the current Sketch is in the ready or running states, it will do nothing and return `False`. If `reset_py5()` is called when the current Sketch is in the dead state, `reset_py5()` will replace it and return `True`.
 
@@ -46,4 +46,4 @@ reset_py5(
 ) -> bool
 ```
 
-Updated on April 15, 2023 22:56:12pm UTC
+Updated on March 18, 2024 05:08:14am UTC

@@ -27,7 +27,7 @@ assert sketch.is_dead
 
 Get the py5 module's current `Sketch` instance.
 
-When coding py5 in module mode, a Sketch instance is created on your behalf that is referenced within the py5 module itself. That Sketch is called the "current sketch." Use this method to access that Sketch instance directly.
+When coding py5 in [module mode](content-py5-modes-module-mode), a Sketch instance is created on your behalf that is referenced within the py5 module itself. That Sketch is called the "current sketch." Use this method to access that Sketch instance directly.
 
 ## Signatures
 
@@ -35,4 +35,4 @@ When coding py5 in module mode, a Sketch instance is created on your behalf that
 get_current_sketch() -> Sketch
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on March 18, 2024 05:08:14am UTC

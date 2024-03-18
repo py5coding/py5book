@@ -31,7 +31,7 @@ Take a screenshot of a running Sketch.
 
 The returned image is a `PIL.Image` object. It can be assigned to a variable or embedded in the notebook.
 
-By default the Sketch will be the currently running Sketch, as returned by [](py5functions_get_current_sketch). Use the `sketch` parameter to specify a different running Sketch, such as a Sketch created using Class mode.
+By default the Sketch will be the currently running Sketch, as returned by [](py5functions_get_current_sketch). Use the `sketch` parameter to specify a different running Sketch, such as a Sketch created using [class mode](content-py5-modes-class-mode).
 
 This function will not work on a Sketch with no `draw()` function that uses an OpenGL renderer such as `P2D` or `P3D`. Either add a token `draw()` function or switch to the default `JAVA2D` renderer.
 
@@ -47,4 +47,4 @@ screenshot(
 ) -> PIL_Image
 ```
 
-Updated on December 25, 2023 17:40:34pm UTC
+Updated on March 18, 2024 05:08:14am UTC

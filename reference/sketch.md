@@ -25,7 +25,7 @@ The core functions to be implemented by the py5 coder are `setup` and `draw`. Th
 * `post_draw`
 * `pre_draw`
 
-When coding in class mode, all of the above functions should be instance methods. When coding in module mode or imported mode, the above functions should be stand-alone functions available in the local namespace in which [](sketch_run_sketch) was called.
+When coding in [class mode](content-py5-modes-class-mode), all of the above functions should be instance methods. When coding in [module mode](content-py5-modes-module-mode) or [imported mode](content-py5-modes-imported-mode), the above functions should be stand-alone functions available in the local namespace in which [](sketch_run_sketch) was called.
 
 For more information, look at the online ["User Functions"](/content/user_functions) documentation.
 
@@ -36,4 +36,4 @@ The following methods and fields are provided:
 ```{include} include_sketch.md
 ```
 
-Updated on February 27, 2024 16:53:28pm UTC
+Updated on March 18, 2024 05:08:14am UTC
