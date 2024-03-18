@@ -38,8 +38,6 @@ There are security risks associated with Python pickle files. A pickle file can 
 
 When using py5 in [imported mode](content-py5-modes-imported-mode), pickling will not work on objects instantiated from new classes you have defined yourself on the main sketch file. This applies to py5's [](sketch_save_pickle) and `load_pickle()` methods, as well as the Python's standard library pickle module methods they depend upon. If you need to pickle objects from classes you defined, move the class definitions to a different .py file that you import as a module or import the classes from. Otherwise, you could also try using [module mode](content-py5-modes-module-mode) if you want to use pickle with your classes and keep all the sketch code in a single file.
 
-Underlying Processing method: loadPickle
-
 ## Signatures
 
 ```python
@@ -48,4 +46,4 @@ load_pickle(
 ) -> Any
 ```
 
-Updated on March 18, 2024 04:59:26am UTC
+Updated on March 18, 2024 05:24:22am UTC

@@ -35,8 +35,6 @@ Load byte data from a file or URL. When loading a file, the path can be in the d
 
 When loading byte data from a URL, the data is retrieved using the Python requests library with the `get` method, and any extra keyword arguments (the `kwargs` parameter) are passed along to that method. When loading byte data from a file, the `kwargs` parameter is not used.
 
-Underlying Processing method: [loadBytes](https://processing.org/reference/loadBytes_.html)
-
 ## Signatures
 
 ```python
@@ -46,4 +44,4 @@ load_bytes(
 ) -> bytearray
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on March 18, 2024 05:29:28am UTC
