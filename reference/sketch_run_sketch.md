@@ -57,7 +57,7 @@ When programming in [module mode](content-py5-modes-module-mode) and [imported m
 
 When running a Sketch asynchronously through Jupyter Notebook, any `print` statements using Python's builtin function will always appear in the output of the currently active cell. This will rarely be desirable, as the active cell will keep changing as the user executes code elsewhere in the notebook. As an alternative, use py5's [](sketch_println) method, which will place all text in the output of the cell that made the `run_sketch()` call. This will continue to be true if the user moves on to execute code in other Notebook cells. Use [](sketch_set_println_stream) to customize this behavior. All py5 error messages and stack traces are routed through the [](sketch_println) method. Be aware that some error messages and warnings generated inside the Processing Jars cannot be controlled in the same way, and may appear in the output of the active cell or mixed in with the Jupyter Kernel logs.
 
-The `jclassname` parameter should only be used when programming in Processing Mode. This value must be the canonical name of your Processing Sketch class (i.e. `"org.test.MySketch"`). The class must inherit from `py5.core.SketchBase`. Read py5's online documentation to learn more about Processing Mode.
+The `jclassname` parameter should only be used when programming in Processing Mode. This value must be the canonical name of your Processing Sketch class (i.e. `"org.test.MySketch"`). The class must inherit from `py5.core.SketchBase`. To pass parameters to your Processing Sketch class constructor, use the `jclass_params` parameter. Read py5's online documentation to learn more about [Processing Mode](/content/processing_mode).
 
 ## Signatures
 
@@ -68,8 +68,9 @@ run_sketch(
     py5_options: list[str] = None,  # command line arguments to pass to Processing as arguments
     sketch_args: list[str] = None,  # command line arguments that become Sketch arguments
     sketch_functions: dict[str, Callable] = None,  # sketch methods when using [module mode](content-py5-modes-module-mode)
-    jclassname: str = None  # canonical name of class to instantiate when using py5 in processing mode
+    jclassname: str = None,  # canonical name of class to instantiate when using py5 in processing mode
+    jclass_params: tuple[Any] = ()  # parameters to pass to constructor when using py5 in processing mode
 ) -> None
 ```
 
-Updated on March 18, 2024 05:08:14am UTC
+Updated on March 21, 2024 23:14:19pm UTC
