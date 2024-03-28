@@ -212,7 +212,7 @@ First, you will need to add all of your compiled Java code to your classpath. Th
 
 Next, you will need to write some Python code to define and register the functions you will call from Python. Registration is done with [](/reference/py5tools_register_processing_mode_key). Remember, the Java `callPython()` method can use the dot ("`.`") notation to access callables in modules or attached to objects.
 
-Finally, you will also need to tell py5 to create an instance of your class instead of `py5.core.Sketch`. You can do this with the `jclassname` parameter in your call to [](/reference/sketch_run_sketch). If your Python code is using py5 in [class mode](content-py5-modes-class-mode), your class should inherit from the Python `Sketch` class and pass the `jclassname` parameter as a keyword argument to the parent's `__init__()` method.
+Finally, you will also need to tell py5 to create an instance of your class instead of the Java class `py5.core.Sketch`. You can do this with the `jclassname` parameter in your call to [](/reference/sketch_run_sketch). If your Python code is using py5 in [class mode](content-py5-modes-class-mode), your class should inherit from the Python `Sketch` class and pass the `jclassname` parameter as a keyword argument to the parent's `__init__()` method. If you need to pass parameters to your Java classes's constructor, pass a tuple of the parameters with the `jclass_params` parameter.
 
 ## Jupyter Notebook Limitations
 
