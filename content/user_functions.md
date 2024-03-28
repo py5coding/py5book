@@ -315,7 +315,7 @@ def predraw_update():
 
 
 def draw():
-    def rect(x, y, 10, 10)
+    py5.rect(x, y, 10, 10)
 
 
 py5.run_sketch()
