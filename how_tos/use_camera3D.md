@@ -84,11 +84,9 @@ The `pre_draw` method is a Camera3D addition that runs once before any calls to 
 
 ```{code-cell} ipython3
 def pre_draw():
-    global rot_x
+    global rot_x, rot_y, rot_z
     rot_x += 0.8
-    global rot_y
     rot_y += 0.3
-    global rot_z
     rot_z += 0.5
 ```
 

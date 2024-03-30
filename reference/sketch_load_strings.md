@@ -35,8 +35,6 @@ Load a list of strings from a file or URL. When loading a file, the path can be 
 
 When loading string data from a URL, the data is retrieved using the Python requests library with the `get` method, and any extra keyword arguments (the `kwargs` parameter) are passed along to that method. When loading string data from a file, the `kwargs` parameter is not used.
 
-Underlying Processing method: [loadStrings](https://processing.org/reference/loadStrings_.html)
-
 ## Signatures
 
 ```python
@@ -46,4 +44,4 @@ load_strings(
 ) -> list[str]
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on March 18, 2024 05:29:28am UTC

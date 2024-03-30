@@ -78,7 +78,7 @@ def setup():
 
 Defines the dimension of the display window width and height in units of pixels. This is intended to be called from the `settings()` function.
 
-When programming in module mode and imported mode, py5 will allow calls to `size()` from the `setup()` function if it is called at the beginning of `setup()`. This allows the user to omit the `settings()` function, much like what can be done while programming in the Processing IDE. Py5 does this by inspecting the `setup()` function and attempting to split it into synthetic `settings()` and `setup()` functions if both were not created by the user and the real `setup()` function contains a call to `size()`, or calls to [](sketch_full_screen), [](sketch_smooth), [](sketch_no_smooth), or [](sketch_pixel_density). Calls to those functions must be at the very beginning of `setup()`, before any other Python code (but comments are ok). This feature is not available when programming in class mode.
+When programming in [module mode](content-py5-modes-module-mode) and [imported mode](content-py5-modes-imported-mode), py5 will allow calls to `size()` from the `setup()` function if it is called at the beginning of `setup()`. This allows the user to omit the `settings()` function, much like what can be done while programming in the Processing IDE. Py5 does this by inspecting the `setup()` function and attempting to split it into synthetic `settings()` and `setup()` functions if both were not created by the user and the real `setup()` function contains a call to `size()`, or calls to [](sketch_full_screen), [](sketch_smooth), [](sketch_no_smooth), or [](sketch_pixel_density). Calls to those functions must be at the very beginning of `setup()`, before any other Python code (but comments are ok). This feature is not available when programming in [class mode](content-py5-modes-class-mode).
 
 The built-in variables [](sketch_width) and [](sketch_height) are set by the parameters passed to this function. For example, running `size(640, 480)` will assign 640 to the [](sketch_width) variable and 480 to the height `variable`. If `size()` is not used, the window will be given a default size of 100 x 100 pixels.
 
@@ -127,4 +127,4 @@ size(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on March 18, 2024 05:08:14am UTC

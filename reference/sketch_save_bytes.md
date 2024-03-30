@@ -38,8 +38,6 @@ def draw():
 
 Save byte data to a file. If `filename` is not an absolute path, it will be saved relative to the current working directory ([](sketch_sketch_path)). The saved file can be reloaded with [](sketch_load_bytes).
 
-Underlying Processing method: [saveBytes](https://processing.org/reference/saveBytes_.html)
-
 ## Signatures
 
 ```python
@@ -49,4 +47,4 @@ save_bytes(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on March 18, 2024 05:29:28am UTC

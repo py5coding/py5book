@@ -27,6 +27,7 @@ for Mac users is to use py5 through Jupyter Notebooks, and after using the
 `%gui osx` magic. See [](macos_users) for more information.
 ```
 
+(content-py5-modes-module-mode)=
 ## Module Mode
 
 Module Mode lets you write standalone `settings`, `setup`, and `draw`
@@ -285,9 +286,10 @@ mode to another. I make this mistake all the time.
 
 A good way to avoid this is to import the library with only one of
 "`import py5`" or "`from py5 import Sketch`", depending on which
-mode you want to use. Importing both ways is asking for trouble.
+mode you want to use. Using both import statements is asking for trouble.
 ``````
 
+(content-py5-modes-imported-mode)=
 ## Imported Mode
 
 Imported Mode was originally designed to be used by beginner
@@ -359,6 +361,7 @@ in Imported Mode. To enable this feature, you must add a specific identifying
 string to your Python library to flag it for special import processing. Refer
 to [](importing_imported_mode_code) for more information.
 
+(content-py5-modes-static-mode)=
 ## Static Mode
 
 Static Mode lets you create static images using functionless code. It is

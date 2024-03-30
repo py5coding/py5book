@@ -39,8 +39,6 @@ Save a list of strings to a file. If `filename` is not an absolute path, it will
 
 Use the `end` parameter to set the line terminator for each string in the list. If items in the list of strings already have line terminators, set the `end` parameter to `''` to keep the output file from being saved with a blank line after each item.
 
-Underlying Processing method: [saveStrings](https://processing.org/reference/saveStrings_.html)
-
 ## Signatures
 
 ```python
@@ -52,4 +50,4 @@ save_strings(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on March 18, 2024 05:29:28am UTC

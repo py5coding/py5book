@@ -30,7 +30,7 @@ Creates a portal widget to continuously stream frames from a running Sketch into
 
 **Unfortunately, the Sketch Portal feature had to be removed from py5 in release 0.10.0. Changes to Jupyter Lab and Jupyter Widgets somehow broke the code and it was too difficult to figure out why. Rather than fix the code, the Sketch Portal will be re-implemented using the Python library anywidget. This new approach will hopefully be simpler to implement and easier to maintain.**
 
-By default the Sketch will be the currently running Sketch, as returned by [](py5functions_get_current_sketch). Use the `sketch` parameter to specify a different running Sketch, such as a Sketch created using Class mode.
+By default the Sketch will be the currently running Sketch, as returned by [](py5functions_get_current_sketch). Use the `sketch` parameter to specify a different running Sketch, such as a Sketch created using [class mode](content-py5-modes-class-mode).
 
 The Sketch Portal is a custom Jupyter Widget and can handle keyboard or mouse events just like a native window. You will need to click on the portal for it to gain focus and capture keyboard events. Mouse and keyboard events will be observed by the browser and simulated events will be created for the Sketch. Every effort has been made to make the simulated events identical to real events but some small differences remain. You can also use the Jupyter-provided Widgets such as sliders and text boxes for user input.
 
@@ -61,4 +61,4 @@ sketch_portal(
 ) -> None
 ```
 
-Updated on December 26, 2023 10:50:51am UTC
+Updated on March 18, 2024 05:08:14am UTC

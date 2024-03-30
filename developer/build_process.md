@@ -14,18 +14,21 @@ program `git`.
 
 ## Clone Source Repository from GitHub
 
-You will need to clone the [py5generator
-repo](https://github.com/py5coding/py5generator) from GitHub. If you don't
-already have the [Processing 4 application](https://processing.org/download) on
-your computer, you'll need to download that too.
+You will need to clone the
+[py5generator repo](https://github.com/py5coding/py5generator)
+from GitHub, or better yet, fork the py5generator repo and clone your fork.
+You'll need to create a fork if you intend to make a pull request.
+
+If you don't already have the
+[Processing 4 application](https://processing.org/download) on your computer,
+you'll need to download that too.
 
 On my computer I keep all of the py5 repos together in one directory.
 
 ``` bash
-$ mkdir pythonprocessing
-$ cd pythonprocessing
-
-$ git clone https://github.com/py5coding/py5generator
+mkdir pythonprocessing
+cd pythonprocessing
+git clone https://github.com/py5coding/py5generator
 ```
 
 ## Install Java 17
@@ -40,11 +43,14 @@ Next you will need to create the Anaconda environment. This will install
 Python packages that go beyond what is necessary for regular py5 use.
 
 ``` bash
-$ cd py5generator
-$ conda env create -f environment.yml
-$ conda activate py5
-(py5) $ cd ..
+cd py5generator
+conda env create -f environment.yml
+conda activate py5
 ```
+
+The `conda activate py5` command will activate the py5 Anaconda environment. You
+will see `(py5)` in the terminal prompt to indicate that you are working in
+this new environment.
 
 If you have difficulties creating the Anaconda environment, try setting the
 [channel priority to strict](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-channels.html#strict-channel-priority)
@@ -75,8 +81,7 @@ to the location of the Processing application. The `py5_build_dir` parameter is
 where the generated code will go.
 
 ``` bash
-(py5) $ cd py5generator
-(py5) $ make processing_dir=~/INSTALL/processing-4 py5_build_dir=../py5code skip_black=true
+make processing_dir=~/INSTALL/processing-4 py5_build_dir=../py5code skip_black=true
 ```
 
 The Makefile uses `realpath`. You may need to install the "coreutils" package if
@@ -107,5 +112,5 @@ There is an additional `make` command for generating reference documentation for
 the website.
 
 ``` bash
-(py5) $ make generate_py5_docs py5_website_dir=../py5book py5_api_lang=api_en
+make generate_py5_docs py5_website_dir=../py5book py5_api_lang=api_en
 ```
