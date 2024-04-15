@@ -11,25 +11,26 @@ Customize where the output of [](sketch_println) goes.
 </div><div class="example-cell-code">
 
 ```python
-import ipywidgets as widgets
-from IPython.display import display
+class PrintlnFileStream:
+
+    def __init__(self, filename):
+        self.f = open(filename, "w")
+
+    def print(self, text, end="\n", stderr=False):
+        print(text, end=end, file=self.f)
+
+    def shutdown(self):
+        self.f.close()
 
 
-class WidgetPrintlnStream:
-
-    def init(self):
-        self.out = widgets.Output(layout=dict(
-            max_height='200px', overflow='auto'))
-        display(self.out)
-
-    def print(self, text, end='\n', stderr=False):
-        if stderr:
-            self.out.append_stderr(text + end)
-        else:
-            self.out.append_stdout(text + end)
+def setup():
+    py5.size(200, 200)
+    py5.set_println_stream(PrintlnFileStream("/tmp/debug.txt"))
 
 
-py5.set_println_stream(WidgetPrintlnStream())
+def draw():
+    py5.rect(py5.mouse_x, py5.mouse_y, 10, 10)
+    py5.println(f"mouse position={py5.mouse_x}, {py5.mouse_y}")
 ```
 
 </div></div>
@@ -40,7 +41,9 @@ py5.set_println_stream(WidgetPrintlnStream())
 
 Customize where the output of [](sketch_println) goes.
 
-When running a Sketch asynchronously through Jupyter Notebook, any `print` statements using Python's builtin function will always appear in the output of the currently active cell. This will rarely be desirable, as the active cell will keep changing as the user executes code elsewhere in the notebook. The [](sketch_println) method was created to provide users with print functionality in a Sketch without having to cope with output moving from one cell to the next. Use `set_println_stream` to change how the output is handled. The `println_stream` object must provide `init()` and `print()` methods, as shown in the example. The example demonstrates how to configure py5 to output text to an IPython Widget.
+The passed `println_stream` object must provide `print()` and `shutdown()` methods, as shown in the example. The example demonstrates how to configure py5 to output `println()` text to a file.
+
+When running a Sketch asynchronously through Jupyter Notebook, any `print` statements using Python's builtin function will always appear in the output of the currently active cell. This will rarely be desirable, as the active cell will keep changing as the user executes code elsewhere in the notebook. The [](sketch_println) method was created to provide users with print functionality in a Sketch without having to cope with output moving from one cell to the next. Use `set_println_stream` to change how the output is handled.
 
 ## Signatures
 
@@ -50,4 +53,4 @@ set_println_stream(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on April 15, 2024 20:11:33pm UTC
