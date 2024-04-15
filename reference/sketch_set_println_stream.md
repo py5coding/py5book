@@ -11,12 +11,16 @@ Customize where the output of [](sketch_println) goes.
 </div><div class="example-cell-code">
 
 ```python
-class PrintlnFileStream:
+class _PrintlnFileStream:
 
     def __init__(self, filename):
-        self.f = open(filename, "w")
+        self.filename = filename
+        self.f = None
 
     def print(self, text, end="\n", stderr=False):
+        if self.f is None:
+            self.f = open(self.filename, "w")
+
         print(text, end=end, file=self.f)
 
     def shutdown(self):
@@ -53,4 +57,4 @@ set_println_stream(
 ) -> None
 ```
 
-Updated on April 15, 2024 20:11:33pm UTC
+Updated on April 15, 2024 20:36:58pm UTC
