@@ -34,6 +34,13 @@ possible.
   py5\'s functionality is provided by the Processing core libraries.
   Py5 stands on the shoulders of giants.
 
+- [Marina Zurkow](https://o-matic.com), for believing in me and
+  collaborating with me to create art with Processing and py5. Much
+  of py5's early development was done while also creating
+  [Hudson Follies](https://ixora.io/art/hudson_follies/). The
+  opportunity for me to collaborate with Marina provided py5 with an
+  opportunity to grow and mature into the library it is today.
+
 - [Jonathan Feinberg](http://mrfeinberg.com/) and the rest of the
   [Processing.py](https://py.processing.org/) contributors.
   Processing.py is a Jython version of
