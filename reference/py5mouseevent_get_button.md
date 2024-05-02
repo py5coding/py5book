@@ -38,7 +38,7 @@ def mouse_clicked(e):
 
 Identify the mouse button used in the event. This can be `LEFT`, `CENTER`, or `RIGHT`.
 
-Underlying Processing method: getButton
+Underlying Processing method: MouseEvent.getButton
 
 ## Signatures
 
@@ -46,4 +46,4 @@ Underlying Processing method: getButton
 get_button() -> int
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on May 02, 2024 03:24:20am UTC

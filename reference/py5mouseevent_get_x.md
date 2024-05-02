@@ -32,7 +32,7 @@ def mouse_clicked(e):
 
 Return the x position of the mouse at the time of this mouse event. This information can also be obtained with [](sketch_mouse_x).
 
-Underlying Processing method: getX
+Underlying Processing method: MouseEvent.getX
 
 ## Signatures
 
@@ -40,4 +40,4 @@ Underlying Processing method: getX
 get_x() -> int
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on May 02, 2024 03:24:20am UTC
