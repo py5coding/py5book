@@ -26,7 +26,7 @@ Set the Sketch window's title. This will typically appear at the window's title 
 
 This method provides the same functionality as [](py5surface_set_title) but without the need to interact directly with the [](py5surface) object.
 
-Underlying Processing method: windowTitle
+Underlying Processing method: [windowTitle](https://processing.org/reference/windowTitle_.html)
 
 ## Signatures
 
@@ -37,4 +37,4 @@ window_title(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on May 02, 2024 02:48:11am UTC
