@@ -577,13 +577,13 @@ Arrays like `int[]`, `float[]` or `PVector[]` usually become lists in Python (so
 **Java**
 
 ```java
-ArrayList<Flag> flags; // a list of Flag de objetos
+ArrayList<Fruit> fruits; // a list of Fruit objects
 
 void setup() {
   size(400, 400); 
-  flags = new ArrayList<Flag>();
+  fruits = new ArrayList<Fruit>();
   for (int i=0; i <50; i++) {
-    flags.add(new Flag(100, 100, 12));
+    fruits.add(new Fruit(100, 100, 12));
   }
 }
 ```
@@ -591,21 +591,21 @@ void setup() {
 **Python**
 
 ```python
-flags = []  # a list of Flag de objetos
+fruits = []  # a list of Fruit objects
 
 def setup():
     size(400, 400); 
     for i in range(50):
-        flags.append(Flag(100, 100, 12))
+        fruits.append(Fruit(100, 100, 12))
 ```
 
 Or you could use a *list comprehension*:
 
 ```python
 def setup():
-    global flags
+    global fruits
     size(400, 400); 
-    flags = [Flag(100, 100, 12) for i in range(50)]
+    fruits = [Fruit(100, 100, 12) for i in range(50)]
 ```
 
 #### 2D Arrays
