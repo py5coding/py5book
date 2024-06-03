@@ -16,8 +16,9 @@ Processing's `map(value, start, end, target_start, target_end)` is now [remap()]
 
 Processing's `get()` and `set()` functions to manipulate pixels become `get_pixels()` and `set_pixels()`, but you might want to read about `np_pixels` and [set_np_pixels()](/reference/sketch_set_np_pixels). That's because in Python, `set()` creates a [*set* data structure](https://docs.python.org/3/tutorial/datastructures.html#sets).
 
-Instead of `frameRate`, use the [frame_rate()](/reference/sketch_frame_rate) function to set a target frame rate and the [get_frame_rate()](/reference/sketch_get_frame_rate) function to find out the current frame rate (an exponential moving average). Lastly, if you used the `g` reference to the main PGraphics object, you can obtain an equivalent Py5Graphics object with [get_graphics()](/reference/sketch_get_graphics).
+Instead of `frameRate`, use the [frame_rate()](/reference/sketch_frame_rate) function to set a target frame rate and the [get_frame_rate()](/reference/sketch_get_frame_rate) function to find out the current frame rate (an exponential moving average). 
 
+For more advanced users, if you used the `g` reference to the main PGraphics object, you can obtain an equivalent Py5Graphics object with [get_graphics()](/reference/sketch_get_graphics). The `this` reference to the current sketch that must be passed to some libraries, like *PeasyCam* or *Camera3D*, can be obtained with `this = get_current_sketch()`. And lastly, if you need to terminate a sketch from its own code, to end the sketch properly use `exit_sketch()` instead of Python's `exit()`, so it won't skip the normal sketch clean up and the "exiting event" that will trigger a call to `exiting()`, if it exists, a function you can define with `def exiting():` to run some code as the sketch ends.
 
 ```{important}
 Please have a look at the [py5 Reference Summary](/reference/summary), it will help you find any missing names.
