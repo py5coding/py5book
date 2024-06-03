@@ -2,7 +2,7 @@
 
 **Welcome!**
 
-We hope you enjoy using the Processing graphics vocabulary, now with Python 3. This page shows all examples in py5 *imported mode style*. You can learn more about the py5 modes at [](/content/py5_modes).
+We hope you enjoy using the Processing graphics vocabulary, now with Python 3. This page shows all examples in py5 *imported mode style*. You can learn more about the py5 modes at [](/content/py5_modes). Some of the tips here might be useful to Processing Python mode users too, as they show some new Python 3 related behavior and things that py5 does differently from Processing altogether.
 
 ## The slightly different *snake_case* names
 
@@ -310,7 +310,7 @@ def draw():
 
 ### Global variables
 
-If a variable is *declared and initialized* (type and value are defined) at the beginning of the sketch just remove the type declaration.
+If a variable is *declared and initialized* (type and value are defined) at the beginning of the sketch, like in the example bellow `int rad = 60;`, you can remove the type declaration and semicolon, leaving just `rad = 60` (or change it to an annotated assignment, like `rad: int = 60`).
 
 Since there is no way in Python to declare a variable without making an assignment, when the variable is just declared (a type is set without *initialization*) at the beginning of the sketch, we need to find where it is assigned for the first time and add the `global variable_name` statement at the beginning of that function.
 
@@ -473,7 +473,7 @@ Camera3D camera3D;
 
 void setup() {
   size(600, 600);
-  camera3D = new VideoExport(this);
+  camera3D = new Camera3D(this);
   camera3D.setBackgroundColor(192);
 }
 ```
