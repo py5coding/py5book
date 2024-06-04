@@ -2,7 +2,7 @@
 
 **Welcome!**
 
-We hope you enjoy using the Processing graphics vocabulary, now with Python 3. This page shows all examples in py5 *imported mode style*. You can learn more about the py5 modes at [](/content/py5_modes).
+We hope you enjoy using the Processing graphics vocabulary, now with Python 3. This page shows all examples in py5 *imported mode style*. You can learn more about the py5 modes at [](/content/py5_modes). Some of the tips here might be useful to Processing Python mode users too, as they show some new Python 3 related behavior and things that py5 does differently from Processing altogether.
 
 ## The slightly different *snake_case* names
 
@@ -16,8 +16,9 @@ Processing's `map(value, start, end, target_start, target_end)` is now [remap()]
 
 Processing's `get()` and `set()` functions to manipulate pixels become `get_pixels()` and `set_pixels()`, but you might want to read about `np_pixels` and [set_np_pixels()](/reference/sketch_set_np_pixels). That's because in Python, `set()` creates a [*set* data structure](https://docs.python.org/3/tutorial/datastructures.html#sets).
 
-Instead of `frameRate`, use the [frame_rate()](/reference/sketch_frame_rate) function to set a target frame rate and the [get_frame_rate()](/reference/sketch_get_frame_rate) function to find out the current frame rate (an exponential moving average). Lastly, if you used the `g` reference to the main PGraphics object, you can obtain an equivalent Py5Graphics object with [get_graphics()](/reference/sketch_get_graphics).
+Instead of `frameRate`, use the [frame_rate()](/reference/sketch_frame_rate) function to set a target frame rate and the [get_frame_rate()](/reference/sketch_get_frame_rate) function to find out the current frame rate (an exponential moving average). 
 
+For more advanced users, if you used the `g` reference to the main PGraphics object, you can obtain an equivalent Py5Graphics object with [get_graphics()](/reference/sketch_get_graphics). The `this` reference to the current sketch that must be passed to some libraries, like *PeasyCam* or *Camera3D*, can be obtained with `this = get_current_sketch()`. And lastly, if you need to terminate a sketch from its own code, to end the sketch properly use `exit_sketch()` instead of Python's `exit()`, so it won't skip the normal sketch clean up and the "exiting event" that will trigger a call to `exiting()`, if it exists, a function you can define with `def exiting():` to run some code as the sketch ends.
 
 ```{important}
 Please have a look at the [py5 Reference Summary](/reference/summary), it will help you find any missing names.
@@ -310,7 +311,7 @@ def draw():
 
 ### Global variables
 
-If a variable is *declared and initialized* (type and value are defined) at the beginning of the sketch just remove the type declaration.
+If a variable is *declared and initialized* (type and value are defined) at the beginning of the sketch, like in the example bellow `int rad = 60;`, you can remove the type declaration and semicolon, leaving just `rad = 60` (or change it to an annotated assignment, like `rad: int = 60`).
 
 Since there is no way in Python to declare a variable without making an assignment, when the variable is just declared (a type is set without *initialization*) at the beginning of the sketch, we need to find where it is assigned for the first time and add the `global variable_name` statement at the beginning of that function.
 
@@ -473,7 +474,7 @@ Camera3D camera3D;
 
 void setup() {
   size(600, 600);
-  camera3D = new VideoExport(this);
+  camera3D = new Camera3D(this);
   camera3D.setBackgroundColor(192);
 }
 ```
@@ -576,13 +577,13 @@ Arrays like `int[]`, `float[]` or `PVector[]` usually become lists in Python (so
 **Java**
 
 ```java
-ArrayList<Flag> flags; // a list of Flag de objetos
+ArrayList<Fruit> fruits; // a list of Fruit objects
 
 void setup() {
   size(400, 400); 
-  flags = new ArrayList<Flag>();
+  fruits = new ArrayList<Fruit>();
   for (int i=0; i <50; i++) {
-    flags.add(new Flag(100, 100, 12));
+    fruits.add(new Fruit(100, 100, 12));
   }
 }
 ```
@@ -590,21 +591,21 @@ void setup() {
 **Python**
 
 ```python
-flags = []  # a list of Flag de objetos
+fruits = []  # a list of Fruit objects
 
 def setup():
     size(400, 400); 
     for i in range(50):
-        flags.append(Flag(100, 100, 12))
+        fruits.append(Fruit(100, 100, 12))
 ```
 
 Or you could use a *list comprehension*:
 
 ```python
 def setup():
-    global flags
+    global fruits
     size(400, 400); 
-    flags = [Flag(100, 100, 12) for i in range(50)]
+    fruits = [Fruit(100, 100, 12) for i in range(50)]
 ```
 
 #### 2D Arrays
