@@ -57,6 +57,7 @@
 * [create_shape()](/reference/sketch_create_shape) - Used to define a new empty Py5Shape object.
 * [load_shape()](/reference/sketch_load_shape) - Loads SVG or OBJ geometry making it available as a Py5Shape object.
 * [convert_shape()](/reference/sketch_convert_shape) - Converts Python objects into Py5Shape objects.
+* [convert_cached_shape()](/reference/sketch_convert_cached_shape) - Converts Python objects into Py5Shape objects, but cache the results.
 * [shape()](/reference/sketch_shape) - Draws shapes to the display window.
 * [shape_mode()](/reference/sketch_shape_mode) - Modifies the location from which shapes draw.
 * [Py5Shape class](/reference/py5shape) - Datatype for storing shapes. Allows loading and displaying SVG and OBJ shapes.
@@ -350,6 +351,7 @@
 * [Py5Image class](https://py5coding.org/reference/py5image) - Datatype for storing images.
 * [create_image()](/reference/sketch_create_image) - Creates a new Py5Image (the datatype for storing images).
 * [convert_image()](/reference/sketch_convert_image) - Convert non-py5 image objects into Py5Image objects.
+* [convert_cached_image()](/reference/sketch_convert_cached_image) - Convert non-py5 image objects into Py5Image objects, but cache the results.
 * [create_image_from_numpy()](/reference/sketch_create_image_from_numpy) - Convert a numpy array into a Py5Image object.
 * [request_image()](/reference/sketch_request_image) - Use a Py5Promise object to load an image into a variable of type Py5Image.
 

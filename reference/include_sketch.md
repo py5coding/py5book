@@ -72,6 +72,7 @@
 
 #### Loading / Displaying
 
+* [convert_cached_image()](sketch_convert_cached_image)
 * [convert_image()](sketch_convert_image)
 * [create_image_from_numpy()](sketch_create_image_from_numpy)
 * [image()](sketch_image)
@@ -279,6 +280,7 @@
 
 ### Shape
 
+* [convert_cached_shape()](sketch_convert_cached_shape)
 * [convert_shape()](sketch_convert_shape)
 * [create_shape()](sketch_create_shape)
 * [load_shape()](sketch_load_shape)
