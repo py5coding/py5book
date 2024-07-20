@@ -16,7 +16,7 @@ kernelspec:
 
 # Welcome to py5!
 
-py5 is a new version of [Processing][processing] for Python 3.8+. The goal of py5
+py5 is a new version of [Processing][processing] for Python 3.9+. The goal of py5
 is to create a version of Processing that is
 [integrated into the Python ecosystem](/integrations/python_ecosystem_integrations).
 Built into the library are thoughtful choices about how to best get py5 to work

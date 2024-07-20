@@ -8,7 +8,7 @@
 
 [![Downloads](https://pepy.tech/badge/py5/week)](https://pepy.tech/project/py5)
 
-py5 is a new version of [Processing][processing] for Python 3.8+. The goal of py5 is to create a version of Processing that is [integrated into the Python ecosystem](https://py5coding.org/integrations/python_ecosystem_integrations.html). Built into the library are thoughtful choices about how to best get py5 to work with other popular Python libraries and tools such as [Jupyter](https://jupyter.org/), [numpy](https://numpy.org/), [shapely](https://shapely.readthedocs.io/en/stable/), [trimesh](https://trimesh.org/), [matplotlib](https://matplotlib.org/), and [Pillow](https://python-pillow.org/).
+py5 is a new version of [Processing][processing] for Python 3.9+. The goal of py5 is to create a version of Processing that is [integrated into the Python ecosystem](https://py5coding.org/integrations/python_ecosystem_integrations.html). Built into the library are thoughtful choices about how to best get py5 to work with other popular Python libraries and tools such as [Jupyter](https://jupyter.org/), [numpy](https://numpy.org/), [shapely](https://shapely.readthedocs.io/en/stable/), [trimesh](https://trimesh.org/), [matplotlib](https://matplotlib.org/), and [Pillow](https://python-pillow.org/).
 
 py5 is an excellent choice for educators looking to teach Python in the context of creative coding and is currently used in classrooms all around the world. The documentation website includes [introductory tutorials](https://py5coding.org/tutorials/intro_to_py5_and_python.html) as well as extensive [reference documentation](https://py5coding.org/reference/summary.html), complete with example code.
 
