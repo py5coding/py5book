@@ -36,6 +36,7 @@ parts:
     - file: integrations/shapely
     - file: integrations/trimesh
     - file: integrations/cairo
+    - file: integrations/cached_conversion
     - file: integrations/custom_integrations
 
   - file: tutorials/jupyter
