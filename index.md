@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.7
+    jupytext_version: 1.16.3
 kernelspec:
   display_name: py5
   language: python
@@ -62,32 +62,6 @@ run_sketch()
 Here is an animated GIF to give you an idea of what that Sketch looks like:
 
 ![index_example](images/main/index_example.gif)
-
-+++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": ["remove-cell"]}
-
-But don't settle for an animated GIF! Use the rocket ship icon at the top of
-this page to run the example on Binder, or better yet, use Live Code with Thebe
-(Thebe is somewhat experimental and does not always work). Then you will be able
-to create a [Sketch Portal](/reference/py5tools_sketch_portal) and see the
-running Sketch embedded right in this page. You'll even be able click on the
-Sketch Portal to trigger the `mouse_clicked()` event. The Sketch Portal accepts
-all of py5's keyboard and mouse events. It is fully interactive!
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
-tags: [remove-output, remove-cell]
----
-py5_tools.sketch_portal()
-```
-
-+++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": ["remove-cell"]}
-
-The ability to embed a py5 Sketch in a html page like this is one of the many
-ways py5 leverages the power of Jupyter Notebooks and is well integrated into
-the Python ecosystem.
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
