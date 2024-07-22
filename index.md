@@ -1,19 +1,3 @@
----
-jupytext:
-  formats: ipynb,md:myst
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: 0.13
-    jupytext_version: 1.16.3
-kernelspec:
-  display_name: py5
-  language: python
-  name: py5
----
-
-+++ {"editable": true, "slideshow": {"slide_type": ""}}
-
 # Welcome to py5!
 
 py5 is a new version of [Processing][processing] for Python 3.9+. The goal of py5
@@ -35,12 +19,7 @@ This website's documentation includes
 
 Here is a basic example of a py5 Sketch:
 
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
+```python
 def setup():
     size(400, 400)
     rect_mode(CENTER)
@@ -57,13 +36,9 @@ def mouse_clicked():
 run_sketch()
 ```
 
-+++ {"editable": true, "slideshow": {"slide_type": ""}}
-
 Here is an animated GIF to give you an idea of what that Sketch looks like:
 
 ![index_example](images/main/index_example.gif)
-
-+++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ## Installation
 
@@ -125,7 +100,3 @@ to reach out are:
 [jpype]: https://github.com/jpype-project/jpype
 [py5_repo]: https://github.com/py5coding/py5
 [py5generator_repo]: https://github.com/py5coding/py5generator
-
-```{code-cell} ipython3
-
-```
