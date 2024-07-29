@@ -32,7 +32,7 @@ def key_pressed(e):
 
 Return the event's timestamp. This will be measured in milliseconds.
 
-Underlying Processing method: getMillis
+Underlying Processing method: KeyEvent.getMillis
 
 ## Signatures
 
@@ -40,4 +40,4 @@ Underlying Processing method: getMillis
 get_millis() -> int
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on May 02, 2024 03:24:20am UTC

@@ -35,7 +35,7 @@ def mouse_clicked(e):
 
 Return boolean value reflecting if the Control key is down. The Control key is a modifier key and can be pressed at the same time as other keys.
 
-Underlying Processing method: isControlDown
+Underlying Processing method: MouseEvent.isControlDown
 
 ## Signatures
 
@@ -43,4 +43,4 @@ Underlying Processing method: isControlDown
 is_control_down() -> bool
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on May 02, 2024 03:24:20am UTC

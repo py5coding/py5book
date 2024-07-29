@@ -42,7 +42,7 @@ def mouse_clicked(e):
 
 Integer value used to identify which modifier keys (if any) are currently pressed. Information about the modifier keys is encoded in the integer value and can be parsed with bit masking, as shown in the example.
 
-Underlying Processing method: getModifiers
+Underlying Processing method: MouseEvent.getModifiers
 
 ## Signatures
 
@@ -50,4 +50,4 @@ Underlying Processing method: getModifiers
 get_modifiers() -> int
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on May 02, 2024 03:24:20am UTC

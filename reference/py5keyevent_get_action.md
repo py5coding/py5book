@@ -40,7 +40,7 @@ def key_typed(e):
 
 Return the key event's action. This value will always be implied by the triggered event function, but perhaps it might be useful to someone someday.
 
-Underlying Processing method: getAction
+Underlying Processing method: KeyEvent.getAction
 
 ## Signatures
 
@@ -48,4 +48,4 @@ Underlying Processing method: getAction
 get_action() -> int
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on May 02, 2024 03:24:20am UTC

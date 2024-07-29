@@ -32,7 +32,7 @@ Changing the window size will clear the drawing canvas. If you do this, the [](s
 
 This method provides the same functionality as [](py5surface_set_size) but without the need to interact directly with the [](py5surface) object.
 
-Underlying Processing method: windowResize
+Underlying Processing method: [windowResize](https://processing.org/reference/windowResize_.html)
 
 ## Signatures
 
@@ -44,4 +44,4 @@ window_resize(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on May 02, 2024 02:48:11am UTC

@@ -35,7 +35,7 @@ def key_pressed(e):
 
 Identifies if the pressed key is auto repeating, as faciliated by the computer's operating system. This method might work differently (or not at all) depending on the renderer used by the Sketch and the operating system the Sketch is run on.
 
-Underlying Processing method: isAutoRepeat
+Underlying Processing method: KeyEvent.isAutoRepeat
 
 ## Signatures
 
@@ -43,4 +43,4 @@ Underlying Processing method: isAutoRepeat
 is_auto_repeat() -> bool
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on May 02, 2024 03:24:20am UTC

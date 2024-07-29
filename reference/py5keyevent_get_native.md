@@ -36,7 +36,7 @@ Retrieve native key event object. The returned object will be a Java object and 
 
 Be aware that it is possible for the native event object to be `None`, such as when interacting with a Sketch through [](py5tools_sketch_portal).
 
-Underlying Processing method: getNative
+Underlying Processing method: KeyEvent.getNative
 
 ## Signatures
 
@@ -44,4 +44,4 @@ Underlying Processing method: getNative
 get_native() -> Any
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on May 02, 2024 03:24:20am UTC

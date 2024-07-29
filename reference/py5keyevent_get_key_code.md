@@ -42,7 +42,7 @@ def key_pressed(e):
 
 Return the key code for the key event. This method is important for key events involving coded keys such as the arrow or modifier keys. This information can also be obtained with [](sketch_key_code).
 
-Underlying Processing method: getKeyCode
+Underlying Processing method: KeyEvent.getKeyCode
 
 ## Signatures
 
@@ -50,4 +50,4 @@ Underlying Processing method: getKeyCode
 get_key_code() -> int
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on May 02, 2024 03:24:20am UTC

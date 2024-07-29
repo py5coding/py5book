@@ -39,7 +39,7 @@ Get the number of mouse clicks. This will be 1 for a single mouse click and 2 fo
 
 This method also responds to the mouse wheel. It will be 1 when the mouse wheel is rotating down and -1 when the mouse wheel is rotating up.
 
-Underlying Processing method: getCount
+Underlying Processing method: MouseEvent.getCount
 
 ## Signatures
 
@@ -47,4 +47,4 @@ Underlying Processing method: getCount
 get_count() -> int
 ```
 
-Updated on March 14, 2024 17:13:34pm UTC
+Updated on May 02, 2024 03:24:20am UTC

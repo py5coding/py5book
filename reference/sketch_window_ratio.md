@@ -48,7 +48,7 @@ When using this feature, use [](sketch_rmouse_x) and [](sketch_rmouse_y) to get 
 
 When calling this method, it is better to do so with values like `window_ratio(1280, 720)` and not `window_ratio(16, 9)`. The aspect ratio is the same for both but the latter might result in floating point accuracy issues.
 
-Underlying Processing method: windowRatio
+Underlying Processing method: [windowRatio](https://processing.org/reference/windowRatio_.html)
 
 ## Signatures
 
@@ -60,4 +60,4 @@ window_ratio(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on May 02, 2024 02:48:11am UTC

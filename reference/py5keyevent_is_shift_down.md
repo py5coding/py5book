@@ -35,7 +35,7 @@ def key_pressed(e):
 
 Return boolean value reflecting if the Shift key is down. The Shift key is a modifier key and can be pressed at the same time as other keys.
 
-Underlying Processing method: isShiftDown
+Underlying Processing method: KeyEvent.isShiftDown
 
 ## Signatures
 
@@ -43,4 +43,4 @@ Underlying Processing method: isShiftDown
 is_shift_down() -> bool
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on May 02, 2024 03:24:20am UTC

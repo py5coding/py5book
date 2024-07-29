@@ -52,7 +52,7 @@ Set the Sketch's window location. Calling this repeatedly from the `draw()` func
 
 This method provides the same functionality as [](py5surface_set_location) but without the need to interact directly with the [](py5surface) object.
 
-Underlying Processing method: windowMove
+Underlying Processing method: [windowMove](https://processing.org/reference/windowMove_.html)
 
 ## Signatures
 
@@ -64,4 +64,4 @@ window_move(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on May 02, 2024 02:48:11am UTC

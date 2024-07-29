@@ -34,7 +34,7 @@ def key_pressed(e):
 
 Return the key for the key event. If the value is `CODED`, use [](py5keyevent_get_key_code) instead. This information can also be obtained with [](sketch_key).
 
-Underlying Processing method: getKey
+Underlying Processing method: KeyEvent.getKey
 
 ## Signatures
 
@@ -42,4 +42,4 @@ Underlying Processing method: getKey
 get_key() -> chr
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on May 02, 2024 03:24:20am UTC

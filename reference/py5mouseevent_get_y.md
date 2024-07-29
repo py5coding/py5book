@@ -32,7 +32,7 @@ def mouse_clicked(e):
 
 Return the y position of the mouse at the time of this mouse event. This information can also be obtained with [](sketch_mouse_y).
 
-Underlying Processing method: getY
+Underlying Processing method: MouseEvent.getY
 
 ## Signatures
 
@@ -40,4 +40,4 @@ Underlying Processing method: getY
 get_y() -> int
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on May 02, 2024 03:24:20am UTC
