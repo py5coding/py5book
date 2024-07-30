@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.7
+    jupytext_version: 1.16.3
 kernelspec:
   display_name: py5bot
   language: python
@@ -84,13 +84,13 @@ You can define your own functions. Any functions will be local to only one cell,
 ```{code-cell} ipython3
 size(200, 200)
 
-def draw_random_circle():
+def random_circle():
     x = random_int(width)
     y = random_int(height)
     circle(x, y, random_int(25))
     
 for _ in range(20):
-    draw_random_circle()
+    random_circle()
 ```
 
 ## Error Message Reporting
