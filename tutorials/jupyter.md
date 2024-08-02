@@ -32,8 +32,6 @@ It is recommended that you install both of py5's Jupyter kernels (py5 and py5bot
 
 A minimal interactive example might look like this. As you evaluate the cell below a window with your running sketch should open, and moving the mouse over it should produce colored square trails that change color when you click the mouse button.
 
-![](../images/main/index_example.gif)
-
 ```python
 import py5
 
