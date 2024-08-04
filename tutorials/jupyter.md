@@ -6,7 +6,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.16.4
+      jupytext_version: 1.16.3
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -27,7 +27,7 @@ It is recommended that you install both of py5's Jupyter kernels (py5 and py5bot
 
 ## Getting Started
 
-
+<!-- #region -->
 ### Using the standard Python 3 (ipykernel) kernel
 
 A minimal interactive example might look like this. As you evaluate the cell below a window with your running sketch should open, and moving the mouse over it should produce colored square trails that change color when you click the mouse button.
@@ -50,9 +50,11 @@ def mouse_clicked():
 
 py5.run_sketch()
 ```
+<!-- #endregion -->
 
-> It should look something like this GIF animation:<br>
-> ![](../images/main/index_example.gif)
+It should look something like this GIF animation:<br>
+
+![](../images/main/index_example.gif)
 
 <!-- #region -->
 ### Using the py5 kernel
@@ -76,3 +78,7 @@ def mouse_clicked():
 run_sketch()
 ```
 <!-- #endregion -->
+
+```python
+
+```
