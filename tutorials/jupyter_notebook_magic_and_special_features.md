@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.7
+    jupytext_version: 1.16.3
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -467,24 +467,6 @@ print('the sketch is running!')
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 If you are running this notebook locally, you will see a new window open for the running Sketch. If you are running this through Binder, or possibly using the documentation website's Live Code feature (see the rocket ship icon at the top of the page), the Sketch is running on a server somewhere in the cloud. In that case, to see what the Sketch is doing you will need to create some screenshots and embed them in the notebook.
-
-+++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": ["remove-cell"]}
-
-If you are running this notebook locally, you will see a new window open for the running Sketch. If you are running this through Binder, or possibly using the documentation website's Live Code feature (see the rocket ship icon at the top of the page), the Sketch is running on a server somewhere in the cloud. In that case, to see the Sketch you will need to create a Sketch Portal using [py5tools.sketch_portal()](/reference/py5tools_sketch_portal). This will create what is effectively a view into what is being displayed on that Sketch window running in the cloud. To be clear, although you will see a live animation in the Sketch Portal, the Sketch is not actually running in your browser. It’s kind of like when you watch a live television program on your TV. The live events are taking place somewhere else, but images of the events are being broadcast to your television.
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
-tags: [remove-output, remove-cell]
----
-py5_tools.sketch_portal()
-```
-
-+++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": ["remove-cell"]}
-
-Click on the Sketch Portal to make the fill color change. The Sketch Portal will respond to all of py5's keyboard and mouse events. It is fully interactive!
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 

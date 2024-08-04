@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.7
+    jupytext_version: 1.16.3
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -133,27 +133,3 @@ time.sleep(3)
 
 py5_tools.screenshot(hook_post_draw=True)
 ```
-
-+++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": ["remove-cell"]}
-
-## Open the py5 Sketch Portal
-
-If you are running this through Binder, or possibly using the documentation website's Live Code feature (see the rocket ship icon at the top of the page), the Sketch is running on a server somewhere in the cloud. In that case, to see the Sketch you will need to create a Sketch Portal using [py5tools.sketch_portal()](/reference/py5tools_sketch_portal). This will create what is effectively a view into what is being displayed on that Sketch window running in the cloud. To be clear, although you will see a live animation in the Sketch Portal, the Sketch is not actually running in your browser. It’s kind of like when you watch a live television program on your TV. The live events are taking place somewhere else, but images of the events are being broadcast to your television.
-
-Since Camera3D works by calling the `draw` method multiple times and creating a composite image, the py5 Sketch Portal needs to run after the composite image has been created. To do that, we will use the dummy `post_draw` method and the `hook_post_draw` parameter.
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
-tags: [remove-output, remove-cell]
----
-py5_tools.sketch_portal(hook_post_draw=True)
-```
-
-+++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": ["remove-cell"]}
-
-## Next Steps for Jupyter Lab Users
-
-If you are using Jupyter Lab, after executing the previous cell, try right clicking in the output area and selecting `Create New View for Output`. This will create a new panel just for the Sketch Portal. Creating a `New Console for Notebook` and creating a portal there works well also.
