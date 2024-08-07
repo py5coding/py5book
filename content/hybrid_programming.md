@@ -50,11 +50,11 @@ utils = MyJavaTools()
 
 ## Hybrid Programming Support in py5
 
-The py5 installation comes with the `py5utils` command line utility for creating a template for Hybrid Programming.
+The py5 installation comes with the `py5-utils` command line utility for creating a template for Hybrid Programming.
 
 ```bash
-$ py5utils -h
-usage: py5utils [-h] [-o OUTPUT_DIR]
+$ py5-utils -h
+usage: py5-utils [-h] [-o OUTPUT_DIR]
 
 Generate Py5Utilities framework
 
@@ -67,7 +67,7 @@ optional arguments:
 Running the utility creates some files and directories:
 
 ```bash
-$ py5utils
+$ py5-utils
 $ tree .
 .
 ├── jars
@@ -160,7 +160,7 @@ py5.run_sketch()
 
 On my computer, the frame rate increases to 43 fps. Note we cannot use [](/reference/sketch_vertices) for this because each point has a random color.
 
-Now let's use Hybrid Programming to make this even faster. Use the `py5utils` command line tool to create the template files and then add the following Java code to `Py5Utilities.java`:
+Now let's use Hybrid Programming to make this even faster. Use the `py5-utils` command line tool to create the template files and then add the following Java code to `Py5Utilities.java`:
 
 ```java
 package py5utils;

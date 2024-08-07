@@ -180,7 +180,7 @@ Look for `py5/jars/py5.jar` in the output.
 
 You always want to compile your code with the same version of py5.jar that py5 will use when it runs your code.
 
-For a new project, you can use the `py5utils` command line tool to create working project files for you.
+For a new project, you can use the `py5-utils` command line tool to create working project files for you.
 
 ### 2. Inherit from `SketchBase`
 
