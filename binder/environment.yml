@@ -11,4 +11,4 @@ dependencies:
   - pandas
   - pip
   - pip:
-    - py5[jupyter]
+    - py5[jupyter,extras]
