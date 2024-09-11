@@ -6,6 +6,11 @@
 * [get_classpath()](py5tools_get_classpath): Get the Java classpath.
 * [get_jvm_debug_info()](py5tools_get_jvm_debug_info): Get Java Virtual Machine debug information.
 * [is_jvm_running()](py5tools_is_jvm_running): Determine if the Java Virtual Machine (JVM) is or is not running.
+* [live_coding.activate_live_coding()](py5tools_live_coding_activate_live_coding): The documentation for this field or method has not yet been written.
+* [live_coding.archive_code()](py5tools_live_coding_archive_code): The documentation for this field or method has not yet been written.
+* [live_coding.backup()](py5tools_live_coding_backup): The documentation for this field or method has not yet been written.
+* [live_coding.get_update_count()](py5tools_live_coding_get_update_count): The documentation for this field or method has not yet been written.
+* [live_coding.screenshot()](py5tools_live_coding_screenshot): The documentation for this field or method has not yet been written.
 * [offline_frame_processing()](py5tools_offline_frame_processing): Process Sketch frames in a separate thread that will minimize the performance impact on the Sketch's main animation thread.
 * [register_processing_mode_key()](py5tools_register_processing_mode_key): Register a callable or module when programming in py5's Processing Mode.
 * [save_frames()](py5tools_save_frames): Save a running Sketch's frames to a directory.
