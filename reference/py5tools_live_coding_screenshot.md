@@ -25,7 +25,7 @@ py5_tools.live_coding.copy_code("version_%H%M%S")
 
 Create a screenshot of the current Sketch window. The screenshot image will be saved to the archive directory. By default, this is an `archive` subdirectory under the Sketch code's current working directory.
 
-If the `screenshot_name` parameter contains date format codes, the string will be formatted with the current timestamp. If `screenshot_name` is omitted, it will default to your filename stem followed by `"_%Y%m%d_%H%M%S"`.
+If the `screenshot_name` parameter contains date format codes, the string will be formatted with the current timestamp. If `screenshot_name` is omitted, it will default to your filename stem followed by `"_%Y%m%d_%H%M%S"`. If you are using this function through a Jupyter Notebook, there is no useable filename so it will default to `"screenshot_%Y%m%d_%H%M%S"`.
 
 This function will save PNG images with the appropriate filename suffix if `screenshot_name` does not have a suffix. It won't overwrite an existing file if the file it tries to write to already exists.
 
@@ -43,4 +43,4 @@ screenshot(
 ) -> None
 ```
 
-Updated on September 14, 2024 20:36:29pm UTC
+Updated on September 15, 2024 12:12:36pm UTC
