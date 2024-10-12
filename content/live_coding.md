@@ -40,7 +40,10 @@ py5.run_sketch()
 
 The ultimate goal of Live Coding is for you to first do your development and experimenting with `py5-live-coding`. Once your Sketch works as you would like, you should be able to run the same exact code from the terminal with the `python` interpreter and get the exact same results. There are a few places where this is impossible, but these are relatively minor and understandable.
 
-Here are changes you can make to the above example Sketch that Live Coding can handle:
+Here are example changes you can make to the above example Sketch that Live Coding can handle:
+
+Live Coding can handle code with errors. For example:
+
 
 ### Changes Live Coding Cannot Handle
 
