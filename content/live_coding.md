@@ -38,11 +38,11 @@ py5.run_sketch()
 
 ### Changes Live Coding Can Handle
 
-The ultimate goal of Live Coding is for you to first do your development and experimenting with `py5-live-coding`. Once your Sketch works as you would like, you should be able to run the same exact code from the terminal with the `python` interpreter and get the exact same results. There are a few places where this is impossible, but the limitations are relatively minor and understandable.
+The ultimate goal of Live Coding is for you to first use it to do your development and experimenting. Once your Sketch works as you would like, you should be able to run the same exact code without Live Coding and get the exact same results. There are a few places where this is impossible, but the limitations are relatively minor and understandable.
 
 Here are example changes you can make to the above example Sketch that Live Coding can handle:
 
-Live Coding can also handle Python code that throws Exceptions or contains syntax errors. It will not (should not!) ever crash. Exceptions and syntax errors will be reported to the terminal. For example, if we edit the [](/reference/sketch_circle) call to have two parameters instead of three, we will see the following printed to the terminal:
+Live Coding can also handle Python code that throws Exceptions or contains syntax errors. It will not (should not!) ever crash. Exceptions and syntax errors will be reported to the terminal or Jupyter Notebook. For example, if we edit the [](/reference/sketch_circle) call to have two parameters instead of three, we will see the following:
 
 ### Changes Live Coding Cannot Handle
 
