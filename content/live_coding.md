@@ -8,7 +8,7 @@ This feature is available for coders who use `*.py` files and coders who use Jup
 
 ## Live Coding Overview
 
-Before explaining in detail how to use Live Coding, it would be best to first delineate what it can and cannot handle with a concrete example.
+Before explaining in detail how to use Live Coding, it would be best to first use a concrete example to delineate what Live Coding can and cannot do.
 
 Consider the following Python code:
 
@@ -38,12 +38,11 @@ py5.run_sketch()
 
 ### Changes Live Coding Can Handle
 
-The ultimate goal of Live Coding is for you to first do your development and experimenting with `py5-live-coding`. Once your Sketch works as you would like, you should be able to run the same exact code from the terminal with the `python` interpreter and get the exact same results. There are a few places where this is impossible, but these are relatively minor and understandable.
+The ultimate goal of Live Coding is for you to first do your development and experimenting with `py5-live-coding`. Once your Sketch works as you would like, you should be able to run the same exact code from the terminal with the `python` interpreter and get the exact same results. There are a few places where this is impossible, but the limitations are relatively minor and understandable.
 
 Here are example changes you can make to the above example Sketch that Live Coding can handle:
 
-Live Coding can handle code with errors. For example:
-
+Live Coding can also handle Python code that throws Exceptions or contains syntax errors. It will not (should not!) ever crash. Exceptions and syntax errors will be reported to the terminal. For example, if we edit the [](/reference/sketch_circle) call to have two parameters instead of three, we will see the following printed to the terminal:
 
 ### Changes Live Coding Cannot Handle
 
