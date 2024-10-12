@@ -6,6 +6,40 @@ The intended purpose of this is to help you quickly write py5 code. In particula
 
 This feature is available for coders who use `*.py` files and coders who use Jupyter Notebooks.
 
+## Live Coding Overview
+
+Before explaining in detail how to use Live Coding, it would be best to first articulate what it can and cannot handle with a concrete example.
+
+Consider the following Python code:
+
+```python
+import numpy as np
+
+import py5
+
+
+def setup():
+    py5.size(400, 400, py5.P2D)
+    py5.smooth(4)
+
+    py5.stroke("red")
+    py5.stroke_weight(2)
+
+    py5.rect(50, 50, py5.width - 50, py5.height - 50)
+
+
+def draw():
+    rand_x = py5.width * np.random.rand()
+    rand_y = py5.height * np.random.rand()
+    py5.circle(rand_x, rand_y, 20)
+
+py5.run_sketch()
+```
+
+### Changes Live Coding Can Handle
+
+### Changes Live Coding Cannot Handle
+
 ## Live Coding in a *.py File
 
 The standard way of using the Live Coding feature is to write your code using your favorite editor. In a terminal, run the code with the `py5-live-coding` command line tool, like so:
