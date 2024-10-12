@@ -8,7 +8,7 @@ This feature is available for coders who use `*.py` files and coders who use Jup
 
 ## Live Coding Overview
 
-Before explaining in detail how to use Live Coding, it would be best to first articulate what it can and cannot handle with a concrete example.
+Before explaining in detail how to use Live Coding, it would be best to first delineate what it can and cannot handle with a concrete example.
 
 Consider the following Python code:
 
@@ -38,7 +38,13 @@ py5.run_sketch()
 
 ### Changes Live Coding Can Handle
 
+The ultimate goal of Live Coding is for you to first do your development and experimenting with `py5-live-coding`. Once your Sketch works as you would like, you should be able to run the same exact code from the terminal with the `python` interpreter and get the exact same results. There are a few places where this is impossible, but these are relatively minor and understandable.
+
+Here are changes you can make to the above example Sketch that Live Coding can handle:
+
 ### Changes Live Coding Cannot Handle
+
+Here are changes that Live Coding cannot handle:
 
 ## Live Coding in a *.py File
 
