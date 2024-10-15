@@ -6,11 +6,13 @@ The intended purpose of this is to help you quickly write py5 code. In particula
 
 This feature is available for coders who use `*.py` files and coders who use Jupyter Notebooks.
 
+TODO: say something about module mode
+
 ## Live Coding Overview
 
-Before explaining in detail how to use Live Coding, it would be best to first use a concrete example to delineate what Live Coding can and cannot do.
+Before explaining in detail how to use Live Coding, it would be best to first use a concrete example to delineate what Live Coding can and cannot handle.
 
-Consider the following Python code:
+Consider the following Python code for the below discussion.
 
 ```python
 import numpy as np
@@ -25,13 +27,14 @@ def setup():
     py5.stroke("red")
     py5.stroke_weight(2)
 
-    py5.rect(50, 50, py5.width - 50, py5.height - 50)
+    py5.rect(50, 50, py5.width - 100, py5.height - 100)
 
 
 def draw():
     rand_x = py5.width * np.random.rand()
     rand_y = py5.height * np.random.rand()
     py5.circle(rand_x, rand_y, 20)
+
 
 py5.run_sketch()
 ```
@@ -40,13 +43,50 @@ py5.run_sketch()
 
 The ultimate goal of Live Coding is for you to first use it to do your development and experimenting. Once your Sketch works as you would like, you should be able to run the same exact code without Live Coding and get the exact same results. There are a few places where this is impossible, but the limitations are relatively minor and understandable.
 
+Every time the Sketch code is updated, either by saving the *.py file in your editor or executing a Jupyter Notebook cell, the Sketch will (by default) be reset. The `setup()` function will be executed, [](/reference/sketch_frame_count) and [](/reference/sketch_millis) will be set to zero, and any calls to methods such as [](/reference/sketch_fill) to [](/reference/sketch_color_mode) will be undone. The Sketch should behave the same as a new Sketch window. If you can find a situation where this is not the case (that is not a limitation already documented on this page), please [open an issue on GitHub](https://github.com/py5coding/py5generator/issues).
+
 Here are example changes you can make to the above example Sketch that Live Coding can handle:
 
-Live Coding can also handle Python code that throws Exceptions or contains syntax errors. It will not (should not!) ever crash. Exceptions and syntax errors will be reported to the terminal or Jupyter Notebook. For example, if we edit the [](/reference/sketch_circle) call to have two parameters instead of three, we will see the following:
+* If the calls to [](/reference/sketch_stroke) or [](/reference/sketch_stroke_weight) are removed, the Sketch will reset the stroke color to black and the stroke weight to 1.
+* If the `draw()` function is commented out, it will be forgotten and the Sketch will only have a `setup()` function. There will be more animation. If the `draw()` function is later uncommented, the animation will resume.
+
+There is the option for Live Coding to not reset the Sketch or call `setup()` when the code is updated. This is discussed later in this documentation.
+
+#### Exceptions and Syntax Errors
+
+Live Coding can also handle Python code that throws Exceptions or contains syntax errors. It will not (should not!) ever crash. Exceptions and syntax errors will be reported to the terminal or Jupyter Notebook. For example, if we incorrectly modify the [](/reference/sketch_circle) call to add a fourth parameter, we will see the following:
+
+```txt
+********************************************************************************
+py5 encountered an error in your code:
+
+File "live_coding_documentation.py", line 19, in draw
+    16   def draw():
+    17       rand_x = py5.width * np.random.rand()
+    18       rand_y = py5.height * np.random.rand()
+--> 19       py5.circle(rand_x, rand_y, 20, "fourth parameter")
+    ..................................................
+     rand_x = 93.56332115800896
+     rand_y = 324.43421014753284
+    ..................................................
+
+TypeError: circle() takes 3 positional arguments but 4 were given
+********************************************************************************
+```
+
+The Sketch will pause while it is in this error state. You can then correct the error and update the Sketch code. When the error is resolved, Sketch execution will resume.
+
+Properly hangled Exceptions need not be related to py5 methods or functions. Live Coding will also handle syntax errors and code parsing problems such as incorrect indentation. In all cases, it should pause and give you a chance to correct the problem before resuming Sketch execution.
 
 ### Changes Live Coding Cannot Handle
 
 Here are changes that Live Coding cannot handle:
+
+* Changes to [](/reference/sketch_size) or [](/reference/sketch_full_screen) are not possible. The Sketch window cannot change size and the renderer cannot be changed. If you were to modify those calls in your code, the changes would be ignored. You'd need to exit the Sketch and restart Live Coding if you want the changes to take effect.
+* Changes to [](/reference/sketch_smooth), [](/reference/sketch_no_smooth), and [](/reference/sketch_pixel_density) are not possible. If you were to modify those calls in your code, the changes would be ignored.
+* Calls to [](/reference/py5tools_add_classpath), [](/reference/py5tools_add_jars), and [](/reference/py5tools_add_options) are not possible and will throw an exception. These functions can only be called before the Java Virtual Machine starts. The Live Coding feature will start the Java Virtual Machine before even looking at your code for the first time. Therefore, they are not compatible with Live Coding.
+
+There are probably other ways to trip up Live Coding. If you find a new way to do this, we will either look for a fix or document the limitation here.
 
 ## Live Coding in a *.py File
 
