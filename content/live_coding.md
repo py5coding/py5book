@@ -122,7 +122,7 @@ The `py5-live-coding` command has other optional arguments, explained below.
 
 ### Optional Arguments
 
-View the optional arguments with the `-h` argument.
+View the optional arguments with the `-h` help argument.
 
 ```bash
 $ py5-live-coding -h
@@ -155,7 +155,7 @@ It might be useful to you to monitor the Sketch's frame rate. This will show you
 
 You may also want to quickly create screenshots of your Sketch or create copies of the current code. The optional keyboard shortcuts, activated with the `-k` argument, can help you with this. When activated, you can type `Shift-S` in the Sketch window to save a current screenshot to the archive directory. Create a backup copy of your code in the archive directory with the keyboard shortcut `Shift-C`. If you have used the `-d` argument to instruct Live Coding to watch all files in a directory for changes, the backup copy of your code will be a zip file of all of the files in the directory. If you want to create both a screenshot and a backup copy of the code, use the keyboard shortcut `Shift-A`.
 
-By default the archive directory is in an `archive` subdirectory. Change this to something else with the `-a` parameter.
+By default the archive directory for screenshots and code backups is the `archive` subdirectory. Change this to something else with the `-a` parameter.
 
 If the Sketch is in an error state, it will not create any screenshots or backups of the code.
 
