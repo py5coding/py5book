@@ -173,7 +173,7 @@ That's it. Don't call [](/reference/sketch_run_sketch). The above command will s
 
 ## Options
 
-Here is the [](/reference/py5tools_live_coding_activate) function's signature and docstring:
+Here is the [](/reference/py5tools_live_coding_activate) function's signature:
 
 ```txt
 py5_tools.live_coding.activate(
@@ -183,48 +183,11 @@ py5_tools.live_coding.activate(
     activate_keyboard_shortcuts: bool = False,
     archive_dir: str = 'archive',
 )
-Docstring:
-Start live coding from a Jupyter Notebook.
-
-Parameters
-----------
-
-activate_keyboard_shortcuts: bool = False
-    activate keyboard shortcuts for creating screenshots and code archives
-
-always_on_top: bool = True
-    keep Sketch window on top of other windows
-
-always_rerun_setup: bool = True
-    always rerun setup() function when updating code
-
-archive_dir: str = 'archive'
-    directory to save screenshots
-
-Notes
------
-
-Start live coding from a Jupyter Notebook. This function should only be called
-from Jupyter. This will start a Sketch using the code in the executed notebook
-cells. As more notebook cells are executed, this will keep the Sketch updated
-with the most recently executed code.
-
-The `always_on_top` parameter will keep the Sketch window on top, above your
-browser window. This will let you write code in the notebook without interfering
-with the Sketch window.
-
-The `always_rerun_setup` will rerun the Sketch's current `setup()` function each
-time a notebook cell is updated, even if the `setup()` function did not change.
-Be aware this update feature will be triggered even if the executed code has
-nothing to do with py5.
-
-The `activate_keyboard_shortcuts` will activate convenient keyboard shortcuts
-for quickly creating screenshots and code achives. These will be saved to an
-`archive` subdirectory, unless if the `archive_dir` parameter sets the save
-directory to another location.
-
-Look at the online "Live Coding" documentation to learn more.
 ```
+
+This function should only be called from within a Jupyter Notebook.
+
+The three boolean parameters, `always_rerun_setup`, `always_on_top`, and `activate_keyboard_shortcuts` correspond to the terminal command `py5-live-coding`'s optional parameters, and modify the Live Coding's behavior in the same way. The `archive` directory is by default the `archive` subdirectory relative to the Jupyter Notebook. Creating a backup copy of the Jupyter Notebook is not possible so you can only create screenshots with the keyboard shortcuts.
 
 TODO: fix achives in docstring
 
