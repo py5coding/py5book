@@ -1,10 +1,10 @@
 # Live Coding
 
-Live Coding is a useful feature to help facilitate the rapid prototyping of ideas. It will enable you to repeatedly change the code of a running Sketch without needing to repeatedly exit a Sketch and call [](/reference/sketch_run_sketch) to start a new one.
+Live Coding is a powerful feature to help facilitate the rapid prototyping of ideas. It will enable you to repeatedly change the code of a running Sketch without needing to repeatedly exit a Sketch and call [](/reference/sketch_run_sketch) to start a new one.
 
 The intended purpose of this is to help you quickly write py5 code. In particular, the py5 folks who have daily coding practices would benefit from Live Coding. It is useful for making small adjustments to working py5 code. It could also be used for activities such as Live Coding performances.
 
-This feature is available for py5 in module mode only. It works for code written in `*.py` files and Jupyter Notebooks.
+This functionality is available for py5 in module mode only. It works for code written in `*.py` files and Jupyter Notebooks.
 
 ## Live Coding Overview
 
@@ -82,7 +82,7 @@ TypeError: circle() takes 3 positional arguments but 4 were given
 
 The Sketch will pause while it is in this error state. You can then correct the error and update the Sketch code. When the error is resolved, Sketch execution will resume.
 
-Properly hangled Exceptions need not be related to py5 methods or functions. Live Coding will also handle syntax errors and code parsing problems such as incorrect indentation. In all cases, it should pause and give you a chance to correct the problem before resuming Sketch execution.
+Properly handled Exceptions need not be related to py5 methods or functions. Live Coding will also handle syntax errors and code parsing problems such as incorrect indentation. In all cases, it should pause and give you a chance to correct the problem before resuming Sketch execution.
 
 ### Changes Live Coding Cannot Handle
 
@@ -91,14 +91,14 @@ Here are changes that Live Coding cannot handle:
 * Changes to [](/reference/sketch_size) or [](/reference/sketch_full_screen) are not possible. The Sketch window cannot change size and the renderer cannot be changed. If you were to modify those calls in your code, the changes would be ignored. You'd need to exit the Sketch and restart Live Coding if you want the changes to take effect.
 * Changes to [](/reference/sketch_smooth), [](/reference/sketch_no_smooth), and [](/reference/sketch_pixel_density) are not possible. If you were to modify those calls in your code, the changes would be ignored. You'd again need to exit the Sketch and restart Live Coding.
 * If you write a `settings()` function, don't make changes to it. There is some [](content-user_functions-settings-magic) that allows you to write just a `setup()` function instead of needing to write both `settings()` and `setup()`. The magic behind that could get tripped up if you fiddle with this while using Live Coding.
-* Any calls to [](/reference/py5tools_add_classpath), [](/reference/py5tools_add_jars), and [](/reference/py5tools_add_options) are not possible and will throw an exception. These functions can only be called before the Java Virtual Machine starts. The Live Coding feature will start the Java Virtual Machine before even looking at your code for the first time. Therefore, they are not compatible with Live Coding.
+* Any calls to [](/reference/py5tools_add_classpath), [](/reference/py5tools_add_jars), and [](/reference/py5tools_add_options) are not possible and will throw an exception. These functions can only be called before the Java Virtual Machine starts. Live Coding will start the Java Virtual Machine before even looking at your code for the first time. Therefore, they are not compatible with Live Coding.
 * Use of py5's [](/content/hybrid_programming) is possible, but you recompile any Jar files, you'll need to exit the Sketch and restart Live Coding to see the changes.
 
 There are probably a few other edge cases that Live Coding cannot handle. If you find something, please [open an issue on GitHub](https://github.com/py5coding/py5generator/issues). We will either look for a fix or document the limitation here.
 
 ## Live Coding in a *.py File
 
-The standard way of using the Live Coding feature is to write your code using your favorite editor. In a terminal, run the code with the `py5-live-coding` command line tool, like so:
+The standard way of using Live Coding is to write your code in a *.py file using your favorite editor. In a terminal, run the code with the `py5-live-coding` command line tool, like so:
 
 ```bash
 py5-live-coding experiment.py
@@ -163,15 +163,70 @@ Finally, the `-k` keyboard shortcuts argument also enables the keyboard shortcut
 
 ## Live Coding in a Jupyter Notebook
 
-Very similar to above
+Live Coding with a Jupyter Notebook is very similar to Live Coding in a *.py file. You'll first write your initial py5 code in a few notebook cells. Next, activate Live Coding with the [](/reference/py5tools_live_coding_activate) function, like so:
 
-Launch with py5_tools.live_coding.activate()...
+```python
+py5_tools.live_coding.activate()
+```
 
-Re-execute cells
-
-Optional parameters from activate function
+That's it. Don't call [](/reference/sketch_run_sketch). The above command will start Live Coding and open the Sketch window. Each time you execute a Jupyter Notebook cell, the Sketch code will update. Unlike Live Coding in a *.py file, saving the Jupyter Notebook does not update the Sketch. Live Coding is syncing the Sketch code with the executed py5 code in the Jupyter Notebook.
 
 ## Options
+
+Here is the [](/reference/py5tools_live_coding_activate) function's signature and docstring:
+
+```txt
+py5_tools.live_coding.activate(
+    *,
+    always_rerun_setup: bool = True,
+    always_on_top: bool = True,
+    activate_keyboard_shortcuts: bool = False,
+    archive_dir: str = 'archive',
+)
+Docstring:
+Start live coding from a Jupyter Notebook.
+
+Parameters
+----------
+
+activate_keyboard_shortcuts: bool = False
+    activate keyboard shortcuts for creating screenshots and code archives
+
+always_on_top: bool = True
+    keep Sketch window on top of other windows
+
+always_rerun_setup: bool = True
+    always rerun setup() function when updating code
+
+archive_dir: str = 'archive'
+    directory to save screenshots
+
+Notes
+-----
+
+Start live coding from a Jupyter Notebook. This function should only be called
+from Jupyter. This will start a Sketch using the code in the executed notebook
+cells. As more notebook cells are executed, this will keep the Sketch updated
+with the most recently executed code.
+
+The `always_on_top` parameter will keep the Sketch window on top, above your
+browser window. This will let you write code in the notebook without interfering
+with the Sketch window.
+
+The `always_rerun_setup` will rerun the Sketch's current `setup()` function each
+time a notebook cell is updated, even if the `setup()` function did not change.
+Be aware this update feature will be triggered even if the executed code has
+nothing to do with py5.
+
+The `activate_keyboard_shortcuts` will activate convenient keyboard shortcuts
+for quickly creating screenshots and code achives. These will be saved to an
+`archive` subdirectory, unless if the `archive_dir` parameter sets the save
+directory to another location.
+
+Look at the online "Live Coding" documentation to learn more.
+```
+
+TODO: fix achives in docstring
 
 Why have this section?
 
