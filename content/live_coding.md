@@ -8,7 +8,7 @@ This feature is available for py5 in module mode only. It works for code written
 
 ## Live Coding Overview
 
-Before explaining in detail how to use Live Coding, it would be best to first use a concrete example to delineate what Live Coding can and cannot handle.
+Before explaining in detail how to use Live Coding, it would be best to first use a concrete example to articulate what Live Coding can and cannot handle.
 
 Consider the following Python code for the below discussion.
 
@@ -54,10 +54,9 @@ Here are example changes you can make to the above Sketch and how Live Coding wi
 * If `import numpy as np` is removed, the numpy library will no longer be available and the calls to `np.random.rand()` will throw exceptions. You will need to either replace the numpy import or re-write that code to use py5's builtin methods such as [](/reference/sketch_random).
 * If you added [mouse](/content/user_functions#key-events) or [key](/content/user_functions#mouse-events) event functions such as `key_pressed()` or `mouse_clicked()`, the Sketch would start responding to mouse and key events. If those functions are later removed, the Sketch would stop responding to those events.
 
-There is the option for Live Coding to not reset the Sketch or call `setup()` when the code is updated. This is discussed later in this documentation.
+There is the option for Live Coding to not reset the Sketch and not call `setup()` when the code is updated. This is discussed later in this documentation.
 
 The example code does not use shaders or make any calls to [](/reference/sketch_hint), but if it did, these would also be reset.
-
 
 #### Exceptions and Syntax Errors
 
@@ -148,9 +147,19 @@ optional arguments:
                         don't keep sketch on top of other windows
 ```
 
-By default, Live Coding will use [](/reference/py5surface_set_always_on_top) to keep the Sketch window on top of other windows. This is useful when you want to type in your editor without forcing the Sketch to move behind the editor. This is particularly useful if you are coding on a laptop and your editor is in fullscreen mode. If for some reason you don't want the Sketch window to always be on top, use the `-t` argument.
+By default, Live Coding will use [](/reference/py5surface_set_always_on_top) to keep the Sketch window on top of other windows. This is useful when you want to write code in your editor without forcing the Sketch to move behind the editor. This is particularly useful if you are coding on a laptop and your editor is in fullscreen mode. If for some reason you don't want the Sketch window to always be on top, use the `-t` argument.
 
 Similarly, Live Coding will re-execute your `setup()` function every time the Sketch is reset. If you don't need or want it to do that, use the `-s` argument.
+
+It might be useful to you to monitor the Sketch's frame rate. This will show you how your code changes are impacting the Sketch's performance. To use this feature, use the `-f` argument. The Sketch's running frame rate will then appear in the terminal.
+
+You may also want to quickly create screenshots of your Sketch or create copies of the current code. The optional keyboard shortcuts, activated with the `-k` argument, can help you with this. When activated, you can type `Shift-S` in the Sketch window to save a current screenshot to the archive directory. Create a backup copy of your code in the archive directory with the keyboard shortcut `Shift-C`. If you have used the `-d` argument to instruct Live Coding to watch all files in a directory for changes, the backup copy of your code will be a zip file of all of the files in the directory. If you want to create both a screenshot and a backup copy of the code, use the keyboard shortcut `Shift-A`.
+
+By default the archive directory is in an `archive` subdirectory. Change this to something else with the `-a` parameter.
+
+If the Sketch is in an error state, it will not create any screenshots or backups of the code.
+
+Finally, the `-k` keyboard shortcuts argument also enables the keyboard shortcut `Shift-R` to instruct the Sketch to immediately re-execute the `setup()` function. This could be especially useful if you've used the `-s` argument to disable automatic execution of the `setup()` function when the Sketch is reset due to a code change.
 
 ## Live Coding in a Jupyter Notebook
 
