@@ -124,7 +124,7 @@ The `py5-live-coding` command has other optional arguments, explained below.
 
 View the optional arguments with the `-h` help argument.
 
-```bash
+```txt
 $ py5-live-coding -h
 usage: py5-live-coding [-h] [-a ARCHIVE_DIR] [-d] [-f] [-k] [-s] [-t] sketch_path
 
@@ -175,7 +175,7 @@ That's it. Don't call [](/reference/sketch_run_sketch). The above command will s
 
 Here is the [](/reference/py5tools_live_coding_activate) function's signature:
 
-```txt
+```python
 py5_tools.live_coding.activate(
     *,
     always_rerun_setup: bool = True,
@@ -187,7 +187,7 @@ py5_tools.live_coding.activate(
 
 This function should only be called from within a Jupyter Notebook.
 
-The three boolean arguments, `always_rerun_setup`, `always_on_top`, and `activate_keyboard_shortcuts` correspond to the terminal command `py5-live-coding`'s optional parameters, and modify the Live Coding's behavior in the same way. The `archive` directory is by default the `archive` subdirectory relative to the Jupyter Notebook. Creating a backup copy of the Jupyter Notebook is not possible so the keyboard shortcuts will only allow you to create Sketch screenshots.
+The three boolean arguments, `always_rerun_setup`, `always_on_top`, and `activate_keyboard_shortcuts` correspond to the terminal command `py5-live-coding`'s optional parameters, and modify the Live Coding's behavior in the same way. The `archive` directory is by default the `archive` subdirectory relative to the Jupyter Notebook. Creating a backup copy of the Jupyter Notebook is not possible. Therefore, the keyboard shortcuts will only allow you to create Sketch screenshots.
 
 Why have this section?
 
