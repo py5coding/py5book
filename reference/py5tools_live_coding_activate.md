@@ -31,7 +31,7 @@ The `always_on_top` parameter will keep the Sketch window on top, above your bro
 
 The `always_rerun_setup` will rerun the Sketch's current `setup()` function each time a notebook cell is updated, even if the `setup()` function did not change. Be aware this update feature will be triggered even if the executed code has nothing to do with py5.
 
-The `activate_keyboard_shortcuts` will activate convenient keyboard shortcuts for quickly creating screenshots and code achives. These will be saved to an `archive` subdirectory, unless if the `archive_dir` parameter sets the save directory to another location.
+The `activate_keyboard_shortcuts` will activate convenient keyboard shortcuts for quickly creating screenshots and code archives. These will be saved to an `archive` subdirectory, unless the `archive_dir` parameter sets the save directory to another location.
 
 Look at the online ["Live Coding"](/content/live_coding) documentation to learn more.
 
@@ -47,4 +47,4 @@ activate(
 ) -> None
 ```
 
-Updated on September 14, 2024 19:23:10pm UTC
+Updated on October 20, 2024 01:40:52am UTC

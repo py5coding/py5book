@@ -26,7 +26,7 @@ Create a screenshot of the current Sketch window and a backup copy of the curren
 
 See the documentation for [](py5tools_live_coding_screenshot) and [](py5tools_live_coding_copy_code) for more information about each feature.
 
-If the `snapshot_name` parameter contains date format codes, the string will be formatted with the current timestamp. If `snapshot_name` is omitted, it will default to your filename stem followed by `"_%Y%m%d_%H%M%S"`. If you are using this function through a Jupyter Notebook, there is no useable filename so it will default to `"snapshot_%Y%m%d_%H%M%S"`. Although if you are using this function through a Jupyter Notebook, it will decline to create a backup copy of the code so you are better off using [](py5tools_live_coding_screenshot) instead.
+If the `snapshot_name` parameter contains date format codes, the string will be formatted with the current timestamp. If `snapshot_name` is omitted, it will default to your filename stem followed by `"_%Y%m%d_%H%M%S"`. If you are using this function through a Jupyter Notebook, there is no usable filename so it will default to `"snapshot_%Y%m%d_%H%M%S"`. Although if you are using this function through a Jupyter Notebook, it will decline to create a backup copy of the code so you are better off using [](py5tools_live_coding_screenshot) instead.
 
 A suggested use case for this is to put the function calls in your code but leave them commented out. When you have working code that you want to create a backup and a screenshot for but don't want to pause your workflow to do both manually, simply uncomment the code and save the file. A backup and a screenshot will then be created for you in the `archive` subdirectory.
 
@@ -42,4 +42,4 @@ snapshot(
 ) -> None
 ```
 
-Updated on September 15, 2024 12:12:36pm UTC
+Updated on October 20, 2024 01:40:52am UTC
