@@ -120,7 +120,7 @@ py5-live-coding -d experiment.py
 
 The `py5-live-coding` command has other optional arguments, explained below.
 
-### Optional Arguments
+### Optional Terminal Arguments
 
 View the optional arguments with the `-h` help argument.
 
@@ -171,7 +171,7 @@ py5_tools.live_coding.activate()
 
 That's it. Don't call [](/reference/sketch_run_sketch). The above command will start Live Coding and open the Sketch window. Each time you execute a Jupyter Notebook cell, the Sketch code will update. Unlike Live Coding in a *.py file, saving the Jupyter Notebook does not update the Sketch. Live Coding is syncing the Sketch code with the executed py5 code in the Jupyter Notebook.
 
-## Options
+### Optional Function Arguments
 
 Here is the [](/reference/py5tools_live_coding_activate) function's signature:
 
@@ -189,10 +189,22 @@ This function should only be called from within a Jupyter Notebook.
 
 The three boolean arguments, `always_rerun_setup`, `always_on_top`, and `activate_keyboard_shortcuts` correspond to the terminal command `py5-live-coding`'s optional parameters, and modify the Live Coding's behavior in the same way. The `archive` directory is by default the `archive` subdirectory relative to the Jupyter Notebook. Creating a backup copy of the Jupyter Notebook is not possible. Therefore, the keyboard shortcuts will only allow you to create Sketch screenshots.
 
-Why have this section?
+## Control Functions
 
-### Screenshots
+There are a few control functions you can call from within a Live Coding session to interact with the Live Coding system.
 
-### Code Archives
+### Screenshot
 
-### Backups
+[](/reference/py5tools_live_coding_screenshot)
+
+### Copy Code
+
+[](/reference/py5tools_live_coding_copy_code)
+
+### Snapshot
+
+[](/reference/py5tools_live_coding_snapshot)
+
+### Count
+
+[](/reference/py5tools_live_coding_count)
