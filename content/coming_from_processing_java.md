@@ -26,9 +26,7 @@ Please have a look at the [py5 Reference Summary](/reference/summary), it will h
 
 ## How about the P-Classes?
 
-Most of Processing high-level objects, like `PFont` for typography fonts, or `PImage`, for image buffers, have an equivalent, a wrapper, in py5. So `Py5Font` does whatever `PFont` does, and `Py5Image` everything `PImage` does.
-
-Then, there is some bonus stuff, `Py5Image` brings in a very helpful new [`numpy` interface for an "array of pixels"](/reference/py5image_np_pixels).
+Most of Processing high-level objects, like `PFont` for typography fonts, or `PImage`, for image buffers, have an equivalent, a wrapper, in py5. So `Py5Font` does whatever `PFont` does, and `Py5Image` everything `PImage` does, with some bonus stuff: `Py5Image` brings in a very helpful new [`numpy` interface for an "array of pixels"](/reference/py5image_np_pixels).
 
 If you are used to `PVector`, please note that `Py5Vector` is a completely new implementation of vector objects, 2D, 3D and 4D, so it has some different method & attribute names, you won't regret reading the [Py5Vector](/reference/py5vector) documentation.
 
@@ -468,7 +466,7 @@ from my_other_file import MyClass, my_function # from other_file.py in the same 
 from other_file import *  # everything from other_file.py
 ```
 
-When you are using py5 in *imported mode* you can add a special comment to your other files like explained on this [Importing py5 code](https://py5coding.org/content/importing_py5_code.html#importing-imported-mode-code) section.
+When you are using py5 in *imported mode* with code split in more than one file, you might need to add the special comment, `# PY5 IMPORTED MODE CODE`, to the head of your other files, like explained on this [Importing py5 code](https://py5coding.org/content/importing_py5_code.html#importing-imported-mode-code) section.
 
 ### Object Orientation
 
