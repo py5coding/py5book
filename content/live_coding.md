@@ -207,4 +207,11 @@ There are a few control functions you can call from within a Live Coding session
 
 ### Count
 
-[](/reference/py5tools_live_coding_count)
+The [](/reference/py5tools_live_coding_count) function returns the number of times the code has been updated. This starts at zero and increments by one each time py5's live coding system updates the code. If you exit a Sketch using py5's Live Coding functionality and restart Live Coding later, the counter resets to zero. The purpose of this function is to provide Live Coding users with a value that changes from one code iteration to the next. This isn't otherwise possible because the Live Coding feature will reset the global namespace each time the code is updated.
+
+A good use case for this is to pair it with [](/reference/py5tools_live_coding_screenshot) or [](/reference/py5tools_live_coding_copy_code) to create a unique string to name the code backup copy or the screenshot. This is an alternative to timestamps.
+
+This function will always return 0 when not running through py5's live coding feature.
+
+TODO: mention above the default filenames of the keyboard shortcut stuff.
+TODO: make sure it is Live Coding in the reference docs
