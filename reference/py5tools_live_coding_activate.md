@@ -1,6 +1,6 @@
 # py5_tools.live_coding.activate()
 
-Start live coding from a Jupyter Notebook.
+Start Live Coding from a Jupyter Notebook.
 
 ## Examples
 
@@ -25,7 +25,7 @@ py5_tools.live_coding.activate(
 
 ## Description
 
-Start live coding from a Jupyter Notebook. This function should only be called from Jupyter. This will start a Sketch using the code in the executed notebook cells. As more notebook cells are executed, this will keep the Sketch updated with the most recently executed code.
+Start Live Coding from a Jupyter Notebook. This function should only be called from Jupyter. This will start a Sketch using the code in the executed notebook cells. As more notebook cells are executed, this will keep the Sketch updated with the most recently executed code.
 
 The `always_on_top` parameter will keep the Sketch window on top, above your browser window. This will let you write code in the notebook without interfering with the Sketch window.
 
@@ -47,4 +47,4 @@ activate(
 ) -> None
 ```
 
-Updated on October 20, 2024 01:40:52am UTC
+Updated on October 23, 2024 04:46:34am UTC

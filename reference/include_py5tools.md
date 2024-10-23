@@ -6,7 +6,7 @@
 * [get_classpath()](py5tools_get_classpath): Get the Java classpath.
 * [get_jvm_debug_info()](py5tools_get_jvm_debug_info): Get Java Virtual Machine debug information.
 * [is_jvm_running()](py5tools_is_jvm_running): Determine if the Java Virtual Machine (JVM) is or is not running.
-* [live_coding.activate()](py5tools_live_coding_activate): Start live coding from a Jupyter Notebook.
+* [live_coding.activate()](py5tools_live_coding_activate): Start Live Coding from a Jupyter Notebook.
 * [live_coding.copy_code()](py5tools_live_coding_copy_code): Create a backup copy of the current code.
 * [live_coding.count()](py5tools_live_coding_count): Return the number of times the live code has been updated.
 * [live_coding.screenshot()](py5tools_live_coding_screenshot): Create a screenshot of the current Sketch window.

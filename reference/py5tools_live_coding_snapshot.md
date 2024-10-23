@@ -30,7 +30,7 @@ If the `snapshot_name` parameter contains date format codes, the string will be 
 
 A suggested use case for this is to put the function calls in your code but leave them commented out. When you have working code that you want to create a backup and a screenshot for but don't want to pause your workflow to do both manually, simply uncomment the code and save the file. A backup and a screenshot will then be created for you in the `archive` subdirectory.
 
-This function will do nothing when not running through py5's live coding feature.
+This function will do nothing when not running through py5's Live Coding feature.
 
 Look at the online ["Live Coding"](/content/live_coding) documentation to learn more.
 
@@ -42,4 +42,4 @@ snapshot(
 ) -> None
 ```
 
-Updated on October 20, 2024 01:40:52am UTC
+Updated on October 23, 2024 04:46:34am UTC
