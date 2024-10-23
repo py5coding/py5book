@@ -191,19 +191,43 @@ The three boolean arguments, `always_rerun_setup`, `always_on_top`, and `activat
 
 ## Control Functions
 
-There are a few control functions you can call from within a Live Coding session to interact with the Live Coding system.
+There are a few control functions you can call from within a Live Coding session to interact with the Live Coding system. These do similar things as the keyboard shortcuts mentioned above. The main difference is these are more customizable than what can be achieved with a simple keyboard shortcut.
 
 ### Screenshot
 
-[](/reference/py5tools_live_coding_screenshot)
+The [](/reference/py5tools_live_coding_screenshot) function will create a screenshot of the current Sketch window. The screenshot image will be saved to the archive directory.
+
+Here is the function signature:
+
+```python
+py5_tools.live_coding.screenshot(screenshot_name: str = None)
+```
+
+The parameter `screenshot_name` is the filename of the screenshot to be saved in the archive directory. If this parameter contains date format codes, the string will be formatted with the current timestamp. If it is omitted, it will default to your filename stem followed by `"_%Y%m%d_%H%M%S"`. If you are using this function through a Jupyter Notebook, there is no usable filename so it will default to `"screenshot_%Y%m%d_%H%M%S"`.
+
+This function will save PNG images with the appropriate filename suffix if `screenshot_name` does not have a suffix. It won't overwrite an existing file if the file it tries to write to already exists.
+
+This function will be ignored when not running through py5's Live Coding feature.
 
 ### Copy Code
 
-[](/reference/py5tools_live_coding_copy_code)
+The [](/reference/py5tools_live_coding_copy_code) function will create a backup copy of the current code. The copy will be saved to the archive directory.
+
+If the `copy_name` parameter contains date format codes, the string will be formatted with the current timestamp. If `copy_name` is omitted, it will default to your filename stem followed by `"_%Y%m%d_%H%M%S"`.
+
+This function will not work if the Live Coding feature is being used in a Jupyter Notebook because the code is not in a Python file that can be copied.
+
+If Live Coding is watching the directory for changes, the backup copy will be a zip file containing every file in the watched directory. Otherwise, it will be a regular Python file. The appropriate filename suffix will be set if `copy_name` does not already have it. It won't overwrite an existing file if the file it tries to write to already exists.
+
+This function will do nothing when not running through py5's Live Coding feature.
 
 ### Snapshot
 
-[](/reference/py5tools_live_coding_snapshot)
+The [](/reference/py5tools_live_coding_snapshot) function will create both a screenshot of the current Sketch window and a backup copy of the current code. This function combines the functionality of [](py5tools_live_coding_screenshot) and [](py5tools_live_coding_copy_code). Everything will be saved to the archive directory.
+
+If the `snapshot_name` parameter contains date format codes, the string will be formatted with the current timestamp. If `snapshot_name` is omitted, it will default to your filename stem followed by `"_%Y%m%d_%H%M%S"`. If you are using this function through a Jupyter Notebook, there is no usable filename so it will default to `"snapshot_%Y%m%d_%H%M%S"`. Although if you are using this function through a Jupyter Notebook, it will decline to create a backup copy of the code so you are better off using [](py5tools_live_coding_screenshot) instead.
+
+This function will do nothing when not running through py5's Live Coding feature.
 
 ### Count
 
@@ -214,4 +238,7 @@ A good use case for this is to pair it with [](/reference/py5tools_live_coding_s
 This function will always return 0 when not running through py5's live coding feature.
 
 TODO: mention above the default filenames of the keyboard shortcut stuff.
-TODO: make sure it is Live Coding in the reference docs
+
+### Concrete Example
+
+TODO: ? How to best use the control functions?
