@@ -39,7 +39,7 @@ py5.run_sketch()
 
 When executed, the Sketch looks like this:
 
-TODO: insert screenshot
+![Large white square with red trim and small random circles with red trim](/images/content/live_coding_screenshot.png)
 
 ### Changes Live Coding Can Handle
 
@@ -93,6 +93,8 @@ Here are changes that Live Coding cannot handle:
 * If you write a `settings()` function, don't make changes to it. There is some [](content-user_functions-settings-magic) that allows you to write just a `setup()` function instead of needing to write both `settings()` and `setup()`. The magic behind that could get tripped up if you fiddle with this while using Live Coding.
 * Any calls to [](/reference/py5tools_add_classpath), [](/reference/py5tools_add_jars), and [](/reference/py5tools_add_options) are not possible and will throw an exception. These functions can only be called before the Java Virtual Machine starts. Live Coding will start the Java Virtual Machine before even looking at your code for the first time. Therefore, they are not compatible with Live Coding.
 * Use of py5's [](/content/hybrid_programming) is possible, but you recompile any Jar files, you'll need to exit the Sketch and restart Live Coding to see the changes.
+
+In all of these situations, you just need to restart the Sketch. This is what you'd be doing anyway if Live Coding didn't exist.
 
 There are probably a few other edge cases that Live Coding cannot handle. If you find something, please [open an issue on GitHub](https://github.com/py5coding/py5generator/issues). We will either look for a fix or document the limitation here.
 
@@ -155,7 +157,7 @@ It might be useful to you to monitor the Sketch's frame rate. This will show you
 
 You may also want to quickly create screenshots of your Sketch or create copies of the current code. The optional keyboard shortcuts, activated with the `-k` argument, can help you with this. When activated, you can type `Shift-S` in the Sketch window to save a current screenshot to the archive directory. Create a backup copy of your code in the archive directory with the keyboard shortcut `Shift-C`. If you have used the `-d` argument to instruct Live Coding to watch all files in a directory for changes, the backup copy of your code will be a zip file of all of the files in the directory. If you want to create both a screenshot and a backup copy of the code, use the keyboard shortcut `Shift-A`.
 
-By default the archive directory for screenshots and code backups is the `archive` subdirectory. Change this to something else with the `-a` parameter.
+By default the archive directory for screenshots and code backups is the `archive` subdirectory. Change this to something else with the `-a` parameter. The file names will combine your source code filename and the the date and time.
 
 If the Sketch is in an error state, it will not create any screenshots or backups of the code.
 
@@ -237,8 +239,6 @@ A good use case for this is to pair it with [](/reference/py5tools_live_coding_s
 
 This function will always return 0 when not running through py5's live coding feature.
 
-TODO: mention above the default filenames of the keyboard shortcut stuff.
-
 ### Concrete Example
 
-TODO: ? How to best use the control functions?
+TODO: ? How to best use the control functions? What kind of example to use here?
