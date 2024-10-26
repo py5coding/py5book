@@ -10,7 +10,7 @@ This functionality is available for py5 in module mode only. It works for code w
 
 Before explaining in detail how to use Live Coding, it would be best to first use a concrete example to articulate what Live Coding can and cannot handle.
 
-Consider the following Python code for the below discussion.
+Consider the following example Sketch for the below discussion.
 
 ```python
 import numpy as np
@@ -49,7 +49,7 @@ Every time the Sketch code is updated, either by saving the *.py file in your ed
 
 Here are example changes you can make to the above Sketch and how Live Coding will handle them:
 
-* If the calls to [](/reference/sketch_stroke) or [](/reference/sketch_stroke_weight) are removed, Live Coding will reset the stroke color to default color of black and the stroke weight to 1. It will be as if they were never called in the first place.
+* If the calls to [](/reference/sketch_stroke) or [](/reference/sketch_stroke_weight) are removed, Live Coding will reset the stroke color to the default color of black and the stroke weight to 1. It will be as if they were never called in the first place.
 * If the `draw()` function is commented out, it will be forgotten and the updated Sketch will only have a `setup()` function. The Sketch will no longer be animated. If the `draw()` function is later uncommented, the animation will resume.
 * If `import numpy as np` is removed, the numpy library will no longer be available and the calls to `np.random.rand()` will throw exceptions. You will need to either replace the numpy import or re-write that code to use py5's builtin methods such as [](/reference/sketch_random).
 * If you added [mouse](/content/user_functions#key-events) or [key](/content/user_functions#mouse-events) event functions such as `key_pressed()` or `mouse_clicked()`, the Sketch would start responding to mouse and key events. If those functions are later removed, the Sketch would stop responding to those events.
@@ -92,9 +92,9 @@ Here are changes that Live Coding cannot handle:
 * Changes to [](/reference/sketch_smooth), [](/reference/sketch_no_smooth), and [](/reference/sketch_pixel_density) are not possible. If you were to modify those calls in your code, the changes would be ignored. You'd again need to exit the Sketch and restart Live Coding.
 * If you write a `settings()` function, don't make changes to it. There is some [](content-user_functions-settings-magic) that allows you to write just a `setup()` function instead of needing to write both `settings()` and `setup()`. The magic behind that could get tripped up if you fiddle with this while using Live Coding.
 * Any calls to [](/reference/py5tools_add_classpath), [](/reference/py5tools_add_jars), and [](/reference/py5tools_add_options) are not possible and will throw an exception. These functions can only be called before the Java Virtual Machine starts. Live Coding will start the Java Virtual Machine before even looking at your code for the first time. Therefore, they are not compatible with Live Coding.
-* Use of py5's [](/content/hybrid_programming) is possible, but you recompile any Jar files, you'll need to exit the Sketch and restart Live Coding to see the changes.
+* Use of py5's [](/content/hybrid_programming) is possible, but if you recompile any Jar files, you'll need to exit the Sketch and restart Live Coding to see the changes.
 
-In all of these situations, you just need to restart the Sketch. This is what you'd be doing anyway if Live Coding didn't exist.
+In all of these situations, you just need to restart the Sketch. That's what you'd be doing anyway if Live Coding didn't exist.
 
 There are probably a few other edge cases that Live Coding cannot handle. If you find something, please [open an issue on GitHub](https://github.com/py5coding/py5generator/issues). We will either look for a fix or document the limitation here.
 
@@ -157,7 +157,7 @@ It might be useful to you to monitor the Sketch's frame rate. This will show you
 
 You may also want to quickly create screenshots of your Sketch or create copies of the current code. The optional keyboard shortcuts, activated with the `-k` argument, can help you with this. When activated, you can type `Shift-S` in the Sketch window to save a current screenshot to the archive directory. Create a backup copy of your code in the archive directory with the keyboard shortcut `Shift-C`. If you have used the `-d` argument to instruct Live Coding to watch all files in a directory for changes, the backup copy of your code will be a zip file of all of the files in the directory. If you want to create both a screenshot and a backup copy of the code, use the keyboard shortcut `Shift-A`.
 
-By default the archive directory for screenshots and code backups is the `archive` subdirectory. Change this to something else with the `-a` parameter. The file names will combine your source code filename and the the date and time.
+By default the archive directory for screenshots and code backups is the `archive` subdirectory. Change this to something else with the `-a` parameter. The file names will combine your source code filename and the date and time.
 
 If the Sketch is in an error state, it will not create any screenshots or backups of the code.
 
@@ -171,7 +171,7 @@ Live Coding with a Jupyter Notebook is very similar to Live Coding in a *.py fil
 py5_tools.live_coding.activate()
 ```
 
-That's it. Don't call [](/reference/sketch_run_sketch). The above command will start Live Coding and open the Sketch window. Each time you execute a Jupyter Notebook cell, the Sketch code will update. Unlike Live Coding in a *.py file, saving the Jupyter Notebook does not update the Sketch. Live Coding is syncing the Sketch code with the executed py5 code in the Jupyter Notebook.
+That's it. Don't call [](/reference/sketch_run_sketch). The above command will start Live Coding and open the Sketch window. Each time you execute a Jupyter Notebook cell, the Sketch code will update. Unlike Live Coding in a *.py file, saving the Jupyter Notebook does not update the Sketch. Live Coding is syncing the Sketch code with the executed Python code in the Jupyter Notebook.
 
 ### Optional Function Arguments
 
@@ -225,9 +225,9 @@ This function will do nothing when not running through py5's Live Coding feature
 
 ### Snapshot
 
-The [](/reference/py5tools_live_coding_snapshot) function will create both a screenshot of the current Sketch window and a backup copy of the current code. This function combines the functionality of [](py5tools_live_coding_screenshot) and [](py5tools_live_coding_copy_code). Everything will be saved to the archive directory.
+The [](/reference/py5tools_live_coding_snapshot) function will create both a screenshot of the current Sketch window and a backup copy of the current code. This function combines the functionality of [](/reference/py5tools_live_coding_screenshot) and [](/reference/py5tools_live_coding_copy_code). Everything will be saved to the archive directory.
 
-If the `snapshot_name` parameter contains date format codes, the string will be formatted with the current timestamp. If `snapshot_name` is omitted, it will default to your filename stem followed by `"_%Y%m%d_%H%M%S"`. If you are using this function through a Jupyter Notebook, there is no usable filename so it will default to `"snapshot_%Y%m%d_%H%M%S"`. Although if you are using this function through a Jupyter Notebook, it will decline to create a backup copy of the code so you are better off using [](py5tools_live_coding_screenshot) instead.
+If the `snapshot_name` parameter contains date format codes, the string will be formatted with the current timestamp. If `snapshot_name` is omitted, it will default to your filename stem followed by `"_%Y%m%d_%H%M%S"`. If you are using this function through a Jupyter Notebook, there is no usable filename so it will default to `"snapshot_%Y%m%d_%H%M%S"`. Although if you are using this function through a Jupyter Notebook, it will decline to create a backup copy of the code so you are better off using [](/reference/py5tools_live_coding_screenshot) instead.
 
 This function will do nothing when not running through py5's Live Coding feature.
 
@@ -239,11 +239,11 @@ A good use case for this is to pair it with [](/reference/py5tools_live_coding_s
 
 This function will always return 0 when not running through py5's live coding feature.
 
-### Control Functions Example Use
+### Control Functions Example
 
 Below is an example of how the above control functions could be used with the example Sketch given at the beginning of this page.
 
-Here we are using the [](/reference/py5tools_live_coding_screenshot) function in a `key_pressed()` function. True, we could have perhaps used [](/reference/py5tools_screenshot()) there, but this approach has additional functionality to evaluate date and time format strings in addition to saving images in the archive directory and not overwriting existing files.
+Here we are using the [](/reference/py5tools_live_coding_screenshot) function in a `key_pressed()` function. True, we could have perhaps used [](/reference/py5tools_screenshot) there, but this approach has additional functionality to evaluate date and time format strings in addition to saving images in the archive directory and not overwriting existing files.
 
 This example also uses [](/reference/py5tools_live_coding_copy_code), but that line of code is commented out. You probably would not want to create code backups every time you save your code. Here, you can quickly uncomment that line in your editor and save the code, executing that line of code and creating a backup of the code. Once the backup is created, you can re-comment that line and continue your explorations. This will enable you to create a code backup without leaving your code editor.
 
