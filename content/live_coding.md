@@ -110,7 +110,7 @@ Every time you save to the file `experiment.py`, `py5-live-coding` will read the
 
 Your code should be written as if you were running it from the terminal with the `python` interpreter, so remember to include `import py5` and the call to `py5.run_sketch()`. The goal is for you to do your development and experimenting with `py5-live-coding`. Once your Sketch works as you would like, you should be able to run the same exact code from the terminal with the `python` interpreter, with no further code changes needed.
 
-Live Coding works very well with editors such as VSCode. You'll want to use a keyboard shortcut `Control-S` or `Cmd-S` to save your code and trigger an update. Use of an editor's "Auto Save" functionality probably wouldn't work very well as it would constantly attempt to execute incomplete lines of code.
+Live Coding works very well with editors such as VSCode. You'll want to use a keyboard shortcut such as `Control-S` or `Cmd-S` to save your code and trigger an update. Use of an editor's "Auto Save" functionality probably wouldn't work very well as it would constantly attempt to execute incomplete lines of code.
 
 If you like, you can monitor the entire directory and not just one file. This is useful if you are editing code in multiple files, such as shader code. Live Coding will also work correctly if you are editing locally imported Python modules. It uses import hooks to detect imported modules so they can be removed and re-imported when the Sketch is reset.
 
@@ -239,6 +239,46 @@ A good use case for this is to pair it with [](/reference/py5tools_live_coding_s
 
 This function will always return 0 when not running through py5's live coding feature.
 
-### Concrete Example
+### Control Functions Example Use
 
-TODO: ? How to best use the control functions? What kind of example to use here?
+Below is an example of how the above control functions could be used with the example Sketch given at the beginning of this page.
+
+Here we are using the [](/reference/py5tools_live_coding_screenshot) function in a `key_pressed()` function. True, we could have perhaps used [](/reference/py5tools_screenshot()) there, but this approach has additional functionality to evaluate date and time format strings in addition to saving images in the archive directory and not overwriting existing files.
+
+This example also uses [](/reference/py5tools_live_coding_copy_code), but that line of code is commented out. You probably would not want to create code backups every time you save your code. Here, you can quickly uncomment that line in your editor and save the code, executing that line of code and creating a backup of the code. Once the backup is created, you can re-comment that line and continue your explorations. This will enable you to create a code backup without leaving your code editor.
+
+```python
+import numpy as np
+import py5_tools
+
+import py5
+
+
+def setup():
+    py5.size(400, 400, py5.P2D)
+    py5.smooth(4)
+
+    py5.stroke("red")
+    py5.stroke_weight(2)
+
+    py5.rect(50, 50, py5.width - 100, py5.height - 100)
+
+
+def draw():
+    rand_x = py5.width * np.random.rand()
+    rand_y = py5.height * np.random.rand()
+    py5.circle(rand_x, rand_y, 20)
+
+
+def key_pressed():
+    if py5.key == " ":
+        py5_tools.live_coding.screenshot(f"screenshot_%H%M%S_%f")
+
+
+# py5_tools.live_coding.copy_code(f"backup_{py5_tools.live_coding.count():02}")
+
+
+py5.run_sketch()
+```
+
+Finally, do note that the commented out call to [](/reference/py5tools_live_coding_copy_code) is *before* the call to [](/reference/sketch_run_sketch). Note that when a py5 Sketch is run in the generic python interpreter, calls to [](/reference/sketch_run_sketch) by default will block, meaning that code after that point will not execute until after the Sketch exits. The Live Coding functionality mimics this behavior in an effort to maintain consistency between running a Sketch in the generic python interpreter and running a Sketch with Live Coding.
