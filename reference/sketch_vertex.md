@@ -87,11 +87,6 @@ Underlying Processing method: [vertex](https://processing.org/reference/vertex_.
 
 ```python
 vertex(
-    v: npt.NDArray[np.floating],  # vertical coordinate data for the texture mapping
-    /,
-) -> None
-
-vertex(
     x: float,  # x-coordinate of the vertex
     y: float,  # y-coordinate of the vertex
     /,
@@ -122,4 +117,4 @@ vertex(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on October 28, 2024 02:52:09am UTC
