@@ -20,8 +20,12 @@ def setup():
     s = py5.create_shape()
     s.begin_shape()
     s.no_fill()
-    s.set_path(vertices.shape[0], vertices)
+    s.vertices(vertices)
     s.end_shape()
+
+    new_vertices = 100 * np.random.rand(25, 2)
+    s.set_path(new_vertices.shape[0], new_vertices)
+
     py5.shape(s)
 ```
 
@@ -47,4 +51,4 @@ set_path(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on October 28, 2024 04:41:56am UTC

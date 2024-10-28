@@ -263,7 +263,6 @@
 * [clip()](sketch_clip)
 * [create_graphics()](sketch_create_graphics)
 * [flush()](sketch_flush)
-* [g](sketch_g)
 * [get_graphics()](sketch_get_graphics)
 * [hint()](sketch_hint)
 * [no_clip()](sketch_no_clip)
