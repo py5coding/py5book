@@ -466,7 +466,7 @@ from my_other_file import MyClass, my_function # from other_file.py in the same 
 from other_file import *  # everything from other_file.py
 ```
 
-When you are using py5 in *imported mode* with code split in more than one file, you might need to add the special comment, `# PY5 IMPORTED MODE CODE`, to the head of your other files, like explained on this [Importing py5 code](https://py5coding.org/content/importing_py5_code.html#importing-imported-mode-code) section.
+When you are using py5 in *imported mode* with code split in more than one file, you might need to add the special comment, `# PY5 IMPORTED MODE CODE`, to the head of your other files, like explained on this [](importing_imported_mode_code) section.
 
 ### Object Orientation
 
