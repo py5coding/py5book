@@ -1,8 +1,8 @@
 # Live Coding
 
-Live Coding is a powerful feature to help facilitate the rapid prototyping of ideas. It will enable you to repeatedly change the code of a running Sketch without needing to repeatedly exit a Sketch and call [](/reference/sketch_run_sketch) to start a new one.
+Live Coding is a powerful feature to help facilitate the rapid prototyping of ideas. It will enable you to repeatedly change the code of a running Sketch without needing to repeatedly exit a Sketch and call [](/reference/sketch_run_sketch) again to start a new one.
 
-The intended purpose of this is to help you quickly write py5 code. In particular, the py5 folks who have daily coding practices would benefit from Live Coding. It is useful for making small adjustments to working py5 code. It could also be used for activities such as Live Coding performances.
+The intended purpose of this is to help you quickly write py5 code. In particular, the folks in the py5 community who have daily coding practices would benefit from Live Coding. It is useful for making small adjustments to working py5 code. It could also be used for activities such as Live Coding performances.
 
 This functionality is available for py5 in module mode only. It works for code written in `*.py` files and Jupyter Notebooks.
 
@@ -43,7 +43,7 @@ When executed, the Sketch looks like this:
 
 ### Changes Live Coding Can Handle
 
-The ultimate goal of Live Coding is for you to use it for idea exploration and code implementation. Once your Sketch works as you would like, you should be able to run the same exact code without Live Coding and get the exact same results. There are a few places where this is impossible, but the limitations are relatively minor and understandable.
+The ultimate goal of Live Coding is for you to use it for idea exploration and code implementation. Once your Sketch works as you would like, you should be able to run the same exact code without Live Coding and get the exact same results. There are a few places where this is not possible, but the limitations are relatively minor and understandable.
 
 Every time the Sketch code is updated, either by saving the *.py file in your editor or executing a Jupyter Notebook cell, the Sketch will (by default) be reset. Your `setup()` function will be executed again, [](/reference/sketch_frame_count) and [](/reference/sketch_millis) will be set to zero, and any calls to style or configuration methods such as [](/reference/sketch_fill) to [](/reference/sketch_color_mode) will be undone. The Sketch should be identical to a new Sketch window. If you can find a situation where this is not the case (and is not a limitation already documented on this page), please [open an issue on GitHub](https://github.com/py5coding/py5generator/issues).
 
@@ -52,11 +52,11 @@ Here are example changes you can make to the above Sketch and how Live Coding wi
 * If the calls to [](/reference/sketch_stroke) or [](/reference/sketch_stroke_weight) are removed, Live Coding will reset the stroke color to the default color of black and the stroke weight to 1. It will be as if they were never called in the first place.
 * If the `draw()` function is commented out, it will be forgotten and the updated Sketch will only have a `setup()` function. The Sketch will no longer be animated. If the `draw()` function is later uncommented, the animation will resume.
 * If `import numpy as np` is removed, the numpy library will no longer be available and the calls to `np.random.rand()` will throw exceptions. You will need to either replace the numpy import or re-write that code to use py5's builtin methods such as [](/reference/sketch_random).
-* If you added [mouse](/content/user_functions#key-events) or [key](/content/user_functions#mouse-events) event functions such as `key_pressed()` or `mouse_clicked()`, the Sketch would start responding to mouse and key events. If those functions are later removed, the Sketch would stop responding to those events.
-
-There is the option for Live Coding to not reset the Sketch and not call `setup()` when the code is updated. This is discussed later in this documentation.
+* If you added [mouse](/content/user_functions#key-events) or [key](/content/user_functions#mouse-events) event functions such as `key_pressed()` or `mouse_clicked()`, the Sketch would start responding to mouse and key events. If those functions are later commented out or deleted, the Sketch would stop responding to those events.
 
 The example code does not use shaders or make any calls to [](/reference/sketch_hint), but if it did, these would also be reset.
+
+There is the option for Live Coding to not reset the Sketch and not call `setup()` each time the code is updated. This is discussed later in this documentation.
 
 #### Exceptions and Syntax Errors
 
@@ -86,7 +86,7 @@ Properly handled Exceptions need not be related to py5 methods or functions. Liv
 
 ### Changes Live Coding Cannot Handle
 
-Here are changes that Live Coding cannot handle:
+Here are things that Live Coding cannot handle:
 
 * Changes to [](/reference/sketch_size) or [](/reference/sketch_full_screen) are not possible. The Sketch window cannot change size and the renderer cannot be changed. If you were to modify those calls in your code, the changes would be ignored. You'd need to exit the Sketch and restart Live Coding if you want the changes to take effect.
 * Changes to [](/reference/sketch_smooth), [](/reference/sketch_no_smooth), and [](/reference/sketch_pixel_density) are not possible. If you were to modify those calls in your code, the changes would be ignored. You'd again need to exit the Sketch and restart Live Coding.
@@ -110,7 +110,7 @@ Every time you save to the file `experiment.py`, `py5-live-coding` will read the
 
 Your code should be written as if you were running it from the terminal with the `python` interpreter, so remember to include `import py5` and the call to `py5.run_sketch()`. The goal is for you to do your development and experimenting with `py5-live-coding`. Once your Sketch works as you would like, you should be able to run the same exact code from the terminal with the `python` interpreter, with no further code changes needed.
 
-Live Coding works very well with editors such as VSCode. You'll want to use a keyboard shortcut such as `Control-S` or `Cmd-S` to save your code and trigger an update. Use of an editor's "Auto Save" functionality probably wouldn't work very well as it would constantly attempt to execute incomplete lines of code.
+Live Coding works very well with editors such as VSCode. You'll want to use a keyboard shortcut such as `Control-S` or `Cmd-S` to save your code and trigger an update. Use of an editor's "Auto Save" functionality probably wouldn't work very well as it would constantly attempt to execute incomplete lines of code as you are typing.
 
 If you like, you can monitor the entire directory and not just one file. This is useful if you are editing code in multiple files, such as shader code. Live Coding will also work correctly if you are editing locally imported Python modules. It uses import hooks to detect imported modules so they can be removed and re-imported when the Sketch is reset.
 
@@ -281,4 +281,4 @@ def key_pressed():
 py5.run_sketch()
 ```
 
-Finally, do note that the commented out call to [](/reference/py5tools_live_coding_copy_code) is *before* the call to [](/reference/sketch_run_sketch). Note that when a py5 Sketch is run in the generic python interpreter, calls to [](/reference/sketch_run_sketch) by default will block, meaning that code after that point will not execute until after the Sketch exits. The Live Coding functionality mimics this behavior in an effort to maintain consistency between running a Sketch in the generic python interpreter and running a Sketch with Live Coding.
+Finally, do note that the commented out call to [](/reference/py5tools_live_coding_copy_code) is *before* the call to [](/reference/sketch_run_sketch). Consider that when a py5 Sketch is run in the generic python interpreter, calls to [](/reference/sketch_run_sketch) by default will block, meaning that code after that point will not execute until after the Sketch exits. The Live Coding functionality mimics this behavior in an effort to maintain consistency between running a Sketch in the generic python interpreter and running a Sketch with Live Coding.
