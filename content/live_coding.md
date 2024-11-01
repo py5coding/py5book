@@ -94,6 +94,13 @@ Here are things that Live Coding cannot handle:
 * Any calls to [](/reference/py5tools_add_classpath), [](/reference/py5tools_add_jars), and [](/reference/py5tools_add_options) are not possible and will throw an exception. These functions can only be called before the Java Virtual Machine starts. Live Coding will start the Java Virtual Machine before even looking at your code for the first time. Therefore, they are not compatible with Live Coding.
 * Use of py5's [](/content/hybrid_programming) is possible, but if you recompile any Jar files, you'll need to exit the Sketch and restart Live Coding to see the changes.
 
+TODO:
+// things to document
+// changes to run_sketch() params will not work
+// issues if you add a call to clip()
+// issues with threads not stopping
+// don't mess with print stream
+
 In all of these situations, you just need to restart the Sketch. That's what you'd be doing anyway if Live Coding didn't exist.
 
 There are probably a few other edge cases that Live Coding cannot handle. If you find something, please [open an issue on GitHub](https://github.com/py5coding/py5generator/issues). We will either look for a fix or document the limitation here.
