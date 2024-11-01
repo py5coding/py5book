@@ -92,7 +92,7 @@ There's only one major thing that Live Coding cannot handle that you should pay 
 
 That's it. The following is a list of obscure things that Live Coding cannot handle. Most likely these are irrelevant to everyone but are listed here for completeness. Feel free to ignore this list.
 
-* Changes to [](/reference/sketch_smooth), [](/reference/sketch_no_smooth), and [](/reference/sketch_pixel_density) are not possible. If you were to modify those calls in your code, the changes would be ignored. You'd again need to exit the Sketch and restart Live Coding.
+* Changes to [](/reference/sketch_smooth), [](/reference/sketch_no_smooth), and [](/reference/sketch_pixel_density) are not possible. If you were to modify those calls in your code, the changes would be ignored.
 * If you write a `settings()` function, don't make changes to it. There is some [](content-user_functions-settings-magic) that allows you to write just a `setup()` function instead of needing to write both `settings()` and `setup()`. The magic behind that could get tripped up if you fiddle with this while using Live Coding.
 * The [](/reference/sketch_run_sketch) method has several parameters such as `sketch_args` and `py5_options`. These parameters will work as you'd expect when Live Coding starts but will not do anything as Live Coding makes updates.
 * Adding calls to the [](/reference/sketch_clip) method may cause some visual problems that you would not experience without Live Coding.
