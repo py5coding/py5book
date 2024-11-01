@@ -86,22 +86,22 @@ Properly handled Exceptions need not be related to py5 methods or functions. Liv
 
 ### Changes Live Coding Cannot Handle
 
-Here are things that Live Coding cannot handle:
+Here are the major things that Live Coding cannot handle that you should pay attention to:
 
 * Changes to [](/reference/sketch_size) or [](/reference/sketch_full_screen) are not possible. The Sketch window cannot change size and the renderer cannot be changed. If you were to modify those calls in your code, the changes would be ignored. You'd need to exit the Sketch and restart Live Coding if you want the changes to take effect.
 * Changes to [](/reference/sketch_smooth), [](/reference/sketch_no_smooth), and [](/reference/sketch_pixel_density) are not possible. If you were to modify those calls in your code, the changes would be ignored. You'd again need to exit the Sketch and restart Live Coding.
 * If you write a `settings()` function, don't make changes to it. There is some [](content-user_functions-settings-magic) that allows you to write just a `setup()` function instead of needing to write both `settings()` and `setup()`. The magic behind that could get tripped up if you fiddle with this while using Live Coding.
+
+Here are some obscure things that Live Coding cannot handle. Most likely these are irrelevant to everyone but are listed here for completeness. Feel free to ignore this list.
+
+* The [](/reference/sketch_run_sketch) method has several parameters such as `sketch_args` and `py5_options`. These parameters will work as you'd expect when Live Coding starts but will not do anything as Live Coding makes updates.
+* Adding calls to the [](/reference/sketch_clip) method may cause some visual problems that you would not experience without Live Coding.
+* Calls to [](/reference/sketch_set_println_stream) may have unpredictable results. If you use this, don't make changes to it.
+* Use of py5's threading methods such as [](/reference/sketch_launch_thread) and [](/reference/sketch_launch_repeating_thread) should work fine but think carefully here. Live Coding will call [](/reference/sketch_stop_all_threads) when resetting the Sketch, but if it cannot stop some of the threads, they will keep running and possibly create a mess for you to solve.
 * Any calls to [](/reference/py5tools_add_classpath), [](/reference/py5tools_add_jars), and [](/reference/py5tools_add_options) are not possible and will throw an exception. These functions can only be called before the Java Virtual Machine starts. Live Coding will start the Java Virtual Machine before even looking at your code for the first time. Therefore, they are not compatible with Live Coding.
 * Use of py5's [](/content/hybrid_programming) is possible, but if you recompile any Jar files, you'll need to exit the Sketch and restart Live Coding to see the changes.
 
-TODO:
-// things to document
-// changes to run_sketch() params will not work
-// issues if you add a call to clip()
-// issues with threads not stopping
-// don't mess with print stream
-
-In all of these situations, you just need to restart the Sketch. That's what you'd be doing anyway if Live Coding didn't exist.
+In all of these situations, you just need to restart Live Coding to avoid problems. That's what you'd be doing anyway if Live Coding didn't exist, so it should be fine.
 
 There are probably a few other edge cases that Live Coding cannot handle. If you find something, please [open an issue on GitHub](https://github.com/py5coding/py5generator/issues). We will either look for a fix or document the limitation here.
 
