@@ -86,14 +86,14 @@ Properly handled Exceptions need not be related to py5 methods or functions. Liv
 
 ### Changes Live Coding Cannot Handle
 
-Here are the major things that Live Coding cannot handle that you should pay attention to:
+There's only one major thing that Live Coding cannot handle that you should pay attention to:
 
 * Changes to [](/reference/sketch_size) or [](/reference/sketch_full_screen) are not possible. The Sketch window cannot change size and the renderer cannot be changed. If you were to modify those calls in your code, the changes would be ignored. You'd need to exit the Sketch and restart Live Coding if you want the changes to take effect.
+
+That's it. The following is a list of obscure things that Live Coding cannot handle. Most likely these are irrelevant to everyone but are listed here for completeness. Feel free to ignore this list.
+
 * Changes to [](/reference/sketch_smooth), [](/reference/sketch_no_smooth), and [](/reference/sketch_pixel_density) are not possible. If you were to modify those calls in your code, the changes would be ignored. You'd again need to exit the Sketch and restart Live Coding.
 * If you write a `settings()` function, don't make changes to it. There is some [](content-user_functions-settings-magic) that allows you to write just a `setup()` function instead of needing to write both `settings()` and `setup()`. The magic behind that could get tripped up if you fiddle with this while using Live Coding.
-
-Here are some obscure things that Live Coding cannot handle. Most likely these are irrelevant to everyone but are listed here for completeness. Feel free to ignore this list.
-
 * The [](/reference/sketch_run_sketch) method has several parameters such as `sketch_args` and `py5_options`. These parameters will work as you'd expect when Live Coding starts but will not do anything as Live Coding makes updates.
 * Adding calls to the [](/reference/sketch_clip) method may cause some visual problems that you would not experience without Live Coding.
 * Calls to [](/reference/sketch_set_println_stream) may have unpredictable results. If you use this, don't make changes to it.
