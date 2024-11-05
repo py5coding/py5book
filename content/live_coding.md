@@ -6,6 +6,8 @@ The intended purpose of this is to help you quickly write py5 code. In particula
 
 This functionality is available for py5 in module mode only. It works for code written in `*.py` files and Jupyter Notebooks.
 
+If you have thoughts or feedback on Live Coding, please start a thread on [GitHub Discussions](https://github.com/py5coding/py5generator/discussions). We are actively looking for ways to improve this feature and make it even more useful.
+
 ## Live Coding Overview
 
 Before explaining in detail how to use Live Coding, it would be best to first use a concrete example to articulate what Live Coding can and cannot handle.
