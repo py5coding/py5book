@@ -39,6 +39,7 @@
 ### Environment
 
 * [height](py5graphics_height)
+* [is3d()](py5graphics_is3d)
 * [next_page()](py5graphics_next_page)
 * [no_smooth()](py5graphics_no_smooth)
 * [pixel_density](py5graphics_pixel_density)
