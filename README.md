@@ -4,9 +4,9 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/py5coding/py5book/HEAD?urlpath=lab)
 
-[![py5 downloads](https://pepy.tech/badge/py5/month)](https://pepy.tech/project/py5)
+[![py5 monthly downloads](https://static.pepy.tech/badge/py5/month)](https://pepy.tech/project/py5)
 
-[![Downloads](https://pepy.tech/badge/py5/week)](https://pepy.tech/project/py5)
+[![py5 weekly downloads](https://static.pepy.tech/badge/py5/week)](https://pepy.tech/project/py5)
 
 py5 is a new version of [Processing][processing] for Python 3.9+. The goal of py5 is to create a version of Processing that is [integrated into the Python ecosystem](https://py5coding.org/integrations/python_ecosystem_integrations.html). Built into the library are thoughtful choices about how to best get py5 to work with other popular Python libraries and tools such as [Jupyter](https://jupyter.org/), [numpy](https://numpy.org/), [shapely](https://shapely.readthedocs.io/en/stable/), [trimesh](https://trimesh.org/), [matplotlib](https://matplotlib.org/), and [Pillow](https://python-pillow.org/).
 
