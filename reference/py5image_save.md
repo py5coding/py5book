@@ -14,7 +14,7 @@ Save the Py5Image object to an image file.
 def setup():
     for _ in range(10):
         py5.rect(py5.random_int(py5.width), py5.random_int(py5.height), 10, 10)
-    img = py5.get(10, 10, 80, 80)
+    img = py5.get_pixels(10, 10, 80, 80)
     img.save('/tmp/cropped_random_squares.jpg')
 ```
 
@@ -43,4 +43,4 @@ save(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on October 28, 2024 04:41:56am UTC

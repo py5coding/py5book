@@ -296,7 +296,7 @@ Imported Mode was originally designed to be used by beginner
 programmers. It is analogous the Processing code users write in the
 Processing Development Editor (PDE). The Processing Editor does not
 currently support py5, but perhaps one day it will. Until then, you can
-use the py5 Jupyter Notebook Kernel or the `run_sketch` command line
+use the py5 Jupyter Notebook Kernel or the `py5-run-sketch` command line
 tool.
 
 Below is our example Sketch written in Imported Mode:
@@ -347,7 +347,7 @@ for more information.
 ```{admonition} Running the Sketch
 
 The `run_sketch()` method launches the Sketch and must be called when using
-Jupyter Notebooks. However, when using the `run_sketch` command line tool or
+Jupyter Notebooks. However, when using the `py5-run-sketch` command line tool or
 the Python editor Thonny that has been configured to use py5 in Imported Mode,
 `run_sketch()` should be omitted, as it will be executed on behalf of the user.
 
@@ -389,7 +389,7 @@ $ jupyter lab
 You will see the py5bot presented as an option in the Launcher. Click on
 it and put the code in a notebook cell.
 
-You can also program in Static Mode using the `run_sketch` command line
+You can also program in Static Mode using the `py5-run-sketch` command line
 tool, or better yet, using Thonny. See \@tabreturn's detailed blog post
 [Portable Thonny and
 py5](https://tabreturn.github.io/code/python/thonny/2021/06/21/thonny_and_py5.html)

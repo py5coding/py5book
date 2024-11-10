@@ -11,7 +11,7 @@ Customize where the output of [](sketch_println) goes.
 </div><div class="example-cell-code">
 
 ```python
-class _PrintlnFileStream:
+class PrintlnFileStream:
 
     def __init__(self, filename):
         self.filename = filename
@@ -57,4 +57,4 @@ set_println_stream(
 ) -> None
 ```
 
-Updated on April 15, 2024 20:36:58pm UTC
+Updated on October 28, 2024 04:41:56am UTC

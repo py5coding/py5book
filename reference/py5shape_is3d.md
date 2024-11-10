@@ -57,7 +57,7 @@ def setup():
 
 Boolean value reflecting if the shape is or is not a 3D shape.
 
-If the shape is created in a Sketch using the `P3D` renderer, this will be `True`, even if it only uses 2D coordinates.
+This will be `True` if the shape is created in a Sketch using a 3D renderer such as `P3D`, even if it only uses 2D coordinates.
 
 Underlying Processing method: PShape.is3D
 
@@ -67,4 +67,4 @@ Underlying Processing method: PShape.is3D
 is3d() -> bool
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on November 05, 2024 03:08:47am UTC

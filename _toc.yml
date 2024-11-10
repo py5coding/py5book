@@ -20,6 +20,7 @@ parts:
   - file: content/hybrid_programming
   - file: content/processing_mode
   - file: content/importing_py5_code
+  - file: content/live_coding
 
 - caption: Tutorials
   chapters:
