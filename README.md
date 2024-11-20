@@ -78,7 +78,6 @@ Thank you much for the support from py5's generous sponsors!
 * [@adanaher](https://github.com/adanaher) (Alec Danaher)
 * [@ericof](https://github.com/ericof) (Érico Andrei)
 * [@nickmcintyre](https://github.com/nickmcintyre) (Nick McIntyre)
-* [@r-dahlstedt-linux-guy](https://github.com/r-dahlstedt-linux-guy) (Rich Dahlstedt)
 
 ## Get In Touch
 
