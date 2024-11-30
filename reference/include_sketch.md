@@ -350,6 +350,7 @@
 * [exit_sketch()](sketch_exit_sketch)
 * [finished](sketch_finished)
 * [hot_reload_draw()](sketch_hot_reload_draw)
+* [intercept_escape()](sketch_intercept_escape)
 * [is_dead](sketch_is_dead)
 * [is_dead_from_error](sketch_is_dead_from_error)
 * [is_ready](sketch_is_ready)
