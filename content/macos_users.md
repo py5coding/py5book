@@ -171,10 +171,10 @@ Python script.
 
 ## Render Helper Tools
 
-The render helper tools [](/reference/py5functions_render.rst),
-[](/reference/py5functions_render_frame.rst),
-[](/reference/py5functions_render_sequence.rst), and
-[](/reference/py5functions_render_frame_sequence.rst) cannot use the OpenGL
+The render helper tools [](/reference/py5functions_render),
+[](/reference/py5functions_render_frame),
+[](/reference/py5functions_render_sequence), and
+[](/reference/py5functions_render_frame_sequence) cannot use the OpenGL
 (P2D and P3D) renderers.
 
 A future version of py5 will address these issues.
