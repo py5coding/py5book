@@ -13,8 +13,6 @@ macOS experiences.
     `True` when run through a generic Python interpreter
 -   The py5bot Jupyter kernel and some py5 magics cannot use the OpenGL renderers
 -   The render helper tools cannot use the OpenGL renderers
--   When using Jupyter notebooks, Sketches that use the default renderer will not
-    appear as an icon on the dock at the bottom of the screen
 -   When using Jupyter notebooks, the select methods
     [](/reference/sketch_select_folder), [](/reference/sketch_select_input), and
     [](/reference/sketch_select_output) will not work.
@@ -135,17 +133,10 @@ running them through a Jupyter notebook (using class-mode) is your only option.
 
 ### Select Methods
 
-When run through Jupyter, the select methods 
+When run through Jupyter, the select methods
 [](/reference/sketch_select_folder), [](/reference/sketch_select_input), and
 [](/reference/sketch_select_output) will not work. Consider using IPython
 widgets instead.
-
-### Dock Icon
-
-When run through Jupyter, Sketches that use the default `JAVA2D` renderer will
-not appear as an icon on the dock at the bottom of the screen. This does not
-apply to Sketches that use the OpenGL renderers or Sketches run through the
-generic Python interpreter.
 
 ### py5bot and py5 magics
 
@@ -188,4 +179,4 @@ NewtNSView::dealloc: softLock still hold @ dealloc!
 ```
 
 Ignore that. Windows and Linux users also get odd messages when exiting a
-Sketch.
+Sketch. It's not a cause for concern.
