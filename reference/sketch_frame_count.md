@@ -1,6 +1,6 @@
 # frame_count
 
-The system variable `frame_count` contains the number of frames that have been displayed since the program started.
+The variable `frame_count` contains the number of frames that have been displayed since the program started.
 
 ## Examples
 
@@ -26,8 +26,8 @@ def draw():
 
 ## Description
 
-The system variable `frame_count` contains the number of frames that have been displayed since the program started. Inside `setup()` the value is 0. Inside the first execution of `draw()` it is 1, and it will increase by 1 for every execution of `draw()` after that.
+The variable `frame_count` contains the number of frames that have been displayed since the program started. Inside `setup()` the value is 0. Inside the first execution of `draw()` it is 1, and it will increase by 1 for every execution of `draw()` after that.
 
 Underlying Processing field: [frameCount](https://processing.org/reference/frameCount.html)
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 07, 2024 22:07:08pm UTC

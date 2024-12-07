@@ -1,6 +1,6 @@
 # display_width
 
-System variable that stores the width of the entire screen display.
+Variable that stores the width of the entire screen display.
 
 ## Examples
 
@@ -22,8 +22,8 @@ def setup():
 
 ## Description
 
-System variable that stores the width of the entire screen display. This can be used to run a full-screen program on any display size, but calling [](sketch_full_screen) is usually a better choice.
+Variable that stores the width of the entire screen display. This can be used to run a full-screen program on any display size, but calling [](sketch_full_screen) is usually a better choice.
 
 Underlying Processing field: [displayWidth](https://processing.org/reference/displayWidth.html)
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 07, 2024 22:07:08pm UTC

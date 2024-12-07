@@ -1,6 +1,6 @@
 # key
 
-The system variable `key` always contains the value of the most recent key on the keyboard that was used (either pressed or released).
+The variable `key` always contains the value of the most recent key on the keyboard that was used (either pressed or released).
 
 ## Examples
 
@@ -30,7 +30,7 @@ def draw():
 
 ## Description
 
-The system variable `key` always contains the value of the most recent key on the keyboard that was used (either pressed or released). 
+The variable `key` always contains the value of the most recent key on the keyboard that was used (either pressed or released). 
  
 For non-ASCII keys, use the [](sketch_key_code) variable. The keys included in the ASCII specification (`BACKSPACE`, `TAB`, `ENTER`, `RETURN`, `ESC`, and `DELETE`) do not require checking to see if the key is coded, and you should simply use the `key` variable instead of [](sketch_key_code). If you're making cross-platform projects, note that the `ENTER` key is commonly used on PCs and Unix and the `RETURN` key is used instead on Macintosh. Check for both `ENTER` and `RETURN` to make sure your program will work for all platforms.
 
@@ -38,4 +38,4 @@ There are issues with how [](sketch_key_code) behaves across different renderers
 
 Underlying Processing field: [key](https://processing.org/reference/key.html)
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 07, 2024 22:07:08pm UTC
