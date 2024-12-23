@@ -1,9 +1,8 @@
 # Special Notes for macOS Users
 
 Although much progress has been made getting py5 to work on macOS, there are a few
-remaining issues and limitations. The issues that are fixable will be addressed
-in future py5 releases. The remaining issues are minor and in line with typical
-macOS experiences.
+remaining issues and limitations, mostly related to Jupyter Notebooks. These
+issues are minor and are in line with typical macOS experiences.
 
 ```{admonition} TL;DR
 
@@ -16,6 +15,10 @@ macOS experiences.
 -   When using Jupyter notebooks, the select methods
     [](/reference/sketch_select_folder), [](/reference/sketch_select_input), and
     [](/reference/sketch_select_output) will not work.
+-   When using Jupyter notebooks, older macOS laptops (laptops with Intel CPUs?
+    laptops with older macOS versions?) have an odd quirk where if the first
+    Sketch you run uses the default renderer (JAVA2D), you cannot use the OpenGL
+    renderers (P2D and P3D).
 -   Ignore the warnings you see when exiting a Sketch ([Issue
     #6](https://github.com/py5coding/py5generator/issues/6))
 ```
@@ -170,6 +173,56 @@ The render helper tools [](/reference/py5functions_render),
 
 A future version of py5 will address these issues.
 
+## Jupyter Notebooks on Older Laptops
+
+My old MacBook Pro laptop, with an Intel i7 CPU, runs macOS 12.7.6 (Monterey) and
+cannot be upgraded to a newer macOS version. For reasons I cannot fathom, py5
+has an odd limitation when run in a Jupyter Notebook on this machine. If the
+first executed Sketch uses the default (JAVA2D) renderer, later executing a
+Sketch that uses an OpenGL renderer will cause the IPython kernel to crash. If I
+want to use an OpenGL renderer anywhere in the notebook, the first Sketch I run
+must also use OpenGL.
+
+I don't have this problem on my newer 2020 MacBook Pro with an M1 chip.
+Everything works just fine with macOS 14.7.2 (Sonoma), and after an upgrade,
+with macOS 15.2 (Sequoia).
+
+It's an unusual problem and right now I don't know if this is because of
+something different with the Intel CPU or if it is because of the old (and no
+longer supported) macOS version 12.7.6. Hopefully others from the py5 community
+can provide feedback here so I can better understand what is going on.
+
+To prevent a crash on machines believed to be vulnerable to this problem, py5
+will detect the sequence of events that would lead to a crash and will instead
+output a helpful message and throw an exception.
+
+If you'd like to disable this safety check and test this for yourself, use this code:
+
+```python
+import py5
+
+from py5 import macos_problem
+macos_problem.disable_safety_check()
+```
+
+If your laptop experiences the crashing problem and you'd like to quickly add a
+Sketch to the beginning of your notebook that uses an OpenGL renderer, use the
+below code. This will eliminate the problem entirely.
+
+```python
+import py5
+
+from py5 import test
+test.test_p2d()
+```
+
+This problem is an unfortunate side effect of a code change in py5 version 0.10.4
+that actually improved a lot of things for all macOS users. This code change was
+too important to leave out. The side effect is such an obscure edge case that it
+likely won't impact very many users. Still, I don't want any py5 users to become
+frustrated by these kinds of crashes. That's why this is documented and py5 has
+a safety check.
+
 ## Sketch Exit
 
 When the Sketch exits you will see the following warning:
@@ -178,5 +231,5 @@ When the Sketch exits you will see the following warning:
 NewtNSView::dealloc: softLock still hold @ dealloc!
 ```
 
-Ignore that. Windows and Linux users also get odd messages when exiting a
-Sketch. It's not a cause for concern.
+Ignore that. That message comes from within native macOS code. Windows and Linux
+users also get odd messages when exiting a Sketch. It's not a cause for concern.
