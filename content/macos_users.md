@@ -184,25 +184,32 @@ want to use an OpenGL renderer anywhere in the notebook, the first Sketch I run
 must also use OpenGL.
 
 I don't have this problem on my newer 2020 MacBook Pro with an M1 chip.
-Everything works just fine with macOS 14.7.2 (Sonoma), and after an upgrade,
-with macOS 15.2 (Sequoia).
+Everything worked just fine with macOS 14.7.2 (Sonoma). I upgraded it to
+macOS 15.2 (Sequoia), and it works fine there too.
 
 It's an unusual problem and right now I don't know if this is because of
 something different with the Intel CPU or if it is because of the old (and no
 longer supported) macOS version 12.7.6. Hopefully others from the py5 community
 can provide feedback here so I can better understand what is going on.
 
-To prevent a crash on machines believed to be vulnerable to this problem, py5
-will detect the sequence of events that would lead to a crash and will instead
+To prevent a crash on machines that are potentially vulnerable to this problem,
+py5 will detect the sequence of events that would lead to a crash and will instead
 output a helpful message and throw an exception.
 
-If you'd like to disable this safety check and test this for yourself, use this code:
+If you'd like to disable this safety check and test this for yourself, use the
+following code in a Jupyter Notebook, with each line of code executed separately.
 
 ```python
-import py5
+from py5 import macos_problem, test
 
-from py5 import macos_problem
 macos_problem.disable_safety_check()
+
+# run a Sketch with the default renderer
+test.test_java2d()
+
+# run a Sketch with an opengl renderer
+# does this cause a crash???
+test.test_p2d()
 ```
 
 If your laptop experiences the crashing problem and you'd like to quickly add a
@@ -219,9 +226,9 @@ test.test_p2d()
 This problem is an unfortunate side effect of a code change in py5 version 0.10.4
 that actually improved a lot of things for all macOS users. This code change was
 too important to leave out. The side effect is such an obscure edge case that it
-likely won't impact very many users. Still, I don't want any py5 users to become
-frustrated by these kinds of crashes. That's why this is documented and py5 has
-a safety check.
+likely won't impact very many users. Still, I don't want any py5 users to experience
+frustration because of these kinds of crashes. That's why this is documented and
+py5 has a safety check.
 
 ## Sketch Exit
 
