@@ -1,6 +1,6 @@
 # pmouse_y
 
-The system variable `pmouse_y` always contains the vertical position of the mouse in the frame previous to the current frame.
+The variable `pmouse_y` always contains the vertical position of the mouse in the frame previous to the current frame.
 
 ## Examples
 
@@ -25,10 +25,10 @@ def draw():
 
 ## Description
 
-The system variable `pmouse_y` always contains the vertical position of the mouse in the frame previous to the current frame.
+The variable `pmouse_y` always contains the vertical position of the mouse in the frame previous to the current frame.
 
 For more detail on how `pmouse_y` is updated inside of mouse events and `draw()`, see the reference for [](sketch_pmouse_x).
 
 Underlying Processing field: [pmouseY](https://processing.org/reference/pmouseY.html)
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 07, 2024 22:07:08pm UTC

@@ -112,7 +112,7 @@
 ### Keyboard Variables
 
 * [is_key_pressed](/reference/sketch_is_key_pressed) - The `is_key_pressed` variable stores whether or not a keyboard button is currently being pressed.
-* [key](/reference/sketch_key) - The system variable `key` always contains the value of the most recent key on the keyboard that was used (either pressed or released). It will contain the constant `CODED` if it was a special key that can then be discriminated with `key_code`.
+* [key](/reference/sketch_key) - The variable `key` always contains the value of the most recent key on the keyboard that was used (either pressed or released). It will contain the constant `CODED` if it was a special key that can then be discriminated with `key_code`.
 * [key_code](/reference/sketch_key_code) - The variable `key_code` is used to detect special keys such as the arrow keys (`UP`, `DOWN`, `LEFT`, and `RIGHT`) - as well as `ALT`, `CONTROL`, and `SHIFT`.
 
 ### Keyboard Event Functions
@@ -125,11 +125,11 @@
 ### Mouse Variables
 
 * [is_mouse_pressed](/reference/sketch_is_mouse_pressed) - The `is_mouse_pressed` variable stores whether or not a mouse button is currently being pressed.
-* [mouse_button](/reference/sketch_mouse_button) - When a mouse button is pressed, the value of the system variable `mouse_button` is set to either `LEFT`, `RIGHT`, or `CENTER`, depending on which button is pressed.
-* [mouse_x](/reference/sketch_mouse_x) - The system variable `mouse_x` always contains the current horizontal coordinate of the mouse.
-* [mouse_y](/reference/sketch_mouse_y) - The system variable `mouse_y` always contains the current vertical coordinate of the mouse.
-* [pmouse_x](/reference/sketch_pmouse_x) - The system variable `pmouse_x` always contains the horizontal position of the mouse in the frame previous to the current frame.
-* [pmouse_y](/reference/sketch_pmouse_y) - The system variable `pmouse_y` always contains the vertical position of the mouse in the frame previous to the current frame.
+* [mouse_button](/reference/sketch_mouse_button) - When a mouse button is pressed, the variable `mouse_button` is set to either `LEFT`, `RIGHT`, or `CENTER`, depending on which button is pressed.
+* [mouse_x](/reference/sketch_mouse_x) - The variable `mouse_x` always contains the current horizontal coordinate of the mouse.
+* [mouse_y](/reference/sketch_mouse_y) - The variable `mouse_y` always contains the current vertical coordinate of the mouse.
+* [pmouse_x](/reference/sketch_pmouse_x) - The variable `pmouse_x` always contains the horizontal position of the mouse in the frame previous to the current frame.
+* [pmouse_y](/reference/sketch_pmouse_y) - The variable `pmouse_y` always contains the vertical position of the mouse in the frame previous to the current frame.
 * [rmouse_x](/reference/sketch_rmouse_x) - The current horizontal coordinate of the mouse after activating scale invariant drawing.
 * [rmouse_y](/reference/sketch_rmouse_y) - The current vertical coordinate of the mouse after activating scale invariant drawing.
 
@@ -234,19 +234,19 @@
 
 * [size()](/reference/sketch_size) - Must be called only once to define the sketch dimensions, width and height, in pixel units. Other than in static mode, it must be used inside `setup()` or `settings()`.
 * [full_screen()](/reference/sketch_full_screen) - Make the sketch use the full size of the computer’s display. Replaces `size()`.
-* [width](/reference/sketch_width) - System variable that stores the width of the display window.
-* [height](/reference/sketch_height) - System variable that stores the height of the display window.
+* [width](/reference/sketch_width) - variable that stores the width of the display window.
+* [height](/reference/sketch_height) - variable that stores the height of the display window.
 * [smooth()](/reference/sketch_smooth) - Draws all geometry with smooth (anti-aliased) - edges. Must be used just after `size()`.
 * [no_smooth()](/reference/sketch_no_smooth) - Draws all geometry and fonts with jagged (aliased) - edges and images with hard edges between the pixels when enlarged rather than interpolating pixels.
 * [cursor()](/reference/sketch_cursor) - Sets the cursor to a predefined symbol or an image, or makes it visible if already hidden.
 * [no_cursor()](/reference/sketch_no_cursor) - Hides the cursor from view.
-* [frame_count](/reference/sketch_frame_count) - The system variable frame_count contains the number of frames that have been displayed since the program started.
+* [frame_count](/reference/sketch_frame_count) - The variable frame_count contains the number of frames that have been displayed since the program started.
 * [frame_rate()](/reference/sketch_frame_rate) - Specifies the target number of frames to be displayed every second. If drawing a frame gets slow the target will not be met!
 * [get_frame_rate()](/reference/sketch_get_frame_rate) - Get the running Sketch’s current frame rate.
 * [display_density()](/reference/sketch_display_density) - This function returns the number “2” if the screen is a high-density screen (called a Retina display on macOS or high-dpi on Windows and Linux) - and a “1” if not.
 * [pixel_density()](/reference/sketch_pixel_density) - This function makes it possible for py5 to render using all of the pixels on high resolutions screens like Apple Retina displays and Windows High-DPI displays.
-* [display_height](/reference/sketch_display_height) - System variable that stores the height of the entire screen display.
-* [display_width](/reference/sketch_display_width) - System variable that stores the width of the entire screen display.
+* [display_height](/reference/sketch_display_height) - variable that stores the height of the entire screen display.
+* [display_width](/reference/sketch_display_width) - variable that stores the width of the entire screen display.
 * [focused](/reference/sketch_focused) - Confirms if a py5 program is "focused", meaning that it is active and will accept mouse or keyboard input.
 * [sketch_path()](/reference/sketch_sketch_path) - The Sketch’s current path.
 

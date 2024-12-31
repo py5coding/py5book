@@ -105,7 +105,7 @@ Observe that this Sketch does not define a `draw()` user function. A `draw()` fu
 In addition to the above event functions, py5 also provides a few key-related properties for you to use. They are:
 
 * [](/reference/sketch_is_key_pressed) - The `is_key_pressed` variable stores whether or not a keyboard button is currently being pressed.
-* [](/reference/sketch_key) - The system variable `key` always contains the value of the most recent key on the keyboard that was used (either pressed or released). It will contain the constant `CODED` if it was a special key that can then be discriminated with `key_code`.
+* [](/reference/sketch_key) - The variable `key` always contains the value of the most recent key on the keyboard that was used (either pressed or released). It will contain the constant `CODED` if it was a special key that can then be discriminated with `key_code`.
 * [](/reference/sketch_key_code) - The variable `key_code` is used to detect special keys such as the arrow keys (`UP`, `DOWN`, `LEFT`, and `RIGHT`) as well as `ALT`, `CONTROL`, and `SHIFT`.
 
 Between py5's key event functions, the `Py5KeyEvent` object, and the above properties, there are many ways for you to build a Sketch that responds to keyboard inputs.
@@ -175,11 +175,11 @@ Like the previous example, this Sketch does not define a `draw()` user function.
 In addition to the above event functions, py5 also provides many mouse-related properties and methods for you to use. They are:
 
 * [](/reference/sketch_is_mouse_pressed) - The `is_mouse_pressed` variable stores whether or not a mouse button is currently being pressed.
-* [](/reference/sketch_mouse_button) - When a mouse button is pressed, the value of the system variable `mouse_button` is set to either `LEFT`, `RIGHT`, or `CENTER`, depending on which button is pressed.
-* [](/reference/sketch_mouse_x) - The system variable `mouse_x` always contains the current horizontal coordinate of the mouse.
-* [](/reference/sketch_mouse_y) - The system variable `mouse_y` always contains the current vertical coordinate of the mouse.
-* [](/reference/sketch_pmouse_x) - The system variable `pmouse_x` always contains the horizontal position of the mouse in the frame previous to the current frame.
-* [](/reference/sketch_pmouse_y) - The system variable `pmouse_y` always contains the vertical position of the mouse in the frame previous to the current frame.
+* [](/reference/sketch_mouse_button) - When a mouse button is pressed, the variable `mouse_button` is set to either `LEFT`, `RIGHT`, or `CENTER`, depending on which button is pressed.
+* [](/reference/sketch_mouse_x) - The variable `mouse_x` always contains the current horizontal coordinate of the mouse.
+* [](/reference/sketch_mouse_y) - The variable `mouse_y` always contains the current vertical coordinate of the mouse.
+* [](/reference/sketch_pmouse_x) - The variable `pmouse_x` always contains the horizontal position of the mouse in the frame previous to the current frame.
+* [](/reference/sketch_pmouse_y) - The variable `pmouse_y` always contains the vertical position of the mouse in the frame previous to the current frame.
 * [](/reference/sketch_rmouse_x) - The current horizontal coordinate of the mouse after activating scale invariant drawing (activated with [](/reference/sketch_window_ratio)).
 * [](/reference/sketch_rmouse_y) - The current vertical coordinate of the mouse after activating scale invariant drawing (activated with [](/reference/sketch_window_ratio)).
 

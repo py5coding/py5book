@@ -24,7 +24,7 @@ Interactivity in py5 requires the use of both `setup()` and `draw()` blocks, so 
 
 You can use the mouse to perform simple interactions like pointing and clicking, or more complex ones like dragging-and-dropping different elements or panning around a 3D view. Many standard computer mice have three buttons, for left-clicking, right-clicking, and center-clicking (which often doubles as a scroll wheel). 
 
-py5 includes a handful of useful system variables (meaning you don't have to define them yourself, they're already understood) relating to the state of the mouse. The `mouse_x` and `mouse_y` variables refer to the current position of the pointer inside the sketch. In the example sketch below, we create a 600 by 600 pixel sketch window and use `mouse_x` and `mouse_y` to draw ellipses beneath the mouse pointer.
+py5 includes a handful of useful variables (meaning you don't have to define them yourself, they're already understood) relating to the state of the mouse. The `mouse_x` and `mouse_y` variables refer to the current position of the pointer inside the sketch. In the example sketch below, we create a 600 by 600 pixel sketch window and use `mouse_x` and `mouse_y` to draw ellipses beneath the mouse pointer.
 
 ```{code-cell} ipython3
 def setup():
@@ -643,7 +643,7 @@ We've done a lot with mouse input here. Let's move on to the keyboard.
 
 ## keyboard input
 
-Keyboard interaction in py5 is similar to what we've already experienced, with system variables like `key` and `is_key_pressed` and events like `key_pressed()`, `key_released()` and `key_typed()`. We'll be adding an event to detect keyboard presses, and using it to select from our swatches with the keyboard. Our code is getting pretty long now... don't get lost! First, we'll be adding the `key_pressed()` function itself, and printing the value of `key`. This function will be triggered every time you press a key on your keyboard, and `key` stores the last button on the keyboard that was pressed.
+Keyboard interaction in py5 is similar to what we've already experienced, with variables like `key` and `is_key_pressed` and events like `key_pressed()`, `key_released()` and `key_typed()`. We'll be adding an event to detect keyboard presses, and using it to select from our swatches with the keyboard. Our code is getting pretty long now... don't get lost! First, we'll be adding the `key_pressed()` function itself, and printing the value of `key`. This function will be triggered every time you press a key on your keyboard, and `key` stores the last button on the keyboard that was pressed.
 
 ```{code-cell} ipython3
 # Global variables live outside of our various functions.

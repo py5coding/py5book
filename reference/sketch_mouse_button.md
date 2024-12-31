@@ -1,6 +1,6 @@
 # mouse_button
 
-When a mouse button is pressed, the value of the system variable `mouse_button` is set to either `LEFT`, `RIGHT`, or `CENTER`, depending on which button is pressed.
+When a mouse button is pressed, the variable `mouse_button` is set to either `LEFT`, `RIGHT`, or `CENTER`, depending on which button is pressed.
 
 ## Examples
 
@@ -54,8 +54,8 @@ def mouse_pressed():
 
 ## Description
 
-When a mouse button is pressed, the value of the system variable `mouse_button` is set to either `LEFT`, `RIGHT`, or `CENTER`, depending on which button is pressed. (If no button is pressed, `mouse_button` may be reset to `0`. For that reason, it's best to use `mouse_pressed` first to test if any button is being pressed, and only then test the value of `mouse_button`, as shown in the examples.)
+When a mouse button is pressed, the variable `mouse_button` is set to either `LEFT`, `RIGHT`, or `CENTER`, depending on which button is pressed. (If no button is pressed, `mouse_button` may be reset to `0`. For that reason, it's best to use `mouse_pressed` first to test if any button is being pressed, and only then test the value of `mouse_button`, as shown in the examples.)
 
 Underlying Processing field: [mouseButton](https://processing.org/reference/mouseButton.html)
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 07, 2024 22:07:08pm UTC
