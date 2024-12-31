@@ -271,7 +271,9 @@ def setup():
 
 
 def movie_event(m):
-    m.read()
+    # m.read()
+    # due to a bug, do this instead:
+    m._instance.read()
 
 
 def draw():
