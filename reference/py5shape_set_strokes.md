@@ -46,9 +46,9 @@ This method can only be used after the shape has been created. Do not use this m
 
 ```python
 set_strokes(
-    strokes: npt.NDArray[np.int32],  # array of stroke colors
+    strokes: Iterator[int],  # array of stroke colors
     /,
 ) -> None
 ```
 
-Updated on October 09, 2023 23:33:46pm UTC
+Updated on January 06, 2025 22:21:18pm UTC

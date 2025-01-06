@@ -36,9 +36,9 @@ The `coordinates` parameter should be a numpy array with one row for each quadra
 
 ```python
 quadratic_vertices(
-    coordinates: npt.NDArray[np.floating],  # 2D array of quadratic vertex coordinates with 4 or 6 columns for 2D or 3D points, respectively
+    coordinates: Iterator[Iterator[float]],  # 2D array of quadratic vertex coordinates with 4 or 6 columns for 2D or 3D points, respectively
     /,
 ) -> None
 ```
 
-Updated on June 26, 2023 01:53:06am UTC
+Updated on January 06, 2025 22:21:18pm UTC

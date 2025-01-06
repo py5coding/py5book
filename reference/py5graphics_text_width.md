@@ -19,7 +19,7 @@ text_width(
 ) -> float
 
 text_width(
-    chars: list[chr],  # the character to measure
+    chars: Iterator[chr],  # the characters to measure
     start: int,  # first character to measure
     length: int,  # number of characters to measure
     /,
@@ -31,4 +31,4 @@ text_width(
 ) -> float
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on January 06, 2025 23:06:20pm UTC

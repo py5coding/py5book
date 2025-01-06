@@ -33,7 +33,7 @@ text(
 ) -> None
 
 text(
-    chars: list[chr],  # the alphanumberic symbols to be displayed
+    chars: Iterator[chr],  # the alphanumberic symbols to be displayed
     start: int,  # array index at which to start writing characters
     stop: int,  # array index at which to stop writing characters
     x: float,  # x-coordinate of text
@@ -42,7 +42,7 @@ text(
 ) -> None
 
 text(
-    chars: list[chr],  # the alphanumberic symbols to be displayed
+    chars: Iterator[chr],  # the alphanumberic symbols to be displayed
     start: int,  # array index at which to start writing characters
     stop: int,  # array index at which to stop writing characters
     x: float,  # x-coordinate of text
@@ -106,4 +106,4 @@ text(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on January 06, 2025 23:06:20pm UTC
