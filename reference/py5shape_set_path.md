@@ -46,9 +46,9 @@ Underlying Processing method: PShape.setPath
 ```python
 set_path(
     vcount: int,  # number of vertices
-    verts: Iterator[Iterator[float]],  # 2D array of vertex coordinates
+    verts: Sequence[Sequence[float]],  # 2D array of vertex coordinates
     /,
 ) -> None
 ```
 
-Updated on January 06, 2025 22:21:18pm UTC
+Updated on January 08, 2025 05:55:58am UTC

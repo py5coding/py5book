@@ -14,9 +14,9 @@ This method is the same as [](sketch_vertices) but linked to a `Py5Graphics` obj
 
 ```python
 vertices(
-    coordinates: Iterator[Iterator[float]],  # 2D array of vertex coordinates and optional UV texture mapping values
+    coordinates: Sequence[Sequence[float]],  # 2D array of vertex coordinates and optional UV texture mapping values
     /,
 ) -> None
 ```
 
-Updated on January 06, 2025 22:21:18pm UTC
+Updated on January 08, 2025 05:55:58am UTC

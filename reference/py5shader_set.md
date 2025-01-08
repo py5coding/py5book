@@ -42,7 +42,7 @@ Underlying Processing method: [PShader.set](https://processing.org/reference/PSh
 ```python
 set(
     name: str,  # the name of the uniform variable to modify
-    boolvec: Iterator[bool],  # modifies all the components of an array/vector uniform variable
+    boolvec: Sequence[bool],  # modifies all the components of an array/vector uniform variable
     ncoords: int,  # number of coordinates per element, max 4
     /,
 ) -> None
@@ -68,39 +68,39 @@ set(
 
 set(
     name: str,  # the name of the uniform variable to modify
-    vec: Iterator[bool],  # modifies all the components of an array/vector uniform variable
-    /,
-) -> None
-
-set(
-    name: str,  # the name of the uniform variable to modify
-    vec: Iterator[float],  # 1D numpy array of values to modify all the components of an array/vector uniform variable
-    /,
-) -> None
-
-set(
-    name: str,  # the name of the uniform variable to modify
-    vec: Iterator[float],  # 1D numpy array of values to modify all the components of an array/vector uniform variable
-    ncoords: int,  # number of coordinates per element, max 4
-    /,
-) -> None
-
-set(
-    name: str,  # the name of the uniform variable to modify
-    vec: Iterator[int],  # 1D numpy array of values to modify all the components of an array/vector uniform variable
-    /,
-) -> None
-
-set(
-    name: str,  # the name of the uniform variable to modify
-    vec: Iterator[int],  # 1D numpy array of values to modify all the components of an array/vector uniform variable
-    ncoords: int,  # number of coordinates per element, max 4
-    /,
-) -> None
-
-set(
-    name: str,  # the name of the uniform variable to modify
     vec: Py5Vector,  # vector of values to modify all the components of an array/vector uniform variable
+    /,
+) -> None
+
+set(
+    name: str,  # the name of the uniform variable to modify
+    vec: Sequence[bool],  # modifies all the components of an array/vector uniform variable
+    /,
+) -> None
+
+set(
+    name: str,  # the name of the uniform variable to modify
+    vec: Sequence[float],  # 1D numpy array of values to modify all the components of an array/vector uniform variable
+    /,
+) -> None
+
+set(
+    name: str,  # the name of the uniform variable to modify
+    vec: Sequence[float],  # 1D numpy array of values to modify all the components of an array/vector uniform variable
+    ncoords: int,  # number of coordinates per element, max 4
+    /,
+) -> None
+
+set(
+    name: str,  # the name of the uniform variable to modify
+    vec: Sequence[int],  # 1D numpy array of values to modify all the components of an array/vector uniform variable
+    /,
+) -> None
+
+set(
+    name: str,  # the name of the uniform variable to modify
+    vec: Sequence[int],  # 1D numpy array of values to modify all the components of an array/vector uniform variable
+    ncoords: int,  # number of coordinates per element, max 4
     /,
 ) -> None
 
@@ -195,4 +195,4 @@ set(
 ) -> None
 ```
 
-Updated on January 06, 2025 23:06:20pm UTC
+Updated on January 08, 2025 05:55:58am UTC

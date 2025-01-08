@@ -45,9 +45,9 @@ This method can only be used after the shape has been created. Do not use this m
 
 ```python
 set_fills(
-    fills: Iterator[int],  # array of fill colors
+    fills: Sequence[int],  # array of fill colors
     /,
 ) -> None
 ```
 
-Updated on January 06, 2025 22:21:18pm UTC
+Updated on January 08, 2025 05:55:58am UTC

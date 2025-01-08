@@ -46,7 +46,7 @@ text_width(
 ) -> float
 
 text_width(
-    chars: Iterator[chr],  # the characters to measure
+    chars: Sequence[chr],  # the characters to measure
     start: int,  # first character to measure
     length: int,  # number of characters to measure
     /,
@@ -58,4 +58,4 @@ text_width(
 ) -> float
 ```
 
-Updated on January 06, 2025 23:06:20pm UTC
+Updated on January 08, 2025 05:55:58am UTC

@@ -47,9 +47,9 @@ mask(
 ) -> None
 
 mask(
-    mask_array: Iterator[int],  # 1D array of integers used as the alpha channel, needs to be the same length as the image's pixel array
+    mask_array: Sequence[int],  # 1D array of integers used as the alpha channel, needs to be the same length as the image's pixel array
     /,
 ) -> None
 ```
 
-Updated on January 06, 2025 22:21:18pm UTC
+Updated on January 08, 2025 05:55:58am UTC

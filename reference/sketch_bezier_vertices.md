@@ -36,9 +36,9 @@ The `coordinates` parameter should be a numpy array with one row for each bezier
 
 ```python
 bezier_vertices(
-    coordinates: Iterator[Iterator[float]],  # 2D array of bezier vertex coordinates with 6 or 9 columns for 2D or 3D points, respectively
+    coordinates: Sequence[Sequence[float]],  # 2D array of bezier vertex coordinates with 6 or 9 columns for 2D or 3D points, respectively
     /,
 ) -> None
 ```
 
-Updated on January 06, 2025 22:21:18pm UTC
+Updated on January 08, 2025 05:55:58am UTC
