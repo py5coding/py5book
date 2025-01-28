@@ -219,6 +219,7 @@
 * [random_choice()](sketch_random_choice)
 * [random_gaussian()](sketch_random_gaussian)
 * [random_int()](sketch_random_int)
+* [random_permutation()](sketch_random_permutation)
 * [random_sample()](sketch_random_sample)
 * [random_seed()](sketch_random_seed)
 
