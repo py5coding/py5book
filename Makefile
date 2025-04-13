@@ -8,6 +8,9 @@ build:
 clean:
 	jb clean .
 
+open:
+	firefox _build/html/index.html &
+
 deploydev:
 	aws s3 sync --delete _build/html s3://dev.py5coding.org/
 
