@@ -81,3 +81,9 @@ button.btn.version-switcher__button:hover {
 .toc-entry a.nav-link:hover {
     text-decoration: none;
 }
+
+@media (min-width: 992px) {
+    .bd-sidebar-primary {
+      flex-basis: 23%;
+    }
+}
