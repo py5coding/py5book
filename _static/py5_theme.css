@@ -84,6 +84,6 @@ button.btn.version-switcher__button:hover {
 
 @media (min-width: 992px) {
     .bd-sidebar-primary {
-      flex-basis: 23%;
+      flex-basis: 25%;
     }
 }
