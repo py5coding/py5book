@@ -82,8 +82,15 @@ button.btn.version-switcher__button:hover {
     text-decoration: none;
 }
 
-@media (min-width: 992px) {
-    .bd-sidebar-primary {
-      flex-basis: 25%;
+@media (min-width: 960px) {
+    .bd-page-width {
+      max-width: 90rem;
     }
 }
+
+@media (min-width: 992px) {
+    .bd-sidebar-primary {
+      flex-basis: 23%;
+    }
+}
+
