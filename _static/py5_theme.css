@@ -84,13 +84,13 @@ button.btn.version-switcher__button:hover {
 
 @media (min-width: 960px) {
     .bd-page-width {
-      max-width: 90rem;
+      max-width: 100rem;
     }
 }
 
 @media (min-width: 992px) {
     .bd-sidebar-primary {
-      flex-basis: 23%;
+      flex-basis: 22%;
     }
 }
 
