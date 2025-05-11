@@ -16,7 +16,7 @@ kernelspec:
 
 # How to Use Camera3D
 
-This is a simple demonstration of how you can use py5 with the Processing library Camera3D.
+This is a demonstration of how you can use py5 with the Processing library Camera3D.
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
@@ -25,7 +25,7 @@ This is a simple demonstration of how you can use py5 with the Processing librar
 Camera3D is a Processing library, and therefore the library itself is written in Java. The library is stored in a Jar file that must be added to the Java classpath. The simplest way to do this is to use py5's
 built in support for downloading Processing libraries and adding them to the classpath.
 
-Use the [](/reference/py5tools_processing_download_library) function to download and install Camera3D to the [Processing library install directory](py5tools_processing_library_storage_dir). This only needs to be done once for each computer.
+Use the [](/reference/py5tools_processing_download_library) function to download and install Camera3D to the [Processing library install directory](py5tools_processing_library_storage_dir). This only needs to be done once.
 
 ```{code-cell} ipython3
 ---
@@ -34,7 +34,14 @@ slideshow:
   slide_type: ''
 ---
 import time
+```
 
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 import py5_tools
 
 py5_tools.processing.download_library('Camera 3D')
@@ -195,7 +202,14 @@ slideshow:
   slide_type: ''
 ---
 time.sleep(3)
+```
 
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 py5_tools.screenshot(hook_post_draw=True)
 ```
 
@@ -205,5 +219,7 @@ editable: true
 slideshow:
   slide_type: ''
 ---
+time.sleep(2)
 
+py5.exit_sketch()
 ```
