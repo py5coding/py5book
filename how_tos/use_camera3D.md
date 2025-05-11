@@ -32,6 +32,7 @@ Use the [](/reference/py5tools_processing_download_library) function to download
 editable: true
 slideshow:
   slide_type: ''
+tags: [remove-cell]
 ---
 import time
 ```
@@ -200,6 +201,7 @@ Here's a screenshot, so readers of the static documentation website can understa
 editable: true
 slideshow:
   slide_type: ''
+tags: [remove-cell]
 ---
 time.sleep(3)
 ```
@@ -218,6 +220,7 @@ py5_tools.screenshot(hook_post_draw=True)
 editable: true
 slideshow:
   slide_type: ''
+tags: [remove-cell]
 ---
 time.sleep(2)
 

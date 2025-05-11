@@ -35,6 +35,7 @@ The first step is to download and install a Processing Library. The easiest way 
 editable: true
 slideshow:
   slide_type: ''
+tags: [remove-cell]
 ---
 import time
 ```
@@ -170,10 +171,11 @@ py5.run_sketch()
 editable: true
 slideshow:
   slide_type: ''
+tags: [remove-cell]
 ---
-time.sleep(2)
-
+time.sleep(1)
 py5.exit_sketch()
+time.sleep(1)
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
@@ -211,10 +213,11 @@ py5.run_sketch()
 editable: true
 slideshow:
   slide_type: ''
+tags: [remove-cell]
 ---
-time.sleep(2)
-
+time.sleep(1)
 py5.exit_sketch()
+time.sleep(1)
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
