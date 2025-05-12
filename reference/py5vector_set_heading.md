@@ -54,7 +54,9 @@ For 4D vectors, the heading values follow the spherical coordinate system define
 ```python
 set_heading(
     *heading,
-) -> Py5Vector
+) -> (
+    Py5Vector
+)
 ```
 
-Updated on July 28, 2024 19:04:27pm UTC
+Updated on April 13, 2025 05:05:46am UTC
