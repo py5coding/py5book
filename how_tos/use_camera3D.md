@@ -80,7 +80,7 @@ from camera3D import Camera3D
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-There is no actual Python package called camera3D that `from camera3D import Camera3D` is importing from. The reason why the previous cell works is because of some JPype import magic that is activated when py5 is imported.
+There is no actual Python package called camera3D that `from camera3D import Camera3D` is importing from. The reason why the previous cell works is because of some JPype import magic that is activated when py5 is imported, allowing you to import a Java class from the Camera 3D jar file.
 
 ## Define Global Variables
 
