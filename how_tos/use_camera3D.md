@@ -25,7 +25,7 @@ This is a demonstration of how you can use py5 with the Processing library Camer
 Camera3D is a Processing library, and therefore the library itself is written in Java. The library is stored in a Jar file that must be added to the Java classpath. The simplest way to do this is to use py5's
 built in support for downloading Processing libraries and adding them to the classpath.
 
-Use the [](/reference/py5tools_processing_download_library) function to download and install Camera3D to the [Processing library install directory](py5tools_processing_library_storage_dir). This only needs to be done once.
+Use the [](/reference/py5tools_processing_download_library) function to download and install Camera3D to the [Processing library install directory](/reference/py5tools_processing_library_storage_dir). This only needs to be done once.
 
 ```{code-cell} ipython3
 ---

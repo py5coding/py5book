@@ -14,7 +14,7 @@ kernelspec:
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-# How to Use Processing Libaries
+# How to Use Processing Libraries
 
 This is an introduction to py5's integration with [Processing Libraries](https://processing.org/reference/libraries).
 
@@ -75,11 +75,11 @@ py5_tools.processing.library_storage_dir()
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-The default location of this directory for Windows users is in the `AppData/Local/py5/processing-libraries` subdirectory of your home directory. For Linux and MacOS users, it is `.cache/py5/processing-libraries`. If you'd like to move this someplace else, set the `PY5_HOME` environment variable to your prefered location.
+The default location of this directory for Windows users is in the `AppData/Local/py5/processing-libraries` subdirectory of your home directory. For Linux and MacOS users, it is `.cache/py5/processing-libraries`. If you'd like to move this someplace else, set the `PY5_HOME` environment variable to your preferred location.
 
-This directory is intended to a be a place that py5 maintains, so please don't directly add, edit, or remove files from this directory. If you have your own jar files you'd like to add to a Sketch, put them in a `jars` subdirectory relative to the current working directory of your Python code. Or use the `PY5_JARS` environment variable to point to a directory of jar files that you manage yourself.
+This directory is intended to be a place that py5 maintains, so please don't directly add, edit, or remove files from this directory. If you have your own jar files you'd like to add to a Sketch, put them in a `jars` subdirectory relative to the current working directory of your Python code. Or use the `PY5_JARS` environment variable to point to a directory of jar files that you manage yourself.
 
-To get a list of currently installed libraries, use [](/reference/py5tools_processing_installed_libraries). 
+To get a list of currently installed libraries, use [](/reference/py5tools_processing_installed_libraries).
 
 ```{code-cell} ipython3
 ---
@@ -153,7 +153,7 @@ def draw():
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-In this example, the `PeasyCam(py5.get_current_sketch(), 500)` will link a PeasyCam instance to the py5 Sketch. Everything else is typical py5 code.
+In this example, the `PeasyCam(py5.get_current_sketch(), 500)` code will link a PeasyCam instance to the py5 Sketch. Everything else is typical py5 code.
 
 Our last step is to run the Sketch and admire our work:
 
@@ -162,6 +162,7 @@ Our last step is to run the Sketch and admire our work:
 editable: true
 slideshow:
   slide_type: ''
+tags: [remove-output]
 ---
 py5.run_sketch()
 ```
@@ -182,7 +183,7 @@ time.sleep(1)
 
 ## JavaFX
 
-The tools described on this page provide an avenue for using Processing's JavaFX renderer. The code and libaries for JavaFX are quite large so they must be installed separately.
+The tools described on this page provide an avenue for using Processing's JavaFX renderer. The code and libraries for JavaFX are quite large so they must be installed separately.
 
 Once installed, you can use the JavaFX renderer. It provides excellent 2D graphics without the use of OpenGL.
 
@@ -204,6 +205,7 @@ def draw():
 editable: true
 slideshow:
   slide_type: ''
+tags: [remove-output]
 ---
 py5.run_sketch()
 ```
