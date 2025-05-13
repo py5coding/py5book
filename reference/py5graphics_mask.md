@@ -19,9 +19,9 @@ mask(
 ) -> None
 
 mask(
-    mask_array: npt.NDArray[np.integer],  # 1D array of integers used as the alpha channel, needs to be the same length as the image's pixel array
+    mask_array: Sequence[int],  # 1D array of integers used as the alpha channel, needs to be the same length as the image's pixel array
     /,
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on January 08, 2025 05:55:58am UTC

@@ -43,9 +43,9 @@ This method can only be used within a [](py5shape_begin_shape) and [](py5shape_e
 
 ```python
 bezier_vertices(
-    coordinates: npt.NDArray[np.floating],  # 2D array of bezier vertex coordinates with 6 or 9 columns for 2D or 3D points, respectively
+    coordinates: Sequence[Sequence[float]],  # 2D array of bezier vertex coordinates with 6 or 9 columns for 2D or 3D points, respectively
     /,
 ) -> None
 ```
 
-Updated on June 26, 2023 01:48:37am UTC
+Updated on January 08, 2025 05:55:58am UTC

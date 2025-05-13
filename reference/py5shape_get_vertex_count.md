@@ -41,12 +41,19 @@ def draw():
 
 The `get_vertex_count()` method returns the number of vertices that make up a `Py5Shape`. In the example, the value 4 is returned by the `get_vertex_count()` method because 4 vertices are defined in `setup()`.
 
+Use the `include_children` parameter to include the shape's children if the shape happens to be a `GROUP` shape. By default, a shape's children will not be included in the count.
+
 Underlying Processing method: [PShape.getVertexCount](https://processing.org/reference/PShape_getVertexCount_.html)
 
 ## Signatures
 
 ```python
 get_vertex_count() -> int
+
+get_vertex_count(
+    include_children: bool,  # include vertices in the shape's children
+    /,
+) -> int
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on April 18, 2025 05:23:11am UTC

@@ -14,9 +14,9 @@ This method is the same as [](sketch_curve_vertices) but linked to a `Py5Graphic
 
 ```python
 curve_vertices(
-    coordinates: npt.NDArray[np.floating],  # 2D array of curve vertex coordinates with 2 or 3 columns for 2D or 3D points, respectively
+    coordinates: Sequence[Sequence[float]],  # 2D array of curve vertex coordinates with 2 or 3 columns for 2D or 3D points, respectively
     /,
 ) -> None
 ```
 
-Updated on June 26, 2023 01:51:29am UTC
+Updated on January 08, 2025 05:55:58am UTC

@@ -41,9 +41,9 @@ Drawing 2D bezier curves requires using the `P2D` renderer and drawing 3D bezier
 
 ```python
 quadratic_vertices(
-    coordinates: npt.NDArray[np.floating],  # 2D array of quadratic vertex coordinates with 4 or 6 columns for 2D or 3D points, respectively
+    coordinates: Sequence[Sequence[float]],  # 2D array of quadratic vertex coordinates with 4 or 6 columns for 2D or 3D points, respectively
     /,
 ) -> None
 ```
 
-Updated on June 26, 2023 01:48:07am UTC
+Updated on January 08, 2025 05:55:58am UTC

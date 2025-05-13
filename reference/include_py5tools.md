@@ -12,6 +12,11 @@
 * [live_coding.screenshot()](py5tools_live_coding_screenshot): Create a screenshot of the current Sketch window.
 * [live_coding.snapshot()](py5tools_live_coding_snapshot): Create a screenshot of the current Sketch window and a backup copy of the current code.
 * [offline_frame_processing()](py5tools_offline_frame_processing): Process Sketch frames in a separate thread that will minimize the performance impact on the Sketch's main animation thread.
+* [processing.check_library()](py5tools_processing_check_library): Check if a Processing library has been downloaded and stored by py5.
+* [processing.download_library()](py5tools_processing_download_library): Download and store a Processing library.
+* [processing.installed_libraries()](py5tools_processing_installed_libraries): List the Processing libraries stored in your computer's Processing library storage directory.
+* [processing.library_storage_dir()](py5tools_processing_library_storage_dir): Return the location of the Processing library storage directory.
+* [processing.remove_library()](py5tools_processing_remove_library): Remove a previously downloaded and stored Processing library.
 * [register_processing_mode_key()](py5tools_register_processing_mode_key): Register a callable or module when programming in py5's Processing Mode.
 * [save_frames()](py5tools_save_frames): Save a running Sketch's frames to a directory.
 * [screenshot()](py5tools_screenshot): Take a screenshot of a running Sketch.

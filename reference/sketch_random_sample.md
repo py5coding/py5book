@@ -33,10 +33,10 @@ This function's randomness can be influenced by [](sketch_random_seed), and make
 
 ```python
 random_sample(
-    objects: list[Any],  # list of objects to choose from
+    seq: Sequence[Any],  # list of objects to choose from
     size: int = 1,  # number of random items to select
     replace: bool = True,  # whether to select random items with or without replacement
-) -> list[Any]
+) -> Sequence[Any]
 ```
 
-Updated on April 15, 2023 22:56:12pm UTC
+Updated on January 28, 2025 16:45:48pm UTC

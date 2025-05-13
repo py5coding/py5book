@@ -14,9 +14,9 @@ This method is the same as [](sketch_lines) but linked to a `Py5Graphics` object
 
 ```python
 lines(
-    coordinates: npt.NDArray[np.floating],  # 2D array of line coordinates with 4 or 6 columns for 2D or 3D points, respectively
+    coordinates: Sequence[Sequence[float]],  # 2D array of line coordinates with 4 or 6 columns for 2D or 3D points, respectively
     /,
 ) -> None
 ```
 
-Updated on June 26, 2023 01:51:29am UTC
+Updated on January 08, 2025 05:55:58am UTC

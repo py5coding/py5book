@@ -55,6 +55,8 @@ parts:
     title: Generate Noise Values
   - file: how_tos/py5vector_class
     title: Py5Vector Class
+  - file: how_tos/use_processing_libraries
+    title: Use Processing Libraries
   - file: how_tos/pyinstaller
     title: Create PyInstaller Packages
 

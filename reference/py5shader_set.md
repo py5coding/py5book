@@ -42,7 +42,7 @@ Underlying Processing method: [PShader.set](https://processing.org/reference/PSh
 ```python
 set(
     name: str,  # the name of the uniform variable to modify
-    boolvec: JArray(JBoolean),  # modifies all the components of an array/vector uniform variable
+    boolvec: Sequence[bool],  # modifies all the components of an array/vector uniform variable
     ncoords: int,  # number of coordinates per element, max 4
     /,
 ) -> None
@@ -68,38 +68,38 @@ set(
 
 set(
     name: str,  # the name of the uniform variable to modify
-    vec: JArray(JBoolean),  # modifies all the components of an array/vector uniform variable
-    /,
-) -> None
-
-set(
-    name: str,  # the name of the uniform variable to modify
     vec: Py5Vector,  # vector of values to modify all the components of an array/vector uniform variable
     /,
 ) -> None
 
 set(
     name: str,  # the name of the uniform variable to modify
-    vec: npt.NDArray[np.floating],  # 1D numpy array of values to modify all the components of an array/vector uniform variable
+    vec: Sequence[bool],  # modifies all the components of an array/vector uniform variable
     /,
 ) -> None
 
 set(
     name: str,  # the name of the uniform variable to modify
-    vec: npt.NDArray[np.floating],  # 1D numpy array of values to modify all the components of an array/vector uniform variable
+    vec: Sequence[float],  # 1D numpy array of values to modify all the components of an array/vector uniform variable
+    /,
+) -> None
+
+set(
+    name: str,  # the name of the uniform variable to modify
+    vec: Sequence[float],  # 1D numpy array of values to modify all the components of an array/vector uniform variable
     ncoords: int,  # number of coordinates per element, max 4
     /,
 ) -> None
 
 set(
     name: str,  # the name of the uniform variable to modify
-    vec: npt.NDArray[np.integer],  # 1D numpy array of values to modify all the components of an array/vector uniform variable
+    vec: Sequence[int],  # 1D numpy array of values to modify all the components of an array/vector uniform variable
     /,
 ) -> None
 
 set(
     name: str,  # the name of the uniform variable to modify
-    vec: npt.NDArray[np.integer],  # 1D numpy array of values to modify all the components of an array/vector uniform variable
+    vec: Sequence[int],  # 1D numpy array of values to modify all the components of an array/vector uniform variable
     ncoords: int,  # number of coordinates per element, max 4
     /,
 ) -> None
@@ -195,4 +195,4 @@ set(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on January 08, 2025 05:55:58am UTC

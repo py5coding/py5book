@@ -45,9 +45,9 @@ This method can only be used after the shape has been created. Do not use this m
 
 ```python
 set_fills(
-    fills: npt.NDArray[np.int32],  # array of fill colors
+    fills: Sequence[int],  # array of fill colors
     /,
 ) -> None
 ```
 
-Updated on October 09, 2023 23:33:46pm UTC
+Updated on January 08, 2025 05:55:58am UTC

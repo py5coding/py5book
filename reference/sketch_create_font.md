@@ -57,9 +57,9 @@ create_font(
     name: str,  # name of the font to load
     size: float,  # point size of the font
     smooth: bool,  # true for an antialiased font, false for aliased
-    charset: list[chr],  # array containing characters to be generated
+    charset: Sequence[chr],  # characters to be generated
     /,
 ) -> Py5Font
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on January 08, 2025 05:55:58am UTC

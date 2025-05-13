@@ -34,9 +34,9 @@ The `coordinates` parameter should be a numpy array with one row for each line. 
 
 ```python
 lines(
-    coordinates: npt.NDArray[np.floating],  # 2D array of line coordinates with 4 or 6 columns for 2D or 3D points, respectively
+    coordinates: Sequence[Sequence[float]],  # 2D array of line coordinates with 4 or 6 columns for 2D or 3D points, respectively
     /,
 ) -> None
 ```
 
-Updated on June 26, 2023 01:53:06am UTC
+Updated on January 08, 2025 05:55:58am UTC
