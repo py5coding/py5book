@@ -10,6 +10,8 @@ This function ignores [](py5graphics_image_mode).
 
 This method is the same as [](sketch_copy) but linked to a `Py5Graphics` object. To see example code for how it can be used, see [](sketch_copy).
 
+If you want to create a new image with the contents of a rectangular region of a `Py5Graphics` object, check out the [`.get_pixels(x, y, w, h)`](py5graphics_get_pixels) method, where x, y, w, h, are the position and dimensions of the area to be copied. It will return a `Py5Image object`.
+
 Underlying Processing method: PGraphics.copy
 
 ## Signatures
