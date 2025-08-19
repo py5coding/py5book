@@ -92,7 +92,7 @@ make processing_dir=~/INSTALL/processing-4 py5_build_dir=../py5code skip_black=t
 On MacOS, it is slightly different:
 
 ``` bash
-make processing_dir=~/INSTALL/Processing.app/Contents py5_build_dir=../py5code skip_black=true
+make processing_dir=~/INSTALL/Processing.app/Contents/app/resources py5_build_dir=../py5code skip_black=true
 ```
 
 The Makefile uses `realpath`. You may need to install the "coreutils" package if
