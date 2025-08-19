@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.7
+    jupytext_version: 1.17.2
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -116,9 +116,9 @@ To be clear, although you will see a live animation in the Sketch Portal, the Sk
 ```{code-cell} ipython3
 :tags: [remove-output]
 
-portal = py5_tools.sketch_portal(quality=75, scale=1.0)
+# portal = py5_tools.sketch_portal(quality=75, scale=1.0)
 
-portal
+# portal
 ```
 
 You should see a clean and smooth animation. If you are running this through mybinder, the animation quality will be dependent on your having a good internet connection and a well behaved server. If it seems jumpy, try adjusting the quality or the scale. You can also try using the `throttle_frame_rate` parameter to lower the sketch portal's frame to below the Sketch's frame rate. See the documentation for more information.
@@ -130,15 +130,37 @@ You should see a clean and smooth animation. If you are running this through myb
 Check the [frame_rate](/reference/sketch_frame_rate). You should be able to get 30 frames per second for this Sketch. You might be able to get 60 frames per second while running on mybinder, but not all the time.
 
 ```{code-cell} ipython3
-:tags: [remove-cell]
-
+---
+tags: [remove-cell]
+editable: true
+slideshow:
+  slide_type: ''
+---
 time.sleep(10)
 ```
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 py5.get_frame_rate()
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ## Next Steps for Jupyter Lab Users
 
 If you are using Jupyter Lab, after executing the Sketch Portal cell, try right clicking in the output area and selecting `Create New View for Output`. This will create a new panel just for the Sketch Portal. Creating a `New Console for Notebook` and creating a portal there works well also.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+py5.exit_sketch()
+time.sleep(1)
+```
