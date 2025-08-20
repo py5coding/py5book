@@ -20,7 +20,7 @@ Below are the basic requirements for using py5.
 * Python 3.10+
 * Java 17+
 
-Python 3.9 is the minimum Python version but you can use a newer version if you
+Python 3.10 is the minimum Python version but you can use a newer version if you
 wish. Java 17 is the minimum Java version but you can install a newer version
 of that as well. The Java Virtual Machine cannot be a headless JVM.
 
