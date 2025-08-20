@@ -1,6 +1,6 @@
 # What is py5?
 
-Py5 is a creative coding framework for Python 3.9+. Its use and
+Py5 is a creative coding framework for Python 3.10+. Its use and
 functionality is analogous to the widely used
 [Processing](https://processing.org/) framework. It is a Python version
 of [Processing](https://processing.org/).

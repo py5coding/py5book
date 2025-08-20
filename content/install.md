@@ -17,7 +17,7 @@ users should read the [](macos_users) page for more information.
 
 Below are the basic requirements for using py5.
 
-* Python 3.9+
+* Python 3.10+
 * Java 17+
 
 Python 3.9 is the minimum Python version but you can use a newer version if you
@@ -33,7 +33,7 @@ The plugin should work correctly on all computers.
 
 ## Quick Setup
 
-If you already have Java 17 and Python 3.9+ available on your computer, you
+If you already have Java 17 and Python 3.10+ available on your computer, you
 can install py5 with the below command.
 
 ``` bash
