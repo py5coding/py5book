@@ -34,8 +34,8 @@ This function makes a call to the numpy `sin()` function.
 
 ```python
 sin(
-    angle: Union[float, npt.ArrayLike]  # angle in radians
+    angle: Union[float, npt.ArrayLike],  # angle in radians
 ) -> Union[float, npt.NDArray]
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on August 23, 2025 19:59:53pm UTC

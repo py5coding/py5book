@@ -39,8 +39,8 @@ This function makes a call to the numpy `log()` function. If the `n` parameter i
 
 ```python
 log(
-    value: Union[float, npt.ArrayLike]  # number greater than 0.0
+    value: Union[float, npt.ArrayLike],  # number greater than 0.0
 ) -> Union[float, npt.NDArray]
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on August 23, 2025 19:59:53pm UTC

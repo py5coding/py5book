@@ -62,8 +62,8 @@ Calculate the dot product between two vectors.
 
 ```python
 dot(
-    other: Union[Py5Vector, np.ndarray]  # vector to calculate the dot product with
+    other: Union[Py5Vector, np.ndarray],  # vector to calculate the dot product with
 ) -> Union[float, np.ndarray[np.floating]]
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on August 23, 2025 19:59:53pm UTC

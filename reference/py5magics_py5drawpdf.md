@@ -47,8 +47,8 @@ positional arguments:
   height    height of PDF output
   filename  filename for PDF output
 
-optional arguments:
+options:
   --unsafe  allow new variables to enter the user namespace
 ```
 
-Updated on March 06, 2023 03:33:38am UTC
+Updated on August 23, 2025 19:59:53pm UTC

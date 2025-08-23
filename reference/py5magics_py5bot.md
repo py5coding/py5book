@@ -45,11 +45,11 @@ Code used in this cell can reference functions and variables defined in other ce
 ## Arguments
 
 ```python
-optional arguments:
+options:
   -f FILENAME, --filename FILENAME
                         save image to file
   -v VARIABLE, --var VARIABLE
                         assign image to variable
 ```
 
-Updated on March 18, 2024 05:08:14am UTC
+Updated on August 23, 2025 19:59:53pm UTC

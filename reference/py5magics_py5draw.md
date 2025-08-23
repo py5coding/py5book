@@ -50,7 +50,7 @@ positional arguments:
   width                 width of PNG image
   height                height of PNG image
 
-optional arguments:
+options:
   -f FILENAME, --filename FILENAME
                         save image to file
   -v VARIABLE, --var VARIABLE
@@ -60,4 +60,4 @@ optional arguments:
   --unsafe              allow new variables to enter the user namespace
 ```
 
-Updated on December 27, 2023 13:47:02pm UTC
+Updated on August 23, 2025 19:59:53pm UTC

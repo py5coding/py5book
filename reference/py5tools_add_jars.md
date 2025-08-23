@@ -37,8 +37,8 @@ After the JVM has started, the classpath cannot be changed. This function will t
 
 ```python
 add_jars(
-    path: Union[Path, str]  # path to directory containing jar files
+    path: Union[Path, str],  # path to directory containing jar files
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on August 23, 2025 19:59:53pm UTC

@@ -66,8 +66,8 @@ Python supports complex numbers, but such values cannot be passed to py5 drawing
 
 ```python
 sqrt(
-    value: Union[float, npt.NDArray]  # value to calculate the square root of
+    value: Union[float, npt.NDArray],  # value to calculate the square root of
 ) -> Union[float, complex, npt.NDArray]
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on August 23, 2025 19:59:53pm UTC

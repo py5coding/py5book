@@ -35,8 +35,8 @@ After the JVM has started, the classpath cannot be changed. This function will t
 
 ```python
 add_classpath(
-    classpath: Union[Path, str]  # path to Java jar file
+    classpath: Union[Path, str],  # path to Java jar file
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on August 23, 2025 19:59:53pm UTC

@@ -50,8 +50,8 @@ positional arguments:
   height    height of DXF output
   filename  filename for DXF output
 
-optional arguments:
+options:
   --unsafe  allow new variables to enter the user namespace
 ```
 
-Updated on December 27, 2023 13:47:02pm UTC
+Updated on August 23, 2025 19:59:53pm UTC

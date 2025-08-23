@@ -30,8 +30,8 @@ This function makes a call to the numpy `exp()` function.
 
 ```python
 exp(
-    value: Union[float, npt.ArrayLike]  # exponent to raise
+    value: Union[float, npt.ArrayLike],  # exponent to raise
 ) -> Union[float, npt.NDArray]
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on August 23, 2025 19:59:53pm UTC

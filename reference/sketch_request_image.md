@@ -40,8 +40,8 @@ The returned Py5Promise object has an `is_ready` property that will be `True` wh
 
 ```python
 request_image(
-    image_path: Union[str, Path]  # url or file path for image file
+    image_path: Union[str, Path],  # url or file path for image file
 ) -> Py5Promise
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on August 23, 2025 19:59:53pm UTC
