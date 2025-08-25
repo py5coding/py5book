@@ -34,7 +34,7 @@ Resize the Py5Image object to a new height and width. This will modify the Py5Im
 
 To make the image scale proportionally, use 0 as the value for either the `w` or `h` parameter.
 
-The default resize interpolation mode is `BILINEAR`. Alternatively you can interpolate using the `NEAREST_NEIGHBOR` method, which is faster but yields the lowest quality results. You can also use `BICUBIC` interpolation, which is the most computationally intensive but looks the best, particularly for up-scaling operations.
+The default resize interpolation mode is `BILINEAR`. Alternatively you can use the `interpolation_mode` parameter to interpolate using the `NEAREST_NEIGHBOR` method, which is faster but yields lower quality results. You can also use `BICUBIC` interpolation, which is the most computationally intensive but looks the best, particularly for up-scaling operations.
 
 Underlying Processing method: [PImage.resize](https://processing.org/reference/PImage_resize_.html)
 
@@ -55,4 +55,4 @@ resize(
 ) -> None
 ```
 
-Updated on August 23, 2025 20:21:04pm UTC
+Updated on August 25, 2025 04:36:46am UTC
