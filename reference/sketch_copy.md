@@ -33,6 +33,8 @@ Copies a region of pixels from the display window to another area of the display
 
 This function ignores [](sketch_image_mode).
 
+If you want to create a new image with the contents of a rectangular region of the sketch, check out [](sketch_get_pixels) where x, y, w, h, are the position and dimensions of the area to be copied. It will return a `Py5Image` object.
+
 Underlying Processing method: [copy](https://processing.org/reference/copy_.html)
 
 ## Signatures
@@ -66,4 +68,4 @@ copy(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on August 25, 2025 04:42:25am UTC
