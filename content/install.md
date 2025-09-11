@@ -27,9 +27,9 @@ The Java Virtual Machine cannot be a headless JVM.
 
 The best setup for beginners is to use the
 [Thonny Python Editor](https://thonny.org/) and the
-[py5 Thonny plugin](https://github.com/tabreturn/thonny-py5mode), created by
+[py5 Thonny plugin](https://github.com/py5coding/thonny-py5mode), created by
 [@tabreturn](https://github.com/tabreturn). For this route, follow the
-[plugin's installation instructions](https://github.com/tabreturn/thonny-py5mode#instructions).
+[plugin's installation instructions](https://github.com/py5coding/thonny-py5mode#instructions).
 The plugin should work correctly on all computers.
 
 ## Quick Setup
@@ -257,7 +257,7 @@ Python 3.11. This command will also install Jupyter Lab and many of py5's
 required and optional dependencies from Anaconda.
 
 ``` bash
-conda create -n py5coding python=3.11 colour>=0.1.5 jpype1>=1.4 jupyterlab line_profiler>=4.0 matplotlib>=3.7 numpy>=1.24 pillow>=9.5 pip shapely>=2.0 trimesh>=3.23
+conda create -n py5coding python=3.11 colour>=0.1.5 jpype1>=1.6 jupyterlab line_profiler>=4.2 matplotlib>=3.10 numpy>=2.2 pillow>=11.0 pip shapely>=2.0 trimesh>=4.6
 ```
 
 After creating the `py5coding` environment you must \"activate\" it so that the
@@ -300,8 +300,8 @@ python -c "import jdk; print('Java installed to', jdk.install('21'))"
 
 That's it. It will install Java into the hidden directory `.jdk` located in your
 home directory. You may want to set the `$JAVA_HOME` environment variable to
-point to this location, but for this case that isn't necessary because py5
-already knows to look here.
+point to this location, but for this case that isn't usually necessary because
+py5 already knows to look here.
 
 ##### Extra Information About How py5 Finds Java
 
