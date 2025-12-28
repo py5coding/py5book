@@ -568,7 +568,7 @@ Matplotlib users can use this list to customize the aesthetics of
 their charts. Py5 users can also access this inventory of colors
 to customize the aesthetics of a Sketch.
 
-To learn more, refer to the [](/integrations/colors) page.
+To learn more, refer to the Matplotlib Named Colors section of the [](/integrations/colors) page.
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
