@@ -558,6 +558,8 @@ time.sleep(0.5)
 del setup
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 ## Named Colors
 
 Built in to matplotlib is an extensive list of
@@ -566,153 +568,9 @@ Matplotlib users can use this list to customize the aesthetics of
 their charts. Py5 users can also access this inventory of colors
 to customize the aesthetics of a Sketch.
 
-Here is a simple example, referencing each color as a string.
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
-def setup():
-    py5.size(400, 400)
-    py5.background(240)
-    py5.no_stroke()
-
-    # matplotlib base color, magenta
-    py5.fill('m')
-    py5.rect(20, 20, 170, 170)
-
-    # CSS4 colors
-    py5.fill('chartreuse')
-    py5.rect(20, 210, 170, 170)
-
-    # tableau palette
-    py5.fill('tab:orange')
-    py5.rect(210, 20, 170, 170)
-
-    # xkcd color survey
-    py5.fill('xkcd:blue with a hint of purple')
-    py5.rect(210, 210, 170, 170)
-
-    # add some text labels
-    py5.fill('black')
-    py5.text('m', 70, 105)
-    py5.text('chartreuse', 70, 295)
-    py5.text('tab:orange', 255, 105)
-    py5.text('xkcd:blue with a hint of purple', 220, 295)
-
-
-py5.run_sketch()
-```
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
-tags: [remove-cell]
----
-time.sleep(1)
-```
-
-```{code-cell} ipython3
-py5_tools.screenshot()
-```
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
-tags: [remove-cell]
----
-time.sleep(0.5)
-py5.exit_sketch()
-time.sleep(0.5)
-```
+To learn more, refer to the [](/integrations/colors) page.
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
-
-This works well, but it requires you to either remember the names
-of the available colors or to constantly refer back to the list of
-[named colors](https://matplotlib.org/stable/gallery/color/named_colors.html).
-This is an extra challenge for non-english speakers, as well as
-anyone who cannot remember the correct spelling of words like
-"chartreuse."
-
-As an alternative, py5 has a built-in dictionary of the full CSS4
-and xkcd color survey inventories available for your use. Access
-the dictionaries with `py5.css4_colors` and `py5.xkcd_colors`. These
-are especially useful when coding an environment that supports code
-completion, such as Jupyter Notebooks or VSCode. Coders will be
-able to scroll through the list of color names and select the one
-that sounds appropriate for their use case.
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
-def setup():
-    py5.size(400, 400)
-    py5.background(240)
-    py5.no_stroke()
-
-    py5.fill(py5.css4_colors.FIREBRICK)
-    py5.rect(20, 20, 170, 170)
-
-    py5.fill(py5.css4_colors.PALETURQUOISE)
-    py5.rect(20, 210, 170, 170)
-
-    py5.fill(py5.xkcd_colors.PERIWINKLE_BLUE)
-    py5.rect(210, 20, 170, 170)
-
-    py5.fill(py5.xkcd_colors.PALE_MAUVE)
-    py5.rect(210, 210, 170, 170)
-
-    # add some text labels
-    py5.fill(py5.css4_colors.BLACK)
-    py5.text('css4_colors.FIREBRICK', 30, 105)
-    py5.text('css4_colors.PALETURQUOISE', 30, 295)
-    py5.text('xkcd_colors.PERIWINKLE_BLUE', 215, 105)
-    py5.text('xkcd_colors.PALE_MAUVE', 215, 295)
-
-
-py5.run_sketch()
-```
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
-tags: [remove-cell]
----
-time.sleep(1)
-```
-
-```{code-cell} ipython3
-py5_tools.screenshot()
-```
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
-tags: [remove-cell]
----
-time.sleep(0.5)
-py5.exit_sketch()
-time.sleep(0.5)
-```
-
-This final color dictionary feature is added to py5 when py5 is
-built so you can use it without installing matplotlib.
-
-+++
 
 ## Colormap Color Mode
 
