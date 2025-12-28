@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.7
+    jupytext_version: 1.17.2
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -41,7 +41,7 @@ Refer to matplotlib's [Getting Started](https://matplotlib.org/stable/users/gett
 page or [Installation Guide](https://matplotlib.org/stable/users/installing/index.html)
 for more information.
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ## `Figure` Objects
 
@@ -454,6 +454,97 @@ py5.exit_sketch()
 time.sleep(0.5)
 
 del draw
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+## `TextPath` Objects
+
+You can also convert matplotlib TextPath objects to Py5Shape
+objects with [](/reference/sketch_convert_shape). This expands
+py5's font rendering capabilities to include equations and (if
+you have LaTeX installed) LaTeX typography.
+
+To create a `TextPath` object, you'll also need to instantiate
+a matplotlib `FontProperties` object. In the example below, we
+use the DejaVu Sans font to render the LaTeX equation $\sqrt{x^2+1}$
+using the math mode syntax `"$\sqrt{x^2+1}$"`.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+from matplotlib.font_manager import FontProperties
+from matplotlib.textpath import TextPath
+
+fp = FontProperties(family="DejaVu Sans", style="normal", size=50)
+text_path = TextPath((0, 0), r"$\sqrt{x^2+1}$", prop=fp, usetex=True)
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+The `text_path` object can be converted to a `Py5Shape` object by passing
+it to the [](/reference/sketch_convert_shape) method.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+def setup():
+    py5.size(250, 100)
+
+    py5.no_stroke()
+    py5.fill(0)
+    s = py5.convert_shape(text_path)
+
+    py5.shape(s, 30, 70)
+
+
+py5.run_sketch()
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+time.sleep(2)
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+The rendered equation is beautiful.
+
+Observe that there is no support for text alignment. You'll need to
+incoporate the proper adjustments into your code.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+py5_tools.screenshot()
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+time.sleep(0.5)
+py5.exit_sketch()
+time.sleep(0.5)
+
+del setup
 ```
 
 ## Named Colors
