@@ -465,6 +465,17 @@ objects with [](/reference/sketch_convert_shape). This expands
 py5's font rendering capabilities to include equations and (if
 you have LaTeX installed) LaTeX typography.
 
+For this to work, you'll also need to install the Python libraries
+shapely and svgpathtools. Install them with pip or with conda.
+
+```bash
+pip install shapely svgpathtools
+```
+
+```bash
+conda install shapely svgpathtools -c conda-forge
+```
+
 To create a `TextPath` object, you'll also need to instantiate
 a matplotlib `FontProperties` object. In the example below, we
 use the DejaVu Sans font to render the LaTeX equation $\sqrt{x^2+1}$
