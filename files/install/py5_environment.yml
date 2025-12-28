@@ -12,6 +12,7 @@ dependencies:
   - pip
   - python=3.11
   - shapely>=2.0
+  - svgpathtools>=1.7
   - trimesh>=4.6
   - pip:
       - py5[jupyter]

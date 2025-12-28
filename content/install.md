@@ -61,7 +61,8 @@ pip install py5[extras]
 The `[jupyter]` or `[extras]` suffixes tell the Python package installer to
 install py5's optional dependencies. If you have py5 installed already you can
 alternatively use `pip install py5jupyter` instead of `[jupyter]`, or
-`pip install colour matplotlib py5jupyter shapely trimesh` instead of `[extras]`.
+`pip install colour matplotlib py5jupyter shapely svgpathtools trimesh` instead
+of `[extras]`.
 
 ### Jupyter Notebook Kernels
 
@@ -162,6 +163,7 @@ dependencies:
   - pip
   - python=3.11
   - shapely>=2.0
+  - svgpathtools>=1.7
   - trimesh>=4.6
   - pip:
       - py5[jupyter]
@@ -257,7 +259,7 @@ Python 3.11. This command will also install Jupyter Lab and many of py5's
 required and optional dependencies from Anaconda.
 
 ``` bash
-conda create -n py5coding python=3.11 colour>=0.1.5 jpype1>=1.6 jupyterlab line_profiler>=4.2 matplotlib>=3.10 numpy>=2.2 pillow>=11.0 pip shapely>=2.0 trimesh>=4.6
+conda create -n py5coding python=3.11 colour>=0.1.5 jpype1>=1.6 jupyterlab line_profiler>=4.2 matplotlib>=3.10 numpy>=2.2 pillow>=11.0 pip shapely>=2.0 svgpathtools>=1.7 trimesh>=4.6
 ```
 
 After creating the `py5coding` environment you must \"activate\" it so that the
