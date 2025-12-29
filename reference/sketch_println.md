@@ -26,6 +26,8 @@ Print text or other values to the screen. For a Sketch running outside of a Jupy
 
 When running a Sketch asynchronously through Jupyter Notebook, any `print` statements using Python's builtin function will always appear in the output of the currently active cell. This will rarely be desirable, as the active cell will keep changing as the user executes code elsewhere in the notebook. This method was created to provide users with print functionality in a Sketch without having to cope with output moving from one cell to the next.
 
+The `end`, `flush`, `sep`, and `stderr` parameters behave the same as they do in Python's builtin `print` function, with some minor limitations depending on the specific print stream in use. For example, the `flush` parameter will be ignored when running a Sketch through a Jupyter Notebook or an IPython terminal, but may be very useful if your print stream writes to a file.
+
 Use [](sketch_set_println_stream) to customize the behavior of `println()`.
 
 ## Signatures
@@ -35,8 +37,9 @@ println(
     *args,
     sep: str = " ",  # string inserted between values, defaults to a space
     end: str = "\n",  # string appended after the last value, defaults to newline character
-    stderr: bool = False  # use stderr instead of stdout
+    stderr: bool = False,  # use stderr instead of stdout
+    flush: bool = False  # flush the print stream immediately
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on December 28, 2025 06:46:04am UTC

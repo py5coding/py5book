@@ -10,6 +10,8 @@ Note that if only one value is provided to `color()`, it will be interpreted as 
 
 Note that when using hexadecimal notation, it is not necessary to use `color()`, as in: `c = 0x006699`
 
+If you have matplotlib installed, you can  create colors using matplotlib's named colors by passing a color name as a string to this method. See the list of named colors in the [Matplotlib Named Colors reference](https://matplotlib.org/stable/gallery/color/named_colors.html). For more information, see the Matplotlib Named Colors section in the <a href="/integrations/colors.html#matplotlib-named-colors">All About Colors</a> integration documentation page. There's also other color related information on that page; go read it to learn more about various ways py5 makes it easy for you to work with color.
+
 This method is the same as [](sketch_color) but linked to a `Py5Graphics` object. To see example code for how it can be used, see [](sketch_color).
 
 Underlying Processing method: PGraphics.color
@@ -87,4 +89,4 @@ color(
 ) -> int
 ```
 
-Updated on October 06, 2023 13:36:04pm UTC
+Updated on December 28, 2025 07:16:49am UTC
