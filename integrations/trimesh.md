@@ -242,8 +242,6 @@ editable: true
 slideshow:
   slide_type: ''
 ---
-foobar = 42
-
 rot_z = 0
 
 def setup():
@@ -343,8 +341,6 @@ editable: true
 slideshow:
   slide_type: ''
 ---
-foobar = 42
-
 rot_z = 0
 
 def setup():
@@ -432,8 +428,6 @@ editable: true
 slideshow:
   slide_type: ''
 ---
-foobar = 42
-
 rot_z = 0
 
 def setup():
