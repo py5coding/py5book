@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.3
+    jupytext_version: 1.17.2
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -34,7 +34,7 @@ pip install trimesh[easy]
 
 Refer to the [Trimesh Installation page](https://trimesh.org/install.html) for more information about Trimesh's dependencies and installation options.
 
-Development of py5's integration code was done with Trimesh version 3.23. Other versions, including the 4.x releases, seem to work just fine.
+The original development of py5's integration code was done with Trimesh version 3.23. Other versions, including the 4.x releases, seem to work just fine.
 
 Installing [OpenSCAD](https://openscad.org/) or [Blender](https://www.blender.org/) on your computer may also be useful. Trimesh can use these to perform boolean operations on 3D objects.
 
@@ -191,13 +191,48 @@ Neat, huh? The [](/reference/sketch_convert_shape) method did all the heavy lift
 Note that `trimesh.Trimesh` objects can have additional texture maps for things such as surface normals or metallic roughness. Since the
 default py5 polygon shader cannot make use of these texture maps, py5's [](/reference/sketch_convert_shape) method will not add them to the created `Py5Shape` object. One could write additional code to make use of them, however.
 
+The [](/reference/sketch_convert_shape) method provides a few optional customization parameters, one of which is for textures.
+
+Our Strawberry model in [glTF format](https://en.wikipedia.org/wiki/GlTF) has embedded textures that are managed for you in [](/reference/sketch_convert_shape). Not every 3D model format has embedded textures though. If the model file was a [Wavefront OBJ file](https://en.wikipedia.org/wiki/Wavefront_.obj_file), you would need to apply the texture to the 3D mesh separately.
+
+One way to do that is with the [](/reference/py5shape_set_texture) method, called after converting the model to a `Py5Shape` instance [](/reference/sketch_convert_shape).
+
+Alternatively, you can use the [](/reference/sketch_convert_shape) method's `texture` keyword argument, like this:
+
+```python
+py5.convert_shape(strawberry_obj, texture=strawberry_texture)
+```
+
+Putting that in context, our first Strawberry model example could have been implemented using the following `setup()` function:
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+strawberry_obj = trimesh.load('models/Strawberry_obj.obj')
+strawberry_texture = Image.open('models/Strawberry_basecolor.jpg')
+
+
+def setup():
+    global strawberry
+    py5.size(300, 500, py5.P3D)
+    strawberry = py5.convert_shape(strawberry_obj, texture=strawberry_texture)
+    assert isinstance(strawberry, py5.Py5Shape)
+
+    # increase the model's scale and change its orientation
+    strawberry.scale(40)
+    strawberry.rotate_z(py5.radians(180))
+```
+
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ## Trimesh Primitives
 
 Trimesh has a set of [primitive objects](https://trimesh.org/trimesh.primitives.html) such as [Box](https://trimesh.org/trimesh.primitives.html#trimesh.primitives.Box), [Capsule](https://trimesh.org/trimesh.primitives.html#trimesh.primitives.Capsule), [Cylinder](https://trimesh.org/trimesh.primitives.html#trimesh.primitives.Cylinder), and [Sphere](https://trimesh.org/trimesh.primitives.html#trimesh.primitives.Sphere).
 
-The arrangement of triangles in a Trimesh Sphere is different from the arrangement created by py5's [](/reference/sketch_sphere) method. Capsules are kind of like cylinders with two half-spheres on each end. These primitives extend the basic shapes you can work with in py5. They are also great for boolean operations to construct complex geometries.
+A Trimesh sphere is an icosphere and has a different arrangement of triangles than the arrangement created by py5's [](/reference/sketch_sphere) method. Capsules are kind of like cylinders with two half-spheres on each end. These primitives extend the basic shapes you can work with in py5. They are also great for boolean operations to construct complex geometries.
 
 Let's create a simple example showcasing these objects.
 
@@ -225,7 +260,7 @@ def setup():
     capsule = py5.convert_shape(Capsule(70, 40, sections=12))
     capsule.translate(0, 150, 0)
     primitives.add_child(capsule)
-    
+
     cylinder = py5.convert_shape(Cylinder(50, 80, sections=12))
     cylinder.translate(-150, 0, 0)
     primitives.add_child(cylinder)
@@ -298,9 +333,181 @@ time.sleep(0.5)
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
+Observe that the objects are drawn in a way that differs from how Processing would render 3D shapes. Processing would draw edge lines for every triangle in the 3D mesh. Here, the edge lines are skipped for adjacent and coplanar triangles. Triangles that are adjacent and coplanar are grouped together into what we call "facets". By default, edge lines are only drawn for the Trimesh primitive's facets. If you wish to disable this feature, set the `facet_edges` keyword argument to `False`. See the below example:
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+rot_z = 0
+
+def setup():
+    global primitives
+    py5.size(500, 500, py5.P3D)
+
+    py5.stroke_weight(1.5)
+
+    primitives = py5.create_shape(py5.GROUP)
+
+    box = py5.convert_shape(Box((80, 120, 70)), facet_edges=False)
+    box.translate(150, 0, 0)
+    primitives.add_child(box)
+
+    # NOTE: Trimesh's Capsule `sections` parameter might have a bug
+    capsule = py5.convert_shape(Capsule(70, 40, sections=12), facet_edges=False)
+    capsule.translate(0, 150, 0)
+    primitives.add_child(capsule)
+
+    cylinder = py5.convert_shape(Cylinder(50, 80, sections=12), facet_edges=False)
+    cylinder.translate(-150, 0, 0)
+    primitives.add_child(cylinder)
+
+    sphere = py5.convert_shape(Sphere(75, subdivisions=2), facet_edges=False)
+    sphere.translate(0, -150, 0)
+    primitives.add_child(sphere)
+
+
+## draw method the same as before
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+py5.run_sketch()
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+time.sleep(4)
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+The result is a bit harder to read when edge lines are drawn for every triangle, but the `facet_edges` keyword argument is available for when this is what you want.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+py5_tools.screenshot()
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+time.sleep(0.5)
+py5.exit_sketch()
+time.sleep(0.5)
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+You may also wish to limit edge lines to only parts of the shape where the triangles form a more significant angle. For that, use the `min_edge_angle` keyword argument, with the minimum angle expressed in radians.
+
+The below example adds the `min_edge_angle` keyword argument to the capsule, cylinder, and sphere. We also increased the cylinder's sections to give a nicer result.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+rot_z = 0
+
+def setup():
+    global primitives
+    py5.size(500, 500, py5.P3D)
+
+    py5.stroke_weight(1.5)
+
+    primitives = py5.create_shape(py5.GROUP)
+
+    box = py5.convert_shape(Box((80, 120, 70)))
+    box.translate(150, 0, 0)
+    primitives.add_child(box)
+
+    # NOTE: Trimesh's Capsule `sections` parameter might have a bug
+    capsule = py5.convert_shape(Capsule(70, 40, sections=12), min_edge_angle=0.1)
+    capsule.translate(0, 150, 0)
+    primitives.add_child(capsule)
+
+    cylinder = py5.convert_shape(Cylinder(50, 80, sections=42), min_edge_angle=0.15)
+    cylinder.translate(-150, 0, 0)
+    primitives.add_child(cylinder)
+
+    sphere = py5.convert_shape(Sphere(75, subdivisions=2), min_edge_angle=0.175)
+    sphere.translate(0, -150, 0)
+    primitives.add_child(sphere)
+
+
+## draw method the same as before
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+py5.run_sketch()
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+time.sleep(4)
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+And here's what that looks like. Observe the capsule is now drawn with concentric ring edge lines. The cylinder has edge lines on its end caps but not its sides. The sphere is missing edge lines for some but not all of its triangles.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+py5_tools.screenshot()
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+time.sleep(0.5)
+py5.exit_sketch()
+time.sleep(0.5)
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 A final comment on drawing styles: Trimesh objects can have their own drawing style information ([ColorVisuals](https://trimesh.org/trimesh.visual.color.html#trimesh.visual.color.ColorVisuals)) instead of texture-based styles ([TextureVisuals](https://trimesh.org/trimesh.visual.texture.html#trimesh.visual.texture.TextureVisuals)). If [](/reference/sketch_convert_shape) detects a`ColorVisuals` object, it will use that drawing style information instead of py5's active drawing style.
 
-Also, be aware that some Trimesh library operations seem to add `ColorVisuals` objects to their output. This can be a bit confusing because your calls to py5's style methods such as [](/reference/sketch_stroke) and [](/reference/sketch_fill) will have no effect. Be aware of this possibility to avoid coding frustrations. If you encounter this situation, one easy way to address this is to call the [](/reference/py5shape_disable_style) method to remove Trimesh's drawing style settings from the `Py5Shape` object and take control of the drawing style.
+Some Trimesh library operations seem to add `ColorVisuals` objects to their output. This can be a bit confusing because your calls to py5's style methods such as [](/reference/sketch_stroke) and [](/reference/sketch_fill) will have no effect. Be aware of this possibility to avoid coding frustrations. If you encounter this situation, one easy way to address this is to call the [](/reference/py5shape_disable_style) method to remove Trimesh's drawing style settings from the `Py5Shape` object and take control of the drawing style.
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
@@ -450,6 +657,85 @@ time.sleep(0.5)
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
+The [](/reference/sketch_convert_shape) method provides an optional parameter for filling the interior of [trimesh.path.Path2D](https://trimesh.org/trimesh.path.html#trimesh.path.Path2D) and [trimesh.path.Path3D](https://trimesh.org/trimesh.path.html#trimesh.path.Path3D) objects.
+
+Trimesh `Path2D` and `Path3D` objects can have stroke colors but they have no concept of filled lines like py5 does. By default, `Path2D` and `Path3D` objects will never have fill. Pass `True` to the optional keyword argument `lines_allow_fill` to change that.
+
+Using this feature, our previous sliced Strawberry example would look like this:
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+def setup():
+    global strawberry
+    py5.size(300, 500, py5.P3D)
+
+    py5.fill(py5.xkcd_colors.STRAWBERRY, 64)
+    
+    # convert each slices into a Py5Shape object
+    strawberry_slices = [
+        # use `lines_allow_fill` to create filled slices
+        py5.convert_shape(slice, lines_allow_fill=True)
+        for slice in strawberry_slices_3d
+    ]
+    # assemble the Py5Shape objects into a GROUP Py5Shape object
+    strawberry = py5.create_shape(py5.GROUP)
+    for slice in strawberry_slices:
+        strawberry.add_child(slice)
+
+    # increase the model's scale and change its orientation
+    strawberry.scale(50)
+    strawberry.set_stroke_weight(0.025)
+    strawberry.rotate_z(-py5.radians(90))
+
+
+def draw():
+    global y_rot
+    y_rot += 1
+
+    py5.background(255)
+
+    py5.translate(225, 400, 0)
+    py5.rotate_z(py5.radians(-25))
+    py5.rotate_x(py5.radians(-25))
+    py5.rotate_y(py5.radians(y_rot))
+
+    py5.shape(strawberry)
+
+
+py5.run_sketch()
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+The partially transparent fill has interesting effect:
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+py5_tools.screenshot()
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+time.sleep(0.5)
+py5.exit_sketch()
+time.sleep(0.5)
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 ## `PointCloud` Objects
 
 Finally, py5's [](/reference/sketch_convert_shape) method supports [trimesh.PointCloud](https://trimesh.org/trimesh.html#trimesh.PointCloud) objects. To make this interesting, let's create a `trimesh.PointCloud` object from the Strawberry model's vertices.
@@ -522,124 +808,6 @@ py5_tools.screenshot()
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 The point cloud is denser in areas where there are more vertices.
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
-tags: [remove-cell]
----
-time.sleep(0.5)
-py5.exit_sketch()
-time.sleep(0.5)
-```
-
-+++ {"editable": true, "slideshow": {"slide_type": ""}}
-
-## Optional Conversion Parameters
-
-The [](/reference/sketch_convert_shape) method provides a few optional customization parameters for Trimesh.
-
-The first optional parameter is for textures. Our Strawberry model in [glTF format](https://en.wikipedia.org/wiki/GlTF) has embedded textures that are managed for you in [](/reference/sketch_convert_shape). Not every 3D model format has embedded textures though. If the model file was a [Wavefront OBJ file](https://en.wikipedia.org/wiki/Wavefront_.obj_file), you would need to apply the texture to the 3D mesh separately.
-
-One way to do that is with the [](/reference/py5shape_set_texture) method, called after converting the model to a `Py5Shape` instance [](/reference/sketch_convert_shape).
-
-Alternatively, you can use the [](/reference/sketch_convert_shape) method's `texture` keyword argument, like this:
-
-```python
-py5.convert_shape(strawberry_obj, texture=strawberry_texture)
-```
-
-Putting that in context, our first Strawberry model example could have been implemented using the following `setup()` function:
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
-strawberry_obj = trimesh.load('models/Strawberry_obj.obj')
-strawberry_texture = Image.open('models/Strawberry_basecolor.jpg')
-
-
-def setup():
-    global strawberry
-    py5.size(300, 500, py5.P3D)
-    strawberry = py5.convert_shape(strawberry_obj, texture=strawberry_texture)
-    assert isinstance(strawberry, py5.Py5Shape)
-
-    # increase the model's scale and change its orientation
-    strawberry.scale(40)
-    strawberry.rotate_z(py5.radians(180))
-```
-
-+++ {"editable": true, "slideshow": {"slide_type": ""}}
-
-The other optional parameter is for filling the interior of [trimesh.path.Path2D](https://trimesh.org/trimesh.path.html#trimesh.path.Path2D) and [trimesh.path.Path3D](https://trimesh.org/trimesh.path.html#trimesh.path.Path3D) objects.
-
-Trimesh `Path2D` and `Path3D` objects can have stroke colors but they have no concept of filled lines like py5 does. By default, `Path2D` and `Path3D` objects will never have fill. Pass `True` to the optional keyword argument `lines_allow_fill` to change that.
-
-Using this feature, our previous sliced Strawberry example would look like this:
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
-def setup():
-    global strawberry
-    py5.size(300, 500, py5.P3D)
-
-    py5.fill(py5.xkcd_colors.STRAWBERRY, 64)
-    
-    # convert each slices into a Py5Shape object
-    strawberry_slices = [
-        # use `lines_allow_fill` to create filled slices
-        py5.convert_shape(slice, lines_allow_fill=True)
-        for slice in strawberry_slices_3d
-    ]
-    # assemble the Py5Shape objects into a GROUP Py5Shape object
-    strawberry = py5.create_shape(py5.GROUP)
-    for slice in strawberry_slices:
-        strawberry.add_child(slice)
-
-    # increase the model's scale and change its orientation
-    strawberry.scale(50)
-    strawberry.set_stroke_weight(0.025)
-    strawberry.rotate_z(-py5.radians(90))
-
-
-def draw():
-    global y_rot
-    y_rot += 1
-
-    py5.background(255)
-
-    py5.translate(225, 400, 0)
-    py5.rotate_z(py5.radians(-25))
-    py5.rotate_x(py5.radians(-25))
-    py5.rotate_y(py5.radians(y_rot))
-
-    py5.shape(strawberry)
-
-
-py5.run_sketch()
-```
-
-+++ {"editable": true, "slideshow": {"slide_type": ""}}
-
-The partially transparent fill has interesting effect:
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
-py5_tools.screenshot()
-```
 
 ```{code-cell} ipython3
 ---

@@ -30,7 +30,7 @@ Downloaded libraries will be saved in the Processing library storage directory. 
 ## Signatures
 
 ```python
-installed_libraries() -> list[str]
+installed_libraries() -> set[str]
 ```
 
-Updated on April 18, 2025 05:23:11am UTC
+Updated on August 23, 2025 19:59:53pm UTC

@@ -102,6 +102,8 @@ When using hexadecimal notation to specify a color, use "`0x`" before the values
 
 When using web color notation to specify a color, create a string beginning with the "`#`" character followed by three, four, six, or eight characters. The example colors `"#D93"` and `"#DD9933"` specify red, green, and blue values (in that order) for the color and assume the color has no transparency. The example colors `"#D93F"` and `"#DD9933FF"` specify red, green, blue, and alpha values (in that order) for the color. Notice that in web color notation the alpha channel is last, which is consistent with CSS colors, and in hexadecimal notation the alpha channel is first, which is consistent with Processing color values.
 
+If you have matplotlib installed, you can  create colors using matplotlib's named colors by passing a color name as a string to this method. See the list of named colors in the [Matplotlib Named Colors reference](https://matplotlib.org/stable/gallery/color/named_colors.html). For more information, see the Matplotlib Named Colors section in the <a href="/integrations/colors.html#matplotlib-named-colors">All About Colors</a> integration documentation page. There's also other color related information on that page; go read it to learn more about various ways py5 makes it easy for you to work with color.
+
 Underlying Processing method: [color](https://processing.org/reference/color_.html)
 
 ## Signatures
@@ -182,4 +184,4 @@ color(
 ) -> int
 ```
 
-Updated on October 06, 2023 13:36:04pm UTC
+Updated on December 28, 2025 07:16:49am UTC

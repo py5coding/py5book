@@ -57,8 +57,8 @@ Measure the angle between two vectors.
 
 ```python
 angle_between(
-    other: Union[Py5Vector, np.ndarray]  # vector to measure angle between
+    other: Union[Py5Vector, np.ndarray],  # vector to measure angle between
 ) -> Union[float, np.ndarray[np.floating]]
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on August 23, 2025 19:59:53pm UTC

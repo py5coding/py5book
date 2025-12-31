@@ -30,8 +30,8 @@ This function makes a call to the numpy `floor()` function.
 
 ```python
 floor(
-    value: Union[float, npt.ArrayLike]  # number to round down
+    value: Union[float, npt.ArrayLike],  # number to round down
 ) -> Union[int, npt.NDArray]
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on August 23, 2025 19:59:53pm UTC

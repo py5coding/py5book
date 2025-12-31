@@ -40,8 +40,8 @@ Calculate the vector cross product of two 3D vectors. If one of the vectors is a
 
 ```python
 cross(
-    other: Union[Py5Vector, np.ndarray]  # 2D or 3D vector to calculate the cross product with
+    other: Union[Py5Vector, np.ndarray],  # 2D or 3D vector to calculate the cross product with
 ) -> Union[float, Py5Vector, np.ndarray[np.floating]]
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on August 23, 2025 19:59:53pm UTC

@@ -17,24 +17,25 @@ users should read the [](macos_users) page for more information.
 
 Below are the basic requirements for using py5.
 
-* Python 3.9+
-* Java 17+
+* Python 3.10+
+* Java 17+ (but preferably Java 21+)
 
-Python 3.9 is the minimum Python version but you can use a newer version if you
-wish. Java 17 is the minimum Java version but you can install a newer version
-of that as well. The Java Virtual Machine cannot be a headless JVM.
+Python 3.10 is the minimum Python version but you can use a newer version if you
+wish. Java 17 is the minimum Java version but these instructions will guide you
+to install Java 21 instead to prepare you for a future when Java 21 is required.
+The Java Virtual Machine cannot be a headless JVM.
 
 The best setup for beginners is to use the
 [Thonny Python Editor](https://thonny.org/) and the
-[py5 Thonny plugin](https://github.com/tabreturn/thonny-py5mode), created by
+[py5 Thonny plugin](https://github.com/py5coding/thonny-py5mode), created by
 [@tabreturn](https://github.com/tabreturn). For this route, follow the
-[plugin's installation instructions](https://github.com/tabreturn/thonny-py5mode#instructions).
+[plugin's installation instructions](https://github.com/py5coding/thonny-py5mode#instructions).
 The plugin should work correctly on all computers.
 
 ## Quick Setup
 
-If you already have Java 17 and Python 3.9+ available on your computer, you
-can install py5 with the below command.
+If you already have at least Java 17 installed and have Python 3.10+ available
+on your computer, you can install py5 with the below command.
 
 ``` bash
 pip install py5
@@ -60,7 +61,8 @@ pip install py5[extras]
 The `[jupyter]` or `[extras]` suffixes tell the Python package installer to
 install py5's optional dependencies. If you have py5 installed already you can
 alternatively use `pip install py5jupyter` instead of `[jupyter]`, or
-`pip install colour matplotlib py5jupyter shapely trimesh` instead of `[extras]`.
+`pip install colour matplotlib py5jupyter shapely svgpathtools trimesh` instead
+of `[extras]`.
 
 ### Jupyter Notebook Kernels
 
@@ -134,7 +136,7 @@ command:
 conda env create -n py5coding -f http://py5coding.org/files/install/py5_environment.yml
 ```
 
-Feel free to replace `py5coding` with your prefered name for the
+Feel free to replace `py5coding` with your preferred name for the
 Anaconda environment.
 
 If you don't like using the command line you can also download
@@ -151,17 +153,18 @@ name: py5coding
 channels:
   - conda-forge
 dependencies:
-  - python=3.11
   - colour>=0.1.5
-  - jpype1>=1.4
+  - jpype1>=1.6
   - jupyterlab
-  - line_profiler>=4.0
-  - matplotlib>=3.7
-  - numpy>=1.24
-  - pillow>=9.5
+  - line_profiler>=4.2
+  - matplotlib>=3.10
+  - numpy>=2.2
+  - pillow>=11.0
   - pip
+  - python=3.11
   - shapely>=2.0
-  - trimesh>=3.23
+  - svgpathtools>=1.7
+  - trimesh>=4.6
   - pip:
       - py5[jupyter]
 ```
@@ -174,9 +177,9 @@ When the environment is active, you will see the environment name
 conda activate py5coding
 ```
 
-You will need to install Java 17 if you don't have it already. Before
-attempting an installation, first check to see if you already have it. You can
-do this from a terminal or DOS window using the command `java -version`.
+You will need to install Java if you don't have it already. Before attempting an
+installation, first check to see if you already have it. You can do this from a
+terminal or DOS window using the command `java -version`.
 
 ``` bash
 java -version
@@ -190,9 +193,18 @@ OpenJDK Runtime Environment 21.9 (build 17.0.2+8)
 OpenJDK 64-Bit Server VM 21.9 (build 17.0.2+8, mixed mode, sharing)
 ```
 
-If you get an error or see the version number is something like 1.8 or 11.0.14,
-you will need to install or upgrade Java. If your Java installation is a
-headless JVM, the output of `java -version` may not indicate this but py5 will
+or better yet, like this:
+
+``` text
+openjdk version "21.0.8" 2025-07-15
+OpenJDK Runtime Environment (Red_Hat-21.0.8.0.9-1) (build 21.0.8+9)
+OpenJDK 64-Bit Server VM (Red_Hat-21.0.8.0.9-1) (build 21.0.8+9, mixed mode, sharing)
+```
+
+The important part is that the version number is 17 or more (but preferably 21
+or more). If you get an error or see the version number is something like 1.8 or
+11.0.14, you will need to install or upgrade Java. If your Java installation is
+a headless JVM, the output of `java -version` may not indicate this but py5 will
 later raise an Exception when you import the py5 library.
 
 You can install Java any way you like, but note that installing Java through
@@ -205,14 +217,14 @@ into your Anaconda environment using `pip install`:
 pip install install-jdk
 ```
 
-Then use this next command to install Java 17.
+Then use this next command to install Java 21.
 
 ``` bash
-python -c "import jdk; print('Java installed to', jdk.install('17'))"
+python -c "import jdk; print('Java installed to', jdk.install('21'))"
 ```
 
 It isn't necessary to set the `JAVA_HOME` environment variable, but if it is
-already set, you will need to make sure it is set to a Java 17 installation
+already set, you will need to make sure it is set to your Java installation
 because py5 will always use the version that `JAVA_HOME` points to, even if
 there is a newer version available elsewhere on your machine. If it is set
 incorrectly, py5 will provide you with an error message with some debugging
@@ -247,7 +259,7 @@ Python 3.11. This command will also install Jupyter Lab and many of py5's
 required and optional dependencies from Anaconda.
 
 ``` bash
-conda create -n py5coding python=3.11 colour>=0.1.5 jpype1>=1.4 jupyterlab line_profiler>=4.0 matplotlib>=3.7 numpy>=1.24 pillow>=9.5 pip shapely>=2.0 trimesh>=3.23
+conda create -n py5coding python=3.11 colour>=0.1.5 jpype1>=1.6 jupyterlab line_profiler>=4.2 matplotlib>=3.10 numpy>=2.2 pillow>=11.0 pip shapely>=2.0 svgpathtools>=1.7 trimesh>=4.6
 ```
 
 After creating the `py5coding` environment you must \"activate\" it so that the
@@ -261,7 +273,7 @@ conda activate py5coding
 
 #### Install Java
 
-You will need to have Java 17 (or later) installed on your computer.
+You will need to have Java 17 (but preferably Java 21) installed on your computer.
 
 There are many avenues for doing this, starting with the [detailed but not
 particularly readable instructions on the official java.com website](https://java.com/en/download/help/download_options.html).
@@ -269,10 +281,11 @@ You can use any method you like so long as it works and the `java -version`
 command gives the correct results.
 
 ```{important}
-It is important that you have Java 17 installed and available because
-Processing 4 and therefore py5 both depend on it. If now or in the future you
-have the wrong version, you will see an error message stating that code \"has
-been compiled by a more recent version of the Java Runtime.\"
+It is important that you have at least Java 17 installed and available because
+Processing 4 and therefore py5 both depend on it. In the somewhat near future,
+Java 21 will be required. If now or in the future you have the wrong version,
+you will see an error message stating that code \"has been compiled by a more
+recent version of the Java Runtime.\"
 ```
 
 For your convenience, py5 is designed to be compatible with the [Python library
@@ -280,17 +293,17 @@ install-jdk](https://github.com/jyksnw/install-jdk). This library can download
 and install the correct version of Java and will put it in a location that py5
 will check when it is imported. Enter these two commands into the command
 prompt to install [install-jdk](https://github.com/jyksnw/install-jdk) and then
-install Java 17.
+install Java 21.
 
 ``` bash
 pip install install-jdk
-python -c "import jdk; print('Java installed to', jdk.install('17'))"
+python -c "import jdk; print('Java installed to', jdk.install('21'))"
 ```
 
 That's it. It will install Java into the hidden directory `.jdk` located in your
 home directory. You may want to set the `$JAVA_HOME` environment variable to
-point to this location, but for this case that isn't necessary because py5
-already knows to look here.
+point to this location, but for this case that isn't usually necessary because
+py5 already knows to look here.
 
 ##### Extra Information About How py5 Finds Java
 
@@ -304,7 +317,7 @@ information will help you fix problems if py5 cannot be imported properly.
 1. If the `$JAVA_HOME` environment variable is properly set on your computer,
 you have communicated to both jpype and py5 that this is the installation of
 Java that you want to use. The JVM startup process will proceed using that
-version of Java, but if it is not Java 17, you will get an error.
+version of Java, but if it is not at least Java 17, you will get an error.
 
 2. The [jpype library](https://jpype.readthedocs.io/en/latest/userguide.html#path-to-the-jvm)
 has a function called `getDefaultJVMPath()` that py5 relies on to search the
@@ -322,10 +335,10 @@ your home (`$HOME`) directory for the `.jdk` and `.jre` subdirectories that
 [Python library install-jdk](https://github.com/jyksnw/install-jdk) installs
 Java into and search through both to find a sufficient Java installation to use.
 
-5. If Java 17 isn't found, you will get an error. You will also get an error if
-the architecture (32 bit vs 64 bit) of your Python installation and your Java
-installation are not the same. If you get an error, you will also see some
-helpful debug information that you can use to address your situation.
+5. If Java 17 or later isn't found, you will get an error. You will also get an
+error if the architecture (32 bit vs 64 bit) of your Python installation and
+your Java installation are not the same. If you get an error, you will also see
+some helpful debug information that you can use to address your situation.
 
 #### Install py5 library
 

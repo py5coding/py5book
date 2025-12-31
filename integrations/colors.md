@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.3
+    jupytext_version: 1.17.2
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -20,26 +20,191 @@ This page is a collection of all of py5's color-related integrations with other
 Python libraries.
 
 In addition to what is documented here, the [](/integrations/matplotlib) page
-documents a few color-related matplotlib contributions. Scroll to the bottom
-of the page to read about Named Colors and a new Colormap Color Mode.
-
+documents a color-related matplotlib contribution for color gradients. Scroll
+to the bottom of the page to read about the Colormap Color Mode.
 
 ## Setup
 
 To use all of the features documented on this page, you'll need to install the
-[colour](https://pypi.org/project/colour/) library with pip or with conda.
+[colour](https://pypi.org/project/colour/) and [matplotlib](https://matplotlib.org/)
+libraries with pip or with conda.
 
 ```bash
-pip install colour
+pip install colour matplotlib
 ```
 
 ```bash
-conda install colour -c conda-forge
+conda install colour matplotlib -c conda-forge
 ```
 
-For more information, refer to the [colour library's documentation on github](https://github.com/vaab/colour).
+For more information, refer to the [colour library's documentation on github](https://github.com/vaab/colour)
+or the [matplotlib](https://matplotlib.org/) website.
+
+```{code-cell} ipython3
+from colour import Color
+
+import py5_tools
+import py5
+```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+<a name="matplotlib-named-colors"></a>
+## Matplotlib Named Colors
+
+Built in to matplotlib is an extensive list of
+[named colors](https://matplotlib.org/stable/gallery/color/named_colors.html).
+Matplotlib users can use this list to customize the aesthetics of
+their charts. Py5 users can also access this inventory of colors
+to customize the aesthetics of a Sketch.
+
+Here is a simple example, referencing each color as a string.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+def setup():
+    py5.size(400, 400)
+    py5.background(240)
+    py5.no_stroke()
+
+    # matplotlib base color, magenta
+    py5.fill('m')
+    py5.rect(20, 20, 170, 170)
+
+    # CSS4 colors
+    py5.fill('chartreuse')
+    py5.rect(20, 210, 170, 170)
+
+    # tableau palette
+    py5.fill('tab:orange')
+    py5.rect(210, 20, 170, 170)
+
+    # xkcd color survey
+    py5.fill('xkcd:blue with a hint of purple')
+    py5.rect(210, 210, 170, 170)
+
+    # add some text labels
+    py5.fill('black')
+    py5.text('m', 70, 105)
+    py5.text('chartreuse', 70, 295)
+    py5.text('tab:orange', 255, 105)
+    py5.text('xkcd:blue with a hint of purple', 220, 295)
+
+
+py5.run_sketch()
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+import time
+
+time.sleep(1)
+```
+
+```{code-cell} ipython3
+py5_tools.screenshot()
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+time.sleep(0.5)
+py5.exit_sketch()
+time.sleep(0.5)
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+This works well, but it requires you to either remember the names
+of the available colors or to constantly refer back to the list of
+[named colors](https://matplotlib.org/stable/gallery/color/named_colors.html).
+This is an extra challenge for non-english speakers, as well as
+anyone who cannot remember the correct spelling of words like
+"chartreuse."
+
+As an alternative, py5 has a built-in dictionary of the full CSS4
+and xkcd color survey inventories available for your use. Access
+the dictionaries with `py5.css4_colors` and `py5.xkcd_colors`. These
+are especially useful when coding an environment that supports code
+completion, such as Jupyter Notebooks or VSCode. Coders will be
+able to scroll through the list of color names and select the one
+that sounds appropriate for their use case.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+def setup():
+    py5.size(400, 400)
+    py5.background(240)
+    py5.no_stroke()
+
+    py5.fill(py5.css4_colors.FIREBRICK)
+    py5.rect(20, 20, 170, 170)
+
+    py5.fill(py5.css4_colors.PALETURQUOISE)
+    py5.rect(20, 210, 170, 170)
+
+    py5.fill(py5.xkcd_colors.PERIWINKLE_BLUE)
+    py5.rect(210, 20, 170, 170)
+
+    py5.fill(py5.xkcd_colors.PALE_MAUVE)
+    py5.rect(210, 210, 170, 170)
+
+    # add some text labels
+    py5.fill(py5.css4_colors.BLACK)
+    py5.text('css4_colors.FIREBRICK', 30, 105)
+    py5.text('css4_colors.PALETURQUOISE', 30, 295)
+    py5.text('xkcd_colors.PERIWINKLE_BLUE', 215, 105)
+    py5.text('xkcd_colors.PALE_MAUVE', 215, 295)
+
+
+py5.run_sketch()
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+time.sleep(1)
+```
+
+```{code-cell} ipython3
+py5_tools.screenshot()
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+time.sleep(0.5)
+py5.exit_sketch()
+time.sleep(0.5)
+```
+
+This final color dictionary feature is added to py5 when py5 is
+built so you can use it without installing matplotlib.
 
 ## Colour Library
 
@@ -65,18 +230,6 @@ in the real world.
 
 Our example Sketch below will experiment with this new library while also
 exploring the differences between the color models.
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
-from colour import Color
-
-import py5_tools
-import py5
-```
 
 ```{code-cell} ipython3
 ---
@@ -131,8 +284,6 @@ slideshow:
   slide_type: ''
 tags: [remove-cell]
 ---
-import time
-
 time.sleep(1)
 ```
 

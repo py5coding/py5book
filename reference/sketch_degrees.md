@@ -32,8 +32,8 @@ This function makes a call to the numpy `degrees()` function.
 
 ```python
 degrees(
-    radians: Union[float, npt.ArrayLike]  # radian value to convert to degrees
+    radians: Union[float, npt.ArrayLike],  # radian value to convert to degrees
 ) -> Union[float, npt.NDArray]
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on August 23, 2025 19:59:53pm UTC

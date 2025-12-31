@@ -12,6 +12,7 @@
 * [pixel_height](py5image_pixel_height): Height of the Py5Image object in pixels.
 * [pixel_width](py5image_pixel_width): Width of the Py5Image object in pixels.
 * [pixels[]](py5image_pixels): The pixels[] array contains the values for all the pixels in the image.
+* [resize()](py5image_resize): Resize the Py5Image object to a new height and width.
 * [save()](py5image_save): Save the Py5Image object to an image file.
 * [set_np_pixels()](py5image_set_np_pixels): Set the entire contents of [](py5image_np_pixels) to the contents of another properly sized and typed numpy array.
 * [set_pixels()](py5image_set_pixels): Changes the color of any pixel or writes an image directly into the Py5Image object.

@@ -2,16 +2,17 @@ name: py5coding
 channels:
   - conda-forge
 dependencies:
-  - python=3.11
   - colour>=0.1.5
-  - jpype1>=1.4
+  - jpype1>=1.6
   - jupyterlab
-  - line_profiler>=4.0
-  - matplotlib>=3.7
-  - numpy>=1.24
-  - pillow>=9.5
+  - line_profiler>=4.2
+  - matplotlib>=3.10
+  - numpy>=2.2
+  - pillow>=11.0
   - pip
+  - python=3.11
   - shapely>=2.0
-  - trimesh>=3.23
+  - svgpathtools>=1.7
+  - trimesh>=4.6
   - pip:
       - py5[jupyter]

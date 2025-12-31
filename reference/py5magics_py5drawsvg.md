@@ -46,10 +46,10 @@ positional arguments:
   width                 width of SVG drawing
   height                height of SVG drawing
 
-optional arguments:
+options:
   -f FILENAME, --filename FILENAME
                         save SVG drawing to file
   --unsafe              allow new variables to enter the user namespace
 ```
 
-Updated on March 06, 2023 03:33:38am UTC
+Updated on August 23, 2025 19:59:53pm UTC

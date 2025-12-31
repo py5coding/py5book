@@ -48,8 +48,8 @@ This function makes a call to the numpy `asin()` function.
 
 ```python
 asin(
-    value: Union[float, npt.ArrayLike]  # value in the range of -1 to 1 whose arc sine is to be returned
+    value: Union[float, npt.ArrayLike],  # value in the range of -1 to 1 whose arc sine is to be returned
 ) -> Union[float, npt.NDArray]
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on August 23, 2025 19:59:53pm UTC

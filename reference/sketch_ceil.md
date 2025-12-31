@@ -30,8 +30,8 @@ This function makes a call to the numpy `ceil()` function.
 
 ```python
 ceil(
-    value: Union[float, npt.ArrayLike]  # number to round up
+    value: Union[float, npt.ArrayLike],  # number to round up
 ) -> Union[int, npt.NDArray]
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on August 23, 2025 19:59:53pm UTC

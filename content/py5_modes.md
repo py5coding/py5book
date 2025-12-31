@@ -339,9 +339,7 @@ You will see the py5 kernel presented as an option in the Launcher.
 Click on it and put the code in a notebook cell.
 
 The Python editor Thonny can be configured to work well with py5 in
-Imported Mode. See \@tabreturn's detailed blog post [Portable Thonny
-and
-py5](https://tabreturn.github.io/code/python/thonny/2021/06/21/thonny_and_py5.html)
+Imported Mode. [See the thonny install instructions](https://github.com/py5coding/thonny-py5mode#instructions)
 for more information.
 
 ```{admonition} Running the Sketch
@@ -390,7 +388,4 @@ You will see the py5bot presented as an option in the Launcher. Click on
 it and put the code in a notebook cell.
 
 You can also program in Static Mode using the `py5-run-sketch` command line
-tool, or better yet, using Thonny. See \@tabreturn's detailed blog post
-[Portable Thonny and
-py5](https://tabreturn.github.io/code/python/thonny/2021/06/21/thonny_and_py5.html)
-for information about how to set that up.
+tool, or better yet, using Thonny. [See the thonny install instructions](https://github.com/py5coding/thonny-py5mode#instructions) for information about how to set that up.

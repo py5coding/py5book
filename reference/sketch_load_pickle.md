@@ -42,8 +42,8 @@ When using py5 in [imported mode](content-py5-modes-imported-mode), pickling wil
 
 ```python
 load_pickle(
-    pickle_path: Union[str, Path]  # file path for pickle object file
+    pickle_path: Union[str, Path],  # file path for pickle object file
 ) -> Any
 ```
 
-Updated on March 18, 2024 05:24:22am UTC
+Updated on August 23, 2025 19:59:53pm UTC

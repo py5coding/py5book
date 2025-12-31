@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.7
+    jupytext_version: 1.17.2
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -41,7 +41,7 @@ Refer to matplotlib's [Getting Started](https://matplotlib.org/stable/users/gett
 page or [Installation Guide](https://matplotlib.org/stable/users/installing/index.html)
 for more information.
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ## `Figure` Objects
 
@@ -456,6 +456,110 @@ time.sleep(0.5)
 del draw
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+## `TextPath` Objects
+
+You can also convert matplotlib TextPath objects to Py5Shape
+objects with [](/reference/sketch_convert_shape). This expands
+py5's font rendering capabilities to include equations and (if
+you have LaTeX installed) LaTeX typography.
+
+For this to work, you'll need to install the Python libraries
+shapely and svgpathtools. Install them with pip or conda.
+
+```bash
+pip install shapely svgpathtools
+```
+
+```bash
+conda install shapely svgpathtools -c conda-forge
+```
+
+To create a `TextPath` object, you'll also need to instantiate
+a matplotlib `FontProperties` object. In the example below, we
+use the DejaVu Sans font to render the LaTeX equation $\sqrt{x^2+1}$
+using the math mode syntax `"$\sqrt{x^2+1}$"`.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+from matplotlib.font_manager import FontProperties
+from matplotlib.textpath import TextPath
+
+fp = FontProperties(family="DejaVu Sans", style="normal", size=50)
+text_path = TextPath((0, 0), r"$\sqrt{x^2+1}$", prop=fp, usetex=True)
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+The `text_path` object can be converted to a `Py5Shape` object by passing
+it to the [](/reference/sketch_convert_shape) method.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+def setup():
+    py5.size(250, 100)
+
+    py5.no_stroke()
+    py5.fill(0)
+    s = py5.convert_shape(text_path)
+
+    py5.shape(s, 30, 70)
+
+
+py5.run_sketch()
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+time.sleep(2)
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+The rendered equation is beautiful.
+
+Observe that there is no support for text alignment. You'll need to
+incoporate the proper adjustments into your code.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+py5_tools.screenshot()
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+time.sleep(0.5)
+py5.exit_sketch()
+time.sleep(0.5)
+
+del setup
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 ## Named Colors
 
 Built in to matplotlib is an extensive list of
@@ -464,153 +568,9 @@ Matplotlib users can use this list to customize the aesthetics of
 their charts. Py5 users can also access this inventory of colors
 to customize the aesthetics of a Sketch.
 
-Here is a simple example, referencing each color as a string.
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
-def setup():
-    py5.size(400, 400)
-    py5.background(240)
-    py5.no_stroke()
-
-    # matplotlib base color, magenta
-    py5.fill('m')
-    py5.rect(20, 20, 170, 170)
-
-    # CSS4 colors
-    py5.fill('chartreuse')
-    py5.rect(20, 210, 170, 170)
-
-    # tableau palette
-    py5.fill('tab:orange')
-    py5.rect(210, 20, 170, 170)
-
-    # xkcd color survey
-    py5.fill('xkcd:blue with a hint of purple')
-    py5.rect(210, 210, 170, 170)
-
-    # add some text labels
-    py5.fill('black')
-    py5.text('m', 70, 105)
-    py5.text('chartreuse', 70, 295)
-    py5.text('tab:orange', 255, 105)
-    py5.text('xkcd:blue with a hint of purple', 220, 295)
-
-
-py5.run_sketch()
-```
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
-tags: [remove-cell]
----
-time.sleep(1)
-```
-
-```{code-cell} ipython3
-py5_tools.screenshot()
-```
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
-tags: [remove-cell]
----
-time.sleep(0.5)
-py5.exit_sketch()
-time.sleep(0.5)
-```
+To learn more, refer to the Matplotlib Named Colors section of the [](/integrations/colors) page.
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
-
-This works well, but it requires you to either remember the names
-of the available colors or to constantly refer back to the list of
-[named colors](https://matplotlib.org/stable/gallery/color/named_colors.html).
-This is an extra challenge for non-english speakers, as well as
-anyone who cannot remember the correct spelling of words like
-"chartreuse."
-
-As an alternative, py5 has a built-in dictionary of the full CSS4
-and xkcd color survey inventories available for your use. Access
-the dictionaries with `py5.css4_colors` and `py5.xkcd_colors`. These
-are especially useful when coding an environment that supports code
-completion, such as Jupyter Notebooks or VSCode. Coders will be
-able to scroll through the list of color names and select the one
-that sounds appropriate for their use case.
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
-def setup():
-    py5.size(400, 400)
-    py5.background(240)
-    py5.no_stroke()
-
-    py5.fill(py5.css4_colors.FIREBRICK)
-    py5.rect(20, 20, 170, 170)
-
-    py5.fill(py5.css4_colors.PALETURQUOISE)
-    py5.rect(20, 210, 170, 170)
-
-    py5.fill(py5.xkcd_colors.PERIWINKLE_BLUE)
-    py5.rect(210, 20, 170, 170)
-
-    py5.fill(py5.xkcd_colors.PALE_MAUVE)
-    py5.rect(210, 210, 170, 170)
-
-    # add some text labels
-    py5.fill(py5.css4_colors.BLACK)
-    py5.text('css4_colors.FIREBRICK', 30, 105)
-    py5.text('css4_colors.PALETURQUOISE', 30, 295)
-    py5.text('xkcd_colors.PERIWINKLE_BLUE', 215, 105)
-    py5.text('xkcd_colors.PALE_MAUVE', 215, 295)
-
-
-py5.run_sketch()
-```
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
-tags: [remove-cell]
----
-time.sleep(1)
-```
-
-```{code-cell} ipython3
-py5_tools.screenshot()
-```
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
-tags: [remove-cell]
----
-time.sleep(0.5)
-py5.exit_sketch()
-time.sleep(0.5)
-```
-
-This final color dictionary feature is added to py5 when py5 is
-built so you can use it without installing matplotlib.
-
-+++
 
 ## Colormap Color Mode
 
