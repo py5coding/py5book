@@ -625,3 +625,23 @@ In the terminal used to run `jupyter notebook`, this message appears:
 ```
 
 This is a more reliable debugging technique.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+py5.exit_sketch()
+time.sleep(1.0)
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+
+```
