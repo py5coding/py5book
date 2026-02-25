@@ -583,7 +583,7 @@ slideshow:
   slide_type: ''
 tags: [remove-output]
 ---
-py5_tools.animated_gif('images/jupyter_notebooks/simple_example.gif', count=10, period=1, duration=0.5)
+py5_tools.animated_gif('/tmp/simple_example.gif', count=10, period=1, duration=0.5)
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
@@ -635,13 +635,4 @@ tags: [remove-cell]
 ---
 py5.exit_sketch()
 time.sleep(1.0)
-```
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
-
 ```
