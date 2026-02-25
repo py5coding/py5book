@@ -9,6 +9,7 @@ build:
 	echo "Build complete"
 
 core_dumps:
+	find . -name "*.log"
 	find . -name "*.log" -exec rm {} \;
 
 .PHONY: clean
