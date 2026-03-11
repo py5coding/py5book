@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.0
+    jupytext_version: 1.17.3
 kernelspec:
   display_name: py5
   language: python
@@ -26,7 +26,7 @@ Before we draw anything, or even change the renderer to P3D, we need to talk abo
 
 It's important to note that this system is not universal! The way that the Z axis works in py5 is not, for example, the way that it works in the interface OpenGL. py5 is a "left-handed" coordinate system, and OpenGL is "right-handed". What does this mean? If you use your right hand, then point your index finger along the Y axis (upwards) and your thumb along the X axis, then bend your middle finger, it will be pointing along the Z axis, towards a "positive" value for a right-handed system. For a left-handed system, you can do the same thing with your left hand. The right-hand rule is even depicted on one of the banknotes for the Swiss franc:
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/CHF_200_9_front.jpg/277px-CHF_200_9_front.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/CHF_200_9_front.jpg">
 
 *Front of the Swiss 200-franc banknote, ninth series (issued in 2018), from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:CHF_200_9_front.jpg)*
 
