@@ -67,7 +67,7 @@ Underlying Processing method: [beginRaw](https://processing.org/reference/beginR
 begin_raw(
     raw_graphics: Py5Graphics,  # Py5Graphics object to apply draw commands to
     /,
-) -> None
+) -> ContextManager
 
 begin_raw(
     renderer: str,  # for example, PDF or DXF
@@ -76,4 +76,4 @@ begin_raw(
 ) -> Py5Graphics
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on February 24, 2026 14:35:31pm UTC

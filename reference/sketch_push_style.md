@@ -66,7 +66,7 @@ Underlying Processing method: [pushStyle](https://processing.org/reference/pushS
 ## Signatures
 
 ```python
-push_style() -> None
+push_style() -> ContextManager
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on February 24, 2026 14:35:31pm UTC

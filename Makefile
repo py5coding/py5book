@@ -4,9 +4,18 @@ build:
 	jb build .
 	python scripts/post_build.py
 
+	echo "Checking for core dumps (use make core_dumps to remove):"
+	find . -name "*.log"
+	echo "Build complete"
+
+core_dumps:
+	find . -name "*.log"
+	find . -name "*.log" -exec rm {} \;
+
 .PHONY: clean
 clean:
 	jb clean .
+	find . -name "*.log" -exec rm {} \;
 
 open:
 	firefox _build/html/index.html &

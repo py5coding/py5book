@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.3
+    jupytext_version: 1.17.3
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -159,6 +159,7 @@ slideshow:
 ---
 %%py5draw 300 200
 
+py5.random_seed(42)
 py5.background(240)
 py5.rect_mode(py5.CENTER)
 
@@ -187,6 +188,7 @@ slideshow:
 ---
 %%py5draw 300 200 -f images/jupyter_notebooks/simple_example.png
 
+py5.random_seed(42)
 py5.background(240)
 py5.rect_mode(py5.CENTER)
 
@@ -215,6 +217,7 @@ slideshow:
 ---
 %%py5draw 300 200 -r P2D
 
+py5.random_seed(42)
 py5.background(240)
 py5.rect_mode(py5.CENTER)
 
@@ -239,6 +242,7 @@ slideshow:
 ---
 %%py5draw 300 300 -r P3D
 
+py5.random_seed(42)
 py5.background(240)
 
 N = 10
@@ -267,6 +271,7 @@ slideshow:
 ---
 %%py5drawsvg 300 200 -f /tmp/test.svg
 
+py5.random_seed(42)
 py5.background(240)
 py5.rect_mode(py5.CENTER)
 
@@ -289,6 +294,7 @@ slideshow:
 ---
 %%py5drawpdf 300 200 /tmp/simple_example.pdf
 
+py5.random_seed(42)
 py5.background(240)
 py5.rect_mode(py5.CENTER)
 
@@ -342,6 +348,7 @@ slideshow:
 ---
 %%py5draw 300 200
 
+py5.random_seed(42)
 py5.background(240)
 py5.rect_mode(py5.CENTER)
 
@@ -380,6 +387,7 @@ slideshow:
 ---
 %%py5draw 300 200 --unsafe
 
+py5.random_seed(42)
 py5.background(240)
 py5.rect_mode(py5.CENTER)
 
@@ -575,7 +583,7 @@ slideshow:
   slide_type: ''
 tags: [remove-output]
 ---
-py5_tools.animated_gif('images/jupyter_notebooks/simple_example.gif', count=10, period=1, duration=0.5)
+py5_tools.animated_gif('/tmp/simple_example.gif', count=10, period=1, duration=0.5)
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
@@ -617,3 +625,14 @@ In the terminal used to run `jupyter notebook`, this message appears:
 ```
 
 This is a more reliable debugging technique.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+py5.exit_sketch()
+time.sleep(1.0)
+```

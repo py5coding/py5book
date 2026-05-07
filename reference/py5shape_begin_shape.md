@@ -64,12 +64,12 @@ Underlying Processing method: [PShape.beginShape](https://processing.org/referen
 ## Signatures
 
 ```python
-begin_shape() -> None
+begin_shape() -> ContextManager
 
 begin_shape(
     kind: int,  # Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
     /,
-) -> None
+) -> ContextManager
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on February 24, 2026 14:35:31pm UTC

@@ -52,7 +52,7 @@ Underlying Processing method: PGraphics.beginContour
 ## Signatures
 
 ```python
-begin_contour() -> None
+begin_contour() -> ContextManager
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on February 24, 2026 14:35:31pm UTC

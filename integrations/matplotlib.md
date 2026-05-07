@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.2
+    jupytext_version: 1.17.3
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -115,6 +115,8 @@ slideshow:
 frame_rates = deque([60] * 250, maxlen=250)
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 Next we will create a function for creating our matplotlib chart. As you can see,
 this is a nice looking chart. New observations are added to the right side of
 the chart. The data points get successively older as one moves from right to left.
@@ -138,6 +140,8 @@ def create_chart(frame_rates):
 
 create_chart(frame_rates)
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 Finally, we will set the
 [matplotlib backend](https://matplotlib.org/stable/users/explain/figure/backends.html)
@@ -215,11 +219,18 @@ slideshow:
 py5_tools.screenshot()
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 ### Performance Analysis
 
 We will profile the `draw()` function to investigate why.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 py5.profile_draw()
 ```
 
@@ -234,6 +245,11 @@ time.sleep(10)
 ```
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 py5.print_line_profiler_stats()
 ```
 
@@ -253,6 +269,8 @@ time.sleep(0.5)
 py5.exit_sketch()
 time.sleep(0.5)
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ### Improved Example
 
@@ -318,14 +336,26 @@ We can see this is significantly faster but still not the
 Sketch performance we are looking for.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 py5_tools.screenshot()
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ### Second Performance Analysis
 
 We can again profile the `draw()` function to understand why.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 py5.profile_draw()
 ```
 
@@ -340,8 +370,15 @@ time.sleep(10)
 ```
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 py5.print_line_profiler_stats()
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 Almost all of the time is spent in [](/reference/sketch_convert_image). The
 call itself is much faster than before because of the recycled
@@ -359,6 +396,8 @@ time.sleep(0.5)
 py5.exit_sketch()
 time.sleep(0.5)
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ### Example with Threading
 
@@ -755,6 +794,11 @@ time.sleep(5)
 ```
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 py5_tools.screenshot()
 ```
 
@@ -767,8 +811,10 @@ tags: [remove-cell]
 ---
 time.sleep(0.5)
 py5.exit_sketch()
-time.sleep(0.5)
+time.sleep(1.0)
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ### Function Signatures
 

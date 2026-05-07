@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.2
+    jupytext_version: 1.17.3
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -100,7 +100,7 @@ slideshow:
 def setup():
     global strawberry
     py5.size(300, 500, py5.P3D)
-    strawberry = py5.convert_shape(strawberry_scene)
+    strawberry = py5.convert_shape(strawberry_scene, flip_v=True)
     assert isinstance(strawberry, py5.Py5Shape)
 
     # increase the model's scale and change its orientation
@@ -111,6 +111,8 @@ def setup():
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 After converting the model into a `Py5Shape` object, we need to increase the scale and rotate it to change its orientation. Consider py5's coordinate system: the positive Y axis points towards the bottom of the drawing surface. It is likely that the 3D modeling program used to create this strawberry had a different coordinate system, perhaps with the positive Z axis pointing towards the top of the screen. Therefore, you will often need to do some rotations to get the result you want. Similarly, you will often need to adjust the scale.
+
+We also most consider the texture map coordinate system. The model we loaded is a glTF file, and the glTF specification uses the upper left corner of a texture image as the origin. The OpenGL specification (and therefore Processing's, and therefore py5's,) uses the lower left corner. The `flip_v=True` parameter in the [](/reference/sketch_convert_shape) method flips the meshes' V values so py5 can render it correctly. By default the `flip_v` paremeter is `False`. There's also a `flip_u` parameter, but most likely you'll never need it.
 
 These adjustments can be done to the model itself after converting the model into a `Py5Shape` object, as we did here in our `setup()` function. Alternatively, we can do global transformations in the `draw()` function with py5 methods such as [](/reference/sketch_rotate_x), [](/reference/sketch_scale), etc., before drawing the `Py5Shape` object to the screen with [](/reference/sketch_shape).
 
