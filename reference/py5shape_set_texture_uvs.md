@@ -8,7 +8,7 @@ Set all of the uv texture mapping coordinates for a `Py5Shape` object.
 
 <div class="example-row"><div class="example-cell-image">
 
-![example picture for set_texture_uvs()](/images/reference/P5Shape_set_texture_uvs_0.png)
+![example picture for set_texture_uvs()](/images/reference/Py5Shape_set_texture_uvs_0.png)
 
 </div><div class="example-cell-code">
 
@@ -52,4 +52,4 @@ set_texture_uvs(
 ) -> None
 ```
 
-Updated on October 12, 2026 17:23:29pm UTC
+Updated on October 12, 2026 17:40:58pm UTC
