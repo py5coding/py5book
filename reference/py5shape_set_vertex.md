@@ -14,12 +14,11 @@ The `set_vertex()` method defines the coordinates of the vertex point located at
 def setup():
     global s
     s = py5.create_shape()
-    s.begin_shape()
-    s.vertex(0, 0)
-    s.vertex(60, 0)
-    s.vertex(60, 60)
-    s.vertex(0, 60)
-    s.end_shape(py5.CLOSE)
+    with s.begin_closed_shape():
+        s.vertex(0, 0)
+        s.vertex(60, 0)
+        s.vertex(60, 60)
+        s.vertex(0, 60)
 
 
 def draw():
@@ -40,6 +39,8 @@ def draw():
 ## Description
 
 The `set_vertex()` method defines the coordinates of the vertex point located at the position defined by the `index` parameter. This method works when shapes are created as shown in the example, but won't work properly when a shape is defined explicitly (e.g. `create_shape(RECT, 20, 20, 80, 80)`.
+
+This method can only be used outside the [](py5shape_begin_shape) and [](py5shape_end_shape) methods.
 
 Underlying Processing method: [PShape.setVertex](https://processing.org/reference/PShape_setVertex_.html)
 
@@ -68,4 +69,4 @@ set_vertex(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on October 12, 2026 17:24:20pm UTC

@@ -35,6 +35,8 @@
 
 ### Material
 
+* [set_texture_uvs()](py5shape_set_texture_uvs)
+
 #### Properties
 
 * [ambient()](py5shape_ambient)
@@ -142,6 +144,7 @@
 * [quadratic_vertices()](py5shape_quadratic_vertices)
 * [set_path()](py5shape_set_path)
 * [set_vertex()](py5shape_set_vertex)
+* [set_vertices()](py5shape_set_vertices)
 * [vertex()](py5shape_vertex)
 * [vertices()](py5shape_vertices)
 
