@@ -47,8 +47,8 @@ Your object must be hashable for object caching to work. If your object is not h
 convert_cached_image(
     obj: Any,  # object to convert into a Py5Image object
     force_conversion: bool = False,  # force conversion of object if it is already in the cache
-    **kwargs: dict[str, Any]
+    **kwargs: Any
 ) -> Py5Image
 ```
 
-Updated on June 14, 2024 01:52:20am UTC
+Updated on June 18, 2026 14:25:12pm UTC

@@ -64,11 +64,6 @@ Underlying Processing method: [beginShape](https://processing.org/reference/begi
 
 ```python
 begin_closed_shape() -> ContextManager
-
-begin_closed_shape(
-    kind: int,  # Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
-    /,
-) -> ContextManager
 ```
 
-Updated on February 24, 2026 14:35:31pm UTC
+Updated on June 18, 2026 14:25:12pm UTC

@@ -43,8 +43,8 @@ create_image_from_numpy(
     array: npt.NDArray[np.uint8],  # numpy image array
     bands: str = "ARGB",  # color channels in array
     *,
-    dst: Py5Image = None  # existing Py5Image object to put the image data into
+    dst: Py5Image | None = None,  # existing Py5Image object to put the image data into
 ) -> Py5Image
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on June 18, 2026 14:25:12pm UTC

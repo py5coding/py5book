@@ -59,6 +59,7 @@
 * [set_texture()](py5shape_set_texture)
 * [set_texture_mode()](py5shape_set_texture_mode)
 * [set_texture_uv()](py5shape_set_texture_uv)
+* [set_texture_uvs()](py5shape_set_texture_uvs)
 * [set_tint()](py5shape_set_tint)
 * [texture()](py5shape_texture)
 * [texture_mode()](py5shape_texture_mode)
@@ -142,6 +143,7 @@
 * [quadratic_vertices()](py5shape_quadratic_vertices)
 * [set_path()](py5shape_set_path)
 * [set_vertex()](py5shape_set_vertex)
+* [set_vertices()](py5shape_set_vertices)
 * [vertex()](py5shape_vertex)
 * [vertices()](py5shape_vertices)
 

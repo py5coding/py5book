@@ -18,7 +18,7 @@ clean:
 	find . -name "*.log" -exec rm {} \;
 
 open:
-	firefox _build/html/index.html &
+	python -m http.server --directory _build/html/ 8080 &
 
 deploydev:
 	aws s3 sync --delete _build/html s3://dev.py5coding.org/

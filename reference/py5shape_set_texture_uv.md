@@ -17,12 +17,11 @@ def setup():
     py5.size(100, 100, py5.P2D)
     img = py5.load_image("tower.jpg")
     s = py5.create_shape()
-    s.begin_shape()
-    s.vertex(20, 20)
-    s.vertex(20, 80)
-    s.vertex(80, 80)
-    s.vertex(80, 20)
-    s.end_shape(py5.CLOSE)
+    with s.begin_closed_shape():
+        s.vertex(20, 20)
+        s.vertex(20, 80)
+        s.vertex(80, 80)
+        s.vertex(80, 20)
 
     s.set_texture(img)
     s.set_texture_mode(py5.NORMAL)
@@ -57,4 +56,4 @@ set_texture_uv(
 ) -> None
 ```
 
-Updated on March 06, 2023 02:49:26am UTC
+Updated on October 12, 2026 17:23:29pm UTC

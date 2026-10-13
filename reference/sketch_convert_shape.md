@@ -46,8 +46,8 @@ The `convert_shape()` method has builtin support for the conversion of shapely a
 ```python
 convert_shape(
     obj: Any,  # object to convert into a Py5Shape object
-    **kwargs: dict[str, Any]
+    **kwargs: Any
 ) -> Py5Shape
 ```
 
-Updated on December 25, 2023 17:02:43pm UTC
+Updated on June 18, 2026 14:25:12pm UTC

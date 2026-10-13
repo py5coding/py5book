@@ -78,13 +78,15 @@ for doc in BUILD_DIR.glob("**/*.html"):
 # COPY EXTRA FILES
 ###############################################################################
 
-if (BUILD_DIR / "files").exists():
-    shutil.rmtree(BUILD_DIR / "files")
-shutil.copytree("files", BUILD_DIR / "files")
+for d in ["files", "tutorials/images", "integrations/images", "integrations/models"]:
+    if (BUILD_DIR / d).exists():
+        shutil.rmtree(BUILD_DIR / d)
 
+shutil.copytree("files", BUILD_DIR / "files")
 shutil.copytree("tutorials/images", BUILD_DIR / "tutorials/images")
 shutil.copytree("integrations/images", BUILD_DIR / "integrations/images")
 shutil.copytree("integrations/models", BUILD_DIR / "integrations/models")
+shutil.copy("robots.txt", BUILD_DIR / "robots.txt")
 
 ###############################################################################
 # FIX 404.HTML PAGE

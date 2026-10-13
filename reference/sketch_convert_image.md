@@ -46,9 +46,9 @@ The `convert_image()` method has builtin support for the conversion of matplotli
 convert_image(
     obj: Any,  # object to convert into a Py5Image object
     *,
-    dst: Py5Image = None,  # existing Py5Image object to put the converted image into
-    **kwargs: dict[str, Any]
+    dst: Py5Image | None = None,  # existing Py5Image object to put the converted image into
+    **kwargs: Any
 ) -> Py5Image
 ```
 
-Updated on December 26, 2023 12:27:15pm UTC
+Updated on June 18, 2026 14:25:12pm UTC
